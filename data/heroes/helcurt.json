@@ -1,0 +1,255 @@
+{
+  "id": "helcurt",
+  "name": "Helcurt",
+  "heroName": "Helcurt",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2440,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 121,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.15",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 255
+  },
+  "skills": {
+    "passive": {
+      "name": "Shadow of Styx",
+      "description": "Helcurt remains in Prowler state until spotted by the enemy team, gaining 15% extra Movement Speed, and continuously regenerating (30% Total Physical Attack) HP if he has not dealt any damage.\nHe gains 50% extra Attack Speed and 50% extra Movement Speed (decreasing over time) for 4s upon being spotted and leaves Prowler state 0.75s later.\nAny hero killed after being hit by Helcurt leaves a dark fog that explodes and spreads with a cooldown of 10s. Helcurt Conceals himself while within the dark fog.\n|quote=He who hides in the shadow.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "(30% Total Physical Attack)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Race_Advantage",
+      "tips": "A very sick passive skill. This allows Helcurt to take damage from skills and silenced targets. P.S: Hitting by a long ranged skill will not trigger this passive!",
+      "iconUrl": "/raw-assets/skill_icons/helcurt/race_advantage.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Hidden Terror",
+      "description": "Passive: When Helcurt is in Prowler state, the skill terrifies enemy heroes hit and briefly reveals them. Its cooldown decreases 3 times as fast as normal.\nActive: Helcurt blinks to the target location and deals 150 (+70% Total Physical Attack) Physical Damage to enemies within the area, reducing their Movement Speed by 60% for 0.75s.",
+      "cooldown": "15.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+70% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "15.0",
+            "14.0",
+            "13.0",
+            "12.0",
+            "11.0",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "150",
+            "180",
+            "210",
+            "240",
+            "270",
+            "300"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Mobility",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Shadow_Transition",
+      "tips": "A skill with super high mobility. Using in the early game allows Helcurt to move through walls to speed up jungling. Using in middle-late game makes it a good initiating skill or escape by moving through terrains.",
+      "iconUrl": "/raw-assets/skill_icons/helcurt/shadow_transition.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Deadly Stinger",
+      "description": "Passive: Helcurt gains one Deadly Stinger for every 1.5s spent in Prowler state or on each Basic Attack. Up to 5 stingers can be stored.\nActive: Helcurt fires all Deadly Stingers forward, each dealing 180 (+50% Extra Physical Attack) Physical Damage to enemies (Minions and Creeps take only 70% of the damage).\nDeadly Stinger counts as Basic Attack but cannot Crit.",
+      "cooldown": "4.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+50% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "4.0",
+            "3.7",
+            "3.4",
+            "3.1",
+            "2.8",
+            "2.5"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "180",
+            "200",
+            "220",
+            "240",
+            "260",
+            "280"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Deadly_Stinger",
+      "tips": "Storing up to 5 stingers to maximize the damage as it's the core damage skill. Since it can penetrate the targets, choose a good angle to hit more enemies or jungle monsters to speed up the jungling.",
+      "iconUrl": "/raw-assets/skill_icons/helcurt/deadly_stinger.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Dark Night Falls",
+      "description": "Helcurt summons the Dark Night, reducing all enemies' sight range and making them lose sight of their allies for 3s. During Dark Night, Helcurt gains 40% extra Movement Speed.\nThe Dark Night makes it easier for Helcurt to leave enemies' sight range.",
+      "cooldown": "60.0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "60.0",
+            "55.0",
+            "50.0"
+          ]
+        },
+        {
+          "label": "Movement Speed Bonus",
+          "values": [
+            "40%",
+            "45%",
+            "50%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff",
+        "Debuff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dark_Night_Falls",
+      "tips": "Use it anytime anywhere to make all enemy heroes lose vision by 3.5s (except Helcurt). A very useful skill. The bonus movement speed allows him to go to the fight quickly or chase an enemy. The bonus attack speed substantially increases his burst damage. Let the enemies fear the invisibility. P.S: It's not effective on enemy Helcurt.",
+      "iconUrl": "/raw-assets/skill_icons/helcurt/dark_night_falls.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Helcurt adalah assassin dengan kemampuan burst damage dan mobilitas tinggi untuk mengeliminasi target prioritas.",
+  "playstyleTags": [
+    "Burst",
+    "Pickoff"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Early Aggression"
+  ],
+  "counterTags": [
+    "Hard CC",
+    "Group Up",
+    "Vision"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Backline Threat",
+    "Pick-off Specialist",
+    "Jungle Tempo"
+  ],
+  "powerSpikeTags": [
+    "Level 4",
+    "Early-Mid Game"
+  ]
+}

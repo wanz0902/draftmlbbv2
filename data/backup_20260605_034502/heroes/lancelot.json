@@ -1,0 +1,237 @@
+{
+  "id": "lancelot",
+  "name": "Lancelot",
+  "heroName": "Lancelot",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2390,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 124,
+    "physicalDefense": 16,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.08",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Soul Cutter",
+      "description": "Each time Lancelot charges, his damage is increased by 7.5% for 4s, up to 30%.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Soul_Cutter"
+    },
+    "skill1": {
+      "name": "Puncture",
+      "description": "Lancelot charges in the direction, dealing 150 (+50% Total Physical Attack) Physical Damage to enemies along the way and applying a Sword Mark to the first unmarked enemy hit. The Sword Mark lasts 3s.\nIf Lancelot successfully applies a Sword Mark to an enemy, the skill's cooldown will be reset.\n|stats1=Cooldown|stats1_value=14.0/13.2/12.4/11.6/10.8/10.0\n|stats2=Skill Cost|stats2_value=40/44/48/52/56/60\n|stats3=Base Damage|stats3_value=150/175/200/225/250/275",
+      "cooldown": "14.0",
+      "manaCost": "40",
+      "damageType": "Physical",
+      "scaling": [
+        "(+50% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "14.0",
+            "13.2",
+            "12.4",
+            "11.6",
+            "10.8",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "40",
+            "44",
+            "48",
+            "52",
+            "56",
+            "60"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "150",
+            "175",
+            "200",
+            "225",
+            "250",
+            "275"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Puncture"
+    },
+    "skill2": {
+      "name": "Thorned Rose",
+      "description": "Lancelot strikes in the target direction 3 times, each time dealing 220 (+120% Extra Physical Attack) Physical Damage to enemies hit (damage is reduced when multiple enemies are hit). He's untargetable during this process. Enemies in the center of the area take all the 3 hits and are slowed by 20% for 0.5s. The slow effect can stack.\n|stats1=Cooldown|stats1_value=11.0/10.5/10.0/9.5/9.0/8.5\n|stats2=Skill Cost|stats2_value=60/65/70/75/80/85\n|stats3=Base Damage|stats3_value=220/250/280/310/340/370",
+      "cooldown": "11.0",
+      "manaCost": "60",
+      "damageType": "Physical",
+      "scaling": [
+        "(+120% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "11.0",
+            "10.5",
+            "10.0",
+            "9.5",
+            "9.0",
+            "8.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "220",
+            "250",
+            "280",
+            "310",
+            "340",
+            "370"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Thorned_Rose"
+    },
+    "ultimate": {
+      "name": "Phantom Execution",
+      "description": "After a short delay, Lancelot performs an executioner's strike in the target direction, dealing 350 (+170% Total Physical Attack) Physical Damage to enemies hit. He is invincible throughout the process.\n|quote=I become one with the sword.\n|stats1=Cooldown|stats1_value=36.0/32.0/28.0\n|stats2=Skill Cost|stats2_value=100/125/150\n|stats3=Base Damage|stats3_value=350/425/500",
+      "cooldown": "36.0",
+      "manaCost": "100",
+      "damageType": "Physical",
+      "scaling": [
+        "(+170% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "36.0",
+            "32.0",
+            "28.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "100",
+            "125",
+            "150"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "350",
+            "425",
+            "500"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst",
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Phantom_Execution"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

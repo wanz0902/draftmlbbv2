@@ -1,0 +1,187 @@
+{
+  "id": "wanwan",
+  "name": "Wanwan",
+  "heroName": "Wanwan",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Tiger Pace",
+      "description": "Enemy heroes hit by Wanwan's attacks will have their weakness exposed and position revealed for 5s. When hitting an enemy's weakness, Wanwan deals 67(+3*Hero Level) extra (True Damage) and increases their damage taken from her subsequent attacks by 10% for 5s. Wanwan can dash a short distance after each arrow fired from her Basic Attack. The dash speed scales with her Attack Speed. Wanwan's Basic Attack deals ( +100% Total Physical Attack) Physical Damage.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Tiger_Pace",
+      "tips": "Since she could move a short distance after attacking, she could easily dodge damage from the enemies and poke them while dealing damage.",
+      "iconUrl": "/raw-assets/skill_icons/wanwan/tiger_pace.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Swallow’s Path",
+      "description": "Wanwan throws a Fire Swallow in the target direction, triggering (Tiger Pace) while dealing 120( +40% Total Physical Attack) (Physical Damage) to enemies in its path. The Fire Swallow then turns into 3 rotating Swallow Daggers. After a short delay, these Swallow Daggers will fly back to Wanwan one after another, dealing 60( +65% Total Physical Attack) (Physical Damage) to enemies on their way back and slowing them by 30% for 1.5s. Enemies hit twice by the Swallow Daggers will be immobilized for 0.5s.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Swallow’s_Path",
+      "tips": "With this skill, Wanwan could deal damage to enemies and control them. As the Fire Swallow could return to Wanwan, she could quickly hit the Weaknesses of the enemies from their back.",
+      "iconUrl": "/raw-assets/skill_icons/wanwan/swallow_s_path.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Needles in Flowers",
+      "description": "Wanwan removes all control effects on herself and triggers (Tiger Pace). Meanwhile, she shoots Deadly Needles in all directions, dealing 150( +60% Total Physical Attack) (Physical Damage) to enemies hit.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Needles_in_Flowers",
+      "tips": "The ability of removing all CC greatly increases Wanwan’s chances of survival in battles.",
+      "iconUrl": "/raw-assets/skill_icons/wanwan/needles_in_flowers.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Crossbow of Tang",
+      "description": "Wanwan leaps into the air and fires arrows at the target enemy hero for 2.5s in rapid succession, dealing 60( +35% Total Physical Attack) (Physical Damage) per arrow. If the target is killed during this attack, Wanwan will switch to another enemy hero in her attack range, gain 30% Attack Speed, and extend the skill duration by 1s (this effect can trigger up to 3 times). Wanwan is untargetable and invincible for the duration and can trigger (Tiger Pace) upon killing an enemy and at the end of the duration. (Crossbow of Tang) can only be cast on enemy heroes with all their weaknesses hit and Wanwan gains 100% Movement Speed during the duration. This damage is regarded as Basic Attack damage, and the firing rate scales with Wanwan's Attack Speed.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Crossbow_of_Tang",
+      "tips": "The Burst Damage and the invincibility brought by the Skill make Wanwan unbeatable when she fights alone and also in team fight.",
+      "iconUrl": "/raw-assets/skill_icons/wanwan/crossbow_of_tang.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Wanwan adalah marksman dengan DPS tinggi yang menjadi win condition utama di late game.",
+  "playstyleTags": [
+    "DPS"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Late Game Insurance",
+    "Snowball Potential"
+  ],
+  "counterTags": [
+    "Dive",
+    "Burst",
+    "Flank"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Needs Peel"
+  ],
+  "macroTags": [
+    "Objective DPS",
+    "Late Game Carry",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

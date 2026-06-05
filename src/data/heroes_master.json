@@ -1,0 +1,1750 @@
+[
+  {
+    "hero_id": 1,
+    "hero_name": "Miya",
+    "slug": "miya",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane"
+    ]
+  },
+  {
+    "hero_id": 2,
+    "hero_name": "Balmond",
+    "slug": "balmond",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "Jungle",
+      "EXP"
+    ],
+    "lane": "Jungle",
+    "flex_lanes": [
+      "EXP"
+    ]
+  },
+  {
+    "hero_id": 3,
+    "hero_name": "Saber",
+    "slug": "saber",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 4,
+    "hero_name": "Alice",
+    "slug": "alice",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid",
+      "EXP",
+      "Roam",
+      "Jungle"
+    ],
+    "lane": "Mid",
+    "flex_lanes": [
+      "EXP",
+      "Roam",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 5,
+    "hero_name": "Nana",
+    "slug": "nana",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 6,
+    "hero_name": "Tigreal",
+    "slug": "tigreal",
+    "role": [
+      "Tank"
+    ],
+    "lanes": [
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 7,
+    "hero_name": "Alucard",
+    "slug": "alucard",
+    "role": [
+      "Fighter",
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle",
+      "EXP"
+    ],
+    "lane": "Jungle",
+    "flex_lanes": [
+      "EXP"
+    ]
+  },
+  {
+    "hero_id": 8,
+    "hero_name": "Karina",
+    "slug": "karina",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 9,
+    "hero_name": "Akai",
+    "slug": "akai",
+    "role": [
+      "Tank"
+    ],
+    "lanes": [
+      "Roam",
+      "Jungle",
+      "EXP"
+    ],
+    "lane": "Roam",
+    "flex_lanes": [
+      "Jungle",
+      "EXP"
+    ]
+  },
+  {
+    "hero_id": 10,
+    "hero_name": "Franco",
+    "slug": "franco",
+    "role": [
+      "Tank"
+    ],
+    "lanes": [
+      "Roam",
+      "EXP"
+    ],
+    "lane": "Roam",
+    "flex_lanes": [
+      "EXP"
+    ]
+  },
+  {
+    "hero_id": 11,
+    "hero_name": "Bane",
+    "slug": "bane",
+    "role": [
+      "Fighter",
+      "Mage"
+    ],
+    "lanes": [
+      "EXP",
+      "Mid",
+      "Gold",
+      "Jungle"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Mid",
+      "Gold",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 12,
+    "hero_name": "Bruno",
+    "slug": "bruno",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold",
+      "Jungle"
+    ],
+    "lane": "Gold",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 13,
+    "hero_name": "Clint",
+    "slug": "clint",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold",
+      "Mid"
+    ],
+    "lane": "Gold",
+    "flex_lanes": [
+      "Mid"
+    ]
+  },
+  {
+    "hero_id": 14,
+    "hero_name": "Rafaela",
+    "slug": "rafaela",
+    "role": [
+      "Support"
+    ],
+    "lanes": [
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 15,
+    "hero_name": "Eudora",
+    "slug": "eudora",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid",
+      "Roam"
+    ],
+    "lane": "Mid",
+    "flex_lanes": [
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 16,
+    "hero_name": "Zilong",
+    "slug": "zilong",
+    "role": [
+      "Fighter",
+      "Assassin"
+    ],
+    "lanes": [
+      "EXP Lane",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 17,
+    "hero_name": "Fanny",
+    "slug": "fanny",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle",
+      "EXP"
+    ],
+    "lane": "Jungle",
+    "flex_lanes": [
+      "EXP"
+    ]
+  },
+  {
+    "hero_id": 18,
+    "hero_name": "Layla",
+    "slug": "layla",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane"
+    ]
+  },
+  {
+    "hero_id": 19,
+    "hero_name": "Minotaur",
+    "slug": "minotaur",
+    "role": [
+      "Tank",
+      "Support"
+    ],
+    "lanes": [
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 20,
+    "hero_name": "Lolita",
+    "slug": "lolita",
+    "role": [
+      "Tank",
+      "Support"
+    ],
+    "lanes": [
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 21,
+    "hero_name": "Hayabusa",
+    "slug": "hayabusa",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 22,
+    "hero_name": "Freya",
+    "slug": "freya",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP",
+      "Jungle"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 23,
+    "hero_name": "Gord",
+    "slug": "gord",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 24,
+    "hero_name": "Natalia",
+    "slug": "natalia",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 25,
+    "hero_name": "Kagura",
+    "slug": "kagura",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 26,
+    "hero_name": "Chou",
+    "slug": "chou",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP",
+      "Roam",
+      "Jungle"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Roam",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 27,
+    "hero_name": "Sun",
+    "slug": "sun",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 28,
+    "hero_name": "Alpha",
+    "slug": "alpha",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP",
+      "Jungle"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 29,
+    "hero_name": "Ruby",
+    "slug": "ruby",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 30,
+    "hero_name": "Yi Sun-shin",
+    "slug": "yisunshin",
+    "role": [
+      "Assassin",
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 31,
+    "hero_name": "Moskov",
+    "slug": "moskov",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane"
+    ]
+  },
+  {
+    "hero_id": 32,
+    "hero_name": "Johnson",
+    "slug": "johnson",
+    "role": [
+      "Tank",
+      "Support"
+    ],
+    "lanes": [
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 33,
+    "hero_name": "Cyclops",
+    "slug": "cyclops",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid",
+      "Jungle"
+    ],
+    "lane": "Mid",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 34,
+    "hero_name": "Estes",
+    "slug": "estes",
+    "role": [
+      "Support"
+    ],
+    "lanes": [
+      "Roam",
+      "Mid"
+    ],
+    "lane": "Roam",
+    "flex_lanes": [
+      "Mid"
+    ]
+  },
+  {
+    "hero_id": 35,
+    "hero_name": "Hilda",
+    "slug": "hilda",
+    "role": [
+      "Tank",
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane",
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 36,
+    "hero_name": "Aurora",
+    "slug": "aurora",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid",
+      "Roam"
+    ],
+    "lane": "Mid",
+    "flex_lanes": [
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 37,
+    "hero_name": "Lapu-Lapu",
+    "slug": "lapulapu",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 38,
+    "hero_name": "Vexana",
+    "slug": "vexana",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 39,
+    "hero_name": "Roger",
+    "slug": "roger",
+    "role": [
+      "Fighter",
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane",
+      "EXP Lane",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 40,
+    "hero_name": "Karrie",
+    "slug": "karrie",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane"
+    ]
+  },
+  {
+    "hero_id": 41,
+    "hero_name": "Gatotkaca",
+    "slug": "gatotkaca",
+    "role": [
+      "Tank",
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane",
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 42,
+    "hero_name": "Argus",
+    "slug": "argus",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP",
+      "Jungle"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 43,
+    "hero_name": "Diggie",
+    "slug": "diggie",
+    "role": [
+      "Support"
+    ],
+    "lanes": [
+      "Roam",
+      "Mid"
+    ],
+    "lane": "Roam",
+    "flex_lanes": [
+      "Mid"
+    ]
+  },
+  {
+    "hero_id": 44,
+    "hero_name": "Irithel",
+    "slug": "irithel",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane"
+    ]
+  },
+  {
+    "hero_id": 45,
+    "hero_name": "Grock",
+    "slug": "grock",
+    "role": [
+      "Tank",
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane",
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 46,
+    "hero_name": "Odette",
+    "slug": "odette",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 47,
+    "hero_name": "Lancelot",
+    "slug": "lancelot",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 48,
+    "hero_name": "Zhask",
+    "slug": "zhask",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 49,
+    "hero_name": "Helcurt",
+    "slug": "helcurt",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 50,
+    "hero_name": "Pharsa",
+    "slug": "pharsa",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 51,
+    "hero_name": "Lesley",
+    "slug": "lesley",
+    "role": [
+      "Assassin",
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 52,
+    "hero_name": "Jawhead",
+    "slug": "jawhead",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 53,
+    "hero_name": "Angela",
+    "slug": "angela",
+    "role": [
+      "Support"
+    ],
+    "lanes": [
+      "Roam",
+      "Mid"
+    ],
+    "lane": "Roam",
+    "flex_lanes": [
+      "Mid"
+    ]
+  },
+  {
+    "hero_id": 54,
+    "hero_name": "Gusion",
+    "slug": "gusion",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 55,
+    "hero_name": "Valir",
+    "slug": "valir",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 56,
+    "hero_name": "Martis",
+    "slug": "martis",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 57,
+    "hero_name": "Uranus",
+    "slug": "uranus",
+    "role": [
+      "Tank"
+    ],
+    "lanes": []
+  },
+  {
+    "hero_id": 58,
+    "hero_name": "Hanabi",
+    "slug": "hanabi",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane"
+    ]
+  },
+  {
+    "hero_id": 59,
+    "hero_name": "Chang'e",
+    "slug": "change",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid",
+      "Gold"
+    ],
+    "lane": "Mid",
+    "flex_lanes": [
+      "Gold"
+    ]
+  },
+  {
+    "hero_id": 60,
+    "hero_name": "Kaja",
+    "slug": "kaja",
+    "role": [
+      "Fighter",
+      "Support"
+    ],
+    "lanes": [
+      "EXP Lane",
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 61,
+    "hero_name": "Selena",
+    "slug": "selena",
+    "role": [
+      "Assassin",
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane",
+      "Jungle",
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 62,
+    "hero_name": "Aldous",
+    "slug": "aldous",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP",
+      "Jungle"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 63,
+    "hero_name": "Claude",
+    "slug": "claude",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold",
+      "Jungle"
+    ],
+    "lane": "Gold",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 64,
+    "hero_name": "Vale",
+    "slug": "vale",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 65,
+    "hero_name": "Leomord",
+    "slug": "leomord",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 66,
+    "hero_name": "Lunox",
+    "slug": "lunox",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 67,
+    "hero_name": "Hanzo",
+    "slug": "hanzo",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 68,
+    "hero_name": "Belerick",
+    "slug": "belerick",
+    "role": [
+      "Tank"
+    ],
+    "lanes": [
+      "Roam",
+      "EXP"
+    ],
+    "lane": "Roam",
+    "flex_lanes": [
+      "EXP"
+    ]
+  },
+  {
+    "hero_id": 69,
+    "hero_name": "Kimmy",
+    "slug": "kimmy",
+    "role": [
+      "Mage",
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane",
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 70,
+    "hero_name": "Thamuz",
+    "slug": "thamuz",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 71,
+    "hero_name": "Harith",
+    "slug": "harith",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 72,
+    "hero_name": "Minsitthar",
+    "slug": "minsitthar",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 73,
+    "hero_name": "Kadita",
+    "slug": "kadita",
+    "role": [
+      "Assassin",
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 74,
+    "hero_name": "Faramis",
+    "slug": "faramis",
+    "role": [
+      "Mage",
+      "Support"
+    ],
+    "lanes": [
+      "Mid",
+      "Roam"
+    ],
+    "lane": "Mid",
+    "flex_lanes": [
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 75,
+    "hero_name": "Badang",
+    "slug": "badang",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP",
+      "Gold"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Gold"
+    ]
+  },
+  {
+    "hero_id": 76,
+    "hero_name": "Khufra",
+    "slug": "khufra",
+    "role": [
+      "Tank"
+    ],
+    "lanes": [
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 77,
+    "hero_name": "Granger",
+    "slug": "granger",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane"
+    ]
+  },
+  {
+    "hero_id": 78,
+    "hero_name": "Guinevere",
+    "slug": "guinevere",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 79,
+    "hero_name": "Esmeralda",
+    "slug": "esmeralda",
+    "role": [
+      "Mage",
+      "Tank"
+    ],
+    "lanes": [
+      "EXP",
+      "Mid",
+      "Jungle"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Mid",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 80,
+    "hero_name": "Terizla",
+    "slug": "terizla",
+    "role": [
+      "Tank",
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane",
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 81,
+    "hero_name": "X.Borg",
+    "slug": "xborg",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 82,
+    "hero_name": "Ling",
+    "slug": "ling",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 83,
+    "hero_name": "Dyrroth",
+    "slug": "dyrroth",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP",
+      "Jungle"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 84,
+    "hero_name": "Lylia",
+    "slug": "lylia",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 85,
+    "hero_name": "Baxia",
+    "slug": "baxia",
+    "role": [
+      "Tank"
+    ],
+    "lanes": [
+      "Roam",
+      "Jungle"
+    ],
+    "lane": "Roam",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 86,
+    "hero_name": "Masha",
+    "slug": "masha",
+    "role": [
+      "Tank",
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 87,
+    "hero_name": "Wanwan",
+    "slug": "wanwan",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane"
+    ]
+  },
+  {
+    "hero_id": 88,
+    "hero_name": "Silvanna",
+    "slug": "silvanna",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 89,
+    "hero_name": "Cecilion",
+    "slug": "cecilion",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid",
+      "Gold"
+    ],
+    "lane": "Mid",
+    "flex_lanes": [
+      "Gold"
+    ]
+  },
+  {
+    "hero_id": 90,
+    "hero_name": "Carmilla",
+    "slug": "carmilla",
+    "role": [
+      "Support",
+      "Tank"
+    ],
+    "lanes": [
+      "Roam",
+      "EXP"
+    ],
+    "lane": "Roam",
+    "flex_lanes": [
+      "EXP"
+    ]
+  },
+  {
+    "hero_id": 91,
+    "hero_name": "Atlas",
+    "slug": "atlas",
+    "role": [
+      "Tank"
+    ],
+    "lanes": [
+      "Roam",
+      "EXP"
+    ],
+    "lane": "Roam",
+    "flex_lanes": [
+      "EXP"
+    ]
+  },
+  {
+    "hero_id": 92,
+    "hero_name": "Popol and Kupa",
+    "slug": "popolandkupa",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane"
+    ]
+  },
+  {
+    "hero_id": 93,
+    "hero_name": "Yu Zhong",
+    "slug": "yuzhong",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 94,
+    "hero_name": "Luo Yi",
+    "slug": "luoyi",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 95,
+    "hero_name": "Benedetta",
+    "slug": "benedetta",
+    "role": [
+      "Assassin",
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP",
+      "Jungle"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 96,
+    "hero_name": "Khaleed",
+    "slug": "khaleed",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 97,
+    "hero_name": "Barats",
+    "slug": "barats",
+    "role": [
+      "Tank",
+      "Fighter"
+    ],
+    "lanes": [
+      "Jungle",
+      "EXP",
+      "Roam"
+    ],
+    "lane": "Jungle",
+    "flex_lanes": [
+      "EXP",
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 98,
+    "hero_name": "Brody",
+    "slug": "brody",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold",
+      "Mid"
+    ],
+    "lane": "Gold",
+    "flex_lanes": [
+      "Mid"
+    ]
+  },
+  {
+    "hero_id": 99,
+    "hero_name": "Yve",
+    "slug": "yve",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 100,
+    "hero_name": "Mathilda",
+    "slug": "mathilda",
+    "role": [
+      "Assassin",
+      "Support"
+    ],
+    "lanes": [
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 101,
+    "hero_name": "Paquito",
+    "slug": "paquito",
+    "role": [
+      "Fighter",
+      "Assassin"
+    ],
+    "lanes": [
+      "EXP Lane",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 102,
+    "hero_name": "Gloo",
+    "slug": "gloo",
+    "role": [
+      "Tank"
+    ],
+    "lanes": [
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 103,
+    "hero_name": "Beatrix",
+    "slug": "beatrix",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold",
+      "Mid"
+    ],
+    "lane": "Gold",
+    "flex_lanes": [
+      "Mid"
+    ]
+  },
+  {
+    "hero_id": 104,
+    "hero_name": "Phoveus",
+    "slug": "phoveus",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_id": 105,
+    "hero_name": "Natan",
+    "slug": "natan",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane"
+    ]
+  },
+  {
+    "hero_id": 106,
+    "hero_name": "Aulus",
+    "slug": "aulus",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "Jungle",
+      "EXP"
+    ],
+    "lane": "Jungle",
+    "flex_lanes": [
+      "EXP"
+    ]
+  },
+  {
+    "hero_id": 107,
+    "hero_name": "Aamon",
+    "slug": "aamon",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle",
+      "Mid"
+    ],
+    "lane": "Jungle",
+    "flex_lanes": [
+      "Mid"
+    ]
+  },
+  {
+    "hero_id": 108,
+    "hero_name": "Valentina",
+    "slug": "valentina",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 109,
+    "hero_name": "Edith",
+    "slug": "edith",
+    "role": [
+      "Tank",
+      "Marksman"
+    ],
+    "lanes": [
+      "EXP",
+      "Gold",
+      "Roam"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Gold",
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 110,
+    "hero_name": "Floryn",
+    "slug": "floryn",
+    "role": [
+      "Support"
+    ],
+    "lanes": [
+      "Roam",
+      "Mid"
+    ],
+    "lane": "Roam",
+    "flex_lanes": [
+      "Mid"
+    ]
+  },
+  {
+    "hero_id": 111,
+    "hero_name": "Yin",
+    "slug": "yin",
+    "role": [
+      "Fighter",
+      "Assassin"
+    ],
+    "lanes": [
+      "EXP Lane",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 112,
+    "hero_name": "Melissa",
+    "slug": "melissa",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane"
+    ]
+  },
+  {
+    "hero_id": 113,
+    "hero_name": "Xavier",
+    "slug": "xavier",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 114,
+    "hero_name": "Julian",
+    "slug": "julian",
+    "role": [
+      "Fighter",
+      "Assassin"
+    ],
+    "lanes": [
+      "Mid Lane",
+      "EXP Lane",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 115,
+    "hero_name": "Fredrinn",
+    "slug": "fredrinn",
+    "role": [
+      "Tank",
+      "Fighter"
+    ],
+    "lanes": [
+      "Jungle",
+      "EXP",
+      "Roam"
+    ],
+    "lane": "Jungle",
+    "flex_lanes": [
+      "EXP",
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 116,
+    "hero_name": "Joy",
+    "slug": "joy",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 117,
+    "hero_name": "Novaria",
+    "slug": "novaria",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 118,
+    "hero_name": "Arlott",
+    "slug": "arlott",
+    "role": [
+      "Fighter",
+      "Assassin"
+    ],
+    "lanes": [
+      "EXP",
+      "Jungle",
+      "Roam"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Jungle",
+      "Roam"
+    ]
+  },
+  {
+    "hero_id": 119,
+    "hero_name": "Ixia",
+    "slug": "ixia",
+    "role": [
+      "Marksman"
+    ],
+    "lanes": [
+      "Gold Lane"
+    ]
+  },
+  {
+    "hero_id": 120,
+    "hero_name": "Nolan",
+    "slug": "nolan",
+    "role": [
+      "Assassin"
+    ],
+    "lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 121,
+    "hero_name": "Cici",
+    "slug": "cici",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP",
+      "Jungle"
+    ],
+    "lane": "EXP",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 122,
+    "hero_name": "Chip",
+    "slug": "chip",
+    "role": [
+      "Tank",
+      "Support"
+    ],
+    "lanes": [
+      "Roam",
+      "EXP"
+    ],
+    "lane": "Roam",
+    "flex_lanes": [
+      "EXP"
+    ]
+  },
+  {
+    "hero_id": 123,
+    "hero_name": "Zhuxin",
+    "slug": "zhuxin",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 124,
+    "hero_name": "Suyou",
+    "slug": "suyou",
+    "role": [
+      "Fighter",
+      "Assassin"
+    ],
+    "lanes": [
+      "EXP Lane",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 125,
+    "hero_name": "Lukas",
+    "slug": "lukas",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_name": "Sora",
+    "slug": "sora",
+    "role": [
+      "Fighter",
+      "Assassin"
+    ],
+    "lanes": [
+      "EXP Lane",
+      "Jungle"
+    ]
+  },
+  {
+    "hero_name": "Marcel",
+    "slug": "marcel",
+    "role": [
+      "Fighter"
+    ],
+    "lanes": [
+      "EXP Lane"
+    ]
+  },
+  {
+    "hero_name": "Kalea",
+    "slug": "kalea",
+    "role": [
+      "Tank",
+      "Support"
+    ],
+    "lanes": [
+      "Roam"
+    ]
+  },
+  {
+    "hero_name": "Obsidia",
+    "slug": "obsidia",
+    "role": [
+      "Tank",
+      "Mage"
+    ],
+    "lanes": [
+      "EXP Lane",
+      "Roam"
+    ]
+  },
+  {
+    "hero_name": "Zetian",
+    "slug": "zetian",
+    "role": [
+      "Mage"
+    ],
+    "lanes": [
+      "Mid Lane"
+    ]
+  },
+  {
+    "hero_id": 131,
+    "hero_name": "Harley",
+    "slug": "harley",
+    "role": [
+      "Mage",
+      "Assassin"
+    ],
+    "lanes": [
+      "Mid Lane",
+      "Jungle"
+    ],
+    "lane": "Mid Lane",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  },
+  {
+    "hero_id": 132,
+    "hero_name": "Hylos",
+    "slug": "hylos",
+    "role": [
+      "Tank"
+    ],
+    "lanes": [
+      "Roam",
+      "Jungle"
+    ],
+    "lane": "Roam",
+    "flex_lanes": [
+      "Jungle"
+    ]
+  }
+]

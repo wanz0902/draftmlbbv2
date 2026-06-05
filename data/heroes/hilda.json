@@ -1,0 +1,230 @@
+{
+  "id": "hilda",
+  "name": "Hilda",
+  "heroName": "Hilda",
+  "role": [
+    "Tank",
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane",
+    "Roam"
+  ],
+  "flex_lanes": [
+    "Roam"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Blessing of Wilderness",
+      "description": "Hilda regenerates 2% of her max HP per second while in the bush. When entering the bush, she gains a shield equal to 15% of her max HP. After leaving the bush, the shield lasts for 5s. This effect has a 10s cooldown. Hilda's Basic Attack and Skills apply a (Wilderness Mark) on hit, which lasts up to 4s and stacks up to 6. Each stack reduces the target's Physical Defense and Magic Defense by 4%.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Blessing_of_Wilderness",
+      "tips": "Her passive is a very strong tool for fights, she can always do trade damage in her lane then go to the bush to heal herself. Always maximize the use for this passive because it will help you a lot when laning.",
+      "iconUrl": "/raw-assets/skill_icons/hilda/blessing_of_wilderness.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Combat Ritual",
+      "description": "Hilda activates the runic power of her great axe, increasing her Movement Speed by 60% for 3s and enhancing her next Basic Attack to deal 200( +100% Total Physical Attack) (Physical Damage) and slow the target by 40% for 3s. The attack will also deal 120( +60% Total Physical Attack) (Physical Damage) to enemies behind the target.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Combat_Ritual",
+      "tips": "This is a good skill to chase or zone out enemies, especially damage dealers with low mobility (mage, assassin, marksman) especially during team fights. Hilda can target the enemy backline with this skill or chase away assassin who are killing their team’s carry.",
+      "iconUrl": "/raw-assets/skill_icons/hilda/combat_ritual.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Art of Hunting",
+      "description": "Hilda locks onto an enemy target, each time dealing 220( +100% Total Physical Attack) (Physical Damage). Skill can be released 3 times at most. The 2nd attack will deal damage to target's surroundings, and the 3rd attack will knock back the target and surrounding enemies temporarily.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Art_of_Hunting",
+      "tips": "This is your primary source of crowd control. Movement speed is useless if you can’t pin down your target. This makes sure that your target will be chased away or will be zoned out from the team fight making the target useless. Aside from the crowd control, this deals enough amount of damage to make the enemy fall back. Make sure that you are going punish your target with this ability.",
+      "iconUrl": "/raw-assets/skill_icons/hilda/art_of_hunting.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Power of Wildness",
+      "description": "Hilda launches a powerful slash on the target enemy, dealing 600( +250% Extra Physical Attack) (Physical Damage) and stunning them for 0.2s. Nearby enemies also take 60% damage. Each stack of (Wilderness Mark) makes (Power of Wildness) deal 2.5% of the target's Max HP as extra damage. At max stacks, (Power of Wildness) deals 20% of the target's Max HP as extra damage.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Power_of_Wildness",
+      "tips": "Make sure that you get assists as much as possible to have stacks for Hilda’s ultimate. It is very convenient since every stack gives you a lot of additional damage, with this said, Hilda’s not only tanky but can also deal a decent amount of damage to the enemy she’s targeting. This also completes the kit of Hilda in dominating every lane she gank.",
+      "iconUrl": "/raw-assets/skill_icons/hilda/power_of_wildness.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Frontline Engage",
+      "Crowd Control",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Hilda adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Frontline Engage",
+    "Crowd Control",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

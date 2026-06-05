@@ -1,0 +1,206 @@
+{
+  "id": "helcurt",
+  "name": "Helcurt",
+  "heroName": "Helcurt",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2440,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 121,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.15",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 255
+  },
+  "skills": {
+    "passive": {
+      "name": "Shadow of Styx",
+      "description": "Helcurt remains in Prowler state until spotted by the enemy team, gaining 15% extra Movement Speed, and continuously regenerating (30% Total Physical Attack) HP if he has not dealt any damage.\nHe gains 50% extra Attack Speed and 50% extra Movement Speed (decreasing over time) for 4s upon being spotted and leaves Prowler state 0.75s later.\nAny hero killed after being hit by Helcurt leaves a dark fog that explodes and spreads with a cooldown of 10s. Helcurt Conceals himself while within the dark fog.\n|quote=He who hides in the shadow.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "(30% Total Physical Attack)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Shadow_of_Styx"
+    },
+    "skill1": {
+      "name": "Hidden Terror",
+      "description": "Passive: When Helcurt is in Prowler state, the skill terrifies enemy heroes hit and briefly reveals them. Its cooldown decreases 3 times as fast as normal.\nActive: Helcurt blinks to the target location and deals 150 (+70% Total Physical Attack) Physical Damage to enemies within the area, reducing their Movement Speed by 60% for 0.75s.\n|quote=He who patrols the dark.\n|stats1=Cooldown|stats1_value=15.0/14.0/13.0/12.0/11.0/10.0\n|stats2=Base Damage|stats2_value=150/180/210/240/270/300",
+      "cooldown": "15.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+70% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "15.0",
+            "14.0",
+            "13.0",
+            "12.0",
+            "11.0",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "150",
+            "180",
+            "210",
+            "240",
+            "270",
+            "300"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Mobility",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Hidden_Terror"
+    },
+    "skill2": {
+      "name": "Deadly Stinger",
+      "description": "Passive: Helcurt gains one Deadly Stinger for every 1.5s spent in Prowler state or on each Basic Attack. Up to 5 stingers can be stored.\nActive: Helcurt fires all Deadly Stingers forward, each dealing 180 (+50% Extra Physical Attack) Physical Damage to enemies (Minions and Creeps take only 70% of the damage).\nDeadly Stinger counts as Basic Attack but cannot Crit.\n|quote=He who awakes in the slaughter.\n|stats1=Cooldown|stats1_value=4.0/3.7/3.4/3.1/2.8/2.5\n|stats2=Base Damage|stats2_value=180/200/220/240/260/280",
+      "cooldown": "4.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+50% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "4.0",
+            "3.7",
+            "3.4",
+            "3.1",
+            "2.8",
+            "2.5"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "180",
+            "200",
+            "220",
+            "240",
+            "260",
+            "280"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Deadly_Stinger"
+    },
+    "ultimate": {
+      "name": "Dark Night Falls",
+      "description": "Helcurt summons the Dark Night, reducing all enemies' sight range and making them lose sight of their allies for 3s. During Dark Night, Helcurt gains 40% extra Movement Speed.\nThe Dark Night makes it easier for Helcurt to leave enemies' sight range.\n|quote=He who ressurects in the night.\n|stats1=Cooldown|stats1_value=60.0/55.0/50.0\n|stats2=Movement Speed Bonus|stats2_value=40%/45%/50%",
+      "cooldown": "60.0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "60.0",
+            "55.0",
+            "50.0"
+          ]
+        },
+        {
+          "label": "Movement Speed Bonus",
+          "values": [
+            "40%",
+            "45%",
+            "50%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff",
+        "Debuff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dark_Night_Falls"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "id": "granger",
+  "name": "Granger",
+  "heroName": "Granger",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Caprice",
+      "description": "Granger can load his gun with up to 6 bullets at a time. Each 6th bullet is guaranteed to Crit. Granger's Basic Attack deals 50( +110% Total Physical Attack) (Physical Damage), but he only gains 40% of his total extra Attack Speed.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Caprice",
+      "tips": "Rhapsody is Granger's primary damaging dealing skill. The last bullet of this skill guarantees critical damage. So watch your aim to make sure the last bullet hits the target.",
+      "iconUrl": "/raw-assets/skill_icons/granger/caprice.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Rhapsody",
+      "description": "Granger immediately reloads his gun and fires continuously in the target direction, dealing 35( +70% Total Physical Attack) (Physical Damage) with each shot (deals 120 extra damage against Creeps).",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Rhapsody",
+      "tips": "It's a great combo using this skill to change your position in battle and using \"Rhapsody\" to deal high damage. As it highly increases the Hit Rate of \"Rhapsody\" and reduces the CD time of this skill.",
+      "iconUrl": "/raw-assets/skill_icons/granger/rhapsody.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Rondo",
+      "description": "Granger blinks in the designated direction, and his next 2 Basic Attacks deal extra 25% of damage in 5s. Each time (Rhapsody) hits an enemy hero, the CD of this skill will be reduced by 0.5s.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Rondo",
+      "tips": "Regardless of whether you are in pursuit of an enemy or on the run, take good advantage of this skill to reposition in battle.",
+      "iconUrl": "/raw-assets/skill_icons/granger/rondo.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Death Sonata",
+      "description": "Granger immediately reloads and fires a cannon shot in the target direction with the super cannon hidden in his violin case. The cannon shot will pass through Minions and explode upon hitting an enemy hero, dealing (Physical Damage) equal to 80( +70% Total Physical Attack) plus 12% of the target's lost HP to enemies in the area and slowing them by 80%. Granger can fire the super cannon 3 times at the cost of 2 bullets per shot, and can move once in the target direction after each shot. When (Death Sonata) ends, its cooldown will be reduced by 15% for every 2 bullets remaining.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Death_Sonata",
+      "tips": "The \"lucky\" effect of Granger's 6th bullet is not limited to his basic attacks, but also work with his 1st skill and ultimate! Make sure you hit the enemies with the 6th bullet to deal massive damage no matter what!",
+      "iconUrl": "/raw-assets/skill_icons/granger/death_sonata.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Granger adalah marksman dengan DPS tinggi yang menjadi win condition utama di late game.",
+  "playstyleTags": [
+    "DPS"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Late Game Insurance",
+    "Snowball Potential"
+  ],
+  "counterTags": [
+    "Dive",
+    "Burst",
+    "Flank"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Needs Peel"
+  ],
+  "macroTags": [
+    "Objective DPS",
+    "Late Game Carry",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

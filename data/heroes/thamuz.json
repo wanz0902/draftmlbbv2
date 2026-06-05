@@ -1,0 +1,219 @@
+{
+  "id": "thamuz",
+  "name": "Thamuz",
+  "heroName": "Thamuz",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Grand Lord Lava",
+      "description": "When Thamuz is holding his (Scythes), each of his Basic Attacks has a chance to conjure a burst of Lava Energy beneath the target that erupts after a 0.7s delay, dealing 50( +110% Total Physical Attack) (True Damage). When without (Scythes), Thamuz gains 25% extra Movement Speed and will enhance his next Basic Attack after retrieving the (Scythes). The enhanced Basic Attack slows the target by 30% and is guaranteed to trigger Lava Energy.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Grand_Lord_Lava",
+      "tips": "Deal more damage by triggering more puddles of lava in an area where enemies are concentrating.",
+      "iconUrl": "/raw-assets/skill_icons/thamuz/grand_lord_lava.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Molten Scythes",
+      "description": "Thamuz tosses (Scythes) in the target direction. After travelling for a certain distance or hitting the first enemy hero, they deal 120( +60% Total Physical Attack) (Physical Damage). The (Scythes) will then slow nearby enemies by 30% and deal 45( +20% Extra Physical Attack) (Physical Damage) every 0.5s. After leaving Thamuz for a period of time or a certain distance, the (Scythes) will return to Thamuz and drag enemies in their path to him. Thamuz can approach the Scythes or cast the skill again to retrieve them.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Molten_Scythes",
+      "tips": "Thamuz's core skill. Approach the enemies with the speed boost after throwing the scythes and attack them with the enhanced attack. Retrieveing the scythes can also enhance his attack.",
+      "iconUrl": "/raw-assets/skill_icons/thamuz/molten_scythes.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Chasm Trample",
+      "description": "Thamuz jumps to a designated area to deal 230( +60% Extra Physical Attack) (Physical Damage) and slow the enemy units by 25% for 2s upon landing. If the Scythes are still travelling, they will return to Thamuz and (Molten Scythes) will reset its CD instantly.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Chasm_Trample",
+      "tips": "Use this skill to retrieve the scythes, collect the scythes, dash into the enemies or land on the path of the enemies to retrieve the scythes as well as pull enemies back to Thamuz.",
+      "iconUrl": "/raw-assets/skill_icons/thamuz/chasm_trample.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Cauterant Inferno",
+      "description": "Thamuz spouts the lava stored in his body, dealing 300( +80% Total Physical Attack) (Physical Damage) to nearby enemies and creating a (Cauterant Zone) around him. The (Cauterant Zone) lasts 9s and deals 30( +10% Extra Physical Attack) (Physical Damage) every 0.5s to enemies in the area. Meanwhile, Thamuz gains 500 extra Max HP, heals himself by the same amount, and increases his Attack Speed by 1.3 times. He also recovers 1.5% Max HP each time he deals damage with Basic Attacks or his (Scythes).",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Cauterant_Inferno",
+      "tips": "Regenerates a huge amount of HP in team fight by using this skill",
+      "iconUrl": "/raw-assets/skill_icons/thamuz/cauterant_inferno.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Thamuz adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "id": "mathilda",
+  "name": "Mathilda",
+  "heroName": "Mathilda",
+  "role": [
+    "Assassin",
+    "Support"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Ancestral Guidance",
+      "description": "Mathilda gains (Ancestral Guidance) while moving. When it's fully charged, her next Basic Attack will be enhanced, dealing 200( +100% Total Physical Attack) (+100% Total Magic Power) (Magic Damage) to the target and granting her 80 extra Movement Speed that decays over 2.5s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ancestral_Guidance",
+      "tips": "Mathilda gains Ancestral Guidance while moving. When it is fully charged, her next Basic Attack will be enhanced, dealing extra Damage to the target and increasing her Movement Speed.",
+      "iconUrl": "/raw-assets/skill_icons/mathilda/ancestral_guidance.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Soul Bloom",
+      "description": "Mathilda resonates with the power of her ancestors for 4s, attracting wisps as her movement distance increases (up to 6 wisps). At the end of the skill's duration, or when Mathilda casts this skill again, the wisps will seek and attack nearby enemies, each dealing 275( +80% Total Magic Power) (Magic Damage) and revealing the enemies' positions briefly. Subsequent damage dealt by wisps to the same target decays to 40%.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Soul_Bloom",
+      "tips": "Mathilda resonates with the power of ancestors and summons wisps that surround her. With the movement distance increased, more and more wisps will be attracted to her, capped at 6 wisps. After casting this skill or reaching the time limit, the power of ancestors will guide the wisps to attack nearby enemies and deal Damage.",
+      "iconUrl": "/raw-assets/skill_icons/mathilda/soul_bloom.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Guiding Wind",
+      "description": "Mathilda leaps in the target direction and creates a field around her, gaining a 500( +180% Total Magic Power) shield and 25% extra Movement Speed for 3s. Allied heroes who come into contact with the field will receive a 60% shield and (Guiding Wind). The first allied hero that triggers (Guiding Wind) will be guided to Mathilda, and both of them will gain the same Movement Speed boost. When casting this skill during (Circling Eagle), Mathilda won't change her position. (Guiding Wind) expires 2s after the hero leaves Mathilda's field.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Guiding_Wind",
+      "tips": "Mathilda creates a field surrounding her and leaps forward. Upon landing, she gains a Shield and Movement Speed. The allied units who come in contact with this field will receive the same Shield also, and Guiding Wind: After using Guiding Wind, the hero will be guided to Mathilda, and both of them will gain the same Movement Speed. When using this skill during Circling Eagle, Mathilda will not change her position.",
+      "iconUrl": "/raw-assets/skill_icons/mathilda/guiding_wind.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Circling Eagle",
+      "description": "Mathilda applies a (Soul Mark) to the target enemy hero and circles around them for up to 3.5s, during which her wisps will fly into nearby enemies, each dealing 40( +15% Total Magic Power) (Magic Damage). The Soul Mark will also slow the target by 15% and (Soul Bloom) will prioritize targets with Soul Mark. Within the duration, Mathilda can select an area to dash to. At the end of the duration, she'll dash at the target with (Soul Mark), dealing 320( +120% Total Magic Power) (Magic Damage) while knocking enemies in her path airborne for 0.6s and transferring the (Soul Mark) to the first enemy hero that she knocks airborne. Mathilda gains Control Immunity and a 400( +160% Total Magic Power) shield for the skill duration.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Circling_Eagle",
+      "tips": "Mathilda applies a Soul Mark to the targeted hero and then circles around the target for a while. During this period, wisps will rush to nearby enemies, each time dealing Magic Damage. After casting this skill or reaching the time limit, she will rush to the target, knocking back enemies on the path and stunning them. Mathilda gains control immunity and Shield during her circling.",
+      "iconUrl": "/raw-assets/skill_icons/mathilda/circling_eagle.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Vision Control",
+      "Team Enabler",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Ally Guidance",
+    "Dash to Ally"
+  ],
+  "mechanicNote": "Mathilda bisa dash ke ally untuk memberikan shield, lalu dash kembali ke musuh, cocok untuk initiasi dan peel.",
+  "playstyleTags": [
+    "Burst",
+    "Pickoff"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Early Aggression"
+  ],
+  "counterTags": [
+    "Hard CC",
+    "Group Up",
+    "Vision"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Backline Threat",
+    "Pick-off Specialist",
+    "Vision Control",
+    "Team Enabler",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 4",
+    "Early-Mid Game"
+  ]
+}

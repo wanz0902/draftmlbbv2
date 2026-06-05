@@ -1,0 +1,219 @@
+{
+  "id": "xborg",
+  "name": "X.Borg",
+  "heroName": "X.Borg",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Firaga Armor",
+      "description": "X.Borg's Firaga Armor inherits 120% of his Max HP and absorbs all incoming damage when it's active. When the Armor is destroyed, X.Borg will disengage from it and roll in the direction of the Joystick (he is immune to damage during this process). The Armor's energy will gradually regenerate while X.Borg is in the Armorless State. At full energy, X.Borg re-equips the Armor and restores it to 30% of his Max HP. X.Borg's fire damage causes enemies to heat up. Enemies at maximum temperature will drop Firaga supplies when they take fire damage from X.Borg. Picking up a Firaga supply restores 10% of the Armor's HP, or 10 energy while in the Armorless State.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Firaga_Armor",
+      "tips": "X.Borg is equipped with a homemade Firaga Armor that inherits a portion of his HP and takes all damage for X.Borg while it's active. A short circuit will take place when the armor runs out of HP, and X.Borg will do a roll to the direction of the Left Joystick to disengage from the armor. In this meantime, X.Borg won't take any damage. He then continues to restore energy in Armorless State. When energy is full, X.Borg will re-equip the armor and restore the armor. X.Borg's fire damage causes enemies to warm up, and enemies with ultra-temperature will drop Armor parts when they take flame damage. Pick up parts and restore Armor, or restore energy while in Armorless State.",
+      "iconUrl": "/raw-assets/skill_icons/xborg/firaga_armor.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Fire Missiles",
+      "description": "X.Borg sprays fire in the target direction, dealing 25( +60% Total Physical Attack) (+40% Total Magic Power) (Physical Damage) 7 times over 2s to enemies in range (only deals 75% damage against Minions). Enemies at maximum temperature are dealt (True Damage) instead. (Armorless) State: The attack area becomes narrower but longer, while the damage is reduced to 60% of that in (Armored) state.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Fire_Missiles",
+      "tips": "\"X.Borg activates the flame thrower and fires in the designated direction, dealing physical damage over time. If enemies' temperature rises to the limit they will take true damage and slow down. Armorless State: X.Borg adjusts the flamethrower to a narrower angle and longer distance with reduced damage. This is X.Borg's main DPS skill, which is good at dealing sustained damage and increasing the chance to trigger his passive.\"",
+      "iconUrl": "/raw-assets/skill_icons/xborg/fire_missiles.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Fire Stake",
+      "description": "X.Borg shoots 5 Fire Stakes at the edge of the fan-shaped indicator and retrieves them after 1.7s, each dealing 50( +20% Total Physical Attack) (Physical Damage) and pulling the enemies in the path toward him. Firaga Supplies in the path will also be retrieved if touched by Fire Stakes. (Armorless) State: X.Borg adjusts Fire Stake Launcher to increase its range and shorten the distance between Fire Stakes.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Fire_Stake",
+      "tips": "X.Borg shoots several Fire Stakes at the edge of the fan-shaped indicator. After a few seconds, the stakes are taken back into his body. Each stake deals physical damage to enemies in its path and pulling them back. If the Fire Stake touches the Firaga supplies in its path, it pulls them back as well. Armorless State: X.Borg adjusts the Fire Stake Launcher to send the stakes a further distance and shortens the gap between the stakes. The fire stakes can effectively stop enemies from escaping and can be used to pick up the Firaga supplies generated from X. Borg's Passive.",
+      "iconUrl": "/raw-assets/skill_icons/xborg/fire_stake.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Last Insanity",
+      "description": "X.Borg charges in the target direction while rotating and spraying fire, dealing 200( +130% Extra Physical Attack) (+90% Total Magic Power) (Physical Damage) 7 times and slowing enemies hit by 25%. He stops upon running into an enemy hero and will slow them by an additional 40%. After 3s from the start of the skill, X.Borg's (Firaga Armor) will detonate, dealing (True Damage) to nearby enemies equal to 300 plus 15% of their Max HP. If the Armor is destroyed before it can self-detonate, it will only deal 50% of the damage. When his Armor detonates, X.Borg will dash a short distance in the Joystick's direction and enter the (Armorless) state while removing all debuffs from himself. This skill cannot be used in the (Armorless) state. (Use Again): X.Borg stops spraying fire and immediately detonates his (Firaga Armor).",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Last_Insanity",
+      "tips": "X.Borg charges forward in a designated direction, shooting fire around to deal physical damage and slowing enemies down. If he hits an enemy hero during the charge, he will stop charging and slow the target. Then he self-explodes and deals true damage based on the target's max HP. The explosion destroys the current Firaga Armor and puts himself under armorless state. After exploding he returns to moving normally. This powerful skill is designed for teamfights. The high damage can cause a davastating blow to enemeis. However, before using this skill you should pay attention to the long cast animation and the cost of losing all HP of the Firaga Armor.",
+      "iconUrl": "/raw-assets/skill_icons/xborg/last_insanity.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "X.Borg adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

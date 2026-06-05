@@ -1,0 +1,230 @@
+{
+  "id": "grock",
+  "name": "Grock",
+  "heroName": "Grock",
+  "role": [
+    "Tank",
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane",
+    "Roam"
+  ],
+  "flex_lanes": [
+    "Roam"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Earthen Force",
+      "description": "When near a wall or turret, Grock gains 10% Movement Speed, 15 (+8*Hero Level) Physical Defense, and 18 (+4.8*Hero Level) HP Regen. Each point of Grock's extra Physical Attack increases his Physical Defense by 0.5.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Earthen_Force",
+      "tips": "Try staying near a turret when roaming in lanes or escaping, using of his passive wisely will help you tank extra incoming damage from enemies.",
+      "iconUrl": "/raw-assets/skill_icons/grock/earthen_force.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Power of Nature",
+      "description": "Grock charges his weapon with the (Power of Nature) and then launches a powerful sweep, dealing 300( +160% Extra Physical Attack) (Physical Damage) to nearby enemies and slowing them by 40% for 2s. Damage dealt will increase the longer the skill is channeled, up to 250%. Using (Power of Nature) near a wall will grant Control Immunity.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Power_of_Nature",
+      "tips": "Charging his first skill will deal a lot of damage to enemies. The more time of charging, the more damage it will dealt. Use this on waves of minion for fasterclearing of lane.Charge his first skill when enemies are trying to disable you (stun,hold,morph,slow,knockback airborne) to be Immune from Crowd Control (CC) spells.",
+      "iconUrl": "/raw-assets/skill_icons/grock/power_of_nature.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Guardian's Barrier",
+      "description": "Grock conjures a stone wall at the target location, dealing 300( +50% Total Physical Attack) (Physical Damage) to nearby enemies. The stone wall lasts 5s and can block enemies who try to pass through.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Guardian's_Barrier",
+      "tips": "Using this ability to block enemies from destroying turrets and to prevent themfrom escaping when low health.",
+      "iconUrl": "/raw-assets/skill_icons/grock/guardian_s_barrier.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Wild Charge",
+      "description": "Grock charges in the target direction, dealing 360( +75% Total Physical Attack) (Physical Damage) to enemies in his path and knocking them airborne. If he hits a wall or turret during the charge, he deals an additional 360( +90% Total Physical Attack) (Physical Damage) to nearby enemies and stuns them for 1.8s.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Wild_Charge",
+      "tips": "Charging forward onto enemies will knock the enemies airborne on path. This will help you when chasing enemies. Also Try hitting the wall behind an enemy to utilize the extra damage.",
+      "iconUrl": "/raw-assets/skill_icons/grock/wild_charge.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Frontline Engage",
+      "Crowd Control",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Grock adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Frontline Engage",
+    "Crowd Control",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

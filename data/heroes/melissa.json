@@ -1,0 +1,183 @@
+{
+  "id": "melissa",
+  "name": "Melissa",
+  "heroName": "Melissa",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Doll Buster",
+      "description": "\"My tailor shop excels at fixing and 'fixing' dolls. Am I right, Muddles?\" (Melissa deals 125% damage to Minions, Creeps, and Summoned Units.)",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Doll_Buster",
+      "iconUrl": "/raw-assets/skill_icons/melissa/doll_buster.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Falling!",
+      "description": "\"Watch me slide forward and increase my Attack Speed for 3 seconds— Ah, that was just boring…\" \"(Muddles), go that way!\" \"(Cuddles), come here!\" (The skill's cooldown is reduced by 0.5s each time Melissa damages the enemy by attacking (Muddles).)",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Falling!",
+      "iconUrl": "/raw-assets/skill_icons/melissa/falling.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Eyes on You!",
+      "description": "\"The plan's like this: Throw (Muddles) out to hold down the bad guys, and then… I come on stage!\" \"I puncture the bad guys, while (Giggles) hit (Muddles) to punish them as well! Hee, fantastic!\" ((Muddles) deals 250( +80% Total Physical Attack) (Physical Damage) on the first hit and links nearby enemies for up to 6s. Linked enemies are slowed by 60% that decays over 1.5s and can break the link by moving out of the range. (Muddles) will return to Melissa early when there are no enemies around and immediately if she's too far away. When (Muddles) is present, you can tap the (Attack Minion) button to directly attack (Muddles), though it cannot trigger the multi-hit damage.)",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Eyes_on_You!",
+      "iconUrl": "/raw-assets/skill_icons/melissa/eyes_on_you.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Go Away!",
+      "description": "(Cuddles), protect me! For 4 seconds, let no bad guys come close. Unless I say otherwise! (When activated, the field knocks back enemies in the area and deals them 500( +100% Total Magic Power) (Magic Damage). It'll then continuously knock back enemies who attempt to enter the field, dealing them 50( +10% Total Magic Power) (Magic Damage) and briefly slowing them. The field will also interrupt the enemy's movement skills unless they're immune to control effects. The field will move with Melissa once, when she's about to move out of the boundary. (Passive): Melissa's Physical & Magic Defense are increased by 3. This effect is increased to 5 times when the skill is active.)",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Go_Away!",
+      "iconUrl": "/raw-assets/skill_icons/melissa/go_away.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Melissa adalah marksman dengan DPS tinggi yang menjadi win condition utama di late game.",
+  "playstyleTags": [
+    "DPS"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Late Game Insurance",
+    "Snowball Potential"
+  ],
+  "counterTags": [
+    "Dive",
+    "Burst",
+    "Flank"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Needs Peel"
+  ],
+  "macroTags": [
+    "Objective DPS",
+    "Late Game Carry",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

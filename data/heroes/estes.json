@@ -1,0 +1,193 @@
+{
+  "id": "estes",
+  "name": "Estes",
+  "heroName": "Estes",
+  "role": [
+    "Support"
+  ],
+  "specialty": [
+    "Guard",
+    "Regen"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam",
+    "Mid"
+  ],
+  "flex_lanes": [
+    "Mid"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Scripture of the Moon Elf",
+      "description": "Scripture of the Moon Elf slowly charges Estes with energy. When the energy reaches 100 stacks, Estes' next Basic Attack will become enhanced, dealing 250( +100% Total Physical Attack) (+150% Total Magic Power) (Magic Damage) to the target and 125( +50% Total Physical Attack) (+75% Total Magic Power) (Magic Damage) to nearby enemies, and slowing them by 60% for 1.5s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Scripture_of_the_Moon_Elf",
+      "tips": "Code of Moon Elves, can charge energy and improves its basic attack dealing 450 magic damage. This basic attack will surely slow down its target. Also, it can make a splash damage dealing 225 magic damage towards nearby enemies.",
+      "iconUrl": "/raw-assets/skill_icons/estes/scripture_of_the_moon_elf.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Moonlight Immersion",
+      "description": "Estes restores 250( +110% Total Magic Power) HP to the target allied hero immediately and links himself with them for 3s, slowly restoring 325( +60% Total Magic Power) HP to the target. Linking with an allied hero will also increase Estes' Hybrid Defense by 20 and Movement Speed by 15%, as well as the energy charging speed of the Scripture of the Moon Elf. Being too far from the target will break the link.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Moonlight_Immersion",
+      "tips": "Moonlight Immersion can immediately restore one of his ally's HP. When Estes is successfully links himself to his target ally, it will heal his ally with 200 HP for 3 seconds. But, being far from the target, the link chain will be broken and the healing will stop. This skill can also heal Estes himself if needed. Estes cannot restore one ally if his HP is very low also when he lacks of mana.",
+      "iconUrl": "/raw-assets/skill_icons/estes/moonlight_immersion.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Domain of Moon Goddess",
+      "description": "Estes drops a flood of moonlight on the target area, dealing 350( +70% Total Magic Power) (Magic Damage) to enemy units within it. Afterwards, it turns to a domain of the Moon Goddess and reveals enemies inside it. Enemies will be slowed by 90% for 1.5s if they touch the edge of the domain area. (The slow effect will decay over time.)",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Domain_of_Moon_Goddess",
+      "tips": "This skill is effectively use as a trap. Ring of trap that will slow down enemies and even monsters or creeps movements that also deals 350 magic damage to enemies within it. You can cast this right in front of you to slow enemies that attacks you. This can also be use to help your allies escape by making the enemies slow their movements. Whoever got into the ring cannot easily escape due to if they tried to run they will be slow if they touches the ring.",
+      "iconUrl": "/raw-assets/skill_icons/estes/domain_of_moon_goddess.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Blessing of Moon Goddess",
+      "description": "Estes casts an enhanced (\"Moonlight Immersion\") on all nearby allied heroes. Within the next 8s, (\"Moonlight Immersion\") will be enhanced and Estes will continuously recover 1230( +210% Total Magic Power) HP.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Blessing_of_Moon_Goddess",
+      "tips": "This ultimate skill is best use as support to allies. The skill incarnates into saint king of moonlight for 8 seconds. Intensifying the effect of Moonlight Immersion. After Estes cast the Blessing of Moon Goddess, he can immediately cast The Moonlight Immersion one time for surrounding ally. When Moonlight Immersion's cooldown is done, Estes can cast again Moonlight Immersion to grant another massive restoration of one ally. For as long as the Blessing of Moon Goddess casting is still ongoing. This skill can make your allies heroes immortal in game. Also Estes will automatically heal himself a total of 1,080 HP. This is a very good regeneration buffs to allies, especially in clashing.",
+      "iconUrl": "/raw-assets/skill_icons/estes/blessing_of_moon_goddess.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Vision Control",
+      "Team Enabler",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Estes adalah support yang membantu tim melalui heal, shield, atau utility lainnya.",
+  "playstyleTags": [
+    "Protect"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Enabler",
+    "Defensive Draft"
+  ],
+  "counterTags": [
+    "Dive",
+    "Isolation",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Dive",
+    "Sustain Enabler"
+  ],
+  "macroTags": [
+    "Vision Control",
+    "Team Enabler",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

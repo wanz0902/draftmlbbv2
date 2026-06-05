@@ -1,0 +1,237 @@
+{
+  "id": "nana",
+  "name": "Nana",
+  "heroName": "Nana",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 115,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.08",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Molina's Gift",
+      "description": "Upon taking fatal damage, Nana removes all debuffs on her and transforms, becoming untargetable and invincible, and gains 30% Movement Speed for 2s. She also recovers 10% Max HP over the duration.\nNana can only transform once every 150s and cannot cast skills in the transformed form.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Death Immunity"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Molina's_Gift"
+    },
+    "skill1": {
+      "name": "Magic Boomerang",
+      "description": "Nana hurls her Magic Boomerang in the target direction, dealing damage to enemies hit on its way out and back. The boomerang deals 300 (+100% Total Magic Power) Magic Damage to the first enemy hit. For every additional enemy hit, the damage is reduced by 10% (max reduction of 30%).\n|stats1=Cooldown|stats1_value=6.0/5.7/5.4/5.1/4.8/4.5\n|stats2=Skill Cost|stats2_value=55/60/65/70/75/80\n|stats3=Base Damage|stats3_value=300/340/380/420/460/500",
+      "cooldown": "6.0",
+      "manaCost": "55",
+      "damageType": "Magic",
+      "scaling": [
+        "(+100% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "6.0",
+            "5.7",
+            "5.4",
+            "5.1",
+            "4.8",
+            "4.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "340",
+            "380",
+            "420",
+            "460",
+            "500"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Magic_Boomerang"
+    },
+    "skill2": {
+      "name": "Molina Smooch",
+      "description": "Nana throws Molina at the target location, dealing 250 (+50% Total Magic Power) Magic Damage to enemies within range and Transforming enemy heroes hit into small animals.\nIf Molina does not hit an enemy hero, she will remain on the ground and chase the nearest enemy hero that comes into range, Transforming the first enemy hero she touches.\nTransform: Reduces the target's Movement Speed by 50% and Magic Defense by 30% for 1.5s. Transformed heroes cannot attack or use skills.\n|stats1=Cooldown|stats1_value=12.0/11.4/10.8/10.2/9.6/9.0\n|stats2=Skill Cost|stats2_value=80/85/90/95/100/105\n|stats3=Morph Damage|stats3_value=250/275/300/325/350/375",
+      "cooldown": "12.0",
+      "manaCost": "80",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.4",
+            "10.8",
+            "10.2",
+            "9.6",
+            "9.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "80",
+            "85",
+            "90",
+            "95",
+            "100",
+            "105"
+          ]
+        },
+        {
+          "label": "Morph Damage",
+          "values": [
+            "250",
+            "275",
+            "300",
+            "325",
+            "350",
+            "375"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Debuff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Molina_Smooch"
+    },
+    "ultimate": {
+      "name": "Molina Blitz",
+      "description": "Nana summons Molina to strike the target area 3 times, each time dealing 440 (+140% Total Magic Power) Magic Damage to enemies within and slowing them by 30% for 1s. Enemies hit consecutively will be stunned for 1s.\n|stats1=Cooldown|stats1_value=36.0/32.0/28.0\n|stats2=Skill Cost|stats2_value=135/150/165\n|stats3=Base Damage|stats3_value=440/520/600",
+      "cooldown": "36.0",
+      "manaCost": "135",
+      "damageType": "Magic",
+      "scaling": [
+        "(+140% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "36.0",
+            "32.0",
+            "28.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "135",
+            "150",
+            "165"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "440",
+            "520",
+            "600"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Burst",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Molina_Blitz"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

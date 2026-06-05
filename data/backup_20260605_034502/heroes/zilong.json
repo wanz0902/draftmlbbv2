@@ -1,0 +1,247 @@
+{
+  "id": "zilong",
+  "name": "Zilong",
+  "heroName": "Zilong",
+  "role": [
+    "Fighter",
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2511,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 123,
+    "physicalDefense": 25,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.05",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 265
+  },
+  "skills": {
+    "passive": {
+      "name": "Dragon Flurry",
+      "description": "After dealing damage 3 time(s) with Basic Attacks or skills, Zilong triggers Dragon Flurry on the next Basic Attack, hitting the target 3 time(s). Each hit deals 80 (+30% Total Physical Attack) Basic Attack Damage and heals himself for 50 (+20% Total Physical Attack) HP.\nZilong's Basic Attack deals 100 (+80% Total Physical Attack) Physical Damage.\nIf the target's HP is below 50%, all damage dealt by Zilong's skills and Basic Attacks is increased by 30.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+30% Total Physical Attack)",
+        "(+20% Total Physical Attack)",
+        "(+80% Total Physical Attack)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff",
+        "Heal"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dragon_Flurry"
+    },
+    "skill1": {
+      "name": "Spear Flip",
+      "description": "Zilong flings the target enemy over his head, dealing 250 (+80% Total Physical Attack) Physical Damage.\n|stats1=Cooldown|stats1_value=12.0/11.5/11.0/10.5/10.0/9.5\n|stats2=Skill Cost|stats2_value=80/85/90/95/100/105\n|stats3=Base Damage|stats3_value=250/270/290/310/330/350",
+      "cooldown": "12.0",
+      "manaCost": "80",
+      "damageType": "Physical",
+      "scaling": [
+        "(+80% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.5",
+            "11.0",
+            "10.5",
+            "10.0",
+            "9.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "80",
+            "85",
+            "90",
+            "95",
+            "100",
+            "105"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "270",
+            "290",
+            "310",
+            "330",
+            "350"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spear_Flip"
+    },
+    "skill2": {
+      "name": "Spear Strike",
+      "description": "Zilong lunges at the target enemy, dealing 250 (+60% Total Physical Attack) Physical Damage and reducing their Physical Defense by 15 for 2s.\nThe cooldown of Spear Strike is reset each time Zilong kills an enemy.\n|stats1=Cooldown|stats1_value=12.0/11.4/10.8/10.2/9.6/9.0\n|stats2=Base Damage|stats2_value=250/290/330/370/410/450\n|stats3=Physical Defense Reduction|stats3_value=15/18/21/24/27/30",
+      "cooldown": "12.0",
+      "manaCost": "40",
+      "damageType": "Physical",
+      "scaling": [
+        "(+60% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.4",
+            "10.8",
+            "10.2",
+            "9.6",
+            "9.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "290",
+            "330",
+            "370",
+            "410",
+            "450"
+          ]
+        },
+        {
+          "label": "Physical Defense Reduction",
+          "values": [
+            "15",
+            "18",
+            "21",
+            "24",
+            "27",
+            "30"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Debuff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spear_Strike"
+    },
+    "ultimate": {
+      "name": "Supreme Warrior",
+      "description": "Zilong removes all slow effects on himself and gains 40% Movement Speed, 35% Attack Speed, and Slow Immunity for 7.5s.\nFor the duration, he can trigger Dragon Flurry after every 2 Basic Attacks (instead of the previous 3).\n|stats1=Cooldown|stats1_value=35.0/31.0/27.0\n|stats2=Skill Cost|stats2_value=120/140/160\n|stats3=Attack Speed Bonus|stats3_value=35%/45%/55%",
+      "cooldown": "35.0",
+      "manaCost": "120",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "35.0",
+            "31.0",
+            "27.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "140",
+            "160"
+          ]
+        },
+        {
+          "label": "Attack Speed Bonus",
+          "values": [
+            "35%",
+            "45%",
+            "55%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Speed Up",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Supreme_Warrior"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "id": "terizla",
+  "name": "Terizla",
+  "heroName": "Terizla",
+  "role": [
+    "Tank",
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane",
+    "Roam"
+  ],
+  "flex_lanes": [
+    "Roam"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Body of Smith",
+      "description": "Terizla gains 1% extra Damage Reduction (up to 30%) for every 2.5% HP lost. He cannot gain extra Attack Speed and will convert every 1% extra Attack Speed he's supposed to receive into 1 extra Physical Attack.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Body_of_Smith",
+      "tips": "\"Terizla's lost HP will be converted to a limited amount of Damage Reduction. His Attack Speed can't be increased. Every 1% increase in Attack Speed will be converted to Physical Attack. The lower the HP of Terizla, the more damage resistant he becomes. This could enable him to draw fire more effectively in team offensives. \"",
+      "iconUrl": "/raw-assets/skill_icons/terizla/body_of_smith.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Revenge Strike",
+      "description": "Terizla cracks the ground with his hammer and the fissure will spread out, dealing 300( +80% Extra Physical Attack) (Physical Damage). After the fissure hits the first target, it will drill into the target and slow them by 15%. At the same time, Terizla's Movement Speed will be increased by 15% for 3.5s. The fissure on target will then explode, dealing 300( +80% Extra Physical Attack) plus 20% of the enemy's lost HP (Physical Damage).",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Revenge_Strike",
+      "tips": "Terizla smashes the ground with his hammer, causing a fissure with cracks that spreads out and deals Physical Damage to enemies in contact with it. The first enemy in contact with the fissure will suffer a loss in Movement Speed, while Terizla gains an increase in Movement Speed. The affected enemy will then suffer an explosion with Physical Damage equal to 10% of the enemy's lost HP. This is a poke skill as Terizla's Movement Speed increases while the enemy's Movement Speed decreases, enabling Terizla to easily escape or chase the enemy.",
+      "iconUrl": "/raw-assets/skill_icons/terizla/revenge_strike.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Execution Strike",
+      "description": "Terizla swings his hammer in a fan-shaped area ahead. This skill can be cast up to 3 times. The first two attacks deal 135( +160% Total Physical Attack) (Physical Damage) each, while the third deals 225( +220% Total Physical Attack) (Physical Damage). Enemies hit will also be slowed by 20% for 1.25s (the Slowing Effect can stack). Deals only 60% damage to Minions.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Execution_Strike",
+      "tips": "\"Terizla swings the hammer in a fan-shaped area, which could be dealt 3 times for Physical Damage. The first 2 times will deal Physical Damage to enemies while the 3rd time will deal increased Physical Damage with a Movement Speed slowing effect. This slowing effect could be stacked. Execution Strike is Terizla's main offensive skill as it deals tremendous damage to enemies. This skill can be manually controlled to better afflict damage, which could be enhanced when combined with Revenge Strike or Sprint.\"",
+      "iconUrl": "/raw-assets/skill_icons/terizla/execution_strike.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Penalty Zone",
+      "description": "Terizla jumps to the designated area, dealing 300( +100% Total Physical Attack) (Physical Damage) and knocking enemies airborne for 0.6s. He then summons Scaffold and slows enemies by 25%. Scaffold will send out a hook at enemy heroes in range and pull them several times while dealing 150( +30% Total Physical Attack) (Physical Damage) each time.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Penalty_Zone",
+      "tips": "\"Terizla leaps into a designated area, causing Physical Damage and slowing down enemies caught in the blast. Then, he summons the Guillotine several times to pull enemies in while causing Physical Damage. This skill could be useful in Team Fights or in solo combat. However, the timing must be carefully measured as it comes with a long cast time. As this skill has a strong control effect, it could be combined with Execution Strike to deal extreme damage. \"",
+      "iconUrl": "/raw-assets/skill_icons/terizla/penalty_zone.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Frontline Engage",
+      "Crowd Control",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Terizla adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Frontline Engage",
+    "Crowd Control",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "id": "gloo",
+  "name": "Gloo",
+  "heroName": "Gloo",
+  "role": [
+    "Tank"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Stick, Stick",
+      "description": "Enemies gain a stack of (Sticky) each time they're hit by Gloo's skills, decreasing their Movement Speed by 6% for 6s. Stacks up to 5. Each stack of (Sticky) on an enemy reduces their damage dealt to Gloo by 6%.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Stick,_Stick",
+      "iconUrl": "/raw-assets/skill_icons/gloo/stick_stick.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Slam, Slam",
+      "description": "Gloo reaches out and slams the ground, dealing 80( +80% Total Magic Power) (Magic Damage) to the enemy. At the final location, a (Goo) is left behind that explodes after 3s to deal 200( +8% Total HP) (Magic Damage) to nearby enemies and immobilize them for 1s. If Gloo touches the (Goo), it will explode immediately, reset the skill's CD, and heal Gloo for 3% of Max HP.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Slam,_Slam",
+      "iconUrl": "/raw-assets/skill_icons/gloo/slam_slam.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Pass, Pass",
+      "description": "Gloo stretches forth to deal 100( +50% Total Magic Power) (Magic Damage) to enemies in its path, immobilizing them for 0.5s. If this skill hits a (Goo), Gloo will charge over to it, dragging enemies in its path in the same direction for a distance.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Pass,_Pass",
+      "iconUrl": "/raw-assets/skill_icons/gloo/pass_pass.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Split, Split",
+      "description": "Gloo splits into (Goos) for 10s, during which it gains 35% extra Movement Speed, recovers 1.5% Max HP per second, and deals 120( +25% Total Magic Power) (Magic Damage) every 0.25s to enemies it comes into contact with. (Grab, Grab): Gloo attaches itself to the target enemy hero with max (Sticky) stacks for up to 9s, recovering 25% Max HP. For the duration, Gloo transfers 80% of the damage he receives (calculated before damage reduction; excluding damage from turrets) to its host, and its Basic Attacks deal 120( +50% Total Magic Power) (Magic Damage). (Go, Go): Gloo leaves its host early. Cooldown is lowered to 5s if the host dies while Gloo is still attached to it.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Split,_Split",
+      "iconUrl": "/raw-assets/skill_icons/gloo/split_split.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Possess Enemy",
+    "Split"
+  ],
+  "mechanicNote": "Gloo bisa memecah diri menjadi bagian-bagian kecil dan menempel ke musuh untuk mengendalikan pergerakan mereka.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

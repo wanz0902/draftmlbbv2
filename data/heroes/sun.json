@@ -1,0 +1,186 @@
+{
+  "id": "sun",
+  "name": "Sun",
+  "heroName": "Sun",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Swift Exchange",
+      "description": "Sun hurls his (Golden Staff) in the target direction, dealing 200( +40% Total Physical Attack) (Physical Damage) to enemies in its path. He conjures a Doppelganger at his location that lasts 5s and inherits 40% of his attributes (and a portion of Attack Effects), conceals himself, and moves with the (Golden Staff). Sun reappears and retrieves the (Golden Staff) when it hits an enemy hero or reaches the maximum range.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Swift_Exchange",
+      "iconUrl": "/raw-assets/skill_icons/sun/swift_exchange.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Endless Variety",
+      "description": "Sun hurls his (Golden Staff) in the target direction, dealing 200( +40% Total Physical Attack) (Physical Damage) to enemies in its path. Upon hitting an enemy hero or Creep, or reaching the maximum range, the (Golden Staff) morphs into a Doppelganger that lasts 5s and inherits 40% of Sun's attributes (and a portion of his Attack Effects). (Endless Variety) and (Swift Exchange) are learned and upgraded together and share the same cooldown.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Endless_Variety",
+      "iconUrl": "/raw-assets/skill_icons/sun/endless_variety.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Instantaneous Move",
+      "description": "Sun commands his Doppelgangers to strike at the target enemy with him, dealing 170( +40% Total Physical Attack) (Physical Damage) to the target and enemies behind them. This counts as Basic Attack damage and can trigger Attack Effects but cannot Crit.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Instantaneous_Move",
+      "iconUrl": "/raw-assets/skill_icons/sun/instantaneous_move.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Simian God",
+      "description": "Enemies hit by Sun and his Doppelgangers will have their Physical Defense reduced by 4% (stacks up to 10 times). Sun recovers HP equal to 50% of the Doppelganger's Physical Attack each time a Doppelganger deals damage.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Simian_God",
+      "iconUrl": "/raw-assets/skill_icons/sun/simian_god.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Sun adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

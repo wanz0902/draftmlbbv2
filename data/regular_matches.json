@@ -1,0 +1,7856 @@
+[
+  {
+    "match": "BTR vs AE",
+    "blueTeam": "BTR",
+    "redTeam": "AE",
+    "score": "2-1",
+    "date": "March 27, 2026",
+    "mvp": "EMANN",
+    "games": [
+      {
+        "game": 1,
+        "winner": "BTR",
+        "score": "1-0",
+        "duration": "15:45",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Yve",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Baxia",
+            "Guinevere",
+            "Marcel",
+            "Lapu-Lapu",
+            "Freya"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Sora",
+            "Uranus",
+            "Valentina",
+            "Yi Sun-shin",
+            "Hylos"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Kalea",
+            "Khaleed",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "AE",
+        "score": "1-1",
+        "duration": "13:57",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Fredrinn",
+            "Lylia",
+            "Granger",
+            "Khaleed"
+          ],
+          "bans": [
+            "Baxia",
+            "Guinevere",
+            "Valentina",
+            "Freya",
+            "Uranus"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zetian",
+            "Obsidia",
+            "Marcel"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Chip",
+            "Leomord",
+            "Harley"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "BTR",
+        "score": "2-1",
+        "duration": "20:59",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Yve",
+            "Freya",
+            "Hylos"
+          ],
+          "bans": [
+            "Marcel",
+            "Zhuxin",
+            "Fanny",
+            "Khaleed",
+            "Gloo"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Lapu-Lapu",
+            "Guinevere",
+            "Valentina",
+            "Yi Sun-shin",
+            "Chou"
+          ],
+          "bans": [
+            "Kalea",
+            "Grock",
+            "Phoveus",
+            "Esmeralda",
+            "Harith"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "NAVI vs RRQ",
+    "blueTeam": "NAVI",
+    "redTeam": "RRQ",
+    "score": "2-0",
+    "date": "March 27, 2026",
+    "mvp": "Xyve",
+    "games": [
+      {
+        "game": 1,
+        "winner": "NAVI",
+        "score": "1-0",
+        "duration": "14:23",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Faramis",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Yve",
+            "Guinevere",
+            "Valentina",
+            "Baxia",
+            "Harley"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Uranus",
+            "Fredrinn",
+            "Zetian",
+            "Obsidia",
+            "Khaleed"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Freya",
+            "Sora",
+            "Alice",
+            "Esmeralda"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "NAVI",
+        "score": "2-0",
+        "duration": "15:28",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Lylia",
+            "Yi Sun-shin",
+            "Belerick"
+          ],
+          "bans": [
+            "Uranus",
+            "Yve",
+            "Freya",
+            "Baxia",
+            "Fredrinn"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Alice",
+            "Leomord",
+            "Valentina",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Guinevere",
+            "Grock",
+            "Zhuxin",
+            "Khaleed",
+            "Kalea"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs GEEK",
+    "blueTeam": "EVOS",
+    "redTeam": "GEEK",
+    "score": "2-0",
+    "date": "March 28, 2026",
+    "mvp": "Albert",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "1-0",
+        "duration": "14:20",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Masha",
+            "Fredrinn",
+            "Pharsa",
+            "Granger",
+            "Chip"
+          ],
+          "bans": [
+            "Helcurt",
+            "Phoveus",
+            "Sora",
+            "Baxia",
+            "Leomord"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "X.Borg",
+            "Suyou",
+            "Zetian",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Freya",
+            "Valentina",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "2-0",
+        "duration": "15:34",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Valentina",
+            "Fanny",
+            "Selena",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Helcurt",
+            "Phoveus",
+            "Kalea",
+            "Chou",
+            "Khufra"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Cici",
+            "Fredrinn",
+            "Kimmy",
+            "Sora",
+            "Hilda"
+          ],
+          "bans": [
+            "Masha",
+            "Freya",
+            "Zhuxin",
+            "Harith",
+            "Granger"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "AE vs ONIC",
+    "blueTeam": "AE",
+    "redTeam": "ONIC",
+    "score": "0-2",
+    "date": "March 28, 2026",
+    "mvp": "Kelra",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "0-1",
+        "duration": "13:55",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Lukas",
+            "Fredrinn",
+            "Yve",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Kalea",
+            "Freya",
+            "Harith",
+            "Karrie"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Pharsa",
+            "Yi Sun-shin",
+            "Chou"
+          ],
+          "bans": [
+            "Baxia",
+            "Fanny",
+            "Valentina",
+            "Lapu-Lapu",
+            "Phoveus"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "0-2",
+        "duration": "16:05",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Suyou",
+            "Joy",
+            "Zetian",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Freya",
+            "Kalea",
+            "Lylia",
+            "Guinevere"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Gord",
+            "Yi Sun-shin",
+            "Chou"
+          ],
+          "bans": [
+            "Fanny",
+            "Baxia",
+            "Sora",
+            "Arlott",
+            "Uranus"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "TLID vs NAVI",
+    "blueTeam": "TLID",
+    "redTeam": "NAVI",
+    "score": "2-1",
+    "date": "March 28, 2026",
+    "mvp": "Kyou",
+    "games": [
+      {
+        "game": 1,
+        "winner": "TLID",
+        "score": "1-0",
+        "duration": "23:07",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Phoveus",
+            "Lukas",
+            "Zhuxin",
+            "Karrie",
+            "Gloo"
+          ],
+          "bans": [
+            "Leomord",
+            "Guinevere",
+            "Kalea",
+            "Harley",
+            "Yi Sun-shin"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Sora",
+            "Hayabusa",
+            "Lylia",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Yve",
+            "Baxia",
+            "Hilda",
+            "Chou"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "NAVI",
+        "score": "1-1",
+        "duration": "22:20",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Benedetta",
+            "Fredrinn",
+            "Zhuxin",
+            "Karrie",
+            "Chip"
+          ],
+          "bans": [
+            "Leomord",
+            "Guinevere",
+            "Kalea",
+            "Harley",
+            "Khaleed"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Sora",
+            "Yi Sun-shin",
+            "Yve",
+            "Freya",
+            "Gloo"
+          ],
+          "bans": [
+            "Fanny",
+            "Baxia",
+            "Phoveus",
+            "Mathilda",
+            "Arlott"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "TLID",
+        "score": "2-1",
+        "duration": "18:32",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Freya",
+            "Fredrinn",
+            "Zetian",
+            "Moskov",
+            "Gloo"
+          ],
+          "bans": [
+            "Leomord",
+            "Guinevere",
+            "Kalea",
+            "Harley",
+            "Cici"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Esmeralda",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Baxia",
+            "Fanny",
+            "Phoveus",
+            "Karrie",
+            "Uranus"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "DEWA vs BTR",
+    "blueTeam": "DEWA",
+    "redTeam": "BTR",
+    "score": "2-0",
+    "date": "March 29, 2026",
+    "mvp": "Muezza",
+    "games": [
+      {
+        "game": 1,
+        "winner": "DEWA",
+        "score": "1-0",
+        "duration": "15:13",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Arlott",
+            "Fanny",
+            "Pharsa",
+            "Freya",
+            "Guinevere"
+          ],
+          "bans": [
+            "Kalea",
+            "Yve",
+            "Phoveus",
+            "Moskov",
+            "Fredrinn"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Valentina",
+            "Yi Sun-shin",
+            "Badang"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Baxia",
+            "Hilda",
+            "Hylos",
+            "Chou"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "DEWA",
+        "score": "2-0",
+        "duration": "16:19",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Arlott",
+            "Guinevere",
+            "Pharsa",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Fanny",
+            "Freya",
+            "Harith",
+            "Yu Zhong"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Lancelot",
+            "Zetian",
+            "Yi Sun-shin",
+            "Hylos"
+          ],
+          "bans": [
+            "Baxia",
+            "Hilda",
+            "Valentina",
+            "Uranus",
+            "Grock"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs TLID",
+    "blueTeam": "EVOS",
+    "redTeam": "TLID",
+    "score": "0-2",
+    "date": "March 29, 2026",
+    "mvp": "Aran",
+    "games": [
+      {
+        "game": 1,
+        "winner": "TLID",
+        "score": "0-1",
+        "duration": "15:15",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Gloo",
+            "Fanny",
+            "Selena",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Phoveus",
+            "Freya",
+            "Kalea",
+            "Arlott",
+            "Khufra"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Yu Zhong",
+            "Leomord",
+            "Zhuxin",
+            "Moskov",
+            "Hilda"
+          ],
+          "bans": [
+            "Masha",
+            "Guinevere",
+            "Yve",
+            "Granger",
+            "Karrie"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "TLID",
+        "score": "0-2",
+        "duration": "14:15",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Valentina",
+            "Suyou",
+            "Kimmy",
+            "Cici",
+            "Chou"
+          ],
+          "bans": [
+            "Freya",
+            "Zhuxin",
+            "Fanny",
+            "Phoveus",
+            "Arlott"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Sora",
+            "Fredrinn",
+            "Yve",
+            "Karrie",
+            "Gloo"
+          ],
+          "bans": [
+            "Masha",
+            "Guinevere",
+            "Kalea",
+            "Harley",
+            "Granger"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ vs ONIC",
+    "blueTeam": "RRQ",
+    "redTeam": "ONIC",
+    "score": "0-2",
+    "date": "March 29, 2026",
+    "mvp": "Kelra",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "0-1",
+        "duration": "15:23",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Uranus",
+            "Harley",
+            "Zetian",
+            "Bruno",
+            "Grock"
+          ],
+          "bans": [
+            "Freya",
+            "Yi Sun-shin",
+            "Guinevere",
+            "Chou",
+            "Khaleed"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Yu Zhong",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Badang"
+          ],
+          "bans": [
+            "Fanny",
+            "Baxia",
+            "Sora",
+            "Claude",
+            "Moskov"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "0-2",
+        "duration": "12:15",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Lylia",
+            "Karrie",
+            "Kalea"
+          ],
+          "bans": [
+            "Freya",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Harley",
+            "Joy"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Yve",
+            "Granger",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Baxia",
+            "Valentina",
+            "Claude",
+            "Pharsa"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs GEEK",
+    "blueTeam": "ONIC",
+    "redTeam": "GEEK",
+    "score": "2-0",
+    "date": "April 3, 2026",
+    "mvp": "Kairi",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "15:11",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Baxia",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Kalea",
+            "Marcel",
+            "Hilda",
+            "Chou",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zetian",
+            "Cici",
+            "Helcurt"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Valentina",
+            "Arlott",
+            "Yu Zhong"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "11:07",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Karrie",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Marcel",
+            "Helcurt",
+            "Valentina",
+            "Khaleed",
+            "Arlott"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Freya",
+            "Leomord",
+            "Zetian",
+            "Masha",
+            "Chip"
+          ],
+          "bans": [
+            "Yve",
+            "Phoveus",
+            "Fanny",
+            "Guinevere",
+            "Fredrinn"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "DEWA vs NAVI",
+    "blueTeam": "DEWA",
+    "redTeam": "NAVI",
+    "score": "2-0",
+    "date": "April 3, 2026",
+    "mvp": "Muezza",
+    "games": [
+      {
+        "game": 1,
+        "winner": "DEWA",
+        "score": "1-0",
+        "duration": "18:35",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Valentina",
+            "Baxia",
+            "Zetian",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Yve",
+            "Phoveus",
+            "Marcel",
+            "Yi Sun-shin",
+            "Hayabusa"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Uranus",
+            "Guinevere",
+            "Pharsa",
+            "Karrie",
+            "Chou"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Zhuxin",
+            "Gatotkaca",
+            "Helcurt"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "DEWA",
+        "score": "2-0",
+        "duration": "19:09",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Valentina",
+            "Suyou",
+            "Lunox",
+            "Freya",
+            "Gloo"
+          ],
+          "bans": [
+            "Yve",
+            "Marcel",
+            "Phoveus",
+            "Karrie",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Benedetta",
+            "Leomord",
+            "Zhuxin",
+            "Esmeralda",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Baxia",
+            "Guinevere",
+            "Harley",
+            "Fredrinn"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "GEEK vs BTR",
+    "blueTeam": "GEEK",
+    "redTeam": "BTR",
+    "score": "2-0",
+    "date": "April 4, 2026",
+    "mvp": "MarceL",
+    "games": [
+      {
+        "game": 1,
+        "winner": "GEEK",
+        "score": "1-0",
+        "duration": "20:22",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Zhuxin",
+            "Cici",
+            "Gloo"
+          ],
+          "bans": [
+            "Yve",
+            "Fanny",
+            "Valentina",
+            "Khaleed",
+            "Claude"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Zetian",
+            "Yi Sun-shin",
+            "Atlas"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Phoveus",
+            "Harley",
+            "Joy"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "GEEK",
+        "score": "2-0",
+        "duration": "15:20",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Zhuxin",
+            "Granger",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Marcel",
+            "Kalea",
+            "Badang"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Yve",
+            "Yi Sun-shin",
+            "Hylos"
+          ],
+          "bans": [
+            "Helcurt",
+            "Sora",
+            "Phoveus",
+            "Chip",
+            "Khaleed"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "AE vs EVOS",
+    "blueTeam": "AE",
+    "redTeam": "EVOS",
+    "score": "2-1",
+    "date": "April 4, 2026",
+    "mvp": "Arfy",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "0-1",
+        "duration": "16:35",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Uranus",
+            "Harley",
+            "Yve",
+            "Freya",
+            "Grock"
+          ],
+          "bans": [
+            "Masha",
+            "Phoveus",
+            "Kalea",
+            "Granger",
+            "Guinevere"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Marcel",
+            "Baxia",
+            "Fanny",
+            "Valentina",
+            "Chou"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "AE",
+        "score": "1-1",
+        "duration": "19:03",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Freya",
+            "Fanny",
+            "Yve",
+            "Granger",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Masha",
+            "Gloo",
+            "Phoveus",
+            "Harley",
+            "Karrie"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Marcel",
+            "Baxia",
+            "Valentina",
+            "Khaleed",
+            "Hilda"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "AE",
+        "score": "2-1",
+        "duration": "18:53",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Cici",
+            "Baxia",
+            "Zhuxin",
+            "Obsidia",
+            "Chou"
+          ],
+          "bans": [
+            "Masha",
+            "Gloo",
+            "Freya",
+            "Kalea",
+            "Grock"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Lylia",
+            "Karrie",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Marcel",
+            "Fanny",
+            "Valentina",
+            "Arlott",
+            "Granger"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "TLID vs DEWA",
+    "blueTeam": "TLID",
+    "redTeam": "DEWA",
+    "score": "2-1",
+    "date": "April 4, 2026",
+    "mvp": "Lyoni",
+    "games": [
+      {
+        "game": 1,
+        "winner": "TLID",
+        "score": "1-0",
+        "duration": "11:54",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Masha",
+            "Fredrinn",
+            "Yve",
+            "Karrie",
+            "Chip"
+          ],
+          "bans": [
+            "Guinevere",
+            "Kalea",
+            "Zhuxin",
+            "Gloo",
+            "Arlott"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Valentina",
+            "Baxia",
+            "Pharsa",
+            "Claude",
+            "Badang"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Fanny",
+            "Lunox",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "DEWA",
+        "score": "1-1",
+        "duration": "15:24",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Edith",
+            "Fredrinn",
+            "Zetian",
+            "Freya",
+            "Gloo"
+          ],
+          "bans": [
+            "Kalea",
+            "Guinevere",
+            "Valentina",
+            "Arlott",
+            "Khaleed"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Phoveus",
+            "Baxia",
+            "Kimmy",
+            "Karrie",
+            "Zhuxin"
+          ],
+          "bans": [
+            "Marcel",
+            "Fanny",
+            "Chip",
+            "Yve",
+            "Moskov"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "TLID",
+        "score": "2-1",
+        "duration": "16:05",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Freya",
+            "Fredrinn",
+            "Yve",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": [
+            "Guinevere",
+            "Kalea",
+            "Baxia",
+            "Phoveus",
+            "Arlott"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Sora",
+            "Uranus",
+            "Valentina",
+            "Karrie",
+            "Zhuxin"
+          ],
+          "bans": [
+            "Fanny",
+            "Marcel",
+            "Chip",
+            "Moskov",
+            "Chou"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "NAVI vs AE",
+    "blueTeam": "NAVI",
+    "redTeam": "AE",
+    "score": "1-2",
+    "date": "April 5, 2026",
+    "mvp": "Yazukee",
+    "games": [
+      {
+        "game": 1,
+        "winner": "AE",
+        "score": "0-1",
+        "duration": "17:25",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Zhuxin",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Phoveus",
+            "Fanny",
+            "Valentina",
+            "Obsidia",
+            "Hilda"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Moskov",
+            "Gloo"
+          ],
+          "bans": [
+            "Freya",
+            "Guinevere",
+            "Baxia",
+            "Marcel",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "NAVI",
+        "score": "1-1",
+        "duration": "14:10",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Arlott",
+            "Harley",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Phoveus",
+            "Fanny",
+            "Valentina",
+            "Khaleed",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Moskov",
+            "Chou"
+          ],
+          "bans": [
+            "Guinevere",
+            "Freya",
+            "Baxia",
+            "Alice",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "AE",
+        "score": "1-2",
+        "duration": "19:19",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Zhuxin",
+            "Obsidia",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Phoveus",
+            "Fanny",
+            "Valentina",
+            "Lunox",
+            "Zetian"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Odette",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Guinevere",
+            "Freya",
+            "Gloo",
+            "Harith",
+            "Yi Sun-shin"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ vs TLID",
+    "blueTeam": "RRQ",
+    "redTeam": "TLID",
+    "score": "0-2",
+    "date": "April 5, 2026",
+    "mvp": "Lyoni",
+    "games": [
+      {
+        "game": 1,
+        "winner": "TLID",
+        "score": "0-1",
+        "duration": "13:39",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Selena",
+            "Yi Sun-shin",
+            "Marcel"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Chip",
+            "Uranus",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Valentina",
+            "Moskov",
+            "Gloo"
+          ],
+          "bans": [
+            "Kalea",
+            "Guinevere",
+            "Freya",
+            "Baxia",
+            "Cici"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "TLID",
+        "score": "0-2",
+        "duration": "18:01",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Sora",
+            "Gusion",
+            "Valentina",
+            "Yi Sun-shin",
+            "Grock"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Freya",
+            "Zetian",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Masha",
+            "Fredrinn",
+            "Yve",
+            "Karrie",
+            "Chip"
+          ],
+          "bans": [
+            "Kalea",
+            "Guinevere",
+            "Marcel",
+            "Cici",
+            "X.Borg"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "BTR vs EVOS",
+    "blueTeam": "BTR",
+    "redTeam": "EVOS",
+    "score": "2-1",
+    "date": "April 5, 2026",
+    "mvp": "Moreno",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "0-1",
+        "duration": "18:04",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Alice",
+            "Leomord",
+            "Zhuxin",
+            "Irithel",
+            "Khaleed"
+          ],
+          "bans": [
+            "Masha",
+            "Gloo",
+            "Sora",
+            "Suyou",
+            "Cici"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Lapu-Lapu",
+            "Yi Sun-shin",
+            "Yve",
+            "Freya",
+            "Chip"
+          ],
+          "bans": [
+            "Fanny",
+            "Baxia",
+            "Marcel",
+            "Claude",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "BTR",
+        "score": "1-1",
+        "duration": "14:54",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Arlott",
+            "Guinevere",
+            "Pharsa",
+            "Yi Sun-shin",
+            "Grock"
+          ],
+          "bans": [
+            "Marcel",
+            "Chip",
+            "Zhuxin",
+            "Phoveus",
+            "Kalea"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Lapu-Lapu",
+            "Fredrinn",
+            "Zetian",
+            "Granger",
+            "Gloo"
+          ],
+          "bans": [
+            "Fanny",
+            "Sora",
+            "Freya",
+            "Khaleed",
+            "Claude"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "BTR",
+        "score": "2-1",
+        "duration": "17:47",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Pharsa",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": [
+            "Marcel",
+            "Chip",
+            "Kalea",
+            "Valentina",
+            "Karrie"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Cici",
+            "Harley",
+            "Zhuxin",
+            "Obsidia",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Freya",
+            "Yve",
+            "Yi Sun-shin"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs DEWA",
+    "blueTeam": "ONIC",
+    "redTeam": "DEWA",
+    "score": "2-1",
+    "date": "April 10, 2026",
+    "mvp": "S",
+    "games": [
+      {
+        "game": 1,
+        "winner": "DEWA",
+        "score": "0-1",
+        "duration": "15:16",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Baxia",
+            "Yve",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Marcel",
+            "Fanny",
+            "Valentina",
+            "Karrie",
+            "Grock"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Arlott",
+            "Guinevere",
+            "Pharsa",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Freya",
+            "Kalea",
+            "Chou",
+            "Harley"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "1-1",
+        "duration": "15:34",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Fredrinn",
+            "Vexana",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Fanny",
+            "Arlott",
+            "Zhuxin",
+            "Karrie",
+            "Pharsa"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Valentina",
+            "Suyou",
+            "Lylia",
+            "Granger",
+            "Gloo"
+          ],
+          "bans": [
+            "Yve",
+            "Guinevere",
+            "Freya",
+            "Harley",
+            "Baxia"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "ONIC",
+        "score": "2-1",
+        "duration": "13:48",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Yu Zhong",
+            "Lancelot",
+            "Zetian",
+            "Obsidia",
+            "Marcel"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Sora",
+            "Phoveus",
+            "Arlott"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Valentina",
+            "Suyou",
+            "Odette",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Freya",
+            "Kalea",
+            "Harley",
+            "Baxia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "NAVI vs EVOS",
+    "blueTeam": "NAVI",
+    "redTeam": "EVOS",
+    "score": "0-2",
+    "date": "April 10, 2026",
+    "mvp": "Albert",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "0-1",
+        "duration": "18:10",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Granger",
+            "Khaleed"
+          ],
+          "bans": [
+            "Chip",
+            "Fanny",
+            "Freya",
+            "Zetian",
+            "Lylia"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Arlott",
+            "Yi Sun-shin",
+            "Valentina",
+            "Uranus",
+            "Gloo"
+          ],
+          "bans": [
+            "Guinevere",
+            "Yve",
+            "Leomord",
+            "Baxia",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "0-2",
+        "duration": "15:54",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Lapu-Lapu",
+            "Suyou",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Chip",
+            "Fanny",
+            "Freya",
+            "Uranus",
+            "Esmeralda"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Yve",
+            "Obsidia",
+            "Marcel"
+          ],
+          "bans": [
+            "Guinevere",
+            "Gloo",
+            "Sora",
+            "Harley",
+            "Belerick"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "TLID vs GEEK",
+    "blueTeam": "TLID",
+    "redTeam": "GEEK",
+    "score": "0-2",
+    "date": "April 11, 2026",
+    "mvp": "KennzyySkie",
+    "games": [
+      {
+        "game": 1,
+        "winner": "GEEK",
+        "score": "0-1",
+        "duration": "18:06",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Alice",
+            "Fredrinn",
+            "Zhuxin",
+            "Karrie",
+            "Hylos"
+          ],
+          "bans": [
+            "Helcurt",
+            "Guinevere",
+            "Fanny",
+            "Granger",
+            "Cici"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zetian",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Chip",
+            "Gloo",
+            "Freya",
+            "Arlott",
+            "Sora"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "GEEK",
+        "score": "0-2",
+        "duration": "08:57",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Phoveus",
+            "Lukas",
+            "Zhuxin",
+            "Karrie",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Helcurt",
+            "Guinevere",
+            "Zetian",
+            "Cici",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Freya",
+            "Kalea"
+          ],
+          "bans": [
+            "Chip",
+            "Gloo",
+            "Fanny",
+            "Baxia",
+            "Fredrinn"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs BTR",
+    "blueTeam": "ONIC",
+    "redTeam": "BTR",
+    "score": "1-2",
+    "date": "April 11, 2026",
+    "mvp": "EMANN",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "22:29",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Yve",
+            "Freya",
+            "Hylos"
+          ],
+          "bans": [
+            "Guinevere",
+            "Fanny",
+            "Grock",
+            "Zetian",
+            "Chip"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Pharsa",
+            "Yi Sun-shin",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Valentina",
+            "Marcel",
+            "Phoveus",
+            "Kalea"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "BTR",
+        "score": "1-1",
+        "duration": "18:51",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Cici",
+            "Baxia",
+            "Kimmy",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Karrie",
+            "Harley",
+            "Joy"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Gloo"
+          ],
+          "bans": [
+            "Marcel",
+            "Kalea",
+            "Phoveus",
+            "Valentina",
+            "Yu Zhong"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "BTR",
+        "score": "1-2",
+        "duration": "15:49",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Yu Zhong",
+            "Yi Sun-shin",
+            "Zetian",
+            "Freya",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Sora",
+            "Leomord",
+            "Hylos"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Marcel",
+            "Baxia",
+            "Yve",
+            "Uranus",
+            "Alice"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ vs AE",
+    "blueTeam": "RRQ",
+    "redTeam": "AE",
+    "score": "1-2",
+    "date": "April 11, 2026",
+    "mvp": "Arfy",
+    "games": [
+      {
+        "game": 1,
+        "winner": "AE",
+        "score": "0-1",
+        "duration": "17:21",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Zetian",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Valentina",
+            "Yu Zhong",
+            "Lapu-Lapu"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Cici",
+            "Leomord",
+            "Zhuxin",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Phoveus",
+            "Marcel",
+            "Baxia",
+            "Grock",
+            "Gloo"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "RRQ",
+        "score": "1-1",
+        "duration": "13:50",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Zetian",
+            "Karrie",
+            "Chip"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Kalea",
+            "Valentina",
+            "Cici"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Lapu-Lapu",
+            "Nolan",
+            "Zhuxin",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Phoveus",
+            "Baxia",
+            "Marcel",
+            "Harith",
+            "Yi Sun-shin"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "AE",
+        "score": "1-2",
+        "duration": "17:21",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Yve",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Kalea",
+            "Cici",
+            "Valentina"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": [
+            "Baxia",
+            "Marcel",
+            "Chip",
+            "Grock",
+            "Khaleed"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "BTR vs NAVI",
+    "blueTeam": "BTR",
+    "redTeam": "NAVI",
+    "score": "1-2",
+    "date": "April 12, 2026",
+    "mvp": "Aprho",
+    "games": [
+      {
+        "game": 1,
+        "winner": "BTR",
+        "score": "1-0",
+        "duration": "21:08",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Valir",
+            "Granger",
+            "Marcel"
+          ],
+          "bans": [
+            "Guinevere",
+            "Gloo",
+            "Yve",
+            "Khaleed",
+            "Chou"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Hilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Baxia",
+            "Selena",
+            "Zetian"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "NAVI",
+        "score": "1-1",
+        "duration": "24:39",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Valentina",
+            "Yi Sun-shin",
+            "Marcel"
+          ],
+          "bans": [
+            "Guinevere",
+            "Gloo",
+            "Phoveus",
+            "Khaleed",
+            "Hilda"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Khufra"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Baxia",
+            "Selena",
+            "Zetian"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "NAVI",
+        "score": "1-2",
+        "duration": "14:06",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Masha",
+            "Fredrinn",
+            "Yve",
+            "Yi Sun-shin",
+            "Chip"
+          ],
+          "bans": [
+            "Marcel",
+            "Zhuxin",
+            "Sora",
+            "X.Borg",
+            "Cici"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Lylia",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Freya",
+            "Valentina",
+            "Pharsa"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "GEEK vs RRQ",
+    "blueTeam": "GEEK",
+    "redTeam": "RRQ",
+    "score": "2-1",
+    "date": "April 12, 2026",
+    "mvp": "Aboy",
+    "games": [
+      {
+        "game": 1,
+        "winner": "RRQ",
+        "score": "0-1",
+        "duration": "16:24",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Valentina",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Freya",
+            "Guinevere",
+            "Baxia",
+            "Harith",
+            "Yi Sun-shin"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Lapu-Lapu",
+            "Suyou",
+            "Zhuxin",
+            "Karrie",
+            "Chip"
+          ],
+          "bans": [
+            "Helcurt",
+            "Marcel",
+            "Fanny",
+            "Zetian",
+            "Yve"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "GEEK",
+        "score": "1-1",
+        "duration": "13:56",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Alice",
+            "Leomord",
+            "Yve",
+            "Moskov",
+            "Kaja"
+          ],
+          "bans": [
+            "Chip",
+            "Freya",
+            "Guinevere",
+            "Claude",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Gloo",
+            "Suyou",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Tigreal"
+          ],
+          "bans": [
+            "Helcurt",
+            "Marcel",
+            "Fanny",
+            "Khaleed",
+            "Chou"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "GEEK",
+        "score": "2-1",
+        "duration": "20:51",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Chip",
+            "Guinevere",
+            "Karrie",
+            "Uranus",
+            "Suyou"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Yu Zhong",
+            "Baxia",
+            "Zhuxin",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": [
+            "Marcel",
+            "Fanny",
+            "Freya",
+            "Alice",
+            "Valentina"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "AE vs DEWA",
+    "blueTeam": "AE",
+    "redTeam": "DEWA",
+    "score": "0-2",
+    "date": "April 12, 2026",
+    "mvp": "Dolynn",
+    "games": [
+      {
+        "game": 1,
+        "winner": "DEWA",
+        "score": "0-1",
+        "duration": "14:49",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Freya",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Grock"
+          ],
+          "bans": [
+            "Arlott",
+            "Valentina",
+            "Gloo",
+            "Alice",
+            "Sora"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Terizla",
+            "Guinevere",
+            "Zhuxin",
+            "Claude",
+            "Helcurt"
+          ],
+          "bans": [
+            "Fanny",
+            "Marcel",
+            "Phoveus",
+            "Harley",
+            "Cici"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "DEWA",
+        "score": "0-2",
+        "duration": "15:08",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Uranus",
+            "Harley",
+            "Pharsa",
+            "Moskov",
+            "Kalea"
+          ],
+          "bans": [
+            "Helcurt",
+            "Freya",
+            "Zhuxin",
+            "Gloo",
+            "Arlott"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Alice",
+            "Fanny",
+            "Zetian",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Phoveus",
+            "Yve",
+            "Marcel",
+            "Fredrinn",
+            "Leomord"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "NAVI vs ONIC",
+    "blueTeam": "NAVI",
+    "redTeam": "ONIC",
+    "score": "0-2",
+    "date": "April 17, 2026",
+    "mvp": "Kairi",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "0-1",
+        "duration": "11:44",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Phoveus",
+            "Yi Sun-shin",
+            "Yve",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Baxia",
+            "Freya",
+            "Claude",
+            "Moskov"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Valentina",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Marcel",
+            "Gloo",
+            "Zhuxin",
+            "Leomord",
+            "Guinevere"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "0-2",
+        "duration": "17:09",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Baxia",
+            "Karrie",
+            "Granger"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Lylia",
+            "Beatrix",
+            "Kalea"
+          ],
+          "bans": [
+            "Marcel",
+            "Gloo",
+            "Leomord",
+            "Uranus",
+            "Harith"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs DEWA",
+    "blueTeam": "EVOS",
+    "redTeam": "DEWA",
+    "score": "2-0",
+    "date": "April 17, 2026",
+    "mvp": "Luke",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "1-0",
+        "duration": "13:46",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Arlott",
+            "Fredrinn",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Freya",
+            "Alice",
+            "Phoveus"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Sora",
+            "Baxia",
+            "Kimmy",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Marcel",
+            "Chip",
+            "Yi Sun-shin",
+            "Granger",
+            "Karrie"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "2-0",
+        "duration": "11:29",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Freya",
+            "Fredrinn",
+            "Yve",
+            "Moskov",
+            "Gloo"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Zhuxin",
+            "Sora",
+            "Phoveus"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Alice",
+            "Baxia",
+            "Kimmy",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Chip",
+            "Marcel",
+            "Yi Sun-shin",
+            "Masha",
+            "Harley"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "TLID vs BTR",
+    "blueTeam": "TLID",
+    "redTeam": "BTR",
+    "score": "1-2",
+    "date": "April 18, 2026",
+    "mvp": "Moreno",
+    "games": [
+      {
+        "game": 1,
+        "winner": "TLID",
+        "score": "1-0",
+        "duration": "14:38",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Freya",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Baxia"
+          ],
+          "bans": [
+            "Guinevere",
+            "Phoveus",
+            "Fanny",
+            "Yi Sun-shin",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Karrie",
+            "Chou"
+          ],
+          "bans": [
+            "Chip",
+            "Gloo",
+            "Kalea",
+            "Hylos",
+            "Khaleed"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "BTR",
+        "score": "1-1",
+        "duration": "14:58",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Terizla",
+            "Leomord",
+            "Valentina",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Guinevere",
+            "Phoveus",
+            "Fanny",
+            "Harley",
+            "Yi Sun-shin"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Lancelot",
+            "Yve",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Chip",
+            "Gloo",
+            "Freya",
+            "Zhuxin",
+            "Moskov"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "BTR",
+        "score": "1-2",
+        "duration": "15:40",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Yve",
+            "Karrie",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Guinevere",
+            "Phoveus",
+            "Zhuxin",
+            "Valentina",
+            "Pharsa"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Kadita",
+            "Moskov",
+            "Kalea"
+          ],
+          "bans": [
+            "Chip",
+            "Gloo",
+            "Freya",
+            "Harith",
+            "Claude"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ vs EVOS",
+    "blueTeam": "RRQ",
+    "redTeam": "EVOS",
+    "score": "0-2",
+    "date": "April 18, 2026",
+    "mvp": "Erlan",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "0-1",
+        "duration": "24:20",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Yu Zhong",
+            "Baxia",
+            "Yve",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Marcel",
+            "Fanny",
+            "Freya",
+            "Arlott",
+            "Kalea"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Alice",
+            "Fredrinn",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Chip",
+            "Guinevere",
+            "Sora",
+            "Harley",
+            "Suyou"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "0-2",
+        "duration": "14:17",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Cici",
+            "Uranus",
+            "Zetian",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Marcel",
+            "Fanny",
+            "Freya",
+            "Arlott",
+            "Khaleed"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Alice",
+            "Fredrinn",
+            "Zhuxin",
+            "Moskov",
+            "Hilda"
+          ],
+          "bans": [
+            "Chip",
+            "Guinevere",
+            "Sora",
+            "Harley",
+            "Baxia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "GEEK vs AE",
+    "blueTeam": "GEEK",
+    "redTeam": "AE",
+    "score": "1-2",
+    "date": "April 18, 2026",
+    "mvp": "Arfy",
+    "games": [
+      {
+        "game": 1,
+        "winner": "AE",
+        "score": "0-1",
+        "duration": "13:18",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Gloo",
+            "Fredrinn",
+            "Yve",
+            "Freya",
+            "Valir"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Sora",
+            "Harley",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Lapu-Lapu",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Brody",
+            "Kalea"
+          ],
+          "bans": [
+            "Helcurt",
+            "Chip",
+            "Phoveus",
+            "Marcel",
+            "Arlott"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "GEEK",
+        "score": "1-1",
+        "duration": "13:08",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Yve",
+            "Granger",
+            "Gloo"
+          ],
+          "bans": [
+            "Freya",
+            "Kalea",
+            "Fanny",
+            "Valentina",
+            "Phoveus"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Uranus",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Helcurt",
+            "Chip",
+            "Marcel",
+            "Leomord",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "AE",
+        "score": "1-2",
+        "duration": "14:51",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Alice",
+            "Harley",
+            "Zetian",
+            "Moskov",
+            "Gloo"
+          ],
+          "bans": [
+            "Freya",
+            "Kalea",
+            "Fanny",
+            "Uranus",
+            "Arlott"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Lapu-Lapu",
+            "Guinevere",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Helcurt",
+            "Chip",
+            "Marcel",
+            "Sora",
+            "Claude"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs TLID",
+    "blueTeam": "ONIC",
+    "redTeam": "TLID",
+    "score": "2-0",
+    "date": "April 19, 2026",
+    "mvp": "S",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "11:59",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Valentina",
+            "Freya",
+            "Kalea"
+          ],
+          "bans": [
+            "Chip",
+            "Gloo",
+            "Zhuxin",
+            "Phoveus",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Sora",
+            "Fredrinn",
+            "Yve",
+            "Claude",
+            "Valir"
+          ],
+          "bans": [
+            "Guinevere",
+            "Harley",
+            "Fanny",
+            "Suyou",
+            "Yu Zhong"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "13:40",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Yve",
+            "Bruno",
+            "Marcel"
+          ],
+          "bans": [
+            "Chip",
+            "Freya",
+            "Gloo",
+            "Fredrinn",
+            "Leomord"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zhuxin",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Guinevere",
+            "Kalea",
+            "Harley",
+            "Yi Sun-shin",
+            "Sora"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "BTR vs RRQ",
+    "blueTeam": "BTR",
+    "redTeam": "RRQ",
+    "score": "2-1",
+    "date": "April 19, 2026",
+    "mvp": "Moreno",
+    "games": [
+      {
+        "game": 1,
+        "winner": "RRQ",
+        "score": "0-1",
+        "duration": "15:34",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Obsidia",
+            "Gloo"
+          ],
+          "bans": [
+            "Chip",
+            "Guinevere",
+            "Baxia",
+            "Uranus",
+            "Lapu-Lapu"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Marcel",
+            "Freya",
+            "Harith",
+            "Yi Sun-shin"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "BTR",
+        "score": "1-1",
+        "duration": "25:25",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Chip",
+            "Guinevere",
+            "Baxia",
+            "Uranus",
+            "Gloo"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Yve",
+            "Karrie",
+            "Kalea"
+          ],
+          "bans": [
+            "Fanny",
+            "Marcel",
+            "Freya",
+            "Moskov",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "BTR",
+        "score": "2-1",
+        "duration": "15:53",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Terizla",
+            "Leomord",
+            "Valentina",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": [
+            "Chip",
+            "Guinevere",
+            "Harley",
+            "Phoveus",
+            "Lapu-Lapu"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Yu Zhong",
+            "Baxia",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Marcel",
+            "Freya",
+            "Yve",
+            "Zetian"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "DEWA vs GEEK",
+    "blueTeam": "DEWA",
+    "redTeam": "GEEK",
+    "score": "2-0",
+    "date": "April 19, 2026",
+    "mvp": "Dolynn",
+    "games": [
+      {
+        "game": 1,
+        "winner": "DEWA",
+        "score": "1-0",
+        "duration": "23:26",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Gloo"
+          ],
+          "bans": [
+            "Chip",
+            "Marcel",
+            "Helcurt",
+            "Alice",
+            "Uranus"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Freya",
+            "Harley",
+            "Yve",
+            "Cici",
+            "Valir"
+          ],
+          "bans": [
+            "Guinevere",
+            "Fanny",
+            "Baxia",
+            "Khaleed",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "DEWA",
+        "score": "2-0",
+        "duration": "13:34",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Lunox",
+            "Freya",
+            "Gloo"
+          ],
+          "bans": [
+            "Chip",
+            "Helcurt",
+            "Harley",
+            "Alice",
+            "Valir"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Guinevere",
+            "Marcel",
+            "Fanny",
+            "Phoveus",
+            "Yve"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "GEEK vs NAVI",
+    "blueTeam": "GEEK",
+    "redTeam": "NAVI",
+    "score": "0-2",
+    "date": "April 24, 2026",
+    "mvp": "Xyve",
+    "games": [
+      {
+        "game": 1,
+        "winner": "NAVI",
+        "score": "0-1",
+        "duration": "16:46",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Uranus",
+            "Harley",
+            "Valentina",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Gloo",
+            "Zhuxin",
+            "Freya",
+            "Selena",
+            "Granger"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Valir",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Helcurt",
+            "Chip",
+            "Fanny",
+            "Sora",
+            "Cici"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "NAVI",
+        "score": "0-2",
+        "duration": "14:23",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Yve",
+            "Yi Sun-shin",
+            "Kalea"
+          ],
+          "bans": [
+            "Freya",
+            "Zhuxin",
+            "Marcel",
+            "Alice",
+            "Sora"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Pharsa",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Fanny",
+            "Helcurt",
+            "Chip",
+            "Guinevere",
+            "Leomord"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs ONIC",
+    "blueTeam": "EVOS",
+    "redTeam": "ONIC",
+    "score": "0-2",
+    "date": "April 24, 2026",
+    "mvp": "Kairi",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "0-1",
+        "duration": "19:38",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Arlott",
+            "Fredrinn",
+            "Zhuxin",
+            "Granger",
+            "Khaleed"
+          ],
+          "bans": [
+            "Phoveus",
+            "Marcel",
+            "Fanny",
+            "Yve",
+            "Valentina"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Zetian",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Chip",
+            "Freya",
+            "Baxia",
+            "Harith",
+            "Badang"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "0-2",
+        "duration": "16:02",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Phoveus",
+            "Baxia",
+            "Valentina",
+            "Moskov",
+            "Kalea"
+          ],
+          "bans": [
+            "Harley",
+            "Freya",
+            "Marcel",
+            "Terizla",
+            "Yve"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Uranus",
+            "Fanny",
+            "Kimmy",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Chip",
+            "Zhuxin",
+            "Fredrinn",
+            "Leomord",
+            "Lancelot"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "DEWA vs RRQ",
+    "blueTeam": "DEWA",
+    "redTeam": "RRQ",
+    "score": "2-0",
+    "date": "April 25, 2026",
+    "mvp": "Octa",
+    "games": [
+      {
+        "game": 1,
+        "winner": "DEWA",
+        "score": "1-0",
+        "duration": "25:26",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Chip",
+            "Harley",
+            "Marcel",
+            "Hilda",
+            "Hylos"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Phoveus",
+            "Guinevere",
+            "Yve",
+            "Karrie",
+            "Chou"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Kalea",
+            "Alice",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "DEWA",
+        "score": "2-0",
+        "duration": "11:50",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Arlott",
+            "Guinevere",
+            "Pharsa",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Chip",
+            "Harley",
+            "Marcel",
+            "Karrie",
+            "Moskov"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Phoveus",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Yve",
+            "Baxia",
+            "Hylos"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "AE vs TLID",
+    "blueTeam": "AE",
+    "redTeam": "TLID",
+    "score": "1-2",
+    "date": "April 25, 2026",
+    "mvp": "Kevinn",
+    "games": [
+      {
+        "game": 1,
+        "winner": "TLID",
+        "score": "0-1",
+        "duration": "11:03",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Sora",
+            "Baxia",
+            "Valentina",
+            "Obsidia",
+            "Marcel"
+          ],
+          "bans": [
+            "Chip",
+            "Fredrinn",
+            "Freya",
+            "Yve",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zetian",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Guinevere",
+            "Fanny",
+            "Zhuxin",
+            "Suyou",
+            "Yi Sun-shin"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "AE",
+        "score": "1-1",
+        "duration": "17:23",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Yve",
+            "Yi Sun-shin",
+            "Hilda"
+          ],
+          "bans": [
+            "Chip",
+            "Freya",
+            "Fredrinn",
+            "Terizla",
+            "Phoveus"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Zhuxin",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Guinevere",
+            "Kalea",
+            "Fanny",
+            "Uranus",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "TLID",
+        "score": "1-2",
+        "duration": "20:50",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Lapu-Lapu",
+            "Yi Sun-shin",
+            "Lylia",
+            "Clint",
+            "Kalea"
+          ],
+          "bans": [
+            "Chip",
+            "Freya",
+            "Yve",
+            "Harith",
+            "Khaleed"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zetian",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Guinevere",
+            "Fanny",
+            "Zhuxin",
+            "Uranus",
+            "Alice"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs BTR",
+    "blueTeam": "EVOS",
+    "redTeam": "BTR",
+    "score": "0-2",
+    "date": "April 25, 2026",
+    "mvp": "Moreno",
+    "games": [
+      {
+        "game": 1,
+        "winner": "BTR",
+        "score": "0-1",
+        "duration": "15:23",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Valentina",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Sora",
+            "Suyou",
+            "Terizla"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Arlott",
+            "Harley",
+            "Zhuxin",
+            "Harith",
+            "Hylos"
+          ],
+          "bans": [
+            "Chip",
+            "Freya",
+            "Marcel",
+            "Granger",
+            "Moskov"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "BTR",
+        "score": "0-2",
+        "duration": "27:15",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Valentina",
+            "Granger",
+            "Hylos"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Harith",
+            "Arlott",
+            "Terizla"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Chip",
+            "Freya",
+            "Marcel",
+            "Kalea",
+            "Gatotkaca"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "AE vs NAVI",
+    "blueTeam": "AE",
+    "redTeam": "NAVI",
+    "score": "2-1",
+    "date": "April 26, 2026",
+    "mvp": "Nino",
+    "games": [
+      {
+        "game": 1,
+        "winner": "NAVI",
+        "score": "0-1",
+        "duration": "13:37",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Phoveus",
+            "Harley",
+            "Chip",
+            "Yve",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Valentina",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Guinevere",
+            "Arlott",
+            "Granger"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "AE",
+        "score": "1-1",
+        "duration": "12:23",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Alice",
+            "Leomord",
+            "Valentina",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Phoveus",
+            "Marcel",
+            "Chip",
+            "Granger",
+            "Hylos"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Arlott",
+            "Fredrinn",
+            "Pharsa",
+            "Claude",
+            "Guinevere"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Zhuxin",
+            "Suyou",
+            "Baxia"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "AE",
+        "score": "2-1",
+        "duration": "18:03",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Yu Zhong",
+            "Leomord",
+            "Odette",
+            "Granger",
+            "Hilda"
+          ],
+          "bans": [
+            "Phoveus",
+            "Marcel",
+            "Chip",
+            "Sora",
+            "Terizla"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Valentina",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Zhuxin",
+            "Uranus",
+            "Alice"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "GEEK vs ONIC",
+    "blueTeam": "GEEK",
+    "redTeam": "ONIC",
+    "score": "2-1",
+    "date": "April 26, 2026",
+    "mvp": "MarceL",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "0-1",
+        "duration": "16:09",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Pharsa",
+            "Moskov",
+            "Kalea"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Freya",
+            "Sora",
+            "Zetian",
+            "Yve"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Lapu-Lapu",
+            "Fanny",
+            "Lylia",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Helcurt",
+            "Chip",
+            "Marcel",
+            "Harley",
+            "Guinevere"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "GEEK",
+        "score": "1-1",
+        "duration": "12:54",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Kimmy",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Freya",
+            "Zhuxin",
+            "Fanny",
+            "Lapu-Lapu",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Valentina",
+            "Bruno",
+            "Marcel"
+          ],
+          "bans": [
+            "Helcurt",
+            "Chip",
+            "Moskov",
+            "Granger",
+            "Valir"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "GEEK",
+        "score": "2-1",
+        "duration": "18:20",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Lylia",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Zhuxin",
+            "Harith",
+            "Sora"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Yve",
+            "Beatrix",
+            "Kalea"
+          ],
+          "bans": [
+            "Helcurt",
+            "Chip",
+            "Marcel",
+            "Zetian",
+            "Atlas"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "DEWA vs TLID",
+    "blueTeam": "DEWA",
+    "redTeam": "TLID",
+    "score": "2-0",
+    "date": "April 26, 2026",
+    "mvp": "QINN",
+    "games": [
+      {
+        "game": 1,
+        "winner": "DEWA",
+        "score": "1-0",
+        "duration": "11:24",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Freya",
+            "Suyou",
+            "Yve",
+            "Granger",
+            "Hilda"
+          ],
+          "bans": [
+            "Chip",
+            "Fredrinn",
+            "Phoveus",
+            "Terizla",
+            "Uranus"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Esmeralda",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Guinevere",
+            "Fanny",
+            "Arlott",
+            "Khaleed",
+            "Marcel"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "DEWA",
+        "score": "2-0",
+        "duration": "11:36",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Lunox",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Chip",
+            "Fredrinn",
+            "Freya",
+            "Uranus",
+            "Alice"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Yu Zhong",
+            "Leomord",
+            "Zhuxin",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Guinevere",
+            "Fanny",
+            "Kalea",
+            "Yve",
+            "Zetian"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "NAVI vs DEWA",
+    "blueTeam": "NAVI",
+    "redTeam": "DEWA",
+    "score": "1-2",
+    "date": "May 1, 2026",
+    "mvp": "Dolynn",
+    "games": [
+      {
+        "game": 1,
+        "winner": "DEWA",
+        "score": "0-1",
+        "duration": "11:47",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Lylia",
+            "Freya",
+            "Hylos"
+          ],
+          "bans": [
+            "Fanny",
+            "Valentina",
+            "Guinevere",
+            "Karrie",
+            "Gloo"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Marcel",
+            "Chip",
+            "Phoveus",
+            "Yve",
+            "Kalea"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "NAVI",
+        "score": "1-1",
+        "duration": "20:21",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Valentina",
+            "Freya",
+            "Kalea",
+            "Hylos"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Pharsa",
+            "Granger",
+            "Guinevere"
+          ],
+          "bans": [
+            "Marcel",
+            "Chip",
+            "Harley",
+            "Khaleed",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "DEWA",
+        "score": "1-2",
+        "duration": "13:34",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Valentina",
+            "Guinevere",
+            "Hilda",
+            "Arlott"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": [
+            "Marcel",
+            "Chip",
+            "Phoveus",
+            "Harley",
+            "Hayabusa"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "AE vs GEEK",
+    "blueTeam": "AE",
+    "redTeam": "GEEK",
+    "score": "2-1",
+    "date": "May 1, 2026",
+    "mvp": "alekk",
+    "games": [
+      {
+        "game": 1,
+        "winner": "GEEK",
+        "score": "0-1",
+        "duration": "14:09",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Kagura",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Phoveus",
+            "Helcurt",
+            "Chip",
+            "Valentina",
+            "Claude"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Faramis",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Freya",
+            "Zhuxin",
+            "Fanny",
+            "Guinevere",
+            "Zetian"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "AE",
+        "score": "1-1",
+        "duration": "14:14",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Yve",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Helcurt",
+            "Chip",
+            "Fanny",
+            "Arlott",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Granger",
+            "Gloo"
+          ],
+          "bans": [
+            "Guinevere",
+            "Kalea",
+            "Freya",
+            "Moskov",
+            "Valentina"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "AE",
+        "score": "2-1",
+        "duration": "14:11",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Yve",
+            "Karrie",
+            "Gloo"
+          ],
+          "bans": [
+            "Helcurt",
+            "Chip",
+            "Kalea",
+            "Guinevere",
+            "Hylos"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Lapu-Lapu",
+            "Suyou",
+            "Zhuxin",
+            "Freya",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Hilda",
+            "Khaleed",
+            "Brody",
+            "Obsidia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs AE",
+    "blueTeam": "EVOS",
+    "redTeam": "AE",
+    "score": "2-1",
+    "date": "May 2, 2026",
+    "mvp": "Kyy",
+    "games": [
+      {
+        "game": 1,
+        "winner": "AE",
+        "score": "0-1",
+        "duration": "20:25",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Pharsa",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Harley",
+            "Phoveus",
+            "Zhuxin",
+            "Terizla",
+            "Uranus"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Luo Yi",
+            "Granger",
+            "Hilda"
+          ],
+          "bans": [
+            "Selena",
+            "Chip",
+            "Freya",
+            "Sora",
+            "Yve"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "1-1",
+        "duration": "28:02",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Baxia"
+          ],
+          "bans": [
+            "Harley",
+            "Phoveus",
+            "Fanny",
+            "Granger",
+            "Obsidia"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Yve",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Selena",
+            "Chip",
+            "Freya",
+            "Khaleed",
+            "Kalea"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "EVOS",
+        "score": "2-1",
+        "duration": "18:23",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Terizla",
+            "Lancelot",
+            "Zhuxin",
+            "Harith",
+            "Hylos"
+          ],
+          "bans": [
+            "Harley",
+            "Suyou",
+            "Phoveus",
+            "Obsidia",
+            "Granger"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Yve",
+            "Karrie",
+            "Hilda"
+          ],
+          "bans": [
+            "Selena",
+            "Chip",
+            "Freya",
+            "Baxia",
+            "Fredrinn"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "TLID vs ONIC",
+    "blueTeam": "TLID",
+    "redTeam": "ONIC",
+    "score": "0-2",
+    "date": "May 2, 2026",
+    "mvp": "Kairi",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "0-1",
+        "duration": "16:14",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Badang",
+            "Baxia",
+            "Kimmy",
+            "Moskov",
+            "Marcel"
+          ],
+          "bans": [
+            "Guinevere",
+            "Phoveus",
+            "Zhuxin",
+            "Chou",
+            "Khaleed"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Valentina",
+            "Harith",
+            "Atlas"
+          ],
+          "bans": [
+            "Gloo",
+            "Freya",
+            "Harley",
+            "Arlott",
+            "Uranus"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "0-2",
+        "duration": "14:23",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Masha",
+            "Fredrinn",
+            "Valentina",
+            "Granger",
+            "Chip"
+          ],
+          "bans": [
+            "Guinevere",
+            "Zhuxin",
+            "Marcel",
+            "Kalea",
+            "Atlas"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Valir",
+            "Harith",
+            "Hylos"
+          ],
+          "bans": [
+            "Gloo",
+            "Harley",
+            "Freya",
+            "Claude",
+            "Moskov"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ vs BTR",
+    "blueTeam": "RRQ",
+    "redTeam": "BTR",
+    "score": "2-0",
+    "date": "May 2, 2026",
+    "mvp": "Dan",
+    "games": [
+      {
+        "game": 1,
+        "winner": "RRQ",
+        "score": "1-0",
+        "duration": "17:30",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Phoveus",
+            "Lancelot",
+            "Zhuxin",
+            "Granger",
+            "Hylos"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Marcel",
+            "Yve",
+            "Valir"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Vexana",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": [
+            "Chip",
+            "Harley",
+            "Guinevere",
+            "Leomord",
+            "Moskov"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "RRQ",
+        "score": "2-0",
+        "duration": "19:44",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Phoveus",
+            "Lancelot",
+            "Zhuxin",
+            "Karrie",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Marcel",
+            "Harith",
+            "Sora"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Hylos",
+            "Leomord",
+            "Valentina",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Chip",
+            "Harley",
+            "Guinevere",
+            "Baxia",
+            "Suyou"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "NAVI vs TLID",
+    "blueTeam": "NAVI",
+    "redTeam": "TLID",
+    "score": "1-2",
+    "date": "May 3, 2026",
+    "mvp": "Aran",
+    "games": [
+      {
+        "game": 1,
+        "winner": "NAVI",
+        "score": "1-0",
+        "duration": "24:11",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Granger",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Chip",
+            "Gloo",
+            "Phoveus",
+            "Uranus",
+            "Hilda"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Alice",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Guinevere",
+            "Marcel",
+            "Freya",
+            "Khaleed",
+            "Hylos"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "TLID",
+        "score": "1-1",
+        "duration": "18:02",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Luo Yi",
+            "Granger",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Chip",
+            "Freya",
+            "Gloo",
+            "Yve",
+            "Kalea"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Kimmy",
+            "Harith",
+            "Baxia"
+          ],
+          "bans": [
+            "Guinevere",
+            "Marcel",
+            "Zhuxin",
+            "Hylos",
+            "Valir"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "TLID",
+        "score": "1-2",
+        "duration": "17:17",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Chip",
+            "Phoveus",
+            "Gloo",
+            "Uranus",
+            "Baxia"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Terizla",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Guinevere",
+            "Marcel",
+            "Freya",
+            "Kalea",
+            "Hilda"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs RRQ",
+    "blueTeam": "ONIC",
+    "redTeam": "RRQ",
+    "score": "2-0",
+    "date": "May 3, 2026",
+    "mvp": "S",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "13:14",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Valentina",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Chip",
+            "Phoveus",
+            "Guinevere",
+            "Gloo",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Uranus",
+            "Lancelot",
+            "Zhuxin",
+            "Karrie",
+            "Khaleed"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Marcel",
+            "Kalea",
+            "Yve"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "13:56",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Lancelot",
+            "Nana",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Chip",
+            "Harley",
+            "Zhuxin",
+            "Terizla",
+            "Sora"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Lapu-Lapu",
+            "Guinevere",
+            "Yve",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Marcel",
+            "Chou",
+            "Valir"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "GEEK vs EVOS",
+    "blueTeam": "GEEK",
+    "redTeam": "EVOS",
+    "score": "2-0",
+    "date": "May 3, 2026",
+    "mvp": "MarceL",
+    "games": [
+      {
+        "game": 1,
+        "winner": "GEEK",
+        "score": "1-0",
+        "duration": "19:34",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Phoveus",
+            "Hayabusa",
+            "Zhuxin",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Marcel",
+            "Chip",
+            "Fanny",
+            "Yve",
+            "Granger"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Valir",
+            "Yi Sun-shin",
+            "Zetian",
+            "Freya",
+            "Hylos"
+          ],
+          "bans": [
+            "Harley",
+            "Helcurt",
+            "Suyou",
+            "Leomord",
+            "Khaleed"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "GEEK",
+        "score": "2-0",
+        "duration": "11:25",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Phoveus",
+            "Guinevere",
+            "Zhuxin",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Fanny",
+            "Chip",
+            "Marcel",
+            "Gloo",
+            "Gatotkaca"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Uranus",
+            "Yi Sun-shin",
+            "Yve",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": [
+            "Helcurt",
+            "Harley",
+            "Harith",
+            "Karrie",
+            "Suyou"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "GEEK vs DEWA",
+    "blueTeam": "GEEK",
+    "redTeam": "DEWA",
+    "score": "1-2",
+    "date": "May 8, 2026",
+    "mvp": "QINN",
+    "games": [
+      {
+        "game": 1,
+        "winner": "GEEK",
+        "score": "1-0",
+        "duration": "09:26",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Freya",
+            "Leomord",
+            "Faramis",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Guinevere",
+            "Fanny",
+            "Zhuxin",
+            "Gloo",
+            "Zetian"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Yve",
+            "Harith",
+            "Belerick"
+          ],
+          "bans": [
+            "Harley",
+            "Phoveus",
+            "Helcurt",
+            "Alice",
+            "Lylia"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "DEWA",
+        "score": "1-1",
+        "duration": "14:23",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Lapu-Lapu",
+            "Suyou",
+            "Faramis",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Guinevere",
+            "Fanny",
+            "Zhuxin",
+            "Zetian",
+            "Claude"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Pharsa",
+            "Freya",
+            "Marcel"
+          ],
+          "bans": [
+            "Phoveus",
+            "Harley",
+            "Helcurt",
+            "Alice",
+            "Terizla"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "DEWA",
+        "score": "1-2",
+        "duration": "15:18",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Lapu-Lapu",
+            "Fanny",
+            "Yve",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Guinevere",
+            "Zhuxin",
+            "Freya",
+            "Odette",
+            "Lunox"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zetian",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Harley",
+            "Helcurt",
+            "Marcel",
+            "Kalea",
+            "Gloo"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "BTR vs TLID",
+    "blueTeam": "BTR",
+    "redTeam": "TLID",
+    "score": "0-2",
+    "date": "May 8, 2026",
+    "mvp": "Kevinn",
+    "games": [
+      {
+        "game": 1,
+        "winner": "TLID",
+        "score": "0-1",
+        "duration": "18:58",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Zhuxin",
+            "Beatrix",
+            "Kalea"
+          ],
+          "bans": [
+            "Chip",
+            "Gloo",
+            "Freya",
+            "Gatotkaca",
+            "Hylos"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zetian",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Guinevere",
+            "Marcel",
+            "Fanny",
+            "Granger",
+            "Uranus"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "TLID",
+        "score": "0-2",
+        "duration": "15:43",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Lylia",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Chip",
+            "Gloo",
+            "Freya",
+            "Karrie",
+            "Moskov"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Yve",
+            "Lunox",
+            "Hylos"
+          ],
+          "bans": [
+            "Guinevere",
+            "Zhuxin",
+            "Fanny",
+            "Marcel",
+            "Kalea"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "DEWA vs AE",
+    "blueTeam": "DEWA",
+    "redTeam": "AE",
+    "score": "1-2",
+    "date": "May 9, 2026",
+    "mvp": "Nino",
+    "games": [
+      {
+        "game": 1,
+        "winner": "AE",
+        "score": "0-1",
+        "duration": "12:12",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Freya",
+            "Suyou",
+            "Zetian",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Harley",
+            "Phoveus",
+            "Marcel",
+            "Harith",
+            "Chou"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Valentina",
+            "Obsidia",
+            "Gloo"
+          ],
+          "bans": [
+            "Arlott",
+            "Fanny",
+            "Zhuxin",
+            "Khaleed",
+            "Alice"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "DEWA",
+        "score": "1-1",
+        "duration": "10:39",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Freya",
+            "Guinevere",
+            "Pharsa",
+            "Harith",
+            "Hilda"
+          ],
+          "bans": [
+            "Harley",
+            "Marcel",
+            "Sora",
+            "Obsidia",
+            "Uranus"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Zhuxin",
+            "Granger",
+            "Khaleed"
+          ],
+          "bans": [
+            "Arlott",
+            "Phoveus",
+            "Fanny",
+            "Leomord",
+            "Gatotkaca"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "AE",
+        "score": "1-2",
+        "duration": "14:02",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Phoveus",
+            "Guinevere",
+            "Pharsa",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": [
+            "Harley",
+            "Marcel",
+            "Freya",
+            "Zetian",
+            "Obsidia"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Luo Yi",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Arlott",
+            "Fanny",
+            "Zhuxin",
+            "Leomord",
+            "Kalea"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs RRQ",
+    "blueTeam": "EVOS",
+    "redTeam": "RRQ",
+    "score": "2-0",
+    "date": "May 9, 2026",
+    "mvp": "Albert",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "1-0",
+        "duration": "16:13",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Gord",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Chip",
+            "Phoveus",
+            "Zhuxin",
+            "Suyou",
+            "Fanny"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Uranus",
+            "Lancelot",
+            "Valentina",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Arlott",
+            "Pharsa",
+            "Lunox"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "2-0",
+        "duration": "13:14",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Gloo",
+            "Leomord",
+            "Zhuxin",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Chip",
+            "Harley",
+            "Guinevere",
+            "Harith",
+            "Claude"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Phoveus",
+            "Fanny",
+            "Yve",
+            "Bruno",
+            "Khaleed"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Kalea",
+            "Suyou",
+            "Fredrinn"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs NAVI",
+    "blueTeam": "ONIC",
+    "redTeam": "NAVI",
+    "score": "2-0",
+    "date": "May 9, 2026",
+    "mvp": "S",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "16:49",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Gord",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Marcel",
+            "Sora",
+            "Phoveus",
+            "Uranus",
+            "Valentina"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Kimmy",
+            "Karrie",
+            "Kalea"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Zhuxin",
+            "Zetian",
+            "Arlott"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "14:48",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Valentina",
+            "Moskov",
+            "Chip"
+          ],
+          "bans": [
+            "Freya",
+            "Zhuxin",
+            "Harley",
+            "Baxia",
+            "Leomord"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Phoveus",
+            "Nolan",
+            "Gord",
+            "Granger",
+            "Marcel"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Kalea",
+            "Hilda",
+            "Gloo"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ vs GEEK",
+    "blueTeam": "RRQ",
+    "redTeam": "GEEK",
+    "score": "0-2",
+    "date": "May 10, 2026",
+    "mvp": "MarceL",
+    "games": [
+      {
+        "game": 1,
+        "winner": "GEEK",
+        "score": "0-1",
+        "duration": "28:33",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Gloo",
+            "Guinevere",
+            "Vexana",
+            "Moskov",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Kalea",
+            "Harith",
+            "Faramis"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zetian",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Chip",
+            "Zhuxin",
+            "Harley",
+            "Valir",
+            "Terizla"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "GEEK",
+        "score": "0-2",
+        "duration": "13:37",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Valir",
+            "Granger",
+            "Hylos"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Harley",
+            "Leomord",
+            "Arlott"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Valentina",
+            "Fredrinn",
+            "Zhuxin",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Chip",
+            "Phoveus",
+            "Fanny",
+            "Yve",
+            "Lylia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "NAVI vs BTR",
+    "blueTeam": "NAVI",
+    "redTeam": "BTR",
+    "score": "2-1",
+    "date": "May 10, 2026",
+    "mvp": "Aprho",
+    "games": [
+      {
+        "game": 1,
+        "winner": "NAVI",
+        "score": "1-0",
+        "duration": "23:02",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Terizla",
+            "Harley",
+            "Pharsa",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Phoveus",
+            "Fredrinn",
+            "Gatotkaca"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Arlott",
+            "Lancelot",
+            "Valentina",
+            "Harith",
+            "Baxia"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Zhuxin",
+            "Gord",
+            "Uranus"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "BTR",
+        "score": "1-1",
+        "duration": "18:53",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Minsitthar",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Badang"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Guinevere",
+            "Valentina",
+            "Zetian"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Marcel",
+            "Kalea",
+            "Harley",
+            "Uranus",
+            "Sora"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "NAVI",
+        "score": "2-1",
+        "duration": "15:52",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Freya",
+            "Leomord",
+            "Zetian",
+            "Moskov",
+            "Badang"
+          ],
+          "bans": [
+            "Fanny",
+            "Guinevere",
+            "Phoveus",
+            "Gloo",
+            "Sora"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Hilda",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Marcel",
+            "Harley",
+            "Kalea",
+            "Hylos",
+            "Gatotkaca"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "TLID vs EVOS",
+    "blueTeam": "TLID",
+    "redTeam": "EVOS",
+    "score": "0-2",
+    "date": "May 10, 2026",
+    "mvp": "Albert",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "0-1",
+        "duration": "12:47",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Baxia"
+          ],
+          "bans": [
+            "Guinevere",
+            "Harley",
+            "Chip",
+            "Fanny",
+            "Arlott"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Lapu-Lapu",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Phoveus",
+            "Gloo",
+            "Freya",
+            "Khaleed",
+            "Marcel"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "0-2",
+        "duration": "20:43",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Badang",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Harley",
+            "Guinevere",
+            "Chip",
+            "Arlott",
+            "Fanny"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Lapu-Lapu",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Phoveus",
+            "Gloo",
+            "Freya",
+            "Marcel",
+            "Baxia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "BTR vs GEEK",
+    "blueTeam": "BTR",
+    "redTeam": "GEEK",
+    "score": "0-2",
+    "date": "May 15, 2026",
+    "mvp": "Nazara",
+    "games": [
+      {
+        "game": 1,
+        "winner": "GEEK",
+        "score": "0-1",
+        "duration": "14:53",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Khufra"
+          ],
+          "bans": [
+            "Harley",
+            "Freya",
+            "Kalea",
+            "Claude",
+            "Arlott"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Valentina",
+            "Guinevere",
+            "Zhuxin",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Fanny",
+            "Phoveus",
+            "Marcel",
+            "Gloo",
+            "Khaleed"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "GEEK",
+        "score": "0-2",
+        "duration": "15:26",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Arlott",
+            "Yi Sun-shin",
+            "Yve",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Freya",
+            "Harley",
+            "Kalea",
+            "Khaleed",
+            "Chip"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Yu Zhong",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Chou"
+          ],
+          "bans": [
+            "Phoveus",
+            "Fanny",
+            "Marcel",
+            "Guinevere",
+            "Leomord"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "DEWA vs ONIC",
+    "blueTeam": "DEWA",
+    "redTeam": "ONIC",
+    "score": "0-2",
+    "date": "May 15, 2026",
+    "mvp": "Kelra",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "0-1",
+        "duration": "12:16",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Zetian",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Harley",
+            "Fanny",
+            "Zhuxin",
+            "Baxia",
+            "Lancelot"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Nolan",
+            "Valentina",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Guinevere",
+            "Freya",
+            "Arlott",
+            "Hilda",
+            "Gloo"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "0-2",
+        "duration": "16:33",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Valir",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Harley",
+            "Fanny",
+            "Phoveus",
+            "Hayabusa",
+            "Nolan"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Fredrinn",
+            "Zhuxin",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Freya",
+            "Guinevere",
+            "Arlott",
+            "Lylia",
+            "Valentina"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs NAVI",
+    "blueTeam": "EVOS",
+    "redTeam": "NAVI",
+    "score": "0-2",
+    "date": "May 16, 2026",
+    "mvp": "Aprho",
+    "games": [
+      {
+        "game": 1,
+        "winner": "NAVI",
+        "score": "0-1",
+        "duration": "18:18",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Chou",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Phoveus",
+            "Marcel",
+            "Sora",
+            "Nolan",
+            "Leomord"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Terizla",
+            "Baxia",
+            "Gord",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Harley",
+            "Freya",
+            "Chip",
+            "Lapu-Lapu",
+            "Arlott"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "NAVI",
+        "score": "0-2",
+        "duration": "24:32",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Alice",
+            "Fanny",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Marcel",
+            "Phoveus",
+            "Gord",
+            "Arlott",
+            "Sora"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Paquito",
+            "Guinevere",
+            "Pharsa",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Harley",
+            "Freya",
+            "Chip",
+            "Yi Sun-shin",
+            "Baxia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "TLID vs RRQ",
+    "blueTeam": "TLID",
+    "redTeam": "RRQ",
+    "score": "2-0",
+    "date": "May 16, 2026",
+    "mvp": "Aran",
+    "games": [
+      {
+        "game": 1,
+        "winner": "TLID",
+        "score": "1-0",
+        "duration": "16:28",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Gord",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Guinevere",
+            "Zhuxin",
+            "Gloo",
+            "Obsidia",
+            "Khaleed"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Pharsa",
+            "Karrie",
+            "Franco"
+          ],
+          "bans": [
+            "Freya",
+            "Marcel",
+            "Chip",
+            "Zetian",
+            "Kalea"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "TLID",
+        "score": "2-0",
+        "duration": "13:49",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Sora",
+            "Fredrinn",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Guinevere",
+            "Chip",
+            "Freya",
+            "Alice",
+            "Uranus"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Terizla",
+            "Harley",
+            "Gord",
+            "Moskov",
+            "Kalea"
+          ],
+          "bans": [
+            "Marcel",
+            "Phoveus",
+            "Fanny",
+            "Paquito",
+            "Arlott"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs AE",
+    "blueTeam": "ONIC",
+    "redTeam": "AE",
+    "score": "2-1",
+    "date": "May 16, 2026",
+    "mvp": "Kairi",
+    "games": [
+      {
+        "game": 1,
+        "winner": "AE",
+        "score": "0-1",
+        "duration": "20:37",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Pharsa",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Guinevere",
+            "Phoveus",
+            "Kalea",
+            "Suyou",
+            "Leomord"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Valentina",
+            "Yi Sun-shin",
+            "Gord",
+            "Freya",
+            "Hilda"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Fanny",
+            "Marcel",
+            "Atlas",
+            "Valir"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "1-1",
+        "duration": "17:41",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Valentina",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Guinevere",
+            "Freya",
+            "Hilda",
+            "Obsidia",
+            "Terizla"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Uranus",
+            "Suyou",
+            "Gord",
+            "Karrie",
+            "Khaleed"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Fanny",
+            "Harley",
+            "Baxia",
+            "Nolan"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "ONIC",
+        "score": "2-1",
+        "duration": "14:16",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Lapu-Lapu",
+            "Fanny",
+            "Lylia",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Guinevere",
+            "Freya",
+            "Hilda",
+            "Claude",
+            "Lunox"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Cici",
+            "Leomord",
+            "Gord",
+            "Ruby",
+            "Kalea"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Marcel",
+            "Harley",
+            "Zetian",
+            "Phoveus"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "DEWA vs EVOS",
+    "blueTeam": "DEWA",
+    "redTeam": "EVOS",
+    "score": "0-2",
+    "date": "May 17, 2026",
+    "mvp": "Pheww",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "0-1",
+        "duration": "16:55",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Alice",
+            "Guinevere",
+            "Zhuxin",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Chip",
+            "Harley",
+            "Marcel",
+            "Uranus",
+            "Masha"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Gord",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Arlott",
+            "Phoveus",
+            "Terizla"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "0-2",
+        "duration": "14:28",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Helcurt"
+          ],
+          "bans": [
+            "Chip",
+            "Harley",
+            "Kalea",
+            "Hylos",
+            "Uranus"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Gloo",
+            "Leomord",
+            "Gord",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Arlott",
+            "Claude",
+            "Marcel"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "AE vs BTR",
+    "blueTeam": "AE",
+    "redTeam": "BTR",
+    "score": "0-2",
+    "date": "May 17, 2026",
+    "mvp": "Finn",
+    "games": [
+      {
+        "game": 1,
+        "winner": "BTR",
+        "score": "0-1",
+        "duration": "13:24",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Phoveus",
+            "Guinevere",
+            "Fanny",
+            "Suyou",
+            "Yi Sun-shin"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Uranus",
+            "Lancelot",
+            "Gord",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Hilda",
+            "Freya",
+            "Harley",
+            "Khaleed",
+            "Gatotkaca"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "BTR",
+        "score": "0-2",
+        "duration": "21:24",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Yu Zhong",
+            "Guinevere",
+            "Valentina",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Freya",
+            "Gord",
+            "Lancelot"
+          ]
+        },
+        "redTeam": {
+          "name": "BTR",
+          "picks": [
+            "Uranus",
+            "Yi Sun-shin",
+            "Yve",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Hilda",
+            "Harley",
+            "Phoveus",
+            "Marcel",
+            "Sora"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ vs NAVI",
+    "blueTeam": "RRQ",
+    "redTeam": "NAVI",
+    "score": "0-2",
+    "date": "May 17, 2026",
+    "mvp": "Aphro",
+    "games": [
+      {
+        "game": 1,
+        "winner": "NAVI",
+        "score": "0-1",
+        "duration": "11:12",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Marcel",
+            "Gloo",
+            "Kalea",
+            "Khaleed",
+            "Yve"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Gord",
+            "Harith",
+            "Kaja"
+          ],
+          "bans": [
+            "Freya",
+            "Harley",
+            "Chip",
+            "Terizla",
+            "Baxia"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "NAVI",
+        "score": "0-2",
+        "duration": "10:52",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Lylia",
+            "Harith",
+            "Chou"
+          ],
+          "bans": [
+            "Marcel",
+            "Gloo",
+            "Kalea",
+            "Guinevere",
+            "Leomord"
+          ]
+        },
+        "redTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Terizla",
+            "Baxia",
+            "Zhuxin",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Freya",
+            "Harley",
+            "Chip",
+            "Gord",
+            "Zetian"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "BTR vs DEWA",
+    "blueTeam": "BTR",
+    "redTeam": "DEWA",
+    "score": "2-1",
+    "date": "May 22, 2026",
+    "mvp": "Moreno",
+    "games": [
+      {
+        "game": 1,
+        "winner": "DEWA",
+        "score": "0-1",
+        "duration": "17:52",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Zhuxin",
+            "Karrie",
+            "Gloo"
+          ],
+          "bans": [
+            "Arlott",
+            "Guinevere",
+            "Suyou",
+            "Khaleed",
+            "Gatotkaca"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Lunox",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Freya",
+            "Kalea",
+            "Fanny",
+            "Phoveus",
+            "Sora"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "BTR",
+        "score": "1-1",
+        "duration": "11:59",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Arlott",
+            "Yi Sun-shin",
+            "Valir",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Freya",
+            "Guinevere",
+            "Fanny",
+            "Sora",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Yve",
+            "Karrie",
+            "Kalea"
+          ],
+          "bans": [
+            "Phoveus",
+            "Harley",
+            "Uranus",
+            "Zetian",
+            "Leomord"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "BTR",
+        "score": "2-1",
+        "duration": "14:26",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Guinevere",
+            "Arlott",
+            "Uranus",
+            "Gatotkaca",
+            "Gloo"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zetian",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Harley",
+            "Yi Sun-shin",
+            "Sora"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "TLID vs AE",
+    "blueTeam": "TLID",
+    "redTeam": "AE",
+    "score": "2-0",
+    "date": "May 22, 2026",
+    "mvp": "Kevinn",
+    "games": [
+      {
+        "game": 1,
+        "winner": "TLID",
+        "score": "1-0",
+        "duration": "11:54",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Terizla",
+            "Fredrinn",
+            "Gord",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Guinevere",
+            "Hilda",
+            "Harley",
+            "Harith",
+            "Obsidia"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Phoveus",
+            "Fanny",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Gloo",
+            "Chip",
+            "Freya",
+            "Paquito",
+            "Arlott"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "TLID",
+        "score": "2-0",
+        "duration": "12:09",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "TLID",
+          "picks": [
+            "Terizla",
+            "Fredrinn",
+            "Gord",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Guinevere",
+            "Hilda",
+            "Freya",
+            "Lapu-Lapu",
+            "Alice"
+          ]
+        },
+        "redTeam": {
+          "name": "AE",
+          "picks": [
+            "Sora",
+            "Fanny",
+            "Valentina",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Gloo",
+            "Chip",
+            "Phoveus",
+            "Paquito",
+            "Arlott"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "GEEK vs TLID",
+    "blueTeam": "GEEK",
+    "redTeam": "TLID",
+    "score": "0-2",
+    "date": "May 23, 2026",
+    "mvp": "Drichel",
+    "games": [
+      {
+        "game": 1,
+        "winner": "TLID",
+        "score": "0-1",
+        "duration": "12:40",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Phoveus",
+            "Baxia",
+            "Gord",
+            "Clint",
+            "Hylos"
+          ],
+          "bans": [
+            "Chip",
+            "Freya",
+            "Marcel",
+            "Lylia",
+            "Alice"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Gloo",
+            "Fredrinn",
+            "Yve",
+            "Claude",
+            "Atlas"
+          ],
+          "bans": [
+            "Guinevere",
+            "Kalea",
+            "Harley",
+            "Kaja",
+            "Moskov"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "TLID",
+        "score": "0-2",
+        "duration": "13:37",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Zhuxin",
+            "Karrie",
+            "Marcel"
+          ],
+          "bans": [
+            "Gord",
+            "Gloo",
+            "Phoveus",
+            "Yve",
+            "Chip"
+          ]
+        },
+        "redTeam": {
+          "name": "TLID",
+          "picks": [
+            "Freya",
+            "Fredrinn",
+            "Valentina",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Guinevere",
+            "Kalea",
+            "Harley",
+            "Harith",
+            "Granger"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "AE vs RRQ",
+    "blueTeam": "AE",
+    "redTeam": "RRQ",
+    "score": "1-2",
+    "date": "May 23, 2026",
+    "mvp": "Super",
+    "games": [
+      {
+        "game": 1,
+        "winner": "AE",
+        "score": "1-0",
+        "duration": "14:04",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Zhuxin",
+            "Granger",
+            "Hilda"
+          ],
+          "bans": [
+            "Chip",
+            "Phoveus",
+            "Kalea",
+            "Chou",
+            "Paquito"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Lapu-Lapu",
+            "Baxia",
+            "Gord",
+            "Claude",
+            "Kaja"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Fanny",
+            "Gloo",
+            "Karrie"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "RRQ",
+        "score": "1-1",
+        "duration": "14:36",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Gord",
+            "Granger",
+            "Hilda"
+          ],
+          "bans": [
+            "Chip",
+            "Kalea",
+            "Guinevere",
+            "Lancelot",
+            "Chou"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Phoveus",
+            "Baxia",
+            "Zhuxin",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Fanny",
+            "Gloo",
+            "Karrie"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "RRQ",
+        "score": "1-2",
+        "duration": "13:02",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "AE",
+          "picks": [
+            "Terizla",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Chip",
+            "Baxia",
+            "Harley",
+            "Gord",
+            "Zetian"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Lunox",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Fanny",
+            "Gloo",
+            "Suyou"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "BTR vs ONIC",
+    "blueTeam": "BTR",
+    "redTeam": "ONIC",
+    "score": "2-1",
+    "date": "May 23, 2026",
+    "mvp": "Moreno",
+    "games": [
+      {
+        "game": 1,
+        "winner": "BTR",
+        "score": "1-0",
+        "duration": "17:22",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Phoveus",
+            "Fanny",
+            "Valentina",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Marcel",
+            "Harley",
+            "Guinevere",
+            "Chip",
+            "Atlas"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Pharsa",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Freya",
+            "Zhuxin",
+            "Kalea",
+            "Valir",
+            "Gloo"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "1-1",
+        "duration": "15:39",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Gloo",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Marcel",
+            "Harley",
+            "Sora",
+            "Chip",
+            "Chou"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Paquito",
+            "Yi Sun-shin",
+            "Valentina",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": [
+            "Kalea",
+            "Phoveus",
+            "Fanny",
+            "Arlott",
+            "Lapu-Lapu"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "BTR",
+        "score": "2-1",
+        "duration": "20:36",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "BTR",
+          "picks": [
+            "Uranus",
+            "Fanny",
+            "Valir",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Marcel",
+            "Harley",
+            "Valentina",
+            "Fredrinn",
+            "Yi Sun-shin"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Paquito",
+            "Lancelot",
+            "Zhuxin",
+            "Moskov",
+            "Kalea"
+          ],
+          "bans": [
+            "Freya",
+            "Phoveus",
+            "Sora",
+            "Zetian",
+            "Lylia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ vs DEWA",
+    "blueTeam": "RRQ",
+    "redTeam": "DEWA",
+    "score": "1-2",
+    "date": "May 24, 2026",
+    "mvp": "QINN",
+    "games": [
+      {
+        "game": 1,
+        "winner": "DEWA",
+        "score": "0-1",
+        "duration": "15:23",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Lylia",
+            "Karrie",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Arlott",
+            "Freya",
+            "Gloo",
+            "Hilda"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Valentina",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Chip",
+            "Kalea",
+            "Phoveus",
+            "Kaja",
+            "Franco"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "RRQ",
+        "score": "1-1",
+        "duration": "26:08",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Valir",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Arlott",
+            "Freya",
+            "Fanny",
+            "Paquito",
+            "Chou"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Valentina",
+            "Ling",
+            "Zhuxin",
+            "Harith",
+            "Baxia"
+          ],
+          "bans": [
+            "Chip",
+            "Kalea",
+            "Phoveus",
+            "Lancelot",
+            "Suyou"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "DEWA",
+        "score": "1-2",
+        "duration": "14:10",
+        "map": "Broken Walls",
+        "blueTeam": {
+          "name": "RRQ",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zhuxin",
+            "Karrie",
+            "Gloo"
+          ],
+          "bans": [
+            "Fanny",
+            "Arlott",
+            "Freya",
+            "Helcurt",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "DEWA",
+          "picks": [
+            "Valentina",
+            "Baxia",
+            "Kadita",
+            "Granger",
+            "Kaja"
+          ],
+          "bans": [
+            "Kalea",
+            "Chip",
+            "Claude",
+            "Uranus",
+            "Lancelot"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs EVOS",
+    "blueTeam": "ONIC",
+    "redTeam": "EVOS",
+    "score": "2-0",
+    "date": "May 24, 2026",
+    "mvp": "Kiboy",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "29:43",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Uranus",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Freya",
+            "Kalea",
+            "Phoveus",
+            "Masha",
+            "Sora"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Paquito",
+            "Harley",
+            "Valentina",
+            "Granger",
+            "Chip"
+          ],
+          "bans": [
+            "Fanny",
+            "Marcel",
+            "Harith",
+            "Hilda",
+            "Khaleed"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "24:03",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Valentina",
+            "Irithel",
+            "Chou"
+          ],
+          "bans": [
+            "Freya",
+            "Chip",
+            "Kalea",
+            "Terizla",
+            "Lapu-Lapu"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Gloo",
+            "Harley",
+            "Valir",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Marcel",
+            "Zhuxin",
+            "Harith",
+            "Lancelot"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "NAVI vs GEEK",
+    "blueTeam": "NAVI",
+    "redTeam": "GEEK",
+    "score": "1-2",
+    "date": "May 24, 2026",
+    "mvp": "MarceL",
+    "games": [
+      {
+        "game": 1,
+        "winner": "GEEK",
+        "score": "0-1",
+        "duration": "13:52",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Terizla",
+            "Barats",
+            "Zhuxin",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Freya",
+            "Gloo",
+            "Baxia",
+            "Arlott",
+            "Sora"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Lapu-Lapu",
+            "Guinevere",
+            "Kimmy",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Phoveus",
+            "Harley",
+            "Marcel",
+            "Suyou",
+            "Leomord"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "NAVI",
+        "score": "1-1",
+        "duration": "13:26",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Paquito",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Freya",
+            "Baxia",
+            "Guinevere",
+            "Gord",
+            "Sora"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Lylia",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Phoveus",
+            "Harley",
+            "Marcel",
+            "Uranus",
+            "Khaleed"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "GEEK",
+        "score": "1-2",
+        "duration": "19:43",
+        "map": "Dangerous Grass",
+        "blueTeam": {
+          "name": "NAVI",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Gord",
+            "Harith",
+            "Badang"
+          ],
+          "bans": [
+            "Freya",
+            "Guinevere",
+            "Baxia",
+            "Sora",
+            "Gloo"
+          ]
+        },
+        "redTeam": {
+          "name": "GEEK",
+          "picks": [
+            "Yu Zhong",
+            "Harley",
+            "Zhuxin",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Phoveus",
+            "Leomord",
+            "Kalea",
+            "Kaja",
+            "Marcel"
+          ]
+        }
+      }
+    ]
+  }
+]

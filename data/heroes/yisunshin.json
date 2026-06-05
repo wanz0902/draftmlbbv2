@@ -1,0 +1,228 @@
+{
+  "id": "yisunshin",
+  "name": "Yi Sun-shin",
+  "heroName": "Yi Sun-shin",
+  "role": [
+    "Assassin",
+    "Marksman"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Heavenly Vow",
+      "description": "Yi Sun-shin attacks with his (longbow) or (glaive) according to his distance from the target. (Weapon Mastery): After each weapon swap, the next two attacks will be enhanced. The first attack deals 70%-100% Crit Damage and the second attack deals 55%-70% Crit Damage. Each enhanced attack grants 20% Movement Speed for 1s and reduces the cooldown of (Traceless) by 1s. After every 180s or when Yi Sun-shin respawns, a (Turtle Ship) will spawn at the allied Base. Yi Sun-shin can board the (Turtle Ship), gaining 60% Movement Speed (decays to after s) and enhancing (Traceless).",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Heavenly_Vow",
+      "tips": "If possible always use your Glaive (Sword) to attack, the damage output from it is higher Every 3 minutes a Turtleship will appear at the base, head over to collect it Turtleship gives a movement speed buff and turns your “1” into a straight line skillshot that stuns the enemy when hit. Has an innate slow passive, best used for chasing enemies or slowing them down when running, try to hit them as much as possible.",
+      "iconUrl": "/raw-assets/skill_icons/yisunshin/heavenly_vow.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Traceless",
+      "description": "Yi Sun-shin dashes forward and slashes with his glaive, dealing 150( +40% Total Physical Attack) (Physical Damage) and becoming immune to control effects for 1s.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Traceless",
+      "tips": "Your ESCAPE tool, use it wisely Decent slow, for escaping or chasing Turtleship would replace this skill so take note, You’ll be flying back like a normal “1” however there will be a straight line skillshot to stun the enemy.",
+      "iconUrl": "/raw-assets/skill_icons/yisunshin/traceless.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Blood Floods",
+      "description": "(Tap): Yi Sun-shin slashes swiftly with his glaive, dealing 240( +80% Total Physical Attack) (Physical Damage). (Hold): Yi Sun-shin shoots a powerful arrow, dealing 240( +80% Total Physical Attack) (Physical Damage) to the target. The arrow's damage scales with the hold time, up to 200%. This damage decays with the number of enemies hit but can't go below 40%. His Movement Speed is reduced by 20% while holding the skill. Yi Sun-shin gains (Weapon Mastery) immediately when this skill is used.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Blood_Floods",
+      "tips": "Your main harassing skill. One of the hardest hitting skill Range and damage increases when you charge your attack, make sure you have it charged fully for maximum damage Movement while charging is possible, however it’s a little slow",
+      "iconUrl": "/raw-assets/skill_icons/yisunshin/blood_floods.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Mountain Shocker",
+      "description": "(Passive): Increases the damage of (Heavenly Vow's) first enhanced Basic Attack by 10% and second enhanced Basic Attack by 5%. (Active): Yi Sun-shin commands the naval fleet to launch 3 waves of cannon shots on the locations of all enemy heroes, revealing their positions and dealing 150( +50% Total Physical Attack) (Physical Damage) to enemies in the area with each wave. (When a target is hit multiple times by the same wave, a maximum of 150% damage will be dealt.)",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mountain_Shocker",
+      "tips": "That being said, it’s not impossible to avoid this ult, try to save this when your team is engaging in a team fight or you need to know the location of your enemies. Please don’t use this immediately once it’s off CD, it has one of the longest CD in the game and the mana consumption is crazy When playing with friends, you can let your friend tell you when a teamfight is about to start or is happening for you to deal more residual damage. If SoloQ-ing, please keep an eye on the minimap to know when a fight is starting.",
+      "iconUrl": "/raw-assets/skill_icons/yisunshin/mountain_shocker.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Objective DPS",
+      "Late Game Carry",
+      "Jungle Tempo",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Yi Sun-shin adalah assassin dengan kemampuan burst damage dan mobilitas tinggi untuk mengeliminasi target prioritas.",
+  "playstyleTags": [
+    "Burst",
+    "Pickoff"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Early Aggression"
+  ],
+  "counterTags": [
+    "Hard CC",
+    "Group Up",
+    "Vision"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Backline Threat",
+    "Pick-off Specialist",
+    "Objective DPS",
+    "Late Game Carry",
+    "Jungle Tempo",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "Level 4",
+    "Early-Mid Game"
+  ]
+}

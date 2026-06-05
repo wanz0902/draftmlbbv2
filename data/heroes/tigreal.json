@@ -1,0 +1,178 @@
+{
+  "id": "tigreal",
+  "name": "Tigreal",
+  "heroName": "Tigreal",
+  "role": [
+    "Tank"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2581,
+    "hpRegen": 8,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 112,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.03",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Fearless",
+      "description": "Tigreal gains a stack of (Fearless) each time he uses a skill or is hit by a Basic Attack. After getting 4 stacks, Tigreal will consume all (Fearless) stacks to block the next incoming Basic Attack (including attacks from Turrets). [C8Attacks from Minions do not grant] (Fearless) [C8stacks nor trigger its effect].",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Fearless",
+      "tips": "Remember to do basic attacks between spells to harden you even more. You don't need to hit enemies to activate your passive so do it before Teamfights, or when you considerate it is necessary.",
+      "iconUrl": "/raw-assets/skill_icons/tigreal/fearless.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Attack Wave",
+      "description": "Tigreal smashes the ground with his hammer and sends a shockwave that erupts 3 times in the target direction, each time dealing 270( +70% Total Physical Attack) (Physical Damage) to enemies along the fan-shaped area and slowing them by 20%/40%/60% for 1.5s.",
+      "cooldown": "7.0",
+      "manaCost": "45",
+      "damageType": "AOE, Slow",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Attack_Wave",
+      "tips": "A Straight wave that is useful for killing minions, slowing down running enemies from battles and useful to stop enemies' HP regen. Try not to spam it a lot because it consumes a lot of mana, just waste it while having enemies in front and you make sure that you will hit them.",
+      "iconUrl": "/raw-assets/skill_icons/tigreal/attack_wave.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Sacred Hammer",
+      "description": "Tigreal charges in the target direction, dealing ( +100% Total Physical Attack) (Physical Damage) to enemies along the way and pushing them to the end of the charge. (Use Again): Tigreal can use this skill again within 4s, dealing 280( +60% Total Physical Attack) (Physical Damage) to enemies in front of him and knocking them airborne for 1s.",
+      "cooldown": "16.0",
+      "manaCost": "70",
+      "damageType": "Charge, CC",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Sacred_Hammer",
+      "tips": "The most important Tigreal's ability, being hard to master at the begining but easier to manipulate after playing several games with Tigreal. This ability complements well with the battle spell Flicker by dragging the enemy team to your side where your team awaits for them. Anyway, it costs even more mana than the 1st ability so use it wisely.",
+      "iconUrl": "/raw-assets/skill_icons/tigreal/sacred_hammer.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Implosion",
+      "description": "Tigreal unleashes the power of his hammer, stunning and pulling nearby enemies to him for 2s while dealing 270( +130% Total Physical Attack) (Physical Damage). [C8The first half of the channeling can be interrupted by control effects. The second half of the channeling can only be interrupted by Suppression.]",
+      "cooldown": "55.0",
+      "manaCost": "120",
+      "damageType": "CC, AOE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Implosion",
+      "tips": "The perfect complement for the 2nd ability and flicker. It is one of the best crowd control abilities on the game, so you have a great power in your hands and a really useful weapon for teamfights.",
+      "iconUrl": "/raw-assets/skill_icons/tigreal/implosion.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Tigreal adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "id": "rafaela",
+  "name": "Rafaela",
+  "heroName": "Rafaela",
+  "role": [
+    "Support"
+  ],
+  "specialty": [
+    "Guard",
+    "Regen"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Deity Penalization",
+      "description": "When Rafaela is killed, she turns into a beam of (Holy Light) and launches herself at her killer after a 2s delay. This attack deals (True Damage) equal to 20% of the target's Max HP upon hit and can be blocked by other enemy heroes, dealing damage to them instead. This effect won't be triggered if the killer is a non-hero enemy or if they're too far away.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Deity_Penalization",
+      "tips": "This passive may be seems like a joke, but if you know how to take advantage of this, be sure that no enemy can run away from you, same as be sure that you can save your low-hp teammates!",
+      "iconUrl": "/raw-assets/skill_icons/rafaela/deity_penalization.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Light of Retribution",
+      "description": "Rafaela strikes the three nearest enemies with (Light of Retribution), dealing them 225( +120% Total Magic Power) (Magic Damage), briefly revealing their positions, and slowing them by 40% for 1.5s. Enemies hit by (Light of Retribution) again within 5s will take 20% extra damage (this effect stacks up to 3 times).",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Light_of_Retribution",
+      "tips": "This is the main damage skill of Rafaela, and at the same time, is the biggest debuffs skill from her too. With the correct equipments, this skill is not only about revealing enemy's stealth and slow them down, it can also burn, reduce enemy's regen effects and even reduce enemy's defense too!",
+      "iconUrl": "/raw-assets/skill_icons/rafaela/light_of_retribution.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Holy Healing",
+      "description": "Rafaela calls upon (Holy Light), restoring 100( +35% Total Magic Power) HP to nearby allied heroes, plus an additional 150( +45% Total Magic Power) HP to herself and the most injured allied hero in range. Also increases the Movement Speed of nearby allied heroes by 30% and grants Slow Immunity for 1s. Every 20 point(s) of Magic Power will add 1% to the Movement Speed bonus.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Holy_Healing",
+      "tips": "This the healing skill, in contrast of her damage-skill, there no equipment to give her better buffs, and yet, this is the skill what most people expect from her.",
+      "iconUrl": "/raw-assets/skill_icons/rafaela/holy_healing.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Holy Baptism",
+      "description": "Rafaela unleashes the true power of (Holy Light) in the target direction, dealing 460( +120% Total Magic Power) (Magic Damage) to enemies in a line and stunning them for 1.2s.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Holy_Baptism",
+      "tips": "In early game, you can trick you enemy to dive into your turret and stun him, then let the turret do its job, be aware of the enemy's minion, if there is any, wait for them to hit you once first.",
+      "iconUrl": "/raw-assets/skill_icons/rafaela/holy_baptism.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Vision Control",
+      "Team Enabler",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Rafaela adalah support yang membantu tim melalui heal, shield, atau utility lainnya.",
+  "playstyleTags": [
+    "Protect"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Enabler",
+    "Defensive Draft"
+  ],
+  "counterTags": [
+    "Dive",
+    "Isolation",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Dive",
+    "Sustain Enabler"
+  ],
+  "macroTags": [
+    "Vision Control",
+    "Team Enabler",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

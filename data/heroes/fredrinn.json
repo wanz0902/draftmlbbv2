@@ -1,0 +1,234 @@
+{
+  "id": "fredrinn",
+  "name": "Fredrinn",
+  "heroName": "Fredrinn",
+  "role": [
+    "Tank",
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle",
+    "EXP",
+    "Roam"
+  ],
+  "flex_lanes": [
+    "EXP",
+    "Roam"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Crystalline Armor",
+      "description": "Fredrinn gains 1 (Combo Point) that lasts 5s each time his skill hits a non-minion enemy, up to 4 (Combo Points). His Ultimates cost different numbers of (Combo Points). Fredrinn stores 100% of the damage he receives as (Crystal Energy), which decays after 5s at a rate of 10% Max HP per second. Fredrinn can convert the stored (Crystal Energy) into HP by 20% of his damage dealt (10% for damage dealt to minions). Gaining a (Combo Point) resets the decaying timer.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Crystalline_Armor",
+      "tips": "He can also restore HP by his damage dealt.",
+      "iconUrl": "/raw-assets/skill_icons/fredrinn/crystalline_armor.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Piercing Strike",
+      "description": "Fredrinn thrusts his sword in the target direction, dealing 125( +7% Total HP) (+120% Extra Physical Attack) (Physical Damage) to enemies hit and slowing them by 30% for 2s. His next Basic Attack gains extra attack range and deals 85( +100% Total Physical Attack) (Physical Damage). This skill deals 150% damage to non-hero enemies.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Piercing_Strike",
+      "tips": "Use this skill to deal damage and clear lanes, while gaining combo points!",
+      "iconUrl": "/raw-assets/skill_icons/fredrinn/piercing_strike.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Brave Assault",
+      "description": "Fredrinn dashes in the target direction, dealing 140( +80% Extra Physical Attack) (Physical Damage) to the first non-minion enemy hit. His next Basic Attack knocks the target airborne for 0.3s.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Brave_Assault",
+      "tips": "Use this skill to approach enemies or start combos. Cast it followed by enhanced Basic Attacks to control enemies.",
+      "iconUrl": "/raw-assets/skill_icons/fredrinn/brave_assault.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Energy Eruption",
+      "description": "Fredrinn deals 210( +100% Extra Physical Attack) (Physical Damage) to nearby enemies and taunts them for 1s. Hitting a non-minion enemy grants Fredrinn 15 Physical & Magic Defense for 3s and reduces the cooldowns of (Piercing Strike) and (Brave Assault) by 75%. This skill costs 1 (Combo Point).",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Energy_Eruption",
+      "tips": "As the primary damage source, this skill can deal massive damage to enemies in teamfights.",
+      "iconUrl": "/raw-assets/skill_icons/fredrinn/energy_eruption.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Frontline Engage",
+      "Crowd Control",
+      "Jungle Tempo",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Fredrinn adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Frontline Engage",
+    "Crowd Control",
+    "Jungle Tempo",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

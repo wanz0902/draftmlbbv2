@@ -1,0 +1,291 @@
+{
+  "id": "kimmy",
+  "name": "Kimmy",
+  "heroName": "Kimmy",
+  "role": [
+    "Mage",
+    "Marksman"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane",
+    "Mid Lane"
+  ],
+  "flex_lanes": [
+    "Mid Lane"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 8,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 100,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 245
+  },
+  "skills": {
+    "passive": {
+      "name": "Aerial Dominance",
+      "description": "Kimmy can move and aim in different directions while using her Spray Gun, but she cannot lock onto a specific target. Each Spray Gun attack deals (18% Total Physical Attack) (+24% Total Magic Power) Magic Damage. Hitting enemy heroes/non-hero units restores 6 / 3 Starlium, respectively. At max Satrlium, she continuously consumes it to enhance her Basic Attacks, making them deal (22.5% Total Physical Attack) (+30% Total Magic Power) damage and pierce targets (enhanced Basic Attacks only benefit from 50% Spell Vamp Ratio).\nKimmy can keep moving while shooting and does not benefit from Attack Speed Bonus. Every 1% Attack Speed she gains is converted to 1 Magic Power.\nKimmy's Basic Attacks only deal 60% damage to Turrets.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(18% Total Physical Attack)",
+        "(+24% Total Magic Power)",
+        "(22.5% Total Physical Attack)",
+        "(+30% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Chemist's_Instinct",
+      "tips": "Kimmy is still in movement while using skills. Keep the distance from enemies and attack them at the same time.",
+      "iconUrl": "/raw-assets/skill_icons/kimmy/chemist_s_instinct.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Anti-Grav Thruster",
+      "description": "Kimmy uses her jetpack to take flight, removing and becoming immune to Slow Effects. She can pass through terrain and gains 120% Movement Speed that decays over 1s. During the flight, she fires 4 Chemical Bolts at nearby enemies, each dealing 20 (+25% Total Physical Attack) (+30% Total Magic Power) Magic Damage and slowing them by 50% for 0.5s.\nKimmy does not consume Starlium during flight.",
+      "cooldown": "14.0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+25% Total Physical Attack)",
+        "(+30% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "14.0",
+            "13.0",
+            "12.0",
+            "11.0",
+            "10.0",
+            "9.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Speed Up",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Energy_Transformation",
+      "tips": "Use 1st skill to attack enemies at a long distance. When enemies are around you, attack as many enemies as possible.",
+      "iconUrl": "/raw-assets/skill_icons/kimmy/energy_transformation.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Starlium Beam",
+      "description": "Kimmy fires a Starlium Beam in the target direction that immobilizes enemies in its path and deals 300 (+50% Total Physical Attack) (+60% Total Magic Power) Magic Damage for 1s.\nGain 20 Starlium for each enemy hero hit.",
+      "cooldown": "12.0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Physical Attack)",
+        "(+60% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.6",
+            "11.2",
+            "10.8",
+            "10.4",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "360",
+            "420",
+            "480",
+            "540",
+            "600"
+          ]
+        },
+        {
+          "label": "Energy Regen",
+          "values": [
+            "20",
+            "24",
+            "28",
+            "32",
+            "36",
+            "40"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Chemical_Refinement",
+      "tips": "When chased after by enemies, use 2nd skill to slow them down.",
+      "iconUrl": "/raw-assets/skill_icons/kimmy/chemical_refinement.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Traction Pulse",
+      "description": "Kimmy charges and fires a Traction Pulse in a target direction. Upon hitting an enemy or reaching its max range, it explodes to deal 150 (+45% Total Physical Attack) (+54% Total Magic Power) Magic Damage to nearby enemies and creates a force field that slows enemies within by 50%.\nAfter 1s, the field contracts, pulling all enemy heroes to its center and dealing 15% of their current HP as Magic Damage while slowng them by 50% for 2s. Gain 40 Starlium for each enemy hero hit.",
+      "cooldown": "50.0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+45% Total Physical Attack)",
+        "(+54% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "50.0",
+            "45.0",
+            "40.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "150",
+            "225",
+            "300"
+          ]
+        },
+        {
+          "label": "Current HP Percentage",
+          "values": [
+            "15%",
+            "22.5%",
+            "30%"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "AOE",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Maximum_Charge",
+      "tips": "3rd skill is of long range. When enemies intend to attack you, you can target them in advance; when enemies try to run away, use it to reap them.",
+      "iconUrl": "/raw-assets/skill_icons/kimmy/maximum_charge.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage",
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Kimmy adalah mage dengan kemampuan burst/poke damage dari jarak aman.",
+  "playstyleTags": [
+    "Burst",
+    "Poke"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Zone Control"
+  ],
+  "counterTags": [
+    "Gap Close",
+    "Silence",
+    "Burst"
+  ],
+  "synergyTags": [
+    "Needs Peel",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Zone Control",
+    "Burst Damage",
+    "Objective DPS",
+    "Late Game Carry",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

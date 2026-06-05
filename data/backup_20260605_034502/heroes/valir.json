@@ -1,0 +1,258 @@
+{
+  "id": "valir",
+  "name": "Valir",
+  "heroName": "Valir",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 105,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Ashing",
+      "description": "Valir's skills apply a stack of Ablaze to enemies hit, dealing them Magic Damage equal to 1 (+0.2% Total Magic Power)% of their Max HP per second for 3s.\nAt 3 stacks, the fire detonates, dealing Magic Damage equal to 5 (+1% Total Magic Power)% of the target's Max HP to the enemy and stunning them for 1s (the same target can only be stunned by Valir's skills once every 7s).",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+0.2% Total Magic Power)",
+        "(+1% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ashing"
+    },
+    "skill1": {
+      "name": "Burst Fireball",
+      "description": "Valir launches a fireball that explodes on the first target, dealing 235 (+80% Total Magic Power) Magic Damage and slowing them by 30% for 1s. The lingering flame on the ground will explode after 1s, dealing 118 (+40% Total Magic Power) Magic Damage.\nValir recharges 1 fireball every 9s and can hold up to 2 fireball charges. Hitting an enemy hero or Legend Creep with this skill will immediately restore a fireball charge, while hitting a Minion will restore 4s of the recharge time.\nOnce enhanced by Vengeance Flame, the cast range of Burst Fireball increases by 30%\n|stats1=Skill Cost|stats1_value=45/50/55/60/65/70\n|stats2=Base Damage|stats2_value=235/270/305/340/375/410\n|stats3=Explosion Damage|stats3_value=118/135/153/170/188/205\n|stats4=Skill Recharge Time|stats4_value=9/8.6/8.2/7.8/7.4/7",
+      "cooldown": "1.5",
+      "manaCost": "45",
+      "damageType": "Magic",
+      "scaling": [
+        "(+80% Total Magic Power)",
+        "(+40% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "235",
+            "270",
+            "305",
+            "340",
+            "375",
+            "410"
+          ]
+        },
+        {
+          "label": "Explosion Damage",
+          "values": [
+            "118",
+            "135",
+            "153",
+            "170",
+            "188",
+            "205"
+          ]
+        },
+        {
+          "label": "Skill Recharge Time",
+          "values": [
+            "9",
+            "8.6",
+            "8.2",
+            "7.8",
+            "7.4",
+            "7"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Burst_Fireball"
+    },
+    "skill2": {
+      "name": "Searing Torrent",
+      "description": "Valir unleashes a torrent of flames in the target direction, dealing 200 (+60% Total Magic Power) Magic Damage to enemies hit and knocking them to the end of its path.\nVengeance Flame: The torrent forms a firewall at the end of its path that lasts 4s and deals 100 (+30% Total Magic Power) Magic Damage to nearby enemies per second.\nEnemies hit by the torrent or the firewall are slowed by 25% for 1s.\n|stats1=Cooldown|stats1_value=13.0/12.4/11.8/11.2/10.6/10.0\n|stats2=Skill Cost|stats2_value=75/80/85/90/95/100\n|stats3=Base Damage|stats3_value=200/220/240/260/280/300\n|stats4=Firewall Damage|stats4_value=100/110/120/130/140/150",
+      "cooldown": "13.0",
+      "manaCost": "75",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)",
+        "(+30% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "13.0",
+            "12.4",
+            "11.8",
+            "11.2",
+            "10.6",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "220",
+            "240",
+            "260",
+            "280",
+            "300"
+          ]
+        },
+        {
+          "label": "Firewall Damage",
+          "values": [
+            "100",
+            "110",
+            "120",
+            "130",
+            "140",
+            "150"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Searing_Torrent"
+    },
+    "ultimate": {
+      "name": "Vengeance Flame",
+      "description": "Valir removes all existing debuffs on him, gains 40% Movement Speed that decays over 3s, and conjures 4 Vengeance Flames, enhancing Burst Fireball and Searing Torrent for 9s.\n|stats1=Cooldown|stats1_value=36.0/33.0/30.0\n|stats2=Skill Cost|stats2_value=100/125/150",
+      "cooldown": "36.0",
+      "manaCost": "100",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "36.0",
+            "33.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "100",
+            "125",
+            "150"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Remove CC",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Vengeance_Flame"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

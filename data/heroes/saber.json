@@ -1,0 +1,296 @@
+{
+  "id": "saber",
+  "name": "Saber",
+  "heroName": "Saber",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 118,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.08",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Enemy's Bane",
+      "description": "Saber's attacks reduce enemies' Physical Defense by 3-8 for 5s on hit. This effect stacks up to 5 times.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Debuff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Enemy's_Bane",
+      "tips": "Use Flying Sword to poke enemies as well as to apply passive stacks",
+      "iconUrl": "/raw-assets/skill_icons/saber/enemy_s_bane.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Orbiting Swords",
+      "description": "Saber releases 5 swords that orbit around him and deal 75 (+25% Extra Physical Attack) Physical Damage to nearby enemies on hit. The swords will retract back to him after the duration.\nWhen the swords are active, Saber launches a sword at his target on each attack, dealing 200 (+50% Extra Physical Attack) Physical Damage to the target and 50% damage to enemies along the path (damage reduced to 50% against minions). Each sword attack also reduces the cooldown of Charge by 0.5s.",
+      "cooldown": "10.0",
+      "manaCost": "60",
+      "damageType": "Physical",
+      "scaling": [
+        "(+25% Extra Physical Attack)",
+        "(+50% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "75",
+            "85",
+            "95",
+            "105",
+            "115",
+            "125"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "200",
+            "220",
+            "240",
+            "260",
+            "280",
+            "300"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Orbiting_Swords",
+      "tips": "When standing together with the enemy, using flying sword will deal damage 4 times. You may control the range for long distance poking.",
+      "iconUrl": "/raw-assets/skill_icons/saber/orbiting_swords.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Charge",
+      "description": "Saber dashes in the target direction, dealing 75 (+50% Extra Physical Attack) Physical Damage to enemies along the way while enhancing his next Basic Attack.\nSaber can dash to the target, and his enhanced Basic Attack deals 75 (+120% Total Physical Attack) Physical Damage and slows the target by 60% for 1s.",
+      "cooldown": "7.0",
+      "manaCost": "40",
+      "damageType": "Physical",
+      "scaling": [
+        "(+50% Extra Physical Attack)",
+        "(+120% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "40",
+            "44",
+            "48",
+            "52",
+            "56",
+            "60"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "75",
+            "90",
+            "105",
+            "120",
+            "135",
+            "150"
+          ]
+        },
+        {
+          "label": "Enhanced Damage",
+          "values": [
+            "75",
+            "90",
+            "105",
+            "120",
+            "135",
+            "150"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Charge",
+      "tips": "Initiate with Triple Sweep, leave Charge as a escape, at critical moments use Charge to go through walls",
+      "iconUrl": "/raw-assets/skill_icons/saber/charge.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Triple Sweep",
+      "description": "Saber charges at the target enemy hero, knocking them airborne for 1.2s (unaffected by Resilience) and striking them 3 times over the duration. The first two strikes deal 120 (+80% Extra Physical Attack) Physical Damage each, while the third strike deals 240 (+160% Extra Physical Attack) Physical Damage.",
+      "cooldown": "44.0",
+      "manaCost": "100",
+      "damageType": "Physical",
+      "scaling": [
+        "(+80% Extra Physical Attack)",
+        "(+160% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "44.0",
+            "40.0",
+            "36.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "100",
+            "120",
+            "140"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "120",
+            "170",
+            "220"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "240",
+            "340",
+            "440"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Burst",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Triple_Sweep",
+      "tips": "1. Target low health or squishy enemies, when Triple Sweep is about to end hold down the direction, this will cause you to move forward a step upon landing, then deal 4 times damage with Flying Sword. 2. When being tower dived by the enemy,use Triple Sweep on the enemy that is being attacked by the turret, knocking them up for extra tower hits.",
+      "iconUrl": "/raw-assets/skill_icons/saber/triple_sweep.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Saber adalah assassin dengan kemampuan burst damage dan mobilitas tinggi untuk mengeliminasi target prioritas.",
+  "playstyleTags": [
+    "Burst",
+    "Pickoff"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Early Aggression"
+  ],
+  "counterTags": [
+    "Hard CC",
+    "Group Up",
+    "Vision"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Backline Threat",
+    "Pick-off Specialist",
+    "Jungle Tempo"
+  ],
+  "powerSpikeTags": [
+    "Level 4",
+    "Early-Mid Game"
+  ]
+}

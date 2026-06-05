@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MLBB MPL ID S17 Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark">ML</div>
+                <div>
+                    <h1>MPL ID S17</h1>
+                    <p>Data browser</p>
+                </div>
+            </div>
+
+            <nav class="nav-tabs" aria-label="Dashboard views">
+                <button class="nav-tab active" data-view="matches">Matches</button>
+                <button class="nav-tab" data-view="heroes">Hero Stats</button>
+                <button class="nav-tab" data-view="items">Items</button>
+                <button class="nav-tab" data-view="history">History</button>
+            </nav>
+
+            <div class="filters">
+                <label class="field">
+                    <span>Search</span>
+                    <input id="searchInput" type="search" placeholder="Team, hero, MVP, item, map">
+                </label>
+
+                <label class="field match-only">
+                    <span>Team</span>
+                    <select id="teamFilter"></select>
+                </label>
+
+                <label class="field match-only">
+                    <span>Map</span>
+                    <select id="mapFilter"></select>
+                </label>
+            </div>
+
+            <div class="sidebar-stats">
+                <div>
+                    <strong id="statPrimary">0</strong>
+                    <span id="statPrimaryLabel">matches</span>
+                </div>
+                <div>
+                    <strong id="statSecondary">0</strong>
+                    <span id="statSecondaryLabel">games</span>
+                </div>
+            </div>
+
+            <div id="matchList" class="match-list"></div>
+        </aside>
+
+        <main class="content">
+            <section class="topbar">
+                <div>
+                    <p id="viewEyebrow" class="eyebrow">Match Detail</p>
+                    <h2 id="mainTitle">Loading data...</h2>
+                    <p id="mainMeta" class="muted"></p>
+                </div>
+                <div id="scoreBadge" class="score-badge">0-0</div>
+            </section>
+
+            <section id="summaryBand" class="summary-band">
+                <div id="teamLeft" class="team-summary"></div>
+                <div class="versus">vs</div>
+                <div id="teamRight" class="team-summary right"></div>
+            </section>
+
+            <section id="mainContent" class="main-content"></section>
+        </main>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+{
+  "id": "argus",
+  "name": "Argus",
+  "heroName": "Argus",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP",
+  "lanes": [
+    "EXP",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Warmonger",
+      "description": "When Argus' Meteoric Sword reaches 100 (Malice Energy), he will launch a (Demonic Slash) with his next Basic Attack, dealing 200( +100% Total Physical Attack) (Physical Damage) and recovering 200( +10% Total Physical Attack) HP. This attack ignores 40% of the target's Physical Defense. Argus' Meteoric Sword gains 5 (Malice Energy) per second, and each of his Basic Attacks grants 10 (Malice Energy) (critical strikes grant an additional 5 energy).",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Warmonger",
+      "tips": "-This skill is what helps Argusto be overpowered, especially when low in health. -Gives extra burst of damage. -The more HP that are missing,the faster the rage bar gets filled.",
+      "iconUrl": "/raw-assets/skill_icons/argus/warmonger.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Demonic Grip",
+      "description": "Argus stretches out a demonic hand in the target direction, dealing 125( +60% Extra Physical Attack) (Physical Damage) to the first enemy hero or Creep hit, stunning them for 0.7s, and pulling him and the target towards each other. If no enemy is hit, Argus pulls himself toward the hand's destination instead. (Use Again): Argus dashes and strikes in the target direction, dealing 175( +100% Extra Physical Attack) (Physical Damage) to enemies along the path.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Demonic_Grip",
+      "tips": "-This skill is needs to be usedwell since it greatly helps Argus’ mobility in the battlefield. -Can be used to catch enemyheroes since it inflicts stun and propels Argus towards the enemy hero. -The second activation of thisskill can help you position yourself on your enemy and deal additional damage. -The grapple goes throughterrains, which gives you better a chance of a successful pursuit or retreat.But, if your final travel point is a terrain, you won’t get through the terrainand just bump into it.",
+      "iconUrl": "/raw-assets/skill_icons/argus/demonic_grip.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Meteoric Sword",
+      "description": "After a short delay, Argus thrusts his Meteoric Sword in the target direction, dealing 300( +100% Total Physical Attack) (Physical Damage) to enemies hit (200% damage against minions) and reducing their Movement Speed by 80% for 0.8s. The delay time will decrease as Argus' Attack Speed increases. Enemy heroes or Creeps hit will be (Cursed) for 4s, during which they will leave a Cursed Trail behind. Argus gains 40% Movement Speed while on a Cursed Trail. Argus' Basic Attacks on (Cursed) targets will grant double (Malice Energy). (Meteoric Sword) damage counts as Basic Attack damage and can trigger Attack Effects.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Meteoric_Sword",
+      "tips": "-This skill greatly helps Argus’early game damage and can enhance the whole team’s mobility. -Can be used to quickly killminions and creeps. For best effect in lanes, hit the minions in a straightline. -The skill’s actual AOE and rangeis bigger than you think it is. -It also slows heroes down.",
+      "iconUrl": "/raw-assets/skill_icons/argus/meteoric_sword.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Eternal Evil",
+      "description": "Argus removes all debuffs on himself (except for Suppression) and enters (Eternal Evil) state, gaining (Death Immunity) for 4s. While in this state, 100% of his damage dealt to enemy heroes will be converted into HP for him once the state ends. Leaving the (Eternal Evil) state also resets enemy Turrets' damage increase against Argus.] (Passive:) Permanently increases the recharge of (Malice Energy) by 4 (per second).",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Eternal_Evil",
+      "tips": "-This skill is what makes Argusspecial since it gives 5 seconds of death immunity, full rage bar (Instantdouble attack) and will convert 100% of damage done while the skill is active, intoHP after 5 secs. -Can be used even when stunned,transformed, silenced, airborne or while being pushed/pulled. But, it can’t beused while the other skills are in use. -Can turn the tide of a clashwhen used properly.",
+      "iconUrl": "/raw-assets/skill_icons/argus/eternal_evil.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Argus adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Jungle Tempo",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

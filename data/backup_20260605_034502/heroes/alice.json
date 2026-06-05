@@ -1,0 +1,211 @@
+{
+  "id": "alice",
+  "name": "Alice",
+  "heroName": "Alice",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid",
+  "lanes": [
+    "Mid",
+    "EXP",
+    "Roam",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "EXP",
+    "Roam",
+    "Jungle"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2452,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 114,
+    "physicalDefense": 25,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Crimson Blood Banquet",
+      "description": "When Alice's skills hit, she gains 1 stack(s) of Crimson lasting 4s. Once Crimson reaches 2 stacks, Blood Banquet activates, dealing 25 (+30% Total Magic Power) plus 0.5%-2,5% of the target's Max HP (scales with level) as Magic Damage to nearby units (hitting heroes with skills refreshes the duration) and recovering 10 (+3% Extra Max HP) HP for Alice every 0.5s.\nWhile Blood Banquet is active, Alice gains 8% Movement Speed. Blood Banquet can deal up to 70(+10*Hero Level) Magic Damage to creeps.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+30% Total Magic Power)",
+        "(+3% Extra Max HP)",
+        "(+10*Hero Level)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE",
+        "Heal"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Crimson_Blood_Banquet"
+    },
+    "skill1": {
+      "name": "Crimson Gleam",
+      "description": "Alice fires blood energy forward, dealing 100 (+50% Total Magic Power Magic Damage. Before the blood energy dissipates, this skill can be cast again to activate Scarlet Shadow, allowing Alice to blink to the blood energy's location.\n|stats1=Cooldown|stats1_value=12.0/11.2/10.4/9.6/8.8/8.0\n|stats2=Base Damage|stats2_value=100/120/140/160/180/200",
+      "cooldown": "12.0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.2",
+            "10.4",
+            "9.6",
+            "8.8",
+            "8.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "100",
+            "120",
+            "140",
+            "160",
+            "180",
+            "200"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Crimson_Gleam"
+    },
+    "skill2": {
+      "name": "Doom Waltz",
+      "description": "Alice performs a deadly dance, dealing 350 (+130% Total Magic Power) Magic Damage to nearby enemies and slowing them by 70% for 1s. If Blood Banquet is active at this time, it also scorches enemies, dealing 300% of Blood Banquet's damage and healing Alice for the same amount.\n|stats1=Base Damage|stats1_value=350/390/430/470/510/550",
+      "cooldown": "4.0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+130% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "350",
+            "390",
+            "430",
+            "470",
+            "510",
+            "550"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Slow",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Doom_Waltz"
+    },
+    "ultimate": {
+      "name": "Throne of Ruin",
+      "description": "Alice surrounds herself with blood, gaining Control Immunity and 50% Damage Reduction while slowing herself by 50%. After 1.5s, she descends with force dealing 500 (+150% Total Magic Power) (+20% Extra Max HP) Magic Damage to all enemies in range and immobilizing them for 1s.\nWhile charging her Ultimate, Alice can only use Scarlet Shadow.\n|stats1=Cooldown|stats1_value=60.0/55.0/50.0\n|stats2=Base Damage|stats2_value=500/600/700",
+      "cooldown": "60.0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+150% Total Magic Power)",
+        "(+20% Extra Max HP)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "60.0",
+            "55.0",
+            "50.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "500",
+            "600",
+            "700"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Throne_of_Ruin"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

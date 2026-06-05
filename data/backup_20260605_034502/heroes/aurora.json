@@ -1,0 +1,277 @@
+{
+  "id": "aurora",
+  "name": "Aurora",
+  "heroName": "Aurora",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid",
+  "lanes": [
+    "Mid",
+    "Roam"
+  ],
+  "flex_lanes": [
+    "Roam"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Pride of Ice",
+      "description": "Upon taking fatal damage, Aurora freezes herself for 1.5s, becoming invincible during this time and gradually recovering 30% Max HP. This effect has a 150s cooldown.\nAurora's freeze effects can also affect Turrets.\n|quote=Eternal Standing of The Glacier.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Death Immunity"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Pride_of_Ice"
+    },
+    "skill1": {
+      "name": "Hailstone Blast",
+      "description": "Aurora summons an icy meteorite to strike at the target location, dealing 400 (+90% Total Magic Power) Magic Damage and slowing targets hit by 40% for 1s. Afterward, 5 hailstones fall, each dealing 40 (+10% Total Magic Power) Magic Damage.\n|quote=Howling Blizzard of the North.\n|stats1=Cooldown|stats1_value=6.0/5.6/5.2/4.8/4.4/4.0\n|stats2=Skill Cost|stats2_value=60/65/70/75/80/85\n|stats3=Base Damage|stats3_value=400/460/520/580/640/700\n|stats4=Combo Damage|stats4_value=40/40/40/40/40/40",
+      "cooldown": "6.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+90% Total Magic Power)",
+        "(+10% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "6.0",
+            "5.6",
+            "5.2",
+            "4.8",
+            "4.4",
+            "4.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "400",
+            "460",
+            "520",
+            "580",
+            "640",
+            "700"
+          ]
+        },
+        {
+          "label": "Combo Damage",
+          "values": [
+            "40",
+            "40",
+            "40",
+            "40",
+            "40",
+            "40"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Hailstone_Blast"
+    },
+    "skill2": {
+      "name": "Frosty Breeze",
+      "description": "Aurora blows Frosty Breeze in a fan-shaped area in the target direction, dealing 225 (+75% Total Magic Power) Magic Damage to enemies hit, and creating a frozen area at the far-end of the attack that deals a total of 225 (+75% Total Magic Power) Magic Damage to enemies in the area and freezes them for 1s. This skill gains 0.06 additional freezing duration for every 100 Magic Power.\n|quote=Frigid Frost in the Mountains.\n|stats1=Cooldown|stats1_value=12.0/11.2/10.4/9.6/8.8/8.0\n|stats2=Skill Cost|stats2_value=75/80/85/90/95/100\n|stats3=Base Damage|stats3_value=225/255/285/315/345/375\n|stats4=Sustained Damage|stats4_value=225/255/285/315/345/375",
+      "cooldown": "12.0",
+      "manaCost": "75",
+      "damageType": "Magic",
+      "scaling": [
+        "(+75% Total Magic Power)",
+        "(+75% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.2",
+            "10.4",
+            "9.6",
+            "8.8",
+            "8.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "225",
+            "255",
+            "285",
+            "315",
+            "345",
+            "375"
+          ]
+        },
+        {
+          "label": "Sustained Damage",
+          "values": [
+            "225",
+            "255",
+            "285",
+            "315",
+            "345",
+            "375"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "AOE",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Frosty_Breeze"
+    },
+    "ultimate": {
+      "name": "Frigid Glacier",
+      "description": "Aurora creates a frost path in the target direction, dealing 100 (+40% Total Magic Power) Magic Damage to enemies in the path and reducing their Movement Speed by 80% for 1.2s. The frost path gradually becomes glaciers that spread until reaching their maximum size and shattering, dealing 600 (+150% Total Magic Power) Magic Damage to all enemies in the area and freezing targets for 1s. Every 100 Magic Power that Aurora has will increase the freeze duration by 0.2s.\n|quote=Underflow of the Frozen River.\n|stats1=Cooldown|stats1_value=50.0/45.0/40.0\n|stats2=Skill Cost|stats2_value=140/160/180\n|stats3=Base Damage|stats3_value=100/150/200\n|stats4=AOE Damage|stats4_value=600/900/1200",
+      "cooldown": "50.0",
+      "manaCost": "140",
+      "damageType": "Magic",
+      "scaling": [
+        "(+40% Total Magic Power)",
+        "(+150% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "50.0",
+            "45.0",
+            "40.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "140",
+            "160",
+            "180"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "100",
+            "150",
+            "200"
+          ]
+        },
+        {
+          "label": "AOE Damage",
+          "values": [
+            "600",
+            "900",
+            "1200"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Frigid_Glacier"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

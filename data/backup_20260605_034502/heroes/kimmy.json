@@ -1,0 +1,240 @@
+{
+  "id": "kimmy",
+  "name": "Kimmy",
+  "heroName": "Kimmy",
+  "role": [
+    "Mage",
+    "Marksman"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane",
+    "Mid Lane"
+  ],
+  "flex_lanes": [
+    "Mid Lane"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 8,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 100,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 245
+  },
+  "skills": {
+    "passive": {
+      "name": "Aerial Dominance",
+      "description": "Kimmy can move and aim in different directions while using her Spray Gun, but she cannot lock onto a specific target. Each Spray Gun attack deals (18% Total Physical Attack) (+24% Total Magic Power) Magic Damage. Hitting enemy heroes/non-hero units restores 6 / 3 Starlium, respectively. At max Satrlium, she continuously consumes it to enhance her Basic Attacks, making them deal (22.5% Total Physical Attack) (+30% Total Magic Power) damage and pierce targets (enhanced Basic Attacks only benefit from 50% Spell Vamp Ratio).\nKimmy can keep moving while shooting and does not benefit from Attack Speed Bonus. Every 1% Attack Speed she gains is converted to 1 Magic Power.\nKimmy's Basic Attacks only deal 60% damage to Turrets.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(18% Total Physical Attack)",
+        "(+24% Total Magic Power)",
+        "(22.5% Total Physical Attack)",
+        "(+30% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Aerial_Dominance"
+    },
+    "skill1": {
+      "name": "Anti-Grav Thruster",
+      "description": "Kimmy uses her jetpack to take flight, removing and becoming immune to Slow Effects. She can pass through terrain and gains 120% Movement Speed that decays over 1s. During the flight, she fires 4 Chemical Bolts at nearby enemies, each dealing 20 (+25% Total Physical Attack) (+30% Total Magic Power) Magic Damage and slowing them by 50% for 0.5s.\nKimmy does not consume Starlium during flight.\n|stats1=Cooldown|stats1_value=14.0/13.0/12.0/11.0/10.0/9.0\n|stats2=Base Damage|stats2_value=20/25/30/35/40/45",
+      "cooldown": "14.0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+25% Total Physical Attack)",
+        "(+30% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "14.0",
+            "13.0",
+            "12.0",
+            "11.0",
+            "10.0",
+            "9.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Speed Up",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Anti-Grav_Thruster"
+    },
+    "skill2": {
+      "name": "Starlium Beam",
+      "description": "Kimmy fires a Starlium Beam in the target direction that immobilizes enemies in its path and deals 300 (+50% Total Physical Attack) (+60% Total Magic Power) Magic Damage for 1s.\nGain 20 Starlium for each enemy hero hit.\n|stats1=Cooldown|stats1_value=12.0/11.6/11.2/10.8/10.4/10.0\n|stats2=Base Damage|stats2_value=300/360/420/480/540/600\n|stats3=Energy Regen|stats3_value=20/24/28/32/36/40",
+      "cooldown": "12.0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Physical Attack)",
+        "(+60% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.6",
+            "11.2",
+            "10.8",
+            "10.4",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "360",
+            "420",
+            "480",
+            "540",
+            "600"
+          ]
+        },
+        {
+          "label": "Energy Regen",
+          "values": [
+            "20",
+            "24",
+            "28",
+            "32",
+            "36",
+            "40"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Starlium_Beam"
+    },
+    "ultimate": {
+      "name": "Traction Pulse",
+      "description": "Kimmy charges and fires a Traction Pulse in a target direction. Upon hitting an enemy or reaching its max range, it explodes to deal 150 (+45% Total Physical Attack) (+54% Total Magic Power) Magic Damage to nearby enemies and creates a force field that slows enemies within by 50%.\nAfter 1s, the field contracts, pulling all enemy heroes to its center and dealing 15% of their current HP as Magic Damage while slowng them by 50% for 2s. Gain 40 Starlium for each enemy hero hit.\n|stats1=Cooldown|stats1_value=50.0/45.0/40.0\n|stats2=Base Damage|stats2_value=150/225/300\n|stats3=Current HP Percentage|stats3_value=15%/22.5%/30%",
+      "cooldown": "50.0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+45% Total Physical Attack)",
+        "(+54% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "50.0",
+            "45.0",
+            "40.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "150",
+            "225",
+            "300"
+          ]
+        },
+        {
+          "label": "Current HP Percentage",
+          "values": [
+            "15%",
+            "22.5%",
+            "30%"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "AOE",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Traction_Pulse"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage",
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "id": "esmeralda",
+  "name": "Esmeralda",
+  "heroName": "Esmeralda",
+  "role": [
+    "Mage",
+    "Tank"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "EXP",
+  "lanes": [
+    "EXP",
+    "Mid",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Mid",
+    "Jungle"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Starmoon Casket",
+      "description": "Esmeralda manipulates Stardust and Frostmoon: Stardust deals Physical Damage while Frostmoon deals Magic Damage and gives the target a shield equal to 135% of Frostmoon's damage dealt. Each Basic Attack deals ( +100% Total Physical Attack) (Physical Damage) and 100( +75% Total Magic Power) (Magic Damage). The damage dealt by Esmeralda ignores all shield effects and gradually converts her shield into HP.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Starmoon_Casket",
+      "tips": "With Passive, Esmeralda deals more damage than any other hero. However, it also provides her enemies with shield effects. Relying on Frostmoon to quickly transform the enemy's shield to herself is the key point of using Esmeralda.",
+      "iconUrl": "/raw-assets/skill_icons/esmeralda/starmoon_casket.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Frostmoon Shield",
+      "description": "Esmeralda gains 400( +150% Total Magic Power) Shield and 40% Movement Speed which rapidly decays over its duration for 4s. Meanwhile, she gradually transforms the shields of her nearby enemies into her own shield, capped at 50% of her Max HP.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Frostmoon_Shield",
+      "tips": "This skill will last for a while. Since Frostmoon causes damage and also provides shields for enemies, it will deal damage to the enemies continuously. Esmeralda transforms shield from enemies to help herself survive. This skill is the key for Esmeralda to take huge amounts of damage.",
+      "iconUrl": "/raw-assets/skill_icons/esmeralda/frostmoon_shield.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Stardust Dance",
+      "description": "Esmeralda waves Stardust and Frostmoon, dealing 240( +60% Total Physical Attack) (Physical Damage) and 300( +120% Total Magic Power) (Magic Damage) to nearby enemies. Each time she deals damage to a hero, the cooldown of (Frostmoon Shield) is reduced by 1.5s (damaging non-hero units grants a 0.5s reduction) and the enemy's Movement Speed is reduced by 10% for 1.5s.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Stardust_Dance",
+      "tips": "This is her main damage dealing skill, causing a lot of damage while also reducing the cooldown of Frostmoon Shield. Cast Stardust Dance after Frostmoon Shield and it would be easier to survive.",
+      "iconUrl": "/raw-assets/skill_icons/esmeralda/stardust_dance.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Falling Starmoon",
+      "description": "Esmeralda coheres the power of Astrospace into her two weapons - Stardust and Frostmoon. The longer this skill is channeled, the longer the cast range. (Use Again): Esmeralda casts Stardust at the target location, dealing 350( +90% Total Physical Attack) (Physical Damage), and then blinks to the target location and casts Frostmoon, dealing 350( +140% Total Magic Power) (Magic Damage) and immobilizing enemies in the area for 1s.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Falling_Starmoon",
+      "tips": "This skill provides the most important ability to get enrolled in battles, where it will also cause a temporary effect of control on enemies. Choosing the right time to take moves can change the final outcome of a teamfight.",
+      "iconUrl": "/raw-assets/skill_icons/esmeralda/falling_starmoon.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Zone Control",
+      "Burst Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Esmeralda adalah mage dengan kemampuan burst/poke damage dari jarak aman.",
+  "playstyleTags": [
+    "Burst",
+    "Frontline"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Zone Control",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Gap Close",
+    "Silence",
+    "Burst"
+  ],
+  "synergyTags": [
+    "Needs Peel",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "Zone Control",
+    "Burst Damage",
+    "Jungle Tempo",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

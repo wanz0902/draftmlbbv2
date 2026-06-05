@@ -1,0 +1,220 @@
+{
+  "id": "minsitthar",
+  "name": "Minsitthar",
+  "heroName": "Minsitthar",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Mark of the King",
+      "description": "Minsitthar's Basic Attacks and skills apply a stack of (Mark of the King), up to 5 stacks. Upon reaching max stacks, the next attack detonates all (Mark of the King) stacks, dealing (Physical Damage) equal to 300( +6% Total HP) of Minsitthar's Max HP and stunning the target for 0.8s while healing Minsitthar for 300( +6% Total HP) HP. Can only trigger once every 6s on the same target.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mark_of_the_King",
+      "tips": "With this passive, Minsithar can perform more ganks with his teammates without the worry of his farming falling behind.",
+      "iconUrl": "/raw-assets/skill_icons/minsitthar/mark_of_the_king.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Spear of Glory",
+      "description": "Minsitthar thrusts forward with the Spear of Glory, dealing 175( +200% Extra Physical Attack) (Physical Damage) and slowing enemies hit by 30%. Enemy heroes hit by the tip of the spear will be stunned for 0.6s. After a short delay, Minsitthar pulls back the spear, dealing 175( +200% Extra Physical Attack) (Physical Damage) to all enemies along the way and dragging enemy heroes hit to him.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spear_of_Glory",
+      "tips": "Try to better use this skill and pull back the back-line heroes who are easy to slay even when they're hiding behind the tanks.",
+      "iconUrl": "/raw-assets/skill_icons/minsitthar/spear_of_glory.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Shield Assault",
+      "description": "Minsitthar awakens the power in his shield and releases it, dealing 300( +180% Extra Physical Attack) (Physical Damage) to all enemies in a rectangular area and slowing them by 80% (decaying rapidly over 2s). Meanwhile, he enters (Phalanx) state for 3s, reducing damage taken from the front by 25% and enhancing his Basic Attack to swiftly strike an area in front of him.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Shield_Assault",
+      "tips": "The range of this skill is not too wide so better use it together with his 1st Skill, and by doing so the hit rate will be increased.",
+      "iconUrl": "/raw-assets/skill_icons/minsitthar/shield_assault.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "King's Calling",
+      "description": "Minsitthar charges forward and calls 4 Royal Guards to form a field around him. The Royal Guards cannot move but will attack enemies in the field and deal ( +40% Total Physical Attack) (Physical Damage) to them. Enemies in the field are slowed by 20% and cannot use movement skills.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "King's_Calling",
+      "tips": "Use the Ult directly when a teamfight with fewer than 3 players occurs. When facing more enemies, use \"Spear of Glory\" first and fast slay an ememy hero to increase the chances of winning the teamfight.",
+      "iconUrl": "/raw-assets/skill_icons/minsitthar/king_s_calling.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Minsitthar adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Splitpush Threat",
+    "CC Coverage",
+    "Counter Pick"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

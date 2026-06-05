@@ -1,0 +1,230 @@
+{
+  "id": "balmond",
+  "name": "Balmond",
+  "heroName": "Balmond",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle",
+    "EXP"
+  ],
+  "flex_lanes": [
+    "EXP"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2558,
+    "hpRegen": 9,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 119,
+    "physicalDefense": 25,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.06",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Bloodthirst",
+      "description": "Balmond recovers 5% Max HP after killing a Minion or Creep, and 20% Max HP after killing a hero.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Heal"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Bloodthirst"
+    },
+    "skill1": {
+      "name": "Soul Lock",
+      "description": "Balmond charges in the target direction for a set distance or until he hits an enemy hero, dealing 150 (+60% Total Physical Attack) Physical Damage to enemies along the way. The enemy hero hit will be knocked back slightly, and will have their Movement Speed reduced by 40% and Physical Defense reduced by 40% for 3s.",
+      "cooldown": "8.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+60% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.0",
+            "7.6",
+            "7.2",
+            "6.8",
+            "6.4",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "150",
+            "175",
+            "200",
+            "225",
+            "250",
+            "275"
+          ]
+        },
+        {
+          "label": "Physical Defense Reduction",
+          "values": [
+            "40%",
+            "40%",
+            "40%",
+            "40%",
+            "40%",
+            "40%"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Mobility",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Soul_Lock"
+    },
+    "skill2": {
+      "name": "Cyclone Sweep",
+      "description": "Balmond gains 15% Movement Speed that decays over time and spins with his axe for 3s, dealing 25 (+2% Extra Max HP) (+25% Total Physical Attack) Physical Damage per hit to nearby enemies up to 14 times. Each subsequent hit on the same enemy will deal 8.5% increased damage (up to 68%).\nThe Physical Attack bonus portion of the damage can Crit.",
+      "cooldown": "6.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+2% Extra Max HP)",
+        "(+25% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50"
+          ]
+        },
+        {
+          "label": "Max Damage",
+          "values": [
+            "350",
+            "490",
+            "630",
+            "770",
+            "910",
+            "1050"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Cyclone_Sweep"
+    },
+    "ultimate": {
+      "name": "Lethal Counter",
+      "description": "Balmond unleashes a huge strike in the target direction (this skill can only be interrupted by Suppression), dealing True Damage equal to 150 (+70% Total Physical Attack) plus 30% of the target's lost HP.\nThis skill only deals up to 1000 damage to non-hero units.",
+      "cooldown": "34.0",
+      "manaCost": "0",
+      "damageType": "True",
+      "scaling": [
+        "(+70% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "34.0",
+            "29.0",
+            "24.0"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "30%",
+            "37.5%",
+            "45%"
+          ]
+        },
+        {
+          "label": "Non-Hero Unit Damage Cap",
+          "values": [
+            "1000",
+            "1500",
+            "2000"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Lethal_Counter"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "id": "moskov",
+  "name": "Moskov",
+  "heroName": "Moskov",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Spear of Quiescence",
+      "description": "Moskov's Basic Attacks can penetrate the target and deal ( +68% Total Physical Attack)-( +110% Total Physical Attack) (Physical Damage) to enemies behind them (inherits Attack Effects). Each Basic Attack hit reduces the cooldowns of (Abyss Walker) and (Spear of Misery) by 0.8s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spear_of_Quiescence",
+      "tips": "On a team clash always keep an eye where enemy heroes will be closer to each other or they align on a perpendicular manner, this will give more advantage for you since you can take hits on them and share the damage.",
+      "iconUrl": "/raw-assets/skill_icons/moskov/spear_of_quiescence.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Abyss Walker",
+      "description": "Moskov teleports to the target location, increasing his Attack Speed to 1.15 times for 3s. Meanwhile, his Basic Attack deals 10% more damage to enemies behind the primary target.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Abyss_Walker",
+      "tips": "when using this on Initiating an attack constalnly use this to reposition yourself, since its very vital for moskov to change his angle for better damage output by taking advantage his passive and on his other abilities, this will give you higher survivability specially on team clash where he needs to be at the back and give him a good space to launch his attacks.",
+      "iconUrl": "/raw-assets/skill_icons/moskov/abyss_walker.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Spear of Misery",
+      "description": "Moskov launches a powerful strike at the target enemy hero or Creep, dealing 300( +60% Total Physical Attack) (Physical Damage), knocking them back, and revealing their position for 5s. If the target collides with an enemy hero when knocked back, they'll both take 200( +30% Total Physical Attack) (Physical Damage) and be stunned for 1.5s. If the enemy is knocked into a wall, they will also be stunned for the same duration.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spear_of_Misery",
+      "tips": "You can also use this skill to push enemy away from to their tower, just use your first skill to teleport at the back on your enemy and then use your second skill to push him away from the tower, just be aware that this act is very dangerous since you will get closer to the tower.",
+      "iconUrl": "/raw-assets/skill_icons/moskov/spear_of_misery.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Spear of Destruction",
+      "description": "After a short delay, Moskov throws the (Spear of Destruction) in the target direction, dealing 340( +100% Total Physical Attack) (Physical Damage) to enemies in its path and to the first enemy hero hit. Upon hitting an enemy hero, the spear pierces them, dealing 10% extra (Physical Damage) to enemies behind them. The target and enemies hit by the piercing damage will be slowed by 50% for 1s (the slow duration scales with the spear's travel time, up to 3s). When (Spear of Destruction) hits the first enemy hero, it creates a shadow behind them and refreshes the cooldown of (Abyss Walker). (Use Again): Moskov casts (Abyss Walker) from the shadow's location (shares the same cooldown as the skill).",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spear_of_Destruction",
+      "tips": "Keep an eye on the minimap and check if there's a clash just be aware if there is an enemy with a low health you can easily finish him off by using this ability, you can use this by mannual targeting you will see an indicator or marking which you will see it on the minimap this will greatly help you to estimate and use this ability.",
+      "iconUrl": "/raw-assets/skill_icons/moskov/spear_of_destruction.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Moskov adalah marksman dengan DPS tinggi yang menjadi win condition utama di late game.",
+  "playstyleTags": [
+    "DPS"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Late Game Insurance",
+    "Snowball Potential"
+  ],
+  "counterTags": [
+    "Dive",
+    "Burst",
+    "Flank"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Needs Peel"
+  ],
+  "macroTags": [
+    "Objective DPS",
+    "Late Game Carry",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

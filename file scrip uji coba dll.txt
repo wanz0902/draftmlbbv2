@@ -1,0 +1,7298 @@
+[
+  {
+    "match": "Bigetron by Vitality vs Alter Ego",
+    "blueTeam": "Bigetron by Vitality",
+    "redTeam": "Alter Ego",
+    "date": "March 27, 2026",
+    "mvp": "EMANNBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Bigetron by Vitality",
+        "score": "1-0",
+        "duration": "15:45",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Yve",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Fredrinn",
+            "Lylia",
+            "Granger",
+            "Khaleed",
+            "Suyou"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Uranus",
+            "Valentina",
+            "Yi Sun-shin",
+            "Hylos"
+          ],
+          "bans": [
+            "Zetian",
+            "Obsidia",
+            "Marcel",
+            "Freya",
+            "Lapu-Lapu"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Bigetron by Vitality",
+        "score": "2-0",
+        "duration": "13:57",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Sora",
+            "Fredrinn",
+            "Lylia",
+            "Granger",
+            "Khaleed"
+          ],
+          "bans": [
+            "Guinevere",
+            "Chou",
+            "Baxia",
+            "Fanny",
+            "Zhuxin"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zetian",
+            "Obsidia",
+            "Marcel"
+          ],
+          "bans": [
+            "Kalea",
+            "Harith",
+            "Chip",
+            "Harley",
+            "Grock"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Bigetron by Vitality",
+        "score": "3-0",
+        "duration": "20:59",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Lapu-Lapu",
+            "Guinevere",
+            "Valentina",
+            "Yi Sun-shin",
+            "Chou"
+          ],
+          "bans": [
+            "Esmeralda"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Yve",
+            "Freya",
+            "Hylos"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Natus Vincere vs RRQ Hoshi",
+    "blueTeam": "Natus Vincere",
+    "redTeam": "RRQ Hoshi",
+    "date": "March 27, 2026",
+    "mvp": "XyveBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Natus Vincere",
+        "score": "1-0",
+        "duration": "14:23",
+        "map": "",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Faramis",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Phoveus",
+            "Harley",
+            "Lylia",
+            "Yi Sun-shin",
+            "Belerick"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Uranus",
+            "Fredrinn",
+            "Zetian",
+            "Obsidia",
+            "Khaleed"
+          ],
+          "bans": [
+            "Alice",
+            "Valentina",
+            "Claude",
+            "Yve",
+            "Guinevere"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Natus Vincere",
+        "score": "2-0",
+        "duration": "15:28",
+        "map": "",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Alice",
+            "Leomord",
+            "Valentina",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Baxia",
+            "Zhuxin",
+            "Freya",
+            "Sora",
+            "Esmeralda"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Lylia",
+            "Yi Sun-shin",
+            "Belerick"
+          ],
+          "bans": [
+            "Grock",
+            "Kalea"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs Geek Fam ID",
+    "blueTeam": "EVOS",
+    "redTeam": "Geek Fam ID",
+    "date": "March 28, 2026",
+    "mvp": "AlbertBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "1-0",
+        "duration": "14:20",
+        "map": "",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Masha",
+            "Fredrinn",
+            "Pharsa",
+            "Granger",
+            "Chip"
+          ],
+          "bans": [
+            "Valentina",
+            "Fanny",
+            "Selena",
+            "Gatotkaca",
+            "Cici"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "X.Borg",
+            "Suyou",
+            "Zetian",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Kimmy",
+            "Sora",
+            "Helcurt",
+            "Phoveus",
+            "Baxia"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "2-0",
+        "duration": "15:34",
+        "map": "",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Valentina",
+            "Fanny",
+            "Selena",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Leomord",
+            "Zhuxin",
+            "Freya",
+            "Harith",
+            "Kalea"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Cici",
+            "Fredrinn",
+            "Kimmy",
+            "Sora",
+            "Hilda"
+          ],
+          "bans": [
+            "Chou",
+            "Khufra",
+            "Philippines"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Alter Ego vs ONIC",
+    "blueTeam": "Alter Ego",
+    "redTeam": "ONIC",
+    "date": "March 28, 2026",
+    "mvp": "KelraBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Alter Ego",
+        "score": "1-0",
+        "duration": "13:55",
+        "map": "",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Pharsa",
+            "Yi Sun-shin",
+            "Chou"
+          ],
+          "bans": [
+            "Suyou",
+            "Joy",
+            "Zetian",
+            "Khaleed",
+            "Lapu-Lapu"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Lukas",
+            "Fredrinn",
+            "Yve",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Harley",
+            "Gord",
+            "Zhuxin",
+            "Kalea",
+            "Freya"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Alter Ego",
+        "score": "2-0",
+        "duration": "16:05",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Gord",
+            "Yi Sun-shin",
+            "Chou"
+          ],
+          "bans": [
+            "Harith",
+            "Karrie",
+            "Baxia",
+            "Fanny",
+            "Valentina"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Suyou",
+            "Joy",
+            "Zetian",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Phoveus",
+            "Lylia",
+            "Arlott",
+            "Uranus"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Team Liquid ID vs Natus Vincere",
+    "blueTeam": "Team Liquid ID",
+    "redTeam": "Natus Vincere",
+    "date": "March 28, 2026",
+    "mvp": "KyouBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Team Liquid ID",
+        "score": "1-0",
+        "duration": "23:07",
+        "map": "",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Phoveus",
+            "Lukas",
+            "Zhuxin",
+            "Karrie",
+            "Gloo"
+          ],
+          "bans": [
+            "Benedetta",
+            "Fredrinn",
+            "Chip",
+            "Yi Sun-shin",
+            "Yve"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Sora",
+            "Hayabusa",
+            "Lylia",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": [
+            "Zetian",
+            "Moskov",
+            "Esmeralda",
+            "Suyou",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Team Liquid ID",
+        "score": "2-0",
+        "duration": "22:20",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Sora",
+            "Yi Sun-shin",
+            "Yve",
+            "Freya",
+            "Gloo"
+          ],
+          "bans": [
+            "Leomord",
+            "Guinevere",
+            "Kalea",
+            "Harley",
+            "Fanny"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Benedetta",
+            "Fredrinn",
+            "Zhuxin",
+            "Karrie",
+            "Chip"
+          ],
+          "bans": [
+            "Baxia",
+            "Hilda",
+            "Chou",
+            "Mathilda",
+            "Arlott"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Team Liquid ID",
+        "score": "3-0",
+        "duration": "18:32",
+        "map": "",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Freya",
+            "Fredrinn",
+            "Zetian",
+            "Moskov",
+            "Gloo"
+          ],
+          "bans": [
+            "Cici",
+            "Uranus"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Esmeralda",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Dewa United vs Bigetron by Vitality",
+    "blueTeam": "Dewa United",
+    "redTeam": "Bigetron by Vitality",
+    "date": "March 29, 2026",
+    "mvp": "MuezzaBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Dewa United",
+        "score": "1-0",
+        "duration": "15:13",
+        "map": "",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Arlott",
+            "Fanny",
+            "Pharsa",
+            "Freya",
+            "Guinevere"
+          ],
+          "bans": [
+            "Claude",
+            "Gloo",
+            "Lancelot",
+            "Zetian",
+            "Hylos"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Valentina",
+            "Yi Sun-shin",
+            "Badang"
+          ],
+          "bans": [
+            "Kalea",
+            "Yve",
+            "Phoveus",
+            "Moskov",
+            "Fredrinn"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Dewa United",
+        "score": "2-0",
+        "duration": "16:19",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Sora",
+            "Lancelot",
+            "Zetian",
+            "Yi Sun-shin",
+            "Hylos"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Baxia",
+            "Hilda",
+            "Chou",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Arlott",
+            "Guinevere",
+            "Pharsa",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Yu Zhong",
+            "Uranus",
+            "Grock",
+            "Philippines"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs Team Liquid ID",
+    "blueTeam": "EVOS",
+    "redTeam": "Team Liquid ID",
+    "date": "March 29, 2026",
+    "mvp": "AranBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "1-0",
+        "duration": "15:15",
+        "map": "",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Gloo",
+            "Fanny",
+            "Selena",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Valentina",
+            "Suyou",
+            "Kimmy",
+            "Cici",
+            "Chou"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Yu Zhong",
+            "Leomord",
+            "Zhuxin",
+            "Moskov",
+            "Hilda"
+          ],
+          "bans": [
+            "Sora",
+            "Fredrinn",
+            "Yve",
+            "Karrie",
+            "Phoveus"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "2-0",
+        "duration": "14:15",
+        "map": "",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Sora",
+            "Fredrinn",
+            "Yve",
+            "Karrie",
+            "Gloo"
+          ],
+          "bans": [
+            "Freya",
+            "Kalea",
+            "Arlott",
+            "Khufra",
+            "Masha"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Valentina",
+            "Suyou",
+            "Kimmy",
+            "Cici",
+            "Chou"
+          ],
+          "bans": [
+            "Guinevere",
+            "Granger",
+            "Harley",
+            "Philippines"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ Hoshi vs ONIC",
+    "blueTeam": "RRQ Hoshi",
+    "redTeam": "ONIC",
+    "date": "March 29, 2026",
+    "mvp": "KelraBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "RRQ Hoshi",
+        "score": "1-0",
+        "duration": "15:23",
+        "map": "",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Yu Zhong",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Badang"
+          ],
+          "bans": [
+            "Phoveus",
+            "Lylia",
+            "Karrie",
+            "Kalea",
+            "Sora"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Uranus",
+            "Harley",
+            "Zetian",
+            "Bruno",
+            "Grock"
+          ],
+          "bans": [
+            "Guinevere",
+            "Yve",
+            "Granger",
+            "Gatotkaca",
+            "Freya"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "RRQ Hoshi",
+        "score": "2-0",
+        "duration": "12:15",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Yve",
+            "Granger",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Yi Sun-shin",
+            "Chou",
+            "Khaleed",
+            "Fanny",
+            "Baxia"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Lylia",
+            "Karrie",
+            "Kalea"
+          ],
+          "bans": [
+            "Claude",
+            "Moskov",
+            "Joy",
+            "Valentina",
+            "Pharsa"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs Geek Fam ID",
+    "blueTeam": "ONIC",
+    "redTeam": "Geek Fam ID",
+    "date": "April 3, 2026",
+    "mvp": "KairiBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "15:11",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Baxia",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Karrie",
+            "Gatotkaca",
+            "Freya",
+            "Leomord",
+            "Masha"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zetian",
+            "Cici",
+            "Helcurt"
+          ],
+          "bans": [
+            "Chip",
+            "Kalea",
+            "Marcel",
+            "Hilda",
+            "Chou"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "11:07",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Freya",
+            "Leomord",
+            "Zetian",
+            "Masha",
+            "Chip"
+          ],
+          "bans": [
+            "Harith",
+            "Fanny",
+            "Valentina",
+            "Arlott",
+            "Yu Zhong"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Karrie",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Yve",
+            "Guinevere",
+            "Fredrinn",
+            "Malaysia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Dewa United vs Natus Vincere",
+    "blueTeam": "Dewa United",
+    "redTeam": "Natus Vincere",
+    "date": "April 3, 2026",
+    "mvp": "MuezzaBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Dewa United",
+        "score": "1-0",
+        "duration": "18:35",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Valentina",
+            "Baxia",
+            "Zetian",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Suyou",
+            "Lunox",
+            "Freya",
+            "Benedetta",
+            "Leomord"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Uranus",
+            "Guinevere",
+            "Pharsa",
+            "Karrie",
+            "Chou"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Esmeralda",
+            "Khaleed",
+            "Yve",
+            "Phoveus"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Dewa United",
+        "score": "2-0",
+        "duration": "19:09",
+        "map": "",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Benedetta",
+            "Leomord",
+            "Zhuxin",
+            "Esmeralda",
+            "Khaleed"
+          ],
+          "bans": [
+            "Marcel",
+            "Yi Sun-shin",
+            "Hayabusa",
+            "Fanny",
+            "Gatotkaca"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Valentina",
+            "Suyou",
+            "Lunox",
+            "Freya",
+            "Gloo"
+          ],
+          "bans": [
+            "Helcurt",
+            "Harith",
+            "Harley",
+            "Fredrinn"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Geek Fam ID vs Bigetron by Vitality",
+    "blueTeam": "Geek Fam ID",
+    "redTeam": "Bigetron by Vitality",
+    "date": "April 4, 2026",
+    "mvp": "MarceLBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Geek Fam ID",
+        "score": "1-0",
+        "duration": "20:22",
+        "map": "",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Zhuxin",
+            "Cici",
+            "Gloo"
+          ],
+          "bans": [
+            "Granger",
+            "Gatotkaca",
+            "Lapu-Lapu",
+            "Harley",
+            "Yve"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Zetian",
+            "Yi Sun-shin",
+            "Atlas"
+          ],
+          "bans": [
+            "Hylos",
+            "Fanny",
+            "Valentina",
+            "Khaleed",
+            "Claude"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Geek Fam ID",
+        "score": "2-0",
+        "duration": "15:20",
+        "map": "",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Yve",
+            "Yi Sun-shin",
+            "Hylos"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Phoveus",
+            "Joy",
+            "Kalea"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Zhuxin",
+            "Granger",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Badang",
+            "Helcurt",
+            "Chip"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Alter Ego vs EVOS",
+    "blueTeam": "Alter Ego",
+    "redTeam": "EVOS",
+    "date": "April 4, 2026",
+    "mvp": "ArfyBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Alter Ego",
+        "score": "1-0",
+        "duration": "16:35",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Uranus",
+            "Harley",
+            "Yve",
+            "Freya",
+            "Grock"
+          ],
+          "bans": [
+            "Fanny",
+            "Granger",
+            "Gatotkaca",
+            "Suyou",
+            "Kalea"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Cici",
+            "Baxia",
+            "Obsidia",
+            "Chou",
+            "Lylia"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Alter Ego",
+        "score": "2-0",
+        "duration": "19:03",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Freya",
+            "Fanny",
+            "Yve",
+            "Granger",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Karrie",
+            "Masha",
+            "Phoveus",
+            "Guinevere",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Valentina",
+            "Khaleed",
+            "Hilda",
+            "Arlott"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Alter Ego",
+        "score": "3-0",
+        "duration": "18:53",
+        "map": "",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Cici",
+            "Baxia",
+            "Zhuxin",
+            "Obsidia",
+            "Chou"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Lylia",
+            "Karrie",
+            "Gatotkaca"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Team Liquid ID vs Dewa United",
+    "blueTeam": "Team Liquid ID",
+    "redTeam": "Dewa United",
+    "date": "April 4, 2026",
+    "mvp": "LyoniBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Team Liquid ID",
+        "score": "1-0",
+        "duration": "11:54",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Valentina",
+            "Baxia",
+            "Pharsa",
+            "Claude",
+            "Badang"
+          ],
+          "bans": [
+            "Edith",
+            "Zetian",
+            "Freya",
+            "Gloo",
+            "Phoveus"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Masha",
+            "Fredrinn",
+            "Yve",
+            "Karrie",
+            "Chip"
+          ],
+          "bans": [
+            "Kimmy",
+            "Zhuxin",
+            "Harith",
+            "Sora",
+            "Uranus"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Team Liquid ID",
+        "score": "2-0",
+        "duration": "15:24",
+        "map": "",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Phoveus",
+            "Baxia",
+            "Kimmy",
+            "Karrie",
+            "Zhuxin"
+          ],
+          "bans": [
+            "Guinevere",
+            "Kalea",
+            "Arlott",
+            "Marcel",
+            "Fanny"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Edith",
+            "Fredrinn",
+            "Zetian",
+            "Freya",
+            "Gloo"
+          ],
+          "bans": [
+            "Lunox",
+            "Khaleed",
+            "Moskov",
+            "Chou",
+            "Philippines"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Team Liquid ID",
+        "score": "3-0",
+        "duration": "16:05",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Sora",
+            "Uranus",
+            "Valentina",
+            "Karrie",
+            "Zhuxin"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Freya",
+            "Fredrinn",
+            "Yve",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Natus Vincere vs Alter Ego",
+    "blueTeam": "Natus Vincere",
+    "redTeam": "Alter Ego",
+    "date": "April 5, 2026",
+    "mvp": "YazukeeBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Natus Vincere",
+        "score": "1-0",
+        "duration": "17:25",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Zhuxin",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Arlott",
+            "Uranus",
+            "Obsidia",
+            "Gatotkaca",
+            "Odette"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Moskov",
+            "Gloo"
+          ],
+          "bans": [
+            "Kalea",
+            "Phoveus",
+            "Fanny",
+            "Valentina",
+            "Hilda"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Natus Vincere",
+        "score": "2-0",
+        "duration": "14:10",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Arlott",
+            "Harley",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Freya",
+            "Guinevere",
+            "Baxia",
+            "Marcel",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Moskov",
+            "Chou"
+          ],
+          "bans": [
+            "Khaleed",
+            "Alice",
+            "Lunox",
+            "Zetian",
+            "Yi Sun-shin"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Natus Vincere",
+        "score": "3-0",
+        "duration": "19:19",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Zhuxin",
+            "Obsidia",
+            "Gatotkaca"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Odette",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ Hoshi vs Team Liquid ID",
+    "blueTeam": "RRQ Hoshi",
+    "redTeam": "Team Liquid ID",
+    "date": "April 5, 2026",
+    "mvp": "LyoniBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "RRQ Hoshi",
+        "score": "1-0",
+        "duration": "13:39",
+        "map": "",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Selena",
+            "Yi Sun-shin",
+            "Marcel"
+          ],
+          "bans": [
+            "Sora",
+            "Gusion",
+            "Grock",
+            "Masha",
+            "Fredrinn"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Valentina",
+            "Moskov",
+            "Gloo"
+          ],
+          "bans": [
+            "Yve",
+            "Karrie",
+            "Chip",
+            "Fanny",
+            "Zhuxin"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "RRQ Hoshi",
+        "score": "2-0",
+        "duration": "18:01",
+        "map": "",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Masha",
+            "Fredrinn",
+            "Yve",
+            "Karrie",
+            "Chip"
+          ],
+          "bans": [
+            "Uranus",
+            "Harith",
+            "Kalea",
+            "Guinevere",
+            "Freya"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Sora",
+            "Gusion",
+            "Valentina",
+            "Yi Sun-shin",
+            "Grock"
+          ],
+          "bans": [
+            "Baxia",
+            "Cici",
+            "Zetian",
+            "X.Borg"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Bigetron by Vitality vs EVOS",
+    "blueTeam": "Bigetron by Vitality",
+    "redTeam": "EVOS",
+    "date": "April 5, 2026",
+    "mvp": "MorenoBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Bigetron by Vitality",
+        "score": "1-0",
+        "duration": "18:04",
+        "map": "",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Alice",
+            "Leomord",
+            "Zhuxin",
+            "Irithel",
+            "Khaleed"
+          ],
+          "bans": [
+            "Arlott",
+            "Guinevere",
+            "Pharsa",
+            "Grock",
+            "Fredrinn"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Lapu-Lapu",
+            "Yi Sun-shin",
+            "Yve",
+            "Freya",
+            "Chip"
+          ],
+          "bans": [
+            "Zetian",
+            "Granger",
+            "Gloo",
+            "Sora",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Bigetron by Vitality",
+        "score": "2-0",
+        "duration": "14:54",
+        "map": "",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Lapu-Lapu",
+            "Fredrinn",
+            "Zetian",
+            "Granger",
+            "Gloo"
+          ],
+          "bans": [
+            "Cici",
+            "Harley",
+            "Obsidia",
+            "Masha",
+            "Suyou"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Arlott",
+            "Guinevere",
+            "Pharsa",
+            "Yi Sun-shin",
+            "Grock"
+          ],
+          "bans": [
+            "Fanny",
+            "Baxia",
+            "Marcel",
+            "Claude",
+            "Phoveus"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Bigetron by Vitality",
+        "score": "3-0",
+        "duration": "17:47",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Cici",
+            "Harley",
+            "Zhuxin",
+            "Obsidia",
+            "Khaleed"
+          ],
+          "bans": [
+            "Kalea",
+            "Valentina",
+            "Karrie"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Pharsa",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs Dewa United",
+    "blueTeam": "ONIC",
+    "redTeam": "Dewa United",
+    "date": "April 10, 2026",
+    "mvp": "S",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "15:16",
+        "map": "",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Baxia",
+            "Yve",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Phoveus",
+            "Fredrinn",
+            "Vexana",
+            "Marcel",
+            "Valentina"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Arlott",
+            "Guinevere",
+            "Pharsa",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Suyou",
+            "Lylia",
+            "Granger",
+            "Yu Zhong",
+            "Lancelot"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "15:34",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Valentina",
+            "Suyou",
+            "Lylia",
+            "Granger",
+            "Gloo"
+          ],
+          "bans": [
+            "Zetian",
+            "Obsidia",
+            "Odette",
+            "Harith",
+            "Fanny"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Phoveus",
+            "Fredrinn",
+            "Vexana",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Karrie",
+            "Grock",
+            "Zhuxin",
+            "Freya",
+            "Kalea"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "ONIC",
+        "score": "3-0",
+        "duration": "13:48",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Yu Zhong",
+            "Lancelot",
+            "Zetian",
+            "Obsidia",
+            "Marcel"
+          ],
+          "bans": [
+            "Chou",
+            "Harley"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Valentina",
+            "Suyou",
+            "Odette",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Natus Vincere vs EVOS",
+    "blueTeam": "Natus Vincere",
+    "redTeam": "EVOS",
+    "date": "April 10, 2026",
+    "mvp": "AlbertBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Natus Vincere",
+        "score": "1-0",
+        "duration": "18:10",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Granger",
+            "Khaleed"
+          ],
+          "bans": [
+            "Lapu-Lapu",
+            "Gatotkaca",
+            "Leomord",
+            "Yve",
+            "Obsidia"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Arlott",
+            "Yi Sun-shin",
+            "Valentina",
+            "Uranus",
+            "Gloo"
+          ],
+          "bans": [
+            "Marcel",
+            "Chip",
+            "Fanny",
+            "Freya",
+            "Zetian"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Natus Vincere",
+        "score": "2-0",
+        "duration": "15:54",
+        "map": "",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Yve",
+            "Obsidia",
+            "Marcel"
+          ],
+          "bans": [
+            "Lylia",
+            "Guinevere",
+            "Baxia",
+            "Harith",
+            "Esmeralda"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Lapu-Lapu",
+            "Suyou",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Harley",
+            "Belerick"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Team Liquid ID vs Geek Fam ID",
+    "blueTeam": "Team Liquid ID",
+    "redTeam": "Geek Fam ID",
+    "date": "April 11, 2026",
+    "mvp": "KennzyySkieBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Team Liquid ID",
+        "score": "1-0",
+        "duration": "18:06",
+        "map": "",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Alice",
+            "Fredrinn",
+            "Zhuxin",
+            "Karrie",
+            "Hylos"
+          ],
+          "bans": [
+            "Lukas",
+            "Gatotkaca",
+            "Sora",
+            "Yve",
+            "Freya"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zetian",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Kalea",
+            "Helcurt",
+            "Guinevere",
+            "Fanny",
+            "Granger"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Team Liquid ID",
+        "score": "2-0",
+        "duration": "08:57",
+        "map": "",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Freya",
+            "Kalea"
+          ],
+          "bans": [
+            "Cici",
+            "Chip",
+            "Gloo",
+            "Arlott",
+            "Baxia"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Phoveus",
+            "Lukas",
+            "Zhuxin",
+            "Karrie",
+            "Gatotkaca"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs Bigetron by Vitality",
+    "blueTeam": "ONIC",
+    "redTeam": "Bigetron by Vitality",
+    "date": "April 11, 2026",
+    "mvp": "EMANNBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "22:29",
+        "map": "",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Yve",
+            "Freya",
+            "Hylos"
+          ],
+          "bans": [
+            "Cici",
+            "Baxia",
+            "Kimmy",
+            "Khaleed",
+            "Zhuxin"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Pharsa",
+            "Yi Sun-shin",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Gloo",
+            "Yu Zhong",
+            "Zetian",
+            "Phoveus",
+            "Harley"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "18:51",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Cici",
+            "Baxia",
+            "Kimmy",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": [
+            "Claude",
+            "Guinevere",
+            "Fanny",
+            "Grock",
+            "Chip"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Gloo"
+          ],
+          "bans": [
+            "Valentina",
+            "Marcel",
+            "Kalea",
+            "Karrie",
+            "Joy"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "ONIC",
+        "score": "3-0",
+        "duration": "15:49",
+        "map": "",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Yu Zhong",
+            "Yi Sun-shin",
+            "Zetian",
+            "Freya",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Uranus"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ Hoshi vs Alter Ego",
+    "blueTeam": "RRQ Hoshi",
+    "redTeam": "Alter Ego",
+    "date": "April 11, 2026",
+    "mvp": "ArfyBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "RRQ Hoshi",
+        "score": "1-0",
+        "duration": "17:21",
+        "map": "",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Cici",
+            "Leomord",
+            "Zhuxin",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Karrie",
+            "Chip",
+            "Lapu-Lapu",
+            "Nolan",
+            "Chou"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Zetian",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Yve",
+            "Uranus",
+            "Harith",
+            "Gloo",
+            "Fanny"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "RRQ Hoshi",
+        "score": "2-0",
+        "duration": "13:50",
+        "map": "",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Lapu-Lapu",
+            "Nolan",
+            "Zhuxin",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Freya",
+            "Valentina",
+            "Yu Zhong",
+            "Phoveus",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Zetian",
+            "Karrie",
+            "Chip"
+          ],
+          "bans": [
+            "Baxia",
+            "Grock",
+            "Yi Sun-shin",
+            "Khaleed"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "RRQ Hoshi",
+        "score": "3-0",
+        "duration": "17:21",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Yve",
+            "Claude",
+            "Chou"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Bigetron by Vitality vs Natus Vincere",
+    "blueTeam": "Bigetron by Vitality",
+    "redTeam": "Natus Vincere",
+    "date": "April 12, 2026",
+    "mvp": "AprhoBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Bigetron by Vitality",
+        "score": "1-0",
+        "duration": "21:08",
+        "map": "",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Valir",
+            "Granger",
+            "Marcel"
+          ],
+          "bans": [
+            "Sora",
+            "Valentina",
+            "Yi Sun-shin",
+            "Khufra",
+            "Masha"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Hilda"
+          ],
+          "bans": [
+            "Fredrinn",
+            "Yve",
+            "Chip",
+            "Lapu-Lapu",
+            "Lylia"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Bigetron by Vitality",
+        "score": "2-0",
+        "duration": "24:39",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Valentina",
+            "Yi Sun-shin",
+            "Marcel"
+          ],
+          "bans": [
+            "Claude",
+            "Gloo",
+            "Guinevere",
+            "Khaleed",
+            "Chou"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Khufra"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Baxia",
+            "Selena",
+            "Zetian"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Bigetron by Vitality",
+        "score": "3-0",
+        "duration": "14:06",
+        "map": "",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Lylia",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "X.Borg",
+            "Cici",
+            "Pharsa"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Masha",
+            "Fredrinn",
+            "Yve",
+            "Yi Sun-shin",
+            "Chip"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Geek Fam ID vs RRQ Hoshi",
+    "blueTeam": "Geek Fam ID",
+    "redTeam": "RRQ Hoshi",
+    "date": "April 12, 2026",
+    "mvp": "AboyBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Geek Fam ID",
+        "score": "1-0",
+        "duration": "16:24",
+        "map": "",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Lapu-Lapu",
+            "Suyou",
+            "Zhuxin",
+            "Karrie",
+            "Chip"
+          ],
+          "bans": [
+            "Alice",
+            "Yve",
+            "Moskov",
+            "Kaja",
+            "Yi Sun-shin"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Valentina",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Tigreal",
+            "Hylos",
+            "Yu Zhong",
+            "Baxia",
+            "Harith"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Geek Fam ID",
+        "score": "2-0",
+        "duration": "13:56",
+        "map": "",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Gloo",
+            "Suyou",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Tigreal"
+          ],
+          "bans": [
+            "Freya",
+            "Guinevere",
+            "Helcurt",
+            "Marcel",
+            "Fanny"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Alice",
+            "Leomord",
+            "Yve",
+            "Moskov",
+            "Kaja"
+          ],
+          "bans": [
+            "Zetian",
+            "Khaleed",
+            "Chou",
+            "Uranus"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Geek Fam ID",
+        "score": "3-0",
+        "duration": "20:51",
+        "map": "",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Yu Zhong",
+            "Baxia",
+            "Zhuxin",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Alter Ego vs Dewa United",
+    "blueTeam": "Alter Ego",
+    "redTeam": "Dewa United",
+    "date": "April 12, 2026",
+    "mvp": "DolynnBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Alter Ego",
+        "score": "1-0",
+        "duration": "14:49",
+        "map": "",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Freya",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Grock"
+          ],
+          "bans": [
+            "Uranus",
+            "Harley",
+            "Pharsa",
+            "Moskov",
+            "Kalea"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Terizla",
+            "Guinevere",
+            "Zhuxin",
+            "Claude",
+            "Helcurt"
+          ],
+          "bans": [
+            "Alice",
+            "Fanny",
+            "Zetian",
+            "Gatotkaca",
+            "Arlott"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Alter Ego",
+        "score": "2-0",
+        "duration": "15:08",
+        "map": "",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Alice",
+            "Fanny",
+            "Zetian",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Valentina",
+            "Gloo",
+            "Sora",
+            "Marcel",
+            "Phoveus"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Uranus",
+            "Harley",
+            "Pharsa",
+            "Moskov",
+            "Kalea"
+          ],
+          "bans": [
+            "Cici",
+            "Fredrinn"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Natus Vincere vs ONIC",
+    "blueTeam": "Natus Vincere",
+    "redTeam": "ONIC",
+    "date": "April 17, 2026",
+    "mvp": "KairiBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Natus Vincere",
+        "score": "1-0",
+        "duration": "11:44",
+        "map": "",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Phoveus",
+            "Yi Sun-shin",
+            "Yve",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Alice",
+            "Suyou",
+            "Zhuxin",
+            "Khaleed",
+            "Lylia"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Valentina",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Beatrix",
+            "Fanny",
+            "Baxia",
+            "Freya",
+            "Claude"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Natus Vincere",
+        "score": "2-0",
+        "duration": "17:09",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Lylia",
+            "Beatrix",
+            "Kalea"
+          ],
+          "bans": [
+            "Moskov",
+            "Marcel",
+            "Gloo",
+            "Leomord",
+            "Guinevere"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Karrie",
+            "Uranus"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs Dewa United",
+    "blueTeam": "EVOS",
+    "redTeam": "Dewa United",
+    "date": "April 17, 2026",
+    "mvp": "LukeBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "1-0",
+        "duration": "13:46",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Arlott",
+            "Fredrinn",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Freya",
+            "Yve",
+            "Gloo",
+            "Alice",
+            "Fanny"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Sora",
+            "Baxia",
+            "Kimmy",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Guinevere",
+            "Phoveus",
+            "Marcel",
+            "Chip",
+            "Yi Sun-shin"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "2-0",
+        "duration": "11:29",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Freya",
+            "Fredrinn",
+            "Yve",
+            "Moskov",
+            "Gloo"
+          ],
+          "bans": [
+            "Granger",
+            "Karrie",
+            "Masha",
+            "Harley"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Alice",
+            "Baxia",
+            "Kimmy",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Team Liquid ID vs Bigetron by Vitality",
+    "blueTeam": "Team Liquid ID",
+    "redTeam": "Bigetron by Vitality",
+    "date": "April 18, 2026",
+    "mvp": "MorenoBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Team Liquid ID",
+        "score": "1-0",
+        "duration": "14:38",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Freya",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Baxia"
+          ],
+          "bans": [
+            "Terizla",
+            "Valentina",
+            "Khaleed",
+            "Lancelot",
+            "Claude"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Karrie",
+            "Chou"
+          ],
+          "bans": [
+            "Hylos",
+            "Fanny",
+            "Gatotkaca",
+            "Kadita",
+            "Moskov"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Team Liquid ID",
+        "score": "2-0",
+        "duration": "14:58",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Terizla",
+            "Leomord",
+            "Valentina",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Kalea",
+            "Guinevere",
+            "Phoveus",
+            "Yi Sun-shin",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Sora",
+            "Lancelot",
+            "Yve",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Chip",
+            "Gloo",
+            "Harley",
+            "Pharsa"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Team Liquid ID",
+        "score": "3-0",
+        "duration": "15:40",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Yve",
+            "Karrie",
+            "Gatotkaca"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Kadita",
+            "Moskov",
+            "Kalea"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ Hoshi vs EVOS",
+    "blueTeam": "RRQ Hoshi",
+    "redTeam": "EVOS",
+    "date": "April 18, 2026",
+    "mvp": "ErlanBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "RRQ Hoshi",
+        "score": "1-0",
+        "duration": "24:20",
+        "map": "",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Alice",
+            "Fredrinn",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Cici",
+            "Uranus",
+            "Zetian",
+            "Hilda",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Yu Zhong",
+            "Baxia",
+            "Yve",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Arlott",
+            "Kalea",
+            "Chip"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "RRQ Hoshi",
+        "score": "2-0",
+        "duration": "14:17",
+        "map": "",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Alice",
+            "Fredrinn",
+            "Zhuxin",
+            "Moskov",
+            "Hilda"
+          ],
+          "bans": [
+            "Guinevere",
+            "Sora",
+            "Harley",
+            "Suyou"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Cici",
+            "Uranus",
+            "Zetian",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Geek Fam ID vs Alter Ego",
+    "blueTeam": "Geek Fam ID",
+    "redTeam": "Alter Ego",
+    "date": "April 18, 2026",
+    "mvp": "ArfyBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Geek Fam ID",
+        "score": "1-0",
+        "duration": "13:18",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Lapu-Lapu",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Brody",
+            "Kalea"
+          ],
+          "bans": [
+            "Sora",
+            "Harley",
+            "Granger",
+            "Uranus",
+            "Claude"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Gloo",
+            "Fredrinn",
+            "Yve",
+            "Freya",
+            "Valir"
+          ],
+          "bans": [
+            "Khaleed",
+            "Alice",
+            "Zetian",
+            "Moskov",
+            "Guinevere"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Geek Fam ID",
+        "score": "2-0",
+        "duration": "13:08",
+        "map": "",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Uranus",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Harith",
+            "Helcurt",
+            "Chip",
+            "Phoveus"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Yve",
+            "Granger",
+            "Gloo"
+          ],
+          "bans": [
+            "Marcel",
+            "Arlott",
+            "Valentina",
+            "Leomord"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Geek Fam ID",
+        "score": "3-0",
+        "duration": "14:51",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Lapu-Lapu",
+            "Guinevere",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Alice",
+            "Harley",
+            "Zetian",
+            "Moskov",
+            "Gloo"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs Team Liquid ID",
+    "blueTeam": "ONIC",
+    "redTeam": "Team Liquid ID",
+    "date": "April 19, 2026",
+    "mvp": "S",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "11:59",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Valentina",
+            "Freya",
+            "Kalea"
+          ],
+          "bans": [
+            "Terizla",
+            "Fanny",
+            "Bruno",
+            "Marcel",
+            "Phoveus"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Sora",
+            "Fredrinn",
+            "Yve",
+            "Claude",
+            "Valir"
+          ],
+          "bans": [
+            "Suyou",
+            "Zhuxin",
+            "Moskov",
+            "Hylos",
+            "Chip"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "13:40",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zhuxin",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Gloo",
+            "Guinevere",
+            "Harley",
+            "Yu Zhong",
+            "Yi Sun-shin"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Yve",
+            "Bruno",
+            "Marcel"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Bigetron by Vitality vs RRQ Hoshi",
+    "blueTeam": "Bigetron by Vitality",
+    "redTeam": "RRQ Hoshi",
+    "date": "April 19, 2026",
+    "mvp": "MorenoBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Bigetron by Vitality",
+        "score": "1-0",
+        "duration": "15:34",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Obsidia",
+            "Gloo"
+          ],
+          "bans": [
+            "Yi Sun-shin",
+            "Lapu-Lapu",
+            "Karrie",
+            "Kalea",
+            "Terizla"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Valentina",
+            "Harith",
+            "Yu Zhong",
+            "Baxia",
+            "Chip"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Bigetron by Vitality",
+        "score": "2-0",
+        "duration": "25:25",
+        "map": "",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Yve",
+            "Karrie",
+            "Kalea"
+          ],
+          "bans": [
+            "Guinevere",
+            "Uranus",
+            "Fanny",
+            "Marcel",
+            "Freya"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Zetian"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Bigetron by Vitality",
+        "score": "3-0",
+        "duration": "15:53",
+        "map": "",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Yu Zhong",
+            "Baxia",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Terizla",
+            "Leomord",
+            "Valentina",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Dewa United vs Geek Fam ID",
+    "blueTeam": "Dewa United",
+    "redTeam": "Geek Fam ID",
+    "date": "April 19, 2026",
+    "mvp": "DolynnBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Dewa United",
+        "score": "1-0",
+        "duration": "23:26",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Gloo"
+          ],
+          "bans": [
+            "Arlott",
+            "Lunox",
+            "Lapu-Lapu",
+            "Leomord",
+            "Moskov"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Freya",
+            "Harley",
+            "Yve",
+            "Cici",
+            "Valir"
+          ],
+          "bans": [
+            "Khaleed",
+            "Chip",
+            "Marcel",
+            "Helcurt",
+            "Alice"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Dewa United",
+        "score": "2-0",
+        "duration": "13:34",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Uranus",
+            "Guinevere",
+            "Fanny",
+            "Baxia",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Lunox",
+            "Freya",
+            "Gloo"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Geek Fam ID vs Natus Vincere",
+    "blueTeam": "Geek Fam ID",
+    "redTeam": "Natus Vincere",
+    "date": "April 24, 2026",
+    "mvp": "XyveBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Geek Fam ID",
+        "score": "1-0",
+        "duration": "16:46",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Valir",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Yve",
+            "Yi Sun-shin",
+            "Kalea",
+            "Lapu-Lapu",
+            "Pharsa"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Uranus",
+            "Harley",
+            "Valentina",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Gloo",
+            "Zhuxin",
+            "Freya",
+            "Selena",
+            "Granger"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Geek Fam ID",
+        "score": "2-0",
+        "duration": "14:23",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Pharsa",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Helcurt",
+            "Chip",
+            "Fanny",
+            "Sora",
+            "Cici"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Yve",
+            "Yi Sun-shin",
+            "Kalea"
+          ],
+          "bans": [
+            "Alice",
+            "Guinevere",
+            "Leomord"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs ONIC",
+    "blueTeam": "EVOS",
+    "redTeam": "ONIC",
+    "date": "April 24, 2026",
+    "mvp": "KairiBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "1-0",
+        "duration": "19:38",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Arlott",
+            "Fredrinn",
+            "Zhuxin",
+            "Granger",
+            "Khaleed"
+          ],
+          "bans": [
+            "Phoveus",
+            "Baxia",
+            "Valentina",
+            "Moskov",
+            "Uranus"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Zetian",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Fanny",
+            "Kimmy",
+            "Harith",
+            "Gatotkaca",
+            "Marcel"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "2-0",
+        "duration": "16:02",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Uranus",
+            "Fanny",
+            "Kimmy",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Yve",
+            "Chip",
+            "Freya",
+            "Badang",
+            "Terizla"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Baxia",
+            "Valentina",
+            "Moskov",
+            "Kalea"
+          ],
+          "bans": [
+            "Leomord",
+            "Lancelot"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Dewa United vs RRQ Hoshi",
+    "blueTeam": "Dewa United",
+    "redTeam": "RRQ Hoshi",
+    "date": "April 25, 2026",
+    "mvp": "OctaBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Dewa United",
+        "score": "1-0",
+        "duration": "25:26",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Pharsa",
+            "Harith",
+            "Yi Sun-shin",
+            "Granger",
+            "Kalea"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Phoveus",
+            "Guinevere",
+            "Yve",
+            "Karrie",
+            "Chou"
+          ],
+          "bans": [
+            "Chip",
+            "Harley",
+            "Marcel",
+            "Hilda",
+            "Hylos"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Dewa United",
+        "score": "2-0",
+        "duration": "11:50",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Phoveus",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Alice",
+            "Moskov",
+            "Baxia"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Arlott",
+            "Guinevere",
+            "Pharsa",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Alter Ego vs Team Liquid ID",
+    "blueTeam": "Alter Ego",
+    "redTeam": "Team Liquid ID",
+    "date": "April 25, 2026",
+    "mvp": "KevinnBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Alter Ego",
+        "score": "1-0",
+        "duration": "11:03",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Baxia",
+            "Valentina",
+            "Obsidia",
+            "Marcel"
+          ],
+          "bans": [
+            "Arlott",
+            "Yve",
+            "Yi Sun-shin",
+            "Hilda",
+            "Harley"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zetian",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Lapu-Lapu",
+            "Lylia",
+            "Clint",
+            "Kalea"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Alter Ego",
+        "score": "2-0",
+        "duration": "17:23",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Zhuxin",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Chip",
+            "Fredrinn",
+            "Freya",
+            "Harith",
+            "Guinevere"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Yve",
+            "Yi Sun-shin",
+            "Hilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Suyou",
+            "Terizla",
+            "Uranus",
+            "Alice"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Alter Ego",
+        "score": "3-0",
+        "duration": "20:50",
+        "map": "",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zetian",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Lapu-Lapu",
+            "Yi Sun-shin",
+            "Lylia",
+            "Clint",
+            "Kalea"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs Bigetron by Vitality",
+    "blueTeam": "EVOS",
+    "redTeam": "Bigetron by Vitality",
+    "date": "April 25, 2026",
+    "mvp": "MorenoBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "1-0",
+        "duration": "15:23",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Valentina",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Granger",
+            "Phoveus",
+            "Moskov",
+            "Fanny",
+            "Guinevere"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Arlott",
+            "Harley",
+            "Zhuxin",
+            "Harith",
+            "Hylos"
+          ],
+          "bans": [
+            "Sora",
+            "Suyou",
+            "Terizla",
+            "Chip",
+            "Freya"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "2-0",
+        "duration": "27:15",
+        "map": "",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Valentina",
+            "Granger",
+            "Hylos"
+          ],
+          "bans": [
+            "Marcel",
+            "Kalea",
+            "Gatotkaca"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Alter Ego vs Natus Vincere",
+    "blueTeam": "Alter Ego",
+    "redTeam": "Natus Vincere",
+    "date": "April 26, 2026",
+    "mvp": "NinoBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Alter Ego",
+        "score": "1-0",
+        "duration": "13:37",
+        "map": "",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Alice",
+            "Harith",
+            "Arlott",
+            "Fredrinn",
+            "Pharsa"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Valentina",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Guinevere",
+            "Yu Zhong",
+            "Odette",
+            "Granger",
+            "Hilda"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Alter Ego",
+        "score": "2-0",
+        "duration": "12:23",
+        "map": "",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Alice",
+            "Leomord",
+            "Valentina",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Kalea",
+            "Phoveus",
+            "Harley",
+            "Chip",
+            "Yve"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Arlott",
+            "Fredrinn",
+            "Pharsa",
+            "Claude",
+            "Guinevere"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Hylos",
+            "Baxia",
+            "Terizla"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Alter Ego",
+        "score": "3-0",
+        "duration": "18:03",
+        "map": "",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Yu Zhong",
+            "Leomord",
+            "Odette",
+            "Granger",
+            "Hilda"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Valentina",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Geek Fam ID vs ONIC",
+    "blueTeam": "Geek Fam ID",
+    "redTeam": "ONIC",
+    "date": "April 26, 2026",
+    "mvp": "MarceLBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Geek Fam ID",
+        "score": "1-0",
+        "duration": "16:09",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Lapu-Lapu",
+            "Fanny",
+            "Lylia",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Harley",
+            "Kimmy",
+            "Claude",
+            "Uranus",
+            "Valentina"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Pharsa",
+            "Moskov",
+            "Kalea"
+          ],
+          "bans": [
+            "Bruno",
+            "Marcel",
+            "Yve",
+            "Beatrix",
+            "Zhuxin"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Geek Fam ID",
+        "score": "2-0",
+        "duration": "12:54",
+        "map": "",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Valentina",
+            "Bruno",
+            "Marcel"
+          ],
+          "bans": [
+            "Freya",
+            "Sora",
+            "Zetian",
+            "Helcurt",
+            "Chip"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Kimmy",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Guinevere",
+            "Granger",
+            "Valir",
+            "Atlas"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Geek Fam ID",
+        "score": "3-0",
+        "duration": "18:20",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Yve",
+            "Beatrix",
+            "Kalea"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Lylia",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Dewa United vs Team Liquid ID",
+    "blueTeam": "Dewa United",
+    "redTeam": "Team Liquid ID",
+    "date": "April 26, 2026",
+    "mvp": "QINNBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Dewa United",
+        "score": "1-0",
+        "duration": "11:24",
+        "map": "",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Freya",
+            "Suyou",
+            "Yve",
+            "Granger",
+            "Hilda"
+          ],
+          "bans": [
+            "Phoveus",
+            "Lunox",
+            "Khaleed",
+            "Yu Zhong",
+            "Claude"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Esmeralda",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Chip",
+            "Fredrinn",
+            "Terizla",
+            "Uranus",
+            "Guinevere"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Dewa United",
+        "score": "2-0",
+        "duration": "11:36",
+        "map": "",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Yu Zhong",
+            "Leomord",
+            "Zhuxin",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Arlott",
+            "Marcel",
+            "Alice",
+            "Zetian"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Lunox",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Natus Vincere vs Dewa United",
+    "blueTeam": "Natus Vincere",
+    "redTeam": "Dewa United",
+    "date": "May 1, 2026",
+    "mvp": "DolynnBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Natus Vincere",
+        "score": "1-0",
+        "duration": "11:47",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Lylia",
+            "Freya",
+            "Hylos"
+          ],
+          "bans": [
+            "Phoveus",
+            "Claude",
+            "Gatotkaca",
+            "Baxia",
+            "Pharsa"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Granger",
+            "Guinevere",
+            "Leomord",
+            "Yve",
+            "Terizla"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Natus Vincere",
+        "score": "2-0",
+        "duration": "20:21",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Pharsa",
+            "Granger",
+            "Guinevere"
+          ],
+          "bans": [
+            "Gloo",
+            "Fanny",
+            "Valentina",
+            "Karrie",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Chip",
+            "Kalea",
+            "Hilda",
+            "Hayabusa"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Natus Vincere",
+        "score": "3-0",
+        "duration": "13:34",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Alter Ego vs Geek Fam ID",
+    "blueTeam": "Alter Ego",
+    "redTeam": "Geek Fam ID",
+    "date": "May 1, 2026",
+    "mvp": "alekkBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Alter Ego",
+        "score": "1-0",
+        "duration": "14:09",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Kagura",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Phoveus",
+            "Yve",
+            "Claude",
+            "Hilda",
+            "Suyou"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Faramis",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Gloo",
+            "Karrie",
+            "Lapu-Lapu",
+            "Freya"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Alter Ego",
+        "score": "2-0",
+        "duration": "14:14",
+        "map": "",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Granger",
+            "Gloo"
+          ],
+          "bans": [
+            "Gatotkaca",
+            "Helcurt",
+            "Chip",
+            "Valentina",
+            "Fanny"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Yve",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Guinevere",
+            "Zetian",
+            "Moskov",
+            "Hylos",
+            "Khaleed"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Alter Ego",
+        "score": "3-0",
+        "duration": "14:11",
+        "map": "",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Yve",
+            "Karrie",
+            "Gloo"
+          ],
+          "bans": [
+            "Brody",
+            "Obsidia"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Lapu-Lapu",
+            "Suyou",
+            "Zhuxin",
+            "Freya",
+            "Gatotkaca"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs Alter Ego",
+    "blueTeam": "EVOS",
+    "redTeam": "Alter Ego",
+    "date": "May 2, 2026",
+    "mvp": "KyyBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "1-0",
+        "duration": "20:25",
+        "map": "",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Pharsa",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Baxia",
+            "Terizla",
+            "Yve",
+            "Claude"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Luo Yi",
+            "Granger",
+            "Hilda"
+          ],
+          "bans": [
+            "Gloo",
+            "Lancelot",
+            "Hylos",
+            "Karrie",
+            "Harley"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "2-0",
+        "duration": "28:02",
+        "map": "",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Baxia"
+          ],
+          "bans": [
+            "Phoveus",
+            "Uranus",
+            "Selena",
+            "Chip",
+            "Freya"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Yve",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Sora",
+            "Fanny",
+            "Obsidia",
+            "Khaleed",
+            "Kalea"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "EVOS",
+        "score": "3-0",
+        "duration": "18:23",
+        "map": "",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Terizla",
+            "Lancelot",
+            "Zhuxin",
+            "Harith",
+            "Hylos"
+          ],
+          "bans": [
+            "Fredrinn",
+            "Philippines"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Yve",
+            "Karrie",
+            "Hilda"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Team Liquid ID vs ONIC",
+    "blueTeam": "Team Liquid ID",
+    "redTeam": "ONIC",
+    "date": "May 2, 2026",
+    "mvp": "KairiBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Team Liquid ID",
+        "score": "1-0",
+        "duration": "16:14",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Badang",
+            "Baxia",
+            "Kimmy",
+            "Moskov",
+            "Marcel"
+          ],
+          "bans": [
+            "Masha",
+            "Fredrinn",
+            "Granger",
+            "Chip",
+            "Suyou"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Valentina",
+            "Harith",
+            "Atlas"
+          ],
+          "bans": [
+            "Valir",
+            "Hylos",
+            "Guinevere",
+            "Phoveus",
+            "Zhuxin"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Team Liquid ID",
+        "score": "2-0",
+        "duration": "14:23",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Masha",
+            "Fredrinn",
+            "Valentina",
+            "Granger",
+            "Chip"
+          ],
+          "bans": [
+            "Chou",
+            "Khaleed",
+            "Gloo",
+            "Freya",
+            "Harley"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Valir",
+            "Harith",
+            "Hylos"
+          ],
+          "bans": [
+            "Arlott",
+            "Uranus",
+            "Kalea",
+            "Claude"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ Hoshi vs Bigetron by Vitality",
+    "blueTeam": "RRQ Hoshi",
+    "redTeam": "Bigetron by Vitality",
+    "date": "May 2, 2026",
+    "mvp": "DanBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "RRQ Hoshi",
+        "score": "1-0",
+        "duration": "17:30",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Phoveus",
+            "Lancelot",
+            "Zhuxin",
+            "Granger",
+            "Hylos"
+          ],
+          "bans": [
+            "Karrie",
+            "Khaleed",
+            "Leomord",
+            "Valentina",
+            "Kalea"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Vexana",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Marcel",
+            "Yve",
+            "Valir"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "RRQ Hoshi",
+        "score": "2-0",
+        "duration": "19:44",
+        "map": "",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Phoveus",
+            "Lancelot",
+            "Zhuxin",
+            "Karrie",
+            "Khaleed"
+          ],
+          "bans": [
+            "Chip",
+            "Harley",
+            "Guinevere",
+            "Moskov",
+            "Sora"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Hylos",
+            "Leomord",
+            "Valentina",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Baxia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Natus Vincere vs Team Liquid ID",
+    "blueTeam": "Natus Vincere",
+    "redTeam": "Team Liquid ID",
+    "date": "May 3, 2026",
+    "mvp": "AranBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Natus Vincere",
+        "score": "1-0",
+        "duration": "24:11",
+        "map": "",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Granger",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Luo Yi",
+            "Phoveus",
+            "Kimmy",
+            "Baxia",
+            "Claude"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Alice",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Hylos",
+            "Terizla",
+            "Khaleed",
+            "Chip",
+            "Gloo"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Natus Vincere",
+        "score": "2-0",
+        "duration": "18:02",
+        "map": "",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Kimmy",
+            "Harith",
+            "Baxia"
+          ],
+          "bans": [
+            "Uranus",
+            "Hilda",
+            "Guinevere",
+            "Marcel",
+            "Freya"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Luo Yi",
+            "Granger",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Valir"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Natus Vincere",
+        "score": "3-0",
+        "duration": "17:17",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Terizla",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs RRQ Hoshi",
+    "blueTeam": "ONIC",
+    "redTeam": "RRQ Hoshi",
+    "date": "May 3, 2026",
+    "mvp": "S",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "13:14",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Valentina",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Phoveus",
+            "Nana",
+            "Harith",
+            "Kalea",
+            "Lapu-Lapu"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Uranus",
+            "Lancelot",
+            "Zhuxin",
+            "Karrie",
+            "Khaleed"
+          ],
+          "bans": [
+            "Guinevere",
+            "Yve",
+            "Moskov",
+            "Hylos",
+            "Chip"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "13:56",
+        "map": "",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Lapu-Lapu",
+            "Guinevere",
+            "Yve",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Gloo",
+            "Freya",
+            "Fanny",
+            "Marcel",
+            "Terizla"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Phoveus",
+            "Lancelot",
+            "Nana",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Chou",
+            "Valir"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Geek Fam ID vs EVOS",
+    "blueTeam": "Geek Fam ID",
+    "redTeam": "EVOS",
+    "date": "May 3, 2026",
+    "mvp": "MarceLBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Geek Fam ID",
+        "score": "1-0",
+        "duration": "19:34",
+        "map": "",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Valir",
+            "Yi Sun-shin",
+            "Zetian",
+            "Freya",
+            "Hylos"
+          ],
+          "bans": [
+            "Guinevere",
+            "Granger",
+            "Uranus",
+            "Yve",
+            "Khaleed"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Phoveus",
+            "Hayabusa",
+            "Zhuxin",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Marcel",
+            "Chip",
+            "Fanny",
+            "Harley",
+            "Helcurt"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Geek Fam ID",
+        "score": "2-0",
+        "duration": "11:25",
+        "map": "",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Uranus",
+            "Yi Sun-shin",
+            "Yve",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": [
+            "Suyou",
+            "Leomord",
+            "Gloo",
+            "Gatotkaca",
+            "Karrie"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Phoveus",
+            "Guinevere",
+            "Zhuxin",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Philippines"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Geek Fam ID vs Dewa United",
+    "blueTeam": "Geek Fam ID",
+    "redTeam": "Dewa United",
+    "date": "May 8, 2026",
+    "mvp": "QINNBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Geek Fam ID",
+        "score": "1-0",
+        "duration": "09:26",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Freya",
+            "Leomord",
+            "Faramis",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Lapu-Lapu",
+            "Kalea",
+            "Arlott",
+            "Pharsa",
+            "Fanny"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Yve",
+            "Harith",
+            "Belerick"
+          ],
+          "bans": [
+            "Gatotkaca",
+            "Phoveus",
+            "Zetian",
+            "Hylos",
+            "Guinevere"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Geek Fam ID",
+        "score": "2-0",
+        "duration": "14:23",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Arlott",
+            "Leomord",
+            "Pharsa",
+            "Freya",
+            "Marcel"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Gloo",
+            "Harley",
+            "Helcurt",
+            "Alice"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Lapu-Lapu",
+            "Suyou",
+            "Faramis",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Lylia",
+            "Odette",
+            "Lunox"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Geek Fam ID",
+        "score": "3-0",
+        "duration": "15:18",
+        "map": "",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Lapu-Lapu",
+            "Fanny",
+            "Yve",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zetian",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Bigetron by Vitality vs Team Liquid ID",
+    "blueTeam": "Bigetron by Vitality",
+    "redTeam": "Team Liquid ID",
+    "date": "May 8, 2026",
+    "mvp": "KevinnBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Bigetron by Vitality",
+        "score": "1-0",
+        "duration": "18:58",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Zhuxin",
+            "Beatrix",
+            "Kalea"
+          ],
+          "bans": [
+            "Uranus",
+            "Lylia",
+            "Gatotkaca",
+            "Suyou",
+            "Yve"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zetian",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Lunox",
+            "Hylos",
+            "Chip",
+            "Gloo",
+            "Freya"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Bigetron by Vitality",
+        "score": "2-0",
+        "duration": "15:43",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Yve",
+            "Lunox",
+            "Hylos"
+          ],
+          "bans": [
+            "Guinevere",
+            "Marcel",
+            "Fanny",
+            "Granger",
+            "Karrie"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Lylia",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Moskov"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Dewa United vs Alter Ego",
+    "blueTeam": "Dewa United",
+    "redTeam": "Alter Ego",
+    "date": "May 9, 2026",
+    "mvp": "NinoBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Dewa United",
+        "score": "1-0",
+        "duration": "12:12",
+        "map": "",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Freya",
+            "Suyou",
+            "Zetian",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Pharsa",
+            "Harith",
+            "Hilda",
+            "Alice",
+            "Zhuxin"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Valentina",
+            "Obsidia",
+            "Gloo"
+          ],
+          "bans": [
+            "Granger",
+            "Khaleed",
+            "Phoveus",
+            "Luo Yi",
+            "Claude"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Dewa United",
+        "score": "2-0",
+        "duration": "10:39",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Zhuxin",
+            "Granger",
+            "Khaleed"
+          ],
+          "bans": [
+            "Harley",
+            "Marcel",
+            "Chou",
+            "Arlott",
+            "Fanny"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Freya",
+            "Guinevere",
+            "Pharsa",
+            "Harith",
+            "Hilda"
+          ],
+          "bans": [
+            "Uranus",
+            "Leomord",
+            "Gatotkaca",
+            "Kalea"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Dewa United",
+        "score": "3-0",
+        "duration": "14:02",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Phoveus",
+            "Guinevere",
+            "Pharsa",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Luo Yi",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs RRQ Hoshi",
+    "blueTeam": "EVOS",
+    "redTeam": "RRQ Hoshi",
+    "date": "May 9, 2026",
+    "mvp": "AlbertBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "1-0",
+        "duration": "16:13",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Gord",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Gloo",
+            "Leomord",
+            "Zhuxin",
+            "Moskov",
+            "Hylos"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Uranus",
+            "Lancelot",
+            "Valentina",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Phoveus",
+            "Fanny",
+            "Yve",
+            "Bruno",
+            "Khaleed"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "2-0",
+        "duration": "13:14",
+        "map": "",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Phoveus",
+            "Fanny",
+            "Yve",
+            "Bruno",
+            "Khaleed"
+          ],
+          "bans": [
+            "Chip",
+            "Suyou",
+            "Marcel",
+            "Freya",
+            "Arlott"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Gloo",
+            "Leomord",
+            "Zhuxin",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Pharsa",
+            "Lunox",
+            "Guinevere",
+            "Fredrinn"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs Natus Vincere",
+    "blueTeam": "ONIC",
+    "redTeam": "Natus Vincere",
+    "date": "May 9, 2026",
+    "mvp": "S",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "16:49",
+        "map": "",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Gord",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Valentina",
+            "Moskov",
+            "Chip",
+            "Phoveus",
+            "Nolan"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Kimmy",
+            "Karrie",
+            "Kalea"
+          ],
+          "bans": [
+            "Granger",
+            "Marcel",
+            "Sora",
+            "Uranus",
+            "Fanny"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "14:48",
+        "map": "",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Nolan",
+            "Gord",
+            "Granger",
+            "Marcel"
+          ],
+          "bans": [
+            "Freya",
+            "Zhuxin",
+            "Zetian",
+            "Arlott",
+            "Baxia"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Valentina",
+            "Moskov",
+            "Chip"
+          ],
+          "bans": [
+            "Leomord",
+            "Guinevere",
+            "Hilda",
+            "Gloo",
+            "Philippines"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ Hoshi vs Geek Fam ID",
+    "blueTeam": "RRQ Hoshi",
+    "redTeam": "Geek Fam ID",
+    "date": "May 10, 2026",
+    "mvp": "MarceLBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "RRQ Hoshi",
+        "score": "1-0",
+        "duration": "28:33",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Gloo",
+            "Guinevere",
+            "Vexana",
+            "Moskov",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Sora",
+            "Valir",
+            "Granger",
+            "Valentina",
+            "Fredrinn"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zetian",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Harith",
+            "Khaleed",
+            "Marcel",
+            "Freya"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "RRQ Hoshi",
+        "score": "2-0",
+        "duration": "13:37",
+        "map": "",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Valentina",
+            "Fredrinn",
+            "Zhuxin",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Kalea",
+            "Faramis",
+            "Chip",
+            "Harley",
+            "Terizla"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Sora",
+            "Suyou",
+            "Valir",
+            "Granger",
+            "Hylos"
+          ],
+          "bans": [
+            "Leomord",
+            "Arlott",
+            "Fanny",
+            "Yve",
+            "Lylia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Natus Vincere vs Bigetron by Vitality",
+    "blueTeam": "Natus Vincere",
+    "redTeam": "Bigetron by Vitality",
+    "date": "May 10, 2026",
+    "mvp": "AprhoBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Natus Vincere",
+        "score": "1-0",
+        "duration": "23:02",
+        "map": "",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Terizla",
+            "Harley",
+            "Pharsa",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Minsitthar",
+            "Suyou",
+            "Zhuxin",
+            "Badang",
+            "Phoveus"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Arlott",
+            "Lancelot",
+            "Valentina",
+            "Harith",
+            "Baxia"
+          ],
+          "bans": [
+            "Leomord",
+            "Yve",
+            "Khaleed",
+            "Freya",
+            "Zetian"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Natus Vincere",
+        "score": "2-0",
+        "duration": "18:53",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Moskov",
+            "Hilda",
+            "Fanny",
+            "Guinevere",
+            "Fredrinn"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Minsitthar",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Badang"
+          ],
+          "bans": [
+            "Gatotkaca",
+            "Marcel",
+            "Gord",
+            "Uranus",
+            "Sora"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Natus Vincere",
+        "score": "3-0",
+        "duration": "15:52",
+        "map": "",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Freya",
+            "Leomord",
+            "Zetian",
+            "Moskov",
+            "Badang"
+          ],
+          "bans": [
+            "Gloo",
+            "Hylos",
+            "Philippines"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Hilda",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Team Liquid ID vs EVOS",
+    "blueTeam": "Team Liquid ID",
+    "redTeam": "EVOS",
+    "date": "May 10, 2026",
+    "mvp": "AlbertBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Team Liquid ID",
+        "score": "1-0",
+        "duration": "12:47",
+        "map": "",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Lapu-Lapu",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Badang",
+            "Gatotkaca",
+            "Guinevere",
+            "Harley",
+            "Chip"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Baxia"
+          ],
+          "bans": [
+            "Fanny",
+            "Arlott",
+            "Phoveus",
+            "Gloo",
+            "Freya"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Team Liquid ID",
+        "score": "2-0",
+        "duration": "20:43",
+        "map": "",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Lapu-Lapu",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Khaleed",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Badang",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Bigetron by Vitality vs Geek Fam ID",
+    "blueTeam": "Bigetron by Vitality",
+    "redTeam": "Geek Fam ID",
+    "date": "May 15, 2026",
+    "mvp": "NazaraBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Bigetron by Vitality",
+        "score": "1-0",
+        "duration": "14:53",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Valentina",
+            "Guinevere",
+            "Zhuxin",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Arlott",
+            "Yi Sun-shin",
+            "Claude",
+            "Yu Zhong",
+            "Suyou"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Harith",
+            "Khufra"
+          ],
+          "bans": [
+            "Chou",
+            "Harley",
+            "Freya",
+            "Kalea",
+            "Fanny"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Bigetron by Vitality",
+        "score": "2-0",
+        "duration": "15:26",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Yu Zhong",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Chou"
+          ],
+          "bans": [
+            "Phoveus",
+            "Marcel",
+            "Gloo",
+            "Khaleed",
+            "Chip"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Arlott",
+            "Yi Sun-shin",
+            "Yve",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Dewa United vs ONIC",
+    "blueTeam": "Dewa United",
+    "redTeam": "ONIC",
+    "date": "May 15, 2026",
+    "mvp": "KelraBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Dewa United",
+        "score": "1-0",
+        "duration": "12:16",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Phoveus",
+            "Nolan",
+            "Valentina",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Terizla",
+            "Valir",
+            "Sora",
+            "Fredrinn",
+            "Zhuxin"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Zetian",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Kalea",
+            "Harley",
+            "Fanny",
+            "Baxia",
+            "Lancelot"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Dewa United",
+        "score": "2-0",
+        "duration": "16:33",
+        "map": "",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Sora",
+            "Fredrinn",
+            "Zhuxin",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Guinevere",
+            "Freya",
+            "Arlott",
+            "Hilda",
+            "Gloo"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Valir",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Hayabusa",
+            "Lylia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "EVOS vs Natus Vincere",
+    "blueTeam": "EVOS",
+    "redTeam": "Natus Vincere",
+    "date": "May 16, 2026",
+    "mvp": "AprhoBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "EVOS",
+        "score": "1-0",
+        "duration": "18:18",
+        "map": "",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Chou",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Alice",
+            "Fanny",
+            "Gloo",
+            "Paquito",
+            "Guinevere"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Terizla",
+            "Baxia",
+            "Gord",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Pharsa",
+            "Phoveus",
+            "Marcel",
+            "Sora",
+            "Nolan"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "EVOS",
+        "score": "2-0",
+        "duration": "24:32",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Alice",
+            "Fanny",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Leomord",
+            "Harley",
+            "Freya",
+            "Chip",
+            "Lapu-Lapu"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Paquito",
+            "Guinevere",
+            "Pharsa",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Arlott",
+            "Yi Sun-shin",
+            "Philippines"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Team Liquid ID vs RRQ Hoshi",
+    "blueTeam": "Team Liquid ID",
+    "redTeam": "RRQ Hoshi",
+    "date": "May 16, 2026",
+    "mvp": "AranBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Team Liquid ID",
+        "score": "1-0",
+        "duration": "16:28",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Gord",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Sora",
+            "Fredrinn",
+            "Zhuxin",
+            "Gloo",
+            "Moskov"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Pharsa",
+            "Karrie",
+            "Franco"
+          ],
+          "bans": [
+            "Kalea",
+            "Guinevere",
+            "Obsidia",
+            "Khaleed",
+            "Freya"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Team Liquid ID",
+        "score": "2-0",
+        "duration": "13:49",
+        "map": "",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Terizla",
+            "Harley",
+            "Gord",
+            "Moskov",
+            "Kalea"
+          ],
+          "bans": [
+            "Marcel",
+            "Chip",
+            "Zetian",
+            "Alice",
+            "Uranus"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Sora",
+            "Fredrinn",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Fanny",
+            "Paquito",
+            "Arlott",
+            "Philippines"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs Alter Ego",
+    "blueTeam": "ONIC",
+    "redTeam": "Alter Ego",
+    "date": "May 16, 2026",
+    "mvp": "KairiBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "20:37",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Pharsa",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Phoveus",
+            "Leomord",
+            "Harith",
+            "Marcel",
+            "Uranus"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Valentina",
+            "Yi Sun-shin",
+            "Gord",
+            "Freya",
+            "Hilda"
+          ],
+          "bans": [
+            "Suyou",
+            "Karrie",
+            "Khaleed",
+            "Lapu-Lapu",
+            "Fanny"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "17:41",
+        "map": "",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Valentina",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Lylia",
+            "Gatotkaca",
+            "Cici",
+            "Ruby",
+            "Kalea"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Uranus",
+            "Suyou",
+            "Gord",
+            "Karrie",
+            "Khaleed"
+          ],
+          "bans": [
+            "Guinevere",
+            "Zhuxin",
+            "Atlas",
+            "Valir",
+            "Obsidia"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "ONIC",
+        "score": "3-0",
+        "duration": "14:16",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Lapu-Lapu",
+            "Fanny",
+            "Lylia",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Terizla",
+            "Baxia",
+            "Nolan",
+            "Lunox",
+            "Zetian"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Cici",
+            "Leomord",
+            "Gord",
+            "Ruby",
+            "Kalea"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Dewa United vs EVOS",
+    "blueTeam": "Dewa United",
+    "redTeam": "EVOS",
+    "date": "May 17, 2026",
+    "mvp": "PhewwBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Dewa United",
+        "score": "1-0",
+        "duration": "16:55",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Alice",
+            "Guinevere",
+            "Zhuxin",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Phoveus",
+            "Suyou",
+            "Yi Sun-shin",
+            "Helcurt",
+            "Gloo"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Gord",
+            "Harith",
+            "Kalea"
+          ],
+          "bans": [
+            "Chip",
+            "Harley",
+            "Marcel",
+            "Uranus",
+            "Masha"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Dewa United",
+        "score": "2-0",
+        "duration": "14:28",
+        "map": "",
+        "blueTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Helcurt"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Arlott",
+            "Terizla",
+            "Hylos"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Gloo",
+            "Leomord",
+            "Gord",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Alter Ego vs Bigetron by Vitality",
+    "blueTeam": "Alter Ego",
+    "redTeam": "Bigetron by Vitality",
+    "date": "May 17, 2026",
+    "mvp": "FinnBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Alter Ego",
+        "score": "1-0",
+        "duration": "13:24",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": [
+            "Yu Zhong",
+            "Guinevere",
+            "Valentina",
+            "Gloo",
+            "Yi Sun-shin"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Uranus",
+            "Lancelot",
+            "Gord",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Yve",
+            "Phoveus",
+            "Fanny",
+            "Suyou",
+            "Hilda"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Alter Ego",
+        "score": "2-0",
+        "duration": "21:24",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Uranus",
+            "Yi Sun-shin",
+            "Yve",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Freya",
+            "Harley",
+            "Khaleed",
+            "Gatotkaca"
+          ]
+        },
+        "redTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Yu Zhong",
+            "Guinevere",
+            "Valentina",
+            "Harith",
+            "Gloo"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ Hoshi vs Natus Vincere",
+    "blueTeam": "RRQ Hoshi",
+    "redTeam": "Natus Vincere",
+    "date": "May 17, 2026",
+    "mvp": "AphroBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "RRQ Hoshi",
+        "score": "1-0",
+        "duration": "11:12",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Lylia",
+            "Chou",
+            "Terizla",
+            "Baxia",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Gord",
+            "Harith",
+            "Kaja"
+          ],
+          "bans": [
+            "Gloo",
+            "Kalea",
+            "Khaleed",
+            "Yve",
+            "Freya"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "RRQ Hoshi",
+        "score": "2-0",
+        "duration": "10:52",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Lylia",
+            "Harith",
+            "Chou"
+          ],
+          "bans": [
+            "Harley",
+            "Chip",
+            "Guinevere",
+            "Zetian",
+            "Philippines"
+          ]
+        },
+        "redTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Terizla",
+            "Baxia",
+            "Zhuxin",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Bigetron by Vitality vs Dewa United",
+    "blueTeam": "Bigetron by Vitality",
+    "redTeam": "Dewa United",
+    "date": "May 22, 2026",
+    "mvp": "MorenoBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Bigetron by Vitality",
+        "score": "1-0",
+        "duration": "17:52",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Zhuxin",
+            "Karrie",
+            "Gloo"
+          ],
+          "bans": [
+            "Arlott",
+            "Yi Sun-shin",
+            "Valir",
+            "Gatotkaca",
+            "Paquito"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Lunox",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Suyou",
+            "Yve",
+            "Kalea",
+            "Alice",
+            "Phoveus"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Bigetron by Vitality",
+        "score": "2-0",
+        "duration": "11:59",
+        "map": "",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Yve",
+            "Karrie",
+            "Kalea"
+          ],
+          "bans": [
+            "Zetian",
+            "Harith",
+            "Marcel",
+            "Guinevere",
+            "Khaleed"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Arlott",
+            "Yi Sun-shin",
+            "Valir",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Sora"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Bigetron by Vitality",
+        "score": "3-0",
+        "duration": "14:26",
+        "map": "",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zetian",
+            "Harith",
+            "Marcel"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Team Liquid ID vs Alter Ego",
+    "blueTeam": "Team Liquid ID",
+    "redTeam": "Alter Ego",
+    "date": "May 22, 2026",
+    "mvp": "KevinnBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Team Liquid ID",
+        "score": "1-0",
+        "duration": "11:54",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Terizla",
+            "Fredrinn",
+            "Gord",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Sora",
+            "Valentina",
+            "Guinevere",
+            "Hilda",
+            "Harley"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Phoveus",
+            "Fanny",
+            "Zhuxin",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Harith",
+            "Obsidia",
+            "Gloo",
+            "Chip",
+            "Freya"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Team Liquid ID",
+        "score": "2-0",
+        "duration": "12:09",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Sora",
+            "Fanny",
+            "Valentina",
+            "Yi Sun-shin",
+            "Khaleed"
+          ],
+          "bans": [
+            "Paquito",
+            "Arlott",
+            "Lapu-Lapu",
+            "Alice"
+          ]
+        },
+        "redTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Terizla",
+            "Fredrinn",
+            "Gord",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Geek Fam ID vs Team Liquid ID",
+    "blueTeam": "Geek Fam ID",
+    "redTeam": "Team Liquid ID",
+    "date": "May 23, 2026",
+    "mvp": "DrichelBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Geek Fam ID",
+        "score": "1-0",
+        "duration": "12:40",
+        "map": "",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Gloo",
+            "Fredrinn",
+            "Yve",
+            "Claude",
+            "Atlas"
+          ],
+          "bans": [
+            "Sora",
+            "Leomord",
+            "Zhuxin",
+            "Karrie",
+            "Marcel"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Phoveus",
+            "Baxia",
+            "Gord",
+            "Clint",
+            "Hylos"
+          ],
+          "bans": [
+            "Freya",
+            "Valentina",
+            "Chip",
+            "Lylia",
+            "Alice"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Geek Fam ID",
+        "score": "2-0",
+        "duration": "13:37",
+        "map": "",
+        "blueTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Freya",
+            "Fredrinn",
+            "Valentina",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Guinevere",
+            "Kalea",
+            "Harley",
+            "Kaja",
+            "Moskov"
+          ]
+        },
+        "redTeam": {
+          "name": "Team Liquid ID",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Zhuxin",
+            "Karrie",
+            "Marcel"
+          ],
+          "bans": [
+            "Harith",
+            "Granger"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Alter Ego vs RRQ Hoshi",
+    "blueTeam": "Alter Ego",
+    "redTeam": "RRQ Hoshi",
+    "date": "May 23, 2026",
+    "mvp": "Super",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Alter Ego",
+        "score": "1-0",
+        "duration": "14:04",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Zhuxin",
+            "Granger",
+            "Hilda"
+          ],
+          "bans": [
+            "Phoveus",
+            "Khaleed",
+            "Terizla",
+            "Yi Sun-shin",
+            "Harith"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Lapu-Lapu",
+            "Baxia",
+            "Gord",
+            "Claude",
+            "Kaja"
+          ],
+          "bans": [
+            "Gatotkaca",
+            "Leomord",
+            "Lunox",
+            "Kalea",
+            "Chip"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Alter Ego",
+        "score": "2-0",
+        "duration": "14:36",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Gord",
+            "Granger",
+            "Hilda"
+          ],
+          "bans": [
+            "Chou",
+            "Paquito",
+            "Marcel",
+            "Freya",
+            "Fanny"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Phoveus",
+            "Baxia",
+            "Zhuxin",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Gloo",
+            "Karrie",
+            "Guinevere",
+            "Lancelot",
+            "Zetian"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Alter Ego",
+        "score": "3-0",
+        "duration": "13:02",
+        "map": "",
+        "blueTeam": {
+          "name": "Alter Ego",
+          "picks": [
+            "Terizla",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Suyou",
+            "Philippines"
+          ]
+        },
+        "redTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Lunox",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "Bigetron by Vitality vs ONIC",
+    "blueTeam": "Bigetron by Vitality",
+    "redTeam": "ONIC",
+    "date": "May 23, 2026",
+    "mvp": "MorenoBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Bigetron by Vitality",
+        "score": "1-0",
+        "duration": "17:22",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Phoveus",
+            "Fanny",
+            "Valentina",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Gloo",
+            "Zhuxin",
+            "Paquito",
+            "Yi Sun-shin",
+            "Freya"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Pharsa",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Khaleed",
+            "Uranus",
+            "Valir",
+            "Lancelot",
+            "Kalea"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Bigetron by Vitality",
+        "score": "2-0",
+        "duration": "15:39",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Paquito",
+            "Yi Sun-shin",
+            "Valentina",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": [
+            "Marcel",
+            "Harley",
+            "Guinevere",
+            "Chip",
+            "Atlas"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Gloo",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Sora",
+            "Chou",
+            "Arlott",
+            "Lapu-Lapu",
+            "Fredrinn"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Bigetron by Vitality",
+        "score": "3-0",
+        "duration": "20:36",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Bigetron by Vitality",
+          "picks": [
+            "Uranus",
+            "Fanny",
+            "Valir",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Zetian",
+            "Lylia"
+          ]
+        },
+        "redTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Paquito",
+            "Lancelot",
+            "Zhuxin",
+            "Moskov",
+            "Kalea"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "RRQ Hoshi vs Dewa United",
+    "blueTeam": "RRQ Hoshi",
+    "redTeam": "Dewa United",
+    "date": "May 24, 2026",
+    "mvp": "QINNBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "RRQ Hoshi",
+        "score": "1-0",
+        "duration": "15:23",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Lapu-Lapu",
+            "Harley",
+            "Lylia",
+            "Karrie",
+            "Khaleed"
+          ],
+          "bans": [
+            "Uranus",
+            "Leomord",
+            "Valir",
+            "Gloo",
+            "Ling"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Valentina",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Harith",
+            "Baxia",
+            "Phoveus",
+            "Kadita",
+            "Granger"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "RRQ Hoshi",
+        "score": "2-0",
+        "duration": "26:08",
+        "map": "Flying Cloud",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Valir",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Kaja",
+            "Fanny",
+            "Arlott",
+            "Freya",
+            "Hilda"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Valentina",
+            "Ling",
+            "Zhuxin",
+            "Harith",
+            "Baxia"
+          ],
+          "bans": [
+            "Chip",
+            "Kalea",
+            "Franco",
+            "Paquito",
+            "Lancelot"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "RRQ Hoshi",
+        "score": "3-0",
+        "duration": "14:10",
+        "map": "",
+        "blueTeam": {
+          "name": "RRQ Hoshi",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Zhuxin",
+            "Karrie",
+            "Gloo"
+          ],
+          "bans": [
+            "Helcurt",
+            "Marcel",
+            "Philippines"
+          ]
+        },
+        "redTeam": {
+          "name": "Dewa United",
+          "picks": [
+            "Valentina",
+            "Baxia",
+            "Kadita",
+            "Granger",
+            "Kaja"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  },
+  {
+    "match": "ONIC vs EVOS",
+    "blueTeam": "ONIC",
+    "redTeam": "EVOS",
+    "date": "May 24, 2026",
+    "mvp": "KiboyBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "ONIC",
+        "score": "1-0",
+        "duration": "29:43",
+        "map": "",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Paquito",
+            "Harley",
+            "Valentina",
+            "Granger",
+            "Chip"
+          ],
+          "bans": [
+            "Phoveus",
+            "Leomord",
+            "Irithel",
+            "Chou",
+            "Valir"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Uranus",
+            "Suyou",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Hilda",
+            "Freya",
+            "Kalea",
+            "Masha",
+            "Sora"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "ONIC",
+        "score": "2-0",
+        "duration": "24:03",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "ONIC",
+          "picks": [
+            "Gloo",
+            "Harley",
+            "Valir",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Marcel",
+            "Harith",
+            "Khaleed",
+            "Terizla"
+          ]
+        },
+        "redTeam": {
+          "name": "EVOS",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Valentina",
+            "Irithel",
+            "Chou"
+          ],
+          "bans": [
+            "Lapu-Lapu",
+            "Lancelot"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "match": "Natus Vincere vs Geek Fam ID",
+    "blueTeam": "Natus Vincere",
+    "redTeam": "Geek Fam ID",
+    "date": "May 24, 2026",
+    "mvp": "MarceLBans",
+    "games": [
+      {
+        "game": 1,
+        "winner": "Natus Vincere",
+        "score": "1-0",
+        "duration": "13:52",
+        "map": "",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Lapu-Lapu",
+            "Guinevere",
+            "Kimmy",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Paquito",
+            "Leomord",
+            "Gatotkaca",
+            "Suyou",
+            "Lylia"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Terizla",
+            "Barats",
+            "Zhuxin",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Gord",
+            "Badang",
+            "Yu Zhong",
+            "Harley",
+            "Freya"
+          ]
+        }
+      },
+      {
+        "game": 2,
+        "winner": "Natus Vincere",
+        "score": "2-0",
+        "duration": "13:26",
+        "map": "Expanding Rivers",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Lylia",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Gloo",
+            "Baxia",
+            "Arlott",
+            "Sora",
+            "Phoveus"
+          ]
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Paquito",
+            "Leomord",
+            "Zhuxin",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Marcel",
+            "Uranus",
+            "Kaja",
+            "Philippines"
+          ]
+        }
+      },
+      {
+        "game": 3,
+        "winner": "Natus Vincere",
+        "score": "3-0",
+        "duration": "19:43",
+        "map": "",
+        "blueTeam": {
+          "name": "Natus Vincere",
+          "picks": [
+            "Yu Zhong",
+            "Harley",
+            "Zhuxin",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": []
+        },
+        "redTeam": {
+          "name": "Geek Fam ID",
+          "picks": [
+            "Terizla",
+            "Suyou",
+            "Gord",
+            "Harith",
+            "Badang"
+          ],
+          "bans": []
+        }
+      }
+    ]
+  }
+]

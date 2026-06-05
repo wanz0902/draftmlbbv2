@@ -1,0 +1,233 @@
+{
+  "id": "edith",
+  "name": "Edith",
+  "heroName": "Edith",
+  "role": [
+    "Tank",
+    "Marksman"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "EXP",
+  "lanes": [
+    "EXP",
+    "Gold",
+    "Roam"
+  ],
+  "flex_lanes": [
+    "Gold",
+    "Roam"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Overload",
+      "description": "After each skill cast, Edith and Phylax become Overloaded for 3s, during which all Basic Attacks will trigger chain lightning, dealing extra (Magic Damage) equal to ( +30% Total Magic Power) plus 4(+0.25*Hero Level)% of the target's Max HP to up to 4 enemies. Chain lightning damage against Minions is increased to 150%.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Overload",
+      "tips": "Edith has the potential to overwhelm her enemy in the early to mid game. With her Passive Overload, she can clear the lanes and suppress her enemy with ease from afar while quickly leveling up to Lv.4.",
+      "iconUrl": "/raw-assets/skill_icons/edith/overload.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Earth Shatter",
+      "description": "After a 0.75s delay, Edith controls Phylax to launch an earth-shattering blow in a designated direction, dealing 225( +10% Total HP) (Physical Damage) to enemies hit (deals 120% damage to Minions) and knocking them airborne for 1s. This skill won't be interrupted by regular control effects (excluding Suppression).",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Earth_Shatter",
+      "tips": "Earth Shatter has a relatively long cast animation, thus it is recommended to couple it with Edith's teammate's control skill or cast it in a bush to increase the hit rate.",
+      "iconUrl": "/raw-assets/skill_icons/edith/earth_shatter.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Onward",
+      "description": "Edith controls Phylax to charge in the target direction, dealing 90( +3% Total HP) (Physical Damage) to enemies along the way. If Phylax hits an enemy hero during the charge, it will stop immediately and throw them over its shoulder, dealing 108( +5% Total HP) (Physical Damage).",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Onward",
+      "tips": "Onward is Edith's core skill. Use it to protect teammates or rip a tear in the enemy formation during the team fight.",
+      "iconUrl": "/raw-assets/skill_icons/edith/onward.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Primal Wrath",
+      "description": "(Passive:) When inside Phylax, Edith can accumulate Wrath according to the damage she receives (calculated before damage reduction). (Active:) Edith ejects herself forward from Phylax, knocking back nearby enemies. After that, she takes flight and can perform ranged Basic Attacks, each dealing 35( +75% Total Physical Attack) (+25% Total Magic Power) (Magic Damage). Edith also gains new skills in this state. When in flight, Edith gains 350( +5% Total HP)-350( +20% Total HP) extra Shield, 50%-150% extra Attack Speed and 5%-20% Hybrid Lifesteal based on the Wrath she accumulated, and converts each point of (Extra Physical Defense) and (Extra Magic Defense) into 3.2 (Magic Power). The flight state lasts up to 8s.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Primal_Wrath",
+      "iconUrl": "/raw-assets/skill_icons/edith/primal_wrath.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Objective DPS",
+      "Late Game Carry",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicNote": "Edith transforms into Marksman Form after using Ultimate. Marksman Form skills (Divine Retribution, Lightning Bolt) not currently available in local source.",
+  "needsEnrichment": true,
+  "mechanicCategory": [
+    "Transform",
+    "Tank to Marksman"
+  ],
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Form Management",
+    "Combo Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "Objective DPS",
+    "Late Game Carry",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

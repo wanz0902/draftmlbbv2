@@ -1,0 +1,216 @@
+{
+  "id": "irithel",
+  "name": "Irithel",
+  "heroName": "Irithel",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Jungle Heart",
+      "description": "Irithel and Leo's immaculate teamwork allows her to shoot while moving. Each Basic Attack will shoot 2 crossbow bolt(s) (but takes longer to refill) that deal ( +55% Total Physical Attack) (Physical Damage) per bolt (inherits a portion of Attack Effects). Moving will build up (Jungle Heart), up to a maximum of 10 units, and cause the next Basic Attack to unleash 1 additional bolt(s).",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Jungle_Heart",
+      "tips": "Jungle Heart is a passive skill that makes Irithel to hit enemies while running or moving. This passive is so benefical that you can attack enemy who are chasing at you while running. but its attack speed is quite slow ,so you need some attack speed items.",
+      "iconUrl": "/raw-assets/skill_icons/irithel/jungle_heart.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Strafe",
+      "description": "Irithel launches a volley of arrows on the target area, dealing 330( +60% Total Physical Attack) (Physical Damage) to enemies within and reducing their Physical Defense by 15 for 3s.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Strafe",
+      "tips": "This skill should be used as initial when you attack enemy, this skill reduce enemies defense armor greatly,so you can deal even more damages to heavy armor heros esspecially tanks.This skill can give great damage while cleaning lanes. You can use this skill as initial on monsters to reduce their armors.",
+      "iconUrl": "/raw-assets/skill_icons/irithel/strafe.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Force of The Queen",
+      "description": "Leo lets out a piercing roar, dealing 200( +60% Total Physical Attack) (Physical Damage) to nearby enemies and slowing them by 40% for 2s.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Force_of_The_Queen",
+      "tips": "You can use this skill to slow the enemies and deal some damage during battle. You can use this skill to slow the enemies while you are chasing them or escaping.",
+      "iconUrl": "/raw-assets/skill_icons/irithel/force_of_the_queen.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Heavy Crossbow",
+      "description": "Irithel orders Leo to leap in the target direction and empowers her crossbow for 10s. For the duration, she gains 30 Movement Speed and her Basic Attacks shoot enhanced crossbow bolts, dealing 120( +60% Total Physical Attack) (Physical Damage) to the target and nearby units. (Jungle Heart) also accumulates faster for the duration.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Heavy_Crossbow",
+      "tips": "Heavy Crossbow is the ultimate skill of irithel, you should use this skill before team battle. This skill's basic attack Critical damages are REALLY CREEPY , dealing 1500-2400 dmg to the target and nearby enemies! ( the situation with only 4 items/gears.) You only need 3-5 hits to kill a mage. If enemies are stick together, it will deal damages to all of them! It's also good in dealing damage to turret too, it only take a bit of time to destory a turret with her ulti's basic attack. You can use this skill to escape from enemy too.",
+      "iconUrl": "/raw-assets/skill_icons/irithel/heavy_crossbow.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Irithel adalah marksman dengan DPS tinggi yang menjadi win condition utama di late game.",
+  "playstyleTags": [
+    "DPS"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Late Game Insurance",
+    "Snowball Potential"
+  ],
+  "counterTags": [
+    "Dive",
+    "Burst",
+    "Flank"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Needs Peel"
+  ],
+  "macroTags": [
+    "Objective DPS",
+    "Late Game Carry",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

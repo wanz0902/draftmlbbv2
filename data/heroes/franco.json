@@ -1,0 +1,225 @@
+{
+  "id": "franco",
+  "name": "Franco",
+  "heroName": "Franco",
+  "role": [
+    "Tank"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam",
+    "EXP"
+  ],
+  "flex_lanes": [
+    "EXP"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Wasteland Force",
+      "description": "If no damage is taken within 5s, Franco gains 10% Movement Speed, recovers 1% Max HP per second, and begins accumulating (Wasteland Force) (up to 10 stacks). Franco will consume all (Wasteland Force) stacks on his next skill cast to increase the skill's damage by up to 150%.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Wasteland_Force",
+      "tips": "Wasteland Force adalah Skill pasif yang membuat Franco menjadi Ganker sekaligus Tank yang menakutkan. Pasif ini membuat Anda bertahan lebih lama di Lane dan memudahkan Anda untuk mengambil posisi dengan baik di dalam semak-semak.",
+      "iconUrl": "/raw-assets/skill_icons/franco/wasteland_force.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Iron Hook",
+      "description": "Franco launches an iron hook in the target direction. The hook will snag the first enemy unit hit, dealing 400( +100% Total Physical Attack) (Physical Damage) and dragging them to Franco.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Iron_Hook",
+      "tips": "Skill ini adalah Skill yang paling mengerikan dari Franco. Umumnya bila berhasil menarik lawan ke arah teman satu tim Anda, kemungkinan besar akan membunuh lawan yang tertarik tersebut. Hanya saja Skill ini tidak mudah untuk digunakan.",
+      "iconUrl": "/raw-assets/skill_icons/franco/iron_hook.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Fury Shock",
+      "description": "Franco lashes out, dealing (Physical Damage) equal to 300 plus 4% of his Max HP to nearby enemies and slowing them by 70% for 1.5s.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Fury_Shock",
+      "tips": "Fury Shock adalah Skill AOE yang memiliki efek Slow. Skill ini dapat digunakan untuk membersihkan Lane atau mencegah lawan untuk melarikan diri setelah tertarik oleh Hook Franco.",
+      "iconUrl": "/raw-assets/skill_icons/franco/fury_shock.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Bloody Hunt",
+      "description": "Franco suppresses the target enemy hero for 1.8s and strikes them 6 times over the duration, each time dealing 50( +70% Total Physical Attack) (Physical Damage).",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Bloody_Hunt",
+      "tips": "Brutal Massacre juga merupakan Skill Follow Up yang digunakan setelah berhasil menarik lawan dengan Hook Anda. Skill ini memiliki efek Stun yang dapat mencegah lawan melarikan diri atau memberikan waktu kepada teman satu tim Anda untuk menghabisi lawan yang terkena Stun dari Brutal Massacre.",
+      "iconUrl": "/raw-assets/skill_icons/franco/bloody_hunt.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Franco adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

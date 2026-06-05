@@ -1,0 +1,187 @@
+{
+  "id": "hanabi",
+  "name": "Hanabi",
+  "heroName": "Hanabi",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Ninjutsu: Petal Barrage",
+      "description": "Hanabi's Basic Attacks and skills will launch Petal Blades after hitting a target, bouncing up to 4 times to nearby enemies (the first bounce deals 40% of the initial damage, and subsequent bounces deal 85% of the previous). Bounces from her Basic Attacks inherit a portion of Attack Effects.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ninjutsu:_Petal_Barrage",
+      "tips": "The Scarlet Shadow’s secret technique. When Hanabi has full HP, health that would have been granted from Lifesteal is converted into a shield. When this shield is active, Hanabi is immune to all control effects.",
+      "iconUrl": "/raw-assets/skill_icons/hanabi/ninjutsu_petal_barrage.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Ninjutsu: Equinox",
+      "description": "(Passive): The secret Ninjutsu of the Scarlet Shadow makes Hanabi immune to control effects when she has a shield from any source. (Active): Hanabi gains a 300( +40% Total Physical Attack) shield for 5s. When the shield is active, Hanabi gains 20% Movement Speed and 25% Attack Speed, and 20% of her damage dealt to enemy heroes will be added to this shield (only adds 10% of the damage dealt to non-hero units). This shield cannot exceed 50% of Hanabi's max HP.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ninjutsu:_Equinox",
+      "tips": "Hanabi consumes mana to unleash the flower demon sealed within the Higanbana, firing petal blades at her enemies. After each basic attack hits, a new blade will spawn and deal physical damage to the enemy. Consecutive hits deal less damage. Passive: This skill grants Hanabi a certain amount of Lifesteal, which increases each time Petal Barrage is upgraded.",
+      "iconUrl": "/raw-assets/skill_icons/hanabi/ninjutsu_equinox.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Ninjutsu: Soul Scroll",
+      "description": "Hanabi fires the energy Kunai in the targeted direction, dealing 450( +80% Total Physical Attack) (Physical Damage) to enemies along the way and reducing their Movement Speed by 60% for 1s. Enemy units hit will also be marked, allowing Hanabi's next Bounce Damage from Basic Attacks to deal 30( +100% Total Physical Attack) (Physical Damage) on them with no damage decay.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ninjutsu:_Soul_Scroll",
+      "tips": "Fires a kunai in the specified direction, attached with a scroll sealed by demonic flower energy. Deals physical damage to enemies it hits along the way and slows them. Hanabi will recover Mana for each enemy hero hit (this Mana regeneration effect will decay when hitting multiple heroes).",
+      "iconUrl": "/raw-assets/skill_icons/hanabi/ninjutsu_soul_scroll.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Forbidden Jutsu: Higanbana",
+      "description": "Hanabi throws Higanbana in the targeted direction, dealing 300( +50% Total Physical Attack) (Physical Damage) to the first enemy hero hit and immobilizing them for 0.8s. After 1s, Higanbana will bloom at the location of the first hit, dealing 300( +50% Total Physical Attack) (Physical Damage) to nearby enemies. Subsequent hits on the same target decay to 20% damage.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Forbidden_Jutsu:_Higanbana",
+      "tips": "When the flowers blossom, the leaves are forgotten. Hanabi completely unlocks the Higanbana’s seal and launches it at the enemy. After hitting an enemy, the Higanbana blooms, dealing physical damage and immobilizing them, and then spreads to nearby enemies. After a certain period of time, if the enemy is still within range of the Higanbana, a new flower will appear, causing the same damage and immobilization effect. The spreading effect only works once per hero.",
+      "iconUrl": "/raw-assets/skill_icons/hanabi/forbidden_jutsu_higanbana.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Hanabi adalah marksman dengan DPS tinggi yang menjadi win condition utama di late game.",
+  "playstyleTags": [
+    "DPS"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Late Game Insurance",
+    "Snowball Potential"
+  ],
+  "counterTags": [
+    "Dive",
+    "Burst",
+    "Flank"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Needs Peel"
+  ],
+  "macroTags": [
+    "Objective DPS",
+    "Late Game Carry",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

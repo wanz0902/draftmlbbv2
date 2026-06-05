@@ -1,0 +1,219 @@
+{
+  "id": "khaleed",
+  "name": "Khaleed",
+  "heroName": "Khaleed",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Sand Walk",
+      "description": "Khaleed accumulates (Desert Power) while moving. After (Desert Power) is fully charged, he will glide on sand, increasing Movement Speed by 35%, making his next Basic Attack deal 50( +140% Total Physical Attack) (Physical Damage) to the target (cannot Crit), and reducing the target's Movement Speed by 40% for 1.5s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Sand_Walk",
+      "tips": "Khaleed mengakumulasikan Desert Power ketika bergerak. Ketika Desert Power telah terisi penuh, Khaleed akan berselancar di atas pasir, memperoleh Movement Speed tambahan dan Basic Attack yang diperkuat. Basic Attack yang diperkuat membuat Khaleed dapat berlari ke arah target dan menciptakan gelombang pasir, memberikan Damage kepada target dan lawan di belakangnya. Gelombang pasir tersebut juga meninggalkan jejak di tanah, di mana Khaleed memperoleh Movement Speed tambahan sedangkan lawan kehilangan Movement Speed.",
+      "iconUrl": "/raw-assets/skill_icons/khaleed/sand_walk.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Desert Tornado",
+      "description": "Khaleed whirls his scimitar, dealing 200( +140% Total Physical Attack) (Physical Damage) to enemies in the area and pulling them toward him. This skill can be used up to 3 time(s) in a row. This skill deals 50% damage to Minions and Creeps.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Desert_Tornado",
+      "tips": "Khaleed memutar pedangnya, memberikan Damage kepada lawan di sekitar. Ketika lawan terkena Hit, Khaleed dapat melompat ke arah target dan menggunakan kembali Skill ini secara otomatis hingga tiga kali, meningkatkan Damage yang diberikan dengan setiap serangan.",
+      "iconUrl": "/raw-assets/skill_icons/khaleed/desert_tornado.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Quicksand Guard",
+      "description": "Khaleed protects himself with the power of the quicksand, restoring 60 plus 5% of his lost HP and 10 (Desert Power) every 0.5s, reducing damage taken by 35% for up to 4s. While channeling, quicksand appears under his feet, slowing the enemy by 60%. This skill is a Focused Cast. Any other controls will interrupt this skill.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Quicksand_Guard",
+      "tips": "Khaleed melindungi dirinya dengan kekuatan pasir hisap, memulihkan HP, dan mengurangi Damage yang diterima. Sementara itu, lawan di jangkauannya akan terkena efek Slow.",
+      "iconUrl": "/raw-assets/skill_icons/khaleed/quicksand_guard.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Raging Sandstorm",
+      "description": "Khaleed rides the sandstorm and charges toward a designated location, dealing 100( +50% Total Physical Attack) (Physical Damage) to enemies along the way and knocking them toward his destination. Khaleed is immune to control effects during this process. Upon reaching the destination, Khaleed will smash the ground, dealing 450( +160% Total Physical Attack) (Physical Damage) to enemies in the area and stunning them for 1s, and fully charge his (Desert Power).",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Raging_Sandstorm",
+      "tips": "Khaleed memanggil sebuah badai pasir dan bergerak ke lokasi target, menjadi Immune terhadap Crowd Control selama durasi tersebut dan menyebabkan efek Knockback kepada lawan yang terkena. Ketika tiba di lokasi tujuan, Khaleed menghantam tanah, memberikan Damage dan menyebabkan efek Stun kepada lawan di area tersebut.",
+      "iconUrl": "/raw-assets/skill_icons/khaleed/raging_sandstorm.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Khaleed adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

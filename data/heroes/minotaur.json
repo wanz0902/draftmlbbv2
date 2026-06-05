@@ -1,0 +1,195 @@
+{
+  "id": "minotaur",
+  "name": "Minotaur",
+  "heroName": "Minotaur",
+  "role": [
+    "Tank",
+    "Support"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Rage Incarnate",
+      "description": "When Minotaur applies a control effect to an enemy hero with a skill, he will also reduce their Hybrid Defense by 5 (+0.5*Hero Level) for 2s. When Minotaur heals an ally hero with a skill, he will also increase their Hybrid Defense by 5 (+0.5*Hero Level) for 2s. These effects are doubled in (Enraged) state.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Rage_Incarnate",
+      "tips": "Be always on the lead. Position yourself in front of the creeps and more often, in front of the hero you're sharing the lane with. This will force your enemy hero and creeps to attack you first which will help your rage meter to be filled.",
+      "iconUrl": "/raw-assets/skill_icons/minotaur/rage_incarnate.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Despair Stomp",
+      "description": "Minotaur jumps to the target location, dealing 280( +60% Total Physical Attack) (Physical Damage) to enemies in the area and briefly knocking them airborne. Enemies hit will also be slowed by 40% while Minotaur enhances his Basic Attacks to deal ( +3% Total HP) extra (Physical Damage) for 2s. (Enraged): Increases the AOE range and the damage dealt by ( +3% Total HP) (Physical Damage).",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Despair_Stomp",
+      "tips": "As stated Despair Hammer deals great damage especially in rage mode. Maximize it first next to the ultimate for greater crowd control. Minotaur is a manaless hero so abuse using this skill for greater CS.",
+      "iconUrl": "/raw-assets/skill_icons/minotaur/despair_stomp.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Motivation Roar",
+      "description": "Minotaur motivates himself and nearby allied heroes, restoring 260( +100% Total Magic Power) HP to them and healing himself based on his lost HP. (Enraged): Minotaur gains (Enraged Regen) for 2s, during which he recovers HP each time he's hit by a Basic Attack.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Motivation_Roar",
+      "tips": "Known as a healing ability, Very good sustain better than Rafaela wherein you don’t need to spend mana to regen your HP. This skill is usually maximized during rage mode because aside from great heal, this will allow Minotaur to have a great Physical and magic defense.",
+      "iconUrl": "/raw-assets/skill_icons/minotaur/motivation_roar.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Minoan Fury",
+      "description": "Minotaur enters (Enraged) state and smashes the ground 3 times. The first 2 hits deal 180( +85% Total Physical Attack) (Physical Damage) to nearby enemies and slow them by 70%, while the final hit deals 200( +85% Total Physical Attack) (True Damage) and knocks targets airborne. Minotaur is immune to control effects during this attack. The (Enraged) state lasts 12s and enhances Minotaur's skills for the duration.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Minoan_Fury",
+      "tips": "AoE damage and crowd control. This will makes your opponent helpless. With this skill they don’t have a chance to disengage unless they are going to use flicker. With a full AD build, your ultimate can do an insta kill to marksman and other squishy hero.",
+      "iconUrl": "/raw-assets/skill_icons/minotaur/minoan_fury.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Vision Control",
+      "Team Enabler",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Minotaur adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "Vision Control",
+    "Team Enabler",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

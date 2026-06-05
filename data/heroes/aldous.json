@@ -1,0 +1,196 @@
+{
+  "id": "aldous",
+  "name": "Aldous",
+  "heroName": "Aldous",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP",
+  "lanes": [
+    "EXP",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Contract: Transform",
+      "description": "After every 2 Basic Attacks, Aldous gains a 500 (+3 times the number of (Soul Steal) stacks) shield for 3s on his next Basic Attack. This effect can only be triggered once every 5s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Contract:_Transform",
+      "tips": "After every 3 attacks, the damage dealt by Aldous' next attack will be transformed into a shield that lasts for seconds. Activates every 3 seconds.",
+      "iconUrl": "/raw-assets/skill_icons/aldous/contract_transform.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Contract: Soul Steal",
+      "description": "Aldous unleashes his inner energy to enhance his next Basic Attack to deal (Physical Damage) equal to 200( +100% Total Physical Attack) plus 5 times the number of (Soul Steal) stacks. If this attack kills an enemy hero/Siege Minion/other non-hero unit, Aldous will gain 10/10/4 stacks of (Soul Steal) (up to 650 stacks). The enhanced Basic Attack deals 300% extra Base Damage to Minions or Creeps. Aldous gets an extra 5/2 stack(s) of (Soul Steal) when a nearby enemy Siege Minion/other non-hero unit dies.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Contract:_Soul_Steal",
+      "tips": "Aldous unleashes his inner energy to strengthen the next basic attack. If this attack eliminates the enemy hero or unit, the additional damage of this skill is permanently increased. When attacking minions or monsters, the damage of strengthened basic attacks are raised.",
+      "iconUrl": "/raw-assets/skill_icons/aldous/contract_soul_steal.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Contract: Explosion",
+      "description": "Aldous assumes a defensive stance, gaining 30% Damage Reduction and 20% extra Movement Speed for 2s or until manual cancellation. He then deals 100( +20% Total Physical Attack)-200( +40% Total Physical Attack) (Physical Damage) to nearby enemies and stuns them for 0.5-1s (scales with defensive stance duration).",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Contract:_Explosion",
+      "tips": "Aldous assumes a defensive stance. During this time, Aldous is immune to basic attacks, while damage from other forms of attacks are reduced. After 1 second, he can reactivate to end it immediately, his scute will explode, dealing damage to surrounding enemy units.",
+      "iconUrl": "/raw-assets/skill_icons/aldous/contract_explosion.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Contract: Chase Fate",
+      "description": "Aldous gains vision of all enemy heroes for 5s. During this time, if Aldous uses this skill again, he can dash toward an enemy hero. When Aldous hits that enemy hero, he will deal (Physical Damage) equal to 250 plus 8% of the target's Max HP and knock back the target for 1s. (Aldous can interrupt target's Recall during the dash.)",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Contract:_Chase_Fate",
+      "tips": "Aldous gains the ability to see the positions of enemy heroes for seconds. During this time, if Aldous uses this skill a second time while it is still in effect, then he permanently sees the position of one enemy hero. When Aldous hits that enemy hero, he will deal damage and cause knock back. Ending this ability early results in a decrease in cool-down time.",
+      "iconUrl": "/raw-assets/skill_icons/aldous/contract_chase_fate.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Aldous adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Jungle Tempo",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

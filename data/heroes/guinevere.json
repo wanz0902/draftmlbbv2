@@ -1,0 +1,219 @@
+{
+  "id": "guinevere",
+  "name": "Guinevere",
+  "heroName": "Guinevere",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Super Magic",
+      "description": "Guinevere deals 25% extra damage to airborne enemies and deals ( +80% Total Physical Attack) (+60% Total Magic Power) (Magic Damage) with her Basic Attacks. Guinevere builds Super Magic each time she deals damage. Once fully charged, her next Basic Attack becomes guided, dealing 80( +100% Total Physical Attack) (+120% Total Magic Power) (Magic damage) on hit and restoring 80 HP plus 8% of her lost HP. Enemies hit by Guinevere's skills or enhanced Basic Attack will be marked for 5s. Those with 3 marks will be knocked airborne when hit by her Violet Requiem.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Super_Magic",
+      "tips": "Try to deal damage to enemies while they're knocked up.",
+      "iconUrl": "/raw-assets/skill_icons/guinevere/super_magic.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Energy Wave",
+      "description": "Guinevere releases an energy orb in the target direction, dealing 300( +125% Total Magic Power) (Magic Damage) and slowing enemies by 50% for 1.2s. Successfully hitting an enemy reduces all her skill cooldowns by 1s.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Energy_Wave",
+      "tips": "It's the main damage skill of Guinevere. The strong slowing effects can increase the hit rate of other skills. Meanwhile, this skill provides CD Reduction to other skills. It's also a poke skill when Guinevere is laning.",
+      "iconUrl": "/raw-assets/skill_icons/guinevere/energy_wave.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Spatial Migration",
+      "description": "Guinevere leaps to the target location, dealing 250( +80% Total Magic Power) (Magic Damage). Enemy heroes and Creeps hit will be knocked airborne for 1s and take 125( +50% Total Magic Power) additional (Magic Damage). (Use Again): Guinevere blinks toward the target direction and leaves an illusion behind. If the illusion takes damage, it will restore Super Magic for Guinevere and explode after 1.5s, dealing 100( +30% Total Magic Power) (Magic Damage) to nearby enemies.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spatial_Migration",
+      "tips": "As the core skill of Guinevere, How many enemies are knocked into the air determines the success or failure of the teamfights.",
+      "iconUrl": "/raw-assets/skill_icons/guinevere/spatial_migration.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Violet Requiem",
+      "description": "Guinevere creates a force field around her, gaining Control Immunity while attacking nearby enemies 11 times within 2s, dealing 880( +385% Total Magic Power) (Magic Damage) in total. Airborne enemies hit will be knocked airborne again, up to 8 additional times.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Violet_Requiem",
+      "tips": "Other than the knock-up effect of Magic Thump, you can also use this skill to cooperate with teammates' knock-up skills.",
+      "iconUrl": "/raw-assets/skill_icons/guinevere/violet_requiem.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Guinevere adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

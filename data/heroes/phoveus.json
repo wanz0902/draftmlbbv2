@@ -1,0 +1,216 @@
+{
+  "id": "phoveus",
+  "name": "Phoveus",
+  "heroName": "Phoveus",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Demonic Intuition",
+      "description": "Phoveus' weapon, (Astaros), holds mysterious powers and is exceptionally sensitive to fast-moving prey. When an enemy hero uses Blink or Charge skills within 8 units of Astaros, it reduces all of Phoveus' skill cooldowns or charge times by 1s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Demonic_Intuition",
+      "iconUrl": "/raw-assets/skill_icons/phoveus/demonic_intuition.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Malefic Terror",
+      "description": "Phoveus smashes the ground and unleashes (Astaros Dread), dealing 300( +120% Total Magic Power) (Magic Damage) to the target. Upon hitting an enemy hero, Phoveus receives a 0( +60% Total Magic Power) (+6% Total HP) Shield as well as a 25% Movement Speed boost for 3s. If an enemy hero, creep or Phoveus himself touches Astaros Dread, it will spread and deal extra damage (successive damage dealt to the same enemy decays to 25%). This skill gains 1 charge every 8.5s, up to 3 charges, and deals 160% damage to minions.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Malefic_Terror",
+      "iconUrl": "/raw-assets/skill_icons/phoveus/malefic_terror.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Astaros Eye",
+      "description": "Phoveus summons forth (Astaros Eye) in a targeted area that deals 100( +20% Total Magic Power) damage. After 1s, (Astaros Eye) starts shrinking and pulling all enemies on it into its center, dealing 250( +70% Total Magic Power) (Magic Damage).",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Astaros_Eye",
+      "iconUrl": "/raw-assets/skill_icons/phoveus/astaros_eye.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Demonic Force",
+      "description": "(Astaros) keeps a watchful gaze over an area of 8 units around Phoveus. If it sees an enemy hero using Blink or Charge skills, it will be activated and cast a Mark upon them for 3s. During this time, Phoveus can rapidly blink to their location to deliver a fierce blow, dealing 600( +180% Total Magic Power) (Magic Damage) to the target and their vicinity and gaining a 160( +50% Total Magic Power) (+5% Total HP) Shield. Once Phoveus activates this effect, this skill can be cast repeatedly at the cost of Mana for up to 12s before entering cooldown, as long as the required conditions are met.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Demonic_Force",
+      "iconUrl": "/raw-assets/skill_icons/phoveus/demonic_force.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Phoveus adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Splitpush Threat",
+    "CC Coverage",
+    "Counter Pick"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

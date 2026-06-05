@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  /* Thin custom scrollbar elements */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Scrollbar hide utility */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Elegant fade-in transition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Fade in with upward slide */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Gradient position animation for text shimmer */
+@keyframes gradientX {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradientX 3s ease infinite;
+}
+
+/* ——— TAMBAHAN SETELAH @theme {} BLOCK YANG SUDAH ADA ——— */
+@theme {
+  --color-surface:       #0a111f;
+  --color-elevated:      #0f1826;
+  --color-card:          #141f2e;
+  --color-border:        rgba(255, 255, 255, 0.06);
+  --color-gold:          #f0b429;
+  --color-gold-bright:   #ffd166;
+  --color-gold-muted:    #b8860b;
+  --color-assassin:      #ff4d6d;
+  --color-mage:          #7b61ff;
+  --color-marksman:      #00d4ff;
+  --color-fighter:       #ff6b2b;
+  --color-tank:          #2dd4bf;
+  --color-support:       #4ade80;
+  --color-roamer:        #a78bfa;
+  --color-tier-splus:    #ff4d6d;
+  --color-tier-s:        #f97316;
+  --color-tier-a:        #eab308;
+  --color-tier-b:        #22c55e;
+  --color-tier-c:        #3b82f6;
+  --color-tier-d:        #6b7280;
+  --font-display: 'Rajdhani', 'Inter', sans-serif;
+}
+.glass-card { background: rgba(14, 24, 40, 0.7); backdrop-filter: blur(12px) saturate(1.5); -webkit-backdrop-filter: blur(12px) saturate(1.5); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; transition: border-color 200ms ease, background 200ms ease; }
+.glass-card:hover { border-color: rgba(240, 180, 41, 0.2); background: rgba(20, 32, 52, 0.75); }
+.glow-assassin  { box-shadow: 0 0 20px rgba(255,77,109,0.25);  }
+.glow-mage      { box-shadow: 0 0 20px rgba(123,97,255,0.25);  }
+.glow-marksman  { box-shadow: 0 0 20px rgba(0,212,255,0.25);   }
+.glow-fighter   { box-shadow: 0 0 20px rgba(255,107,43,0.25);  }
+.glow-tank      { box-shadow: 0 0 20px rgba(45,212,191,0.25);  }
+.glow-support   { box-shadow: 0 0 20px rgba(74,222,128,0.25);  }
+.glow-roamer    { box-shadow: 0 0 20px rgba(167,139,250,0.25); }
+.glow-gold      { box-shadow: 0 0 20px rgba(240,180,41,0.4), 0 0 60px rgba(240,180,41,0.1); }
+.tier-s-plus { background: rgba(255,77,109,0.15);  border: 1px solid #ff4d6d; color: #ff4d6d;  }
+.tier-s      { background: rgba(249,115,22,0.15);  border: 1px solid #f97316; color: #f97316;  }
+.tier-a      { background: rgba(234,179,8,0.15);   border: 1px solid #eab308; color: #eab308;  }
+.tier-b      { background: rgba(34,197,94,0.15);   border: 1px solid #22c55e; color: #22c55e;  }
+.tier-c      { background: rgba(59,130,246,0.15);  border: 1px solid #3b82f6; color: #3b82f6;  }
+.tier-d      { background: rgba(107,114,128,0.15); border: 1px solid #6b7280; color: #6b7280;  }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+.skeleton { background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.07) 50%, rgba(255,255,255,0.03) 75%); background-size: 200% 100%; animation: shimmer 1.5s ease-in-out infinite; border-radius: 6px; }
+@keyframes gold-shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+.btn-gold { background: linear-gradient(90deg, #b8860b 0%, #f0b429 40%, #ffd166 50%, #f0b429 60%, #b8860b 100%); background-size: 200% auto; color: #0a111f; font-weight: 700; transition: background-position 400ms ease, box-shadow 200ms ease; }
+.btn-gold:hover { background-position: right center; box-shadow: 0 0 20px rgba(240,180,41,0.5); }
+.prob-bar { height: 6px; border-radius: 3px; transition: width 600ms cubic-bezier(0.4, 0, 0.2, 1); }
+.synergy-high   { color: #4ade80; }
+.synergy-medium { color: #f0b429; }
+.synergy-low    { color: #6b7280; }
+.synergy-danger { color: #ff4d6d; }
+@keyframes pageSlideIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.page-enter { animation: pageSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards; }

@@ -1,0 +1,267 @@
+{
+  "id": "faramis",
+  "name": "Faramis",
+  "heroName": "Faramis",
+  "role": [
+    "Mage",
+    "Support"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid",
+  "lanes": [
+    "Mid",
+    "Roam"
+  ],
+  "flex_lanes": [
+    "Roam"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 118,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "0.98",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Vicious Retrieval",
+      "description": "Every 4s, Faramis' next skill against enemy heroes and summoned objects generates a soul fragment on the spot. Faramis can absorb the soul fragment to restore 100 (+50% Total Magic Power) HP and gain 2 extra Magic Power (up to 40 stacks). Upon death, he consumes the absorbed soul fragments to reduce the respawn timer, each reducing the timer by 3% (up to 90%). Enemies that die around Faramis also have a chance to drop soul fragments.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "(+50% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Vicious_Retrieval"
+    },
+    "skill1": {
+      "name": "Shadow Stampede",
+      "description": "Faramis enters the Shadow state for 3s, gaining 70% extra Movement Speed, 25 Physical & Magic Defense, and 20% Cooldown Reduction of this skill. He also gains the ability to move through terrain. Enemy heroes he touches take 250 (+60% Total Magic Power) Magic Damage and are marked with a Nether Mark. Upon leaving the Shadow state, Faramis pulls all the marked enemy heroes toward him, dealing them 250 (+60% Total Magic Power) Magic Damage\nUse Again: Ends the Shadow state early to pull marked enemy heroes toward him.\nSoul Fragment absorption range is increased while this skill is active.\n|stats1=Skill Cost|stats1_value=85/95/105/115/125/135\n|stats2=Hybrid Defense Boost|stats2_value=25/30/35/40/45/50\n|stats3=Base Damage|stats3_value=250/280/310/340/370/400\n|stats4=Extra Damage|stats4_value=250/280/310/340/370/400",
+      "cooldown": "15.0",
+      "manaCost": "85",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)",
+        "(+60% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "85",
+            "95",
+            "105",
+            "115",
+            "125",
+            "135"
+          ]
+        },
+        {
+          "label": "Hybrid Defense Boost",
+          "values": [
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "280",
+            "310",
+            "340",
+            "370",
+            "400"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "250",
+            "280",
+            "310",
+            "340",
+            "370",
+            "400"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Buff",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Shadow_Stampede"
+    },
+    "skill2": {
+      "name": "Ghost Bursters",
+      "description": "Faramis gathers Nether energy in a fan-shaped area ahead, dealing 300 (+144% Total Magic Power) Magic Damage to enemies within. The energy will then split and bounce to nearby enemies, dealing 200 (+86% Total Magic Power) Magic Damage (splits up to 2 time(s) on enemy hero hits and 1 time(s) on non-enemy hero hits).\n|stats1=Cooldown|stats1_value=6.0/5.8/5.6/5.4/5.2/5.0\n|stats2=Skill Cost|stats2_value=60/66/72/78/84/90\n|stats3=Base Damage|stats3_value=330/360/390/420/450/480\n|stats4=Split Damage|stats4_value=200/220/240/260/280/300",
+      "cooldown": "6.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+144% Total Magic Power)",
+        "(+86% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "6.0",
+            "5.8",
+            "5.6",
+            "5.4",
+            "5.2",
+            "5.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "66",
+            "72",
+            "78",
+            "84",
+            "90"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "330",
+            "360",
+            "390",
+            "420",
+            "450",
+            "480"
+          ]
+        },
+        {
+          "label": "Split Damage",
+          "values": [
+            "200",
+            "220",
+            "240",
+            "260",
+            "280",
+            "300"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ghost_Bursters"
+    },
+    "ultimate": {
+      "name": "Nether Realm",
+      "description": "Faramis turns his surroundings into the Nether Realm for 6s, making affected allied heroes (including himself) enter the Specter state and granting them 400 plus 10 (+5% Total Magic Power)% extra HP and 50% extra Movement Speed for 1s. When the Specter state breaks, the hero will clear all debuffs and enter a brief Resurrection state for 1.3s. An allied hero's Specter state ends when they leave Nether Realm.\n|quote=Pain, destruction, death, rebirth! Enjoy the process!\n|stats1=Cooldown|stats1_value=90.0/80.0/70.0\n|stats2=Skill Cost|stats2_value=150/250/350\n|stats3=Extra HP|stats3_value=400/600/800",
+      "cooldown": "90.0",
+      "manaCost": "150",
+      "damageType": "None",
+      "scaling": [
+        "(+5% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "90.0",
+            "80.0",
+            "70.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "150",
+            "250",
+            "350"
+          ]
+        },
+        {
+          "label": "Extra HP",
+          "values": [
+            "400",
+            "600",
+            "800"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Death Immunity",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Nether_Realm"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage",
+      "Vision Control",
+      "Team Enabler",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

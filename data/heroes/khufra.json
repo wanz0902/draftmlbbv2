@@ -1,0 +1,219 @@
+{
+  "id": "khufra",
+  "name": "Khufra",
+  "heroName": "Khufra",
+  "role": [
+    "Tank"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Spell Curse",
+      "description": "Khufra activates the Spell Curse left by Esmeralda every 12s, enhancing his next Basic Attack. The enhanced Basic Attack gains extra attack range and deals (Magic Damage) equal to ( +120% Total Physical Attack) plus 6% of the target's Max HP. He also slows the target by 30% for 1.5s and heals 8% of his Max HP on hit. Each time Khufra applies a control effect to an enemy hero with his skill, the cooldown of (Spell Curse) is reduced by 4s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spell_Curse",
+      "tips": "It's the only recover skill of Khufra. The enhanced basic attack grants him strong poke abilities. It's smart strategies to use the skill and trigger passive twice in a short time and restore much HP.",
+      "iconUrl": "/raw-assets/skill_icons/khufra/spell_curse.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Tyrant's Revenge",
+      "description": "Khufra pulls the bandage on his arms to launch himself in the specified direction, dealing (Physical Damage) equal to 50 plus 7( )% of his Max HP to all enemy units on the path. When blinking to the furthest distance or encountering a first enemy hero, Khufra will immediately stop, dealing (Physical Damage) equal to 50 plus 7( )% of his Max HP to enemies nearby and then knocking them in the air for up to 1.1s.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Tyrant's_Revenge",
+      "tips": "It's the main skill for Khufra to join the battle. The longer he charges, the longer the knock-up effect will be. Try to better use it with ultimate \"Tyrant's Rage\" and control enemy heroes much longer.",
+      "iconUrl": "/raw-assets/skill_icons/khufra/tyrant_s_revenge.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Bouncing Ball",
+      "description": "Khufra uses bandage to wrap himself into a magic bouncing ball, increasing his own Physical & Magic Defense by 30%. Enemies trying to use blink skills to move across Khufra will be knocked airborne. Each time the magic bouncing ball hits the ground, it will deal (Magic Damage) equal to 50 plus 3( )% of his Max HP to enemies nearby and slow them by 80%. Lasts 0.2s.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Bouncing_Ball",
+      "tips": "Each time the magical bouncing ball hits the ground, it will deal Magic Damage to enemies nearby and reduce their movement speed. This skill counters the heroes that are good at blink skills - they can not move across the bouncing ball.",
+      "iconUrl": "/raw-assets/skill_icons/khufra/bouncing_ball.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Tyrant's Rage",
+      "description": "Khufra pulls back all enemy targets around him toward his front, dealing 300( +100% Total Physical Attack) (Physical Damage) and slowing them down for 1.25s. If the enemies are knocked against walls, extra (Physical Damage) equal to 150% of this skill's damage will be inflicted upon them, and they will be stunned, instead of slowed.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Tyrant's_Rage",
+      "tips": "Needs practice to well use this skill. Better use it with 1st skill and it would be easier for Khufra to deal huge damage and control enemies for a long time.",
+      "iconUrl": "/raw-assets/skill_icons/khufra/tyrant_s_rage.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Khufra adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

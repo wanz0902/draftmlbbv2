@@ -1,0 +1,200 @@
+{
+  "id": "akai",
+  "name": "Akai",
+  "heroName": "Akai",
+  "role": [
+    "Tank"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam",
+    "Jungle",
+    "EXP"
+  ],
+  "flex_lanes": [
+    "Jungle",
+    "EXP"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Tai Chi",
+      "description": "Akai gains a 25( +5% Total HP) shield for 4s on each skill cast and marks enemy heroes and Creeps hit by his skills. Akai's Basic Attacks deal 25( +5% Total HP) extra (Physical Damage) to marked enemies.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Tai_Chi",
+      "tips": "Getting a Shield on every skill cast makes Akai rathertanky during the early game, as well as provides a lot of opportunities foroutplays. The extra shield makes Akai a very formidable opponent in a 1v1scenario. When jungling, space out the usage of Skill 1 and Skill 2 to allow your shield to tank the damage from the jungle monsters, as Akai's passive shield has an internal cooldown.",
+      "iconUrl": "/raw-assets/skill_icons/akai/tai_chi.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Headbutt",
+      "description": "Akai charges in the target direction, dealing 300( +50% Total Physical Attack) (Physical Damage) to enemies along the way. If Akai hits an enemy hero during this process, he'll knock them airborne for 0.5s and be able to roll in the Joystick's direction once. Akai can cast (Headbutt) during (Heavy Spin) to quickly adjust his position.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Headbutt",
+      "tips": "The long-ranged jump allows for a strong engage into the enemy back line, a narrow escape across walls or just a really good ambush. Remember that when enemy's are marked by Blender (with the Froggy symbol floating on their heads) jumping on them will stun them.",
+      "iconUrl": "/raw-assets/skill_icons/akai/headbutt.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Body Slam",
+      "description": "Akai smashes the ground with his body, dealing 270( +6% Total HP) (Physical Damage) to nearby enemies and slowing them by 45% for 2s.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Body_Slam",
+      "tips": "Blender is Akai's poking skill. The projectile explodes upon impact or at maximum range, and has a relatively wide AoE, making it very easy to mark targets. The most important part of this ability is that attacking targets marked by Blender allows Akai to deal extra 5% of Akai's Max HP as physical damage, which is A WHOLE LOT OF FREAKING DAMAGE.",
+      "iconUrl": "/raw-assets/skill_icons/akai/body_slam.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Heavy Spin",
+      "description": "Akai removes all debuffs on him and spins for 4s, gaining Slow Immunity while continuously dealing 200( +100% Extra Physical Attack) (Physical Damage) to nearby enemies and knocking them back. Enemy heroes knocked back will knock back other heroes they collide with during the process. Akai also gradually increases his Movement Speed by 70% over the duration. This skill can only be interrupted by Suppression and Morph effects.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Heavy_Spin",
+      "tips": "Hurricane Dance is Akai's disruptive skill. Aside from the annoying knock back and wall pinning, Akai is immune to slowdown effects and has increased movement speed during the ULT duration. Akai's ULT also works as a Purify which clears all CC and Stun effects on him.",
+      "iconUrl": "/raw-assets/skill_icons/akai/heavy_spin.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Jungle Tempo",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Akai adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "Jungle Tempo",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

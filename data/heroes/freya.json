@@ -1,0 +1,225 @@
+{
+  "id": "freya",
+  "name": "Freya",
+  "heroName": "Freya",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP",
+  "lanes": [
+    "EXP",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Power of Einherjar",
+      "description": "After casting a skill, Freya gains 200% Attack Speed for her next 2 Basic Attacks (this effect can stack up to 6 times). Freya gains 1 stack of (Sacred Orb) on each Basic Attack and can spend (Sacred Orb) stacks to cast (Spirit Combo) consecutively.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Power_of_Einherjar",
+      "tips": "The description of the passive speaks for itself. It has no cooldown and and stacks after every 2nd basic attack once the three orbs disappear. It does not deal a lot of damage but it is pretty decent to have before engaging an opponent and it allows you to kill jungle monsters quicker as well when you are farming.",
+      "iconUrl": "/raw-assets/skill_icons/freya/power_of_einherjar.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Leap of Faith",
+      "description": "Freya jumps to the target location, dealing 200( +80% Extra Physical Attack) (Physical Damage) to enemies hit and pulling them towards her.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Leap_of_Faith",
+      "tips": "Only use it when you're sure that you'll land on the enemy as soon as you jump or else you will just be putting yourself in danger if you can't land that crowd control on them the moment you go in. During a team fight, assess the situation of your team and if it looks bad. do not spam this skill if you only want to make damage since that skill is not freya's source of burst damage, save it instead for when you need to jump out and retreat from the battlefield.",
+      "iconUrl": "/raw-assets/skill_icons/freya/leap_of_faith.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Spirit Combo",
+      "description": "Freya strikes in the target direction, gaining a 60( +70% Extra Physical Attack) shield while dealing 20( +90% Total Physical Attack) (Physical Damage) to enemies hit and slowing them by 30% for 0.5s. Freya can cast this skill again within 3.5s at the cost of 2 stacks of (Sacred Orb). On the (3rd cast), Freya leaps into the air and smashes the area below, dealing 26( +108% Total Physical Attack) (Physical Damage) to enemies within range and knocking them airborne for 0.4s.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spirit_Combo",
+      "tips": "Godspeed Strike is Freya's bread and butter. The skill that makes her really strong in team fights and 1v1 because of the crowd control it offers while enhancing her first 3 basic attacks, with a very low cooldown. It used to be op before as it was spammable but after the nerf, the cooldown now starts once you have done your 3rd basic attack. It's not that bad, the crowd control is still good and a strong/well fed freya can finish off the enemy in just one or 2 combo locks without taking much damage for herself. It is best that you activate this skill first before jumping in with Wings of Faith so that you can accurately lock your enemy with the stun.",
+      "iconUrl": "/raw-assets/skill_icons/freya/spirit_combo.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Valkyrie Descent",
+      "description": "Freya gains 6 stacks of (Sacred Orb) and enters the (Valkyrie) state, gaining a 600( +180% Total Physical Attack) shield and 30 Physical Attack. Meanwhile, her Basic Attacks become ranged and deal (splash) damage. The (Valkyrie) state lasts for 10s.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Valkyrie_Descent",
+      "tips": "Valkyrie is Freya's ultimate and it's best used during team fights. It deals a decent amount of AoE damage as well as slowing the enemies down. It also enhances Freya's physical attack, armor and defense which makes her harder to kill during a fight and it also makes her deal more damage towards the opponent. Combine it with skill 2 and Freya can take down any squishy hero, even 2 of them at the same time if they get caught within her 3 sets of skills in less than 5 seconds.",
+      "iconUrl": "/raw-assets/skill_icons/freya/valkyrie_descent.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Freya adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Jungle Tempo",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

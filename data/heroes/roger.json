@@ -1,0 +1,209 @@
+{
+  "id": "roger",
+  "name": "Roger",
+  "heroName": "Roger",
+  "role": [
+    "Fighter",
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane",
+    "EXP Lane",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "EXP Lane",
+    "Jungle"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Full Moon Curse",
+      "description": "Roger can freely switch between human and wolf forms. In human form, Roger's Basic Attack and skills deal additional damage equal to 5% of the target's current HP. In wolf form, Roger's Basic Attack and skills deal additional damage equal to 5% of the target's lost HP. This effect can only deal up to 60 additional damage against Creeps.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Full_Moon_Curse",
+      "tips": "You can use the human form to kite enemies, and the wolf form to fight.",
+      "iconUrl": "/raw-assets/skill_icons/roger/full_moon_curse.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Open Fire",
+      "description": "Roger fires two quick shots in the target direction, dealing 250( +125% Total Physical Attack) (Physical Damage) in total to the enemy hit. The first shot is a hunter net that slows the enemy by 80% for 1.5s, while the second is a bullet that reduces the enemy's Physical Defense by 10 for 5s.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Open_Fire",
+      "tips": "When chasing a wounded enemy, use Bloodthirsty Howl to increase your movement speed, the longer the speed increase, the better the effect.",
+      "iconUrl": "/raw-assets/skill_icons/roger/open_fire.png",
+      "displayLabel": "Skill 1 (Human Form)",
+      "skillSlot": "skill1",
+      "variant": "Human Form"
+    },
+    "skill2": {
+      "name": "Hunter's Steps",
+      "description": "Roger gains 20% Movement Speed and 20% Attack Speed for 2.5s.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Hunter's_Steps",
+      "tips": "Ultimate will automatically be available at level 1, in the early laning phase you can use all 4 available skills to aggressively skirmish in lane. You can also use skills to quickly gap close with enemies or escape. The ultimate can be used to go over walls. Ultimate will automatically be available at level 1, in the early laning phase you can use all 4 available skills to aggressively skirmish in lane. You can also use skills to quickly gap close with enemies or escape. The ultimate can be used to go over walls.",
+      "iconUrl": "/raw-assets/skill_icons/roger/hunter_s_steps.png",
+      "displayLabel": "Skill 2 (Human Form)",
+      "skillSlot": "skill2",
+      "variant": "Human Form"
+    },
+    "ultimate": {
+      "name": "Wolf Transformation",
+      "description": "Roger transforms into Wolf Form, gaining enhanced combat abilities and new skills.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Transform"
+      ],
+      "iconName": "Wolf_Transformation",
+      "iconUrl": "/raw-assets/skill_icons/roger/wolf_transformation.png",
+      "variant": "Transform",
+      "skillSlot": "ultimate",
+      "displayLabel": "Ultimate (Transform)",
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "tips": ""
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Objective DPS",
+      "Late Game Carry",
+      "Jungle Tempo",
+      "EXP Lane Pressure",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicNote": "Roger has additional Wolf Form abilities after transformation (Lycan Pounce, Bloodthirsty Howl). Detailed Wolf Form skill data not currently available in local source.",
+  "needsEnrichment": true,
+  "mechanicCategory": [
+    "Transform",
+    "Dual Form"
+  ],
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Form Management",
+    "Combo Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Objective DPS",
+    "Late Game Carry",
+    "Jungle Tempo",
+    "EXP Lane Pressure",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

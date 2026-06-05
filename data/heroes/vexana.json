@@ -1,0 +1,327 @@
+{
+  "id": "vexana",
+  "name": "Vexana",
+  "heroName": "Vexana",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 112,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Nether Touch",
+      "description": "Vexana and the (Eternal Guard) inflict (Nether Curse) on enemies hit. The Curse lasts 5s and will cause the affected enemy to explode upon death, dealing 108-500( +60% Total Magic Power) (Magic Damage) to nearby enemies (base damage scales with level).",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Nether_Touch",
+      "tips": "This passive is very useful when clearing out minion wave as well as harrassing an enemy in lane. This passive will be used effectively when you use \"Nether Snare\" in the middle of the minion wave. This will apply the passive on each minion and will eventually explode when the minion dies. The explosion covers a certain area that can damage the enemy health bar.",
+      "iconUrl": "/raw-assets/skill_icons/vexana/nether_touch.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Deathly Grasp",
+      "description": "Vexana unleashes a Deathly Grasp in the target direction, dealing 200 (+60% Total Magic Power) Magic Damage to enemies in its path. The projectile stops upon hitting an enemy hero, terrifying them and knocking them back, then it explodes, dealing 200 (+60% Total Magic Power) Magic Damage to nearby enemies and terrifying them for 1s.",
+      "cooldown": "14.0",
+      "manaCost": "80",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)",
+        "(+60% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "14.0",
+            "13.4",
+            "12.8",
+            "12.2",
+            "11.6",
+            "11.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "80",
+            "90",
+            "100",
+            "110",
+            "120",
+            "130"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "220",
+            "240",
+            "260",
+            "280",
+            "300"
+          ]
+        },
+        {
+          "label": "Explosion Damage",
+          "values": [
+            "200",
+            "220",
+            "240",
+            "260",
+            "280",
+            "300"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Deathly_Grasp",
+      "tips": "As much as possible, use this skill on enemy heroes only because you never know when will they attack you. This is also useful when an enemy hero is catching you, just use this skill and their movement speed will get very slow for a period of time making you and opportunity to ran away from them.",
+      "iconUrl": "/raw-assets/skill_icons/vexana/deathly_grasp.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Cursed Blast",
+      "description": "Vexana marks the target area with the power of the undead, striking it after a 0.8s delay and dealing 580 (+165% Total Magic Power) Magic Damage to enemies hit.",
+      "cooldown": "7.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+165% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "7.0",
+            "6.7",
+            "6.4",
+            "6.1",
+            "5.8",
+            "5.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "68",
+            "76",
+            "84",
+            "92",
+            "100"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "580",
+            "634",
+            "689",
+            "743",
+            "797",
+            "850"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Cursed_Blast",
+      "tips": "This skill damages alot when placed and positioned carefully to hit an enemy hero. This skill very useful on clearing out minion wave. Just place this skill on the second minion (there are 3 minions in each wave right, place it on the middle.) In this way, this skill will hit all of the minions and will activate your passive. This skill deals a huge amount of magic damage. And is perfect for stealing lord, turtle, and jungle monsters when you placed and timed carefully. This skill can possibly one shot all of your enemies when you use it correctly, depending on the build of course.",
+      "iconUrl": "/raw-assets/skill_icons/vexana/cursed_blast.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Eternal Guard",
+      "description": "Vexana summons an Eternal Guard at the target location, dealing 480 (+60% Total Magic Power) Magic Damage to enemies hit and knocking them airborne for 0.8s. The Eternal Guard then joins Vexana in battle for 15s. Each of the Eternal Guard's attacks deals 200 (+40% Total Magic Power) plus 5% of the target's Max HP as Magic Damage to enemies in a large area.",
+      "cooldown": "50.0",
+      "manaCost": "120",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)",
+        "(+40% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "50.0",
+            "45.0",
+            "40.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "480",
+            "600",
+            "720"
+          ]
+        },
+        {
+          "label": "Slash Damage",
+          "values": [
+            "200",
+            "250",
+            "300"
+          ]
+        },
+        {
+          "label": "Extra HP",
+          "values": [
+            "1800",
+            "2250",
+            "2700"
+          ]
+        },
+        {
+          "label": "Extra Hybrid Defense",
+          "values": [
+            "40",
+            "50",
+            "60"
+          ]
+        },
+        {
+          "label": "Extra Magic Power",
+          "values": [
+            "80",
+            "100",
+            "120"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Summon",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Eternal_Guard",
+      "tips": "1st situation: When battling in a 1vs2 situation, use this skill on the damage dealer. (The one who deals a huge amount of damage) Damage dealers can be mages, assassins, and marksman. You have to put your skills prior to the damage dealer so that when they die, they can help you deal damage on the enemy hero. 2nd situation: In a 5v5 clash, I recommend to use this skill on tanks. Why? This decreases the regen of their health bar because this skill does magic damage over a period of time. Your 1st and 2nd skill can deal huge damage on other enemy heroes thats why I suggest to use this on tanks. Specially when your team does not have a tank, or your tank is not tanky. But, you can use this on damage dealers to so that you will do more damage. When used in tanks, this will benefit your team because you will have another tank.",
+      "iconUrl": "/raw-assets/skill_icons/vexana/eternal_guard.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Vexana adalah mage dengan kemampuan burst/poke damage dari jarak aman.",
+  "playstyleTags": [
+    "Burst",
+    "Poke"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Zone Control"
+  ],
+  "counterTags": [
+    "Gap Close",
+    "Silence",
+    "Burst"
+  ],
+  "synergyTags": [
+    "Needs Peel",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Zone Control",
+    "Burst Damage"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

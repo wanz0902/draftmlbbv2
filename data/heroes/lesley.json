@@ -1,0 +1,199 @@
+{
+  "id": "lesley",
+  "name": "Lesley",
+  "heroName": "Lesley",
+  "role": [
+    "Assassin",
+    "Marksman"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Lethal Shot",
+      "description": "If Lesley doesn't take damage for 5s, her next Basic Attack gains extra range and 50% Crit Chance and deals 100( +100% Total Physical Attack) (True Damage) (20% extra damage against minions). Each point of fixed Physical Penetration Lesley acquires is converted into 0.5% Crit Damage, but her base Crit Damage is reduced to 130%. Lesley's Basic Attack restores 5 points of energy and her (Lethal Shot) doubles the amount of energy restored. The (Lethal Shot) effect will activate immediately after Lesley uses a skill.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Lethal_Shot",
+      "tips": "Try your best to avoid taking damage and use her extreme long-range attacks to wear down enemies.",
+      "iconUrl": "/raw-assets/skill_icons/lesley/lethal_shot.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Master of Camouflage",
+      "description": "Lesley enters the Camouflage state, gaining double Energy Regen, 40% extra Movement Speed, and 85 extra Physical Attack. The state lasts 3s or until Lesley takes or deals damage. Enemies can detect Lesley's position through distortions of their surroundings.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Master_of_Camouflage",
+      "tips": "Combine stealth with her passive's increased crit damage to launch a devastating opening on your enemies.",
+      "iconUrl": "/raw-assets/skill_icons/lesley/master_of_camouflage.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Tactical Grenade",
+      "description": "Lesley throws a tactical grenade in the target direction while jumping back slightly, dealing 150( +50% Total Physical Attack) (Physical Damage) to enemies in a fan-shaped area and knocking them back. Lesley can cast this skill during (Ultimate Snipe) to cancel the state and immediately fire a Fatal Bullet at the target. The attack is only triggered when there are unfired Fatal Bullets left.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Tactical_Grenade",
+      "tips": "Survival skill -- try saving it for when you need to escape.",
+      "iconUrl": "/raw-assets/skill_icons/lesley/tactical_grenade.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Ultimate Snipe",
+      "description": "Lesley locks onto the target enemy hero and fires 4 Fatal Bullets in succession, each dealing (Physical Damage) equal to 250( +80% Extra Physical Attack) plus 5% of their lost HP and restoring 10 energy on hit. The Bullets can be blocked by other enemy heroes. If this skill is interrupted, each remaining Bullet reduces the skill cooldown by 10%. (Passive): Lesley's Crit Chance is increased by 5%.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ultimate_Snipe",
+      "tips": "Use this skill to finish off enemies with low HP, and be sure to keep a safe distance.",
+      "iconUrl": "/raw-assets/skill_icons/lesley/ultimate_snipe.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Objective DPS",
+      "Late Game Carry",
+      "Jungle Tempo",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Lesley adalah assassin dengan kemampuan burst damage dan mobilitas tinggi untuk mengeliminasi target prioritas.",
+  "playstyleTags": [
+    "Burst",
+    "Pickoff"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Early Aggression"
+  ],
+  "counterTags": [
+    "Hard CC",
+    "Group Up",
+    "Vision"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Backline Threat",
+    "Pick-off Specialist",
+    "Objective DPS",
+    "Late Game Carry",
+    "Jungle Tempo",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "Level 4",
+    "Early-Mid Game"
+  ]
+}

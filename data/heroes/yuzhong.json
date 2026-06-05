@@ -1,0 +1,220 @@
+{
+  "id": "yuzhong",
+  "name": "Yu Zhong",
+  "heroName": "Yu Zhong",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Cursing Touch",
+      "description": "Yu Zhong applies (Sha Residue) to enemy heroes every time he deals damage to them. (Sha Residue) erupts upon reaching 5 stacks on a target. Then it begins consuming 1 stack every 0.4s to deal (Physical Damage) equal to 30( +20% Extra Physical Attack) plus 2.5% of the target's lost HP to the target. Each stack consumed restores 6% of Yu Zhong's lost HP. When (Sha Residue) erupts, Yu Zhong also gains 30% Movement Speed for 3s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Cursing_Touch",
+      "tips": "Yu Zhong applies Sha Residue to the target every time he deals damage to enemy heroes, and gathers Sha Essence in the meantime. Sha Residue erupts upon reaching full stacks, consuming 1 stack every time. Each stack consumption deals damage based on the target's HP lost, restores HP based on Yu Zhong's HP lost and gathers Sha Essence. When Sha Essence is fully charged, Yu Zhong gains extra Movement Speed and Spell Vamp.",
+      "iconUrl": "/raw-assets/skill_icons/yuzhong/cursing_touch.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Dragon Tail",
+      "description": "Yu Zhong infuses his power into his cloak and turns it into a weapon, which starts to attack nearby enemies after a short delay. The inner area of the cloak deals 220( +100% Extra Physical Attack) (Physical Damage), whereas the sharpened edge deals 275% damage and applies 2 stacks of (Sha Residue).",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dragon_Tail",
+      "tips": "This serves as Yu Zhong's main source of damage. The ability to make good use of the cloak edge to deal more damage is deemed as an important criterion to distinguish a high or low level of Hero mastery.",
+      "iconUrl": "/raw-assets/skill_icons/yuzhong/dragon_tail.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Soul Grip",
+      "description": "Yu Zhong unleashes the Dragon Soul, dealing 150( +120% Extra Physical Attack) (Physical Damage) to all enemies in front and slowing them by 60% for 1s. Upon hitting an enemy, Yu Zhong's next Basic Attack will be enhanced, dealing 108( +100% Total Physical Attack) (Physical Damage). Upon hitting multiple enemies, the enhanced Basic Attack will apply multiple stacks of (Sha Residue) and deal up to 200% damage.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Soul_Grip",
+      "tips": "Yu Zhong unleashes the Dragon Soul, dealing Physical Damage to all enemies in front and slowing them. Upon target hit, Yu Zhong's next Basic Attack will be enhanced, dealing extra Physical Damage. Upon multiple target hit, Yu Zhong applies Sha Residue multiple times with the enhanced Basic Attack.",
+      "iconUrl": "/raw-assets/skill_icons/yuzhong/soul_grip.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Furious Dive",
+      "description": "Yu Zhong leaps towards the designated area with his full strength, dealing 180( +90% Extra Physical Attack) (Physical Damage). He is able to dash one more time in the movement direction. After a short delay, enemies within the area of effect will be knocked airborne for 1s and take 180( +90% Extra Physical Attack) additional (Physical Damage).",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Furious_Dive",
+      "tips": "This is a movement skill that can be used for both attacking and defending. However, when Yu Zhong takes on an offensive role, he needs to predict the enemy's positioning precisely. Enemies who are knocked airborne always end up being sitting ducks for Yu Zhong's subsequent skill combos.",
+      "iconUrl": "/raw-assets/skill_icons/yuzhong/furious_dive.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Transform",
+    "Dragon Form"
+  ],
+  "mechanicNote": "Yu Zhong bertransformasi menjadi Black Dragon yang immune CC, memberikan sustained AoE damage dan sustain.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Form Management",
+    "Combo Timing"
+  ],
+  "draftTags": [
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

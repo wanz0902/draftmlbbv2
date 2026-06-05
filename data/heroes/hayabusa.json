@@ -1,0 +1,285 @@
+{
+  "id": "hayabusa",
+  "name": "Hayabusa",
+  "heroName": "Hayabusa",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2270,
+    "hpRegen": 7,
+    "mana": 100,
+    "manaRegen": 15,
+    "physicalAttack": 117,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.06",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Ninjutsu: Trace of Shadow",
+      "description": "Hayabusa's attacks apply a stack of (Shadow Mark) on hit (up to 4 stacks). Each stack lasts 6s and increases Hayabusa's damage to the enemy by 5%.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ninjutsu:_Trace_of_Shadow",
+      "tips": "Use the combo, teleport right into the enemy + 1st skill. When your teleporting shadow hits and enemy, it counts to the stack of the passive and if all 3 shurikens hit the enemy, you heal some health. This passive does not work on minions.",
+      "iconUrl": "/raw-assets/skill_icons/hayabusa/ninjutsu_trace_of_shadow.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Ninjutsu: Phantom Shuriken",
+      "description": "Hayabusa throws three returning shurikens in the target direction, each dealing 220 (+75% Extra Physical Attack) Physical Damage to enemies hit and slowing them by 35% for 2s. Enemies hit by multiple shurikens take 70% less damage after the first hit, and Creeps take 50% less damage after the first hit. Hayabusa restores 10 energy when hitting non-Minion enemies.\nPassive: Hayabusa permanently gains 3% Spell Vamp.",
+      "cooldown": "4.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+75% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "30",
+            "28",
+            "26",
+            "24",
+            "22",
+            "20"
+          ]
+        },
+        {
+          "label": "Spell Vamp",
+          "values": [
+            "3%",
+            "6%",
+            "9%",
+            "12%",
+            "15%",
+            "18%"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "220",
+            "232",
+            "244",
+            "256",
+            "268",
+            "280"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ninjutsu:_Phantom_Shuriken",
+      "tips": "Teleport right in front of the enemy and use this skill for maximum damage. Use this skill to harrass the enemy as much as possible. If an enemy is chasing you or your teammate when at low health, lower their movement speed with this to run away",
+      "iconUrl": "/raw-assets/skill_icons/hayabusa/ninjutsu_phantom_shuriken.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Ninjutsu: Quad Shadow",
+      "description": "Hayabusa dashes in the target direction and releases four phantoms that travel in separate directions. The phantoms will remain at the end of their paths or attach themselves to the first enemy hero hit, dealing 130 (+30% Extra Physical Attack) Physical Damage and slowing them by 40% for 2s. Hayabusa will immediately stop if he hits an enemy hero during the dash.\nUse Again: Hayabusa teleports to a phantom's location and reduces the cooldown of Ninjutsu: Phantom Shuriken by 1s. If the phantom is attached to an enemy hero, he also deals 130 (+30% Extra Physical Attack) Physical Damage to the enemy.",
+      "cooldown": "16.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+30% Extra Physical Attack)",
+        "(+30% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "16.0",
+            "15.6",
+            "15.2",
+            "14.8",
+            "14.4",
+            "14.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "130",
+            "140",
+            "150",
+            "160",
+            "170",
+            "180"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "130",
+            "140",
+            "150",
+            "160",
+            "170",
+            "180"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Summon"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ninjutsu:_Quad_Shadow",
+      "tips": "One of the best escape abilities in the game, use this to run away from enemies! Teleport onto the enemy and use your first skill to damage the enemy with maximum damage from 3 shurikens! If an enemy is chasing you or your teammate at low health, slow them down with this skill.",
+      "iconUrl": "/raw-assets/skill_icons/hayabusa/ninjutsu_quad_shadow.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Ougi: Shadow Kill",
+      "description": "Hayabusa blends into the shadows and launches 6 single-target attacks on enemies in the area, each dealing 140 (+32% Extra Physical Attack) Physical Damage.\nThe attacks prioritize enemies with Shadow Mark and each will consume a mark to deal 90 (+40% Extra Physical Attack) extra Physical Damage. Shadow Kill does not apply Shadow Mark.",
+      "cooldown": "40.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+32% Extra Physical Attack)",
+        "(+40% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Hits",
+          "values": [
+            "6",
+            "9",
+            "12"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "90",
+            "120",
+            "150"
+          ]
+        },
+        {
+          "label": "Extra Damage Bonus",
+          "values": [
+            "40%",
+            "50%",
+            "60%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ougi:_Shadow_Kill",
+      "tips": "This ultimate makes you the fastest wave clearing character in the whole game. Don't hestitate to use your ultimate on a clump of minions. At max level, you can kill a full health mage with just this skill. If you are getting chased and your 2nd skill is on cooldown, buy time using the ultimate as it makes you invincible for a little while",
+      "iconUrl": "/raw-assets/skill_icons/hayabusa/ougi_shadow_kill.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Hayabusa adalah assassin dengan kemampuan burst damage dan mobilitas tinggi untuk mengeliminasi target prioritas.",
+  "playstyleTags": [
+    "Burst",
+    "Pickoff"
+  ],
+  "difficultyTags": [
+    "Mechanical Skill",
+    "Combo Execution"
+  ],
+  "draftTags": [
+    "Early Aggression"
+  ],
+  "counterTags": [
+    "Hard CC",
+    "Group Up",
+    "Vision"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Backline Threat",
+    "Pick-off Specialist",
+    "Jungle Tempo"
+  ],
+  "powerSpikeTags": [
+    "Level 4",
+    "Early-Mid Game"
+  ]
+}

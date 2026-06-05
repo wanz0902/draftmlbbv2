@@ -1,0 +1,259 @@
+{
+  "id": "odette",
+  "name": "Odette",
+  "heroName": "Odette",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2440,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 105,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Lakeshore Ambience",
+      "description": "Each skill cast grants extra range on Odette's next Basic Attack within 8s and causes it to bounce between enemies (or an enemy and herself if only one enemy is in range), dealing 144-200 (+50% Total Magic Power) Magic Damage per hit.\nOdette's skills will also trigger this effect when hitting an enemy. This effect stacks up to 3 times.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Lakeshore_Ambience"
+    },
+    "skill1": {
+      "name": "Avian Authority",
+      "description": "Odette releases a magic swan in the target direction, dealing 300 (+150% Total Magic Power) Magic Damage to enemies hit and slowing them by 30% for 2s.\n|stats1=Cooldown|stats1_value=6.0/5.8/5.6/5.4/5.2/5.0\n|stats2=Skill Cost|stats2_value=65/70/75/80/85/90\n|stats3=Base Damage|stats3_value=300/350/400/450/500/550",
+      "cooldown": "6.0",
+      "manaCost": "65",
+      "damageType": "Magic",
+      "scaling": [
+        "(+150% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "6.0",
+            "5.8",
+            "5.6",
+            "5.4",
+            "5.2",
+            "5.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "65",
+            "70",
+            "75",
+            "80",
+            "85",
+            "90"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "350",
+            "400",
+            "450",
+            "500",
+            "550"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Avian_Authority"
+    },
+    "skill2": {
+      "name": "Blue Nova",
+      "description": "Odette releases a set of magic energy balls in the target direction, dealing 250 (+50% Total Magic Power) Magic Damage to the first enemy hit and immobilizing them for 1.5s. After hitting an enemy, another energy ball will split off and attack a nearby enemy (prioritizes enemy heroes), dealing them 250 (+50% Total Magic Power) Magic Damage and immobilizing them for 1.5s.\n|stats1=Cooldown|stats1_value=12.0/11.6/11.2/10.8/10.4/10.0\n|stats2=Skill Cost|stats2_value=75/80/85/90/95/100\n|stats3=Base Damage|stats3_value=250/280/310/340/370/400\n|stats4=Diffusion Damage|stats4_value=250/280/310/340/370/400",
+      "cooldown": "12.0",
+      "manaCost": "75",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Magic Power)",
+        "(+50% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.6",
+            "11.2",
+            "10.8",
+            "10.4",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "280",
+            "310",
+            "340",
+            "370",
+            "400"
+          ]
+        },
+        {
+          "label": "Diffusion Damage",
+          "values": [
+            "250",
+            "280",
+            "310",
+            "340",
+            "370",
+            "400"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Blue_Nova"
+    },
+    "ultimate": {
+      "name": "Swan Song",
+      "description": "Odette begins to dance, gaining a 1200 (+150% Total Magic Power) shield while dealing up to 2000 (+750% Total Magic Power) Magic Damage to enemies in a large area around her for 5s. The bounce speed and frequency of Lakeshore Ambience's sound wave in the area are also enhanced when the skill is active.\nUse again while the skill is active to dash in the target direction.\nThe skill is a chanelling cast and will be interrupted if Odette is hit by high level control effects (knocked airborne, transformed, etc.) or if she performs another action.\n|stats1=Cooldown|stats1_value=50.0/45.0/40.0\n|stats2=Skill Cost|stats2_value=160/200/240\n|stats3=Base Shield|stats3_value=1200/1500/1800\n|stats4=Base Damage|stats4_value=2000/2500/3000",
+      "cooldown": "50.0",
+      "manaCost": "160",
+      "damageType": "Magic",
+      "scaling": [
+        "(+150% Total Magic Power)",
+        "(+750% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "50.0",
+            "45.0",
+            "40.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "160",
+            "200",
+            "240"
+          ]
+        },
+        {
+          "label": "Base Shield",
+          "values": [
+            "1200",
+            "1500",
+            "1800"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "2000",
+            "2500",
+            "3000"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst",
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Swan_Song"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

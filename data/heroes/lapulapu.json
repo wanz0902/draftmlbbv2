@@ -1,0 +1,219 @@
+{
+  "id": "lapulapu",
+  "name": "Lapu-Lapu",
+  "heroName": "Lapu-Lapu",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Homeland Defender",
+      "description": "Lapu-Lapu accumulates 10 (Bravery Blessing) each time he deals damage (halved for damage dealt to non-hero units). When (Bravery Blessing) is full, Lapu-Lapu's next (Basic Attack) will make him dash toward the target, dealing ( +150% Total Physical Attack) (Physical Damage) (cannot Crit) and granting him a shield that absorbs 250 (+65*Hero Level) damage for 2.5s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Homeland_Defender",
+      "tips": "The shield is basically what makes lapu tanky. This makes lapu lapu very dependent on his skills. Yet, Lapu lapu has no mana. This is the main theme of his build and will mainly focus on cooldown reduction and sometimes the shield itself. This passive will be charged easier when engaging multiple enemies, some says 1 vs 3 may not be that of a problem. But then just consider this passive as a shield.",
+      "iconUrl": "/raw-assets/skill_icons/lapulapu/homeland_defender.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Justice Blades",
+      "description": "Lapu-Lapu releases two boomerangs in the target direction, each boomerang dealing 140( +50% Total Physical Attack) (Physical Damage) to enemies hit on its way out and back. Enemies hit by both boomerangs take 50% damage from the second hit.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Justice_Blades",
+      "tips": "This is the main source of the passive. When you have a chance, use this skill to attack enemies from a distance. You can also use this to clear up waves of minions faster giving you time to farm and defend easier.",
+      "iconUrl": "/raw-assets/skill_icons/lapulapu/justice_blades.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Jungle Warrior",
+      "description": "Lapu-Lapu dashes in the target direction, dealing 100( +50% Total Physical Attack) (Physical Damage) to enemies along the way.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Jungle_Warrior",
+      "tips": "This helps him to chasedown enemies, or escape ganks and also deal damage. Useful in dealing that last hit to an enemy, lapu is an assasin afterall.",
+      "iconUrl": "/raw-assets/skill_icons/lapulapu/jungle_warrior.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Bravest Fighter",
+      "description": "Lapu-Lapu leaps to the target location while combining his twin blades into one, dealing 300( +80% Total Physical Attack) (Physical Damage) to nearby enemies upon landing and slowing them by 60% for 1s. (This skill cannot be interrupted.) Lapu-Lapu gains 3 times the (Bravery Blessing) from this skill and skills in transformed state. For the next 10s, Lapu-Lapu enters (Great Sword) stance and gains enhanced skills, 30 extra Physical & Magic Defense, and his Basic Attack damage is increased to 120%.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Bravest_Fighter",
+      "tips": "This is useful in initiating team fights yet best in assasinating enemies offguard. It may take time to cast but will will surely give problems on hit. Cover a wide area front of lapu. use when inside bush To catch the enemy off guard. I earn lots of first blood with this skill. When the enemy thinks you are missing in your lane but just hiding in the bush guarantees a hit.",
+      "iconUrl": "/raw-assets/skill_icons/lapulapu/bravest_fighter.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Lapu-Lapu adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

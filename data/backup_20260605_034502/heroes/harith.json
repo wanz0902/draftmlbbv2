@@ -1,0 +1,243 @@
+{
+  "id": "harith",
+  "name": "Harith",
+  "heroName": "Harith",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2260,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 115,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.05",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Key Insight",
+      "description": "Harith gains insight from his Key. He gains 7% Hybrid Lifesteal for each nearby enemy hero, stacking up to 35%.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Key_Insight"
+    },
+    "skill1": {
+      "name": "Synchro Fission",
+      "description": "Harith creates a phantom of himself in a distant location. Harith and his phantom then release Synchro Fission toward each other, dealing 150 (+60% Total Magic Power) Magic Damage to all enemy units on the path.\nWhen the 2 energy waves collide, they explode, dealing 450 (+180% Total Magic Power) Magic Damage to all enemies in the area.\nThis skill deals 60% extra damage to creeps (up to 1500 damage).\n|stats1=Skill Cost|stats1_value=50/55/60/65/70/75\n|stats2=Base Damage|stats2_value=150/180/210/240/270/300\n|stats3=Explosion Damage|stats3_value=450/540/630/720/810/900",
+      "cooldown": "5.0",
+      "manaCost": "50",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)",
+        "(+180% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "50",
+            "55",
+            "60",
+            "65",
+            "70",
+            "75"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "150",
+            "180",
+            "210",
+            "240",
+            "270",
+            "300"
+          ]
+        },
+        {
+          "label": "Explosion Damage",
+          "values": [
+            "450",
+            "540",
+            "630",
+            "720",
+            "810",
+            "900"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Synchro_Fission"
+    },
+    "skill2": {
+      "name": "Chrono Dash",
+      "description": "Harith dashes towards the target direction, gaining a 120 (+120% Total Magic Power) shield and enhancing his next Basic Attack. Harith's enhanced Basic Attack deals 200 (+100% Total Physical Attack) (+70% Total Magic Power) Magic Damage and slows enemies by 40%. Hitting an enemy with Harith's enhanced Basic Attack reduces the cooldown of Chrono Dash by 3s. This shield can stack up to 3 times.\nThe enhanced Basic Attack only deals 50 (+100% Total Physical Attack) (+100% Total Magic Power) Magic Damage to Turrets.\n|stats1=Skill Cost|stats1_value=50/53/56/59/62/65\n|stats2=Shield|stats2_value=120/150/180/210/240/270\n|stats3=Base Damage|stats3_value=200/230/260/290/320/350\n|stats4=Damage to Turrets|stats4_value=50/60/70/80/90/100",
+      "cooldown": "9.3",
+      "manaCost": "40",
+      "damageType": "Magic",
+      "scaling": [
+        "(+120% Total Magic Power)",
+        "(+100% Total Physical Attack)",
+        "(+70% Total Magic Power)",
+        "(+100% Total Physical Attack)",
+        "(+100% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "50",
+            "53",
+            "56",
+            "59",
+            "62",
+            "65"
+          ]
+        },
+        {
+          "label": "Shield",
+          "values": [
+            "120",
+            "150",
+            "180",
+            "210",
+            "240",
+            "270"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "230",
+            "260",
+            "290",
+            "320",
+            "350"
+          ]
+        },
+        {
+          "label": "Damage to Turrets",
+          "values": [
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Chrono_Dash"
+    },
+    "ultimate": {
+      "name": "Zaman Force",
+      "description": "Harith uses his Key to summon the Zaman Force, creating a multidimensional rift. Upon appearance, it reduces the cooldown of Chrono Dash by 4s. The rift continuously slows enemy heroes in the area by 40%.\nWhen Harith comes into contact with the rift using Chrono Dash, he absorbs its energy, reducing the cooldown of Synchro Fission by 1s and Chrono Dash by 3s. Harith gains 15% Resilience while on the rift.\n|quote=\"They say geniuses recognize one another!\" a quote from Harley.\n|stats1=Cooldown|stats1_value=40.0/35.0/30.0\n|stats2=Skill Cost|stats2_value=120/160/200",
+      "cooldown": "40.0",
+      "manaCost": "120",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "40.0",
+            "35.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "160",
+            "200"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Buff",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Zaman_Force"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

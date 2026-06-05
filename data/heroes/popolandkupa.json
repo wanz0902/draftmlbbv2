@@ -1,0 +1,187 @@
+{
+  "id": "popolandkupa",
+  "name": "Popol and Kupa",
+  "heroName": "Popol and Kupa",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "We Are Friends",
+      "description": "Kupa recovers 10% Max HP per second after not taking damage for 5s. When Kupa is killed, Popol can (Pray) for 3s to bring Kupa back to the battlefield. Cooldown: 30s. Every 3 consecutive attacks from Kupa will enhance Popol's next Basic Attack to deal ( +220% Total Physical Attack) (Physical Damage). Kupa has 2500 ( +1200% Total Physical Attack) Max HP and inherits 100% of Popol's other attributes and passive equipment effects (excluding Jungling and Roaming equipment effects). Kupa deals an additional damage against Creeps.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "We_Are_Friends",
+      "tips": "Nothing can separate Popol and Kupa, not even desperate battles. When Kupa escapes from combat, he will constantly regenerate HP under the good care of Popol. And even when Kupa has fallen on the battlefield, Popol's prayers can always bring him back. Kupa inherits the traits of Popol’s equipment items. And every 4 attacks performed by Kupa boosts the damage of Popol’s next basic attack.",
+      "iconUrl": "/raw-assets/skill_icons/popolandkupa/we_are_friends.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Bite 'em, Kupa!",
+      "description": "Popol throws a spear at the target enemy, dealing 80( +100% Total Physical Attack) (Physical Damage) while simultaneously commanding Kupa to lunge at the target, dealing an additional 100( +75% Total Physical Attack) (Physical Damage). Kupa will continue to attack the target for 3s. (Alpha Wolf Form): Kupa stuns the enemy for 1s and bites them 3 times in quick succession.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Bite_'em,_Kupa!",
+      "tips": "Popol throws a spear at the target for Physical Damage and orders Kupa to bite them, dealing Physical Damage.",
+      "iconUrl": "/raw-assets/skill_icons/popolandkupa/bite_em_kupa.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Kupa, Help!",
+      "description": "Popol summons Kupa back to his side, gaining a 240( +200% Extra Physical Attack) shield while dealing 240( +50% Total Physical Attack) (Physical Damage) to nearby enemies and slowing them by 35% for 0.5s. Kupa will then assist Popol to attack nearby enemies for 3s. (Alpha Wolf Form): Kupa darts back to Popol, knocking nearby enemies airborne for 0.2s. The shield and damage are increased to 125%.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Kupa,_Help!",
+      "tips": "Popol summons Kupa to protect him, gaining a Shield, dealing Physical Damage to the nearby enemies and slowing them.",
+      "iconUrl": "/raw-assets/skill_icons/popolandkupa/kupa_help.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Popol's Surprise",
+      "description": "Popol sets a trap at the target location that will detonate after a short delay once triggered, dealing 70( +20% Total Magic Power) (Magic Damage) to the enemy that steps on it, immobilizing them for 1s, and creating a frost zone for 4s. Enemies in the frost zone will have their Movement Speed reduced by 20%. Popol gains a trap charge every 22s (up to 3). Up to 3 traps can exist at the same time on the battlefield, each lasting up to 60s.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Popol's_Surprise",
+      "tips": "Popol and Kupa become enraged, gaining extra attack speed and movement speed. At the same time, Kupa will enter “Alpha Wolf Form”, restoring all HP and boosting the power of their 1st and 2nd skill.",
+      "iconUrl": "/raw-assets/skill_icons/popolandkupa/popol_s_surprise.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Pet Companion"
+  ],
+  "mechanicNote": "Popol bermain bersama Kupa (pet companion) yang bisa diperintahkan untuk menyerang atau menjaga area.",
+  "playstyleTags": [
+    "DPS"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Late Game Insurance",
+    "Snowball Potential"
+  ],
+  "counterTags": [
+    "Dive",
+    "Burst",
+    "Flank"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Needs Peel"
+  ],
+  "macroTags": [
+    "Objective DPS",
+    "Late Game Carry",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

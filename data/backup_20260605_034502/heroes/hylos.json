@@ -1,0 +1,279 @@
+{
+  "id": "hylos",
+  "name": "Hylos",
+  "heroName": "Hylos",
+  "role": [
+    "Tank"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2600,
+    "hpRegen": 18,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 105,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.03",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Thickened Blood",
+      "description": "Hylos gains 1.5 extra Max HP for every 1 extra Max Mana he possesses.\nWhen out of Mana, Hylos can use his HP for skill casts.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Thickened_Blood"
+    },
+    "skill1": {
+      "name": "Law and Order",
+      "description": "Hylos gains 50% Movement Speed and causes his next Basic Attack within 3s to deal 300 (+80% Total Magic Power) Magic Damage to the target, knocking back and stunning them for 1s.\nThe extra Movement Speed rapidly decays over the duration and vanishes after the next Basic Attack.",
+      "cooldown": "12.0",
+      "manaCost": "80",
+      "damageType": "Magic",
+      "scaling": [
+        "(+80% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.2",
+            "10.4",
+            "9.6",
+            "8.8",
+            "8.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "80",
+            "90",
+            "100",
+            "110",
+            "120",
+            "130"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "350",
+            "400",
+            "450",
+            "500",
+            "550"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Law_and_Order"
+    },
+    "skill2": {
+      "name": "Ring of Punishment",
+      "description": "Hylos releases the Ring of Punishment, dealing 100 (+20% Total Magic Power) Magic Damage to nearby enemies per second while slowing them by 4% and reducing their Attack Speed by 7.5% for 2.5s (up to 8 stacks). Each stack also increases the enemy's damage taken from the Ring of Punishment by 5%. The Ring of Punishment consumes 30 Mana per second when it's active.\nUse Again: Hylos cancels the Ring of Punishment.",
+      "cooldown": "1.0",
+      "manaCost": "30",
+      "damageType": "Magic",
+      "scaling": [
+        "(+20% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"
+          ]
+        },
+        {
+          "label": "Damage per Second",
+          "values": [
+            "100",
+            "130",
+            "160",
+            "190",
+            "220",
+            "250"
+          ]
+        },
+        {
+          "label": "Movement Speed Reduction",
+          "values": [
+            "4%",
+            "4%",
+            "5%",
+            "5%",
+            "6%",
+            "6%"
+          ]
+        },
+        {
+          "label": "Attack Speed Reduction",
+          "values": [
+            "7.5%",
+            "9%",
+            "10.5%",
+            "12%",
+            "13.5%",
+            "15%"
+          ]
+        },
+        {
+          "label": "Damage Bonus",
+          "values": [
+            "5%",
+            "8%",
+            "11%",
+            "14%",
+            "17%",
+            "20%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE",
+        "Debuff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ring_of_Punishment"
+    },
+    "ultimate": {
+      "name": "Glorious Pathway",
+      "description": "Hylos creates a huge pathway in the target direction, reducing enemies' Movement Speed by 75% for 1s. The pathway lasts 6s.\nWhen on the pathway, Hylos gains Slow Immunity and recovers 3% of his Max HP per second. Allied heroes moving along the pathway gain 60% extra Movement Speed, while enemy heroes on the pathway will be slowed by 25%.",
+      "cooldown": "40.0",
+      "manaCost": "150",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "40.0",
+            "36.0",
+            "32.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "150",
+            "300",
+            "450"
+          ]
+        },
+        {
+          "label": "HP Regen",
+          "values": [
+            "3%",
+            "4%",
+            "5%"
+          ]
+        },
+        {
+          "label": "Movement Speed Bonus",
+          "values": [
+            "60%",
+            "65%",
+            "70%"
+          ]
+        },
+        {
+          "label": "Slow Effect",
+          "values": [
+            "25%",
+            "35%",
+            "45%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Speed Up",
+        "Heal"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Glorious_Pathway"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Jungle Tempo",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

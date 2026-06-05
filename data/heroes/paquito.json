@@ -1,0 +1,229 @@
+{
+  "id": "paquito",
+  "name": "Paquito",
+  "heroName": "Paquito",
+  "role": [
+    "Fighter",
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Champ Stance",
+      "description": "After every 3 skill casts, Paquito enters the (Champ Stance), gaining an enhanced skill ignoring his current cooldowns. He gains 60% extra Movement Speed that decays over 1.8s after casting the enhanced skill. Paquito's Basic Attacks only deal ( +85% Total Physical Attack) (Physical Damage).",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Champ_Stance",
+      "tips": "Paquito punches in a specified direction, dealing Physical Damage to the target hit. If a hero is hit, Paquito gains Shield. [Champ Stance] Enhanced: Paquito's heavy punch becomes even fiercer, dealing Physical Damage and granting him Shield (this enhanced shield can stack with the non-enhanced shield, too).",
+      "iconUrl": "/raw-assets/skill_icons/paquito/champ_stance.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Heavy Left Punch",
+      "description": "Paquito throws a punch in the target direction, dealing 210( +50% Total Physical Attack) (Physical Damage) to enemies hit. If this skill hits an enemy hero or Creep, Paquito will also gain a 150( +135% Total Physical Attack) shield for 2.5s. (Champ Stance): The damage is increased to 350( +100% Total Physical Attack) (Physical Damage) and the shield value is increased to 140%. The normal and enhanced shields can stack.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Heavy_Left_Punch",
+      "tips": "Paquito dashes forth and throws a jab, dealing Physical Damage to all enemies within area of effect. [Champ Stance] Enhanced: Gives Paquito's jab even more striking force, dealing Physical Damage to enemies within area of effect.",
+      "iconUrl": "/raw-assets/skill_icons/paquito/heavy_left_punch.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Jab",
+      "description": "Paquito dashes in the target direction and throws a jab, dealing 200( +165% Total Physical Attack) (Physical Damage) to enemies hit. Paquito will stop and throw the jab immediately upon colliding with an enemy hero or Creep during the dash. (Champ Stance): The damage is increased to 350( +230% Total Physical Attack) (Physical Damage).",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Jab",
+      "tips": "Paquito launches an elbow strike to all enemies in front, dealing Physical Damage and pushing them to the destination. He then swings a haymaker at rapid speed, dealing Physical Damage and slowing targets, as he darts backward. [Champ Stance] Enhanced: Having pushed enemies to the destination, Paquito launches a uppercut, dealing Physical Damage and knocking his enemies airborne instead of slowing them.",
+      "iconUrl": "/raw-assets/skill_icons/paquito/jab.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Knockout Strike",
+      "description": "Paquito launches an elbow strike in the target direction, dealing 250( +50% Total Physical Attack) (Physical Damage) to enemies hit and knocking them back. He then throws a haymaker, dealing 300( +90% Total Physical Attack) (Physical Damage) to enemies hit and slowing them by 75% for 1s, as he darts backward. (Champ Stance): Instead of a haymaker, Paquito launches an uppercut after the elbow strike, dealing 400( +120% Total Physical Attack) (Physical Damage) to enemies hit and knocking them airborne for 0.5s.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Knockout_Strike",
+      "tips": "Paquito builds stacks when hitting enemy heroes with Basic Attacks or dealing damage with skills. Once this stack reaches 4, he enters [Champ Stance] and enhances his next skill. Paquito excels in his technique, and once empowered his skills have no cooldown. However, each of his Basic Attacks only deals Physical Damage. After using any enhanced skill, Paquito increases his Movement Speed.",
+      "iconUrl": "/raw-assets/skill_icons/paquito/knockout_strike.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Enhanced Skill",
+    "Champ Stance"
+  ],
+  "mechanicNote": "Paquito memiliki Champ Stance yang meng-enhance semua skill-nya setelah landing 4 hit, memberikan burst combo yang devastating.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Form Management",
+    "Combo Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Splitpush Threat"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Backline Threat",
+    "Pick-off Specialist",
+    "Split Push",
+    "Sustained Damage",
+    "Jungle Tempo",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Level 4",
+    "Early-Mid Game"
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "claude",
+  "name": "Claude",
+  "heroName": "Claude",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold",
+  "lanes": [
+    "Gold",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Battle Side-by-side",
+      "description": "(Dexter) assists Claude on each of his Basic Attacks, dealing 20( +30% Total Physical Attack) (Physical Damage) to the same target (inherits a portion of Attack Effects).",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Battle_Side-by-side",
+      "tips": "Due to this skill, equipments that boost basic attacks should be Claude's major concentration",
+      "iconUrl": "/raw-assets/skill_icons/claude/battle_side_by_side.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Art of Thievery",
+      "description": "Claude emits a disruption wave in the target direction, dealing 160( +40% Total Physical Attack) (Physical Damage) to enemies in a fan-shaped area and reducing their Movement Speed by 20% and Attack Speed by 10%. For each enemy hit, Claude gains 4% Movement & Attack Speed (doubled for enemy heroes hit) for 6s (up to 5 stacks).",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Art_of_Thievery",
+      "tips": "Due to this skill Claude is able to utilize his mobility to poke enemies from a safe distance.",
+      "iconUrl": "/raw-assets/skill_icons/claude/art_of_thievery.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Battle Mirror Image",
+      "description": "Claude conjures a mirror image of (Dexter) at the target location that automatically attacks nearby enemies for 5.5s. The mirror image's Basic Attack deals 20( +30% Total Physical Attack) (Physical Damage) and can trigger Claude's attack effects. (Use Again): Claude switches places with the mirror image.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Battle_Mirror_Image",
+      "tips": "This skill can be used for multiple purposes. Claude can either dash into enemies to reap or flee from ambush. Use it unpredictably!",
+      "iconUrl": "/raw-assets/skill_icons/claude/battle_mirror_image.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Blazing Duet",
+      "description": "Claude and (Dexter) rapidly fire at nearby enemies for 3s, dealing 130( +10% Total Physical Attack) (Physical Damage) to up to two enemies with each shot (these attacks count as Basic Attacks). Claude also gains a 20( +3% Total Physical Attack) shield each time the Ultimate deals damage to an enemy.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Blazing_Duet",
+      "tips": "The ultimate triggers the effect of basic attacks. So it works perfect with Demon Hunter Sword when facing single heroes. The skill hit 2 enemies at most at the same moment, so Claude should release this skill to an area with less than 2 enemies. The ultimate also provides a shield so Claude's durability is ensured in all conditions.",
+      "iconUrl": "/raw-assets/skill_icons/claude/blazing_duet.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Claude adalah marksman dengan DPS tinggi yang menjadi win condition utama di late game.",
+  "playstyleTags": [
+    "DPS"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Late Game Insurance",
+    "Snowball Potential"
+  ],
+  "counterTags": [
+    "Dive",
+    "Burst",
+    "Flank"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Needs Peel"
+  ],
+  "macroTags": [
+    "Objective DPS",
+    "Late Game Carry",
+    "Jungle Tempo"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "id": "zilong",
+  "name": "Zilong",
+  "heroName": "Zilong",
+  "role": [
+    "Fighter",
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2511,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 123,
+    "physicalDefense": 25,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.05",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 265
+  },
+  "skills": {
+    "passive": {
+      "name": "Dragon Flurry",
+      "description": "After dealing damage 3 time(s) with Basic Attacks or skills, Zilong triggers Dragon Flurry on the next Basic Attack, hitting the target 3 time(s). Each hit deals 80 (+30% Total Physical Attack) Basic Attack Damage and heals himself for 50 (+20% Total Physical Attack) HP.\nZilong's Basic Attack deals 100 (+80% Total Physical Attack) Physical Damage.\nIf the target's HP is below 50%, all damage dealt by Zilong's skills and Basic Attacks is increased by 30.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+30% Total Physical Attack)",
+        "(+20% Total Physical Attack)",
+        "(+80% Total Physical Attack)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff",
+        "Heal"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dragon_Flurry",
+      "tips": "During early laning phase, attack enemy minions to trigger his passive ability that allows him to attack the hero behind minions",
+      "iconUrl": "/raw-assets/skill_icons/zilong/dragon_flurry.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Spear Flip",
+      "description": "Zilong flings the target enemy over his head, dealing 250 (+80% Total Physical Attack) Physical Damage.",
+      "cooldown": "12.0",
+      "manaCost": "80",
+      "damageType": "Physical",
+      "scaling": [
+        "(+80% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.5",
+            "11.0",
+            "10.5",
+            "10.0",
+            "9.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "80",
+            "85",
+            "90",
+            "95",
+            "100",
+            "105"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "270",
+            "290",
+            "310",
+            "330",
+            "350"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spear_Flip",
+      "tips": "Early laning phase, wait for enemy soldiers to push to tower, and when soldiers are gone, try to hook enemy into tower",
+      "iconUrl": "/raw-assets/skill_icons/zilong/spear_flip.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Spear Strike",
+      "description": "Zilong lunges at the target enemy, dealing 250 (+60% Total Physical Attack) Physical Damage and reducing their Physical Defense by 15 for 2s.\nThe cooldown of Spear Strike is reset each time Zilong kills an enemy.",
+      "cooldown": "12.0",
+      "manaCost": "40",
+      "damageType": "Physical",
+      "scaling": [
+        "(+60% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.4",
+            "10.8",
+            "10.2",
+            "9.6",
+            "9.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "290",
+            "330",
+            "370",
+            "410",
+            "450"
+          ]
+        },
+        {
+          "label": "Physical Defense Reduction",
+          "values": [
+            "15",
+            "18",
+            "21",
+            "24",
+            "27",
+            "30"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Debuff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spear_Strike",
+      "tips": "Use with 1st skill, otherwise can be used to jump walls for escape, such as using enemy jungle minions.",
+      "iconUrl": "/raw-assets/skill_icons/zilong/spear_strike.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Supreme Warrior",
+      "description": "Zilong removes all slow effects on himself and gains 40% Movement Speed, 35% Attack Speed, and Slow Immunity for 7.5s.\nFor the duration, he can trigger Dragon Flurry after every 2 Basic Attacks (instead of the previous 3).",
+      "cooldown": "35.0",
+      "manaCost": "120",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "35.0",
+            "31.0",
+            "27.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "140",
+            "160"
+          ]
+        },
+        {
+          "label": "Attack Speed Bonus",
+          "values": [
+            "35%",
+            "45%",
+            "55%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Speed Up",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Supreme_Warrior",
+      "tips": "Can be used to chase enemies or to run away. Can be used on cast to remove crowd control.",
+      "iconUrl": "/raw-assets/skill_icons/zilong/supreme_warrior.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Zilong adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Splitpush Threat"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Backline Threat",
+    "Pick-off Specialist",
+    "Split Push",
+    "Sustained Damage",
+    "Jungle Tempo",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Level 4",
+    "Early-Mid Game"
+  ]
+}

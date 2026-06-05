@@ -1,0 +1,431 @@
+{
+  "id": "lunox",
+  "name": "Lunox",
+  "heroName": "Lunox",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2440,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 115,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.01",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Dreamland Twist",
+      "description": "Lunox is twisted by the powers of Chaos and Order.\nWhen Lunox uses Power of Order, she gains 0.5% of Spell Vamp for every 1% of Magic Penetration.\nWhen Lunox uses Power of Chaos, she gains 0.5% of Magic Penetration for every 1% of Spell Vamp.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dreamland_Twist",
+      "tips": "Chaos Assault is recommended when there’s advantage in attack, which grants magic PEN for higher damage dealt. Select Starlight Pulse in laning to boost double resist.",
+      "iconUrl": "/raw-assets/skill_icons/lunox/dreamland_twist.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Starlight Pulse",
+      "description": "Lunox summons a rain of starlight upon nearby enemies, dealing 200 (+110% Total Magic Power) Magic Damage. The starlight then returns to Lunox, each restoring 75 (+30% Total Magic Power) HP to her. The HP restored is doubled when hitting enemy heroes.\nThis skill shares cooldown with Chaos Assault. Grants one stack of Power of Order after use and ends the Power of Chaos enhanced state.",
+      "cooldown": "2.0",
+      "manaCost": "30",
+      "damageType": "Magic",
+      "scaling": [
+        "(+110% Total Magic Power)",
+        "(+30% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "230",
+            "260",
+            "290",
+            "320",
+            "350"
+          ]
+        },
+        {
+          "label": "HP Regen",
+          "values": [
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE",
+        "Heal"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Starlight_Pulse",
+      "tips": "The best laning skill in early game. Start the attack with Chaos Assault, then deal damage and heal Lunox with Starlight Pulse, keeping her in Brilliance status all the time.",
+      "iconUrl": "/raw-assets/skill_icons/lunox/starlight_pulse.png",
+      "displayLabel": "Skill 1 (Light Form)",
+      "skillSlot": "skill1",
+      "variant": "Light Form"
+    },
+    "skill2": {
+      "name": "Chaos Assault",
+      "description": "Lunox unleashes Chaos Energy at an enemy, dealing Magic Damage equal to 250 (+120% Total Magic Power) plus 2.5% of target's Max HP (1.5% of Max HP against Creeps).\nWhile enhanced by Power of Chaos, this skill has a brief cooldown and its cast interval is unaffected by Cooldown Reduction.",
+      "cooldown": "0.3",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+120% Total Magic Power)",
+        "(1.5% of Max HP against Creeps)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "270",
+            "290",
+            "310",
+            "330",
+            "350"
+          ]
+        },
+        {
+          "label": "Extra Percentage Damage",
+          "values": [
+            "2.5%",
+            "3%",
+            "3.5%",
+            "4%",
+            "4.5%",
+            "5%"
+          ]
+        },
+        {
+          "label": "Damage to Creeps",
+          "values": [
+            "1.5%",
+            "1.8%",
+            "2.1%",
+            "2.4%",
+            "2.7%",
+            "3%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Chaos_Assault_",
+      "tips": "The attack-oriented skill in laning. Tap to release and it will lock on enemy within target area first. It shares cooldown with Starlight Pulse. You are suggested to use the skill to strike the first 2 attacks in laning.",
+      "iconUrl": "/raw-assets/skill_icons/lunox/chaos_assault.png",
+      "displayLabel": "Skill 1 (Dark Form)",
+      "skillSlot": "skill1",
+      "variant": "Dark Form"
+    },
+    "ultimate": {
+      "name": "Cosmic Fission",
+      "description": "When Lunox uses the power of Order and Chaos, she will deal 300 (+150% Total Magic Power) Magic Damage to the targets along the way and slowing them by 40% for 2s.",
+      "cooldown": "10.0",
+      "manaCost": "70",
+      "damageType": "Magic",
+      "scaling": [
+        "(+150% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "10.0",
+            "9.5",
+            "9.0",
+            "8.5",
+            "8.0",
+            "7.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "70",
+            "80",
+            "90",
+            "100",
+            "110",
+            "120"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "340",
+            "380",
+            "420",
+            "460",
+            "500"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Cosmic_Fission",
+      "tips": "Lunox gets the ultimate skill in the Darkening status. When the ultimate skill is on, she could use Chaos Assault with no limit for 4s. Learning how to cast Chaos Assault as many as possible makes you a good Lunox user. Lunox gets the ultimate skill in Brilliance status. When the skill is on, Lunox is invincible for 3s. The extremely short cast time of the skill could help Lunox escape most directional skills if you are fast enough.",
+      "iconUrl": "/raw-assets/skill_icons/lunox/cosmic_fission.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2",
+      "variant": ""
+    },
+    "extra1": {
+      "name": "Order & Chaos",
+      "description": "Lunox is twisted by the powers of Chaos and Order.\nWhen Lunox uses Power of Order, she gains Brilliance and becomes invincible while dealing continuous damage to nearby enemies.\nWhen Lunox uses Power of Chaos, she gains Darkening and can blink in a target direction and greatly reduces the cooldown of Chaos Assault for a brief period.",
+      "cooldown": "30.0",
+      "manaCost": "120",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "30.0",
+            "26.0",
+            "22.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "160",
+            "200"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Invincible",
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Order_&_Chaos",
+      "displayLabel": "Special Mechanic",
+      "skillSlot": "special",
+      "variant": ""
+    },
+    "extra2": {
+      "name": "Power of Order: Brilliance",
+      "description": "Lunox extends the Light Barrier, becomes invincible for 2.5s, and gains 30% extra Movement Speed while dealing 100 (+50% Total Magic Power) Magic Damage every 0.5s to nearby enemies.",
+      "cooldown": "30.0",
+      "manaCost": "120",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "30.0",
+            "26.0",
+            "22.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "100",
+            "120",
+            "140"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Invincible",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Power_of_Order:_Brilliance",
+      "displayLabel": "Ultimate (Light Form)",
+      "skillSlot": "ultimate",
+      "variant": "Light Form"
+    },
+    "extra3": {
+      "name": "Power of Chaos: Darkening",
+      "description": "Lunox blinks in the target direction, dealing 250 (+100% Total Magic Power) Magic Damage to nearby enemies, slowing them by 30% for 4s.\nFor the next 4s, Lunox enhances her Power of Chaos to greatly reduce the cooldown of Chaos Assault (unaffected by CD Reduction), but using Starlight Pulse will end this enhanced state.",
+      "cooldown": "30.0",
+      "manaCost": "120",
+      "damageType": "Magic",
+      "scaling": [
+        "(+100% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "30.0",
+            "26.0",
+            "22.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "350",
+            "450"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Power_of_Chaos:_Darkening",
+      "displayLabel": "Ultimate (Dark Form)",
+      "skillSlot": "ultimate",
+      "variant": "Dark Form"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Dual State Ultimate",
+    "Order Chaos"
+  ],
+  "mechanicNote": "Lunox memiliki dua state Order dan Chaos yang mengubah ultimate-nya menjadi burst damage atau sustained invulnerability.",
+  "playstyleTags": [
+    "Burst",
+    "Poke"
+  ],
+  "difficultyTags": [
+    "Form Management",
+    "Combo Timing"
+  ],
+  "draftTags": [
+    "Zone Control"
+  ],
+  "counterTags": [
+    "Gap Close",
+    "Silence",
+    "Burst"
+  ],
+  "synergyTags": [
+    "Needs Peel",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Zone Control",
+    "Burst Damage"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "id": "natalia",
+  "name": "Natalia",
+  "heroName": "Natalia",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2480,
+    "hpRegen": 7,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 121,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Assassin Instinct",
+      "description": "If Natalia stays in a bush without taking damage for 1s, she will enter (Camouflage) state and gain 15% Movement Speed. In this state, Natalia's next Basic Attack will teleport her behind her target and deal 200( +110% Total Physical Attack) (Physical Damage) while silencing the target for 0.25s. Dealing damage, taking damage or using skills will immediately end the (Camouflage) state, but her next Basic Attack will remain enhanced for another 1s. Natalia's base Crit Damage is reduced to 150%, but her damage to Creeps is increased to 150%.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+110% Total Physical Attack)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Assassin_Instinct",
+      "tips": "Natalia's passive skill is the most powerful of all Hero Passive Skills in the Game, especially her ability to disappear and giving the Silence effect. Use the passive skill as often as possible to provide additional damage by attacking your opponent from behind and giving the Silence effect for 2 seconds. Finally, remember to always move places. Use additional speed and disappearance to put pressure on opponents in each Lane.",
+      "iconUrl": "/raw-assets/skill_icons/natalia/assassin_instinct.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Claw Dash",
+      "description": "Natalia dashes in the target direction, dealing 250 (+50% Total Physical Attack) Physical Damage to enemies in her path.\nAfter hitting an enemy, she can cast this skill again within 5s.",
+      "cooldown": "10.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+50% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "10.0",
+            "9.2",
+            "8.4",
+            "7.6",
+            "6.8",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "270",
+            "290",
+            "310",
+            "330",
+            "350"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Claw_Dash",
+      "tips": "Claw Dash is a very easy skill to use. Natalia attacks ahead and causes damage, Natalia can also attack twice if the first attack hitting on a Hero. Thus, this skill is very useful for Natalia as additional mobility that can be used to chase opponents who run away and also to escape if the situation gets worse.",
+      "iconUrl": "/raw-assets/skill_icons/natalia/claw_dash.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Smoke Bomb",
+      "description": "Natalia releases a Smoke Bomb at her location, slowing enemies within by 25% while Natalia becomes immune to enemy Basic Attacks for 4s.",
+      "cooldown": "12.0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Slow Effect",
+          "values": [
+            "25%",
+            "35%",
+            "45%",
+            "55%",
+            "65%",
+            "75%"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Buff",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Smoke_Bomb",
+      "tips": "Smoke Bomb is a special skill that will give her the Immune effect on all Basic Attack, which is certainly very effective especially against Marksman. Aside from being immune to Basic Attack, Natalia will also receive damage that is lower from Tower's attack, giving Natalia an additional strategy to crash into the Tower if needed.",
+      "iconUrl": "/raw-assets/skill_icons/natalia/smoke_bomb.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "The Hunt",
+      "description": "Passive: Natalia gains 15% extra Crit Chance.\nActive: Natalia immediately enters Assassin Instinct state. Natalia can store up to 2 charges of her Ultimate and each charge has a recharge time of 30s. Creep kills will reduce the current remaining recharge time by 50% of the full recharge time.",
+      "cooldown": "3.0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Crit Chance",
+          "values": [
+            "15%",
+            "30%",
+            "45%"
+          ]
+        },
+        {
+          "label": "Skill Recharge Time",
+          "values": [
+            "30",
+            "24",
+            "18"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Camouflage",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "The_Hunt",
+      "tips": "Natalia's Ultimate Skill is an Attack with a distance that is slightly larger than the Melee Range that attacks the opponent several times and slows down their Movement Speed. Among all Assassins, Natalia's Ultimate Skill is the weakest and is not a skill that can reverse the situation of the match, unlike Saber, Hayabusa, etc. However, this skill is still useful to slow down opponents who try to escape so that teammates can catch up with them.",
+      "iconUrl": "/raw-assets/skill_icons/natalia/the_hunt.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Natalia adalah assassin dengan kemampuan burst damage dan mobilitas tinggi untuk mengeliminasi target prioritas.",
+  "playstyleTags": [
+    "Burst",
+    "Pickoff"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Early Aggression"
+  ],
+  "counterTags": [
+    "Hard CC",
+    "Group Up",
+    "Vision"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Backline Threat",
+    "Pick-off Specialist",
+    "Jungle Tempo"
+  ],
+  "powerSpikeTags": [
+    "Level 4",
+    "Early-Mid Game"
+  ]
+}

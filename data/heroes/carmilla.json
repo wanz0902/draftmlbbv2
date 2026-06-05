@@ -1,0 +1,201 @@
+{
+  "id": "carmilla",
+  "name": "Carmilla",
+  "heroName": "Carmilla",
+  "role": [
+    "Support",
+    "Tank"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam",
+    "EXP"
+  ],
+  "flex_lanes": [
+    "EXP"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Vampire Pact",
+      "description": "Each time Carmilla deals damage to an enemy hero, she steals 7-11 Physical & Magic Defense (scales with level) from them. The stolen Physical & Magic Defense can stack up to 5 times and lasts 5s. However, Carmilla can only steal defense from the same enemy hero once every 5s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Vampire_Pact",
+      "tips": "This skill increases Carmilla’s defense and grants her an edge when fighting. Combined with the regen effect of Crimson Flower, Carmilla’s durability could be increased.",
+      "iconUrl": "/raw-assets/skill_icons/carmilla/vampire_pact.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Crimson Flower",
+      "description": "Carmilla summons two Crimson Flowers that circle around her for 5s, dealing 100( +50% Total Magic Power) (Magic Damage) each time they hit an enemy and slowing them by 10% for 0.8s (the slow effect stacks up to 50%). The circling speed of the Crimson Flowers also increases with each hit. Carmilla recovers 75( +35% Total Magic Power) HP each time a Crimson Flower deals damage (only recovers 30% of that amount when hitting Minions).",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Crimson_Flower",
+      "tips": "This Skill is Carmilla’s core damage dealing skill. Once the Crimson Flowers hit enemies, their circling speed will increase. Therefore, Carmilla could deal more damage and restore her HP more quickly. That increases Carmilla’s durability in Team Fights.",
+      "iconUrl": "/raw-assets/skill_icons/carmilla/crimson_flower.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Bloodbath",
+      "description": "Carmilla accumulates Bloodbath Energy, gaining 70% Movement Speed that decays over 4.5s. (Use Again): Carmilla unleashes the accumulated Bloodbath Energy on the target enemy hero or Creep, dealing 150( +120% Total Magic Power) (Magic Damage) and stunning them for 0.6s. The damage and stun duration scale with the accumulation time (up to 100%).",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Bloodbath",
+      "tips": "With Bloodbath, Carmilla could control enemies with relatively high hit rate when roaming and therefore, assist her allies to slay targets.",
+      "iconUrl": "/raw-assets/skill_icons/carmilla/bloodbath.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Curse of Blood",
+      "description": "Carmilla casts Curse of Blood on the target location, slowing enemies hit by 50%. After 0.8s, enemies still within the area will take 450( +130% Total Magic Power) (Magic Damage), and will be immobilized for 1s, slowed by 15% and linked for 5s. When a linked enemy takes damage or becomes controlled, all the other linked targets take 50% of the damage and become controlled for 100% of the duration. Enemies can move away from one another to break the link.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Curse_of_Blood",
+      "tips": "This Skill is a masterstroke in Team Fight. Carmilla and her allies could deal massive Damage once she chains her targets. It also grants Crowd Control effect to a Control Skill. With this Skill, Carmilla and her allies could be invincible in Team Fight.",
+      "iconUrl": "/raw-assets/skill_icons/carmilla/curse_of_blood.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Vision Control",
+      "Team Enabler",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Link Damage"
+  ],
+  "mechanicNote": "Carmilla menghubungkan musuh satu sama lain, menyebarkan crowd control dan damage yang diterima satu musuh ke yang terhubung.",
+  "playstyleTags": [
+    "Protect",
+    "Frontline"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Enabler",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Dive",
+    "Isolation",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Dive",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "Vision Control",
+    "Team Enabler",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "id": "harley",
+  "name": "Harley",
+  "heroName": "Harley",
+  "role": [
+    "Mage",
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 114,
+    "physicalDefense": 19,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.06",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Magic Master",
+      "description": "Harley's mastery of magic allows his Basic Attacks and skills to reduce the enemy's Magic Defense by 2 and increase his Attack Speed by 5%-10% (scales with hero level) for 3s on hit. This effect stacks up to 10 times.\nHarley's Basic Attacks deal 60 (+50% Total Physical Attack) (+60% Total Magic Power) Magic Damage.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Physical Attack)",
+        "(+60% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Debuff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Magic_Master"
+    },
+    "skill1": {
+      "name": "Poker Trick",
+      "description": "Harley throws 3 waves of cards, 3 cards per wave. Each card deals 130 (+25% Total Magic Power) Magic Damage to enemies.\nAfter the same target is hit 3 time(s), the damage will decay to 50% on subsequent hits.",
+      "cooldown": "6.0",
+      "manaCost": "55",
+      "damageType": "Magic",
+      "scaling": [
+        "(+25% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80"
+          ]
+        },
+        {
+          "label": "Cards",
+          "values": [
+            "3",
+            "3",
+            "4",
+            "4",
+            "5",
+            "5"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "130",
+            "150",
+            "160",
+            "180",
+            "190",
+            "210"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Poker_Trick"
+    },
+    "skill2": {
+      "name": "Space Escape",
+      "description": "Harley blinks in the designated direction, leaving a magic hat at his starting location. His Movement Speed increases by 60% for 2s, then rapidly decays to normal over 4s.\nUse Again: Return to the hat's location.",
+      "cooldown": "8.0",
+      "manaCost": "75",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.0",
+            "7.6",
+            "7.2",
+            "6.8",
+            "6.4",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "75",
+            "60",
+            "45",
+            "30",
+            "15",
+            "0"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Speed Up"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Space_Escape"
+    },
+    "ultimate": {
+      "name": "Deadly Magic",
+      "description": "Harley casts a magic ring of fire at an enemy hero, dealing 200 (+60% Total Magic Power) Magic Damage and a 40% slow effect that decays to 15% after 1.5s. The ring will stay around the target, during which Harley can hit the ring to damage the target. The ring will explode after 4s, dealing Magic Damage equal to 200 (+50% Total Magic Power) plus 30% of the damage taken by the target while the ring was active.",
+      "cooldown": "36.0",
+      "manaCost": "120",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)",
+        "(+50% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "36.0",
+            "33.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "300",
+            "400"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "30%",
+            "40%",
+            "50%"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Burst",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Deadly_Magic"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Zone Control",
+      "Burst Damage",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

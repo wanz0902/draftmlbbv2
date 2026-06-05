@@ -1,0 +1,219 @@
+{
+  "id": "leomord",
+  "name": "Leomord",
+  "heroName": "Leomord",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "The Oath Keeper",
+      "description": "Leomord's Basic Attacks are guaranteed to Crit against enemies below 50% Max HP, dealing 200% damage. Leomord converts every 1% Crit Chance gained into 1 Physical Attack.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "The_Oath_Keeper",
+      "tips": "Passive effects make it easy for Leomord to finish off low-HP units. Making good use of 2 other skills in the mounted state, and Leomord could cut into fights and reduce enemies’ HP to below 30% and slay them with basic attacks in combination with skill “Inspire”.",
+      "iconUrl": "/raw-assets/skill_icons/leomord/the_oath_keeper.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Momentum",
+      "description": "Leomord gains a 150( +50% Total Physical Attack) shield and begins channeling, slowing enemies in the target direction by 25%. When the channeling is complete or interrupted, he thrusts his sword in the same direction, dealing up to 500( +180% Total Physical Attack) (Physical Damage) to enemies hit (scales with channel time) and slowing them by 40% for 1s. Leomord can cast this skill again to actively interrupt the channeling.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Momentum",
+      "tips": "The main DPS skill for human state Leomord takes a long time to charge but could be released early to ensure high hit rate. The shield gained by releasing the skill is surprising useful during a tight match or when Leomord is low in health.",
+      "iconUrl": "/raw-assets/skill_icons/leomord/momentum.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Decimation Assault",
+      "description": "Leomord charges in a designated direction, dealing 300( +50% Total Physical Attack) (Physical Damage) to enemies along the way and slowing them by 30% for 1s.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Decimation_Assault",
+      "tips": "Human state skill 2 and mounted state skill 2 are both teleport skills but they don’t share CD. Take advantage of this and Leomord could teleport twice when summoning Barbiel with the ultimate, making it possible to cut into fights quicker.",
+      "iconUrl": "/raw-assets/skill_icons/leomord/decimation_assault.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Phantom Steed",
+      "description": "Leomord summons (Barbiel) to rush to him, knocking back and dealing 350( +100% Total Physical Attack) (Physical Damage) to all enemies in its path. If (Barbiel) comes in contact with Leomord, they will enter the Mounted State, gaining 30% Movement Speed that decays over 2s. (Mounted State): Leomord gains a brand-new set of skills, and his Basic Attack can be used while moving and hits a circular area to deal AOE damage. Leomord also gains 60 Movement Speed and 30 Physical & Magic Defense.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Phantom_Steed",
+      "tips": "This is the strongest skill of Leomord. Mounting on Barbiel makes him incredibly strong. Barbiel could even knocks back enemies when running. But make sure Leomord comes in contact with Barbiel, otherwise the bonus will not be triggered.",
+      "iconUrl": "/raw-assets/skill_icons/leomord/phantom_steed.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Leomord adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

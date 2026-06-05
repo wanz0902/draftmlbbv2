@@ -1,0 +1,190 @@
+{
+  "id": "martis",
+  "name": "Martis",
+  "heroName": "Martis",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Ashura's Wrath",
+      "description": "Each time Martis uses a skill, his Attack Speed will be increased by 30%, 120% maximum. Lasts 4s. He gains (+6*Hero Level) extra Attack at full stacks.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ashura's_Wrath",
+      "tips": "Try to keep this passive up as much as possible to supplement damage when your skills are cooling down.",
+      "iconUrl": "/raw-assets/skill_icons/martis/ashura_s_wrath.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Ashura Aura",
+      "description": "Martis draws enemies to a fan-shaped area in front of him and deals 350( +130% Extra Physical Attack) (Physical Damage), slowing them by 40% for 2s.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ashura_Aura",
+      "tips": "This skill gathers as many enemies as possible within range, functioning as a small-scale group control effect that has a big impact on the flow of battle.",
+      "iconUrl": "/raw-assets/skill_icons/martis/ashura_aura.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Mortal Coil",
+      "description": "Martis strikes in the target direction three times, each time dealing 225( +120% Extra Physical Attack) (Physical Damage) to enemies hit. Enemies hit by the first and third strike are also knocked back. The attack direction can be changed once using the Joystick. (Use Again): Martis leaps in the target direction, dealing 300( +150% Extra Physical Attack) (Physical Damage) to enemies in his path and knocking them airborne. Martis gains Control Immunity and 60% Damage Reduction when casting this skill.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mortal_Coil",
+      "tips": "This is an offensive and defensive soul skill. During the first part, you can move the analog stick to change direction, and the second part is perfect for chasing down enemy heroes. Proper use of this skill will leave enemies totally suppressed by your twin blades.",
+      "iconUrl": "/raw-assets/skill_icons/martis/mortal_coil.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Decimation",
+      "description": "Martis lunges at a designated enemy hero, dealing 800( +100% Total Physical Attack) (Physical Damage) (deals True Damage if the enemy's HP is below 50%). If the enemy is killed by this skill, Martis can cast the skill again within 10s and gains 100% extra Movement Speed that gradually decays over 5s. Each successive cast also increases the skill's damage by 15% (up to 30%).",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Decimation",
+      "tips": "The execution mechanism, combined with the acceleration effect, can allow Martis to pick up five kills when facing a team of low-HP heroes.",
+      "iconUrl": "/raw-assets/skill_icons/martis/decimation.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Martis adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

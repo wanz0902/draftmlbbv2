@@ -1,0 +1,187 @@
+{
+  "id": "layla",
+  "name": "Layla",
+  "heroName": "Layla",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Malefic Gun",
+      "description": "Layla deals increased damage to enemies farther away from her (starting at 100% and increasing to 115% at 6 units away). This does not include Turrets.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Malefic_Gun",
+      "tips": "Keep a long distance from your foe if you want to beat your foes easily. This is quiet useful for her by the way.",
+      "iconUrl": "/raw-assets/skill_icons/layla/malefic_gun.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Malefic Bomb",
+      "description": "Layla fires a Malefic Bomb in the target direction, dealing 200( +80% Total Physical Attack) (Physical Damage) to the first enemy hit (can Crit). Upon hitting an enemy, Layla's Basic Attacks and (Void Projectile) gain extra range for 3s, and she gains 60% extra Movement Speed that decays over 1.2s. The duration of the Movement Speed boost is doubled if an enemy hero is hit.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Malefic_Bomb",
+      "tips": "This skill can shoot in a straight target. This is perfect if you want to slowly cut down your foe. But take note that you will need to use this skill wisely.",
+      "iconUrl": "/raw-assets/skill_icons/layla/malefic_bomb.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Void Projectile",
+      "description": "Layla fires an orb of Malefic Energy at the target enemy that explodes on hit, dealing 170( +65% Total Physical Attack) (Physical Damage) to targets in the area and applying a (Magic Mark) on them for 3s. When Layla hits an enemy with a (Magic Mark), she deals 100( +35% Total Physical Attack) (Physical Damage) to nearby enemies and stuns them for 0.25s.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Void_Projectile",
+      "tips": "The Range of this skill will surely increase whenever the skill is being upgraded. This is totally useful when you want to slow your opponent's movement speed when pursuing it.",
+      "iconUrl": "/raw-assets/skill_icons/layla/void_projectile.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Destruction Rush",
+      "description": "Layla fires a blast of Malefic Energy in the target direction, dealing 500( +150% Total Physical Attack) (Physical Damage) to enemies in a line. (Passive:) The range of Layla's (Void Projectile) and Basic Attacks is increased by 0.6 units. Her sight range is also slightly increased each time this skill is upgraded.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Destruction_Rush",
+      "tips": "The beams can go through walls or rocks. So this is useful if you are stealing your teammate's kills. Just joking. You can use this to reduce your foe's HP greatly. Whenever the skill is upgraded, its basic attack range or basic attack distance will be increased by 0.4%. Use this wisely.",
+      "iconUrl": "/raw-assets/skill_icons/layla/destruction_rush.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Layla adalah marksman dengan DPS tinggi yang menjadi win condition utama di late game.",
+  "playstyleTags": [
+    "DPS"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Late Game Insurance",
+    "Snowball Potential"
+  ],
+  "counterTags": [
+    "Dive",
+    "Burst",
+    "Flank"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Needs Peel"
+  ],
+  "macroTags": [
+    "Objective DPS",
+    "Late Game Carry",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

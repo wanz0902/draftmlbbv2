@@ -1,0 +1,268 @@
+{
+  "id": "cyclops",
+  "name": "Cyclops",
+  "heroName": "Cyclops",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid",
+  "lanes": [
+    "Mid",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2440,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 112,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Starlit Hourglass",
+      "description": "Each time Cyclops hits an enemy with his skills, all his skill cooldowns are reduced by 0.5s.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Starlit_Hourglass",
+      "tips": "His passive allows all his skills to reduce 0.5 seconds upon hitting an enemy. This passive is really strong and a cooldown+magic damage build will make Cyclops really Over Powered.",
+      "iconUrl": "/raw-assets/skill_icons/cyclops/starlit_hourglass.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Stardust Shock",
+      "description": "Cyclops casts two Stardust Disks in the target direction, each dealing 240 (+60% Total Magic Power) Magic Damage to enemies in its path.",
+      "cooldown": "7.5",
+      "manaCost": "50",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "240",
+            "272",
+            "304",
+            "336",
+            "368",
+            "400"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Stardust_Shock",
+      "tips": "Use his first skill on creeps. This skill is mostly used for killing creeps/minions and killing running enemies. Cyclops will shoot out planets to the specified target dealing the target 210 magic pts at the start. Using this skill while clashing with enemies will reduce all skill cooldown allowing you to use your second skill faster as well as trapping running enemies with your ultimate.",
+      "iconUrl": "/raw-assets/skill_icons/cyclops/stardust_shock.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Planets Attack",
+      "description": "Cyclops conjures Starlit Spheres around himself while gaining 50% Movement Speed that decays over 2s. The spheres will automatically seek and attack nearby enemies (prioritizes enemy heroes), exploding on collision and dealing 200 (+55% Total Magic Power) Magic Damage to the enemy. Enemies hit by multiple spheres will take reduced damage after the first hit.",
+      "cooldown": "14.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+55% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "14.0",
+            "13.2",
+            "12.4",
+            "11.6",
+            "10.8",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "66",
+            "72",
+            "78",
+            "84",
+            "90"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "225",
+            "250",
+            "275",
+            "300",
+            "325"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Planets_Attack",
+      "tips": "This is the most powerful skill Cyclops has. Planets will start to surround Cyclops making nearby enemies target and dealing 210 damage pts each planet. This is mostly used for finishing off enemies and damaging them. This is also used to and commonly used to stop/trap enemies from running away.",
+      "iconUrl": "/raw-assets/skill_icons/cyclops/planets_attack.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Star Power Lockdown",
+      "description": "Cyclops creates a Planetary Sphere and sends it after the target enemy hero or Creep, dealing 500 (+120% Total Magic Power) Magic Damage and immobilizing them for 0.75-1.5s (increases with travel distance).",
+      "cooldown": "26.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+120% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "26.0",
+            "22.0",
+            "18.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "80",
+            "100"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Star_Power_Lockdown",
+      "tips": "As said in the first skill this is used to trap running enemies or just enemies. Allowing you or your teammate to kill your enemy or simply finish them off if they have a low amount of health for this skill will follow wherever the enemy goes. This can be countered by many heroes now so don't be too shabby while in a match.",
+      "iconUrl": "/raw-assets/skill_icons/cyclops/star_power_lockdown.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Cyclops adalah mage dengan kemampuan burst/poke damage dari jarak aman.",
+  "playstyleTags": [
+    "Burst",
+    "Poke"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Zone Control"
+  ],
+  "counterTags": [
+    "Gap Close",
+    "Silence",
+    "Burst"
+  ],
+  "synergyTags": [
+    "Needs Peel",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Zone Control",
+    "Burst Damage",
+    "Jungle Tempo"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

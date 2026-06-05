@@ -1,0 +1,193 @@
+{
+  "id": "diggie",
+  "name": "Diggie",
+  "heroName": "Diggie",
+  "role": [
+    "Support"
+  ],
+  "specialty": [
+    "Guard",
+    "Regen"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam",
+    "Mid"
+  ],
+  "flex_lanes": [
+    "Mid"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Young Again",
+      "description": "Upon death, Diggie reverses time and turns back to egg form, in which he can continue to move around and gains a new set of skills. He cannot be targeted in egg form and will revive after a period of time.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Young_Again",
+      "tips": "Chick mode not only can distract enemies, it can also be used to scout out the mode. The insignificant damage can be used to interrupt enemy Recall and Regen.",
+      "iconUrl": "/raw-assets/skill_icons/diggie/young_again.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Auto Alarm Bomb",
+      "description": "Diggie flings an owl alarm to the target location that remains stationary for 25s or until it reacts to the first enemy in range, chasing them and exploding upon collision. The explosion deals 350( +100% Total Magic Power) (Magic Damage) to enemies hit and slows them by 30%. Diggie gains 2 stacks of (Dangerous Sparks) each time an enemy hero is hit by the explosion (up to 60 stacks), each stack increasing the skill's damage by 1%. He loses half the stacks upon death, but can gain 1 stack of (Dangerous Sparks) each time his skill hits an enemy hero when in egg form. Up to 5 owl alarms can exist at the same time.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Auto_Alarm_Bomb",
+      "tips": "When ticking down, tap again to detonate immediately. Early detonations will only slow instead of stunning. Best to let it tick for as long as possible, but don't be greedy for damage and let the enemy leave the explosion range.",
+      "iconUrl": "/raw-assets/skill_icons/diggie/auto_alarm_bomb.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Reverse Time",
+      "description": "Diggie marks the target enemy hero for 4s and pulls them back to their previous location after the duration ends, dealing 150( +100% Total Magic Power) (Magic Damage) and briefly slowing them by 80%. If the enemy moves out of the circle, the pull will be triggered early.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Reverse_Time",
+      "tips": "Powerful CC ability, use it on enemies with powerful mobility skills for highest effectiveness.",
+      "iconUrl": "/raw-assets/skill_icons/diggie/reverse_time.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Time Journey",
+      "description": "Diggie removes all debuffs on nearby allied heroes (including himself) and grants them a 650( +300% Total Magic Power) shield and Control Immunity for 3s. He also gains 50% Movement Speed for 0.5s.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Time_Journey",
+      "tips": "Use it after allies have been CCed, giving them a shield, This is a tremendously powerful team fight ability.",
+      "iconUrl": "/raw-assets/skill_icons/diggie/time_journey.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Vision Control",
+      "Team Enabler",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Diggie adalah support yang membantu tim melalui heal, shield, atau utility lainnya.",
+  "playstyleTags": [
+    "Protect"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Enabler",
+    "Defensive Draft"
+  ],
+  "counterTags": [
+    "Dive",
+    "Isolation",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Dive",
+    "Sustain Enabler"
+  ],
+  "macroTags": [
+    "Vision Control",
+    "Team Enabler",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

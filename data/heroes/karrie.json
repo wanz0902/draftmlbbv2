@@ -1,0 +1,216 @@
+{
+  "id": "karrie",
+  "name": "Karrie",
+  "heroName": "Karrie",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Lightwheel Mark",
+      "description": "Karrie's Basic Attacks and skills apply a stack of (Lightwheel Mark) on hit. Once a target has 5 stacks of (Lightwheel Marks), the marks will turn into a lightwheel, dealing (True Damage) equal to 5( +1% Extra Physical Attack)% of the target's Max HP to them (only up to 300 damage against Creeps).",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Lightwheel_Mark",
+      "tips": "Because this passive skill deal percentage damage instead of static damage , it is best used to enemy with high health . The bigger the maximum HP , the bigger the damage.",
+      "iconUrl": "/raw-assets/skill_icons/karrie/lightwheel_mark.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Spinning Lightwheel",
+      "description": "Karrie releases a sphere of surging energy in the target direction, dealing 250( +90% Total Physical Attack) (Physical Damage) to enemies in its path. The sphere will stop upon hitting an enemy hero or reaching its max travel distance, continuously dealing 150( +20% Total Physical Attack) (Physical Damage) to nearby enemies and slowing them by 80% for 1s.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spinning_Lightwheel",
+      "tips": "This skill is really useful to fight against a crowd of minion , because it will do damage to minion with / without your presence , especially when the enemy is surrounding the minion and you cannot use basic attack to hit them . It is also effective against Lord and Holy Lord that is going toward your turret because it will slow his movement speed , allowing you to kill him before he can do damage .",
+      "iconUrl": "/raw-assets/skill_icons/karrie/spinning_lightwheel.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Phantom Step",
+      "description": "Karrie dashes in the target direction while throwing a lightwheel at the nearest enemy, dealing 150( +70% Total Physical Attack) (Physical Damage) and applying a stack of (Lightwheel Mark) on them. When in (Dual Wield) state, Karrie throws two lightwheels instead.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Phantom_Step",
+      "tips": "When it comes to battle , this skill is really good at creating distance between you with your enemy or to dodge their attack while damaging them , but be careful , any mistake when using this skill will only make you become closer to your enemy and allowing them to kill you easier .",
+      "iconUrl": "/raw-assets/skill_icons/karrie/phantom_step.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Speedy Lightwheel",
+      "description": "Karrie enters (Dual Wield) state for 6s, during which she gains 20% Movement Speed and throws two lightwheels with each Basic Attack, each dealing 50% Basic Attack damage and inheriting a portion of Attack Effects.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Speedy_Lightwheel",
+      "tips": "Usually , using this skill at max level to the enemy is equal with normal basic attack , but if your enemy maximum HP is really big , this skill is very deadly , so remember to not use this skill to enemy with low maximum HP and only use it when you are fighting against enemy with big maximum HP .",
+      "iconUrl": "/raw-assets/skill_icons/karrie/speedy_lightwheel.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Karrie adalah marksman dengan DPS tinggi yang menjadi win condition utama di late game.",
+  "playstyleTags": [
+    "DPS"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Late Game Insurance",
+    "Snowball Potential"
+  ],
+  "counterTags": [
+    "Dive",
+    "Burst",
+    "Flank"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Needs Peel"
+  ],
+  "macroTags": [
+    "Objective DPS",
+    "Late Game Carry",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

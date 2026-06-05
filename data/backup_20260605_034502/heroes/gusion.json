@@ -1,0 +1,243 @@
+{
+  "id": "gusion",
+  "name": "Gusion",
+  "heroName": "Gusion",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2419,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 119,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.11",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Dagger Specialist",
+      "description": "Each skill cast adds a rune to Gusion's dagger (stacks up to 4 times). Each stack enhances Gusion's next Basic Attack to deal additional damage equal to 3% of the target's Max HP and restore 50 (+25% Total Magic Power) HP to himself.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "(+25% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff",
+        "Heal"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dagger_Specialist"
+    },
+    "skill1": {
+      "name": "Sword Spike",
+      "description": "Gusion throws a dagger in the target direction, dealing 200 (+50% Total Magic Power) Magic Damage to the first enemy hit and marking them.\nUse Again: Gusion moves behind the marked enemy, dealing 200 (+100% Total Magic Power) Magic Damage to them. This skill cannot be interrupted while Gusion is moving behind the marked enemy.\n|stats1=Cooldown|stats1_value=9.0/8.4/7.8/7.2/6.6/6.0\n|stats2=Skill Cost|stats2_value=50/55/60/65/70/75\n|stats3=Base Damage|stats3_value=200/220/240/260/280/300\n|stats4=Extra Damage|stats4_value=200/220/240/260/280/300",
+      "cooldown": "9.0",
+      "manaCost": "50",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Magic Power)",
+        "(+100% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "9.0",
+            "8.4",
+            "7.8",
+            "7.2",
+            "6.6",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "50",
+            "55",
+            "60",
+            "65",
+            "70",
+            "75"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "220",
+            "240",
+            "260",
+            "280",
+            "300"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "200",
+            "220",
+            "240",
+            "260",
+            "280",
+            "300"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage",
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Sword_Spike"
+    },
+    "skill2": {
+      "name": "Shadowblade Slaughter",
+      "description": "Gusion throws a volley of daggers in the target direction, each dealing 100 (+40% Total Magic Power) Magic Damage to enemies hit and slowing them by 6% for 2s (when hit by multiple daggers, the slow effect can stack up to 30%).\nUse Again: Gusion recalls the daggers, each dealing 65 (+40% Total Magic Power) Magic Damage to enemies in its path.\n|stats1=Skill Cost|stats1_value=60/65/70/75/80/85\n|stats2=Base Damage|stats2_value=100/120/140/160/180/200\n|stats3=Extra Damage|stats3_value=65/75/85/95/105/115",
+      "cooldown": "9.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+40% Total Magic Power)",
+        "(+40% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "100",
+            "120",
+            "140",
+            "160",
+            "180",
+            "200"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "65",
+            "75",
+            "85",
+            "95",
+            "105",
+            "115"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Shadowblade_Slaughter"
+    },
+    "ultimate": {
+      "name": "Incandescence",
+      "description": "Gusion dashes to the target location, resetting the cooldowns of Sword Spike and Shadowblade Slaughter. If Shadowblade Slaughter was cast once before the reset, Gusion can throw another five daggers on his next Shadowblade Slaughter cast, and recall a total of ten daggers afterward.\nUse Again: Gusion dashes a short distance in the target direction.\n|stats1=Cooldown|stats1_value=24.0/20.0/16.0\n|stats2=Skill Cost|stats2_value=100/50/0",
+      "cooldown": "24.0",
+      "manaCost": "100",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "24.0",
+            "20.0",
+            "16.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "100",
+            "50",
+            "0"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Incandescence"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

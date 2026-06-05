@@ -1,0 +1,230 @@
+{
+  "id": "gatotkaca",
+  "name": "Gatotkaca",
+  "heroName": "Gatotkaca",
+  "role": [
+    "Tank",
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane",
+    "Roam"
+  ],
+  "flex_lanes": [
+    "Roam"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Steel Bones",
+      "description": "Gatotkaca gains Physical Defense equal to 2% of his lost HP (up to 200). For every 300 damage he takes (calculated before damage reduction), he gains 5 Rage (up to 100). Upon reaching over 25 Rage, Gatotkaca's next Basic Attack becomes enhanced, consuming all Rage to deal extra (Magic Damage) and recover HP. The extra damage scales with his Rage, level, and Magic Power.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Steel_Bones",
+      "tips": "Skill regenerasi utama Anda. Steel Bones membuat Gatotkaca bisa bertahan di Lane lebih lama dan lebih sering melakukan Tanking. Dengan Skill ini walaupun HP Anda di bawah 50%, Anda tidak perlu takut untuk maju dan menahan serangan dari lawan saat sekutu Anda ingin menghabiskan atau mengejar lawan.",
+      "iconUrl": "/raw-assets/skill_icons/gatotkaca/steel_bones.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Blast Iron Fist",
+      "description": "Gatotkaca slams the ground, creating a shattered zone in the target direction while dealing 200( +150% Total Magic Power) (Magic Damage) to enemies within. Enemies in the shattered zone will take 100( +20% Total Magic Power) (Magic Damage) per second and be slowed by 30%.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Blast_Iron_Fist",
+      "tips": "Arahkan skill 1 ke lawan agar lawan mendapatkan damage dan efek slow.",
+      "iconUrl": "/raw-assets/skill_icons/gatotkaca/blast_iron_fist.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Unbreakable",
+      "description": "Gatotkaca begins channeling, then sprints in the target direction with a battle cry, forcing enemies on the path to attack him and deal 200( +100% Total Magic Power) (Magic Damage) for 1.5s. The sprint distance scales with the channel time. Canceling the Skill reduces 50% of the remaining Cooldown.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Unbreakable",
+      "tips": "Gunakan skill 2 ini dengan bijak, terlalu dekat dengan musuh pun bisa membuat skill 2 gatot ini menjadi skill bunuh diri untuknya.",
+      "iconUrl": "/raw-assets/skill_icons/gatotkaca/unbreakable.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Avatar of the Guardian",
+      "description": "Gatotkaca jumps to the target location, dealing 500( +300% Total Magic Power) (Magic Damage) to nearby enemies and knocking them airborne for 1s. Enemies near the center of the area will be knocked airborne for a longer duration, while enemies on the fringes will be pulled to the center. The camera will move with the skill indicator but won't grant extra sight.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Avatar_of_the_Guardian",
+      "tips": "Hati-hati pada saat menggunakan skill ultimate karena musuh yang memiliki Crowd Control dapat menggagalkan Ultimate gatot ( walaupun hanya memperlambatnya mengeluarkan Ultimate ). Maka agar tidak digagalkan, Gatot dapat bersembunyi di semak-semak atau menggunakannya jauh dari musuh dan mengarahkannya tepat ke arah lawan, Skill ini juga dapat digunakan untuk mengejar lawan atau membantu Gatot melarikan diri.",
+      "iconUrl": "/raw-assets/skill_icons/gatotkaca/avatar_of_the_guardian.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Frontline Engage",
+      "Crowd Control",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Gatotkaca adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Frontline Engage",
+    "Crowd Control",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

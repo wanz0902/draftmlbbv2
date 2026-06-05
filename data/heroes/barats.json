@@ -1,0 +1,205 @@
+{
+  "id": "barats",
+  "name": "Barats",
+  "heroName": "Barats",
+  "role": [
+    "Tank",
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle",
+    "EXP",
+    "Roam"
+  ],
+  "flex_lanes": [
+    "EXP",
+    "Roam"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Detona's Welcome",
+      "description": "After a short delay, Detona charges in the target direction, dealing 120( +70% Total Physical Attack) (+1% Total HP) (Physical Damage) to the first enemy hit, devouring and suppressing them for 1.2s before spitting them out. If the target hits an enemy hero or a wall after being spit out, the target will cause an explosion, they and nearby enemies will take an additional 180( +105% Total Physical Attack) (+2% Total HP) (Physical Damage) and be stunned for 1s. For the duration, Barats becomes immune to control effects. If the channeling is canceled, 60% of the skill cooldown will be refunded. (Passive): Detona gains 4 stacks of (Big Guy) upon respawn.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Detona's_Welcome",
+      "tips": "Each time Barats and Detona deal damage to a target, Detona gains 1 stack of [Big Guy] for several seconds, capped at 25 stacks. For each stack of [Big Guy], Detona gains increased body size, Physical Defense and Magic Defense, and Resilience. When [Big Guy] reaches 16 stacks, Detona will [Trample] the target with his Basic Attack, dealing Physical Damage to enemies within a round area and slow them.",
+      "iconUrl": "/raw-assets/skill_icons/barats/detona_s_welcome.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "So-Called Teamwork",
+      "description": "Detona spits contaminated oil in the target direction, dealing 60( +7% Total HP) (Physical Damage) to enemies in a fan-shaped area. Barats then ignites the oil with a firecracker, dealing 120( +200% Total Physical Attack) (Physical Damage) to enemies in the area. The area of effect of (So-Called Teamwork) increases with the number of (Big Guy) stacks.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "So-Called_Teamwork",
+      "tips": "Detona spits contaminated oil in the fan-shaped area in front, dealing Physical Damage to enemies within the area and slowing them. Then Barats drops the firecracker onto the contaminated oil from his bag and ignites it, dealing Physical Damage to enemies within the area. The area of effect of [So-Called Teamwork] will increase when [Big Guy] reaches 6, 11, 16, 21 stacks.",
+      "iconUrl": "/raw-assets/skill_icons/barats/so_called_teamwork.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Missile \"Expert\"",
+      "description": "Barats fires two missiles at the target location, dealing 100( +75% Total Physical Attack) (Physical Damage) and slowing enemies by 40% for 1s. The missiles expel fumes from their exhausts upon landing, dealing 100( +75% Total Physical Attack) (Physical Damage) to enemies in a rectangular area and pushing them toward Barats.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Missile_\"Expert\"",
+      "tips": "Barats launches missiles to the designated area. Upon landing, a blast of flame spouts out from the rear of the missiles, dealing Physical Damage to the enemies in a straight line and pushing them toward Barats a certain distance.",
+      "iconUrl": "/raw-assets/skill_icons/barats/missile_expert.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Big Guy",
+      "description": "Detona gains a stack of (Big Guy) for 12s each time it or Barats damages an enemy with their skills (up to 10 stacks). Each stack of (Big Guy) increases Detona's size, and grants 4-10 extra Hybrid Defense (scales with the level of (Detona's Welcome)) and 5% extra Resilience. At max stacks, Detona's Basic Attacks will be replaced with (Trample), which deals ( +140% Total Physical Attack) (+4% Total HP) (Physical Damage) to enemies in a circular area, slows them by 40% for 0.2s, and refreshes the duration of (Big Guy) with each hit.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Big_Guy",
+      "tips": "Detona locks onto an enemy hero. If the target doesn't leave Detona's hunting range within the next several seconds, Detona will devour the target, suppressing the target for a while. During this period, Barats is immune to control effects and unable to move while still being able to turn direction. Then Detona spits the target out, dealing Physical Damage to the target. If the target is knocked into other enemy heroes or walls, the target and the enemy heroes that it was knocked into will take Physical Damage and be stunned. When [Big Guy] reaches 6, 11, 16, and 21 stacks respectively, the damage of [Detona's Welcome] will be increased.",
+      "iconUrl": "/raw-assets/skill_icons/barats/big_guy.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Frontline Engage",
+      "Crowd Control",
+      "Jungle Tempo",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Barats adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Frontline Engage",
+    "Crowd Control",
+    "Jungle Tempo",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

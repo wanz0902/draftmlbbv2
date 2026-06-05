@@ -1,0 +1,193 @@
+{
+  "id": "floryn",
+  "name": "Floryn",
+  "heroName": "Floryn",
+  "role": [
+    "Support"
+  ],
+  "specialty": [
+    "Guard",
+    "Regen"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam",
+    "Mid"
+  ],
+  "flex_lanes": [
+    "Mid"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Dew",
+      "description": "Dew's (Lantern) will permanently increase Floryn's attributes by a small amount. After leaving combat for 5s, Floryn can share the (Flower of Hope) with an allied hero (30s cooldown), which will grant them a 150( +80% Total Magic Power) shield each time they are healed by Floryn. Floryn will never sell the (Lantern).",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dew",
+      "tips": "Try to hit enemies with Floryn's skills to stack up her Passive to maximize the power of Lantern.",
+      "iconUrl": "/raw-assets/skill_icons/floryn/dew.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Sprout",
+      "description": "Floryn casts a blob of energy ahead that explodes upon hitting an enemy, dealing 175( +90% Total Magic Power) (Magic Damage) to nearby enemies and stunning them for 0.7s (and revealing their positions briefly).",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Sprout",
+      "tips": "Floryn's primary healing skill. It restores HP for multiple targets.",
+      "iconUrl": "/raw-assets/skill_icons/floryn/sprout.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Sow",
+      "description": "Floryn tosses an Energy Seed at the target enemy, dealing 180( +100% Total Magic Power) (Magic Damage). Healing Fruits will then spawn and bounce to nearby allied heroes, restoring their (HP) by 175( +90% Total Magic Power).",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Sow",
+      "tips": "Floryn's primary damage and control skill. Use it to poke and control enemies.",
+      "iconUrl": "/raw-assets/skill_icons/floryn/sow.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Bloom",
+      "description": "Floryn resonates with Dew's power, restoring 250( +100% Total Magic Power) (HP) to all allied heroes 2 times no matter where they are on the battlefield. This effect also removes any Healing Reduction or Shield Reduction effects on allied heroes, and makes them immune to those effects for 2s.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Bloom",
+      "tips": "Use this skill to heal all your allies without distance limitation and turn the tide!",
+      "iconUrl": "/raw-assets/skill_icons/floryn/bloom.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Vision Control",
+      "Team Enabler",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Floryn adalah support yang membantu tim melalui heal, shield, atau utility lainnya.",
+  "playstyleTags": [
+    "Protect"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Enabler",
+    "Defensive Draft"
+  ],
+  "counterTags": [
+    "Dive",
+    "Isolation",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Dive",
+    "Sustain Enabler"
+  ],
+  "macroTags": [
+    "Vision Control",
+    "Team Enabler",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

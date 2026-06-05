@@ -1,0 +1,195 @@
+{
+  "id": "aulus",
+  "name": "Aulus",
+  "heroName": "Aulus",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle",
+    "EXP"
+  ],
+  "flex_lanes": [
+    "EXP"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Fighting Spirit",
+      "description": "Aulus adds a stack of (Fighting Spirit) to his axe per second for 3s after dealing damage to any enemy (up to 4 stacks). Each stack grants 3-12 extra (Physical Attack) and 1-4 (Physical Penetration) (scales with (Undying Fury) level). Aulus also gains 10% extra Movement Speed and 27-125 Basic Attack Damage at max (Fighting Spirit) stacks (scales with level).",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Fighting_Spirit",
+      "tips": "Aulus' key skill. Focus on the duration of \"Fury Spirit\" and try to maintain the full stacks.",
+      "iconUrl": "/raw-assets/skill_icons/aulus/fighting_spirit.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Aulus, Charge!",
+      "description": "Aulus removes all slow effects and gains 30% extra Movement Speed and 20% Damage Reduction against attacks from the front for 5s. Aulus gains 1% Damage Reduction for every 10 extra Physical Attack, up to 60%.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Aulus,_Charge!",
+      "tips": "Allows him to move quite freely on the battlefield. Use this skill wisely, and Aulus will poke, burst, and flee with ease.",
+      "iconUrl": "/raw-assets/skill_icons/aulus/aulus_charge.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "",
+      "description": "",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Skill_2",
+      "tips": "Aulus' primary damage source. Use this skill to hit as many enemies as possible, and it will provide a huge attack speed bonus and regen. In this way, Aulus' output and survivability are both greatly increased.",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "The Power of Axe",
+      "description": "Aulus brandishes his axe, dealing 150( +120% Extra Physical Attack) (Physical Damage) to enemies in a fan-shaped area, and enhancing up to 6 of his next Basic Attacks for 3s according to the enemies hit (3 per Hero or Creep, 1 per Minion). Enhanced Basic Attacks gain 100% extra Attack Speed and restore 50 (HP) to Aulus.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "The_Power_of_Axe",
+      "tips": "Aulus' Ultimate is a knockout blow in teamfights. It can control and hit enemies in a wide range if it's cast at the right angle.",
+      "iconUrl": "/raw-assets/skill_icons/aulus/the_power_of_axe.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Aulus adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Jungle Tempo",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

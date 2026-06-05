@@ -1,0 +1,291 @@
+{
+  "id": "luoyi",
+  "name": "Luo Yi",
+  "heroName": "Luo Yi",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2440,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 107,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "0.99",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Duality",
+      "description": "Luo Yi's skills can create (Sigils of Yin/Yang) on the battlefield. Each Sigil lasts up to 6s. Sigils of opposite attributes will trigger (Yin-Yang Reaction) when they are within a certain distance, dealing 365 (+20*Hero Level) (+190% Total Magic Power) (Magic Damage) to the marked enemies, stunning them for 0.3s, and pulling them toward each other. Each time Luo Yi applies a new Sigil to a marked enemy, she gains a 300 (+10*Hero Level) (+150% Total Magic Power) shield (up to 3 stacks) and 50% extra Movement Speed that decays over 2s.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+25*Hero Level)",
+        "(+190% Total Magic Power)",
+        "(+10*Hero Level)",
+        "(+150% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Burst",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Duality",
+      "tips": "As we've said many times already, Luo Yi's skills take advantage of a \"Yin\" and \"Yang\" mechanic. Whenever two enemy heroes inflicted with opposite marks come close to each other, a \"Yin Yang Reaction\"will be triggered, causing them to collide with each other which deals damage, while stunning them. Also, whenever a \"Yin Yang Reaction\" occurs, Luo Yi will gain a slight shield and movement speed boost .",
+      "iconUrl": "/raw-assets/skill_icons/luoyi/duality.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Dispersion",
+      "description": "Luo Yi casts the energy of Yin/Yang in the target direction, dealing 285 (+135% Total Magic Power) Magic Damage to the first enemy hit and those behind them in a fan-shaped area. Enemy heroes hit are marked with a Sigil of Yin/Yang.\nLuo Yi stores up to 4 Dispersion charges and gains 1 charge every 8s. She also immediately gains 1 charge each time Yin-Yang Reaction is triggered.\nThe state of this skill changes on each cast.",
+      "cooldown": "1.2",
+      "manaCost": "50",
+      "damageType": "Magic",
+      "scaling": [
+        "(+135% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "50",
+            "56",
+            "62",
+            "68",
+            "74",
+            "80"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "285",
+            "330",
+            "375",
+            "420",
+            "465",
+            "510"
+          ]
+        },
+        {
+          "label": "Skill Recharge Time",
+          "values": [
+            "8",
+            "7.7",
+            "7.4",
+            "7.1",
+            "6.8",
+            "6.5"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dispersion",
+      "tips": "Luo Yi casts Yin or Yang energy wave in a designated direction, alternating between the two opposing energy types between each cast. The energy will disperse upon hitting the first target, dealing damage to the first target and any enemies behind them in a fan shaped area. The energy wave also inflicts an Yin or Yang Mark on any enemy heroes upon contact. Luo Yi's first skill is her primary damage dealing skill. Additionally, this skill is the primary way to trigger Yin Yang Reactions.",
+      "iconUrl": "/raw-assets/skill_icons/luoyi/dispersion.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Rotation",
+      "description": "Luo Yi summons Fire of Yang/Aqua of Yin at the target location, dealing 250 (+50% Total Magic Power) Magic Damage to enemies hit and slowing them by 60% for 0.5s.\nFire of Yang/Aqua of Yin then remains at the location for 6s, dealing 50 (+10% Total Magic Power) Magic Damage every 0.7s to nearby enemies. It can also trigger Yin-Yang Reaction with Sigils of opposite attributes.\nThe state of this skill changes on each cast.",
+      "cooldown": "12.0",
+      "manaCost": "75",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Magic Power)",
+        "(+10% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.6",
+            "11.2",
+            "10.8",
+            "10.4",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "270",
+            "290",
+            "310",
+            "330",
+            "350"
+          ]
+        },
+        {
+          "label": "Sustained Damage",
+          "values": [
+            "50",
+            "54",
+            "58",
+            "62",
+            "66",
+            "70"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Rotation",
+      "tips": "Luo Yi summons \"Fire of Yang\" or \"Aqua of Yin\" in a designated area which both slow down enemies, while dealing continuous damage. While active, \"Yin Yang Reactions\" will be triggered if an enemy with the opposite mark is nearby the area of effect. Take note! The nature of this skill alternates between every two casts.",
+      "iconUrl": "/raw-assets/skill_icons/luoyi/rotation.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Diversion",
+      "description": "Luo Yi creates a Teleport Circle around herself and marks the target location (within 28 units) as its destination. After a 3s delay, allied heroes (including herself) within the Circle will be teleported to the location.\nPassive: Luo Yi's Cooldown Reduction is increased by 6%.",
+      "cooldown": "60.0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "CD Reduction",
+          "values": [
+            "6%",
+            "8%",
+            "10%"
+          ]
+        },
+        {
+          "label": "Max Range",
+          "values": [
+            "28",
+            "32",
+            "36"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Teleport"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Diversion",
+      "tips": "Luo Yi creates a teleportation circle around herself. She then chants for 3 seconds, which then sends any allied hero in the circle to elsewhere on the battlefield. While chanting, Luo Yi is free to move or attack.",
+      "iconUrl": "/raw-assets/skill_icons/luoyi/diversion.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Luo Yi adalah mage dengan kemampuan burst/poke damage dari jarak aman.",
+  "playstyleTags": [
+    "Burst",
+    "Poke"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Zone Control"
+  ],
+  "counterTags": [
+    "Gap Close",
+    "Silence",
+    "Burst"
+  ],
+  "synergyTags": [
+    "Needs Peel",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Zone Control",
+    "Burst Damage"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

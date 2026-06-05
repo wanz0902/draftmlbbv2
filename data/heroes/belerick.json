@@ -1,0 +1,225 @@
+{
+  "id": "belerick",
+  "name": "Belerick",
+  "heroName": "Belerick",
+  "role": [
+    "Tank"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam",
+    "EXP"
+  ],
+  "flex_lanes": [
+    "EXP"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Deadly Thorns",
+      "description": "For every 50 damage inflicted upon Belerick, he has a 25% chance to shoot the nearest enemy unit, dealing (Magic Damage) equal to 55(+5*Hero Level) plus 1.8% of his Max HP (scales with level). This attack can be triggered once every 0.4s. His HP obtained from Equipment and Emblems is increased by 30%.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Deadly_Thorns",
+      "tips": "For Belerick, it is a passive as much as a DPS skill. Using the 1st skill, Belerick is able to control where to cast the passive. The 2nd skill is sure to trigger his passive. Players can utilize the combo to make Belerick a strong hero when laning.",
+      "iconUrl": "/raw-assets/skill_icons/belerick/deadly_thorns.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Ancient Seed",
+      "description": "Belerick releases vines in a designated direction, dealing 200( +50% Total Magic Power) (Magic Damage) to enemies along the path and slowing them by 25%. Ancient Seeds left by the vines will erupt into thorns after 1s, dealing 200( +50% Total Magic Power) (Magic Damage) to enemies on the path and taunting them for 1.2s. Deals 80% extra damage against Minions.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ancient_Seed",
+      "tips": "The skill is the major reason why Belerick is a strong laning hero. In a teamfight, by inflicting Nature’s Seed on enemy heroes, Belerick is able to kill enemy core heroes sooner than ever.",
+      "iconUrl": "/raw-assets/skill_icons/belerick/ancient_seed.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Nature's Strike",
+      "description": "Belerick increases his Movement Speed by 80% and enhances his next Basic Attack. (The Movement Speed gain will decay in 2s.) This enhanced Basic Attack deals 300( +60% Total Magic Power) (Magic Damage) and slows the target by 60% for 1.4s. Belerick also recovers HP equal to 240 plus 10% of his lost HP. Each time Deadly Thorns is triggered, reduce the cooldown of this skill by 1s.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Nature's_Strike",
+      "tips": "With his strong ability to recover, Belerick is a strong laning and teamfight hero. With Brave Smite Belerick gets even harder to kill.",
+      "iconUrl": "/raw-assets/skill_icons/belerick/nature_s_strike.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Wrath of Dryad",
+      "description": "Belerick conjures spreading vines around him, dealing 100( +30% Total Magic Power) (Magic Damage) to enemies in the area 4 times and taunting them for 1.5s.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Wrath_of_Dryad",
+      "tips": "Even without aliies around, Belerick's durability can be secured with 10% Recovery and 40% DMG Reduction. So don't hesitate to use it when necessary.",
+      "iconUrl": "/raw-assets/skill_icons/belerick/wrath_of_dryad.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Belerick adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

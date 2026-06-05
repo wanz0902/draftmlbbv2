@@ -1,0 +1,8 @@
+{
+  "name": "MLBB Draft Simulator & Stats Dashboard",
+  "description": "A professional Mobile Legends draft pick simulator with real-time AI Coach recommendations and an optimized Liquipedia scraping stats dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

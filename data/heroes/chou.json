@@ -1,0 +1,180 @@
+{
+  "id": "chou",
+  "heroName": "Chou",
+  "role": [
+    "Fighter"
+  ],
+  "secondaryRole": "TANK",
+  "specialty": [
+    "Charge",
+    "Crowd Control"
+  ],
+  "lane": "EXP",
+  "releaseYear": 2016,
+  "baseStats": {
+    "hp": 2530,
+    "hpRegen": 7,
+    "mana": 0,
+    "manaRegen": 0,
+    "physicalAttack": 121,
+    "physicalDefense": 23,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Only Fast",
+      "description": "After traveling 5 units, Chou deals 180% damage on his next Basic Attack (cannot Crit), briefly slows the target by 90% and reduces their Physical Defense by 10(+1*Hero Level) for 3s (up to 2 stacks).",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Only_Fast",
+      "tips": "Chou's passive skill is used when Chou's hand has flared which indicates his passive ability is active so that it can produce 200% Basic attack.",
+      "iconUrl": "/raw-assets/skill_icons/chou/only_fast.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Jeet Kune Do",
+      "description": "Chou strikes in the target direction, dealing 180( +70% Total Physical Attack) (Physical Damage) to enemies hit. This skill can be cast 3 times before it goes on cooldown. On the 3rd cast, Chou also knocks enemies hit airborne. Hitting an enemy hero with the 3rd cast resets the cooldown of (Shunpo).",
+      "cooldown": "9.5",
+      "manaCost": "0",
+      "damageType": "AOE, Mobility",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Jeet_Kune_Do",
+      "tips": "Maximize the use of Jeet Kune Do (skill 1) since the beginning of the game. This is mainly because when we can use the skill 1 three times and cause Knock Up to the opponent in the palm of the hand area that hit the ground during the third hit.",
+      "iconUrl": "/raw-assets/skill_icons/chou/jeet_kune_do.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Shunpo",
+      "description": "Chou dashes in the target direction, gaining Control Immunity during the dash. At the end of the dash, he gains 15 Physical Penetration and a 200( +200% Extra Physical Attack) shield for 2s.",
+      "cooldown": "5.0",
+      "manaCost": "0",
+      "damageType": "Mobility",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Shunpo",
+      "tips": "With this 2nd skill, Chou can be immune from almost all the disabling skills of the opponent. But keep in mind that timings are the key to this skill.",
+      "iconUrl": "/raw-assets/skill_icons/chou/shunpo.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "The Way of Dragon",
+      "description": "Chou strikes the target enemy hero with a roundhouse kick, dealing 400( +200% Extra Physical Attack) (Physical Damage) and knocking them back. (Use Again): Chou jumps to the target and launches a flurry of blows in mid-air, dealing at least 400( +200% Extra Physical Attack) (Physical Damage).",
+      "cooldown": "34.0",
+      "manaCost": "0",
+      "damageType": "CC, Burst",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "The_Way_of_Dragon",
+      "tips": "Use Ultimate to kick your opponent towards your teammates. This skill can also be used to kick your opponent away when you escape or save your teammates. Tap quickly this skill 2 times to maximize the damage and getting the Knock Up effect. Tap Skill 1 time when you run away or save a teammate.",
+      "iconUrl": "/raw-assets/skill_icons/chou/the_way_of_dragon.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "name": "Chou",
+  "strategicData": {
+    "draftSignals": [
+      "Aggressive isolation",
+      "Potential Roam Flex"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Pick-off Specialist"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4"
+    ],
+    "counterSystem": {
+      "strongAgainst": [
+        "Gusion",
+        "Fanny",
+        "Lancelot"
+      ],
+      "weakAgainst": [
+        "Minsitthar",
+        "Phoveus",
+        "Gatotkaca"
+      ],
+      "synergyWith": [
+        "Mathilda",
+        "Kadita",
+        "Lancelot"
+      ]
+    },
+    "deceptionValue": 8
+  },
+  "lanes": [
+    "EXP",
+    "Roam",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Roam",
+    "Jungle"
+  ],
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Chou adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Mechanical Skill",
+    "Combo Execution"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Pick-off Specialist"
+  ],
+  "powerSpikeTags": [
+    "Level 4"
+  ]
+}

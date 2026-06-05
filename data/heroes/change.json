@@ -1,0 +1,189 @@
+{
+  "id": "change",
+  "name": "Chang'e",
+  "heroName": "Chang'e",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid",
+  "lanes": [
+    "Mid",
+    "Gold"
+  ],
+  "flex_lanes": [
+    "Gold"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Trouble Maker",
+      "description": "Each time Chang'e deals damage to an enemy, she leaves a mark on them. Each mark reduces the target's Movement Speed by 1%, stacking up to 20%.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Trouble_Maker",
+      "tips": "While a skill is a active, Chang’e gains 1 stack of Rabbit Blessing every time she inflicts damage upon an enemy hero. Once Chang’e has accumulated 40 stacks, she can exchange them to permanently boost her magic attack by 30 points. Upon death, Chang’e loses 15 stacks. (Stacks that were already exchanged are not affected.)",
+      "iconUrl": "/raw-assets/skill_icons/change/trouble_maker.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Starmoon Shockwave",
+      "description": "Chang'e sends an energy sphere in the target direction, dealing 350( +130% Total Magic Power) (Magic Damage) to enemies in its path and slowing them by 10% for 1.5s. (Crescent Moon): The (Crescent Moon) sends 4 extra energy spheres along with Chang'e's, each dealing 20% damage and slowing enemies hit. The slow effect can stack (up to 20%).",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Starmoon_Shockwave",
+      "tips": "Chang’e summons a circle of shimmering moonlight at a designated location that continuously reduces enemy movement speed. After some time, Chang’e pulls enemy units to the center, dealing magic damage. Enemy units caught in this final attack briefly suffer a severe slow effect.",
+      "iconUrl": "/raw-assets/skill_icons/change/starmoon_shockwave.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Crescent Moon",
+      "description": "Chang'e summons the (Crescent Moon), gaining a permanent 300( +150% Total Magic Power) shield and 10% Movement Speed (that lasts until the shield is destroyed). Each time Chang'e casts a skill, she also gains 50% Movement Speed that decays over 2.5s. (Crescent Moon) also allows Chang'e's Basic Attacks to deal 20( +35% Total Physical Attack) (+35% Total Magic Power) additional (Magic Damage) 2 times. Each time Chang'e deals Magic Damage with her Basic Attack and skills, the cooldown of this skill is reduced by 0.2s.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Crescent_Moon",
+      "tips": "Unleashes 5 Moon Blades in succession. Inflicts magic damage to the first enemy unit to be hit by this attack and 60% to surrounding enemies. Causes a temporary slow effect. When 3 Moon Blades hit the same target, they will cause a stun effect, once every 6 seconds.",
+      "iconUrl": "/raw-assets/skill_icons/change/crescent_moon.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Meteor Shower",
+      "description": "Chang'e fires 30 meteors in the target direction over 4s, each dealing 60( +33% Total Magic Power) (Magic Damage) to the first enemy hit. This skill deals 100% extra damage to Minions and Creeps. Chang'e also gains 10% Movement Speed for the duration. (Crescent Moon): The (Crescent Moon) also fires meteors along with Chang'e, each dealing 33% damage.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Meteor_Shower",
+      "tips": "Chang'e launches a rabbit missile forward, which deals points of magic to the first enemy hero hit and then immediately splits into 6 small missiles that continue chasing the target. Every small missile deals points of Magic Damage. If the rabbit missiles do not hit an enemy hero, the missiles will travel to their maximum distance and then split into 6 missiles once more, randomly chase the nearest targets. When enemy units are hit multiple times, missile damage is reduced.",
+      "iconUrl": "/raw-assets/skill_icons/change/meteor_shower.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Chang'e adalah mage dengan kemampuan burst/poke damage dari jarak aman.",
+  "playstyleTags": [
+    "Burst",
+    "Poke"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Zone Control"
+  ],
+  "counterTags": [
+    "Gap Close",
+    "Silence",
+    "Burst"
+  ],
+  "synergyTags": [
+    "Needs Peel",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Zone Control",
+    "Burst Damage"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

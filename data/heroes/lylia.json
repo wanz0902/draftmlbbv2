@@ -1,0 +1,287 @@
+{
+  "id": "lylia",
+  "name": "Lylia",
+  "heroName": "Lylia",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 113,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.01",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 245
+  },
+  "skills": {
+    "passive": {
+      "name": "Angry Gloom",
+      "description": "Lylia gets power from Gloom, increasing her Movement Speed by 15%. Each Gloom upgrade further increases this bonus by 5%.\nGloom gains an upgrade every time he devours Shadow Energy, up to 5 times. Gloom upgrade increases the detonation damage of Shadow Energy.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff",
+        "Speed Up"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Angry_Gloom",
+      "tips": "Lylia gets power from Gloom, increasing her Movement Speed. Each time Gloom levels up, she will increase extra Movement Speed. Gloom will increase his levels by devouring Shadow Energy. Up to 5. The higher his level is, the more damage he can deal.",
+      "iconUrl": "/raw-assets/skill_icons/lylia/angry_gloom.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Magic Shockwave",
+      "description": "Lylia sends out Gloom with a shockwave, dealing 250 (+100% Total Magic Power) Magic Damage to enemies in a line and slowing them by 30% for 1.5s.\nIf Gloom touches Shadow Energy, he will devour and detonate it.",
+      "cooldown": "4.0",
+      "manaCost": "40",
+      "damageType": "Magic",
+      "scaling": [
+        "(+100% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "40",
+            "46",
+            "52",
+            "58",
+            "64",
+            "70"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "300",
+            "350",
+            "400",
+            "450",
+            "500"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Magic_Shockwave",
+      "tips": "Lylia releases an attack wave ahead, dealing Magic Damage to enemies on the path and slowing them down. Gloom will hitch a ride on Magic Shockwave. If Gloom touches Shadow Energy, he will devour it and immediately detonate the energy.",
+      "iconUrl": "/raw-assets/skill_icons/lylia/magic_shockwave.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Shadow Energy",
+      "description": "Lylia condenses Shadow Energy at the target location, dealing 90 (+50% Total Magic Power) Magic Damage to enemies hit and slowing them by 80%.\nShadow Energy can be detonated by Gloom's devour, dealing 220 (+115% Total Magic Power) Magic Damage to the enemies nearby. Each Gloom upgrade increases the detonation damage by 20%, up to 80%.\nGloom will restore 20% of Shadow Energy's Recharge Time when it hits an enemy hero.\nLylia starts with the Shadow Energy skill, storing one charge every 6s.",
+      "cooldown": "1.0",
+      "manaCost": "32",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Magic Power)",
+        "(+115% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "32",
+            "37",
+            "42",
+            "47",
+            "52",
+            "57",
+            "62"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "90",
+            "100",
+            "110",
+            "120",
+            "130",
+            "140",
+            "150"
+          ]
+        },
+        {
+          "label": "Explosion Damage",
+          "values": [
+            "220",
+            "255",
+            "290",
+            "325",
+            "360",
+            "395",
+            "430"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Shadow_Energy",
+      "tips": "Lylia condenses Shadow Energy to the designated area, dealing Magic Damage to enemies nearby and slowing them down. After Gloom devours Shadow Energy, he will detonate the energy and deal Magic Damage to enemies nearby. Each time Gloom upgrades himself, the damage dealt by Shadow Energy will be increased. Lylia was born to have the ability to use Shadow Energy.",
+      "iconUrl": "/raw-assets/skill_icons/lylia/shadow_energy.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Black Shoes",
+      "description": "Lylia returns to the Black Shoes' location 4s ago and restores her HP and Mana to the previous state, and an extra 10% Max HP. She also gains 20% extra Movement Speed for 2s.",
+      "cooldown": "45.0",
+      "manaCost": "120",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "45.0",
+            "40.0",
+            "35.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "60",
+            "0"
+          ]
+        },
+        {
+          "label": "HP Regen",
+          "values": [
+            "10%",
+            "15%",
+            "20%"
+          ]
+        },
+        {
+          "label": "Duration",
+          "values": [
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Heal",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Black_Shoes",
+      "tips": "Lylia immediately returns to the position where the Black Shoe was 4s ago and stacks max times to use Shadow Energy, regenerating a certain amount of HP and increasing her Movement Speed.",
+      "iconUrl": "/raw-assets/skill_icons/lylia/black_shoes.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Lylia adalah mage dengan kemampuan burst/poke damage dari jarak aman.",
+  "playstyleTags": [
+    "Burst",
+    "Poke"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Zone Control"
+  ],
+  "counterTags": [
+    "Gap Close",
+    "Silence",
+    "Burst"
+  ],
+  "synergyTags": [
+    "Needs Peel",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Zone Control",
+    "Burst Damage"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

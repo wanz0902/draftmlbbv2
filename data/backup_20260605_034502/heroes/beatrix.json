@@ -1,0 +1,401 @@
+{
+  "id": "beatrix",
+  "name": "Beatrix",
+  "heroName": "Beatrix",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold",
+  "lanes": [
+    "Gold",
+    "Mid"
+  ],
+  "flex_lanes": [
+    "Mid"
+  ],
+  "releaseYear": 2016,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 7,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 115,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.07",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 245
+  },
+  "skills": {
+    "passive": {
+      "name": "Mechanical Genius",
+      "description": "Beatrix's talent for mechanics allowed her to produce 4 weapons of truly awe-inspiring firepower.\n\nBennett Basic Attack - Area Bombing: Bombards an area, dealing (230% Total Physical Attack) - (300% Total Physical Attack) Physical Damage to all enemies in range and slowing them by 40% for 0.5s (75% damage against creeps).\nBeatrix cannot Crit. She converts every 1% Crit Chance into 2 Physical Attack.\nShe gains Spell Vamp equal to 100% of her Lifesteal.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(230% Total Physical Attack)",
+        "(300% Total Physical Attack)",
+        "(75% damage against creeps)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mechanical_Genius_bennett",
+      "variant": "Bennett",
+      "displayName": "Mechanical Genius (Bennett)",
+      "iconUrl": "/raw-assets/skill_icons/beatrix/mechanical_genius_bennett.png"
+    },
+    "skill1": {
+      "name": "Mechanical Genius",
+      "description": "Beatrix's talent for mechanics allowed her to produce 4 weapons of truly awe-inspiring firepower.\n\nNibiru Basic Attack - Rapid Fire: Fires a volley of 4 shots at the target, each dealing (51% Total Physical Attack - (65% Total Physical Attack) Physical Damage (75% damage against creeps) and inheriting a portion of Attack Effects.\nBeatrix cannot Crit. She converts every 1% Crit Chance into 2 Physical Attack.\nShe gains Spell Vamp equal to 100% of her Lifesteal.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(51% Total Physical Attack - (65% Total Physical Attack)",
+        "(75% damage against creeps)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mechanical_Genius_nibiru",
+      "variant": "Nibiru",
+      "displayName": "Mechanical Genius (Nibiru)",
+      "iconUrl": "/raw-assets/skill_icons/beatrix/mechanical_genius_nibiru.png"
+    },
+    "skill2": {
+      "name": "Mechanical Genius",
+      "description": "Her extraordinary talent in the field of mechanics allowed Beatrix to produce 4 weapon(s) of truly awe-inspiring firepower.\nRenner Basic Attack - Longshot: Fire a powerful shot in the enemy's curent direction, dealing (365% Total Physical Attack) - (400% Total Physical Attack) Physical Damage to the first target hit (this shot can be dodged, and blocked by others). Deals 75% damage to creeps.\nBeatrix cannot Crit, and converts every 1% Crit Chance gained into 2 Physical Attack.\nBeatrix gains Spell Vamp equal to 100% of her Lifesteal.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(365% Total Physical Attack)",
+        "(400% Total Physical Attack)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mechanical_Genius_renner",
+      "variant": "Renner",
+      "displayName": "Mechanical Genius (Renner)",
+      "iconUrl": "/raw-assets/skill_icons/beatrix/mechanical_genius_renner.png"
+    },
+    "ultimate": {
+      "name": "Mechanical Genius",
+      "description": "Beatrix's talent for mechanics allowed her to produce 4 weapons of truly awe-inspiring firepower.\nWesker Basic Attack - Proximity Advantage: Fires 5 shots at the target, each dealing (178% Total Physical Attack) - (220% Total Physical Attack) Physical Damage (75% damage against creeps) and inheriting a portion of Attack Effects. Damage dealt to targets hit multiple times decays to 25%.\nBeatrix cannot Crit. She converts every 1% Crit Chance into 2 Physical Attack.\nShe gains Spell Vamp equal to 100% of her Lifesteal.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(178% Total Physical Attack)",
+        "(220% Total Physical Attack)",
+        "(75% damage against creeps)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mechanical_Genius_wesker",
+      "variant": "Wesker",
+      "displayName": "Mechanical Genius (Wesker)",
+      "iconUrl": "/raw-assets/skill_icons/beatrix/mechanical_genius_wesker.png"
+    },
+    "extra1": {
+      "name": "Masterful Gunner",
+      "description": "Passive: Beatrix can carry 2 weapons at once, increasing her Physical Attack by 5.\nActive: Beatrix takes 0.5s to swap her primary weapon with the secondary weapon, gaining a new Basic Attack and Ultimate.\n|stats1=Cooldown|stats1_value=12.0/11.0/10.0/9.0/8.0/7.0\n|stats2=Physical Attack|stats2_value=5/10/15/20/25/30",
+      "cooldown": "12.0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.0",
+            "10.0",
+            "9.0",
+            "8.0",
+            "7.0"
+          ]
+        },
+        {
+          "label": "Physical Attack",
+          "values": [
+            "5",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Morph",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Masterful_Gunner",
+      "iconUrl": "/raw-assets/skill_icons/beatrix/masterful_gunner.png"
+    },
+    "extra2": {
+      "name": "Tactical Reposition",
+      "description": "Beatrix rolls ahead sideways, and fully reloads her current weapon.\n|stats1=Cooldown|stats1_value=8.0/7.6/7.2/6.8/6.4/6.0",
+      "cooldown": "8.0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.0",
+            "7.6",
+            "7.2",
+            "6.8",
+            "6.4",
+            "6.0"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Tactical_Reposition",
+      "iconUrl": "/raw-assets/skill_icons/beatrix/tactical_reposition.png"
+    },
+    "extra3": {
+      "name": "Bennett's Rage",
+      "description": "Beatrix focuses her rage and has Bennett rain down a bombardment on the target area 5 time(s). Each bombardment slows enemies by 40% and deals 580 (+225% Total Physical Attack) Physical Damage (this damage decays to 20% when hitting the same target multiple times), lasting 1s.\nThis skill only deals 75% damage to non-hero units.\n|stats1=Cooldown|stats1_value=40.0/35.0/30.0\n|stats2=Base Damage|stats2_value=580/780/980",
+      "cooldown": "40.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+225% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "40.0",
+            "35.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "580",
+            "780",
+            "980"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Bennett's_Rage",
+      "iconUrl": "/raw-assets/skill_icons/beatrix/bennett_s_rage.png"
+    },
+    "extra4": {
+      "name": "Nibiru's Passion",
+      "description": "Beatrix unleashes 10 volleys of bullets using Nibiru, each dealing 130 (+50% Total Physical Attack) Physical Damage.\nThis skill only deals 75% damage to non-hero units.\n|stats1=Cooldown|stats1_value=40.0/35.0/30.0\n|stats2=Base Damage|stats2_value=130/170/210",
+      "cooldown": "40.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+50% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "40.0",
+            "35.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "130",
+            "170",
+            "210"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Nibiru's_Passion",
+      "iconUrl": "/raw-assets/skill_icons/beatrix/nibiru_s_passion.png"
+    },
+    "extra5": {
+      "name": "Renner's Apathy",
+      "description": "Beatrix calmly sets up Renner on the battlefield and takes aim. When releasing the skill, she deals 700 (+280% Total Physical Attack) Physical Damage to the first enemy hit.\nBeatrix can aim for up to 8s, and she can cancel it early to reduce the cooldown by 50%.\nThis shot can penetrate Minions and only deals 75% damage to non-hero units.\n|stats1=Cooldown|stats1_value=32.0/28.0/24.0\n|stats2=Base Damage|stats2_value=700/950/1200",
+      "cooldown": "32.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+280% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "32.0",
+            "28.0",
+            "24.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "700",
+            "950",
+            "1200"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Renner's_Apathy",
+      "iconUrl": "/raw-assets/skill_icons/beatrix/renner_s_apathy.png"
+    },
+    "extra6": {
+      "name": "Wesker's Elation",
+      "description": "Beatrix raises Wesker and fires off ultra bullets that deal 350 (+155% Total Physical Attack) Physical Damage each time they hit an enemy (the damage of subsequent hits on the same enemy will decay to 25%)\nThis skill only deals 75% damage to non-hero units.\n|stats1=Cooldown|stats1_value=20.0/16.0/12.0\n|stats2=Base Damage|stats2_value=350/450/550",
+      "cooldown": "20.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+155% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "20.0",
+            "16.0",
+            "12.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "350",
+            "450",
+            "550"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Wesker's_Elation",
+      "iconUrl": "/raw-assets/skill_icons/beatrix/wesker_s_elation.png"
+    },
+    "extra7": {
+      "name": "Need Backup",
+      "description": "Having escaped battle for 3s, Beatrix can call for her butler Morgan to provide her with a backup weapons crate.\nBeatrix must then choose two from the crate to serve as her primary and secondary weapons. Her weapon selection is interrupted if she commits any action or is controlled during this period.",
+      "cooldown": "30.0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Morph"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Need_Backup",
+      "iconUrl": "/raw-assets/skill_icons/beatrix/need_backup.png"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

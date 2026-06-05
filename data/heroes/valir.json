@@ -1,0 +1,305 @@
+{
+  "id": "valir",
+  "name": "Valir",
+  "heroName": "Valir",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 105,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Ashing",
+      "description": "Valir's skills apply a stack of Ablaze to enemies hit, dealing them Magic Damage equal to 1 (+0.2% Total Magic Power)% of their Max HP per second for 3s.\nAt 3 stacks, the fire detonates, dealing Magic Damage equal to 5 (+1% Total Magic Power)% of the target's Max HP to the enemy and stunning them for 1s (the same target can only be stunned by Valir's skills once every 7s).",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+0.2% Total Magic Power)",
+        "(+1% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ashing",
+      "tips": "This is Valir's core skill. When your passive is cooling down, try using Burst Fire to chase down enemies with your teammates. If you'd rather play it safe, you can also try using Searing Torrent continuously to interrupt enemy skills.",
+      "iconUrl": "/raw-assets/skill_icons/valir/ashing.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Burst Fireball",
+      "description": "Valir launches a fireball that explodes on the first target, dealing 235 (+80% Total Magic Power) Magic Damage and slowing them by 30% for 1s. The lingering flame on the ground will explode after 1s, dealing 118 (+40% Total Magic Power) Magic Damage.\nValir recharges 1 fireball every 9s and can hold up to 2 fireball charges. Hitting an enemy hero or Legend Creep with this skill will immediately restore a fireball charge, while hitting a Minion will restore 4s of the recharge time.\nOnce enhanced by Vengeance Flame, the cast range of Burst Fireball increases by 30%",
+      "cooldown": "1.5",
+      "manaCost": "45",
+      "damageType": "Magic",
+      "scaling": [
+        "(+80% Total Magic Power)",
+        "(+40% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "235",
+            "270",
+            "305",
+            "340",
+            "375",
+            "410"
+          ]
+        },
+        {
+          "label": "Explosion Damage",
+          "values": [
+            "118",
+            "135",
+            "153",
+            "170",
+            "188",
+            "205"
+          ]
+        },
+        {
+          "label": "Skill Recharge Time",
+          "values": [
+            "9",
+            "8.6",
+            "8.2",
+            "7.8",
+            "7.4",
+            "7"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Burst_Fireball",
+      "tips": "The very short animation before casting means that this skill can hit its target almost 100% of the time. Combined with Arcane Flame, this skill is great for melting down the enemy's HP in the early stages of a game.",
+      "iconUrl": "/raw-assets/skill_icons/valir/burst_fireball.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Searing Torrent",
+      "description": "Valir unleashes a torrent of flames in the target direction, dealing 200 (+60% Total Magic Power) Magic Damage to enemies hit and knocking them to the end of its path.\nVengeance Flame: The torrent forms a firewall at the end of its path that lasts 4s and deals 100 (+30% Total Magic Power) Magic Damage to nearby enemies per second.\nEnemies hit by the torrent or the firewall are slowed by 25% for 1s.",
+      "cooldown": "13.0",
+      "manaCost": "75",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)",
+        "(+30% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "13.0",
+            "12.4",
+            "11.8",
+            "11.2",
+            "10.6",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "220",
+            "240",
+            "260",
+            "280",
+            "300"
+          ]
+        },
+        {
+          "label": "Firewall Damage",
+          "values": [
+            "100",
+            "110",
+            "120",
+            "130",
+            "140",
+            "150"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Searing_Torrent",
+      "tips": "With a large damage range and knock-back effect, this skill can easily interrupt the vast majority of hero skill casts in the game. If you can judge your cast to hit targets with the end of your torrent, you can rack up very high damage.",
+      "iconUrl": "/raw-assets/skill_icons/valir/searing_torrent.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Vengeance Flame",
+      "description": "Valir removes all existing debuffs on him, gains 40% Movement Speed that decays over 3s, and conjures 4 Vengeance Flames, enhancing Burst Fireball and Searing Torrent for 9s.",
+      "cooldown": "36.0",
+      "manaCost": "100",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "36.0",
+            "33.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "100",
+            "125",
+            "150"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Remove CC",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Vengeance_Flame",
+      "tips": "The extremely large damage range makes this an invaluable skill in team fights. When used with Burst Fire and Arcane Flame's double slowing effects, Hellfire stands a higher chance of hitting targets and dealing maximum damage.",
+      "iconUrl": "/raw-assets/skill_icons/valir/vengeance_flame.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Valir adalah mage dengan kemampuan burst/poke damage dari jarak aman.",
+  "playstyleTags": [
+    "Burst",
+    "Poke"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Zone Control"
+  ],
+  "counterTags": [
+    "Gap Close",
+    "Silence",
+    "Burst"
+  ],
+  "synergyTags": [
+    "Needs Peel",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Zone Control",
+    "Burst Damage"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

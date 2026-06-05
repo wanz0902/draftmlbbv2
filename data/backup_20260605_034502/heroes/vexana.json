@@ -1,0 +1,280 @@
+{
+  "id": "vexana",
+  "name": "Vexana",
+  "heroName": "Vexana",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 112,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Nether Touch",
+      "description": "Vexana and the Eternal Guard inflict Nether Curse on enemies hit. The Curse lasts 5s and will cause the affected enemy to explode upon death, dealing 108-500 (+60% Total Magic Power) Magic Damage to nearby enemies (base damage scales with level).",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Nether_Touch"
+    },
+    "skill1": {
+      "name": "Deathly Grasp",
+      "description": "Vexana unleashes a Deathly Grasp in the target direction, dealing 200 (+60% Total Magic Power) Magic Damage to enemies in its path. The projectile stops upon hitting an enemy hero, terrifying them and knocking them back, then it explodes, dealing 200 (+60% Total Magic Power) Magic Damage to nearby enemies and terrifying them for 1s.\n|stats1=Cooldown|stats1_value=14.0/13.4/12.8/12.2/11.6/11.0\n|stats2=Skill Cost|stats2_value=80/90/100/110/120/130\n|stats3=Base Damage|stats3_value=200/220/240/260/280/300\n|stats4=Explosion Damage|stats4_value=200/220/240/260/280/300",
+      "cooldown": "14.0",
+      "manaCost": "80",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)",
+        "(+60% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "14.0",
+            "13.4",
+            "12.8",
+            "12.2",
+            "11.6",
+            "11.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "80",
+            "90",
+            "100",
+            "110",
+            "120",
+            "130"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "220",
+            "240",
+            "260",
+            "280",
+            "300"
+          ]
+        },
+        {
+          "label": "Explosion Damage",
+          "values": [
+            "200",
+            "220",
+            "240",
+            "260",
+            "280",
+            "300"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Deathly_Grasp"
+    },
+    "skill2": {
+      "name": "Cursed Blast",
+      "description": "Vexana marks the target area with the power of the undead, striking it after a 0.8s delay and dealing 580 (+165% Total Magic Power) Magic Damage to enemies hit.\n|stats1=Cooldown|stats1_value=7.0/6.7/6.4/6.1/5.8/5.5\n|stats2=Skill Cost|stats2_value=60/68/76/84/92/100\n|stats3=Base Damage|stats3_value=580/634/689/743/797/850",
+      "cooldown": "7.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+165% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "7.0",
+            "6.7",
+            "6.4",
+            "6.1",
+            "5.8",
+            "5.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "68",
+            "76",
+            "84",
+            "92",
+            "100"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "580",
+            "634",
+            "689",
+            "743",
+            "797",
+            "850"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Cursed_Blast"
+    },
+    "ultimate": {
+      "name": "Eternal Guard",
+      "description": "Vexana summons an Eternal Guard at the target location, dealing 480 (+60% Total Magic Power) Magic Damage to enemies hit and knocking them airborne for 0.8s. The Eternal Guard then joins Vexana in battle for 15s. Each of the Eternal Guard's attacks deals 200 (+40% Total Magic Power) plus 5% of the target's Max HP as Magic Damage to enemies in a large area.\n|stats1=Cooldown|stats1_value=50.0/45.0/40.0\n|stats2=Skill Cost|stats2_value=120/160/200\n|stats3=Base Damage|stats3_value=480/600/720\n|stats4=Slash Damage|stats4_value=200/250/300\n|stats5=Extra HP|stats5_value=1800/2250/2700\n|stats6=Extra Hybrid Defense|stats6_value=40/50/60\n|stats7=Extra Magic Power|stats7_value=80/100/120",
+      "cooldown": "50.0",
+      "manaCost": "120",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)",
+        "(+40% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "50.0",
+            "45.0",
+            "40.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "480",
+            "600",
+            "720"
+          ]
+        },
+        {
+          "label": "Slash Damage",
+          "values": [
+            "200",
+            "250",
+            "300"
+          ]
+        },
+        {
+          "label": "Extra HP",
+          "values": [
+            "1800",
+            "2250",
+            "2700"
+          ]
+        },
+        {
+          "label": "Extra Hybrid Defense",
+          "values": [
+            "40",
+            "50",
+            "60"
+          ]
+        },
+        {
+          "label": "Extra Magic Power",
+          "values": [
+            "80",
+            "100",
+            "120"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Summon",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Eternal_Guard"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

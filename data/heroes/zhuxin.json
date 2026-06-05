@@ -1,0 +1,219 @@
+{
+  "id": "zhuxin",
+  "heroName": "Zhuxin",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Continuous Damage",
+    "Control"
+  ],
+  "lane": "Mid Lane",
+  "releaseYear": 2024,
+  "baseStats": {
+    "hp": 2521,
+    "hpRegen": 34,
+    "mana": 490,
+    "manaRegen": 18,
+    "physicalAttack": 115,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 0,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Crimson Butterflies",
+      "description": "Zhuxin converts max mana into butterflies that allow her to cast her skill 2 continuously.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Resource Management"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Crimson_Butterflies",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Fluttering Grace",
+      "description": "Deals Magic Damage in an area and slows enemies.",
+      "cooldown": [
+        5,
+        4.6,
+        4.2,
+        3.8,
+        3.4,
+        3
+      ],
+      "manaCost": [
+        40,
+        45,
+        50,
+        55,
+        60,
+        65
+      ],
+      "damageType": "MAGIC",
+      "scaling": [
+        "40% Total Magic Power"
+      ],
+      "crowdControlType": [
+        "SLOW"
+      ],
+      "strategicTags": [
+        "Poke",
+        "Wave Clear"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Fluttering_Grace",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Lantern Flare",
+      "description": "Consumes mana continuously to deal damage and pull enemies together.",
+      "cooldown": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "manaCost": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "damageType": "MAGIC",
+      "scaling": [
+        "30% Total Magic Power"
+      ],
+      "crowdControlType": [
+        "PULL"
+      ],
+      "strategicTags": [
+        "DPS",
+        "AoE CC",
+        "Teamfight Engine"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Lantern_Flare",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Crimson Beacon",
+      "description": "Zhuxin dashes and gains a shield. Butterflies continuously damage nearby enemies.",
+      "cooldown": [
+        40,
+        36,
+        32
+      ],
+      "manaCost": [
+        100,
+        120,
+        140
+      ],
+      "damageType": "MAGIC",
+      "scaling": [
+        "60% Total Magic Power"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Survivability",
+        "AoE Damage",
+        "Reposition"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Crimson_Beacon",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "name": "Zhuxin",
+  "strategicData": {
+    "draftSignals": [
+      "Sustain mage preferred",
+      "Strong teamfight control"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Teamfight Controller"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "Level 4 & Clock of Destiny"
+    ],
+    "counterSystem": {
+      "strongAgainst": [
+        "Tigreal",
+        "Estes",
+        "Fredrinn"
+      ],
+      "weakAgainst": [
+        "Ling",
+        "Fanny",
+        "Hayabusa",
+        "Chou"
+      ],
+      "synergyWith": [
+        "Carmilla",
+        "Khufra",
+        "Atlas"
+      ]
+    },
+    "deceptionValue": 5
+  },
+  "lanes": [
+    "Mid Lane"
+  ],
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Zhuxin adalah mage dengan kemampuan burst/poke damage dari jarak aman.",
+  "playstyleTags": [
+    "Burst",
+    "Poke"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Zone Control"
+  ],
+  "counterTags": [
+    "Gap Close",
+    "Silence",
+    "Burst"
+  ],
+  "synergyTags": [
+    "Needs Peel",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Teamfight Controller"
+  ],
+  "powerSpikeTags": [
+    "Level 4 & Clock of Destiny"
+  ]
+}

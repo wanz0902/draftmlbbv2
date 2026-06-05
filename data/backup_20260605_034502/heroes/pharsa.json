@@ -1,0 +1,256 @@
+{
+  "id": "pharsa",
+  "name": "Pharsa",
+  "heroName": "Pharsa",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2320,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 109,
+    "physicalDefense": 16,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "0.98",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Spiritual Unity",
+      "description": "Every 5 to 8s (varies with Feathered Air Strike level), Verri enters the Hunting state and assists Pharsa on her next attack against an enemy hero, dealing extra Magic Damage equal to 8% of the target's Max HP (+1% for every 200 Magic Power owned) and slowing them by 60% for 1s.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+1% for every 200 Magic Power owned)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Damage",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spiritual_Unity"
+    },
+    "skill1": {
+      "name": "Curse of Crow",
+      "description": "Pharsa unleashes a blast of magic at the target location, dealing 300 (+120% Total Magic Power) Magic Damage to enemies hit and marking them for 4s.\nWhen Pharsa hits a marked enemy with a Basic Attack or active skill, the mark is consumed to stun them for 1s.\nMarked enemies have their position revealed.\n|stats1=Cooldown|stats1_value=8.0/7.6/7.2/6.8/6.4/6.0\n|stats2=Skill Cost|stats2_value=60/66/72/78/84/90\n|stats3=Base Damage|stats3_value=300/325/350/375/400/425",
+      "cooldown": "8.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+120% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.0",
+            "7.6",
+            "7.2",
+            "6.8",
+            "6.4",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "66",
+            "72",
+            "78",
+            "84",
+            "90"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "325",
+            "350",
+            "375",
+            "400",
+            "425"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Curse_of_Crow"
+    },
+    "skill2": {
+      "name": "Energy Impact",
+      "description": "Pharsa releases magic energy in the target direction, dealing 475 (+145% Total Magic Power) Magic Damage to enemies hit.\n|stats1=Cooldown|stats1_value=6.5/6.2/5.9/5.6/5.3/5.0\n|stats2=Skill Cost|stats2_value=60/65/70/75/80/85\n|stats3=Base Damage|stats3_value=475/520/565/610/655/700",
+      "cooldown": "6.5",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+145% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "6.5",
+            "6.2",
+            "5.9",
+            "5.6",
+            "5.3",
+            "5.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "475",
+            "520",
+            "565",
+            "610",
+            "655",
+            "700"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Energy_Impact"
+    },
+    "ultimate": {
+      "name": "Feathered Air Strike",
+      "description": "Passive: Each level-up reduces Spiritual Unity's interval by 1s.\nActive: Pharsa takes flight for 8s and bombards the target location, dealing 530 (+160% Total Magic Power) Magic Damage to enemies within area. This skill can be cast up to 4 times within the duration.\n|stats1=Cooldown|stats1_value=36.0/33.0/30.0\n|stats2=Skill Cost|stats2_value=120/150/180\n|stats3=Base Damage|stats3_value=530/700/870",
+      "cooldown": "36.0",
+      "manaCost": "120",
+      "damageType": "Magic",
+      "scaling": [
+        "(+160% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "36.0",
+            "33.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "150",
+            "180"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "530",
+            "700",
+            "870"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Feathered_Air_Strike"
+    },
+    "extra1": {
+      "name": "Wings by Wings",
+      "description": "Pharsa turns into mist and wraps herself around Verri, gaining 150% extra Movement Speed (decaying over time) and the ability to fly over terrain. This state lasts up to 5s or until she uses a Basic Attack or skills, or is controlled.",
+      "cooldown": "23.0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Morph",
+        "Speed Up"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Wings_by_Wings"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

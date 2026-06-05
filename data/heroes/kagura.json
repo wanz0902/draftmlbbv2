@@ -1,0 +1,463 @@
+{
+  "id": "kagura",
+  "name": "Kagura",
+  "heroName": "Kagura",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 118,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.02",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Yin Yang Gathering",
+      "description": "Upon retrieving the (Seimei Umbrella), Kagura gains a 280( +50% Total Magic Power) shield, stuns nearby enemies for 0.5s, and slows them by 60% for 1s. Cooldown: 4.5s.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "(+80% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Shield",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Yin_Yang_Gathering_",
+      "tips": "One of your most important skills, this is what makes her an insane poking machine.. Reuniting with her umbrella would trigger the passive, which gives her a mini stun and a tiny shield. There are 3 ways in reuniting with the umbrella that could trigger her passive. Walking out of range from the umbrella Using “2” to teleport to the umbrella Walking over to the umbrella.",
+      "iconUrl": "/raw-assets/skill_icons/kagura/yin_yang_gathering.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Seimei Umbrella Open",
+      "description": "Kagura sends the Seimei Umbrella to the target location, dealing 365 (+105% Total Magic Power) Magic Damage to enemies in its path and slowing them by 60% for 0.5s. The Umbrella will automatically return to Kagura when she's too far away.\nThis skill deals 130% damage to non-hero enemies.",
+      "cooldown": "5.0",
+      "manaCost": "45",
+      "damageType": "Magic",
+      "scaling": [
+        "(+105% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "5.0",
+            "4.7",
+            "4.4",
+            "4.1",
+            "3.8",
+            "3.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "365",
+            "410",
+            "455",
+            "500",
+            "545",
+            "590"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Damage",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Seimei_Umbrella_Open_",
+      "variant": "With Umbrella",
+      "displayName": "Seimei Umbrella Open (With Umbrella)",
+      "tips": "It can act as an ward, throw the umbrella into a bush to reveal the location. This could reduce the chances of getting ganked. There’s a built in slow whenever you hit, this CC annoys the hell out of your enemy. When escaping, keep throwing your umbrella towards your enemy to slow them down. This allows easier escape To poke your enemy, it’s easier if your umbrella is out in the open, since it’s nearly unpredictable plus there’s a shorter distance to cover when compared to the umbrella flying out from you. This ability allows you to poke people under their tower due to her insane range, remember point “2” under the passive section? Proc-ing the passive while under the the tower range allows you to take a hit from the tower, paired with the annoying range, it’s a pretty deadly combo.",
+      "iconUrl": "/raw-assets/skill_icons/kagura/seimei_umbrella_open_with_umbrella.png",
+      "displayLabel": "Skill 1 (With Umbrella)",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Seimei Umbrella Open",
+      "description": "Kagura sends the Seimei Umbrella to the target location, dealing 365 (+105% Total Magic Power) Magic Damage to enemies in its path and slowing them by 60% for 0.5s. The Umbrella will automatically return to Kagura when she's too far away.\nThis skill deals 130% damage to non-hero enemies.",
+      "cooldown": "5.0",
+      "manaCost": "45",
+      "damageType": "Magic",
+      "scaling": [
+        "(+105% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "5.0",
+            "4.7",
+            "4.4",
+            "4.1",
+            "3.8",
+            "3.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "365",
+            "410",
+            "455",
+            "500",
+            "545",
+            "590"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Damage",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Seimei_Umbrella_Open",
+      "variant": "Without Umbrella",
+      "displayName": "Seimei Umbrella Open (Without Umbrella)",
+      "tips": "Your bread and butter skill. The skill that makes her so annoying to deal with, with the built in purify. It makes her pretty much immune to all CCs. The one skill that allows her to slip away from chasing enemies when mastered.",
+      "iconUrl": "/raw-assets/skill_icons/kagura/seimei_umbrella_open_without_umbrella.png",
+      "displayLabel": "Skill 1 (Without Umbrella)",
+      "skillSlot": "skill1"
+    },
+    "ultimate": {
+      "name": "Rasho Umbrella Flee",
+      "description": "Kagura removes all debuffs on her and leaps in the target direction, while leaving the Seimei Umbrella behind.",
+      "cooldown": "12.0",
+      "manaCost": "55",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.5",
+            "11.0",
+            "10.5",
+            "10.0",
+            "9.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Remove CC",
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Yin_Yang_Overturn",
+      "variant": "With Umbrella",
+      "displayName": "Rasho Umbrella Flee (With Umbrella)",
+      "tips": "Use this skill with your “2” after teleporting to your umbrella proc “3” to deal some damage to the enemy and knocking them back. This skill can be use to intercept enemies that are chasing your allies, the knockback and slow gives your allies some time to escape You can even proc “3” before you dash away to escape Teleporting behind your enemies and proc-ing “3” when they are near your tower can knock them towards your tower.",
+      "iconUrl": "/raw-assets/skill_icons/kagura/rasho_umbrella_flee_with_umbrella.png",
+      "displayLabel": "Skill 2 (With Umbrella)",
+      "skillSlot": "skill2"
+    },
+    "extra1": {
+      "name": "Rasho Umbrella Flee",
+      "description": "Kagura teleports to the Seimei Umbrella's location and retrieves it, dealing 300 (+90% Total Magic Power) Magic Damage to the nearby enemies.",
+      "cooldown": "12.0",
+      "manaCost": "55",
+      "damageType": "Magic",
+      "scaling": [
+        "(+90% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.5",
+            "11.0",
+            "10.5",
+            "10.0",
+            "9.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "320",
+            "340",
+            "360",
+            "380",
+            "400"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Rasho_Umbrella_Flee",
+      "variant": "Without Umbrella",
+      "displayName": "Rasho Umbrella Flee (Without Umbrella)",
+      "displayLabel": "Skill 2 (Without Umbrella)",
+      "skillSlot": "skill2",
+      "iconUrl": "/raw-assets/skill_icons/kagura/rasho_umbrella_flee_without_umbrella.png"
+    },
+    "extra2": {
+      "name": "Yin Yang Overturn",
+      "description": "Kagura invokes the power of the Seimei Umbrella, dealing 250 (+95% Total Magic Power) Magic Damage to nearby enemies, knocking them back, and slowing them by 60% for 0.5s.",
+      "cooldown": "36.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+95% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "36.0",
+            "33.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "75",
+            "90"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "335",
+            "420"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Yin_Yang_Overturn",
+      "variant": "With Umbrella",
+      "displayName": "Yin Yang Overturn (With Umbrella)",
+      "displayLabel": "Ultimate (With Umbrella)",
+      "skillSlot": "ultimate",
+      "iconUrl": "/raw-assets/skill_icons/kagura/yin_yang_overturn_with_umbrella.png"
+    },
+    "extra3": {
+      "name": "Yin Yang Overturn",
+      "description": "Kagura invokes the power of the Seimei Umbrella, resetting the cooldown of Seimei Umbrella Open, dealing 235 (+60% Total Magic Power) Magic Damage to enemies around the Umbrella, and slowing them by 60%. After 1.5s, enemy heroes around the Umbrella will be pulled toward it and take 480 (+155% Total Magic Power) Magic Damage.",
+      "cooldown": "36.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)",
+        "(+155% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "36.0",
+            "33.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "75",
+            "90"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "235",
+            "295",
+            "355"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "480",
+            "600",
+            "720"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Burst",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Yin_Yang_Overturn",
+      "variant": "Without Umbrella",
+      "displayName": "Yin yang Overturn (Without Umbrella)",
+      "displayLabel": "Ultimate (Without Umbrella)",
+      "skillSlot": "ultimate",
+      "iconUrl": "/raw-assets/skill_icons/kagura/yin_yang_overturn_without_umbrella.png"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Umbrella State",
+    "Dual Skill Set"
+  ],
+  "mechanicNote": "Kagura mengendalikan payung yang bisa dilempar dan ditarik kembali, memberikan dua set skill berbeda tergantung posisi payung.",
+  "playstyleTags": [
+    "Burst",
+    "Poke"
+  ],
+  "difficultyTags": [
+    "Form Management",
+    "Combo Timing"
+  ],
+  "draftTags": [
+    "Zone Control"
+  ],
+  "counterTags": [
+    "Gap Close",
+    "Silence",
+    "Burst"
+  ],
+  "synergyTags": [
+    "Needs Peel",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Zone Control",
+    "Burst Damage"
+  ],
+  "powerSpikeTags": [
+    "Mid Game",
+    "Level 8"
+  ]
+}

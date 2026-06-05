@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "DraftSave": {
+      "title": "Saved Draft",
+      "description": "A draft evaluation saved by a user",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "draftData": { "type": "string" },
+        "createdAt": { "type": "number", "description": "timestamp" },
+        "updatedAt": { "type": "number", "description": "timestamp" }
+      },
+      "required": ["userId", "draftData", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "users/{userId}/drafts/{draftId}": {
+      "schema": "DraftSave",
+      "description": "User's saved drafts"
+    }
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "id": "selena",
+  "name": "Selena",
+  "heroName": "Selena",
+  "role": [
+    "Assassin",
+    "Mage"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane",
+    "Jungle",
+    "Roam"
+  ],
+  "flex_lanes": [
+    "Jungle",
+    "Roam"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2280,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 15,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Symbiosis",
+      "description": "Selena can switch freely between her two forms.\nElven Form: Selena applies Abyssal Mark when her skills deal damage. Marks lasts 8s and can stack up to 2 times.\nAbyssal Form: Selena's Basic Attacks become melee and deal (25% Total Magic Power) additional Magic Damage. Her skills deal 240-450 (+40% Total Magic Power) additional Magic Damage to enemies with Abyssal Mark and consume their mark stacks by 1. This damage is increased to 250% against Creeps and Minions.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(25% Total Magic Power)",
+        "(+40% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Symbiosis"
+    },
+    "skill1": {
+      "name": "Abyssal Trap",
+      "description": "Selena summons an Abyssal Devil to lurk underground. The Abyssal Devil will attach itself to any enemy that approaches, inflicting a stack of\nAbyssal Mark and reducing their Movement Speed by 50% for 1s. The Abyssal Devil then explodes, dealing 350 (+150% Total Magic Power) Magic Damage to enemies in the area and reducing their Movement Speed by 50% for 1s.\nEach additional Abyssal Devil on an emeny increases the final damage by 50%\nEach Abyssal Devil can lurk up to 60s and up to 3 Abyssal Devils can exist at the same time.\n|quote=The iron will of the Abyss befalls.\n|stats1=Cooldown|stats1_value=8.0/7.6/7.2/6.8/6.4/6.0\n|stats2=Skill Cost|stats2_value=70/75/80/85/90/95\n|stats3=Base Damage|stats3_value=350/390/430/470/510/550",
+      "cooldown": "8.0",
+      "manaCost": "70",
+      "damageType": "Magic",
+      "scaling": [
+        "(+150% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.0",
+            "7.6",
+            "7.2",
+            "6.8",
+            "6.4",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "70",
+            "75",
+            "80",
+            "85",
+            "90",
+            "95"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "350",
+            "390",
+            "430",
+            "470",
+            "510",
+            "550"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Summon",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Abyssal_Trap"
+    },
+    "skill2": {
+      "name": "Soul Eater",
+      "description": "Selena strengthens her claws with the power of the Abyss, causing the next basic attack to dash to a target and deal an additional 200 (+130% Total Magic Power) Magic Damage while granting her a 300 (+150% Total Magic Power) shield.\nIf this damage detonates an Abyssal Mark, Garotte's cooldown will reset.\n|quote=The iron will of the Abyss befalls.\n|stats1=Cooldown|stats1_value=6.0/5.5/5.0/4.5/4.0/3.5\n|stats2=Base Damage|stats2_value=200/230/260/290/320/350\n|stats3=Base Shield|stats3_value=300/320/340/360/380/400",
+      "cooldown": "6.0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+130% Total Magic Power)",
+        "(+150% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "6.0",
+            "5.5",
+            "5.0",
+            "4.5",
+            "4.0",
+            "3.5"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "230",
+            "260",
+            "290",
+            "320",
+            "350"
+          ]
+        },
+        {
+          "label": "Base Shield",
+          "values": [
+            "300",
+            "320",
+            "340",
+            "360",
+            "380",
+            "400"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst",
+        "Shield"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Soul_Eater"
+    },
+    "ultimate": {
+      "name": "Abyssal Arrow",
+      "description": "Selena fires an abyssal wraith in the target direction that stops when it hits an enemy hero, Creep, or Summon, dealing 250 (+20% Total Magic Power) to 500 (+40% Total Magic Power) Magic Damage to the target hit and stunning them for 0.5s to 2.5s while revealing their locations (the damage and stun duration increase with the wraith's travel distance).\nThe wraith will pick up Abyssal Trap as it travels over it and will apply the trap to the enemy target upon stunning them.\nIf the wraith stuns an enemy for 0.9s or longer, Selena will gain 60% Movement Speed for 2s.\n|stats1=Skill Cost|stats1_value=80/90/100/110/120/130\n|stats2=Base Damage|stats2_value=250/280/310/340/370/400\n|stats3=Max Damage|stats3_value=500/560/620/680/740/800",
+      "cooldown": "12.0",
+      "manaCost": "80",
+      "damageType": "Magic",
+      "scaling": [
+        "(+20% Total Magic Power)",
+        "(+40% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "80",
+            "90",
+            "100",
+            "110",
+            "120",
+            "130"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "280",
+            "310",
+            "340",
+            "370",
+            "400"
+          ]
+        },
+        {
+          "label": "Max Damage",
+          "values": [
+            "500",
+            "560",
+            "620",
+            "680",
+            "740",
+            "800"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Speed Up"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Abyssal_Arrow"
+    },
+    "extra1": {
+      "name": "Garotte",
+      "description": "Selena charges in the target direction, dealing 150 (+50% Total Magic Power) Magic Damage to enemies in her path.\nIf this skill's damage detonates an Abyssal Mark, its cooldown will reset\n|stats1=Cooldown|stats1_value=12.0/11.4/10.8/10.2/9.6/9.0\n|stats2=Base Damage|stats2_value=150/190/230/270/310/350",
+      "cooldown": "12.0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.4",
+            "10.8",
+            "10.2",
+            "9.6",
+            "9.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "150",
+            "190",
+            "230",
+            "270",
+            "310",
+            "350"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Garotte"
+    },
+    "extra2": {
+      "name": "Primal Darkness",
+      "description": "Passive: Selena gains 5 Magic Power.\nActive: Selena enters Abyssal Form and gains 20% Movement Speed for 0.8s. This also immediateky resets the Cooldown of Soul Eater and Garotte.\n|stats1=Movement Speed Bonus|stats1_value=20%/30%/40%/50%\n|stats2=Magic Power|stats2_value=5/10/15/20",
+      "cooldown": "5.5",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Movement Speed Bonus",
+          "values": [
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        },
+        {
+          "label": "Magic Power",
+          "values": [
+            "5",
+            "10",
+            "15",
+            "20"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Morph",
+        "Speed Up"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Primal_Darkness"
+    },
+    "extra3": {
+      "name": "Blessing of the Moon Goddess",
+      "description": "Passive: Selena gains 5 Magic Power.\nActive: Selena enters Elven Form and gains 20% Movement Speed for 0.8s. This also immediateky resets the Cooldown of Abyssal Trap and Abyssal Arrow.\n|quote=\n|stats1=Movement Speed Bonus|stats1_value=20%/30%/40%/50%\n|stats2=Magic Power|stats2_value=5/10/15/20",
+      "cooldown": "5.5",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Movement Speed Bonus",
+          "values": [
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        },
+        {
+          "label": "Magic Power",
+          "values": [
+            "5",
+            "10",
+            "15",
+            "20"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Morph",
+        "Speed Up"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Blessing_of_the_Moon_Goddess"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Zone Control",
+      "Burst Damage",
+      "Jungle Tempo",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

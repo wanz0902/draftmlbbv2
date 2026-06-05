@@ -1,0 +1,227 @@
+{
+  "id": "chip",
+  "name": "Chip",
+  "heroName": "Chip",
+  "role": [
+    "Tank",
+    "Support"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam",
+    "EXP"
+  ],
+  "flex_lanes": [
+    "EXP"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Snack Time!",
+      "description": "Chip starts eating potato chips once every 2s when out of combat, regenerating HP equal to 300 plus 15% of lost HP after finishing a whole bag (requires 4 bites). After eating a bag of chips, Chip will be full and cannot eat again for 5s. (The bite count will be saved if he enters combat before finishing a whole bag.)",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Snack_Time!",
+      "iconUrl": "/raw-assets/skill_icons/chip/snack_time.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Crash Course",
+      "description": "Chip rams his hovercraft into the ground, dealing (Magic Damage) equal to 150 plus 5% of target's Max HP and applying (Chip's Mark) on enemy heroes hit. Chip gains a 300( +60% Total Magic Power) Shield upon hitting an enemy hero, which increases by 25% for each additional enemy hero hit. Chip's next Basic Attack will become ranged and also hit all nearby enemies with (Chip's Mark), detonating the mark to deal 200( +40% Total Magic Power) (Magic Damage) and stun each target for 0.6s.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Crash_Course",
+      "iconUrl": "/raw-assets/skill_icons/chip/crash_course.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Overtime",
+      "description": "Chip rushes for 2s, gaining up to 65% extra Movement Speed, after which he maintains the max speed for 2s. Chip's next Basic Attack will cause him to charge at the enemy, dealing 200( +30% Total Magic Power) (Magic Damage) and knocking them back slightly.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Overtime",
+      "iconUrl": "/raw-assets/skill_icons/chip/overtime.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Shortcut",
+      "description": "Chip drops the (Main Portal) on an enemy hero, dealing 200( +60% Total Magic Power) (Magic Damage) and slowing them by 25%. The Main Portal deals 2 times the damage and slow effect after a delay. Meanwhile, he creates (Connecting Portals) near allied heroes (10 units away) and behind the allied Base. The (Main Portal) and (Connecting Portals) last up to 15s. (Connecting Portal): Heroes (on both teams) can teleport from (Connecting Portals) to the (Main Portal), and allied heroes gain Burst Movement Speed for 1.5s. (Main Portal): The Main Portal inherits 70% of Chip's attributes. Heroes can stand on the (Main Portal) for 2s to return to the (Connecting Portal) they came from. Casting skills or launching Basic Attacks will reset the stand time.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Shortcut",
+      "iconUrl": "/raw-assets/skill_icons/chip/shortcut.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Vision Control",
+      "Team Enabler",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Portal",
+    "Teleport"
+  ],
+  "mechanicNote": "Chip membuat portal teleport yang bisa digunakan seluruh tim untuk rotasi instan antar lane.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "Vision Control",
+    "Team Enabler",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

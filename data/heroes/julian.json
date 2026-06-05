@@ -1,0 +1,198 @@
+{
+  "id": "julian",
+  "name": "Julian",
+  "heroName": "Julian",
+  "role": [
+    "Fighter",
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane",
+    "EXP Lane",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "EXP Lane",
+    "Jungle"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Smith's Legacy",
+      "description": "After casting two different skills, Julian enhances his third skill. Casting the enhanced skill makes all his skills go on a 9-6s Cooldown (decreases with his level), but his Basic Attacks within the next 5s will deal 75( +100% Total Physical Attack) (+120% Total Magic Power) (Magic Damage) and pull the target toward him. Julian gains 15% extra Hybrid Lifesteal for 5s each time he hits an enemy hero with his skills (up to 3 stacks).",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Smith's_Legacy",
+      "iconUrl": "/raw-assets/skill_icons/julian/smith_s_legacy.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Scythe",
+      "description": "Julian hurls a flying scythe in the target direction, dealing 380( +140% Total Magic Power) (Magic Damage) to enemies along the way and slowing them by 30% for 1s. The scythe disappears upon hitting a non-minion enemy.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Scythe",
+      "iconUrl": "/raw-assets/skill_icons/julian/scythe.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Sword",
+      "description": "Julian summons a flying sword and dashes in the target direction, dealing 400( +80% Total Magic Power) (Magic Damage) to enemies along the way.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Sword",
+      "iconUrl": "/raw-assets/skill_icons/julian/sword.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Chain",
+      "description": "Julian casts chains at the target location, dealing 300( +100% Total Magic Power) (Magic Damage) to enemies hit after a short delay and immobilizing them for 1.2s.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Chain",
+      "iconUrl": "/raw-assets/skill_icons/julian/chain.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Enhanced Skill",
+    "No Ultimate"
+  ],
+  "mechanicNote": "Julian tidak memiliki ultimate tradisional, sebaliknya skill-nya bisa di-enhance setelah casting 3 skill berturut-turut.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Form Management",
+    "Combo Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Splitpush Threat"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC"
+  ],
+  "macroTags": [
+    "Backline Threat",
+    "Pick-off Specialist",
+    "Split Push",
+    "Sustained Damage",
+    "Jungle Tempo",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Level 4",
+    "Early-Mid Game"
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "id": "masha",
+  "name": "Masha",
+  "heroName": "Masha",
+  "role": [
+    "Tank",
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Ancient Strength",
+      "description": "Blessed by the Bear King, Masha has 3 HP bars and won't die until all of them are depleted. She can ignore an instance of damage each time she loses an HP bar. When Masha only has two HP bars left, skills will only require 50% of their original HP Cost to cast. When Masha only has one HP bar left, she doesn't need to spend HP to cast skills.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ancient_Strength",
+      "tips": "Masha gets the Ancient Strength from the Bear King and has 3 HP bars. Each time she loses 1 HP bar, she can block the damage once. However, she will die after she loses the last HP bar. Each time Masha loses a certain amount of HP, her ATK Speed will be increased. (Based on total HP of 3 HP bars.) Masha will get Physical Lifesteal when she loses her first HP bar. Her Physical Lifesteal will be enhanced, and she will enjoy reduced time-controlled effects after she loses her second HP bar.With less HP left, Masha can deal more damage and have a greater regen ability. So when going as Masha, don't be afraid when your HP is running out, you should dive into battle! After killing targets, you can restore HP rapidly by using \"Life Recovery\".",
+      "iconUrl": "/raw-assets/skill_icons/masha/ancient_strength.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Wild Power",
+      "description": "(Passive): Masha gains (Power of the Wild) which causes her Basic Attacks to deal extra (Physical Damage) equal to 1( )% of the target's Max HP (up to 60 against Creeps and doesn't take effect on Turrets or Base). (Active): Masha spends 24% HP to increase her Movement Speed by 60% for 1.5s. She also increases the extra (Physical Damage) from (Power of the Wild) by 2( )% of the target's Max HP and gains 50% extra Attack Speed for her next two Basic Attacks.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Wild_Power",
+      "tips": "Masha awakens her Wild Power, increasing her Movement Speed and dealing extra Physical Damage according to the target's Max HP with Basic Attacks. When Wild Power is awakened, Masha will lose a certain amount of her current Max HP every second. (Based on total HP of 3 HP bars).This is Masha's core skill. When this skill is activated, Masha's chasing ability and DPS will receive massive enhancements. Though Masha has to continuously pay with her HP for activating this skill, the Lifesteal ability and Attack Speed boosted by her passive \"Ancient Strength\" more than compensates her loss - making her almost invincible in battles.",
+      "iconUrl": "/raw-assets/skill_icons/masha/wild_power.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Howl Shock",
+      "description": "Masha spends 24% HP to roar at enemies, dealing 200( +100% Total Physical Attack) (Physical Damage) and reducing their Attack Speed by 50% for 2s.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Howl_Shock",
+      "tips": "Masha roars forward and unleashes an energy shockwave to targets, dealing Physical Damage and slowing them. The hero in contact with the shockwave can be disarmed. (Picking up weapons in advance can end the disarming effect.)This skill provides Masha with a great advantage while fighting against opponents. It can disarm the target and inflict a slowdown debuff, which will be very useful for launching an offensive or a retaliation.",
+      "iconUrl": "/raw-assets/skill_icons/masha/howl_shock.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Thunderclap",
+      "description": "Masha spends 34% HP to lunge at an enemy hero (immune to control effects during the lunge), dealing 200( +200% Total Physical Attack) (Physical Damage), slowing them by 25% for 2s, and knocking back nearby enemies. The cooldown of this skill will be reset each time Masha loses an HP bar.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Thunderclap",
+      "tips": "Masha launches a powerful charge after sacrificing a certain amount of her current HP. When she gets close to targets, she will release Thunderclap, dealing Physical Damage according to the targets' Max HP and slowing them.This is a burst skill that can be used to launch a fight. By using this skill, Masha can approach the enemy rapidly, deal great damage and inflict slowdown debuff.",
+      "iconUrl": "/raw-assets/skill_icons/masha/thunderclap.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Frontline Engage",
+      "Crowd Control",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Masha adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Frontline Engage",
+    "Crowd Control",
+    "EXP Lane Pressure"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

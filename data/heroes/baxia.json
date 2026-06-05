@@ -1,0 +1,225 @@
+{
+  "id": "baxia",
+  "name": "Baxia",
+  "heroName": "Baxia",
+  "role": [
+    "Tank"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Baxia Mark",
+      "description": "Baxia activates the \"Baxia Mark\" permanently, reducing the final damage received by 25. At the same time, Baxia will reduce the Shield and HP Regen of enemies hit by his skills by 50% for 4s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Baxia_Mark",
+      "tips": "Baxia activates the Baxia Mark permanently, reducing the final damage received (the amount of DMG reduced increases with hero’s level). At the same time, Baxia will reduce the regen effect of the hit target.",
+      "iconUrl": "/raw-assets/skill_icons/baxia/baxia_mark.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Baxia-Shield Unity",
+      "description": "Baxia retracts himself into his shield and accelerates forward. When hitting an enemy unit, he will deal 300( +60% Total Magic Power) (Magic Damage) to it and nearby enemies, stunning the target for 0.8s and slightly knocking other nearby enemies back. During the process of accelerating forward, use this skill again to launch Baxia upward so that he can cross obstacles and enemy minions. When leaping up, if there is an enemy hero under Baxia, he will strike this hero, dealing 375( +75% Total Magic Power) (Magic Damage) to this hero and nearby enemies, stunning the target hit for 1.5s, and slightly knocking other nearby enemy targets back.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Baxia-Shield_Unity",
+      "tips": "Baxia retracts himself into his shield and accelerates forward. When hitting an enemy unit, he will deal Magic Damage to it and enemies nearby, stunning the target and slightly knocking other enemies nearby back.During the process of accelerating forward, use this skill again to launch Baxia upward so that he can cross obstacles and enemy minions. When leaping up, if there is an enemy hero under Baxia, he will strike at this hero, dealing Magic Damage to this hero and other enemies around, stunning the hit target, and slightly knocking other targets not far away back.",
+      "iconUrl": "/raw-assets/skill_icons/baxia/baxia_shield_unity.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Shield of Spirit",
+      "description": "Baxia throws out his shield, dealing (Magic Damage) equal to 180( +120% Total Magic Power) plus 6% of the target's Max HP to the enemies along the way, marking them for 5s, and slowing them by 50% for 1s. The shield disappears upon hitting the first enemy hero or creep. Baxia can cast the skill again in a short while. If an enemy hero or creep is hit by the skill, the skill's cooldown will be reduced to 15%.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Shield_of_Spirit",
+      "tips": "Baxia throws his shield forward (the shield will disappear upon hitting enemy Heroes or creeps), dealing Magic Damage to the target and enemy minions according to their Max HP, marking them and slowing them down.This skill can be used again in a short time. If the shield hits a marked enemy, the CD will be reduced.",
+      "iconUrl": "/raw-assets/skill_icons/baxia/shield_of_spirit.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Tortoise’s Puissance",
+      "description": "Baxia holds his shield to the front and begins sprinting frantically, gaining 30% extra Movement Speed for 10s while leaving a lava path behind. Enemies on the path will take 40( +30% Total Magic Power) (Magic Damage) and be slowed by 15% for 0.5s every 0.5s. For the duration, the Damage Reduction effect from (Baxia Mark) is increased to 240%.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Tortoise’s_Puissance",
+      "tips": "Baxia deploys a frontal shield and dashes forward crazily, increasing his Movement Speed incessantly. Meanwhile, he creates a lava path along the way, dealing Magic Damage to enemies on the path. During dashing forward, the final damage he receives will be greatly reduced as Baxia Mark is activated.",
+      "iconUrl": "/raw-assets/skill_icons/baxia/tortoise_s_puissance.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Jungle Tempo",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Baxia adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "Jungle Tempo",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

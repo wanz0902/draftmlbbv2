@@ -1,0 +1,212 @@
+{
+  "id": "valentina",
+  "name": "Valentina",
+  "heroName": "Valentina",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 115,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "0.98",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Primal Force",
+      "description": "Valentina gains 8-50 extra EXP each time she deals damage to an enemy hero. Cooldown: 2s.\nIf the enemy hero's level isn't higher than Valentina's, 30% of the damage dealt is converted into her HP. The EXP scales with Valentina's level.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff",
+        "Heal"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Primal_Force"
+    },
+    "skill1": {
+      "name": "Shadow Strike",
+      "description": "Valentina casts Shadow Strike in the target direction, dealing 475 (+145% Total Magic Power) Magic Damage to enemies hit and slowing them by 40% for 1s.\nEnemy heroes hit by Shadow Strike are marked with a Shadow Sigil for 4s and will be terrified for 1s when hit by Shadow Strike again within the duration (a unit can only be terrified onc within 4s).",
+      "cooldown": "7.0",
+      "manaCost": "70",
+      "damageType": "Magic",
+      "scaling": [
+        "(+145% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "7.0",
+            "6.6",
+            "6.2",
+            "5.8",
+            "5.4",
+            "5.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "70",
+            "75",
+            "80",
+            "85",
+            "90",
+            "95"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "475",
+            "520",
+            "565",
+            "610",
+            "655",
+            "700"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Damage",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Shadow_Strike"
+    },
+    "skill2": {
+      "name": "Arcane Shade",
+      "description": "Valentina dashes in the target direction, firing 3 Shadow Bolts at nearby enemies that deal 90 (+30% Total Magic Power) Magic Damage each. Valentina can cast this skill again within 6s (costs Mana).\nThe cooldown of Shadow Strike is reduced by 1s each time a Shadow Bolt hits an enemy.",
+      "cooldown": "12.0",
+      "manaCost": "40",
+      "damageType": "Magic",
+      "scaling": [
+        "(+30% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "40",
+            "44",
+            "48",
+            "52",
+            "56",
+            "60"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "90",
+            "108",
+            "126",
+            "144",
+            "162",
+            "180"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Arcane_Shade"
+    },
+    "ultimate": {
+      "name": "I Am You",
+      "description": "Valentina slows the target enemy hero by 70% for 0.5s and gains the ability to cast their Ultimate. Casting the enemy's Ultimate turns Valentina into the enemy hero's form and allows her to inherit their Basic Attack type for up to 12s. Her skills remain unchanged unless the enemy's Ultimate has a Morph effect.\nThe stolen Ultimate's will be equal to Valentina's Ultimate level and the Ultimate cooldown will be 120% of the target's Ultimate cooldown (but no lower than 10s). Valentina gains (100% Total Magic Power) Physical Attack for the duration if the enemy is a Physical Damage hero. This cannot be used on an enemy Valentina.",
+      "cooldown": "0.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(100% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Level",
+          "values": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Morph",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "I_Am_You"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

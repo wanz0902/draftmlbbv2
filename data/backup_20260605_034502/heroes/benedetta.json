@@ -1,0 +1,255 @@
+{
+  "id": "benedetta",
+  "name": "Benedetta",
+  "heroName": "Benedetta",
+  "role": [
+    "Assassin",
+    "Fighter"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "EXP",
+  "lanes": [
+    "EXP",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2410,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 113,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 255
+  },
+  "skills": {
+    "passive": {
+      "name": "Elapsed Daytime",
+      "description": "When holding down the Basic Attack button, Benedetta enters the Swordout state and charges up Sword Intent. If the Basic Attack button is released after the Sword Intent is fully charged, Benedetta will use Swordout Slash in the direction she's facing and dash forward, dealing (215% Total Physical Attack) Physical Damage to enemies on the path (counts as Skill Damage and is reduced to 50% on Minions and Creeps).\nBenedetta can only use Swordout Slash when her Sword Intent is fully charged and she is in Swordout state by holding down the Basic Attack button.\nBenedetta also gains Sword Intent by dealing damage with her Basic Attack and skills.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(215% Total Physical Attack)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Elapsed_Daytime"
+    },
+    "skill1": {
+      "name": "Phantom Slash",
+      "description": "Benedetta withdraws swiftly and leaves a shadow in front. After a short delay, her shadow slashes forward in a fan-shaped area, dealing 200 (+75% Total Physical Attack) Physical Damage and slowing the enemies by 60% for 0.5s.\nMeanwhile, Benedetta dashes forward to slash, dealing 75 (+100% Total Physical Attack) Physical Damage. (If the target is hit by her shadow, damage caused by Benedetta herself will increase to 200%).\n|stats1=Cooldown|stats1_value=10.0/9.3/8.6/7.9/7.2/6.5\n|stats2=Skill Cost|stats2_value=55/61/67/73/79/85\n|stats3=Shadow Damage|stats3_value=200/240/280/320/360/400\n|stats4=Slash Damage|stats4_value=75/100/125/150/175/200",
+      "cooldown": "10.0",
+      "manaCost": "55",
+      "damageType": "Physical",
+      "scaling": [
+        "(+75% Total Physical Attack)",
+        "(+100% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "10.0",
+            "9.3",
+            "8.6",
+            "7.9",
+            "7.2",
+            "6.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "55",
+            "61",
+            "67",
+            "73",
+            "79",
+            "85"
+          ]
+        },
+        {
+          "label": "Shadow Damage",
+          "values": [
+            "200",
+            "240",
+            "280",
+            "320",
+            "360",
+            "400"
+          ]
+        },
+        {
+          "label": "Slash Damage",
+          "values": [
+            "75",
+            "100",
+            "125",
+            "150",
+            "175",
+            "200"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE",
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Phantom_Slash"
+    },
+    "skill2": {
+      "name": "An Eye for An Eye",
+      "description": "Benedetta raises her weapon to defend, gaining Control Immunity and blocking damage from any source for 0.8s. After this, she stabs in the designated direction, dealing 300 (+80% Total Physical Attack) Physical Damage.\nIf Benedetta successfully fends off any damage while defending, she will gain full Sword Intent. If she fends off any control effects, her subsequent stab stuns the target for 1.5s.\n|stats1=Cooldown|stats1_value=15.0/14.4/13.8/13.2/12.6/12.0\n|stats2=Skill Cost|stats2_value=100/105/110/115/120/125\n|stats3=Base Damage|stats3_value=300/330/360/390/420/450",
+      "cooldown": "15.0",
+      "manaCost": "100",
+      "damageType": "Physical",
+      "scaling": [
+        "(+80% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "15.0",
+            "14.4",
+            "13.8",
+            "13.2",
+            "12.6",
+            "12.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "100",
+            "105",
+            "110",
+            "115",
+            "120",
+            "125"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "330",
+            "360",
+            "390",
+            "420",
+            "450"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "An_Eye_for_An_Eye"
+    },
+    "ultimate": {
+      "name": "Alecto: Final Blow",
+      "description": "Benedetta clenches Alecto, dashes forward (Benedetta is untargetable during the dash), and performs a slash after a short delay, detonating the Sword Intent along the path. For 2.5s, the Sword Intent deals up to a total of 1560 (+1105% Total Physical Attack) Physical Damage to enemies within and slows them by 50%.\n|stats1=Cooldown|stats1_value=45.0/40.0/35.0\n|stats2=Skill Cost|stats2_value=110/135/160\n|stats3=Base Damage|stats3_value=1560/1820/2080",
+      "cooldown": "45.0",
+      "manaCost": "110",
+      "damageType": "Physical",
+      "scaling": [
+        "(+1105% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "45.0",
+            "40.0",
+            "35.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "110",
+            "135",
+            "160"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "1560",
+            "1820",
+            "2080"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst",
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Alecto:_Final_Blow"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

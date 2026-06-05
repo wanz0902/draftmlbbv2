@@ -1,0 +1,183 @@
+{
+  "id": "natan",
+  "name": "Natan",
+  "heroName": "Natan",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Theory of Everything",
+      "description": "Natan gains a stack of (Entanglement) each time he or his (Reverse-Clone) hits an enemy with a skill (up to 6 stacks). Each stack lasts 5s and grants 7.5% Attack Speed and 7.5% Movement Speed. Natan's Basic Attack projectiles will return to Natan after reaching the maximum range, dealing an extra 30( +50% Total Physical Attack) (+70% Total Magic Power) (Magic Damage) to enemies along the way (inherits a portion of Attack Effects).",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Theory_of_Everything",
+      "iconUrl": "/raw-assets/skill_icons/natan/theory_of_everything.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Superposition",
+      "description": "Natan shoots a dense mass of energy in the target direction, dealing 225( +100% Total Physical Attack) (+140% Total Magic Power) (Magic Damage) to enemies in its path.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Superposition",
+      "iconUrl": "/raw-assets/skill_icons/natan/superposition.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Interference!",
+      "description": "Natan launches a Gravitational Attractor in the target direction, dealing 150( +50% Total Physical Attack) (+70% Total Magic Power) (Magic Damage) to enemies in its path and knocking them back. The Attractor detonates upon reaching the maximum range, dealing 30( +10% Total Physical Attack) (+14% Total Magic Power) (Magic Damage) to nearby enemies and knocking them back.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Interference!",
+      "iconUrl": "/raw-assets/skill_icons/natan/interference.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Entropy?",
+      "description": "Natan summons a (Reverse-Clone) at a target location 6 units away that lasts 10s, inherits 35% of his attack attributes (and a portion of Attack Effects), and will copy his moves and attacks in reverse. (Use Again): Natan switches places with the (Reverse-Clone). Each cast reduces other skills' remaining cooldowns by 50%. The (Reverse-Clone) will disappear if Natan is too far away, while the cooldown of this skill will be reduced by the remaining duration.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Entropy?",
+      "iconUrl": "/raw-assets/skill_icons/natan/entropy.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Natan adalah marksman dengan DPS tinggi yang menjadi win condition utama di late game.",
+  "playstyleTags": [
+    "DPS"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Late Game Insurance",
+    "Snowball Potential"
+  ],
+  "counterTags": [
+    "Dive",
+    "Burst",
+    "Flank"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Needs Peel"
+  ],
+  "macroTags": [
+    "Objective DPS",
+    "Late Game Carry",
+    "Gold Lane Farming"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

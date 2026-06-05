@@ -1,0 +1,264 @@
+{
+  "id": "aamon",
+  "name": "Aamon",
+  "heroName": "Aamon",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle",
+    "Mid"
+  ],
+  "flex_lanes": [
+    "Mid"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2455,
+    "hpRegen": 8,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 115,
+    "physicalDefense": 19,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.09",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Invisible Armor",
+      "description": "Aamon enters the Camouflage state each time he hits an enemy with a skill, during which he cannot be targeted, recovers 25 (+15% Total Magic Power) plus 3% of his lost HP every 0.5s, and gains 80% extra Movement Speed that rapidly decays over 3s.\nUpon leaving the Camouflage state, Aamon immediately resets his Basic Attack's cooldown and enhances his Basic Attacks within the next 3s. Each enhanced Basic Attack deals 70 (+100% Total Physical Attack) (+115% Total Magic Power) Magic Damage. The first attack after actively leaving Camouflage is enhanced to deal 84 (120% Physical Attack) (+138% Total Magic Power) damage and reduces all skill cooldowns by 1s.\n|quote=For generations, the Invisible Armor has been used as the symbol of the greatest power in House Paxley.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+15% Total Magic Power)",
+        "(+100% Total Physical Attack)",
+        "(+115% Total Magic Power)",
+        "(120% Physical Attack)",
+        "(+138% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Camouflage",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Invisible_Armor"
+    },
+    "skill1": {
+      "name": "Soul Shards",
+      "description": "Passive: Aamon charges his armor through enhanced Basic Attacks or while camouflaged. At 5 charges, Aamon throws 6 shards at the target on his next attack, each shard dealing 50 (+15% Total Magic Power) Magic Damage. The shards will then scatter around the target.\nActive: Aamon throws a shard at a nearby enemy, dealing 175 (+60% Total Magic Power) Magic Damage\n|stats1=Cooldown|stats1_value=7.0/6.7/6.4/6.1/5.8/5.5\n|stats2=Skill Cost|stats2_value=40/44/48/52/56/60\n|stats3=Passive Damage|stats3_value=50/60/70/80/90/100\n|stats4=Base Damage|stats4_value=175/200/225/250/275/300",
+      "cooldown": "7.0",
+      "manaCost": "40",
+      "damageType": "Magic",
+      "scaling": [
+        "(+15% Total Magic Power)",
+        "(+60% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "7.0",
+            "6.7",
+            "6.4",
+            "6.1",
+            "5.8",
+            "5.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "40",
+            "44",
+            "48",
+            "52",
+            "56",
+            "60"
+          ]
+        },
+        {
+          "label": "Passive Damage",
+          "values": [
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "175",
+            "200",
+            "225",
+            "250",
+            "275",
+            "300"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Soul_Shards"
+    },
+    "skill2": {
+      "name": "Slayer Shards",
+      "description": "Aamon throws a shard forward, dealing 120 (+50% Total Magic Power) Magic Damage to enemies along the way. The shard will return to Aamon after a short delay and allow him to enter the Camouflage state.\nIf the shard hits a non-minion enemy, it'll slow them by 50% for 2s and return to Aamon immediately.\n|stats1=Cooldown|stats1_value=12.5/12.0/11.5/11.0/10.5/10.0\n|stats2=Skill Cost|stats2_value=50/56/62/68/74/80\n|stats3=Base Damage|stats3_value=120/140/160/180/200/220",
+      "cooldown": "12.5",
+      "manaCost": "50",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.5",
+            "12.0",
+            "11.5",
+            "11.0",
+            "10.5",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "50",
+            "56",
+            "62",
+            "68",
+            "74",
+            "80"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "120",
+            "140",
+            "160",
+            "180",
+            "200",
+            "220"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Camouflage",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Slayer_Shards"
+    },
+    "ultimate": {
+      "name": "Endless Shards",
+      "description": "Aamon throws all shards at a designated enemy and slows them by 30% for 1.5s. After a short delay, the shards will fly to the enemy's location again, each dealing 35 (+10% Total Magic Power)-70 (+20% Total Magic Power) Magic Damage.\nThe number of shards increases with Aamon's armor charges and the shards on the ground (8-25).\nThe damage dealt increases with the target's lost HP, to the max when the target's HP is below 30%.\n|stats1=Cooldown|stats1_value=50.0/45.0/40.0\n|stats2=Skill Cost|stats2_value=150/170/190\n|stats3=Min Damage|stats3_value=35/40/45\n|stats4=Max Damage|stats4_value=70/80/90",
+      "cooldown": "50.0",
+      "manaCost": "150",
+      "damageType": "Magic",
+      "scaling": [
+        "(+10% Total Magic Power)",
+        "(+20% Total Magic Power)",
+        "(8-25)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "50.0",
+            "45.0",
+            "40.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "150",
+            "170",
+            "190"
+          ]
+        },
+        {
+          "label": "Min Damage",
+          "values": [
+            "35",
+            "40",
+            "45"
+          ]
+        },
+        {
+          "label": "Max Damage",
+          "values": [
+            "70",
+            "80",
+            "90"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Endless_Shards"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

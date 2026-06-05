@@ -1,0 +1,195 @@
+{
+  "id": "lolita",
+  "name": "Lolita",
+  "heroName": "Lolita",
+  "role": [
+    "Tank",
+    "Support"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Noumenon Energy Core",
+      "description": "Every 2.5s, the Noumenon Energy Core grants a 50 (+10*Hero Level) shield to Lolita and nearby allies. This shield can stack up to 6 times and lasts 30s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Noumenon_Energy_Core",
+      "tips": "If Lolita already has a shield and shield is fully charged, nearby Allies will receive the shield. So if there are 4 allies around you that doesnt have a shield, they will all receive it at the same time.",
+      "iconUrl": "/raw-assets/skill_icons/lolita/noumenon_energy_core.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Power Charge",
+      "description": "Lolita dashes in the target direction. Her next Basic Attack within 4s will perform a short dash to the target, dealing 300( +100% Total Physical Attack) (Physical Damage) and stunning them for 0.5s. This damage is doubled against Minions.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Power_Charge",
+      "tips": "At skill level 1 its 350 + 2.5%hp , at skill level 6 its 650 + 5% hp of damage. This will hurt quite alot when you are hitting enemy with high amount of HP, it even works with lord.",
+      "iconUrl": "/raw-assets/skill_icons/lolita/power_charge.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Guardian's Reflection",
+      "description": "Lolita raises her shield and reflects all incoming ranged Basic Attacks and (Projectiles) in the direction of the shield for 3s. The shield will break after taking 1500( +15% Total HP) damage. The damage and effects from the Unique Passives of an attacker's equipment will not apply to the shield and will not be reflected.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Guardian's_Reflection",
+      "tips": "Try to use your shield only when you really need it, like blocking cyclop's ultimate.After blocking the damage, try to aim the Energy Blast to hit the lowest health target. You don't need to use it immediately as you have 4s to fire it.",
+      "iconUrl": "/raw-assets/skill_icons/lolita/guardian_s_reflection.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Noumenon Blast",
+      "description": "Lolita begins charging for 2s while slowing enemies in a fan-shaped area by 50%. When the charging is complete or is stopped, Lolita slams her hammer on the ground, dealing up to 500( +100% Total Physical Attack) (Physical Damage) to enemies in the area and stunning them for up to 2s (the damage and stun duration are based on the charge time). (Use Again): Lolita immediately stops charging and slams her hammer on the ground.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Noumenon_Blast",
+      "tips": "Your ultimate chargeup animation will not be visible by the enemy team if they cannot see you while you are in the bush, so the stealth ult is stiill here after the remake.",
+      "iconUrl": "/raw-assets/skill_icons/lolita/noumenon_blast.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Vision Control",
+      "Team Enabler",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Lolita adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "Vision Control",
+    "Team Enabler",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

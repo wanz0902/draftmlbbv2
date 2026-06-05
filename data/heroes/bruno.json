@@ -1,0 +1,220 @@
+{
+  "id": "bruno",
+  "name": "Bruno",
+  "heroName": "Bruno",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold",
+  "lanes": [
+    "Gold",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Mecha Legs",
+      "description": "Bruno gains 2% extra Crit Chance each time he deals damage with his skills (up to 10 stacks). Bruno has higher Physical Attack but only gains 80% extra Attack Speed from all sources.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mecha_Legs",
+      "tips": "Setiap menggunakan Skill, Critical Hit Bruno akan selalu meningkat, dsini kita dapat memanfaatkanya dengan cara selalu menggunakan Skill saat War agar Critical Hit Bruno meningkat dan menyebabkan Damage yang besar.",
+      "iconUrl": "/raw-assets/skill_icons/bruno/mecha_legs.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Volley Shot",
+      "description": "Bruno kicks a Powerball on his next Basic Attack, dealing 100( +100% Total Physical Attack) (Physical Damage) to the target, slowing them by 30%, and speeding up by 30% for 0.5s. The Powerball then bounces back toward Bruno and lands on the ground. He or allied heroes can retrieve the Powerball for another attack and reduce the cooldown of (Flying Tackle) by 1s.",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Volley_Shot",
+      "tips": "Gunakan Skill ini saat War dan arahkan posisi tembakan ke dalam area yang mudah dijangkau kembali atau dapat dijangkau rekan 1 team, Karena jika bola diambil kembali atau diambil oleh rekan 1 team skill ini dapat digunakan kembali (Reset Cooldown).",
+      "iconUrl": "/raw-assets/skill_icons/bruno/volley_shot.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Flying Tackle",
+      "description": "Bruno makes a slide tackle in the target direction, dealing 140( +40% Total Physical Attack) (Physical Damage) to enemies in his path and stunning them for 0.5s. If the Powerball is bouncing back, Bruno also draws the Powerball toward him.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Flying_Tackle",
+      "tips": "Gunakan Skill ini saat War untuk membuat Stun lawan yang terkena Flying Tackle, jangan lupa sebelum menggunakan skill ini gunakan Skill 1 dan perhatikan kemana arah bola tersebut dan gunakan Skill Flying Tackle ke arah bola tadi agar dapat menggunakan Skill Flying Tackle kembali dan gunakan untuk melarikan jika terdesak saat dikejar lawan, Skill ini juga dapat digunakan untuk menembus tembok.",
+      "iconUrl": "/raw-assets/skill_icons/bruno/flying_tackle.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Worldie",
+      "description": "Bruno kicks his Energy Ball at the target enemy hero, dealing 250( +83% Total Physical Attack) (Physical Damage) and knocking them back. The Energy Ball then bounces between nearby enemies up to 10 times, each time dealing 150( +50% Total Physical Attack) (Physical Damage). Each hit also reduces the enemy's Physical Defense by 4% for 8s (up to 3 stacks).",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Worldie",
+      "tips": "Gunakan Skill ini pada saat War, saat tendangan pertama mengenai musuh, Skill ini akan memberikan Knockback ini sangat bagus untuk memundurkan salah satu musuh yang mendekat. Gunakan skill ini pada saat musuh saling berdekatan satu sama lain atau saat mereka berkumpul, karena Skill ini dapat memantul apa bila musuh berdekatan.",
+      "iconUrl": "/raw-assets/skill_icons/bruno/worldie.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Bruno adalah marksman dengan DPS tinggi yang menjadi win condition utama di late game.",
+  "playstyleTags": [
+    "DPS"
+  ],
+  "difficultyTags": [
+    "Positioning"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Late Game Insurance",
+    "Snowball Potential"
+  ],
+  "counterTags": [
+    "Dive",
+    "Burst",
+    "Flank"
+  ],
+  "synergyTags": [
+    "Needs Frontline",
+    "Needs Peel"
+  ],
+  "macroTags": [
+    "Objective DPS",
+    "Late Game Carry",
+    "Jungle Tempo"
+  ],
+  "powerSpikeTags": [
+    "2 Core Items",
+    "Late Game"
+  ]
+}

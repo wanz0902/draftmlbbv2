@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Berserker's Fury",
+    "gold": 2350,
+    "category": "Attack",
+    "stats": [
+      "+65 Physical Attack",
+      "+25% Critical Chance"
+    ],
+    "passive": "Doom",
+    "description": "Critical hits increase Physical Attack.",
+    "image": "aset/items Attack/Item_Berserker's_Fury_ML.png"
+  }
+]

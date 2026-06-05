@@ -1,0 +1,242 @@
+{
+  "id": "xavier",
+  "name": "Xavier",
+  "heroName": "Xavier",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 111,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Transcendence",
+      "description": "When Xavier's skills hit enemy heroes, he gains 50% Movement Speed for 1.2s (decays over time) and 1 energy charge. At 3 charges, his next skill triggers the Transcendence state.\nTranscendence: In this state, Xavier's Skills 1 and 2 have their cooldowns reduced by 4s, and his Ultimate by 36s. Transcendence lasts 5s and can be extended by 1s each time his skills hit enemies.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Transcendence"
+    },
+    "skill1": {
+      "name": "Infinite Extension",
+      "description": "Xavier fires a Mystic Bullet that deals 480 (+100% Total Magic Power) Magic Damage to enemies it passes through.\nThe Bullet's flying distance increases each time it hits an enemy or the Mystic Barrier (up to 5 times).\n|stats1=Cooldown|stats1_value=6.5/6.4/6.3/6.2/6.1/6.0\n|stats2=Skill Cost|stats2_value=45/50/55/60/65/70\n|stats3=Base Damage|stats3_value=480/514/548/582/616/650",
+      "cooldown": "6.5",
+      "manaCost": "45",
+      "damageType": "Magic",
+      "scaling": [
+        "(+100% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "6.5",
+            "6.4",
+            "6.3",
+            "6.2",
+            "6.1",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "480",
+            "514",
+            "548",
+            "582",
+            "616",
+            "650"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Infinite_Extension"
+    },
+    "skill2": {
+      "name": "Mystic Field",
+      "description": "Xavier conjures a Mystic Barrier that lasts 5s. Enemies that come into contact with the Barrier will take 220 (+65% Total Magic Power) Magic Damage and be slowed by 50%, while allies will gain 50% extra Movement Speed that decays over 1.2s.\nWhen hit by Xavier's other skills, the Barrier expands into a Mystic Field for 3s, dealing 220 (+65% Total Magic Power) Magic Damage to enemies within and immobilizing them for 0.8s.\n|stats1=Cooldown|stats1_value=13.0/12.6/12.2/11.8/11.4/11.0\n|stats2=Skill Cost|stats2_value=80/88/96/104/112/120\n|stats3=Base Damage|stats3_value=220/244/268/292/316/340\n|stats4=Extra Damage|stats4_value=220/244/268/292/316/340",
+      "cooldown": "13.0",
+      "manaCost": "80",
+      "damageType": "Magic",
+      "scaling": [
+        "(+65% Total Magic Power)",
+        "(+65% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "13.0",
+            "12.6",
+            "12.2",
+            "11.8",
+            "11.4",
+            "11.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "80",
+            "88",
+            "96",
+            "104",
+            "112",
+            "120"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "220",
+            "244",
+            "268",
+            "292",
+            "316",
+            "340"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "220",
+            "244",
+            "268",
+            "292",
+            "316",
+            "340"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mystic_Field"
+    },
+    "ultimate": {
+      "name": "Dawning Light",
+      "description": "Xavier unleashes a beam of Mystic magic in the target direction, dealing 600 (+180% Total Magic Power) Magic Damage to all enemies along its path.\nOnce cast, he also directly enters the Transcendence state and resets the state's duration.\n|stats1=Skill Cost|stats1_value=120/160/180\n|stats2=Base Damage|stats2_value=600/850/1100",
+      "cooldown": "56.0",
+      "manaCost": "120",
+      "damageType": "Magic",
+      "scaling": [
+        "(+180% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "160",
+            "180"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "600",
+            "850",
+            "1100"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dawning_Light"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

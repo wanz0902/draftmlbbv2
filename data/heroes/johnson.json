@@ -1,0 +1,194 @@
+{
+  "id": "johnson",
+  "name": "Johnson",
+  "heroName": "Johnson",
+  "role": [
+    "Tank",
+    "Support"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Electro Airbag",
+      "description": "When Johnson's HP drops below 30%, he gains a 300( +700% Total Physical Defense) shield for 10s. Cooldown: 100s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Electro_Airbag",
+      "iconUrl": "/raw-assets/skill_icons/johnson/electro_airbag.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Impact Wrench",
+      "description": "Johnson throws his wrench toward the target location, dealing 120( +220% Total Physical Defense) (Magic Damage) to enemies in its path. Enemies around the landing point are stunned for 0.8s.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Impact_Wrench",
+      "iconUrl": "/raw-assets/skill_icons/johnson/impact_wrench.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Electromagnetic Waves",
+      "description": "Johnson raises his shield, continuously dealing 80( +60% Total Magic Power) (Magic Damage) to enemies in a fan-shaped area in the target direction and slowing them by 20%. Each instance of damage also increases the enemy's subsequent damage taken from the skill by 15% (up to 45%). This damage is increased by 60% against creeps. Johnson can cast Basic Attacks and skills for the duration.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Electromagnetic_Waves",
+      "tips": "As you can continue using basic attacks while this skill is active, you can use basic attacks to adjust this skill's direction, and thus greatly increase its hit rate.",
+      "iconUrl": "/raw-assets/skill_icons/johnson/electromagnetic_waves.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Full Throttle",
+      "description": "Johnson transforms into a car and begins accelerating over time. An allied hero can use (Hop In) when near Johnson to board the car (only 1 allied hero can ride with Johnson). The car will explode upon hitting an enemy hero or obstacle, dealing 300( +160% Total Magic Power)-450( +280% Total Magic Power) (Magic Damage) to nearby enemies, stunning them for 0.5-1s (scales with the car's speed before impact), and creating an electrified zone at the location. The zone continuously deals 60( +20% Total Magic Power) (Magic Damage) and slows enemies within. While in car state, tap (Brake) to stop immediately or hold (Nitrous) to continuously gain speed for up to 5s. Johnson's location will be revealed to the enemy team for 3s when casting this skill. (Passive): Johnson's Physical Defense is increased by 10%.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Full_Throttle",
+      "tips": "Take full advantage of Johnson's car form to gank often. You can also carry a teammate with you to steal the enemy's base.",
+      "iconUrl": "/raw-assets/skill_icons/johnson/full_throttle.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Vision Control",
+      "Team Enabler",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Vehicle",
+    "Carry Ally"
+  ],
+  "mechanicNote": "Johnson berubah menjadi mobil yang bisa membawa satu ally, menabrak musuh dengan damage dan stun area.",
+  "playstyleTags": [
+    "Initiate",
+    "CC Chain"
+  ],
+  "difficultyTags": [
+    "Macro",
+    "Timing"
+  ],
+  "draftTags": [
+    "First Pick Priority",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "True Damage",
+    "Sustained DPS",
+    "Anti-Heal"
+  ],
+  "synergyTags": [
+    "Enables Carry",
+    "Pairs with Burst",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Frontline Engage",
+    "Crowd Control",
+    "Vision Control",
+    "Team Enabler",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}

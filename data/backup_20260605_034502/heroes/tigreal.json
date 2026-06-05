@@ -1,0 +1,127 @@
+{
+  "id": "tigreal",
+  "name": "Tigreal",
+  "heroName": "Tigreal",
+  "role": [
+    "Tank"
+  ],
+  "specialty": [
+    "Crowd Control",
+    "Initiator"
+  ],
+  "lane": "Roam",
+  "lanes": [
+    "Roam"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2581,
+    "hpRegen": 8,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 112,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.03",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Fearless",
+      "description": "Tigreal gains a stack of {{bgcolortext|tulip-tree-text|Fearless",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Fearless"
+    },
+    "skill1": {
+      "name": "Attack Wave",
+      "description": "Tigreal smashes the ground with his hammer and sends a shockwave that erupts 3 times in the target direction, each time dealing 270 {{bgcolortext|cinnabar-theme-dark-alt-text|(+70% Total Physical Attack)",
+      "cooldown": "7.0",
+      "manaCost": "45",
+      "damageType": "AOE, Slow",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Attack_Wave"
+    },
+    "skill2": {
+      "name": "Sacred Hammer",
+      "description": "Tigreal charges in the target direction, dealing {{bgcolortext|cinnabar-theme-dark-alt-text|(100% Total Physical Attack)",
+      "cooldown": "16.0",
+      "manaCost": "70",
+      "damageType": "Charge, CC",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Sacred_Hammer"
+    },
+    "ultimate": {
+      "name": "Implosion",
+      "description": "Tigreal unleashes the power of his hammer, pulling nearby enemies to him and stunning them for 1.8s while dealing 600 {{bgcolortext|cinnabar-theme-dark-alt-text|(+130% Total Physical Attack)",
+      "cooldown": "55.0",
+      "manaCost": "120",
+      "damageType": "CC, AOE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Implosion"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Frontline Engage",
+      "Crowd Control",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

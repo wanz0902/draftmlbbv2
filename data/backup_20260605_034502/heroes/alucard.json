@@ -1,0 +1,235 @@
+{
+  "id": "alucard",
+  "name": "Alucard",
+  "heroName": "Alucard",
+  "role": [
+    "Fighter",
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle",
+    "EXP"
+  ],
+  "flex_lanes": [
+    "EXP"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2443,
+    "hpRegen": 7,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 123,
+    "physicalDefense": 21,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.12",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Pursuit",
+      "description": "After each skill cast, Alucard's next Basic Attack allows him to dash to the target's location and deal (+125% Total Physical Attack) Physical Damage.\nDemon Hunter: Alucard deals 10% extra damage to Creeps.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+125% Total Physical Attack)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Pursuit"
+    },
+    "skill1": {
+      "name": "Groundsplitter",
+      "description": "Alucard rolls to the target location and slams his blade on the ground, dealing 270 (+85% Extra Physical Attack) Physical Damage to enemies hit and slowing them by 40% for 2s.\n|stats1=Cooldown|stats1_value=8.5/8.1/7.7/7.3/6.9/6.5\n|stats2=Base Damage|stats2_value=270/290/310/330/350/370",
+      "cooldown": "8.5",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+85% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.5",
+            "8.1",
+            "7.7",
+            "7.3",
+            "6.9",
+            "6.5"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "270",
+            "290",
+            "310",
+            "330",
+            "350",
+            "370"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Groundsplitter"
+    },
+    "skill2": {
+      "name": "Whirling Smash",
+      "description": "Alucard launches a whirling slash, dealing 345 (+120% Extra Physical Attack) Physical Damage to nearby enemies.\n|stats1=Cooldown|stats1_value=6.0/5.6/5.2/4.8/4.4/4.0\n|stats2=Base Damage|stats2_value=345/390/435/480/525/570",
+      "cooldown": "6.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+120% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "6.0",
+            "5.6",
+            "5.2",
+            "4.8",
+            "4.4",
+            "4.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "345",
+            "390",
+            "435",
+            "480",
+            "525",
+            "570"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Whirling_Smash"
+    },
+    "ultimate": {
+      "name": "Fission Wave",
+      "description": "Passive: Alucard permanently gains 10% Hybrid Lifesteal.\nActive: Alucard absorbs the energy of enemies in the target area, reducing their Movement Speed by 30% and Hybrid Defense by 10. Alucard gains 10 Hybrid Defense for each enemy hero hit, and reduces the cooldown of his other skills to 50% for 6s.\nUse Again: Alucard releases a shockwave in the target direction dealing 400 (+200% Extra Physical Attack) Physical Damage to enemies hit.\n|stats1=Cooldown|stats1_value=40.0/35.0/30.0\n|stats2=Hybrid Lifesteal|stats2_value=10%/20%/30%\n|stats3=Hybrid Defense Reduction|stats3_value=10/15/20\n|stats4=Hybrid Defense Boost|stats4_value=10/15/20\n|stats5=Base Damage|stats5_value=400/550/700",
+      "cooldown": "40.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+200% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "40.0",
+            "35.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Hybrid Lifesteal",
+          "values": [
+            "10%",
+            "20%",
+            "30%"
+          ]
+        },
+        {
+          "label": "Hybrid Defense Reduction",
+          "values": [
+            "10",
+            "15",
+            "20"
+          ]
+        },
+        {
+          "label": "Hybrid Defense Boost",
+          "values": [
+            "10",
+            "15",
+            "20"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "400",
+            "550",
+            "700"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Fission_Wave"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

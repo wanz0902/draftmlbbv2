@@ -1,0 +1,230 @@
+{
+  "id": "kaja",
+  "name": "Kaja",
+  "heroName": "Kaja",
+  "role": [
+    "Fighter",
+    "Support"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane",
+    "Roam"
+  ],
+  "flex_lanes": [
+    "Roam"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Wrath Sanction",
+      "description": "Kaja achieves Wrath Sanction every 6s. His next Basic Attack will send lightning at enemies, dealing (Magic Damage) equal to 100( +100% Total Magic Power) plus 4% of targets' Max HP and (paralyzing) them. The lightning will jump to enemies nearby as well (up to 3 times). Increases damage by 200% of targets' Max HP on Minions and Creeps. (Paralyze): Slows enemy heroes and summons while reducing their damage by 3% (up to 8 stacks) for 5s.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Passive"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Wrath_Sanction",
+      "tips": "Receiving damage from enemy heroes increases Khaja’s movement speed by 40%, quickly decreasing within 1 second. Effect can be triggered every 5 seconds.",
+      "iconUrl": "/raw-assets/skill_icons/kaja/wrath_sanction.png",
+      "displayLabel": "Passive",
+      "skillSlot": "passive"
+    },
+    "skill1": {
+      "name": "Ring of Order",
+      "description": "Kaja releases a Ringed Electric Blade that quickly expands and contracts, dealing 135( +70% Total Magic Power) (Magic Damage) to enemies hit on its way out and back and (paralyzing) them. Enemies hit will also have their positions revealed briefly. Each time Electric Blade deals damage, Kaja restores 100 HP (decays to 30% after multiple hits).",
+      "cooldown": [
+        10,
+        9,
+        8
+      ],
+      "manaCost": [
+        50,
+        60,
+        70
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ring_of_Order",
+      "tips": "Kaja releases a ringed, electric blade that quickly expands and contracts. Deals magic damage to enemy targets and briefly slows them. When the electric current hits the enemy target, Kaja will unleash a bolt of lightening that briefly deals continuous magical damage to the nearest enemy target. Damage gradually increases when the bolt of lightening continuously hits the same target.",
+      "iconUrl": "/raw-assets/skill_icons/kaja/ring_of_order.png",
+      "displayLabel": "Skill 1",
+      "skillSlot": "skill1"
+    },
+    "skill2": {
+      "name": "Lightning Bomb",
+      "description": "Kaja dashes in the target direction while leaving 3 Lightning Bombs along the way. The Bombs will explode upon enemy contact, dealing 150( +35% Total Magic Power) (Magic Damage) to the enemies and (paralyzing) them.",
+      "cooldown": [
+        12,
+        11,
+        10
+      ],
+      "manaCost": [
+        60,
+        70,
+        80
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "100% Physical Attack"
+      ],
+      "crowdControlType": [
+        "NONE"
+      ],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Lightning_Bomb",
+      "tips": "Kaja charges in a specified direction, dealing magic damage to enemies in his path. If Kaja encounters a friendly unit while charging, he moves again in their movement direction and provides himself and allied heroes with a shield, while also increasing movement speed.",
+      "iconUrl": "/raw-assets/skill_icons/kaja/lightning_bomb.png",
+      "displayLabel": "Skill 2",
+      "skillSlot": "skill2"
+    },
+    "ultimate": {
+      "name": "Divine Judgment",
+      "description": "Kaja deals 200( +100% Total Magic Power) (Magic Damage) to a designated enemy hero, suppresses and (paralyzes) them for 1.5s. During the suppression, Kaja can drag the enemy hero along with him.",
+      "cooldown": [
+        40,
+        35,
+        30
+      ],
+      "manaCost": [
+        100,
+        120,
+        150
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "200% Physical Attack"
+      ],
+      "crowdControlType": [
+        "STUN"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Divine_Judgment",
+      "tips": "Kaja pulls and suppresses a target enemy hero. Deals magic damage for 2 seconds. During that time, the enemy hero’s magic resistance is reduced. Kaja absorbs the target enemy hero’s lost magical resistance, making it his own.",
+      "iconUrl": "/raw-assets/skill_icons/kaja/divine_judgment.png",
+      "displayLabel": "Ultimate",
+      "skillSlot": "ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Vision Control",
+      "Team Enabler",
+      "EXP Lane Pressure",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Level 2 (Roam Item)",
+      "Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  },
+  "mechanicCategory": [
+    "Standard"
+  ],
+  "mechanicNote": "Kaja adalah fighter dengan kombinasi sustain dan damage yang cocok untuk duel dan splitpush.",
+  "playstyleTags": [
+    "Sustain",
+    "Splitpush"
+  ],
+  "difficultyTags": [
+    "Positioning",
+    "Macro"
+  ],
+  "draftTags": [
+    "Flex Pick",
+    "Splitpush Threat",
+    "CC Coverage"
+  ],
+  "counterTags": [
+    "Kite",
+    "Burst",
+    "CC Chain"
+  ],
+  "synergyTags": [
+    "Dive Buddy",
+    "Pairs with CC",
+    "CC Chain Partner"
+  ],
+  "macroTags": [
+    "Split Push",
+    "Sustained Damage",
+    "Vision Control",
+    "Team Enabler",
+    "EXP Lane Pressure",
+    "Map Rotation"
+  ],
+  "powerSpikeTags": [
+    "Level 2 (Roam Item)",
+    "Mid Game"
+  ]
+}
