@@ -6,7 +6,7 @@
  */
 
 /** Draft mode: MPL for team-based drafting, Ranked for solo meta-based */
-export type DraftMode = "mpl" | "ranked";
+export type DraftMode = "mpl" | "ranked" | "custom";
 
 /** Side of the draft */
 export type DraftSide = "BLUE" | "RED";
@@ -63,6 +63,148 @@ export interface DraftRequestPayload {
   mode: DraftMode;
   blueTeam?: string;
   redTeam?: string;
+}
+
+export interface HistoricalDraftRetrieverInput {
+  mode: DraftMode;
+  blueTeam?: string;
+  redTeam?: string;
+  bluePicks: string[];
+  redPicks: string[];
+  blueBans: string[];
+  redBans: string[];
+  currentPicks: string[];
+  currentBans: string[];
+  currentTurn: DraftSide;
+  currentPhase: string;
+}
+
+export interface HistoricalHeroTrend {
+  heroName: string;
+  count: number;
+  winRate: number | null;
+  reason: string;
+  source: string;
+}
+
+export interface SimilarHistoricalGame {
+  seriesId: string;
+  gameId: string;
+  sourceLabel: string;
+  week: number | null;
+  gameNumber: number;
+  blueTeam: string;
+  redTeam: string;
+  winner: string;
+  similarityScore: number;
+  matchingSignals: string[];
+  bluePicks: string[];
+  redPicks: string[];
+  blueBans: string[];
+  redBans: string[];
+}
+
+export interface DraftPatternMatch {
+  patternType: "first-pick" | "ban-sequence" | "pick-sequence" | "comfort-priority";
+  teamId: string;
+  confidence: number;
+  summary: string;
+  heroes: string[];
+  source: string;
+}
+
+export interface HistoricalTeamProfileSummary {
+  teamId: string;
+  totalGames: number;
+  winRate: number;
+  topPicks: Array<{ heroName: string; count: number; winRate: number }>;
+  topBans: Array<{ heroName: string; count: number; frequency: number }>;
+  firstPicks: Array<{ heroName: string; count: number; winRate: number }>;
+  comfortHeroes: Array<{ heroName: string; count: number; winRate: number }>;
+}
+
+export interface HistoricalMatchupSummary {
+  teamId: string;
+  opponentId: string;
+  headToHeadGames: number;
+  teamSeriesWins: number;
+  opponentSeriesWins: number;
+  teamGameWins: number;
+  opponentGameWins: number;
+  headToHeadWinRate: number;
+  summary: string;
+}
+
+export interface CompactDraftState {
+  bluePicks: string[];
+  redPicks: string[];
+  blueBans: string[];
+  redBans: string[];
+  currentTurn: DraftSide;
+  currentPhase: string;
+}
+
+export interface CompactWaferPayload {
+  mode: DraftMode;
+  teams: {
+    blue: string;
+    red: string;
+  };
+  currentDraftState: CompactDraftState;
+  topTeamPicks: {
+    blue: Array<{ heroName: string; count: number; winRate: number }>;
+    red: Array<{ heroName: string; count: number; winRate: number }>;
+  };
+  topTeamBans: {
+    blue: Array<{ heroName: string; count: number; frequency: number }>;
+    red: Array<{ heroName: string; count: number; frequency: number }>;
+  };
+  headToHeadSummary: {
+    summary: string;
+    games: number;
+    teamSeriesWins: number;
+    opponentSeriesWins: number;
+  };
+  similarGamesTop3: Array<{
+    sourceLabel: string;
+    similarityScore: number;
+    matchingSignals: string[];
+    pivotNote: string;
+  }>;
+  recommendationCandidatesTop5: Array<{
+    heroName: string;
+    actionType: "pick" | "ban";
+    score: number;
+    type: string;
+    reason: string;
+    evidence: string[];
+    fallback?: string;
+  }>;
+  constraints: {
+    maxWords: number;
+    noRawDataDump: boolean;
+    noFabrication: boolean;
+    aiNotSourceOfTruth: boolean;
+    missingData: string[];
+  };
+}
+
+export interface HistoricalDraftRetrieverResult {
+  cacheHit: boolean;
+  recommendationSource: "matchup-history" | "team-history" | "global-fallback";
+  teamProfiles: {
+    blue: HistoricalTeamProfileSummary;
+    red: HistoricalTeamProfileSummary;
+  };
+  matchupProfile: HistoricalMatchupSummary;
+  similarGames: SimilarHistoricalGame[];
+  draftPatternMatches: DraftPatternMatch[];
+  likelyRepicks: HistoricalHeroTrend[];
+  likelyRebans: HistoricalHeroTrend[];
+  pivotCandidates: HistoricalHeroTrend[];
+  recommendationCandidates: MplDraftRecommendation[];
+  compactWaferPayload: CompactWaferPayload;
+  localSummary: string;
 }
 
 /** MPL team profile data */
@@ -204,16 +346,16 @@ export interface MatchupProfile {
 // --- MPL Scoring ---
 
 export interface MplScoreBreakdown {
-  teamHistory: number;
-  headToHead: number;
-  draftPattern: number;
-  teamComfort: number;
-  teamDeny: number;
-  availability?: number;
-  laneFit?: number;
-  synergy?: number;
-  counter?: number;
-  meta: number;
+  matchupHistoryScore: number;
+  teamHistoryScore: number;
+  comfortScore: number;
+  patternScore: number;
+  repickScore: number;
+  rebanScore: number;
+  pivotScore: number;
+  counterScore: number;
+  availabilityScore: number;
+  metaScore: number;
 }
 
 export interface MplScoringContext {
@@ -223,8 +365,11 @@ export interface MplScoringContext {
   draftPatterns: DraftPatternProfile | null;
   currentPicks: string[];
   enemyPicks: string[];
+  currentBans?: string[];
+  enemyBans?: string[];
   laneStatus: LaneStatus;
   mode: DraftMode;
+  heroDatabase?: any[];
 }
 
 // --- MPL Recommendation ---

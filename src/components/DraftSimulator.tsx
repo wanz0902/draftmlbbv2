@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from "react";
+﻿import { useState, useEffect, useMemo, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import { User } from "firebase/auth";
 import { saveDraft } from "../lib/firebase";
@@ -17,10 +17,24 @@ import {
   VolumeX,
   Trophy,
   ArrowLeft,
+  Clock,
+  Search,
+  Swords,
+  Zap,
+  Shield,
+  Crosshair,
+  AlertTriangle,
+  BarChart3,
+  ChevronRight,
+  ChevronLeft,
+  Sparkle,
+  Undo2,
 } from "lucide-react";
 import { HeroStats } from "../types";
 import { DraftMode, LaneStatus, DraftRecommendation, MplDraftRecommendation } from "../draft/draftTypes";
 import { getHeroRole, getHeroImageUrl } from "../lib/heroUtils";
+import { calculateDraftAnalysis } from "../draft/calculateDraftAnalysis";
+import heroesMaster from "../data/heroes_master.json";
 import FallbackImage from "./FallbackImage";
 import { sounds } from "../lib/soundUtils";
 
@@ -71,6 +85,20 @@ const FALLBACK_MPL_TEAMS: Array<{ key: string; name: string; logo: string }> = [
   { key: "NAVI", name: "Natus Vincere", logo: "" },
 ];
 
+const getDraftTurnDuration = (mode: DraftMode | null) =>
+  mode === "mpl" ? 50 : 30;
+
+const ROLE_OPTIONS = ["ALL", "Tank", "Fighter", "Assassin", "Mage", "Marksman", "Support"] as const;
+const LANE_OPTIONS = ["ALL", "EXP", "Jungle", "Mid", "Gold", "Roam"] as const;
+const TIER_OPTIONS = ["ALL", "S", "A", "B", "C", "D"] as const;
+
+const PHASE_LABELS = {
+  ban: "Ban Phase",
+  pick: "Pick Phase",
+  lane: "Lane Assignment",
+  complete: "Draft Complete",
+} as const;
+
 interface DraftSimulatorProps {
   heroes: HeroStats[];
   heroAssets: Record<string, string>;
@@ -88,6 +116,53 @@ interface AIRecommendResult {
   overallStrategy: string;
   debug?: any;
   mplIntelligence?: any;
+  cached?: boolean;
+  tokenEstimate?: { input: number; output: number } | null;
+  estimatedCost?: number;
+  historicalContext?: {
+    teamProfiles?: any;
+    matchupProfile?: any;
+    similarGames?: Array<{
+      sourceLabel: string;
+      similarityScore: number;
+      matchingSignals: string[];
+    }>;
+    draftPatternMatches?: Array<{ summary: string }>;
+    likelyRepicks?: Array<{ heroName: string; reason: string }>;
+    likelyRebans?: Array<{ heroName: string; reason: string }>;
+    pivotCandidates?: Array<{ heroName: string; reason: string }>;
+  };
+}
+
+interface EvaluationResponse {
+  analysis?: string;
+  success?: boolean;
+  error?: string;
+  validationFallback?: boolean;
+  dataNotes?: string[];
+  latencyMs?: number;
+  cached?: boolean;
+}
+
+interface HeroInsight {
+  lane: string;
+  tier: string;
+  powerSpike: string;
+  counterTags: string[];
+  synergyTags: string[];
+  macroIdentity: string[];
+  status: "available" | "picked" | "banned" | "recommended" | "risky";
+  whyRecommended: string;
+}
+
+interface CompactDraftTimelineEntry {
+  idx: number;
+  side: "BLUE" | "RED";
+  type: "BAN" | "PICK";
+  label: string;
+  heroName: string;
+  isCurrent: boolean;
+  isPast: boolean;
 }
 
 export default function DraftSimulator({
@@ -112,15 +187,33 @@ export default function DraftSimulator({
   const [bluePicks, setBluePicks] = useState<string[]>([]);
   const [redPicks, setRedPicks] = useState<string[]>([]);
 
+  // Undo history — snapshots taken BEFORE each lock action
+  type DraftSnapshot = {
+    stepIdx: number;
+    blueBans: string[];
+    redBans: string[];
+    bluePicks: string[];
+    redPicks: string[];
+    blueLaneStatus: LaneStatus;
+    redLaneStatus: LaneStatus;
+  };
+  const [draftHistory, setDraftHistory] = useState<DraftSnapshot[]>([]);
+
   // Lane status for both teams
   const [blueLaneStatus, setBlueLaneStatus] = useState<LaneStatus>({ gold: null, exp: null, mid: null, jungle: null, roam: null });
   const [redLaneStatus, setRedLaneStatus] = useState<LaneStatus>({ gold: null, exp: null, mid: null, jungle: null, roam: null });
 
   // Simulation settings
   const [selectedHeroName, setSelectedHeroName] = useState<string>("");
-  const [timerSeconds, setTimerSeconds] = useState(30);
+  const [timerSeconds, setTimerSeconds] = useState(getDraftTurnDuration(null));
   const [searchQuery, setSearchQuery] = useState("");
   const [roleFilter, setRoleFilter] = useState("ALL");
+  const [laneFilter, setLaneFilter] = useState("ALL");
+  const [tierFilter, setTierFilter] = useState("ALL");
+  const [recommendedOnly, setRecommendedOnly] = useState(false);
+  const [counterOnly, setCounterOnly] = useState(false);
+  const [synergyOnly, setSynergyOnly] = useState(false);
+  const [comfortOnly, setComfortOnly] = useState(false);
   const [blueTeam, setBlueTeam] = useState<string>("Blue Team");
   const [redTeam, setRedTeam] = useState<string>("Red Team");
 
@@ -147,6 +240,9 @@ export default function DraftSimulator({
   // Final Evaluation
   const [evaluationLoading, setEvaluationLoading] = useState(false);
   const [evaluationResult, setEvaluationResult] = useState<string>("");
+  const [showAnalysis, setShowAnalysis] = useState(false);
+  const [evaluationMeta, setEvaluationMeta] = useState<EvaluationResponse | null>(null);
+  const [localIntelGeneratedAt, setLocalIntelGeneratedAt] = useState<number>(0);
 
   useEffect(() => {
     sounds.setEnabled(soundEnabled);
@@ -177,7 +273,7 @@ export default function DraftSimulator({
         if (response.ok) {
           const data = await response.json();
           if (data.recommendations && Array.isArray(data.recommendations)) {
-            setDraftRecommendations(data.recommendations.slice(0, 3));
+            setDraftRecommendations(data.recommendations.slice(0, 5));
           }
         }
       } catch (err) {
@@ -268,6 +364,300 @@ export default function DraftSimulator({
   const normalizeHeroKey = (value: string) =>
     String(value || "").toLowerCase().replace(/[^a-z0-9]/g, "");
 
+  const turnDurationSeconds = getDraftTurnDuration(draftMode);
+  const normalizedMode: DraftMode = draftMode || "ranked";
+  const currentPhaseLabel = isCompleted
+    ? PHASE_LABELS.complete
+    : currentStep?.type === "BAN"
+      ? PHASE_LABELS.ban
+      : PHASE_LABELS.pick;
+
+  const progressPercent = Math.min(100, Math.round((currentStepIdx / DRAFT_SEQUENCE.length) * 100));
+
+  const currentTeamPicks = currentStep?.side === "BLUE" ? bluePicks : redPicks;
+  const enemyTeamPicks = currentStep?.side === "BLUE" ? redPicks : bluePicks;
+
+  const currentRecommendedNames = useMemo(
+    () =>
+      new Set(
+        [
+          ...draftRecommendations.map((entry) => normalizeHeroKey(entry.heroName)),
+          ...(aiResult?.recommendations || []).map((entry) => normalizeHeroKey(entry.heroName)),
+        ]
+      ),
+    [draftRecommendations, aiResult]
+  );
+
+  const historicalContext = aiResult?.historicalContext;
+  const debugDraftAI =
+    import.meta.env.VITE_SHOW_AI_DEBUG === "true" ||
+    (typeof window !== "undefined" && window.localStorage.getItem("debugDraftAI") === "true");
+  const blueComfortHeroes = useMemo(
+    () =>
+      (historicalContext?.teamProfiles?.blue?.comfortHeroes || [])
+        .map((entry: any) => entry.heroName)
+        .filter(Boolean),
+    [historicalContext]
+  );
+  const redComfortHeroes = useMemo(
+    () =>
+      (historicalContext?.teamProfiles?.red?.comfortHeroes || [])
+        .map((entry: any) => entry.heroName)
+        .filter(Boolean),
+    [historicalContext]
+  );
+
+  const evaluationDashboard = useMemo(
+    () =>
+      calculateDraftAnalysis(bluePicks, redPicks, {
+        heroes,
+        blueTeamName: blueTeam,
+        redTeamName: redTeam,
+        mode: normalizedMode,
+        blueLaneStatus,
+        redLaneStatus,
+        blueComfortHeroes,
+        redComfortHeroes,
+        matchupSummary: historicalContext?.matchupProfile?.summary,
+        recommendationSource:
+          aiResult?.debug?.recommendationSource ||
+          aiResult?.mplIntelligence?.recommendationSource,
+      }),
+    [
+      bluePicks,
+      redPicks,
+      heroes,
+      blueTeam,
+      redTeam,
+      normalizedMode,
+      blueLaneStatus,
+      redLaneStatus,
+      blueComfortHeroes,
+      redComfortHeroes,
+      historicalContext,
+      aiResult,
+    ]
+  );
+
+  const laneNeeds = useMemo(() => {
+    const status = currentStep?.side === "BLUE" ? blueLaneStatus : redLaneStatus;
+    return (["exp", "jungle", "mid", "gold", "roam"] as const)
+      .filter((lane) => !status[lane])
+      .map((lane) => {
+        switch (lane) {
+          case "exp":
+            return "EXP";
+          case "jungle":
+            return "Jungle";
+          case "mid":
+            return "Mid";
+          case "gold":
+            return "Gold";
+          case "roam":
+            return "Roam";
+        }
+      });
+  }, [currentStep?.side, blueLaneStatus, redLaneStatus]);
+
+  const heroInsights = useMemo<Record<string, HeroInsight>>(() => {
+    const insightMap: Record<string, HeroInsight> = {};
+    const unavailable = new Set(
+      [...bluePicks, ...redPicks, ...blueBans, ...redBans].map((hero) => normalizeHeroKey(hero))
+    );
+    const enemyKeys = new Set(enemyTeamPicks.map((hero) => normalizeHeroKey(hero)));
+    const allyKeys = new Set(currentTeamPicks.map((hero) => normalizeHeroKey(hero)));
+    const comfortSet = new Set(
+      (currentStep?.side === "BLUE" ? blueComfortHeroes : redComfortHeroes).map((hero) =>
+        normalizeHeroKey(hero)
+      )
+    );
+
+    heroes.forEach((hero) => {
+      const key = normalizeHeroKey(hero.hero_name);
+      const tier = String(hero.tier || "C").toUpperCase();
+      const lane =
+        Array.isArray(hero.lanes) && hero.lanes.length > 0
+          ? hero.lanes[0]
+          : hero.lane || "Flex";
+      const powerSpike = Array.isArray((hero as any).power_spike)
+        ? (hero as any).power_spike.join(", ")
+        : String((hero as any).power_spike || (hero as any).aiTags?.powerSpikeTiming || "Data tidak tersedia");
+      const counterTags = Array.isArray(hero.counters) ? hero.counters.slice(0, 3) : [];
+      const synergyTags = Array.isArray(hero.synergies) ? hero.synergies.slice(0, 3) : [];
+      const macroIdentity = Array.isArray((hero as any).draft_analysis?.macro_identity)
+        ? (hero as any).draft_analysis.macro_identity.slice(0, 3)
+        : [];
+
+      let status: HeroInsight["status"] = "available";
+      if (bluePicks.includes(hero.hero_name) || redPicks.includes(hero.hero_name)) status = "picked";
+      else if (blueBans.includes(hero.hero_name) || redBans.includes(hero.hero_name)) status = "banned";
+      else if (currentRecommendedNames.has(key)) status = "recommended";
+      else {
+        const collidesWithFilledLane =
+          laneNeeds.length > 0 &&
+          !laneNeeds.some((laneNeed) => String(lane).toLowerCase().includes(laneNeed.toLowerCase()));
+        const enemyCountered = counterTags.some((tag) => enemyKeys.has(normalizeHeroKey(tag)));
+        if (collidesWithFilledLane || enemyCountered) status = "risky";
+      }
+
+      let whyRecommended = "Heuristic estimate";
+      if (currentRecommendedNames.has(key)) {
+        const rec =
+          draftRecommendations.find((entry) => normalizeHeroKey(entry.heroName) === key) ||
+          aiResult?.recommendations?.find((entry) => normalizeHeroKey(entry.heroName) === key);
+        whyRecommended = rec?.reason || "Masuk shortlist rekomendasi aktif.";
+      } else if (comfortSet.has(key)) {
+        whyRecommended = "Comfort/team history tersedia untuk mode MPL.";
+      } else if (synergyTags.some((tag) => allyKeys.has(normalizeHeroKey(tag)))) {
+        whyRecommended = "Memiliki sinergi langsung dengan core tim saat ini.";
+      } else if (counterTags.some((tag) => enemyKeys.has(normalizeHeroKey(tag)))) {
+        whyRecommended = "Mempunyai nilai counter terhadap komposisi lawan.";
+      }
+
+      insightMap[key] = {
+        lane: String(lane),
+        tier,
+        powerSpike,
+        counterTags,
+        synergyTags,
+        macroIdentity,
+        status: unavailable.has(key) ? (status === "picked" ? "picked" : "banned") : status,
+        whyRecommended,
+      };
+    });
+
+    return insightMap;
+  }, [
+    bluePicks,
+    redPicks,
+    blueBans,
+    redBans,
+    currentRecommendedNames,
+    heroes,
+    enemyTeamPicks,
+    currentTeamPicks,
+    currentStep?.side,
+    blueComfortHeroes,
+    redComfortHeroes,
+    laneNeeds,
+    aiResult,
+    draftRecommendations,
+  ]);
+
+  const compactTimelineEntries = useMemo<CompactDraftTimelineEntry[]>(() => {
+    const blueBanMap = [0, 2, 4, 12, 14];
+    const redBanMap = [1, 3, 5, 13, 15];
+    const bluePickMap = [6, 9, 10, 17, 18];
+    const redPickMap = [7, 8, 11, 16, 19];
+
+    const lookupHero = (entry: typeof DRAFT_SEQUENCE[number]) => {
+      if (entry.type === "BAN") {
+        if (entry.side === "BLUE") {
+          const index = blueBanMap.indexOf(entry.idx);
+          return index >= 0 ? blueBans[index] || "" : "";
+        }
+        const index = redBanMap.indexOf(entry.idx);
+        return index >= 0 ? redBans[index] || "" : "";
+      }
+      if (entry.side === "BLUE") {
+        const index = bluePickMap.indexOf(entry.idx);
+        return index >= 0 ? bluePicks[index] || "" : "";
+      }
+      const index = redPickMap.indexOf(entry.idx);
+      return index >= 0 ? redPicks[index] || "" : "";
+    };
+
+    return DRAFT_SEQUENCE.map((entry) => ({
+      idx: entry.idx,
+      side: entry.side,
+      type: entry.type,
+      label: entry.label,
+      heroName: lookupHero(entry),
+      isCurrent: !isCompleted && entry.idx === currentStepIdx,
+      isPast: entry.idx < currentStepIdx || isCompleted,
+    }));
+  }, [blueBans, redBans, bluePicks, redPicks, currentStepIdx, isCompleted]);
+
+  const displayedCoachRecommendations = useMemo(() => {
+    if (aiResult?.recommendations?.length) {
+      return aiResult.recommendations.slice(0, 5).map((entry) => ({
+        heroName: entry.heroName,
+        label: entry.pickType || entry.banType || entry.role || "Adaptive",
+        reason: entry.reason,
+        source: entry.evidence?.source || entry.evidence?.team || "AI Coach",
+        evidence:
+          entry.evidence?.source ||
+          entry.evidence?.team ||
+          (entry.evidence?.winRate ? `WR ${entry.evidence.winRate.toFixed(0)}%` : "") ||
+          (entry.evidence?.pickCount ? `Pick ${entry.evidence.pickCount}` : "") ||
+          "AI Coach",
+        score: (entry as any).priorityScore ?? entry.totalScore ?? 0,
+      }));
+    }
+
+    if (draftRecommendations.length) {
+      return draftRecommendations.slice(0, 5).map((entry) => {
+        const topFactor = Object.entries(entry.scoreBreakdown || {})
+          .sort(([, left], [, right]) => Number(right) - Number(left))[0];
+        // Determine source label from score breakdown
+        const sourcePriority = [
+          "matchupHistory", "teamHistory", "similarDraft", "comfortPick",
+          "rebanPattern", "repickPattern", "pivotPick",
+        ];
+        const topSource = sourcePriority.find((k) => ((entry.scoreBreakdown as unknown as Record<string, number>)?.[k] ?? 0) > 0);
+        const sourceLabel = topSource
+          ? topSource
+              .replace(/([A-Z])/g, " $1")
+              .replace(/^./, (s) => s.toUpperCase())
+              .trim()
+          : "Meta Fallback";
+        return {
+          heroName: entry.heroName,
+          label: entry.role || entry.lane || "Adaptive",
+          reason: entry.reason,
+          source: sourceLabel,
+          evidence: topFactor ? `${topFactor[0]} ${topFactor[1]}` : `${entry.totalScore}/100`,
+          score: entry.totalScore ?? 0,
+        };
+      });
+    }
+
+    return [];
+  }, [aiResult, draftRecommendations]);
+
+  const localTeamIntel = useMemo(() => {
+    return {
+      selectedTeams: {
+        blue: (draftMode === "mpl" ? selectedBlueTeam : blueTeam) || blueTeam,
+        red: (draftMode === "mpl" ? selectedRedTeam : redTeam) || redTeam,
+      },
+      gamesFound:
+        Number(historicalContext?.teamProfiles?.blue?.totalGames || 0) +
+        Number(historicalContext?.teamProfiles?.red?.totalGames || 0),
+      matchupGamesFound: Number(historicalContext?.matchupProfile?.headToHeadGames || 0),
+      topPicks: {
+        blue: (historicalContext?.teamProfiles?.blue?.topPicks || []).slice(0, 5),
+        red: (historicalContext?.teamProfiles?.red?.topPicks || []).slice(0, 5),
+      },
+      topBans: {
+        blue: (historicalContext?.teamProfiles?.blue?.topBans || []).slice(0, 5),
+        red: (historicalContext?.teamProfiles?.red?.topBans || []).slice(0, 5),
+      },
+      comfortHeroes: {
+        blue: blueComfortHeroes.slice(0, 5),
+        red: redComfortHeroes.slice(0, 5),
+      },
+      similarGames: (historicalContext?.similarGames || []).slice(0, 5),
+      likelyRepicks: (historicalContext?.likelyRepicks || []).slice(0, 5),
+      likelyRebans: (historicalContext?.likelyRebans || []).slice(0, 5),
+      pivotCandidates: (historicalContext?.pivotCandidates || []).slice(0, 5),
+    };
+  }, [draftMode, selectedBlueTeam, selectedRedTeam, blueTeam, redTeam, historicalContext, blueComfortHeroes, redComfortHeroes]);
+
+  const selectedHeroInsight = selectedHeroName
+    ? heroInsights[normalizeHeroKey(selectedHeroName)]
+    : null;
+
   // Reset Draft Function
   const handleReset = () => {
     setBlueBans([]);
@@ -276,10 +666,19 @@ export default function DraftSimulator({
     setRedPicks([]);
     setCurrentStepIdx(0);
     setSelectedHeroName("");
-    setTimerSeconds(30);
+    setTimerSeconds(getDraftTurnDuration(null));
+    setSearchQuery("");
+    setRoleFilter("ALL");
+    setLaneFilter("ALL");
+    setTierFilter("ALL");
+    setRecommendedOnly(false);
+    setCounterOnly(false);
+    setSynergyOnly(false);
+    setComfortOnly(false);
     setAiResult(null);
     setAiError("");
     setEvaluationResult("");
+    setEvaluationMeta(null);
     setDraftStarted(false);
     setDraftMode(null);
     setSelectedBlueTeam("");
@@ -297,10 +696,11 @@ export default function DraftSimulator({
     setRedPicks([]);
     setCurrentStepIdx(0);
     setSelectedHeroName("");
-    setTimerSeconds(30);
+    setTimerSeconds(getDraftTurnDuration(draftMode));
     setAiResult(null);
     setAiError("");
     setEvaluationResult("");
+    setEvaluationMeta(null);
     setDraftRecommendations([]);
     setDraftStarted(true);
   };
@@ -357,6 +757,20 @@ export default function DraftSimulator({
       }
     }
 
+    // Save snapshot BEFORE applying this action (for undo)
+    setDraftHistory((prev) => [
+      ...prev,
+      {
+        stepIdx: currentStepIdx,
+        blueBans: [...blueBans],
+        redBans: [...redBans],
+        bluePicks: [...bluePicks],
+        redPicks: [...redPicks],
+        blueLaneStatus: { ...blueLaneStatus },
+        redLaneStatus: { ...redLaneStatus },
+      },
+    ]);
+
     const { side, type } = currentStep;
     sounds.playLock(type === "BAN");
 
@@ -377,9 +791,44 @@ export default function DraftSimulator({
     // Advance to next turn
     setCurrentStepIdx((prev) => prev + 1);
     setSelectedHeroName("");
-    setTimerSeconds(30);
+    setTimerSeconds(turnDurationSeconds);
     setAiResult(null); // Clear recommendations for the next turn
   };
+
+  // Undo last draft action
+  const handleUndo = () => {
+    if (draftHistory.length === 0 || isCompleted) return;
+    const snapshot = draftHistory[draftHistory.length - 1];
+    setDraftHistory((prev) => prev.slice(0, -1));
+    setCurrentStepIdx(snapshot.stepIdx);
+    setBlueBans(snapshot.blueBans);
+    setRedBans(snapshot.redBans);
+    setBluePicks(snapshot.bluePicks);
+    setRedPicks(snapshot.redPicks);
+    setBlueLaneStatus(snapshot.blueLaneStatus);
+    setRedLaneStatus(snapshot.redLaneStatus);
+    setSelectedHeroName("");
+    setAiResult(null);
+  };
+
+  // Ctrl+Z keyboard shortcut for undo
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === "z") {
+        e.preventDefault();
+        handleUndo();
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [draftHistory, isCompleted]);
+
+  useEffect(() => {
+    if (!draftStarted) {
+      setTimerSeconds(getDraftTurnDuration(draftMode));
+    }
+  }, [draftMode, draftStarted]);
 
   // Ask AI Coach for suggestions
   const [aiLoadingText, setAiLoadingText] = useState("Analyzing draft...");
@@ -400,6 +849,7 @@ export default function DraftSimulator({
     setAiLoading(true);
     setAiError("");
     setAiResult(null);
+    setLocalIntelGeneratedAt(Date.now());
 
     const loadingTexts = [
       "Analyzing draft...",
@@ -413,11 +863,14 @@ export default function DraftSimulator({
     }, 1200);
 
     try {
+      const controller = new AbortController();
+      const timeoutId = window.setTimeout(() => controller.abort(), 15000);
       const response = await fetch(draftMode === "mpl" ? "/api/draft/recommendation" : "/api/draft/ai-recommend", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        signal: controller.signal,
         body: JSON.stringify({
           bluePicks,
           redPicks,
@@ -430,6 +883,7 @@ export default function DraftSimulator({
           redTeam: draftMode === "mpl" ? selectedRedTeam : redTeam,
         }),
       });
+      window.clearTimeout(timeoutId);
 
       if (!response.ok) {
         throw new Error("API Error");
@@ -476,7 +930,7 @@ export default function DraftSimulator({
             parseFloat(b.tournament_presence || "0") -
             parseFloat(a.tournament_presence || "0"),
         )
-        .slice(0, 3);
+        .slice(0, 5);
 
       setAiResult({
         overallStrategy:
@@ -646,18 +1100,21 @@ export default function DraftSimulator({
     return md;
   };
 
-  // Final Expert Evaluation — Wafer AI primary, Gemini fallback, local last resort
+  // Final Expert Evaluation — AI Provider Router (primary → fallback → local)
   const evaluateDraftGame = async () => {
     setEvaluationLoading(true);
     setEvaluationResult("");
 
-    let waferStatus = "";
+    let aiStatus = "";
 
     try {
-      // Try Wafer AI first (server-side proxy)
-      const waferResponse = await fetch("/api/ai/draft-analysis", {
+      // Try AI Provider Router (server handles tokenplan → wafer → local failover)
+      const controller = new AbortController();
+      const timeoutId = window.setTimeout(() => controller.abort(), 12000);
+      const aiResponse = await fetch("/api/ai/draft-analysis", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        signal: controller.signal,
         body: JSON.stringify({
           mode: draftMode || "ranked",
           blueTeam: draftMode === "mpl" ? selectedBlueTeam : undefined,
@@ -668,24 +1125,26 @@ export default function DraftSimulator({
           redBans,
         }),
       });
+      window.clearTimeout(timeoutId);
 
-      if (waferResponse.ok) {
-        const waferResult = await waferResponse.json();
-        if (waferResult.success && waferResult.analysis) {
-          setEvaluationResult(waferResult.analysis);
-          return; // Wafer AI succeeded
+      if (aiResponse.ok) {
+        const aiResult: EvaluationResponse = await aiResponse.json();
+        if (aiResult.success && aiResult.analysis) {
+          setEvaluationResult(aiResult.analysis);
+          setEvaluationMeta(aiResult);
+          return; // AI analysis succeeded
         }
-        // Wafer returned success:false — check for credit/config issues
-        const errMsg = waferResult.error || "";
+        // AI returned success:false — check for credit/config issues
+        const errMsg = aiResult.error || "";
         if (errMsg.includes("insufficient") || errMsg.includes("402") || errMsg.includes("credit")) {
-          waferStatus = "> ⚠️ *Wafer AI: credit habis (insufficient credits). Menggunakan fallback.*\n\n";
+          aiStatus = "> ⚠️ *AI Analyst: credit habis (insufficient credits). Menggunakan fallback.*\n\n";
         } else if (errMsg.includes("not configured") || errMsg.includes("YOUR_KEY")) {
-          waferStatus = "> ⚠️ *Wafer AI: API key belum dikonfigurasi. Menggunakan fallback.*\n\n";
+          aiStatus = "> ⚠️ *AI Analyst: API key belum dikonfigurasi. Menggunakan fallback.*\n\n";
         } else {
-          waferStatus = "> ⚠️ *Wafer AI tidak tersedia. Menggunakan analisis alternatif.*\n\n";
+          aiStatus = "> ⚠️ *AI Analyst tidak tersedia. Menggunakan analisis alternatif.*\n\n";
         }
       } else {
-        waferStatus = "> ⚠️ *Wafer AI tidak tersedia. Menggunakan analisis alternatif.*\n\n";
+        aiStatus = "> ⚠️ *AI Analyst tidak tersedia. Menggunakan analisis alternatif.*\n\n";
       }
 
       // Fallback to existing Gemini endpoint
@@ -705,12 +1164,18 @@ export default function DraftSimulator({
         throw new Error("Gagal memperoleh evaluasi pelatih.");
       }
 
-      const result = await response.json();
+      const result: EvaluationResponse = await response.json();
       const analysis = result.analysis || "Tidak ada hasil draf analisis.";
-      setEvaluationResult(waferStatus + analysis);
+      setEvaluationResult(aiStatus + analysis);
+      setEvaluationMeta(result);
     } catch (err: any) {
       console.error("Evaluation fetch failed:", err);
-      setEvaluationResult(waferStatus + generateLocalFallbackAnalysis());
+      setEvaluationResult(aiStatus + generateLocalFallbackAnalysis());
+      setEvaluationMeta({
+        success: false,
+        analysis: aiStatus + generateLocalFallbackAnalysis(),
+        dataNotes: ["Heuristic estimate — fallback lokal karena endpoint analisis tidak tersedia."],
+      });
     } finally {
       setEvaluationLoading(false);
     }
@@ -727,20 +1192,110 @@ export default function DraftSimulator({
     return map;
   }, [blueBans, redBans, bluePicks, redPicks]);
 
+  // Build full hero pool: heroesMaster (all 132) as base, enriched with tournament stats
+  const fullHeroPool = useMemo(() => {
+    const statsMap = new Map(
+      heroes.map((h) => [normalizeHeroKey(h.hero_name), h])
+    );
+    return (heroesMaster as Array<{ hero_name: string; role?: string | string[]; lanes?: string[] }>).map(
+      (master) => {
+        const stats = statsMap.get(normalizeHeroKey(master.hero_name));
+        return {
+          hero_name: master.hero_name,
+          ...(stats || {}),
+          // Always use master roles/lanes so filtering is reliable
+          _masterRoles: Array.isArray(master.role)
+            ? master.role
+            : master.role
+            ? [master.role]
+            : [],
+          _masterLanes: master.lanes || [],
+        };
+      }
+    );
+  }, [heroes]);
+
   const sortedHeroesList = useMemo(() => {
-    return heroes
+    return fullHeroPool
       .filter((h) => {
         const matchesSearch = String(h.hero_name || "")
           .toLowerCase()
-          .includes(String(searchQuery || "").toLowerCase());
-        const role = getHeroRole(h.hero_name);
-        const matchesRole = roleFilter === "ALL" || role === roleFilter;
-        return matchesSearch && matchesRole;
+          .includes(String(searchQuery || "").toLowerCase().trim());
+        // Multi-role support: check all roles from master data
+        const heroRoles: string[] = (h as any)._masterRoles || [];
+        const matchesRole =
+          roleFilter === "ALL" ||
+          heroRoles.some((r) => r === roleFilter) ||
+          heroRoles.some((r) =>
+            r.toLowerCase().includes(roleFilter.toLowerCase())
+          );
+        const insight = heroInsights[normalizeHeroKey(h.hero_name)];
+        const heroLanes: string[] = (h as any)._masterLanes || [];
+        const matchesLane =
+          laneFilter === "ALL" ||
+          heroLanes.some((lane) =>
+            String(lane || "")
+              .toLowerCase()
+              .includes(laneFilter.toLowerCase())
+          );
+        const matchesTier =
+          tierFilter === "ALL" ||
+          String((h as any).tier || insight?.tier || "")
+            .toUpperCase()
+            .startsWith(tierFilter);
+        const matchesRecommended = !recommendedOnly || insight?.status === "recommended";
+        const matchesCounter =
+          !counterOnly ||
+          (insight?.counterTags || []).some((tag) =>
+            enemyTeamPicks.some((heroName) => normalizeHeroKey(heroName) === normalizeHeroKey(tag))
+          );
+        const matchesSynergy =
+          !synergyOnly ||
+          (insight?.synergyTags || []).some((tag) =>
+            currentTeamPicks.some((heroName) => normalizeHeroKey(heroName) === normalizeHeroKey(tag))
+          );
+        const comfortPool = currentStep?.side === "BLUE" ? blueComfortHeroes : redComfortHeroes;
+        const matchesComfort =
+          !comfortOnly ||
+          comfortPool.some((heroName) => normalizeHeroKey(heroName) === normalizeHeroKey(h.hero_name));
+        return (
+          matchesSearch &&
+          matchesRole &&
+          matchesLane &&
+          matchesTier &&
+          matchesRecommended &&
+          matchesCounter &&
+          matchesSynergy &&
+          matchesComfort
+        );
       })
-      .sort((a, b) =>
-        String(a.hero_name || "").localeCompare(String(b.hero_name || "")),
-      );
-  }, [heroes, searchQuery, roleFilter]);
+      .sort((left, right) => {
+        const leftInsight = heroInsights[normalizeHeroKey(left.hero_name)];
+        const rightInsight = heroInsights[normalizeHeroKey(right.hero_name)];
+        const leftPriority =
+          leftInsight?.status === "recommended" ? 3 : leftInsight?.status === "available" ? 2 : leftInsight?.status === "risky" ? 1 : 0;
+        const rightPriority =
+          rightInsight?.status === "recommended" ? 3 : rightInsight?.status === "available" ? 2 : rightInsight?.status === "risky" ? 1 : 0;
+        if (leftPriority !== rightPriority) return rightPriority - leftPriority;
+        return String(left.hero_name || "").localeCompare(String(right.hero_name || ""));
+      });
+  }, [
+    fullHeroPool,
+    searchQuery,
+    roleFilter,
+    laneFilter,
+    tierFilter,
+    recommendedOnly,
+    counterOnly,
+    synergyOnly,
+    comfortOnly,
+    heroInsights,
+    enemyTeamPicks,
+    currentTeamPicks,
+    currentStep?.side,
+    blueComfortHeroes,
+    redComfortHeroes,
+  ]);
 
   // Fetch MPL teams when MPL mode is selected
   useEffect(() => {
@@ -774,6 +1329,57 @@ export default function DraftSimulator({
     setRetryCount((c) => c + 1);
   };
 
+  const [analysisTab, setAnalysisTab] = useState<"rec" | "counter" | "intel">("rec");
+
+  // ── helpers for inline render ──────────────────────────────────────────────
+  const BanSlot = ({ heroName, side }: { heroName: string; side: "blue" | "red" }) => (
+    <div className={`h-8 w-8 rounded-full overflow-hidden border ${side === "blue" ? "border-blue-900/50" : "border-red-900/50"} bg-slate-900/60 shrink-0`}>
+      {heroName ? (
+        <FallbackImage src={getHeroImgUrl(heroName)} fallbackText={heroName} alt={heroName}
+          className="h-full w-full object-cover grayscale opacity-70"
+          containerClassName="h-full w-full text-[6px]" />
+      ) : <div className="h-full w-full" />}
+    </div>
+  );
+
+  const PickSlot = ({
+    heroName, index, isBlue, isActive, assignment,
+  }: { heroName: string; index: number; isBlue: boolean; isActive: boolean; assignment: any }) => (
+    <div className={`flex items-center gap-2 h-12 rounded-lg px-2 border transition-all
+      ${isActive ? (isBlue ? "border-cyan-500/50 bg-cyan-950/20 shadow-[0_0_8px_rgba(6,182,212,0.15)]" : "border-rose-500/50 bg-rose-950/20 shadow-[0_0_8px_rgba(244,63,94,0.12)]")
+        : (isBlue ? "border-blue-900/20 bg-blue-950/10" : "border-red-900/20 bg-red-950/10")}`}>
+      {!isBlue && heroName && (
+        <div className="min-w-0 flex-1 text-right">
+          <div className="text-xs font-semibold text-white truncate">{heroName}</div>
+          <div className="text-[9px] text-red-300/60">{assignment?.lane || getHeroRole(heroName)}</div>
+        </div>
+      )}
+      <div className={`h-9 w-9 rounded shrink-0 overflow-hidden border flex items-center justify-center
+        ${heroName ? (isBlue ? "border-blue-700/50" : "border-red-700/50") : "border-dashed border-white/10"}`}>
+        {heroName ? (
+          <FallbackImage src={getHeroImgUrl(heroName)} fallbackText={heroName} alt={heroName}
+            className="h-full w-full object-cover" containerClassName="h-full w-full text-[7px]" />
+        ) : (
+          isActive
+            ? <div className={`h-2 w-2 rounded-full animate-pulse ${isBlue ? "bg-cyan-400" : "bg-rose-400"}`} />
+            : <span className="text-[9px] text-white/20">{index + 1}</span>
+        )}
+      </div>
+      {isBlue && heroName && (
+        <div className="min-w-0 flex-1">
+          <div className="text-xs font-semibold text-white truncate">{heroName}</div>
+          <div className="text-[9px] text-blue-300/60">{assignment?.lane || getHeroRole(heroName)}</div>
+        </div>
+      )}
+      {isBlue && !heroName && (
+        <div className="text-[11px] text-white/20">{isActive ? "Picking…" : `Slot ${index + 1}`}</div>
+      )}
+      {!isBlue && !heroName && (
+        <div className="text-[11px] text-white/20 flex-1 text-right">{isActive ? "Picking…" : `Slot ${index + 1}`}</div>
+      )}
+    </div>
+  );
+
   return (
     <div className="flex flex-col gap-6">
       {!draftStarted ? (
@@ -797,8 +1403,19 @@ export default function DraftSimulator({
                 </p>
               </div>
 
+              <div className="grid w-full gap-2 rounded-xl border border-gray-800 bg-gray-900/40 p-4 text-left">
+                <div className="flex items-center gap-2 text-sm text-indigo-300">
+                  <Clock className="h-4 w-4 shrink-0" />
+                  <span className="font-semibold">Info Timer Draft</span>
+                </div>
+                <div className="text-xs text-gray-400 leading-relaxed">
+                  <div><span className="text-indigo-300 font-semibold">MPL Mode:</span> semua giliran pick atau ban memakai timer 50 detik.</div>
+                  <div><span className="text-amber-300 font-semibold">Ranked / Casual Mode:</span> semua giliran pick atau ban memakai timer 30 detik.</div>
+                </div>
+              </div>
+
               {/* Mode Selection Cards */}
-              <div className="flex gap-4 w-full mt-4 flex-col sm:flex-row items-stretch justify-center">
+              <div className="grid w-full gap-4 mt-4 md:grid-cols-3">
                 {/* MPL Mode Card */}
                 <button
                   onClick={() => setDraftMode("mpl")}
@@ -830,7 +1447,26 @@ export default function DraftSimulator({
                   <div>
                     <h3 className="text-lg font-bold text-white group-hover:text-amber-300 transition">Ranked Mode</h3>
                     <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-                      Simulasi draf ranked. Rekomendasi berbasis meta dan statistik hero.
+                      Simulasi draf ranked. Semua giliran pick/ban memakai timer 30 detik.
+                    </p>
+                  </div>
+                </button>
+
+                <button
+                  onClick={() => {
+                    setDraftMode("custom");
+                    setBlueTeam("Blue Team");
+                    setRedTeam("Red Team");
+                  }}
+                  className="flex-1 flex flex-col items-center gap-3 rounded-2xl border border-gray-800 bg-gray-900/50 p-6 hover:border-cyan-500/50 hover:bg-cyan-950/10 transition cursor-pointer group"
+                >
+                  <div className="h-14 w-14 rounded-full bg-cyan-900/30 border border-cyan-500/20 flex items-center justify-center group-hover:border-cyan-400/50 transition">
+                    <Sparkle className="h-7 w-7 text-cyan-300" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-200 transition">Custom Mode</h3>
+                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">
+                      Draft bebas untuk latihan lane swap, eksperimen, dan evaluasi komposisi tanpa konteks tim esports.
                     </p>
                   </div>
                 </button>
@@ -860,6 +1496,15 @@ export default function DraftSimulator({
                 <p className="text-sm text-gray-400 mt-1 leading-relaxed">
                   Pilih tim MPL untuk sisi Biru dan Merah. Rekomendasi akan disesuaikan berdasarkan profil tim.
                 </p>
+              </div>
+
+              {/* MPL Timer Info Badge */}
+              <div className="flex items-center gap-2 rounded-lg bg-indigo-950/60 border border-indigo-500/30 px-4 py-2 text-sm text-indigo-300">
+                <Clock className="h-4 w-4 shrink-0 text-indigo-400" />
+                <span>
+                  <span className="font-semibold text-indigo-200">Pick &amp; Ban Timer: 50 detik per giliran</span>
+                  <span className="text-indigo-400/80 ml-1">(MPL Standard)</span>
+                </span>
               </div>
 
               {teamsLoading ? (
@@ -937,7 +1582,7 @@ export default function DraftSimulator({
                   }`}
                 >
                   <Play className="h-4.5 w-4.5" />
-                  Mulai Simulasi Draf
+                  Mulai Simulasi MPL
                 </button>
               </div>
             </>
@@ -1003,898 +1648,866 @@ export default function DraftSimulator({
               </div>
             </>
           )}
+
+          {draftMode === "custom" && (
+            <>
+              <button
+                onClick={() => setDraftMode(null)}
+                className="absolute top-5 left-5 flex items-center gap-1 text-xs text-gray-500 hover:text-gray-300 transition"
+              >
+                <ArrowLeft className="h-3.5 w-3.5" />
+                Kembali
+              </button>
+
+              <div className="h-14 w-14 rounded-full bg-cyan-900/30 border border-cyan-500/20 flex items-center justify-center text-cyan-300">
+                <Sparkle className="h-7 w-7 text-cyan-300" />
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold text-white tracking-tight">
+                  Custom Mode
+                </h2>
+                <p className="text-sm text-gray-400 mt-1 leading-relaxed">
+                  Draft manual untuk eksperimen komposisi, lane swap, dan analyst review tanpa wajib memakai konteks MPL.
+                </p>
+              </div>
+
+              <div className="flex gap-4 w-full mt-4 flex-col sm:flex-row items-center justify-center">
+                <div className="w-full sm:w-1/2 flex flex-col gap-1 items-start">
+                  <label className="text-xs text-blue-400 font-bold uppercase tracking-wider">Blue Side</label>
+                  <input
+                    type="text"
+                    value={blueTeam}
+                    onChange={(e) => setBlueTeam(e.target.value)}
+                    className="w-full rounded-lg bg-gray-900 border border-gray-800 px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    placeholder="Nama sisi biru..."
+                  />
+                </div>
+                <div className="w-full sm:w-1/2 flex flex-col gap-1 items-start">
+                  <label className="text-xs text-red-500 font-bold uppercase tracking-wider">Red Side</label>
+                  <input
+                    type="text"
+                    value={redTeam}
+                    onChange={(e) => setRedTeam(e.target.value)}
+                    className="w-full rounded-lg bg-gray-900 border border-gray-800 px-4 py-2 text-white focus:outline-none focus:border-red-500 transition-colors"
+                    placeholder="Nama sisi merah..."
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-2 w-full sm:flex-row sm:justify-center mt-3">
+                <button
+                  onClick={handleStartDraft}
+                  className="flex items-center justify-center gap-2 rounded-xl bg-cyan-600 px-6 py-3 font-semibold text-white hover:bg-cyan-500 active:scale-95 transition"
+                >
+                  <Play className="h-4.5 w-4.5" />
+                  Mulai Simulasi Custom
+                </button>
+              </div>
+            </>
+          )}
         </div>
       ) : (
-        /* Active Draft Layout */
-        <div className="grid grid-cols-1 gap-6 xl:grid-cols-4">
-          {/* Main Draft Screen Panel */}
-          <div className="xl:col-span-3 flex flex-col gap-5 rounded-2xl border border-gray-900 bg-gray-950 p-4 shadow-xl">
-            {/* Top Stat/Timer Dashboard Info */}
-            <div className="flex items-center justify-between border-b border-gray-900 pb-4">
-              {/* Blue Team Label */}
-              <div className="text-left overflow-hidden">
-                <h3 className="font-semibold text-blue-400 text-sm tracking-wider uppercase truncate">
-                  {blueTeam || "TIM BIRU (BLUE)"}
-                </h3>
-                <span className="font-mono text-xs text-gray-400">
-                  First Pick Side
-                </span>
-              </div>
+        /* ── MLBB-STYLE DRAFT BOARD ─────────────────────────────────────────── */
+        <div className="relative rounded-2xl overflow-hidden border border-white/[0.06] shadow-2xl bg-gradient-to-b from-[#060e1e] to-[#030810]">
+          {/* Atmospheric background */}
+          <div className="absolute inset-0 pointer-events-none z-0">
+            <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-blue-900/12 to-transparent" />
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-red-900/10 to-transparent" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(10,25,80,0.3),transparent)]" />
+            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle,#ffffff 1px,transparent 1px)", backgroundSize: "28px 28px" }} />
+          </div>
 
-              {/* Realtime Turn Timer Indicator */}
+          {/* ── ZONE 1: TOP HEADER BAR ──────────────────────────────────────── */}
+          <div className="relative z-10 flex items-center gap-2 px-3 h-11 bg-black/50 border-b border-white/[0.06]">
+            <button onClick={handleReset} className="flex items-center gap-1 text-gray-400 hover:text-white text-xs transition-colors shrink-0">
+              <ArrowLeft className="h-4 w-4" />
+              <span className="hidden sm:inline">Back</span>
+            </button>
+            <div className="h-4 w-px bg-white/10" />
+            <div className={`text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full border shrink-0 ${normalizedMode === "mpl" ? "border-indigo-500/30 bg-indigo-900/30 text-indigo-300" : normalizedMode === "ranked" ? "border-amber-500/30 bg-amber-900/20 text-amber-300" : "border-cyan-500/30 bg-cyan-900/20 text-cyan-300"}`}>
+              {normalizedMode.toUpperCase()}
+            </div>
+            <div className="flex-1 flex items-center justify-center gap-3">
+              <span className="font-bold text-blue-300 text-sm truncate max-w-[120px]">{blueTeam}</span>
+              <span className="text-[10px] text-gray-600 uppercase tracking-widest">vs</span>
+              <span className="font-bold text-red-300 text-sm truncate max-w-[120px]">{redTeam}</span>
+            </div>
+            <div className="flex items-center gap-2 shrink-0">
+              {!isCompleted && (
+                <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${currentStep?.type === "BAN" ? "border-red-500/40 bg-red-900/20 text-red-300" : "border-cyan-500/40 bg-cyan-900/20 text-cyan-300"}`}>
+                  {currentStep?.type}
+                </span>
+              )}
+              {isCompleted && <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">COMPLETE</span>}
+              <button onClick={() => setSoundEnabled(!soundEnabled)} className="p-1.5 rounded-lg border border-white/[0.08] hover:border-white/[0.15] text-gray-500 hover:text-white transition-colors">
+                {soundEnabled ? <Volume2 className="h-3.5 w-3.5" /> : <VolumeX className="h-3.5 w-3.5" />}
+              </button>
+              <button onClick={handleReset} className="p-1.5 rounded-lg border border-white/[0.08] hover:border-red-500/30 text-gray-500 hover:text-red-300 transition-colors">
+                <RotateCcw className="h-3.5 w-3.5" />
+              </button>
+            </div>
+          </div>
+
+          {/* ── ZONE 2: BAN / PICK PREVIEW STRIP ────────────────────────────── */}
+          <div className="relative z-10 flex items-stretch bg-black/30 border-b border-white/[0.04]">
+            {/* Blue side */}
+            <div className="flex-1 flex flex-col gap-1 px-3 py-2">
+              <div className="text-[10px] text-blue-400/50 font-bold uppercase tracking-widest">BANS</div>
+              <div className="flex gap-1 flex-wrap">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <BanSlot key={i} heroName={blueBans[i] || ""} side="blue" />
+                ))}
+              </div>
+              <div className="text-[10px] text-blue-400/40 mt-0.5 uppercase tracking-widest">PICKS</div>
+              <div className="flex gap-1">
+                {Array.from({ length: 5 }).map((_, i) => {
+                  const h = bluePicks[i] || "";
+                  return (
+                    <div key={i} className={`h-8 w-8 rounded overflow-hidden border shrink-0 ${h ? "border-blue-700/50" : "border-blue-900/20 border-dashed"} bg-slate-900/40`}>
+                      {h ? (
+                        <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
+                      ) : (
+                        <div className="h-full w-full flex items-center justify-center text-[8px] text-blue-900/50">{i + 1}</div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Center: timer + phase */}
+            <div className="flex flex-col items-center justify-center px-4 min-w-[110px] border-x border-white/[0.04] py-2">
               {!isCompleted ? (
-                <div className="flex flex-col items-center justify-center bg-gray-900 border border-gray-800 rounded-xl px-4 py-2 text-center min-w-[120px]">
-                  <span
-                    className={`font-mono text-2xl font-bold tracking-tight ${
-                      timerSeconds <= 8
-                        ? "text-rose-500 animate-pulse"
-                        : "text-white"
-                    }`}
-                  >
-                    00:{timerSeconds.toString().padStart(2, "0")}
-                  </span>
-                  <span
-                    className={`font-mono text-[9px] font-bold tracking-widest uppercase mt-0.5 ${
-                      currentStep.side === "BLUE"
-                        ? "text-blue-400"
-                        : "text-red-400"
-                    }`}
-                  >
-                    {currentStep.side === "BLUE" ? blueTeam : redTeam} {currentStep.type} TURN
-                  </span>
-                </div>
-              ) : (
-                <div className="bg-emerald-900/20 border border-emerald-500/10 rounded-xl px-5 py-2 text-center">
-                  <span className="font-mono text-xs font-bold text-emerald-400 block tracking-widest uppercase">
-                    DRAFT COMPLETED
-                  </span>
-                </div>
-              )}
-
-              {/* Red Team Label */}
-              <div className="text-right overflow-hidden">
-                <h3 className="font-semibold text-red-400 text-sm tracking-wider uppercase truncate">
-                  {redTeam || "TIM MERAH (RED)"}
-                </h3>
-                <span className="font-mono text-xs text-gray-400">
-                  Second Pick Side
-                </span>
-              </div>
-            </div>
-
-            {/* Bans Bar */}
-            <div className="grid grid-cols-2 gap-4 bg-gray-900/30 p-2.5 rounded-xl border border-gray-900">
-              {/* Blue Bans */}
-              <div className="flex items-center gap-2">
-                <span className="font-mono text-[9px] text-gray-500 uppercase font-semibold">
-                  Bans:
-                </span>
-                <div className="flex gap-1.5 overflow-hidden">
-                  {[0, 1, 2, 3, 4].map((i) => {
-                    const bansHero = blueBans[i];
-                    return (
-                      <div
-                        key={i}
-                        className="relative h-8 w-8 rounded border border-rose-950 bg-gray-950 overflow-hidden flex items-center justify-center"
-                      >
-                        {bansHero ? (
-                          <>
-                            <FallbackImage src={getHeroImgUrl(bansHero)} fallbackText={bansHero} alt={bansHero} className="h-full w-full object-cover grayscale opacity-60" containerClassName="h-full w-full grayscale opacity-60 text-[8px]" />
-                            <div className="absolute inset-0 border border-rose-500/30 rounded" />
-                          </>
-                        ) : (
-                          <span className="text-[10px] text-gray-800 font-bold">
-                            -
-                          </span>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Red Bans */}
-              <div className="flex items-center gap-2 justify-end">
-                <div className="flex gap-1.5 overflow-hidden">
-                  {[0, 1, 2, 3, 4].map((i) => {
-                    const bansHero = redBans[i];
-                    return (
-                      <div
-                        key={i}
-                        className="relative h-8 w-8 rounded border border-rose-950 bg-gray-950 overflow-hidden flex items-center justify-center"
-                      >
-                        {bansHero ? (
-                          <>
-                            <FallbackImage src={getHeroImgUrl(bansHero)} fallbackText={bansHero} alt={bansHero} className="h-full w-full object-cover grayscale opacity-60" containerClassName="h-full w-full grayscale opacity-60 text-[8px]" />
-                            <div className="absolute inset-0 border border-rose-500/30 rounded" />
-                          </>
-                        ) : (
-                          <span className="text-[10px] text-gray-800 font-bold">
-                            -
-                          </span>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-                <span className="font-mono text-[9px] text-gray-500 uppercase font-semibold">
-                  Bans:
-                </span>
-              </div>
-            </div>
-
-            {/* Lane Status Display */}
-            <div className="grid grid-cols-2 gap-4 bg-gray-900/20 p-2 rounded-xl border border-gray-900/50">
-              {draftMode === "mpl" && (
-                <p className="col-span-2 text-[9px] text-gray-600 text-center italic mb-0">
-                  Prediksi lane assignment — bukan urutan pick wajib
-                </p>
-              )}
-              {/* Blue Lane Status */}
-              <div className="flex items-center gap-1.5">
-                <span className="font-mono text-[9px] text-gray-500 uppercase font-semibold shrink-0">
-                  {draftMode === "mpl" ? "PREDICTED" : "BLUE LANES"}
-                </span>
-                <div className="flex gap-1 overflow-hidden">
-                  {(["gold", "exp", "mid", "jungle", "roam"] as const).map((lane) => {
-                    const heroName = blueLaneStatus[lane];
-                    const laneLabels = { gold: "Gold", exp: "EXP", mid: "Mid", jungle: "Jgl", roam: "Roam" };
-                    const showWarning = !heroName && bluePicks.length >= 3;
-                    return (
-                      <div
-                        key={lane}
-                        className={`flex flex-col items-center rounded px-1 py-0.5 min-w-[36px] border ${
-                          heroName
-                            ? "border-blue-800/50 bg-blue-950/20"
-                            : showWarning
-                              ? "border-amber-500/50 bg-amber-950/10"
-                              : "border-gray-800/50 bg-gray-950/30"
-                        }`}
-                        title={heroName ? `${laneLabels[lane]}: ${heroName}` : `${laneLabels[lane]}: Kosong`}
-                      >
-                        {heroName ? (
-                          <div className="h-5 w-5 rounded overflow-hidden">
-                            <FallbackImage
-                              src={getHeroImgUrl(heroName)}
-                              fallbackText={heroName}
-                              alt={heroName}
-                              className="h-full w-full object-cover"
-                              containerClassName="h-full w-full text-[6px]"
-                            />
-                          </div>
-                        ) : (
-                          <div className={`h-5 w-5 rounded flex items-center justify-center ${
-                            showWarning ? "text-amber-500" : "text-gray-700"
-                          }`}>
-                            <span className="text-[8px] font-bold">—</span>
-                          </div>
-                        )}
-                        <span className={`text-[7px] font-bold mt-0.5 uppercase tracking-tight ${
-                          heroName
-                            ? "text-blue-400"
-                            : showWarning
-                              ? "text-amber-400"
-                              : "text-gray-600"
-                        }`}>
-                          {laneLabels[lane]}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Red Lane Status */}
-              <div className="flex items-center gap-1.5 justify-end">
-                <div className="flex gap-1 overflow-hidden">
-                  {(["gold", "exp", "mid", "jungle", "roam"] as const).map((lane) => {
-                    const heroName = redLaneStatus[lane];
-                    const laneLabels = { gold: "Gold", exp: "EXP", mid: "Mid", jungle: "Jgl", roam: "Roam" };
-                    const showWarning = !heroName && redPicks.length >= 3;
-                    return (
-                      <div
-                        key={lane}
-                        className={`flex flex-col items-center rounded px-1 py-0.5 min-w-[36px] border ${
-                          heroName
-                            ? "border-red-800/50 bg-red-950/20"
-                            : showWarning
-                              ? "border-amber-500/50 bg-amber-950/10"
-                              : "border-gray-800/50 bg-gray-950/30"
-                        }`}
-                        title={heroName ? `${laneLabels[lane]}: ${heroName}` : `${laneLabels[lane]}: Kosong`}
-                      >
-                        {heroName ? (
-                          <div className="h-5 w-5 rounded overflow-hidden">
-                            <FallbackImage
-                              src={getHeroImgUrl(heroName)}
-                              fallbackText={heroName}
-                              alt={heroName}
-                              className="h-full w-full object-cover"
-                              containerClassName="h-full w-full text-[6px]"
-                            />
-                          </div>
-                        ) : (
-                          <div className={`h-5 w-5 rounded flex items-center justify-center ${
-                            showWarning ? "text-amber-500" : "text-gray-700"
-                          }`}>
-                            <span className="text-[8px] font-bold">—</span>
-                          </div>
-                        )}
-                        <span className={`text-[7px] font-bold mt-0.5 uppercase tracking-tight ${
-                          heroName
-                            ? "text-red-400"
-                            : showWarning
-                              ? "text-amber-400"
-                              : "text-gray-600"
-                        }`}>
-                          {laneLabels[lane]}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-                <span className="font-mono text-[9px] text-gray-500 uppercase font-semibold shrink-0">
-                  {draftMode === "mpl" ? "PREDICTED" : "RED LANES"}
-                </span>
-              </div>
-            </div>
-
-            {/* Picks Layout Grid */}
-            <div className="grid grid-cols-2 gap-2 sm:gap-6 bg-gray-900/10 rounded-2xl p-2 sm:p-4 border border-gray-900/60 flex-1 min-h-[280px]">
-              {/* Blue Picks List */}
-              <div className="flex flex-col gap-2 sm:gap-3">
-                {[0, 1, 2, 3, 4].map((i) => {
-                  const pickHero = bluePicks[i];
-                  const activePick =
-                    !isCompleted &&
-                    currentStep.side === "BLUE" &&
-                    currentStep.type === "PICK" &&
-                    bluePicks.length === i;
-                  return (
+                <>
+                  <div className={`text-[11px] font-bold uppercase tracking-widest mb-0.5 ${currentStep?.side === "BLUE" ? "text-blue-400" : "text-red-400"}`}>
+                    {currentStep?.side === "BLUE" ? blueTeam : redTeam}
+                  </div>
+                  <div className={`text-3xl font-black tabular-nums leading-none ${timerSeconds <= 8 ? "text-red-400 animate-pulse" : "text-white"}`}>
+                    {String(timerSeconds).padStart(2, "0")}
+                  </div>
+                  <div className={`text-[11px] uppercase tracking-widest mt-0.5 ${currentStep?.type === "BAN" ? "text-red-400/70" : "text-cyan-400/70"}`}>
+                    {currentStep?.type}
+                  </div>
+                  <div className="mt-1 w-full h-1 bg-white/5 rounded-full overflow-hidden">
                     <div
-                      key={i}
-                      className={`relative flex items-center gap-2 sm:gap-3.5 rounded-xl border p-1.5 sm:p-2 bg-gray-950/70 ${
-                        activePick
-                          ? "border-blue-500 ring-1 ring-blue-500/30 bg-blue-950/5"
-                          : pickHero
-                            ? "border-gray-850"
-                            : "border-gray-900 opacity-30"
-                      }`}
-                    >
-                      <div className="relative h-10 w-10 sm:h-12 sm:w-12 rounded-lg bg-gray-900 border border-gray-850 overflow-hidden shrink-0">
-                        {pickHero ? (
-                          <FallbackImage src={getHeroImgUrl(pickHero)} fallbackText={pickHero} alt={pickHero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[10px]" />
-                        ) : activePick ? (
-                          <div className="absolute inset-0 flex items-center justify-center bg-blue-950/35">
-                            <span className="animate-pulse font-bold text-xs text-blue-400">
-                              PICK
-                            </span>
-                          </div>
-                        ) : null}
-                      </div>
-                      <div className="overflow-hidden">
-                        <div className="font-sans text-sm font-bold text-white truncate">
-                          {pickHero ||
-                            (activePick ? "Memilih..." : `Slot Pick ${i + 1}`)}
-                        </div>
-                        <div className="font-mono text-[9px] text-gray-500 uppercase tracking-widest mt-0.5">
-                          {pickHero ? getHeroRole(pickHero) : "Kosong"}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Red Picks List */}
-              <div className="flex flex-col gap-2 sm:gap-3">
-                {[0, 1, 2, 3, 4].map((i) => {
-                  const pickHero = redPicks[i];
-                  const activePick =
-                    !isCompleted &&
-                    currentStep.side === "RED" &&
-                    currentStep.type === "PICK" &&
-                    redPicks.length === i;
-                  return (
-                    <div
-                      key={i}
-                      className={`relative flex items-center gap-2 sm:gap-3.5 rounded-xl border p-1.5 sm:p-2 bg-gray-950/70 flex-row-reverse text-right ${
-                        activePick
-                          ? "border-red-500 ring-1 ring-red-500/30 bg-red-950/5"
-                          : pickHero
-                            ? "border-gray-850"
-                            : "border-gray-900 opacity-30"
-                      }`}
-                    >
-                      <div className="relative h-10 w-10 sm:h-12 sm:w-12 rounded-lg bg-gray-900 border border-gray-850 overflow-hidden shrink-0">
-                        {pickHero ? (
-                          <FallbackImage src={getHeroImgUrl(pickHero)} fallbackText={pickHero} alt={pickHero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[10px]" />
-                        ) : activePick ? (
-                          <div className="absolute inset-0 flex items-center justify-center bg-red-950/35">
-                            <span className="animate-pulse font-bold text-xs text-red-400">
-                              PICK
-                            </span>
-                          </div>
-                        ) : null}
-                      </div>
-                      <div className="overflow-hidden">
-                        <div className="font-sans text-sm font-bold text-white truncate">
-                          {pickHero ||
-                            (activePick ? "Memilih..." : `Slot Pick ${i + 1}`)}
-                        </div>
-                        <div className="font-mono text-[9px] text-gray-500 uppercase tracking-widest mt-0.5">
-                          {pickHero ? getHeroRole(pickHero) : "Kosong"}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Turn Guidance and Controls */}
-            {!isCompleted ? (
-              <div className="rounded-xl border border-dashed border-gray-800 bg-gray-950 p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-inner">
-                <div>
-                  <span className="font-mono text-[9px] text-gray-550 block uppercase tracking-wider mb-0.5">
-                    Langkah Draf {currentStepIdx + 1}/20
-                  </span>
-                  <div className="font-sans text-sm font-bold text-gray-300 flex items-center gap-1.5">
-                    <span
-                      className={
-                        currentStep.side === "BLUE"
-                          ? "text-blue-400"
-                          : "text-red-400"
-                      }
-                    >
-                      {currentStep.side === "BLUE" ? "Tim Biru" : "Tim Merah"}
-                    </span>
-                    <span>seharusnya melakukan</span>
-                    <span className="text-gray-100 uppercase">
-                      {currentStep.type === "BAN" ? "Ban Hero" : "Pick Hero"}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex gap-2.5">
-                  <button
-                    onClick={fetchAICoach}
-                    disabled={aiLoading}
-                    className="flex items-center gap-1.5 rounded-lg px-4 py-2 text-xs font-bold border border-indigo-500/20 bg-indigo-900/10 text-indigo-400 hover:bg-indigo-900/20 transition disabled:opacity-50"
-                  >
-                    <Sparkles className="h-4 w-4" />
-                    AI Coach Rekomendasi
-                  </button>
-
-                  <button
-                    onClick={() => handleLockHero(selectedHeroName)}
-                    disabled={!selectedHeroName}
-                    className={`rounded-lg px-5 py-2 text-xs font-bold transition shadow-sm uppercase shrink-0 ${
-                      selectedHeroName
-                        ? "bg-indigo-600 hover:bg-indigo-505 text-white cursor-pointer"
-                        : "bg-gray-900 text-gray-500 cursor-not-allowed"
-                    }`}
-                  >
-                    Konfirmasi Lock
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div className="rounded-xl border border-dashed border-emerald-950 bg-emerald-950/5 p-5 flex flex-col gap-4 shadow-inner animate-fade-in">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                  <div>
-                    <h4 className="font-sans text-md font-bold text-white flex items-center gap-1.5">
-                      <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0" />
-                      Draf MPL Berhasil Diselesaikan!
-                    </h4>
-                    <p className="text-xs text-gray-400 leading-relaxed mt-1">
-                      Kedua draf lineup telah berhasil dikonfirmasi. Gunakan
-                      asisten Gemini untuk mengevaluasi kekuatan komposisi draf
-                      final!
-                    </p>
-                  </div>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={evaluateDraftGame}
-                      disabled={evaluationLoading}
-                      className="flex items-center gap-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 text-xs font-bold uppercase tracking-wider transition disabled:opacity-50 cursor-pointer"
-                    >
-                      <Sparkles className="h-3.5 w-3.5" />
-                      {evaluationLoading
-                        ? "Mengevaluasi..."
-                        : "Analisis Draf (AI)"}
-                    </button>
-                    {user && (
-                      <button
-                        onClick={handleSaveDraft}
-                        disabled={isSaving || saveSuccess}
-                        className="flex items-center gap-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 text-xs font-bold uppercase tracking-wider transition disabled:opacity-50 cursor-pointer"
-                      >
-                        <Save className="h-3.5 w-3.5" />
-                        {saveSuccess
-                          ? "Disimpan!"
-                          : isSaving
-                            ? "Menyimpan..."
-                            : "Simpan Draf"}
-                      </button>
-                    )}
-                    <button
-                      onClick={handleReset}
-                      className="flex items-center gap-1.5 rounded-lg px-4 py-2 border border-gray-800 text-gray-400 hover:text-white hover:bg-gray-900 text-xs font-semibold uppercase tracking-wider transition cursor-pointer"
-                    >
-                      <RotateCcw className="h-3.5 w-3.5" />
-                      Setel Ulang Draf
-                    </button>
-                    <button
-                      onClick={() => setSoundEnabled(!soundEnabled)}
-                      className={`flex items-center justify-center p-2 rounded-lg border transition cursor-pointer ${
-                        soundEnabled 
-                          ? "bg-indigo-900/30 border-indigo-500/50 text-indigo-400" 
-                          : "bg-gray-900 border-gray-800 text-gray-500"
-                      }`}
-                      title="Toggle Sound Effects"
-                    >
-                      {soundEnabled ? <Volume2 className="h-4 w-4" /> : <VolumeX className="h-4 w-4" />}
-                    </button>
-                  </div>
-                </div>
-
-                {/* Evaluation State / Result */}
-                {evaluationLoading && (
-                  <div className="flex flex-col items-center justify-center py-10 gap-6 border-t border-gray-900 mt-2">
-                    <div className="flex items-center gap-3">
-                      <div className="relative">
-                        <div className="absolute inset-0 border-t-2 border-emerald-500 rounded-full animate-spin h-8 w-8"></div>
-                        <Wand2 className="h-8 w-8 text-emerald-400 p-1.5 animate-pulse" />
-                      </div>
-                      <div className="font-bold text-sm text-emerald-200 animate-pulse">
-                        Gemini sedang menganalisis draf...
-                      </div>
-                    </div>
-
-                    {/* Skeleton Text Blocks */}
-                    <div className="w-full max-w-2xl space-y-4">
-                      {/* Section 1 */}
-                      <div className="space-y-2.5">
-                        <div className="h-4 w-1/4 bg-gray-800 rounded animate-pulse"></div>
-                        <div className="h-2.5 w-full bg-gray-900 rounded animate-pulse"></div>
-                        <div className="h-2.5 w-full bg-gray-900 rounded animate-pulse"></div>
-                        <div className="h-2.5 w-5/6 bg-gray-900 rounded animate-pulse"></div>
-                      </div>
-                      {/* Section 2 */}
-                      <div className="space-y-2.5 pt-2">
-                        <div className="h-4 w-1/3 bg-gray-800 rounded animate-pulse"></div>
-                        <div className="h-2.5 w-full bg-gray-900 rounded animate-pulse"></div>
-                        <div className="h-2.5 w-4/5 bg-gray-900 rounded animate-pulse"></div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {evaluationResult && !evaluationLoading && (
-                  <div className="border-t border-gray-900 pt-4 mt-2">
-                    <div className="rounded-xl border border-blue-900/30 bg-[#0a111f]/60 p-5 shadow-inner">
-                      <div className="flex items-center gap-2 mb-3.5 text-blue-400 font-bold text-xs uppercase tracking-widest border-b border-blue-900/20 pb-2">
-                        <BookOpen className="h-4 w-4" />
-                        Analisis Pasca-Draf oleh Gemini Coach
-                      </div>
-                      <div className="prose prose-invert prose-xs text-gray-300 max-w-none leading-relaxed text-xs">
-                        <div className="markdown-body">
-                          <ReactMarkdown>{evaluationResult}</ReactMarkdown>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Selection Grid inside Draft */}
-            {!isCompleted && (
-              <div className="border-t border-gray-900 pt-4 flex flex-col gap-3">
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  {/* Selector Header */}
-                  <h4 className="font-sans text-xs font-bold text-indigo-400 uppercase tracking-wider">
-                    Pilih Hero Untuk di-
-                    {currentStep.type === "BAN" ? "Ban" : "Pick"}:
-                  </h4>
-
-                  {/* Filter inputs */}
-                  <div className="flex gap-2">
-                    <input
-                      type="text"
-                      placeholder="Cari hero..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="rounded-lg border border-gray-800 bg-gray-900 px-3 py-1 text-xs text-gray-200 outline-none w-36 sm:w-48"
+                      className={`h-full rounded-full transition-all ${currentStep?.side === "BLUE" ? "bg-blue-500" : "bg-red-500"}`}
+                      style={{ width: `${(timerSeconds / turnDurationSeconds) * 100}%` }}
                     />
-
-                    <select
-                      value={roleFilter}
-                      onChange={(e) => setRoleFilter(e.target.value)}
-                      className="rounded-lg border border-gray-800 bg-gray-900 px-2 py-1 text-xs text-gray-300 outline-none"
-                    >
-                      <option value="ALL">Semua Role</option>
-                      <option value="Assassin">Assassin</option>
-                      <option value="Fighter">Fighter</option>
-                      <option value="Mage">Mage</option>
-                      <option value="Marksman">Marksman</option>
-                      <option value="Tank">Tank</option>
-                      <option value="Support">Support</option>
-                    </select>
                   </div>
+                </>
+              ) : (
+                <div className="text-center">
+                  <CheckCircle2 className="h-6 w-6 text-emerald-400 mx-auto mb-1" />
+                  <div className="text-[9px] text-emerald-400 font-bold uppercase tracking-widest">Draft Over</div>
                 </div>
+              )}
+            </div>
 
-                {/* Hero Options */}
-                <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-2 h-[260px] sm:h-[320px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent">
+            {/* Red side */}
+            <div className="flex-1 flex flex-col gap-1 px-3 py-2 items-end">
+              <div className="text-[10px] text-red-400/50 font-bold uppercase tracking-widest">BANS</div>
+              <div className="flex gap-1 flex-wrap justify-end">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <BanSlot key={i} heroName={redBans[i] || ""} side="red" />
+                ))}
+              </div>
+              <div className="text-[10px] text-red-400/40 mt-0.5 uppercase tracking-widest">PICKS</div>
+              <div className="flex gap-1">
+                {Array.from({ length: 5 }).map((_, i) => {
+                  const h = redPicks[i] || "";
+                  return (
+                    <div key={i} className={`h-8 w-8 rounded overflow-hidden border shrink-0 ${h ? "border-red-700/50" : "border-red-900/20 border-dashed"} bg-slate-900/40`}>
+                      {h ? (
+                        <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
+                      ) : (
+                        <div className="h-full w-full flex items-center justify-center text-[8px] text-red-900/50">{i + 1}</div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* ── ZONE 3: MAIN DRAFT BOARD ─────────────────────────────────────── */}
+          <div className="relative z-10 flex" style={{ minHeight: "520px" }}>
+            {/* LEFT: Blue team pick slots (xl+) */}
+            <div className="hidden xl:flex w-[210px] shrink-0 flex-col border-r border-blue-900/20 bg-blue-950/5">
+              <div className="px-3 pt-3 pb-1">
+                <div className="text-[9px] text-blue-400/60 uppercase tracking-widest font-bold">Blue · First Pick</div>
+                <div className="text-sm font-bold text-blue-200 truncate">{blueTeam}</div>
+              </div>
+              <div className="flex-1 flex flex-col gap-1.5 px-2 pb-2 overflow-y-auto">
+                {Array.from({ length: 5 }).map((_, i) => {
+                  const heroName = bluePicks[i] || "";
+                  const assignment = heroName
+                    ? evaluationDashboard.teamPanels.blue.assignedHeroes.find(
+                        (e) => normalizeHeroKey(e.heroName) === normalizeHeroKey(heroName)
+                      )
+                    : null;
+                  const isActive = !isCompleted && currentStep?.side === "BLUE" && currentStep?.type === "PICK" && bluePicks.length === i;
+                  return <PickSlot key={i} heroName={heroName} index={i} isBlue={true} isActive={isActive} assignment={assignment} />;
+                })}
+              </div>
+              <div className="px-2 pb-2 border-t border-blue-900/20 pt-2 space-y-1">
+                <div className="text-[9px] text-blue-400/50 uppercase tracking-widest">Status</div>
+                <div className="text-[10px] leading-relaxed">
+                  <span className={evaluationDashboard.teamPanels.blue.missingLanes.length ? "text-amber-400" : "text-emerald-400"}>
+                    {evaluationDashboard.teamPanels.blue.missingLanes.length
+                      ? `Missing: ${evaluationDashboard.teamPanels.blue.missingLanes.join(", ")}`
+                      : "Lanes covered ✓"}
+                  </span>
+                </div>
+                {evaluationDashboard.teamPanels.blue.roleWarnings[0] && (
+                  <div className="text-[10px] text-amber-400/80 truncate">{evaluationDashboard.teamPanels.blue.roleWarnings[0]}</div>
+                )}
+              </div>
+            </div>
+
+            {/* CENTER: Hero pool */}
+            <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
+              {/* Role tabs */}
+              <div className="flex items-center overflow-x-auto scrollbar-none border-b border-white/[0.05] bg-black/20">
+                {ROLE_OPTIONS.map((role) => (
+                  <button
+                    key={role}
+                    onClick={() => setRoleFilter(role)}
+                    className={`px-3 py-2 text-xs font-medium shrink-0 border-b-2 -mb-px transition-colors ${roleFilter === role ? "border-cyan-400 text-cyan-300" : "border-transparent text-gray-500 hover:text-gray-300"}`}
+                  >
+                    {role}
+                  </button>
+                ))}
+                <div className="ml-auto flex items-center gap-1 px-2">
+                  <select value={laneFilter} onChange={(e) => setLaneFilter(e.target.value)} className="text-[10px] bg-white/5 border border-white/[0.06] rounded px-1.5 py-1 text-gray-400 outline-none">
+                    {LANE_OPTIONS.map((o) => <option key={o} value={o}>{o === "ALL" ? "Lane" : o}</option>)}
+                  </select>
+                  <select value={tierFilter} onChange={(e) => setTierFilter(e.target.value)} className="text-[10px] bg-white/5 border border-white/[0.06] rounded px-1.5 py-1 text-gray-400 outline-none">
+                    {TIER_OPTIONS.map((o) => <option key={o} value={o}>{o === "ALL" ? "Tier" : `T${o}`}</option>)}
+                  </select>
+                </div>
+              </div>
+
+              {/* Search + filter chips */}
+              <div className="flex items-center gap-2 px-2 py-1.5 bg-black/10 border-b border-white/[0.03]">
+                <div className="relative flex-1 max-w-[200px]">
+                  <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-3 w-3 text-gray-600" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search…"
+                    className="w-full pl-6 pr-2 py-1 text-xs bg-white/[0.04] border border-white/[0.06] rounded-lg text-white placeholder:text-gray-600 outline-none focus:border-cyan-500/40"
+                  />
+                </div>
+                {[
+                  { label: "Rec", active: recommendedOnly, toggle: () => setRecommendedOnly((v) => !v) },
+                  { label: "Counter", active: counterOnly, toggle: () => setCounterOnly((v) => !v) },
+                  { label: "Synergy", active: synergyOnly, toggle: () => setSynergyOnly((v) => !v) },
+                  { label: "Comfort", active: comfortOnly, toggle: () => setComfortOnly((v) => !v) },
+                ].map((chip) => (
+                  <button key={chip.label} onClick={chip.toggle} className={`text-[10px] px-2 py-1 rounded-full border transition-colors shrink-0 ${chip.active ? "border-cyan-500/40 bg-cyan-900/20 text-cyan-300" : "border-white/[0.07] text-gray-500 hover:text-gray-300"}`}>
+                    {chip.label}
+                  </button>
+                ))}
+                <span className="ml-auto text-[10px] text-gray-600">{sortedHeroesList.length}</span>
+              </div>
+
+              {/* Turn indicator */}
+              {!isCompleted && (
+                <div className={`px-3 py-1.5 text-xs font-semibold flex items-center gap-2 ${currentStep?.side === "BLUE" ? "bg-blue-950/20 text-blue-300" : "bg-red-950/15 text-red-300"}`}>
+                  <div className={`h-1.5 w-1.5 rounded-full animate-pulse ${currentStep?.side === "BLUE" ? "bg-blue-400" : "bg-red-400"}`} />
+                  {currentStep?.side === "BLUE" ? blueTeam : redTeam} · {currentStep?.type === "BAN" ? "Ban a hero" : "Pick a hero"}
+                  <span className="ml-auto text-[10px] opacity-60">Lane: {laneNeeds.length ? laneNeeds.join(", ") : "all covered"}</span>
+                </div>
+              )}
+
+              {/* Hero grid */}
+              <div className="flex-1 overflow-y-auto p-2 scrollbar-thin scrollbar-thumb-white/10">
+                <div className="grid grid-cols-5 sm:grid-cols-6 lg:grid-cols-7 xl:grid-cols-5 2xl:grid-cols-7 gap-1.5">
                   {sortedHeroesList.map((hero) => {
-                    const isUsed = usedHeroesMap.has(normalizeHeroKey(hero.hero_name));
+                    const heroKey = normalizeHeroKey(hero.hero_name);
+                    const insight = heroInsights[heroKey];
+                    const isUsed = usedHeroesMap.has(heroKey);
                     const isSelected = selectedHeroName === hero.hero_name;
+                    const isRec = insight?.status === "recommended";
+                    const isBanned = insight?.status === "banned";
+                    const isPicked = insight?.status === "picked";
                     return (
                       <button
                         key={hero.hero_name}
-                        disabled={isUsed}
+                        disabled={isUsed || isCompleted}
                         onClick={() => handleSelectHero(hero.hero_name)}
-                        className={`group relative flex flex-col items-center rounded-lg border p-1.5 text-center transition ${
-                          isUsed
-                            ? "border-gray-900/30 opacity-20 cursor-not-allowed bg-black/10"
-                            : isSelected
-                              ? "border-indigo-500 bg-indigo-950/30 scale-105 shadow-md shadow-indigo-500/5 font-semibold"
-                              : "border-gray-900 bg-gray-900/40 hover:border-gray-700 hover:bg-gray-800"
-                        }`}
+                        title={insight?.whyRecommended || hero.hero_name}
+                        className={`relative flex flex-col items-center gap-0.5 p-1.5 rounded-xl border transition-all ${isSelected ? "border-cyan-400/60 bg-cyan-900/20 ring-1 ring-cyan-400/25 scale-105" : isRec && !isUsed ? "border-emerald-500/40 bg-emerald-900/10" : isBanned ? "border-red-900/20 opacity-30 cursor-not-allowed" : isPicked ? "border-blue-900/20 opacity-30 cursor-not-allowed" : insight?.status === "risky" ? "border-amber-500/20 bg-amber-900/5" : "border-white/[0.05] hover:border-white/[0.15] hover:bg-white/[0.03]"} ${!isUsed && !isCompleted ? "cursor-pointer hover:-translate-y-0.5" : ""}`}
                       >
-                        <FallbackImage
-                          src={getHeroImgUrl(hero.hero_name)}
-                          fallbackText={hero.hero_name}
-                          alt={hero.hero_name}
-                          className="h-10 w-10 sm:h-12 sm:w-12 rounded-md object-cover bg-gray-950 p-0.5 border border-gray-800"
-                          containerClassName="h-10 w-10 sm:h-12 sm:w-12 rounded-md text-[10px]"
-                        />
-                        <span className="font-sans text-[9px] sm:text-[10px] text-gray-300 mt-1 line-clamp-1 w-full truncate">
+                        <div className={`relative h-11 w-11 rounded-xl overflow-hidden border ${isSelected ? "border-cyan-500/50" : isRec && !isUsed ? "border-emerald-500/25" : "border-white/[0.06]"}`}>
+                          <FallbackImage
+                            src={getHeroImgUrl(hero.hero_name)}
+                            fallbackText={hero.hero_name}
+                            alt={hero.hero_name}
+                            className={`h-full w-full object-cover ${(isBanned || isPicked) ? "grayscale" : ""}`}
+                            containerClassName="h-full w-full text-[7px]"
+                          />
+                          {isBanned && (
+                            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                              <div className="h-4 w-4 rounded-full border border-red-500/60 flex items-center justify-center">
+                                <span className="text-red-400 text-[8px] font-black">✕</span>
+                              </div>
+                            </div>
+                          )}
+                          {isRec && !isUsed && (
+                            <div className="absolute top-0.5 right-0.5 h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_4px_rgba(74,222,128,0.8)]" />
+                          )}
+                        </div>
+                        <span className={`text-[9px] font-medium truncate w-full text-center leading-tight ${isSelected ? "text-cyan-200" : isRec && !isUsed ? "text-emerald-200" : (isBanned || isPicked) ? "text-gray-700" : "text-gray-400"}`}>
                           {hero.hero_name}
                         </span>
+                        {isRec && !isUsed && (
+                          <div className="absolute -top-0.5 -right-0.5 text-[7px] bg-emerald-500 text-black font-black px-1 rounded-full leading-tight">AI</div>
+                        )}
                       </button>
                     );
                   })}
                 </div>
               </div>
-            )}
-          </div>
 
-          {/* AI Coach sidebar panel */}
-          <div className="flex flex-col gap-4 rounded-2xl border border-gray-900 bg-gray-950 p-4 shadow-xl">
-            {/* Header */}
-            <div className="flex items-center gap-2 border-b border-gray-900 pb-3">
-              <Sparkles className="h-5 w-5 text-indigo-400 shrink-0" />
-              <div>
-                <h3 className="font-sans text-md font-bold text-white tracking-tight">
-                  Gemini Coach Analyst
-                </h3>
-                <p className="text-[10px] text-gray-500 font-mono uppercase tracking-widest mt-0.5">
-                  Indonesian MLBB Strategist
-                </p>
-              </div>
+              {/* Lock bar */}
+              {!isCompleted ? (
+                <div className="border-t border-white/[0.05] bg-black/40 px-3 py-2 flex items-center gap-2 shrink-0">
+                  {selectedHeroName ? (
+                    <div className="flex items-center gap-2 flex-1 min-w-0">
+                      <div className="h-8 w-8 rounded-lg overflow-hidden border border-cyan-500/40 shrink-0">
+                        <FallbackImage src={getHeroImgUrl(selectedHeroName)} fallbackText={selectedHeroName} alt={selectedHeroName} className="h-full w-full object-cover" containerClassName="h-full w-full text-[7px]" />
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-sm font-bold text-cyan-200 truncate">{selectedHeroName}</div>
+                        <div className="text-[9px] text-gray-500">{selectedHeroInsight?.lane || "Flex"}</div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="flex-1 text-xs text-gray-600">Select a hero to lock in</div>
+                  )}
+                  <button
+                    onClick={handleUndo}
+                    disabled={draftHistory.length === 0}
+                    title="Undo last action (Ctrl+Z)"
+                    className="flex items-center gap-1 px-2.5 py-1.5 text-[11px] bg-amber-900/30 border border-amber-600/30 text-amber-300 rounded-lg hover:bg-amber-900/50 transition-colors disabled:opacity-30 disabled:cursor-not-allowed shrink-0"
+                  >
+                    <Undo2 className="h-3.5 w-3.5" />
+                    Undo
+                  </button>
+                  <button onClick={fetchAICoach} disabled={aiLoading} className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 rounded-lg hover:bg-indigo-900/60 transition-colors disabled:opacity-50 shrink-0">
+                    <Sparkles className="h-3.5 w-3.5" />
+                    {aiLoading ? "…" : "AI"}
+                  </button>
+                  <button
+                    onClick={() => handleLockHero(selectedHeroName)}
+                    disabled={!selectedHeroName}
+                    className={`flex items-center gap-2 px-5 py-2 rounded-xl font-bold text-sm uppercase tracking-wider transition-all shrink-0 ${selectedHeroName ? "bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white shadow-[0_0_16px_rgba(6,182,212,0.3)]" : "bg-slate-900 text-slate-600 cursor-not-allowed"}`}
+                  >
+                    <CheckCircle2 className="h-4 w-4" />
+                    {currentStep?.type === "BAN" ? "BAN" : "LOCK IN"}
+                  </button>
+                </div>
+              ) : (
+                <div className="border-t border-white/[0.05] bg-black/40 px-3 py-2 flex items-center gap-2 shrink-0 flex-wrap">
+                  <button onClick={() => { evaluateDraftGame(); setShowAnalysis(true); }} disabled={evaluationLoading} className="flex items-center gap-2 px-4 py-2 text-xs bg-emerald-700/40 border border-emerald-500/40 text-emerald-300 rounded-xl font-bold uppercase hover:bg-emerald-700/60 transition-colors disabled:opacity-50">
+                    <BarChart3 className="h-4 w-4" />
+                    {evaluationLoading ? "Analyzing…" : "Run Final Analysis"}
+                  </button>
+                  {user && (
+                    <button onClick={handleSaveDraft} disabled={isSaving || saveSuccess} className="flex items-center gap-2 px-4 py-2 text-xs bg-blue-700/40 border border-blue-500/40 text-blue-300 rounded-xl font-bold uppercase hover:bg-blue-700/60 transition-colors disabled:opacity-50">
+                      <Save className="h-4 w-4" />
+                      {saveSuccess ? "Saved" : isSaving ? "Saving…" : "Save Draft"}
+                    </button>
+                  )}
+                </div>
+              )}
             </div>
 
-            {/* AI Coach Suggestion State Views */}
-            {aiLoading ? (
-              <div className="py-6 space-y-6">
-                <div className="flex items-center gap-3 justify-center mb-6">
-                  <div className="relative">
-                    <div className="absolute inset-0 border-t-2 border-indigo-500 rounded-full animate-spin h-8 w-8"></div>
-                    <Wand2 className="h-8 w-8 text-indigo-400 p-1.5 animate-pulse" />
-                  </div>
-                  <div className="font-bold text-sm text-indigo-200 animate-pulse">
-                    {aiLoadingText}
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="h-3 w-1/3 bg-gray-800 rounded animate-pulse"></div>
-                  <div className="h-3 w-full bg-gray-800 rounded animate-pulse"></div>
-                  <div className="h-3 w-4/5 bg-gray-800 rounded animate-pulse"></div>
-                </div>
-
-                <div className="grid gap-3 pt-4">
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="rounded-lg bg-gray-900/30 border border-gray-800 p-3 flex gap-4 animate-pulse"
-                    >
-                      <div className="h-12 w-12 rounded-lg bg-gray-800 shrink-0"></div>
-                      <div className="flex-1 space-y-2 py-1">
-                        <div className="h-3 w-1/4 bg-gray-800 rounded"></div>
-                        <div className="h-2.5 w-full bg-gray-800/80 rounded"></div>
-                        <div className="h-2.5 w-2/3 bg-gray-800/80 rounded"></div>
-                      </div>
-                    </div>
-                  ))}
+            {/* RIGHT: Red team pick slots (xl+) */}
+            <div className="hidden xl:flex w-[210px] shrink-0 flex-col border-l border-red-900/20 bg-red-950/5">
+              <div className="px-3 pt-3 pb-1 text-right">
+                <div className="text-[9px] text-red-400/60 uppercase tracking-widest font-bold">Second Pick · Red</div>
+                <div className="text-sm font-bold text-red-200 truncate">{redTeam}</div>
+              </div>
+              <div className="flex-1 flex flex-col gap-1.5 px-2 pb-2 overflow-y-auto">
+                {Array.from({ length: 5 }).map((_, i) => {
+                  const heroName = redPicks[i] || "";
+                  const assignment = heroName
+                    ? evaluationDashboard.teamPanels.red.assignedHeroes.find(
+                        (e) => normalizeHeroKey(e.heroName) === normalizeHeroKey(heroName)
+                      )
+                    : null;
+                  const isActive = !isCompleted && currentStep?.side === "RED" && currentStep?.type === "PICK" && redPicks.length === i;
+                  return <PickSlot key={i} heroName={heroName} index={i} isBlue={false} isActive={isActive} assignment={assignment} />;
+                })}
+              </div>
+              <div className="px-2 pb-2 border-t border-red-900/20 pt-2 space-y-1">
+                <div className="text-[9px] text-red-400/50 uppercase tracking-widest text-right">Status</div>
+                <div className="text-[10px] text-right leading-relaxed">
+                  <span className={evaluationDashboard.teamPanels.red.missingLanes.length ? "text-amber-400" : "text-emerald-400"}>
+                    {evaluationDashboard.teamPanels.red.missingLanes.length
+                      ? `Missing: ${evaluationDashboard.teamPanels.red.missingLanes.join(", ")}`
+                      : "Lanes covered ✓"}
+                  </span>
                 </div>
               </div>
-            ) : aiError ? (
-              <div className="rounded-lg bg-orange-950/20 border border-orange-900/40 p-4 text-center mt-2 flex flex-col items-center gap-3">
-                <ShieldAlert className="h-8 w-8 text-orange-400" />
-                <div>
-                  <div className="text-sm font-bold text-orange-300 mb-1">
-                    AI Analysis Unavailable
-                  </div>
-                  <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                    {aiError}
-                  </p>
-                </div>
+            </div>
+          </div>
+
+          {/* Mobile team display */}
+          <div className="xl:hidden border-t border-white/[0.04] grid grid-cols-2 gap-0">
+            <div className="border-r border-white/[0.04] p-3 bg-blue-950/5">
+              <div className="text-[9px] text-blue-400/60 uppercase tracking-widest mb-2">Blue Picks</div>
+              <div className="flex flex-col gap-1">
+                {Array.from({ length: 5 }).map((_, i) => {
+                  const h = bluePicks[i] || "";
+                  return (
+                    <div key={i} className="flex items-center gap-1.5 h-8">
+                      <div className="h-7 w-7 rounded border border-blue-900/30 overflow-hidden bg-slate-900/40 shrink-0">
+                        {h ? <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" /> : <div className="h-full w-full" />}
+                      </div>
+                      <span className="text-[10px] text-gray-400 truncate">{h || "—"}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="p-3 bg-red-950/5">
+              <div className="text-[9px] text-red-400/60 uppercase tracking-widest mb-2 text-right">Red Picks</div>
+              <div className="flex flex-col gap-1">
+                {Array.from({ length: 5 }).map((_, i) => {
+                  const h = redPicks[i] || "";
+                  return (
+                    <div key={i} className="flex items-center gap-1.5 h-8 justify-end">
+                      <span className="text-[10px] text-gray-400 truncate">{h || "—"}</span>
+                      <div className="h-7 w-7 rounded border border-red-900/30 overflow-hidden bg-slate-900/40 shrink-0">
+                        {h ? <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" /> : <div className="h-full w-full" />}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* ── ZONE 4: ANALYSIS PANEL ───────────────────────────────────────── */}
+          <div className="relative z-10 border-t border-white/[0.05]">
+            <div className="flex items-center gap-0 px-2 border-b border-white/[0.04] bg-black/20">
+              {([
+                { id: "rec", label: "Recommendations", Icon: Sparkles },
+                { id: "counter", label: "Counter Read", Icon: Swords },
+                { id: "intel", label: "Team Intel", Icon: HelpCircle },
+              ] as const).map(({ id, label, Icon }) => (
                 <button
-                  onClick={fetchAICoach}
-                  className="mt-2 text-xs px-4 py-2 bg-gray-900 hover:bg-gray-800 text-gray-300 rounded border border-gray-700 transition"
+                  key={id}
+                  onClick={() => setAnalysisTab(id)}
+                  className={`flex items-center gap-1.5 px-3 py-2 text-xs font-medium border-b-2 -mb-px transition-colors ${analysisTab === id ? "border-cyan-400 text-cyan-300" : "border-transparent text-gray-500 hover:text-gray-300"}`}
                 >
-                  Retry Analysis
+                  <Icon className="h-3.5 w-3.5" />
+                  <span className="hidden sm:inline">{label}</span>
                 </button>
-              </div>
-            ) : aiResult ? (
-              /* Success Result display */
-              <div className="flex flex-col gap-4 scrollbar-none overflow-y-visible xl:overflow-y-auto max-h-none xl:max-h-[620px]">
-                {/* Overall Strategy */}
-                <div className="rounded-lg bg-indigo-900/10 border border-indigo-500/10 p-3 flex flex-col gap-1.5 shadow-inner">
-                  <h4 className="font-mono text-[9px] text-indigo-400 font-bold uppercase tracking-wider">
-                    Saran Strategi Draf Pelatih:
-                  </h4>
-                  <p className="text-xs text-gray-300 leading-relaxed font-sans">
-                    {aiResult.overallStrategy}
-                  </p>
-                </div>
-
-                {/* Hero list block */}
-                <div className="flex flex-col gap-2.5">
-                  <h4 className="font-mono text-[9px] text-gray-500 uppercase tracking-wider mb-0.5 font-bold">
-                    Rekomendasi Hero Terkuat ({currentStep?.type || "ACTION"}):
-                  </h4>
-
-                  {aiResult.recommendations?.map((rec, i) => (
-                    <button
-                      key={i}
-                      onClick={() => {
-                        // Directly select this hero in the draft picker if available
-                        const available = heroes.some(
-                          (h) =>
-                            String(h.hero_name || "").toLowerCase() ===
-                              String(rec.heroName || "").toLowerCase() &&
-                            !usedHeroesMap.has(normalizeHeroKey(h.hero_name)),
-                        );
-                        if (available) {
-                          handleSelectHero(rec.heroName);
-                        } else {
-                          alert(
-                            `Hero ${rec.heroName} sudah digunakan atau tidak ada dalam data lokal.`,
-                          );
-                        }
-                      }}
-                      className="group flex flex-col gap-2 rounded-xl border border-gray-900 bg-gray-900/30 p-3 hover:border-indigo-505 hover:bg-indigo-950/10 text-left transition"
-                    >
-                      <div className="flex items-center gap-2.5">
-                        <FallbackImage
-                          src={getHeroImgUrl(rec.heroName)}
-                          fallbackText={rec.heroName}
-                          alt={rec.heroName}
-                          className="h-8 w-8 rounded bg-gray-950 border border-gray-800 object-cover"
-                          containerClassName="h-8 w-8 rounded text-[8px] bg-gray-950 border border-gray-800"
-                        />
-                        <div>
-                          <div className="font-sans text-xs font-bold text-white group-hover:text-indigo-400 transition-colors">
-                            {rec.heroName}
-                          </div>
-                          <span className="font-mono text-[9px] text-gray-500 uppercase font-semibold">
-                            {rec.pickType || rec.banType || rec.role || "Adaptive"}
-                          </span>
+              ))}
+              {recsLoading && <span className="ml-auto text-[10px] text-gray-500 animate-pulse pr-3">Updating…</span>}
+            </div>
+            <div className="p-3 min-h-[90px]">
+              {analysisTab === "rec" && (
+                <div className="flex gap-2 overflow-x-auto scrollbar-none pb-1">
+                  {displayedCoachRecommendations.length > 0
+                    ? displayedCoachRecommendations.map((rec, i) => (
+                      <button
+                        key={`${rec.heroName}-${i}`}
+                        onClick={() => handleSelectHero(rec.heroName)}
+                        disabled={usedHeroesMap.has(normalizeHeroKey(rec.heroName))}
+                        className="shrink-0 w-[240px] flex items-start gap-2.5 p-3 rounded-xl border border-white/[0.07] bg-white/[0.02] hover:border-indigo-500/40 transition-all disabled:opacity-50 text-left"
+                      >
+                        <div className="h-10 w-10 rounded-lg overflow-hidden border border-white/[0.08] shrink-0">
+                          <FallbackImage src={getHeroImgUrl(rec.heroName)} fallbackText={rec.heroName} alt={rec.heroName} className="h-full w-full object-cover" containerClassName="h-full w-full text-[7px]" />
                         </div>
-                      </div>
-
-                      {(rec.evidence?.source || rec.evidence?.team) && (
-                        <div className="grid gap-1 rounded-lg border border-gray-800/70 bg-gray-950/60 p-2 text-[9px] font-mono text-gray-400">
-                          <div>
-                            <span className="text-indigo-300">Source:</span>{" "}
-                            {rec.evidence?.source || "Team History"}
+                        <div className="min-w-0 flex-1" title={rec.reason}>
+                          <div className="flex items-center gap-1 mb-0.5">
+                            <span className="text-sm font-bold text-white truncate">{rec.heroName}</span>
+                            <span className="text-[10px] px-1.5 py-0.5 rounded-full border border-indigo-500/30 bg-indigo-900/30 text-indigo-300 shrink-0">{rec.label}</span>
                           </div>
-                          {rec.evidence?.team && (
-                            <div>
-                              <span className="text-indigo-300">Team:</span>{" "}
-                              {rec.evidence.team}
-                            </div>
+                          {(rec as any).source && (
+                            <div className="text-[10px] text-cyan-400/80 mb-0.5 truncate">{(rec as any).source}</div>
                           )}
-                          <div className="flex flex-wrap gap-x-3 gap-y-1">
-                            {typeof rec.evidence?.pickCount === "number" && (
-                              <span>Pick: {rec.evidence.pickCount}</span>
-                            )}
-                            {typeof rec.evidence?.banCount === "number" && (
-                              <span>Ban: {rec.evidence.banCount}</span>
-                            )}
-                            {typeof rec.evidence?.winRate === "number" && (
-                              <span>WR: {rec.evidence.winRate.toFixed(0)}%</span>
+                          <p className="text-xs text-gray-400 line-clamp-3 leading-relaxed">{rec.reason}</p>
+                          <div className="flex items-center justify-between mt-1">
+                            {rec.evidence && <div className="text-[10px] text-gray-500 truncate max-w-[120px]">{rec.evidence}</div>}
+                            {(rec as any).score > 0 && (
+                              <div className="text-[10px] text-indigo-400/70 shrink-0 ml-1">{(rec as any).score}pt</div>
                             )}
                           </div>
                         </div>
-                      )}
-
-                      <p className="text-[11px] text-gray-400 leading-relaxed font-sans pl-1 border-l border-indigo-500/20">
-                        {rec.reason}
-                      </p>
-                    </button>
+                      </button>
+                    ))
+                    : <div className="text-xs text-gray-600 py-3">{recsLoading ? "Loading recommendations…" : "Recommendations appear as draft progresses. Click AI to force fetch."}</div>
+                  }
+                  {aiError && <div className="shrink-0 max-w-[240px] text-xs text-amber-400 p-2.5 rounded-xl border border-amber-500/20 bg-amber-900/5">{aiError}</div>}
+                </div>
+              )}
+              {analysisTab === "counter" && (
+                <div className="flex gap-2 overflow-x-auto scrollbar-none pb-1">
+                  {[
+                    ...evaluationDashboard.risks.blue.map((r) => ({ side: "Blue", risk: r })),
+                    ...evaluationDashboard.risks.red.map((r) => ({ side: "Red", risk: r })),
+                  ].slice(0, 6).map((entry, i) => (
+                    <div key={i} className="shrink-0 w-[190px] flex items-start gap-2 p-2.5 rounded-xl border border-amber-500/15 bg-amber-900/5">
+                      <AlertTriangle className="h-3.5 w-3.5 text-amber-400 shrink-0 mt-0.5" />
+                      <div>
+                        <div className="text-[9px] font-bold text-amber-400 uppercase">{entry.side}</div>
+                        <p className="text-[10px] text-gray-400 leading-relaxed">{entry.risk}</p>
+                      </div>
+                    </div>
+                  ))}
+                  {evaluationDashboard.risks.blue.length === 0 && evaluationDashboard.risks.red.length === 0 && (
+                    <div className="text-xs text-gray-600 py-3">No major threats detected yet.</div>
+                  )}
+                  {evaluationDashboard.recommendations.slice(0, 5).map((rec, i) => (
+                    <div key={`adj-${i}`} className="shrink-0 w-[190px] flex items-start gap-2 p-2.5 rounded-xl border border-cyan-500/10 bg-cyan-900/5">
+                      <ChevronRight className="h-3.5 w-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                      <p className="text-[10px] text-gray-400 leading-relaxed">{rec}</p>
+                    </div>
                   ))}
                 </div>
-              </div>
-            ) : (
-              /* Auto-Recommendation Panel (replaces idle state) */
-              <div className="flex flex-col gap-3 scrollbar-none overflow-y-visible xl:overflow-y-auto max-h-none xl:max-h-[620px]">
-                {recsLoading ? (
-                  /* Loading skeleton for auto-recommendations */
-                  <div className="py-4 space-y-3">
-                    <div className="flex items-center gap-2 justify-center">
-                      <div className="h-4 w-4 border-t-2 border-indigo-500 rounded-full animate-spin" />
-                      <span className="text-xs text-gray-400 animate-pulse">Menganalisis rekomendasi...</span>
-                    </div>
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="rounded-lg bg-gray-900/30 border border-gray-800 p-3 flex gap-3 animate-pulse">
-                        <div className="h-10 w-10 rounded-lg bg-gray-800 shrink-0"></div>
-                        <div className="flex-1 space-y-2 py-0.5">
-                          <div className="h-3 w-1/3 bg-gray-800 rounded"></div>
-                          <div className="h-2 w-full bg-gray-800/60 rounded"></div>
-                          <div className="h-2 w-2/3 bg-gray-800/60 rounded"></div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                ) : draftRecommendations.length > 0 ? (
-                  /* Recommendation Cards */
-                  <>
-                    <h4 className="font-mono text-[9px] text-indigo-400 uppercase tracking-wider font-bold">
-                      Auto Rekomendasi ({currentStep?.type || "ACTION"}):
-                    </h4>
-                    {draftRecommendations.map((rec, i) => {
-                      const topFactors = Object.entries(rec.scoreBreakdown)
-                        .sort(([, a], [, b]) => b - a)
-                        .slice(0, 3);
-                      const factorLabels: Record<string, string> = {
-                        laneFit: "Lane",
-                        roleBalance: "Role",
-                        counter: "Counter",
-                        synergy: "Synergy",
-                        meta: "Meta",
-                        draftPhase: "Phase",
-                        denyPick: "Deny",
-                        flexValue: "Flex",
-                        teamHistory: "Team",
-                        headToHead: "H2H",
-                        draftPattern: "Pattern",
-                        teamComfort: "Comfort",
-                        teamDeny: "Deny",
-                        availability: "Avail",
-                      };
-                      return (
-                        <button
-                          key={i}
-                          onClick={() => {
-                            if (usedHeroesMap.has(normalizeHeroKey(rec.heroName))) {
-                              alert(`Hero ${rec.heroName} sudah digunakan atau diban.`);
-                              return;
-                            }
-                            handleSelectHero(rec.heroName);
-                          }}
-                          className="group flex flex-col gap-2 rounded-xl border border-gray-900 bg-gray-900/30 p-3 hover:border-indigo-500/50 hover:bg-indigo-950/10 text-left transition"
-                        >
-                          {/* Hero info row */}
-                          <div className="flex items-center gap-2.5 w-full">
-                            <FallbackImage
-                              src={getHeroImgUrl(rec.heroName)}
-                              fallbackText={rec.heroName}
-                              alt={rec.heroName}
-                              className="h-10 w-10 rounded-lg bg-gray-950 border border-gray-800 object-cover"
-                              containerClassName="h-10 w-10 rounded-lg text-[8px] bg-gray-950 border border-gray-800"
-                            />
-                            <div className="flex-1 min-w-0">
-                              <div className="font-sans text-xs font-bold text-white group-hover:text-indigo-400 transition-colors truncate">
-                                {rec.heroName}
-                              </div>
-                              <div className="flex items-center gap-1.5 mt-0.5">
-                                <span className="inline-block px-1.5 py-0.5 rounded text-[8px] font-bold uppercase bg-emerald-900/30 text-emerald-400 border border-emerald-800/30">
-                                  {rec.lane}
-                                </span>
-                                <span className="inline-block px-1.5 py-0.5 rounded text-[8px] font-bold uppercase bg-purple-900/30 text-purple-400 border border-purple-800/30">
-                                  {rec.role}
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Total Score Bar */}
-                          <div className="w-full">
-                            <div className="flex items-center justify-between mb-0.5">
-                              <span className="text-[9px] text-gray-500 font-mono font-bold">Score</span>
-                              <span className="text-[9px] text-indigo-400 font-mono font-bold">{rec.totalScore}/100</span>
-                            </div>
-                            <div className="w-full h-1.5 bg-gray-800 rounded-full overflow-hidden">
-                              <div
-                                className="h-full bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-full transition-all"
-                                style={{ width: `${Math.min(rec.totalScore, 100)}%` }}
-                              />
-                            </div>
-                          </div>
-
-                          {/* Top 3 Score Factors */}
-                          <div className="flex items-center gap-2 text-[9px] text-gray-500 font-mono">
-                            {topFactors.map(([key, val]) => (
-                              <span key={key} className="whitespace-nowrap">
-                                <span className="text-gray-400">{factorLabels[key] || key}:</span>{" "}
-                                <span className="text-indigo-300">{val}</span>
-                              </span>
+              )}
+              {analysisTab === "intel" && (
+                <div className="flex gap-2 overflow-x-auto scrollbar-none pb-1">
+                  {/* Local data — always shown immediately */}
+                  {draftMode === "mpl" && (selectedBlueTeam || selectedRedTeam) ? (
+                    <>
+                      {/* Blue team comfort heroes — local or AI enriched */}
+                      <div className="shrink-0 w-[180px] p-2.5 rounded-xl border border-blue-500/20 bg-blue-950/10">
+                        <div className="text-[8px] text-blue-400/70 uppercase tracking-wider mb-1.5">{blueTeam} Comfort</div>
+                        {blueComfortHeroes.length > 0 ? (
+                          <div className="flex flex-wrap gap-1">
+                            {blueComfortHeroes.slice(0, 5).map((h) => (
+                              <span key={h} className="text-[9px] bg-blue-900/40 text-blue-200 px-1.5 py-0.5 rounded-full border border-blue-500/20">{h}</span>
                             ))}
                           </div>
+                        ) : (
+                          <div className="text-[9px] text-gray-600 italic">{aiLoading ? "Loading…" : "Click AI to load"}</div>
+                        )}
+                      </div>
+                      {/* Red team comfort heroes */}
+                      <div className="shrink-0 w-[180px] p-2.5 rounded-xl border border-red-500/20 bg-red-950/10">
+                        <div className="text-[8px] text-red-400/70 uppercase tracking-wider mb-1.5">{redTeam} Comfort</div>
+                        {redComfortHeroes.length > 0 ? (
+                          <div className="flex flex-wrap gap-1">
+                            {redComfortHeroes.slice(0, 5).map((h) => (
+                              <span key={h} className="text-[9px] bg-red-900/40 text-red-200 px-1.5 py-0.5 rounded-full border border-red-500/20">{h}</span>
+                            ))}
+                          </div>
+                        ) : (
+                          <div className="text-[9px] text-gray-600 italic">{aiLoading ? "Loading…" : "Click AI to load"}</div>
+                        )}
+                      </div>
+                    </>
+                  ) : null}
+                  {/* Global meta context — always available instantly */}
+                  <div className="shrink-0 w-[180px] p-2.5 rounded-xl border border-white/[0.07] bg-white/[0.02]">
+                    <div className="text-[8px] text-gray-500 uppercase tracking-wider mb-1.5">Meta Top Picks</div>
+                    <div className="flex flex-wrap gap-1">
+                      {heroes
+                        .slice()
+                        .sort((a, b) => Number(b.picks_total || 0) - Number(a.picks_total || 0))
+                        .slice(0, 6)
+                        .map((h) => (
+                          <span key={h.hero_name} className="text-[9px] bg-white/5 text-gray-300 px-1.5 py-0.5 rounded-full border border-white/10">{h.hero_name}</span>
+                        ))}
+                    </div>
+                  </div>
+                  <div className="shrink-0 w-[180px] p-2.5 rounded-xl border border-white/[0.07] bg-white/[0.02]">
+                    <div className="text-[8px] text-gray-500 uppercase tracking-wider mb-1.5">Meta Top Bans</div>
+                    <div className="flex flex-wrap gap-1">
+                      {heroes
+                        .slice()
+                        .sort((a, b) => Number(b.bans_total || 0) - Number(a.bans_total || 0))
+                        .slice(0, 6)
+                        .map((h) => (
+                          <span key={h.hero_name} className="text-[9px] bg-white/5 text-gray-300 px-1.5 py-0.5 rounded-full border border-white/10">{h.hero_name}</span>
+                        ))}
+                    </div>
+                  </div>
+                  {/* AI-enriched: repick/pivot signals */}
+                  {localTeamIntel.likelyRepicks.map((entry: any, i: number) => (
+                    <div key={i} className="shrink-0 w-[180px] p-2.5 rounded-xl border border-indigo-500/15 bg-indigo-900/5">
+                      <div className="text-[8px] text-indigo-400/70 uppercase tracking-wider mb-1">Likely Repick</div>
+                      <div className="text-xs font-bold text-white">{entry.heroName}</div>
+                      <p className="text-[10px] text-gray-400 mt-0.5 leading-relaxed">{entry.reason}</p>
+                    </div>
+                  ))}
+                  {localTeamIntel.likelyRebans.map((entry: any, i: number) => (
+                    <div key={`reban-${i}`} className="shrink-0 w-[180px] p-2.5 rounded-xl border border-rose-500/15 bg-rose-900/5">
+                      <div className="text-[8px] text-rose-400/70 uppercase tracking-wider mb-1">Likely Reban</div>
+                      <div className="text-xs font-bold text-white">{entry.heroName}</div>
+                      <p className="text-[10px] text-gray-400 mt-0.5 leading-relaxed">{entry.reason}</p>
+                    </div>
+                  ))}
+                  {localTeamIntel.pivotCandidates.map((entry: any, i: number) => (
+                    <div key={`pivot-${i}`} className="shrink-0 w-[180px] p-2.5 rounded-xl border border-violet-500/15 bg-violet-900/5">
+                      <div className="text-[8px] text-violet-400/70 uppercase tracking-wider mb-1">Pivot Candidate</div>
+                      <div className="text-xs font-bold text-white">{entry.heroName}</div>
+                      <p className="text-[10px] text-gray-400 mt-0.5 leading-relaxed">{entry.reason}</p>
+                    </div>
+                  ))}
+                  {localTeamIntel.similarGames.slice(0, 2).map((g: any, i: number) => (
+                    <div key={`sim-${i}`} className="shrink-0 w-[200px] p-2.5 rounded-xl border border-slate-700/40 bg-white/[0.02]">
+                      <div className="text-[8px] text-gray-500 uppercase tracking-wider mb-1">Similar Game</div>
+                      <div className="text-[10px] font-bold text-white">{g.sourceLabel}</div>
+                      <div className="text-[9px] text-gray-500 mt-0.5">Match: {Math.round(g.similarityScore * 100)}%</div>
+                      {g.matchingSignals.slice(0, 2).map((s: string, si: number) => (
+                        <div key={si} className="text-[9px] text-gray-500 truncate">{s}</div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
 
-                          {/* Reason */}
-                          {(rec as any).evidence?.source && (
-                            <div className="grid gap-1 rounded-lg border border-gray-800/70 bg-gray-950/50 p-2 text-[9px] font-mono text-gray-400">
-                              <div>
-                                <span className="text-indigo-300">Source:</span>{" "}
-                                {(rec as any).evidence.source}
-                              </div>
-                              {(rec as any).evidence.team && (
-                                <div>
-                                  <span className="text-indigo-300">Team:</span>{" "}
-                                  {(rec as any).evidence.team}
-                                </div>
-                              )}
-                              <div className="flex flex-wrap gap-x-3 gap-y-1">
-                                {typeof (rec as any).evidence.pickCount === "number" && (
-                                  <span>Pick: {(rec as any).evidence.pickCount}</span>
-                                )}
-                                {typeof (rec as any).evidence.banCount === "number" && (
-                                  <span>Ban: {(rec as any).evidence.banCount}</span>
-                                )}
-                                {typeof (rec as any).evidence.winRate === "number" && (
-                                  <span>WR: {(rec as any).evidence.winRate.toFixed(0)}%</span>
-                                )}
-                              </div>
+          {/* ── ZONE 5: POST-DRAFT ANALYSIS (summary strip, always visible after complete) ──── */}
+          {isCompleted && !showAnalysis && (
+            <div className="relative z-10 border-t border-white/[0.05] px-4 py-3 flex flex-wrap items-center gap-3 bg-black/30">
+              <div className="flex-1 flex flex-wrap gap-2 min-w-0">
+                <div className="rounded-lg border border-blue-500/20 bg-blue-950/15 px-3 py-1.5 text-center">
+                  <div className="text-[8px] text-blue-400/70 uppercase">Blue Win</div>
+                  <div className="text-lg font-black text-white">{evaluationDashboard.blueWinProbability}%</div>
+                </div>
+                <div className="rounded-lg border border-red-500/20 bg-red-950/15 px-3 py-1.5 text-center">
+                  <div className="text-[8px] text-red-400/70 uppercase">Red Win</div>
+                  <div className="text-lg font-black text-white">{evaluationDashboard.redWinProbability}%</div>
+                </div>
+                <div className="rounded-lg border border-white/[0.07] bg-white/[0.02] px-3 py-1.5">
+                  <div className="text-[8px] text-gray-500 uppercase">Winner Edge</div>
+                  <div className={`text-sm font-bold mt-0.5 ${evaluationDashboard.predictedWinner === "blue" ? "text-blue-300" : evaluationDashboard.predictedWinner === "red" ? "text-red-300" : "text-gray-300"}`}>
+                    {evaluationDashboard.predictedWinner === "even" ? "Even" : evaluationDashboard.predictedWinner === "blue" ? blueTeam : redTeam}
+                  </div>
+                </div>
+              </div>
+              <button
+                onClick={() => { evaluateDraftGame(); setShowAnalysis(true); }}
+                className="flex items-center gap-2 px-4 py-2 text-xs bg-emerald-700/50 border border-emerald-500/40 text-emerald-300 rounded-xl font-bold uppercase hover:bg-emerald-700/70 transition-colors shrink-0"
+              >
+                <BarChart3 className="h-4 w-4" />
+                Full Analysis
+              </button>
+            </div>
+          )}
+          {/* ── FULL ANALYSIS VIEW OVERLAY ──────────────────────────────────── */}
+          {isCompleted && showAnalysis && (
+            <div className="absolute inset-0 z-50 bg-[#08091a] overflow-y-auto">
+              {/* Back bar */}
+              <div className="sticky top-0 z-10 flex items-center gap-3 px-4 py-3 bg-[#08091a]/90 backdrop-blur border-b border-white/[0.06]">
+                <button
+                  onClick={() => setShowAnalysis(false)}
+                  className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  Back to Draft
+                </button>
+                <div className="flex-1 text-center text-sm font-bold text-white">Draft Analysis</div>
+                <div className="text-[10px] text-gray-600 w-20 text-right">{evaluationLoading ? "Analyzing…" : "Complete"}</div>
+              </div>
+              {/* Analysis cards */}
+              <div className="p-4 space-y-4">
+                {/* Win probability */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  <div className="rounded-xl border border-blue-500/20 bg-blue-950/15 p-3">
+                    <div className="text-[9px] text-blue-400/70 uppercase tracking-widest">Blue Win</div>
+                    <div className="text-2xl font-black text-white mt-1">{evaluationDashboard.blueWinProbability}%</div>
+                    <div className="mt-2 h-1 rounded-full bg-white/5">
+                      <div className="h-full rounded-full bg-gradient-to-r from-blue-600 to-cyan-400" style={{ width: `${evaluationDashboard.blueWinProbability}%` }} />
+                    </div>
+                    <div className="text-[10px] text-blue-300 mt-1 truncate">{blueTeam}</div>
+                  </div>
+                  <div className="rounded-xl border border-red-500/20 bg-red-950/15 p-3">
+                    <div className="text-[9px] text-red-400/70 uppercase tracking-widest">Red Win</div>
+                    <div className="text-2xl font-black text-white mt-1">{evaluationDashboard.redWinProbability}%</div>
+                    <div className="mt-2 h-1 rounded-full bg-white/5">
+                      <div className="h-full rounded-full bg-gradient-to-r from-red-600 to-rose-400" style={{ width: `${evaluationDashboard.redWinProbability}%` }} />
+                    </div>
+                    <div className="text-[10px] text-red-300 mt-1 truncate">{redTeam}</div>
+                  </div>
+                  <div className="rounded-xl border border-white/[0.07] bg-white/[0.02] p-3">
+                    <div className="text-[9px] text-gray-500 uppercase tracking-widest">Predicted Winner</div>
+                    <div className={`text-sm font-black mt-1 ${evaluationDashboard.predictedWinner === "blue" ? "text-blue-300" : evaluationDashboard.predictedWinner === "red" ? "text-red-300" : "text-gray-300"}`}>
+                      {evaluationDashboard.predictedWinner === "even" ? "Even Draft" : evaluationDashboard.predictedWinner === "blue" ? blueTeam : redTeam}
+                    </div>
+                    <div className="text-[10px] text-gray-600 mt-0.5">{evaluationDashboard.confidenceLabel} · {evaluationDashboard.confidence}%</div>
+                  </div>
+                  <div className="rounded-xl border border-white/[0.07] bg-white/[0.02] p-3">
+                    <div className="text-[9px] text-gray-500 uppercase tracking-widest">Lane Coverage</div>
+                    <div className="mt-1.5 space-y-0.5">
+                      <div className="text-[10px]">
+                        <span className="text-blue-400">Blue: </span>
+                        <span className={evaluationDashboard.teamPanels.blue.missingLanes.length ? "text-amber-400" : "text-emerald-400"}>
+                          {evaluationDashboard.teamPanels.blue.missingLanes.length ? evaluationDashboard.teamPanels.blue.missingLanes.join(", ") : "Full ✓"}
+                        </span>
+                      </div>
+                      <div className="text-[10px]">
+                        <span className="text-red-400">Red: </span>
+                        <span className={evaluationDashboard.teamPanels.red.missingLanes.length ? "text-amber-400" : "text-emerald-400"}>
+                          {evaluationDashboard.teamPanels.red.missingLanes.length ? evaluationDashboard.teamPanels.red.missingLanes.join(", ") : "Full ✓"}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Score breakdown */}
+                <div className="rounded-xl border border-white/[0.06] bg-white/[0.01] p-4">
+                  <div className="text-[11px] font-bold text-gray-300 uppercase tracking-widest mb-3">Score Breakdown</div>
+                  <div className="grid gap-2">
+                    {Object.values(evaluationDashboard.scoreBreakdown).map((metric) => {
+                      const total = Math.max(metric.blue, metric.red, 1);
+                      return (
+                        <div key={metric.label} className="flex items-center gap-2">
+                          <div className="w-28 text-gray-500 truncate shrink-0 text-[11px]">{metric.label}</div>
+                          <span className="text-blue-300 w-6 text-right shrink-0 text-[11px]">{metric.blue}</span>
+                          <div className="flex-1 flex items-center h-2 gap-0.5">
+                            <div className="flex-1 flex justify-end h-full">
+                              <div className="h-full rounded-l-full bg-gradient-to-l from-blue-500 to-blue-700" style={{ width: `${(metric.blue / total) * 100}%` }} />
                             </div>
-                          )}
-                          <p className="text-[10px] text-gray-400 leading-relaxed font-sans pl-1 border-l-2 border-indigo-500/20">
-                            {rec.reason}
-                          </p>
-                        </button>
+                            <div className="w-px h-3 bg-white/10" />
+                            <div className="flex-1 h-full">
+                              <div className="h-full rounded-r-full bg-gradient-to-r from-red-500 to-red-700" style={{ width: `${(metric.red / total) * 100}%` }} />
+                            </div>
+                          </div>
+                          <span className="text-red-300 w-6 shrink-0 text-[11px]">{metric.red}</span>
+                        </div>
                       );
                     })}
+                  </div>
+                </div>
 
-                    {/* Secondary manual AI Coach button */}
-                    <div className="border-t border-gray-900 pt-3 mt-1">
-                      <button
-                        onClick={fetchAICoach}
-                        disabled={aiLoading}
-                        className="w-full flex items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-[10px] font-bold border border-gray-800 bg-gray-900/50 text-gray-400 hover:text-indigo-400 hover:border-indigo-500/30 hover:bg-indigo-950/10 transition disabled:opacity-50"
-                      >
-                        <Sparkles className="h-3.5 w-3.5" />
-                        Analisis Mendalam (AI Coach)
-                      </button>
+                {/* Lane matchups */}
+                {evaluationDashboard.laneMatchups.length > 0 && (
+                  <div>
+                    <div className="text-[11px] font-bold text-gray-300 uppercase tracking-widest mb-3">Lane Matchups</div>
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
+                      {evaluationDashboard.laneMatchups.map((lane) => (
+                        <div key={lane.lane} className={`rounded-xl border p-3 ${lane.favoredSide === "blue" ? "border-blue-500/20 bg-blue-950/10" : lane.favoredSide === "red" ? "border-red-500/20 bg-red-950/10" : "border-white/[0.06] bg-white/[0.01]"}`}>
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="text-[10px] text-gray-500 uppercase tracking-wider">{lane.lane}</div>
+                            <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${lane.favoredSide === "blue" ? "bg-blue-900/40 text-blue-300" : lane.favoredSide === "red" ? "bg-red-900/40 text-red-300" : "bg-white/5 text-gray-400"}`}>
+                              {lane.matchupScore}
+                            </span>
+                          </div>
+                          <div className="flex items-center justify-between gap-2">
+                            <div className="flex flex-col items-center gap-1">
+                              <div className="h-10 w-10 rounded-lg overflow-hidden border border-blue-900/40">
+                                <FallbackImage src={getHeroImgUrl(lane.blueHero)} fallbackText={lane.blueHero} alt={lane.blueHero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
+                              </div>
+                              <div className="text-[9px] text-blue-300 truncate max-w-[52px] text-center">{lane.blueHero}</div>
+                            </div>
+                            <span className="text-[10px] text-gray-600 font-bold">vs</span>
+                            <div className="flex flex-col items-center gap-1">
+                              <div className="h-10 w-10 rounded-lg overflow-hidden border border-red-900/40">
+                                <FallbackImage src={getHeroImgUrl(lane.redHero)} fallbackText={lane.redHero} alt={lane.redHero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
+                              </div>
+                              <div className="text-[9px] text-red-300 truncate max-w-[52px] text-center">{lane.redHero}</div>
+                            </div>
+                          </div>
+                          <div className="text-[10px] text-gray-500 mt-2 leading-relaxed line-clamp-2">{lane.reason}</div>
+                        </div>
+                      ))}
                     </div>
-                  </>
-                ) : (
-                  /* Fallback idle if no recommendations available */
-                  <div className="flex flex-col items-center justify-center text-center py-12 text-gray-600 gap-2">
-                    <HelpCircle className="h-8 w-8 mb-1 opacity-20" />
-                    <h4 className="font-sans text-xs font-semibold text-white">
-                      Menunggu Rekomendasi
-                    </h4>
-                    <p className="text-[11px] text-gray-500 leading-relaxed max-w-[200px]">
-                      Rekomendasi otomatis akan muncul saat draf berlangsung.
-                    </p>
-                    <button
-                      onClick={fetchAICoach}
-                      disabled={aiLoading}
-                      className="mt-2 flex items-center gap-1.5 rounded-lg px-3 py-2 text-[10px] font-bold border border-gray-800 bg-gray-900/50 text-gray-400 hover:text-indigo-400 hover:border-indigo-500/30 transition disabled:opacity-50"
-                    >
-                      <Sparkles className="h-3.5 w-3.5" />
-                      AI Coach Rekomendasi
-                    </button>
+                  </div>
+                )}
+
+                {/* Key factors */}
+                {evaluationDashboard.keyFactors.length > 0 && (
+                  <div>
+                    <div className="text-[11px] font-bold text-gray-300 uppercase tracking-widest mb-3">Key Factors</div>
+                    <div className="flex flex-wrap gap-2">
+                      {evaluationDashboard.keyFactors.slice(0, 8).map((f, i) => (
+                        <div key={i} className="flex items-start gap-1.5 text-[12px] text-gray-300 px-3 py-2 rounded-lg border border-white/[0.07] bg-white/[0.02]">
+                          <Zap className="h-3.5 w-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                          {f}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Risk warnings */}
+                {(evaluationDashboard.risks.blue.length > 0 || evaluationDashboard.risks.red.length > 0) && (
+                  <div>
+                    <div className="text-[11px] font-bold text-gray-300 uppercase tracking-widest mb-3">Risk Warnings</div>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        ...evaluationDashboard.risks.blue.map((r) => ({ side: "Blue", r })),
+                        ...evaluationDashboard.risks.red.map((r) => ({ side: "Red", r })),
+                      ].map((entry, i) => (
+                        <div key={i} className="flex items-start gap-1.5 text-[12px] text-gray-300 px-3 py-2 rounded-lg border border-amber-500/20 bg-amber-900/5 max-w-sm">
+                          <AlertTriangle className="h-3.5 w-3.5 text-amber-400 shrink-0 mt-0.5" />
+                          <span><span className="font-bold text-white">{entry.side}:</span> {entry.r}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* AI Analyst Notes */}
+                {(evaluationLoading || evaluationResult) && (
+                  <div className="rounded-xl border border-emerald-500/15 bg-emerald-900/5 p-4">
+                    <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-emerald-400 mb-3">
+                      <BookOpen className="h-4 w-4" />
+                      Analyst Notes
+                    </div>
+                    {evaluationLoading ? (
+                      <div className="flex items-center gap-2 text-sm text-emerald-300">
+                        <Wand2 className="h-5 w-5 animate-pulse" />
+                        Running final analysis…
+                      </div>
+                    ) : (
+                      <div className="grid gap-2">
+                        {evaluationResult
+                          .split("\n")
+                          .map((line) => line.replace(/^[-*]\s*/, "").trim())
+                          .filter(Boolean)
+                          .slice(0, 5)
+                          .map((line, index) => (
+                            <div key={index} className="rounded-lg border border-emerald-500/10 bg-black/20 px-3 py-2 text-sm text-gray-200">
+                              • {line}
+                            </div>
+                          ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+                {debugDraftAI && (
+                  <div className="rounded-xl border border-fuchsia-500/15 bg-fuchsia-950/5 p-4">
+                    <div className="text-[11px] font-bold uppercase tracking-widest text-fuchsia-300 mb-3">Draft AI Debug</div>
+                    <div className="grid gap-2 text-[11px] text-gray-300">
+                      <div>Teams: {blueTeam || "-"} vs {redTeam || "-"}</div>
+                      <div>Current Step: {currentStep?.label || "COMPLETED"}</div>
+                      <div>Source: {aiResult?.debug?.recommendationSource || aiResult?.mplIntelligence?.recommendationSource || "local"}</div>
+                      <div>Team Games: B {historicalContext?.teamProfiles?.blue?.totalGames || 0} / R {historicalContext?.teamProfiles?.red?.totalGames || 0}</div>
+                      <div>Matchup Games: {historicalContext?.matchupProfile?.headToHeadGames || 0}</div>
+                      <div>Local Intel Ready: {localIntelGeneratedAt ? "yes" : "no"}</div>
+                      <div>AI Latency: {evaluationMeta?.latencyMs ?? "n/a"} ms</div>
+                      <div>Cache Hit: {String(evaluationMeta?.cached ?? aiResult?.cached ?? false)}</div>
+                    </div>
+                    <div className="mt-3 grid gap-2">
+                      {[...(aiResult?.recommendations || []), ...draftRecommendations]
+                        .slice(0, 10)
+                        .map((rec: any, idx: number) => (
+                          <div key={`${rec.heroName}-${idx}`} className="rounded-lg border border-white/8 bg-black/20 px-3 py-2 text-[11px]">
+                            <div className="font-bold text-white">{rec.heroName} — {rec.totalScore ?? rec.score ?? 0}</div>
+                            <div className="text-gray-400 break-all">{JSON.stringify(rec.scoreBreakdown || {})}</div>
+                          </div>
+                        ))}
+                    </div>
                   </div>
                 )}
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       )}
     </div>

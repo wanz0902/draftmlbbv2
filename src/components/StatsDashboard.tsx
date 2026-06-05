@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
 import {
+  ArrowLeft,
   Search,
   Swords,
   Trophy,
@@ -128,6 +129,19 @@ export default function StatsDashboard({
 
   return (
     <div className="flex flex-col gap-6">
+      <div className="flex items-center justify-between gap-3 sm:hidden">
+        <button
+          type="button"
+          onClick={() => window.history.back()}
+          className="btn-ghost justify-start text-xs"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Kembali
+        </button>
+        <div className="ui-badge border-white/10 bg-white/[0.04] text-slate-300">
+          Hero Stats
+        </div>
+      </div>
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         {/* List Panel */}
         <div className="lg:col-span-2 flex flex-col gap-4 rounded-xl border border-gray-900 bg-gray-950 p-4 shadow-xl">

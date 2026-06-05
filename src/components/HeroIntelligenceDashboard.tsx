@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { DetailedHero } from "../types/hero";
 import HeroDetailPanel from "./HeroDetailPanel";
-import { Search, Info, Hexagon } from "lucide-react";
+import { ArrowLeft, Search, Info, Hexagon } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 import FallbackImage from "./FallbackImage";
@@ -44,6 +44,19 @@ export default function HeroIntelligenceDashboard({ heroAssets }: Props) {
 
   return (
     <div className="flex flex-col gap-6">
+      <div className="flex items-center justify-between gap-3 sm:hidden">
+        <button
+          type="button"
+          onClick={() => window.history.back()}
+          className="btn-ghost justify-start text-xs"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Kembali
+        </button>
+        <div className="ui-badge border-white/10 bg-white/[0.04] text-slate-300">
+          Hero Intelligence
+        </div>
+      </div>
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h2 className="text-2xl font-bold font-sans text-white uppercase tracking-tight flex items-center gap-2">

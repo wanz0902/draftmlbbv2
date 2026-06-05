@@ -1,16 +1,17 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
-  Award,
-  ShieldAlert,
   BarChart3,
   CloudLightning,
+  Database,
   Home,
-  ShoppingBag,
-  Eye,
-  Trophy,
-  Flame,
   LogOut,
-  User as UserIcon
+  Menu,
+  ShieldCheck,
+  Sparkles,
+  Trophy,
+  User as UserIcon,
+  Users,
+  X,
 } from "lucide-react";
 import { User, signInWithPopup, signOut, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../lib/firebase";
@@ -22,18 +23,81 @@ interface NavbarProps {
   user?: User | null;
 }
 
+const directLinks = [
+  { id: "home", label: "Home", icon: Home },
+  { id: "draft", label: "Draft", icon: CloudLightning },
+  { id: "teams", label: "Teams", icon: Users },
+  { id: "tier", label: "Meta", icon: Trophy },
+];
+
+const groupedLinks = [
+  {
+    id: "heroes-group",
+    label: "Heroes",
+    icon: Sparkles,
+    items: [
+      { id: "intelligence", label: "Hero Intelligence" },
+      { id: "heroes", label: "Hero Stats" },
+      { id: "counter", label: "Counter Matrix" },
+      { id: "tier", label: "Tier List" },
+    ],
+  },
+  {
+    id: "data-group",
+    label: "Data",
+    icon: Database,
+    items: [
+      { id: "scraper", label: "Liquipedia Updates" },
+      { id: "items", label: "Items Catalog" },
+    ],
+  },
+];
+
+const mobileSections = [
+  { title: "Primary", items: directLinks },
+  {
+    title: "Heroes",
+    items: [
+      { id: "intelligence", label: "Hero Intelligence", icon: Sparkles },
+      { id: "heroes", label: "Hero Stats", icon: BarChart3 },
+      { id: "counter", label: "Counter Matrix", icon: ShieldCheck },
+      { id: "tier", label: "Tier List", icon: Trophy },
+    ],
+  },
+  {
+    title: "Data",
+    items: [
+      { id: "scraper", label: "Liquipedia Updates", icon: Database },
+      { id: "items", label: "Items Catalog", icon: Database },
+    ],
+  },
+];
+
 export default function Navbar({
   currentTab,
   onChangeTab,
   scrapingStatus,
-  user
+  user,
 }: NavbarProps) {
   const [authLoading, setAuthLoading] = useState(false);
-  const mobileNavRef = useRef<HTMLDivElement>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const activeBtn = mobileNavRef.current?.querySelector('[data-active="true"]');
-    activeBtn?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, []);
+
+  useEffect(() => {
+    setMobileOpen(false);
+    setOpenDropdown(null);
   }, [currentTab]);
 
   const handleLogin = async () => {
@@ -55,57 +119,86 @@ export default function Navbar({
       console.error("Logout failed:", error);
     }
   };
-  const links = [
-    { id: "home", label: "Home", icon: Home },
-    { id: "draft", label: "Draft Simulator", icon: CloudLightning },
-    { id: "intelligence", label: "Hero Intelligence", icon: Eye },
-    { id: "tier", label: "Tier List", icon: Trophy },
-    { id: "counter", label: "Counter Matrix", icon: Flame },
-    { id: "heroes", label: "Hero Stats", icon: BarChart3 },
-    { id: "teams", label: "Team Analytics", icon: Award },
-    { id: "items", label: "Items Catalog", icon: ShoppingBag },
-    { id: "scraper", label: "Liquipedia Updates", icon: ShieldAlert },
-  ];
+
+  const groupedActiveState = useMemo(() => {
+    const state = new Set<string>();
+    for (const group of groupedLinks) {
+      if (group.items.some((item) => item.id === currentTab)) {
+        state.add(group.id);
+      }
+    }
+    return state;
+  }, [currentTab]);
+
+  const renderAuthButton = () => {
+    if (user) {
+      return (
+        <div className="flex items-center gap-2 rounded-full border border-cyan-400/15 bg-cyan-400/10 px-2 py-1.5">
+          <img
+            src={user.photoURL || `https://ui-avatars.com/api/?name=${user.email}&background=0D8ABC&color=fff`}
+            alt="Profile"
+            className="h-7 w-7 rounded-full border border-cyan-300/30"
+            referrerPolicy="no-referrer"
+          />
+          <button
+            onClick={handleLogout}
+            className="rounded-full p-1 text-slate-300 transition hover:bg-white/8 hover:text-white"
+            title="Sign Out"
+          >
+            <LogOut className="h-4 w-4" />
+          </button>
+        </div>
+      );
+    }
+
+    return (
+      <button
+        onClick={handleLogin}
+        disabled={authLoading}
+        className="btn-primary rounded-full px-4 py-2 text-sm tracking-[0.08em] disabled:opacity-60"
+      >
+        <UserIcon className="h-4 w-4" />
+        {authLoading ? "Loading..." : "Sign In"}
+      </button>
+    );
+  };
 
   return (
-    <header
-      id="app-navbar"
-      className="sticky top-0 z-50 w-full border-b border-blue-900/35 bg-[#0a111f]/90 backdrop-blur-md"
-    >
-      <div className="mx-auto flex max-w-7xl h-16 items-center justify-between px-4 sm:px-6">
-        {/* Brand */}
+    <header className="sticky top-0 z-50 border-b border-white/8 bg-[#050b14]/90 backdrop-blur-xl">
+      <div className="mx-auto flex w-full max-w-7xl items-center gap-2 overflow-x-clip px-3 py-3 sm:gap-3 sm:px-6 lg:px-8">
         <button
           onClick={() => onChangeTab("home")}
-          className="flex items-center gap-3 cursor-pointer bg-transparent border-none p-0"
+          className="flex min-w-0 max-w-[240px] shrink items-center gap-2 rounded-2xl border border-white/8 bg-white/[0.03] px-2.5 py-2 text-left transition hover:border-cyan-400/20 hover:bg-white/[0.05] sm:max-w-[280px] sm:gap-3 sm:px-3"
           aria-label="Go to Home"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 font-mono text-xl font-bold text-white shadow-lg shadow-blue-550/25">
+          <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 font-mono text-sm font-black text-slate-950 shadow-[0_16px_40px_-18px_rgba(56,189,248,0.9)] sm:h-11 sm:w-11 sm:text-base">
             ML
           </div>
-          <div className="text-left">
-            <h1 className="font-sans text-md font-bold tracking-tight text-white sm:text-lg">
-              MLBB Draft Simulator
-            </h1>
-            <p className="font-mono text-[10px] text-blue-400 font-bold uppercase tracking-widest">
-              MPL ID SEASONS COACH
-            </p>
+          <div className="min-w-0">
+            <div className="truncate font-display text-sm font-bold tracking-tight text-white sm:text-lg">
+              Draft Analyst MLBB
+            </div>
+            <div className="truncate font-mono text-[8px] uppercase tracking-[0.18em] text-cyan-300 sm:text-[10px] sm:tracking-[0.24em]">
+              MPL ID Control Desk
+            </div>
           </div>
         </button>
 
-        {/* Links */}
-        <nav className="hidden md:flex items-center gap-1">
-          {links.map((link) => {
+        <div
+          ref={dropdownRef}
+          className="hidden min-w-0 flex-1 items-center justify-center gap-1.5 xl:flex"
+        >
+          {directLinks.slice(0, 2).map((link) => {
             const Icon = link.icon;
             const active = currentTab === link.id;
             return (
               <button
                 key={link.id}
-                id={`nav-${link.id}`}
                 onClick={() => onChangeTab(link.id)}
-                className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 cursor-pointer ${
+                className={`inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold transition ${
                   active
-                    ? "bg-blue-600/15 text-blue-400 font-semibold shadow-sm border border-blue-550/20"
-                    : "text-gray-400 hover:bg-[#0a111f]/60 hover:text-white"
+                    ? "bg-cyan-400/12 text-cyan-300 shadow-[0_0_0_1px_rgba(34,211,238,0.22)]"
+                    : "text-slate-300 hover:bg-white/[0.05] hover:text-white"
                 }`}
               >
                 <Icon className="h-4 w-4" />
@@ -113,73 +206,171 @@ export default function Navbar({
               </button>
             );
           })}
-        </nav>
 
-        {/* Right Corner (Status & Auth) */}
-        <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center gap-2">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span className="font-mono text-xs text-gray-400">
-              {scrapingStatus || "Scraped: MLBB API active"}
-            </span>
-          </div>
+          {groupedLinks.map((group) => {
+            const Icon = group.icon;
+            const active = groupedActiveState.has(group.id);
+            const open = openDropdown === group.id;
 
-          <div className="flex items-center gap-2">
-            {user ? (
-              <div className="flex items-center gap-3 bg-blue-900/20 px-3 py-1.5 rounded-lg border border-blue-800/30">
-                <img 
-                  src={user.photoURL || `https://ui-avatars.com/api/?name=${user.email}&background=0D8ABC&color=fff`} 
-                  alt="Profile" 
-                  className="w-6 h-6 rounded-full border border-blue-500/50"
-                  referrerPolicy="no-referrer"
-                />
-                <button 
-                  onClick={handleLogout}
-                  className="text-xs text-gray-400 hover:text-white transition-colors"
-                  title="Sign Out"
+            return (
+              <div key={group.id} className="relative">
+                <button
+                  onClick={() => setOpenDropdown(open ? null : group.id)}
+                  className={`inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold transition ${
+                    active || open
+                      ? "bg-cyan-400/12 text-cyan-300 shadow-[0_0_0_1px_rgba(34,211,238,0.22)]"
+                      : "text-slate-300 hover:bg-white/[0.05] hover:text-white"
+                  }`}
                 >
-                  <LogOut className="h-4 w-4" />
+                  <Icon className="h-4 w-4" />
+                  {group.label}
                 </button>
+
+                {open && (
+                  <div className="absolute left-1/2 top-full z-50 mt-3 w-60 -translate-x-1/2 overflow-hidden rounded-3xl border border-white/10 bg-[#081120]/95 p-2 shadow-[0_28px_80px_-28px_rgba(2,12,27,0.95)] backdrop-blur-xl">
+                    {group.items.map((item) => {
+                      const activeItem = currentTab === item.id;
+                      return (
+                        <button
+                          key={item.id}
+                          onClick={() => {
+                            onChangeTab(item.id);
+                            setOpenDropdown(null);
+                          }}
+                          className={`flex w-full items-center justify-between rounded-2xl px-4 py-3 text-left text-sm transition ${
+                            activeItem
+                              ? "bg-cyan-400/10 text-cyan-300"
+                              : "text-slate-300 hover:bg-white/[0.05] hover:text-white"
+                          }`}
+                        >
+                          <span>{item.label}</span>
+                          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500">
+                            Open
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
-            ) : (
+            );
+          })}
+
+          {directLinks.slice(2).map((link) => {
+            const Icon = link.icon;
+            const active = currentTab === link.id;
+            return (
               <button
-                onClick={handleLogin}
-                disabled={authLoading}
-                className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-colors disabled:opacity-50"
+                key={link.id}
+                onClick={() => onChangeTab(link.id)}
+                className={`inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold transition ${
+                  active
+                    ? "bg-cyan-400/12 text-cyan-300 shadow-[0_0_0_1px_rgba(34,211,238,0.22)]"
+                    : "text-slate-300 hover:bg-white/[0.05] hover:text-white"
+                }`}
               >
-                <UserIcon className="h-3.5 w-3.5" />
-                {authLoading ? "..." : "Sign In"}
+                <Icon className="h-4 w-4" />
+                {link.label}
               </button>
-            )}
+            );
+          })}
+        </div>
+
+        <div className="ml-auto hidden items-center gap-3 lg:flex">
+          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/15 bg-emerald-400/8 px-3 py-2">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/75" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+            </span>
+            <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-emerald-300">
+              {scrapingStatus || "Live data"}
+            </span>
           </div>
+          {renderAuthButton()}
+        </div>
+
+        <div className="ml-auto flex items-center gap-2 xl:hidden">
+          <div className="hidden items-center gap-2 rounded-full border border-emerald-400/15 bg-emerald-400/8 px-3 py-2 sm:inline-flex">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/75" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-emerald-300">
+              Live
+            </span>
+          </div>
+          <button
+            onClick={() => setMobileOpen((value) => !value)}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-slate-200 transition hover:border-cyan-400/25 hover:text-white"
+            aria-label="Toggle navigation menu"
+          >
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
       </div>
 
-      {/* Mobile Nav Links */}
-      <div ref={mobileNavRef} className="md:hidden flex overflow-x-auto border-t border-gray-900 bg-gray-950 px-2 py-1 scrollbar-none gap-1">
-        {links.map((link) => {
-          const Icon = link.icon;
-          const active = currentTab === link.id;
-          return (
+      {mobileOpen && (
+        <div className="border-t border-white/8 bg-[#060d17]/96 px-4 py-4 backdrop-blur-xl xl:hidden">
+          <div className="mx-auto flex max-w-7xl flex-col gap-4">
             <button
-              key={link.id}
-              data-active={active ? "true" : "false"}
-              onClick={() => onChangeTab(link.id)}
-              className={`flex items-center gap-1.5 shrink-0 rounded-md px-2.5 py-1.5 text-xs font-medium transition-colors cursor-pointer ${
-                active
-                  ? "bg-blue-600/30 text-blue-300 border-b-2 border-blue-500 font-semibold"
-                  : "text-gray-400 hover:bg-gray-900 hover:text-white"
-              }`}
+              onClick={() => {
+                onChangeTab("home");
+                setMobileOpen(false);
+              }}
+              className="btn-ghost w-full justify-start text-xs"
             >
-              <Icon className="h-3.5 w-3.5" />
-              {link.label}
+              <Home className="h-4 w-4" />
+              Back to Home
             </button>
-          );
-        })}
-      </div>
+            <div className="flex items-center justify-between rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 lg:hidden">
+              <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-300">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/75" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                </span>
+                {scrapingStatus || "Live data"}
+              </div>
+              {renderAuthButton()}
+            </div>
+
+            {mobileSections.map((section) => (
+              <div
+                key={section.title}
+                className="rounded-[24px] border border-white/8 bg-white/[0.03] p-3"
+              >
+                <div className="px-2 pb-2 font-mono text-[10px] uppercase tracking-[0.24em] text-slate-500">
+                  {section.title}
+                </div>
+                <div className="grid gap-2">
+                  {section.items.map((item) => {
+                    const Icon = item.icon;
+                    const active = currentTab === item.id;
+                    return (
+                      <button
+                        key={item.id}
+                        onClick={() => onChangeTab(item.id)}
+                        className={`flex items-center justify-between rounded-2xl px-4 py-3 text-left transition ${
+                          active
+                            ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_0_1px_rgba(34,211,238,0.2)]"
+                            : "text-slate-300 hover:bg-white/[0.05] hover:text-white"
+                        }`}
+                      >
+                        <span className="inline-flex items-center gap-3">
+                          <Icon className="h-4 w-4" />
+                          <span className="text-sm font-medium">{item.label}</span>
+                        </span>
+                        <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500">
+                          Open
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   );
 }

@@ -38,6 +38,7 @@ function DraftRow({
   picks,
   bans,
   heroAssets,
+  teamLogo,
 }: {
   label: string;
   team: string;
@@ -45,19 +46,23 @@ function DraftRow({
   picks: string[];
   bans: string[];
   heroAssets: Record<string, string>;
+  teamLogo?: string;
 }) {
   return (
-    <div className="rounded-lg border border-gray-900 bg-black/20 p-3">
+    <div className="rounded-xl border border-gray-900 bg-[#09111d]/85 p-4">
       <div className="mb-2 flex items-center gap-2">
         <span className={`h-2 w-2 rounded-full ${side === "blue" ? "bg-blue-400" : "bg-rose-400"}`} />
         <span className={`w-10 text-[10px] font-bold uppercase ${side === "blue" ? "text-blue-400" : "text-rose-400"}`}>
           {label}
         </span>
-        <span className="text-xs font-semibold text-gray-200">{team}</span>
+        {teamLogo ? (
+          <img src={teamLogo} alt={team} className="h-6 w-6 rounded-full object-contain bg-white/5 p-0.5" />
+        ) : null}
+        <span className="text-sm font-semibold text-gray-200">{team}</span>
       </div>
       <div className="grid gap-2 md:grid-cols-2">
         <div>
-          <div className="mb-1 text-[9px] font-mono uppercase tracking-widest text-gray-500">Picks</div>
+          <div className="mb-1 text-[10px] font-mono uppercase tracking-widest text-gray-500">Picks</div>
           <div className="flex flex-wrap gap-1">
             {(picks || []).map((hero, index) => (
               <HeroIcon key={`${team}-pick-${hero}-${index}`} heroName={hero} heroAssets={heroAssets} />
@@ -65,7 +70,7 @@ function DraftRow({
           </div>
         </div>
         <div>
-          <div className="mb-1 text-[9px] font-mono uppercase tracking-widest text-gray-500">Bans</div>
+          <div className="mb-1 text-[10px] font-mono uppercase tracking-widest text-gray-500">Bans</div>
           <div className="flex flex-wrap gap-1 opacity-80">
             {(bans || []).map((hero, index) => (
               <HeroIcon key={`${team}-ban-${hero}-${index}`} heroName={hero} heroAssets={heroAssets} />
@@ -80,9 +85,11 @@ function DraftRow({
 function GameDetail({
   game,
   heroAssets,
+  getTeamLogo,
 }: {
   game: GameData;
   heroAssets: Record<string, string>;
+  getTeamLogo?: (teamKey: string) => string;
 }) {
   return (
     <div className="border-t border-gray-900 bg-[#060b13]/70 p-4">
@@ -92,7 +99,7 @@ function GameDetail({
             Game {game.gameNumber}
           </span>
           <span className="rounded bg-emerald-950/40 px-2 py-1 text-[10px] font-bold uppercase text-emerald-300">
-            W: {game.winner}
+            Winner: {game.winner}
           </span>
         </div>
         <div className="flex flex-wrap items-center gap-3 text-xs text-gray-400">
@@ -102,7 +109,7 @@ function GameDetail({
           </span>
           <span className="flex items-center gap-1">
             <Map className="h-3.5 w-3.5 text-cyan-400" />
-            {game.mapMode || "Data tidak tersedia"}
+            Map: {game.mapMode || "Data tidak tersedia"}
           </span>
           {game.mvp && game.mvp !== "Data tidak tersedia" && (
             <span className="flex items-center gap-1 text-amber-300">
@@ -120,6 +127,7 @@ function GameDetail({
           picks={game.bluePicks || []}
           bans={game.blueBans || []}
           heroAssets={heroAssets}
+          teamLogo={getTeamLogo?.(game.blueTeam)}
         />
         <DraftRow
           label="Red"
@@ -128,6 +136,7 @@ function GameDetail({
           picks={game.redPicks || []}
           bans={game.redBans || []}
           heroAssets={heroAssets}
+          teamLogo={getTeamLogo?.(game.redTeam)}
         />
       </div>
     </div>
@@ -188,14 +197,8 @@ export default function MatchSeriesCard({
       {expanded && (
         <div>
           {series.games.map((game) => (
-            <GameDetail key={`${series.id}-${game.gameNumber}`} game={game} heroAssets={heroAssets} />
+            <GameDetail key={`${series.id}-${game.gameNumber}`} game={game} heroAssets={heroAssets} getTeamLogo={getTeamLogo} />
           ))}
-          <details className="border-t border-gray-900 px-4 py-2 text-[9px] font-mono text-gray-600">
-            <summary className="cursor-pointer hover:text-gray-400">Debug</summary>
-            <div className="mt-1">
-              ID: {series.id} | Week {series.week} Day {series.day} | {series.date} | {series.games.length} games
-            </div>
-          </details>
         </div>
       )}
     </div>

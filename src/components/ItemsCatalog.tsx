@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
 import {
+  ArrowLeft,
   Search,
   ShoppingBag,
   Coins,
@@ -65,6 +66,19 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
 
   return (
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+      <div className="flex items-center justify-between gap-3 lg:col-span-3 sm:hidden">
+        <button
+          type="button"
+          onClick={() => window.history.back()}
+          className="btn-ghost justify-start text-xs"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Kembali
+        </button>
+        <div className="ui-badge border-white/10 bg-white/[0.04] text-slate-300">
+          Items Catalog
+        </div>
+      </div>
       {/* Items List Grid */}
       <div className="lg:col-span-2 flex flex-col gap-4 rounded-xl border border-gray-900 bg-gray-950 p-4 shadow-xl">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-gray-900 pb-3">

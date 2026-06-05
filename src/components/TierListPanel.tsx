@@ -1,8 +1,9 @@
 import React, { useState, useMemo } from "react";
 import { HeroStats } from "../types";
-import { Award, Search } from "lucide-react";
+import { ArrowLeft, Award, Search } from "lucide-react";
 import { getHeroImageUrl } from "../lib/heroUtils";
 import FallbackImage from "./FallbackImage";
+import heroesMaster from "../data/heroes_master.json";
 
 interface TierListPanelProps {
   heroes: HeroStats[];
@@ -19,9 +20,46 @@ export default function TierListPanel({ heroes, heroAssets }: TierListPanelProps
   const roles = ["ALL", "Assassin", "Fighter", "Mage", "Marksman", "Support", "Tank"];
   const lanes = ["ALL", "Jungle", "EXP Lane", "Mid Lane", "Gold Lane", "Roamer"];
 
+  const fullHeroPool = useMemo(() => {
+    const statsMap = new Map(
+      heroes.map((hero) => [String(hero.hero_name || "").toLowerCase(), hero])
+    );
+
+    return (heroesMaster as Array<any>).map((master) => {
+      const stats = statsMap.get(String(master.hero_name || "").toLowerCase());
+      const picks = Number(stats?.picks_total || 0);
+      const bans = Number(stats?.bans_total || 0);
+      const winRate = Number(stats?.win_rate ?? stats?.winrate ?? 0);
+      const presence = Number(stats?.tournament_presence || 0);
+      const totalImpact = picks + bans;
+
+      let derivedTier = "C";
+      if (presence >= 55 || totalImpact >= 28) derivedTier = "S+";
+      else if (presence >= 40 || totalImpact >= 22) derivedTier = "S";
+      else if (presence >= 24 || totalImpact >= 14) derivedTier = "A";
+      else if (presence >= 12 || totalImpact >= 8) derivedTier = "B";
+      else if (presence >= 5 || totalImpact >= 3) derivedTier = "C";
+      else derivedTier = "D";
+
+      return {
+        hero_name: master.hero_name,
+        id: stats?.id || String(master.hero_id || master.hero_name),
+        role: master.role || stats?.role,
+        lane: master.lane || stats?.lane,
+        lanes: master.lanes || stats?.lanes,
+        tier: derivedTier,
+        win_rate: winRate,
+        winrate: stats?.winrate || String(winRate),
+        picks_total: String(picks),
+        bans_total: String(bans),
+        tournament_presence: String(presence),
+      } as HeroStats;
+    });
+  }, [heroes]);
+
   // Filter heroes
   const filteredHeroes = useMemo(() => {
-    return heroes.filter((hero) => {
+    return fullHeroPool.filter((hero) => {
       const nameMatch = hero.hero_name.toLowerCase().includes(searchQuery.toLowerCase());
       
       const roleMatch =
@@ -36,7 +74,7 @@ export default function TierListPanel({ heroes, heroAssets }: TierListPanelProps
 
       return nameMatch && roleMatch && laneMatch;
     });
-  }, [heroes, searchQuery, roleFilter, laneFilter]);
+  }, [fullHeroPool, searchQuery, roleFilter, laneFilter]);
 
   // Group filtered heroes by tier rating
   const groupedByTier = useMemo(() => {
@@ -90,6 +128,19 @@ export default function TierListPanel({ heroes, heroAssets }: TierListPanelProps
 
   return (
     <div className="space-y-6 page-enter">
+      <div className="flex items-center justify-between gap-3 sm:hidden">
+        <button
+          type="button"
+          onClick={() => window.history.back()}
+          className="btn-ghost justify-start text-xs"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Kembali
+        </button>
+        <div className="ui-badge border-white/10 bg-white/[0.04] text-slate-300">
+          Tier List
+        </div>
+      </div>
       {/* Top Heading */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-blue-900/35 pb-5">
         <div>
@@ -212,7 +263,10 @@ export default function TierListPanel({ heroes, heroAssets }: TierListPanelProps
                               {h.hero_name}
                             </h4>
                             <p className="font-mono text-[8px] text-emerald-400 font-bold">
-                              WR {h.win_rate ? `${h.win_rate}%` : h.winrate ? h.winrate : "50.0%"}
+                              WR {h.win_rate ? `${h.win_rate}%` : h.winrate ? h.winrate : "0%"}
+                            </p>
+                            <p className="font-mono text-[8px] text-cyan-400/80 font-bold">
+                              P {h.picks_total || "0"} • B {h.bans_total || "0"}
                             </p>
                           </div>
                         </div>

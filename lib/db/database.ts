@@ -194,6 +194,27 @@ function initSchema(db: Database.Database): void {
     CREATE INDEX IF NOT EXISTS idx_scrape_log_lookup ON scrape_log(resource_type, resource_id);
     CREATE INDEX IF NOT EXISTS idx_scrape_log_time ON scrape_log(scraped_at);
     CREATE INDEX IF NOT EXISTS idx_meta_patch ON meta_snapshots(patch_version);
+
+    CREATE TABLE IF NOT EXISTS ai_request_logs (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      session_id TEXT NOT NULL,
+      team_blue TEXT,
+      team_red TEXT,
+      draft_phase TEXT,
+      request_type TEXT NOT NULL,
+      provider_used TEXT,
+      model_used TEXT,
+      tokens_input INTEGER,
+      tokens_output INTEGER,
+      cost_usd REAL,
+      response_time_ms INTEGER,
+      cache_hit INTEGER DEFAULT 0,
+      fallback_used INTEGER DEFAULT 0,
+      error_code TEXT,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+    CREATE INDEX IF NOT EXISTS idx_ai_logs_created_at ON ai_request_logs(created_at);
+    CREATE INDEX IF NOT EXISTS idx_ai_logs_provider ON ai_request_logs(provider_used);
   `);
 }
 
@@ -313,4 +334,44 @@ export function getDbHealth(db: Database.Database): Record<string, number> {
   } catch {}
 
   return result;
+}
+
+export function logAIRequest(data: {
+  sessionId: string;
+  teamBlue?: string;
+  teamRed?: string;
+  draftPhase?: string;
+  requestType: string;
+  providerUsed?: string;
+  modelUsed?: string;
+  tokensInput?: number;
+  tokensOutput?: number;
+  costUsd?: number;
+  responseTimeMs?: number;
+  cacheHit?: boolean;
+  fallbackUsed?: boolean;
+  errorCode?: string;
+}): void {
+  try {
+    const db = getDb();
+    const stmt = db.prepare(`
+      INSERT INTO ai_request_logs (
+        session_id, team_blue, team_red, draft_phase, request_type,
+        provider_used, model_used, tokens_input, tokens_output, cost_usd,
+        response_time_ms, cache_hit, fallback_used, error_code
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `);
+    stmt.run(
+      data.sessionId, data.teamBlue ?? null, data.teamRed ?? null,
+      data.draftPhase ?? null, data.requestType,
+      data.providerUsed ?? null, data.modelUsed ?? null,
+      data.tokensInput ?? null, data.tokensOutput ?? null, data.costUsd ?? null,
+      data.responseTimeMs ?? null,
+      data.cacheHit ? 1 : 0, data.fallbackUsed ? 1 : 0,
+      data.errorCode ?? null
+    );
+  } catch (err) {
+    console.error('[AI Log] Failed to log request:', err);
+    // Never throw — logging failure must not crash the main request
+  }
 }

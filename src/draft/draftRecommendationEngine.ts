@@ -29,12 +29,12 @@ function getHeroEntryKey(hero: any): string {
  */
 
 /**
- * Generates top 3 hero recommendations for the current draft step.
+ * Generates top 5 hero recommendations for the current draft step.
  *
  * @param payload - Current draft state from frontend
  * @param heroDatabase - Full array of hero JSON objects with AI metadata
  * @param heroesMaster - The heroes_master.json array for lane resolution
- * @returns Array of top 3 DraftRecommendation objects sorted by score descending
+ * @returns Array of top 5 DraftRecommendation objects sorted by score descending
  */
 export function generateRecommendations(
   payload: DraftRequestPayload,
@@ -97,11 +97,11 @@ export function generateRecommendations(
   // Sort by total score descending
   scored.sort((a, b) => b.total - a.total);
 
-  // Take top 3
-  const top3 = scored.slice(0, 3);
+  // Take top 5
+  const top5 = scored.slice(0, 5);
 
   // Build recommendation objects
-  const recommendations: DraftRecommendation[] = top3.map((entry) => {
+  const recommendations: DraftRecommendation[] = top5.map((entry) => {
     const hero = entry.hero;
     const primaryLane = hero.lanes && hero.lanes.length > 0 ? hero.lanes[0] : "Flex";
     const primaryRole = hero.role && hero.role.length > 0 ? hero.role[0] : "Unknown";
@@ -228,7 +228,7 @@ function findEmptyLaneForHero(hero: any, laneStatus: LaneStatus): string {
 // ─── MPL Draft Recommendation Engine ──────────────────────────────────────────
 
 /**
- * Generates top 3 MPL hero recommendations for the current draft step.
+ * Generates top 5 MPL hero recommendations for the current draft step.
  * Uses team identity, matchup profiles, and draft patterns instead of generic meta.
  * Completely independent from generateRecommendations() which handles ranked mode.
  *
@@ -239,7 +239,7 @@ function findEmptyLaneForHero(hero: any, laneStatus: LaneStatus): string {
  * @param redIdentity - Red team's identity profile
  * @param matchupProfile - Head-to-head matchup profile (or null)
  * @param draftPatterns - Ally team's draft pattern profile
- * @returns Array of top 3 MplDraftRecommendation objects sorted by MPL score descending
+ * @returns Array of top 5 MplDraftRecommendation objects sorted by MPL score descending
  */
 export function generateMplRecommendations(
   payload: DraftRequestPayload,
@@ -248,7 +248,8 @@ export function generateMplRecommendations(
   blueIdentity: TeamIdentityProfile,
   redIdentity: TeamIdentityProfile,
   matchupProfile: MplMatchupProfile | null,
-  draftPatterns: DraftPatternProfile
+  draftPatterns: DraftPatternProfile,
+  limit: number = 5
 ): MplDraftRecommendation[] {
   // Determine ally/enemy identity based on currentTurnSide
   const isBlue = payload.currentTurnSide === "BLUE";
@@ -283,8 +284,11 @@ export function generateMplRecommendations(
     draftPatterns,
     currentPicks,
     enemyPicks,
+    currentBans: isBlue ? payload.blueBans : payload.redBans,
+    enemyBans: isBlue ? payload.redBans : payload.blueBans,
     laneStatus,
     mode: "mpl",
+    heroDatabase,
   };
 
   // Score all available heroes
@@ -316,9 +320,9 @@ export function generateMplRecommendations(
   let recommendations: MplDraftRecommendation[];
 
   if (isBanPhase) {
-    recommendations = generateHistoryBanRecommendations(scored, allyIdentity, enemyIdentity, matchupProfile, unavailable);
+    recommendations = generateHistoryBanRecommendations(scored, allyIdentity, enemyIdentity, matchupProfile, unavailable, limit);
   } else {
-    recommendations = generatePickRecommendations(scored, allyIdentity, enemyIdentity, matchupProfile, currentPicks, heroDatabase, unavailable);
+    recommendations = generatePickRecommendations(scored, allyIdentity, enemyIdentity, matchupProfile, currentPicks, heroDatabase, unavailable, limit);
   }
 
   // Generate fallback branches for each recommendation
@@ -339,7 +343,8 @@ function generateHistoryBanRecommendations(
   allyIdentity: TeamIdentityProfile,
   enemyIdentity: TeamIdentityProfile,
   matchupProfile: MplMatchupProfile | null,
-  unavailable: Set<string>
+  unavailable: Set<string>,
+  limit: number
 ): MplDraftRecommendation[] {
   const recommendations: MplDraftRecommendation[] = [];
   const usedHeroes = new Set<string>();
@@ -352,7 +357,7 @@ function generateHistoryBanRecommendations(
     reason: string,
     evidence: MplDraftRecommendation["evidence"]
   ) => {
-    if (recommendations.length >= 3) return;
+    if (recommendations.length >= limit) return;
     const candidateKey = heroKey(heroName);
     if (!candidateKey || unavailable.has(candidateKey) || usedHeroes.has(candidateKey)) return;
 
@@ -447,7 +452,7 @@ function generateHistoryBanRecommendations(
 
   if (recommendations.length === 0) {
     for (const entry of scored) {
-      if (recommendations.length >= 3) break;
+      if (recommendations.length >= limit) break;
       const candidateKey = getHeroEntryKey(entry.hero);
       if (!candidateKey || unavailable.has(candidateKey) || usedHeroes.has(candidateKey)) continue;
       recommendations.push(buildMplRecommendation(entry, {
@@ -462,7 +467,7 @@ function generateHistoryBanRecommendations(
     }
   }
 
-  return recommendations.slice(0, 3);
+  return recommendations.slice(0, limit);
 }
 
 function generateBanRecommendations(
@@ -470,7 +475,8 @@ function generateBanRecommendations(
   allyIdentity: TeamIdentityProfile,
   enemyIdentity: TeamIdentityProfile,
   matchupProfile: MplMatchupProfile | null,
-  unavailable: Set<string>
+  unavailable: Set<string>,
+  limit: number
 ): MplDraftRecommendation[] {
   const recommendations: MplDraftRecommendation[] = [];
   const usedHeroes = new Set<string>();
@@ -488,8 +494,7 @@ function generateBanRecommendations(
     );
     if (!heroEntry) continue;
 
-    // Classify: if teamDeny score is high relative to total → Deny Ban, else Comfort Ban
-    const isDenyBan = heroEntry.breakdown.teamDeny >= 8;
+    const isDenyBan = heroEntry.breakdown.counterScore >= 8;
     const banType = isDenyBan ? "Deny Ban" as const : "Comfort Ban" as const;
 
     const reason = isDenyBan
@@ -538,7 +543,7 @@ function generateBanRecommendations(
 
   // Priority 3: Noise Ban — meta-relevant hero NOT in enemy profile
   // At least 1 of the 3 must be a Noise Ban
-  if (recommendations.length < 3) {
+  if (recommendations.length < limit) {
     const noiseBan = findNoiseBanCandidate(scored, enemyIdentity, allyIdentity, unavailable, usedHeroes);
     if (noiseBan) {
       recommendations.push(noiseBan);
@@ -548,9 +553,9 @@ function generateBanRecommendations(
   }
 
   // Fill remaining slots if needed (up to 3)
-  if (recommendations.length < 3) {
+  if (recommendations.length < limit) {
     for (const entry of scored) {
-      if (recommendations.length >= 3) break;
+      if (recommendations.length >= limit) break;
       const heroName = (entry.hero.heroName || entry.hero.name || "").toLowerCase();
       if (usedHeroes.has(heroName) || unavailable.has(heroName)) continue;
 
@@ -590,8 +595,7 @@ function generateBanRecommendations(
     }
   }
 
-  // Return top 3
-  return recommendations.slice(0, 3);
+  return recommendations.slice(0, limit);
 }
 
 /**
@@ -605,14 +609,15 @@ function generatePickRecommendations(
   matchupProfile: MplMatchupProfile | null,
   currentPicks: string[],
   heroDatabase: any[],
-  unavailable: Set<string>
+  unavailable: Set<string>,
+  limit: number
 ): MplDraftRecommendation[] {
   const recommendations: MplDraftRecommendation[] = [];
   const usedHeroes = new Set<string>();
 
   // Iterate top scored heroes and classify each
   for (const entry of scored) {
-    if (recommendations.length >= 3) break;
+    if (recommendations.length >= limit) break;
     const heroName = getHeroEntryKey(entry.hero);
     if (usedHeroes.has(heroName) || unavailable.has(heroName)) continue;
 
@@ -621,7 +626,7 @@ function generatePickRecommendations(
     const stats = getHeroStatsFromIdentity(heroName, allyIdentity);
     const pairingInfo = getPairingInfo(heroName, allyIdentity, currentPicks);
     const recommendationSource =
-      matchupProfile && matchupProfile.headToHeadGames > 0 && entry.breakdown.headToHead > 0
+      matchupProfile && matchupProfile.headToHeadGames > 0 && entry.breakdown.matchupHistoryScore > 0
         ? "matchup-history"
         : allyIdentity.totalGames > 0
           ? "team-history"
@@ -644,7 +649,7 @@ function generatePickRecommendations(
     usedHeroes.add(heroName);
   }
 
-  return recommendations.slice(0, 3);
+  return recommendations.slice(0, limit);
 }
 
 /**
@@ -680,9 +685,9 @@ function classifyPickType(
   const isFlex = totalLanes >= 3;
 
   // Check if hero's score is dominated by teamDeny
-  const isDeny = breakdown.teamDeny > 0 &&
-    breakdown.teamDeny >= breakdown.teamComfort &&
-    breakdown.teamDeny >= breakdown.teamHistory;
+  const isDeny = breakdown.counterScore > 0 &&
+    breakdown.counterScore >= breakdown.comfortScore &&
+    breakdown.counterScore >= breakdown.teamHistoryScore;
 
   if (isSignature) return "Signature Pick";
   if (isAllyComfort) return "Comfort Pick";

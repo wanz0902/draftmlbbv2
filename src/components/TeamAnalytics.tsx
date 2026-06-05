@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import {
+  ArrowLeft,
   Award,
   Zap,
   TrendingUp,
@@ -323,10 +324,70 @@ export default function TeamAnalytics({
       .slice(0, 8);
   }, [matches]);
 
+  const tacticalRead = useMemo(() => {
+    if (!selectedTeam) return null;
+
+    const comfort = comfortHeroesList.slice(0, 3).map((hero) => hero.name);
+    const bans = ourBansList.slice(0, 3).map((hero) => hero.name);
+    const targetBans = targetBansList.slice(0, 3).map((hero) => hero.name);
+    const blueRate = dynamicStats.blueGames > 0 ? Math.round((dynamicStats.blueWins / dynamicStats.blueGames) * 100) : 0;
+    const redRate = dynamicStats.redGames > 0 ? Math.round((dynamicStats.redWins / dynamicStats.redGames) * 100) : 0;
+    const strongerSide = blueRate === redRate ? "balanced" : blueRate > redRate ? "blue" : "red";
+
+    const style =
+      comfort.some((hero) => ["Fanny", "Ling", "Hayabusa", "Nolan", "Joy"].includes(hero))
+        ? "tempo agresif dengan ancaman jungle/mobile carry"
+        : comfort.some((hero) => ["Fredrinn", "Edith", "Khufra", "Tigreal", "Hylos"].includes(hero))
+          ? "front-to-back teamfight dengan frontline tebal"
+          : comfort.some((hero) => ["Zhuxin", "Yve", "Xavier", "Valentina", "Pharsa"].includes(hero))
+            ? "control-poke dengan penguncian area"
+            : "comfort-flex yang menyesuaikan matchup";
+
+    const sideRead =
+      strongerSide === "blue"
+        ? `Lebih stabil saat pegang blue side (${blueRate}% WR) dan cenderung nyaman buka tempo lebih awal.`
+        : strongerSide === "red"
+          ? `Lebih stabil saat red side (${redRate}% WR) dan terlihat nyaman menyimpan counter/pivot terakhir.`
+          : "Performa blue/red relatif seimbang, jadi pembacaan draft lebih ditentukan lawan dan comfort pool.";
+
+    return {
+      style,
+      sideRead,
+      comfort,
+      bans,
+      targetBans,
+      opener:
+        comfort.length > 0
+          ? `${selectedTeam.name} paling sering kembali ke comfort seperti ${comfort.join(", ")}.`
+          : `${selectedTeam.name} belum punya comfort pool yang cukup kuat dari sampel saat ini.`,
+      denial:
+        targetBans.length > 0
+          ? `Lawan paling sering menghormati ${targetBans.join(", ")} sebagai target ban.`
+          : "Belum ada pola target ban lawan yang cukup jelas dari sampel ini.",
+      prep:
+        bans.length > 0
+          ? `Ban andalan mereka sering mengarah ke ${bans.join(", ")} untuk memotong comfort atau tempo lawan.`
+          : "Ban pool tim ini masih terlalu tersebar untuk dibaca sebagai pola tetap.",
+    };
+  }, [selectedTeam, comfortHeroesList, ourBansList, targetBansList, dynamicStats.blueGames, dynamicStats.blueWins, dynamicStats.redGames, dynamicStats.redWins]);
+
   return (
     <div className="flex flex-col gap-6">
+      <div className="flex items-center justify-between gap-3 sm:hidden">
+        <button
+          type="button"
+          onClick={() => window.history.back()}
+          className="btn-ghost justify-start text-xs"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Kembali
+        </button>
+        <div className="ui-badge border-white/10 bg-white/[0.04] text-slate-300">
+          Team Analytics
+        </div>
+      </div>
       {/* Top Header Widget */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center rounded-xl border border-gray-900 bg-gray-950 p-5 gap-4 relative overflow-hidden animate-fade-in text-gray-200">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center rounded-[24px] border border-gray-900 bg-gray-950 p-5 gap-4 relative overflow-hidden animate-fade-in text-gray-200">
         <div className="absolute right-0 top-0 h-32 w-32 bg-indigo-500/5 blur-3xl pointer-events-none rounded-full" />
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 bg-indigo-950/40 border border-indigo-500/25 rounded-lg flex items-center justify-center text-indigo-400">
@@ -967,20 +1028,6 @@ export default function TeamAnalytics({
                     </div>
                   )}
 
-                  {/* Dev-only debug panel */}
-                  {import.meta.env.DEV && (
-                    <details className="mt-4 text-[10px] font-mono text-gray-600 border-t border-gray-900 pt-2">
-                      <summary className="cursor-pointer text-gray-500 hover:text-gray-300">Debug Panel</summary>
-                      <div className="mt-1 space-y-0.5">
-                        <p>Data source: {matchCenterData?.source || "mpl_id_s17_regular_season.json"}</p>
-                        <p>Loaded: {matchCenterData?.totalSeries || 0} series / {matchCenterData?.totalGames || 0} games</p>
-                        <p>Team: {selectedTeam?.key} | Filter: {matchResultFilter} | Week: {matchWeekFilter || "all"} | Opponent: {matchOpponentFilter || "none"}</p>
-                        <p>Endpoint: /api/team-analytics/{selectedTeam?.key}/matches?result={matchResultFilter}{matchWeekFilter ? `&week=${matchWeekFilter}` : ""}</p>
-                        <p>API Response: {matchHistoryData ? `Total: ${matchHistoryData.totalMatches}, Filtered: ${matchHistoryData.filteredMatches}, W: ${matchHistoryData.wins}, L: ${matchHistoryData.losses}, Games: ${matchHistoryData.gamesCount}` : "loading..."}</p>
-                        <p>Profile tab matches (regular_matches.json): {matches.length} series</p>
-                      </div>
-                    </details>
-                  )}
                 </div>
               )}
 
@@ -995,28 +1042,53 @@ export default function TeamAnalytics({
                     
                     <div className="space-y-3 font-sans text-[11px] text-gray-400 leading-relaxed">
                       <p>
-                        Berdasarkan integrasi data taktis dari {teamMatches.length} pertandingan turnamen, tim <strong className="text-white font-bold">{selectedTeam.name}</strong> menunjukkan karakteristik strategi draft sebagai berikut:
+                        Berdasarkan integrasi data taktis dari {teamMatches.length} pertandingan turnamen, tim <strong className="text-white font-bold">{selectedTeam.name}</strong> menunjukkan karakteristik draft yang berbeda dari comfort pool, target ban, dan performa sisi.
                       </p>
-                      
+
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-1">
                         <div className="bg-gray-950/60 p-3 rounded-lg border border-gray-900 flex flex-col gap-1.5">
                           <span className="text-white font-bold block text-xs flex items-center gap-1">
-                            <Zap className="h-3 w-3 text-indigo-450" /> Flex Pick Rating
+                            <Zap className="h-3 w-3 text-indigo-400" /> Draft Identity
                           </span>
                           <p className="text-[10px] text-gray-500">
-                            Kemampuan tim menyembunyikan rencana awal dalam phase 1 pick/ban:
+                            Pembacaan pola utama dari hero comfort yang paling sering mereka kembalikan:
                           </p>
-                          <span className="font-mono text-xs font-bold text-emerald-400">HIGH FLEXIBILITY (92%)</span>
+                          <span className="font-mono text-xs font-bold text-emerald-400 uppercase">
+                            {tacticalRead?.style || "Belum terbaca"}
+                          </span>
                         </div>
 
                         <div className="bg-gray-950/60 p-3 rounded-lg border border-gray-900 flex flex-col gap-1.5">
                           <span className="text-white font-bold block text-xs flex items-center gap-1">
-                            <ShieldCheck className="h-3 w-3 text-emerald-400" /> Core Win Condition
+                            <ShieldCheck className="h-3 w-3 text-emerald-400" /> Side Preference
                           </span>
                           <p className="text-[10px] text-gray-500">
-                            Gaya prioritas pembentukan teamfight atau pembagian lane:
+                            Kecenderungan performa saat blue/red side:
                           </p>
-                          <span className="font-mono text-xs font-bold text-indigo-400">ACTIVE COMFORT / DECOY PICKS</span>
+                          <span className="text-[11px] text-indigo-300 leading-relaxed">
+                            {tacticalRead?.sideRead || "Belum terbaca"}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <div className="rounded-xl border border-gray-900 bg-black/20 p-3">
+                          <div className="text-[10px] font-bold uppercase tracking-wider text-cyan-300">Comfort Core</div>
+                          <div className="mt-2 text-[11px] text-gray-300 leading-relaxed">
+                            {tacticalRead?.opener || "Belum ada data."}
+                          </div>
+                        </div>
+                        <div className="rounded-xl border border-gray-900 bg-black/20 p-3">
+                          <div className="text-[10px] font-bold uppercase tracking-wider text-rose-300">Enemy Respect Ban</div>
+                          <div className="mt-2 text-[11px] text-gray-300 leading-relaxed">
+                            {tacticalRead?.denial || "Belum ada data."}
+                          </div>
+                        </div>
+                        <div className="rounded-xl border border-gray-900 bg-black/20 p-3">
+                          <div className="text-[10px] font-bold uppercase tracking-wider text-amber-300">Prep Ban Plan</div>
+                          <div className="mt-2 text-[11px] text-gray-300 leading-relaxed">
+                            {tacticalRead?.prep || "Belum ada data."}
+                          </div>
                         </div>
                       </div>
                     </div>

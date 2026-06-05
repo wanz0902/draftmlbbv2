@@ -12,7 +12,7 @@ import TierListPanel from "./components/TierListPanel";
 import CounterMatrixPanel from "./components/CounterMatrixPanel";
 import LandingPage from "./components/LandingPage";
 import { HeroStats, Item, TeamStats } from "./types";
-import { CloudLightning, ShieldCheck } from "lucide-react";
+import { ArrowLeft, CloudLightning, ShieldCheck } from "lucide-react";
 
 export default function App() {
   const [currentTab, setCurrentTab] = useState("home");
@@ -31,6 +31,18 @@ export default function App() {
   const [teamsData, setTeamsData] = useState<TeamStats[]>([]);
   const [heroAssets, setHeroAssets] = useState<Record<string, string>>({});
   const [historyData, setHistoryData] = useState<any[]>([]);
+
+  const tabLabels: Record<string, string> = {
+    home: "Home",
+    draft: "Draft Simulator",
+    intelligence: "Hero Intelligence",
+    tier: "Tier List",
+    counter: "Counter Matrix",
+    heroes: "Hero Stats",
+    teams: "Team Analytics",
+    items: "Items Catalog",
+    scraper: "Liquipedia Updates",
+  };
 
   // Fetch initial analytical data
   const loadAllData = async () => {
@@ -122,6 +134,20 @@ export default function App() {
         ) : (
           /* Dynamic Component Rendering based on tab */
           <div className="animate-fade-in">
+            {currentTab !== "home" && (
+              <div className="mb-5 flex items-center justify-between gap-3">
+                <button
+                  onClick={() => handleTabChange("home")}
+                  className="btn-ghost justify-start text-xs"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Back to Home
+                </button>
+                <div className="ui-badge border-white/10 bg-white/[0.04] text-slate-300">
+                  {tabLabels[currentTab] || "Page"}
+                </div>
+              </div>
+            )}
             {currentTab === "home" && (
               <LandingPage onChangeTab={handleTabChange} heroesCount={heroes.length} />
             )}

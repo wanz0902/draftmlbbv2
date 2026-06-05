@@ -1,6 +1,8 @@
+import type { CompactWaferPayload } from "../../src/draft/draftTypes";
+
 /**
  * Wafer AI Service — 3-Tier Architecture
- * 
+ *
  * Tier 1 (Realtime): deepseek-v4-flash — ban/pick recommendations, coach panel
  * Tier 2 (Analysis): Qwen3.6-35B-A3B — post-draft analysis, matchup analysis
  * Tier 3 (Premium):  Qwen3.5-397B-A17B — deep analysis, export reports (never auto-called)
@@ -72,12 +74,38 @@ function estimateTokens(text: string): number {
   return Math.ceil(text.length / 4);
 }
 
-function logAICall(tier: WaferTier, model: string, inputTokens: number, outputTokens: number, latencyMs: number, cached: boolean): void {
+function estimateCost(tier: WaferTier, inputTokens: number, outputTokens: number): number {
   const costPerInputToken = tier === 'premium' ? 0.000003 : tier === 'analysis' ? 0.0000008 : 0.0000002;
   const costPerOutputToken = tier === 'premium' ? 0.000012 : tier === 'analysis' ? 0.0000032 : 0.0000008;
-  const estimatedCost = (inputTokens * costPerInputToken) + (outputTokens * costPerOutputToken);
+  return (inputTokens * costPerInputToken) + (outputTokens * costPerOutputToken);
+}
 
-  console.log(`[Wafer AI] Tier=${tier} Model=${model} Input≈${inputTokens}tok Output≈${outputTokens}tok Latency=${latencyMs}ms Cost≈$${estimatedCost.toFixed(6)} Cached=${cached}`);
+interface WaferCallMetadata {
+  endpoint?: string;
+  payloadSize?: number;
+  selectedTeams?: string[];
+  similarGamesCount?: number;
+  recommendationSource?: string;
+}
+
+function logAICall(
+  tier: WaferTier,
+  model: string,
+  inputTokens: number,
+  outputTokens: number,
+  latencyMs: number,
+  cached: boolean,
+  metadata: WaferCallMetadata = {}
+): number {
+  const estimatedCost = estimateCost(tier, inputTokens, outputTokens);
+  const endpoint = metadata.endpoint || 'unknown';
+  const payloadSize = metadata.payloadSize ?? 0;
+  const teams = metadata.selectedTeams?.join(' vs ') || 'n/a';
+  const similarGamesCount = metadata.similarGamesCount ?? 0;
+  const recommendationSource = metadata.recommendationSource || 'unknown';
+
+  console.log(`[Wafer AI] Endpoint=${endpoint} Tier=${tier} Model=${model} Input≈${inputTokens}tok Output≈${outputTokens}tok Latency=${latencyMs}ms Cost≈$${estimatedCost.toFixed(6)} Cached=${cached} PayloadBytes=${payloadSize} Teams=${teams} SimilarGames=${similarGamesCount} RecommendationSource=${recommendationSource}`);
+  return estimatedCost;
 }
 
 // ─── Core Call Function ─────────────────────────────────────────────────────────
@@ -87,7 +115,7 @@ interface WaferChatMessage {
   content: string;
 }
 
-interface WaferResponse {
+export interface WaferResponse {
   success: boolean;
   response: string;
   model: string;
@@ -95,10 +123,17 @@ interface WaferResponse {
   tier: WaferTier;
   cached: boolean;
   tokenEstimate?: { input: number; output: number };
+  estimatedCost?: number;
+  payloadSize?: number;
   error?: string;
 }
 
-async function callWafer(tier: WaferTier, messages: WaferChatMessage[], useCache: boolean = true): Promise<WaferResponse> {
+async function callWafer(
+  tier: WaferTier,
+  messages: WaferChatMessage[],
+  useCache: boolean = true,
+  metadata: WaferCallMetadata = {}
+): Promise<WaferResponse> {
   const apiKey = process.env.WAFER_API_KEY;
   const model = getModelForTier(tier);
   const maxTokens = getMaxTokensForTier(tier);
@@ -114,8 +149,18 @@ async function callWafer(tier: WaferTier, messages: WaferChatMessage[], useCache
     if (cached) {
       const inputTokens = estimateTokens(messages.map(m => m.content).join(''));
       const outputTokens = estimateTokens(cached.response);
-      logAICall(tier, cached.model, inputTokens, outputTokens, 0, true);
-      return { success: true, response: cached.response, model: cached.model, latencyMs: 0, tier, cached: true, tokenEstimate: { input: inputTokens, output: outputTokens } };
+      const estimatedCost = logAICall(tier, cached.model, inputTokens, outputTokens, 0, true, metadata);
+      return {
+        success: true,
+        response: cached.response,
+        model: cached.model,
+        latencyMs: 0,
+        tier,
+        cached: true,
+        tokenEstimate: { input: inputTokens, output: outputTokens },
+        estimatedCost,
+        payloadSize: metadata.payloadSize,
+      };
     }
   }
 
@@ -145,7 +190,7 @@ async function callWafer(tier: WaferTier, messages: WaferChatMessage[], useCache
     const outputTokens = data?.usage?.completion_tokens || estimateTokens(content);
     const actualInputTokens = data?.usage?.prompt_tokens || inputTokens;
 
-    logAICall(tier, model, actualInputTokens, outputTokens, latencyMs, false);
+    const estimatedCost = logAICall(tier, model, actualInputTokens, outputTokens, latencyMs, false, metadata);
 
     // Cache the response
     if (useCache && content) {
@@ -154,19 +199,30 @@ async function callWafer(tier: WaferTier, messages: WaferChatMessage[], useCache
 
     return {
       success: true, response: content, model, latencyMs, tier, cached: false,
-      tokenEstimate: { input: actualInputTokens, output: outputTokens }
+      tokenEstimate: { input: actualInputTokens, output: outputTokens },
+      estimatedCost,
+      payloadSize: metadata.payloadSize,
     };
   } catch (err: any) {
     const latencyMs = Date.now() - startTime;
-    return { success: false, response: '', model, latencyMs, tier, cached: false, error: `Wafer request failed: ${err.message}` };
+    return {
+      success: false,
+      response: '',
+      model,
+      latencyMs,
+      tier,
+      cached: false,
+      payloadSize: metadata.payloadSize,
+      error: `Wafer request failed: ${err.message}`,
+    };
   }
 }
 
 // ─── Public API ─────────────────────────────────────────────────────────────────
 
-const REALTIME_SYSTEM_PROMPT = `You are an MLBB draft coach. Be extremely concise (max 2-3 sentences per hero). Only use provided data. Do not fabricate stats. Respond in Bahasa Indonesia.`;
+const REALTIME_SYSTEM_PROMPT = `Anda adalah penjelas rekomendasi draft MLBB. Source of truth adalah local engine, bukan AI. Jawab maksimal 350 kata. Jangan ulang data mentah. Gunakan bullet pendek. Jangan membuat angka baru. Jika data tidak tersedia, tulis data tidak tersedia. Fokus pada alasan pick/ban berdasarkan evidence. Jelaskan kandidat yang sudah diberikan, jangan menentukan hero dari nol.`;
 
-const ANALYSIS_SYSTEM_PROMPT = `You are an MLBB professional draft analyst. Only use data provided in the JSON. Do not fabricate winrates, pick rates, or team history. If data is missing, say data is unavailable. Provide: Draft strengths, weaknesses, win conditions, teamfight analysis, objective control, power spikes, recommendations. Respond in Bahasa Indonesia.`;
+const ANALYSIS_SYSTEM_PROMPT = `Anda adalah analis draft MLBB profesional. Source of truth adalah local engine, bukan AI. Jawab maksimal 350 kata. Jangan ulang data mentah. Gunakan bullet pendek. Jangan membuat angka baru. Jika data tidak tersedia, tulis data tidak tersedia. Fokus pada alasan pick/ban berdasarkan evidence. Jangan menentukan hero dari nol; hanya jelaskan kandidat dan ringkasan yang sudah diberikan.`;
 
 const PREMIUM_SYSTEM_PROMPT = `You are an elite MLBB esports analyst performing deep strategic analysis. Only use data provided. Never fabricate statistics. Provide comprehensive analysis covering: information warfare assessment, hidden gameplan detection, draft deception evaluation, multi-layer strategic breakdown, win condition paths, macro strategy, and actionable coaching insights. Respond in Bahasa Indonesia.`;
 
@@ -179,12 +235,78 @@ export async function realtimeCoach(context: string): Promise<WaferResponse> {
 }
 
 /** Tier 2: Standard draft analysis (medium cost) */
-export async function analyzeDraft(draftData: any): Promise<WaferResponse> {
-  const userContent = JSON.stringify(draftData, null, 2);
+export async function analyzeDraft(
+  draftData: CompactWaferPayload,
+  options: { endpoint?: string; selectedTeams?: string[]; similarGamesCount?: number; recommendationSource?: string } = {}
+): Promise<WaferResponse> {
+  const trimmedPayload: CompactWaferPayload = {
+    ...draftData,
+    similarGamesTop3: (draftData.similarGamesTop3 || []).slice(0, 3),
+    recommendationCandidatesTop5: (draftData.recommendationCandidatesTop5 || []).slice(0, 5),
+  };
+  const userContent = JSON.stringify(trimmedPayload);
+  const payloadSize = Buffer.byteLength(userContent, 'utf8');
   return callWafer('analysis', [
     { role: 'system', content: ANALYSIS_SYSTEM_PROMPT },
     { role: 'user', content: `Analyze this MLBB draft:\n${userContent}` },
-  ]);
+  ], true, {
+    endpoint: options.endpoint || '/api/ai/draft-analysis',
+    payloadSize,
+    selectedTeams: options.selectedTeams,
+    similarGamesCount: trimmedPayload.similarGamesTop3.length,
+    recommendationSource: options.recommendationSource,
+  });
+}
+
+export async function explainRealtimeDraft(
+  draftData: CompactWaferPayload,
+  options: { endpoint?: string; selectedTeams?: string[]; similarGamesCount?: number; recommendationSource?: string } = {}
+): Promise<WaferResponse> {
+  const trimmedPayload: CompactWaferPayload = {
+    ...draftData,
+    similarGamesTop3: (draftData.similarGamesTop3 || []).slice(0, 3),
+    recommendationCandidatesTop5: (draftData.recommendationCandidatesTop5 || []).slice(0, 5),
+  };
+  const userContent = JSON.stringify(trimmedPayload);
+  const payloadSize = Buffer.byteLength(userContent, 'utf8');
+  return callWafer('realtime', [
+    { role: 'system', content: REALTIME_SYSTEM_PROMPT },
+    { role: 'user', content: `Jelaskan rekomendasi draft berikut berdasarkan evidence lokal:\n${userContent}` },
+  ], true, {
+    endpoint: options.endpoint || '/api/draft/recommendation',
+    payloadSize,
+    selectedTeams: options.selectedTeams,
+    similarGamesCount: trimmedPayload.similarGamesTop3.length,
+    recommendationSource: options.recommendationSource,
+  });
+}
+
+export function buildLocalDraftAnalysis(payload: CompactWaferPayload): string {
+  const lines: string[] = [];
+  lines.push(`- Tim: ${payload.teams.blue} vs ${payload.teams.red}.`);
+  lines.push(`- Head-to-head: ${payload.headToHeadSummary.summary || 'data tidak tersedia'}`);
+
+  if (payload.similarGamesTop3.length > 0) {
+    const similar = payload.similarGamesTop3[0];
+    lines.push(`- Similar game: ${similar.sourceLabel}. Signal: ${similar.matchingSignals.join(', ') || 'data tidak tersedia'}.`);
+  } else {
+    lines.push(`- Similar game: data tidak tersedia.`);
+  }
+
+  if (payload.recommendationCandidatesTop5.length > 0) {
+    lines.push(`- Kandidat utama:`);
+    for (const candidate of payload.recommendationCandidatesTop5.slice(0, 3)) {
+      lines.push(`  - ${candidate.heroName} (${candidate.type}): ${candidate.reason}. Evidence: ${candidate.evidence.join('; ') || 'data tidak tersedia'}.`);
+    }
+  } else {
+    lines.push(`- Kandidat utama: data tidak tersedia.`);
+  }
+
+  if (payload.constraints.missingData.length > 0) {
+    lines.push(`- Gap data: ${payload.constraints.missingData.join(', ')}.`);
+  }
+
+  return lines.join('\n').slice(0, 1800);
 }
 
 /** Tier 3: Premium deep analysis (expensive, never auto-called) */

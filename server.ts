@@ -16,7 +16,7 @@ const getOpenAIClient = () => {
   return new OpenAI({ apiKey });
 };
 
-import { getDb, getDbHealth, seedHeroesIfEmpty, needsRescrape } from './lib/db/database.js';
+import { getDb, getDbHealth, seedHeroesIfEmpty, needsRescrape, logAIRequest } from './lib/db/database.js';
 import { batchScrapeHeroes, scrapeAndSaveHero } from './lib/scraper/hero-scraper.js';
 import { getGatewayQueueStatus } from './lib/scraper/liquipedia-gateway.js';
 import { scrapeTournamentStats, scrapeTournament } from './lib/scraper/tournament-scraper.js';
@@ -26,7 +26,12 @@ import { MatchHistoryService } from './src/services/matchHistoryService.js';
 import { buildTeamIdentity } from './src/draft/teamIdentityEngine.js';
 import { buildMatchupProfile } from './src/draft/matchupProfileEngine.js';
 import { buildDraftPatterns } from './src/draft/draftPatternEngine.js';
-import { testConnection, analyzeDraft, deepAnalysis, realtimeCoach, getCacheStats } from './server/services/waferService.js';
+import { HistoricalDraftRetriever } from './src/draft/HistoricalDraftRetriever.js';
+import { testConnection as testWafer, analyzeDraft as waferAnalyzeDraft, deepAnalysis as waferDeepAnalysis, explainRealtimeDraft, buildLocalDraftAnalysis, getCacheStats } from './server/services/waferService.js';
+import * as aiProviderRouter from './server/services/aiProviderRouter.js';
+
+// Backward-compatible Wafer re-exports (kept for any other code that imports these names directly)
+export { waferAnalyzeDraft as analyzeDraft, waferDeepAnalysis as deepAnalysis, testWafer as testConnection };
 
 // ——— DB INIT ON SERVER START ———
 (async () => {
@@ -60,6 +65,7 @@ app.use(express.json());
 // ——— MATCH HISTORY SERVICE INIT ———
 const matchHistoryService = new MatchHistoryService();
 matchHistoryService.loadData();
+const historicalDraftRetriever = new HistoricalDraftRetriever(matchHistoryService);
 
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "data");
@@ -82,6 +88,82 @@ const TEAM_LOGOS: Record<string, string> = {
   RRQ: "70px-Rex_Regum_Qeon_allmode.png",
   TLID: "44px-Team_Liquid_2024_lightmode.png",
 };
+
+const KNOWN_HERO_NAMES: string[] = safeJson(HERO_STATS_FILE, [])
+  .map((entry: any) => cleanText(entry?.hero_name || ""))
+  .filter((entry: string) => !!entry);
+
+function escapeRegex(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function countWords(value: string): number {
+  return String(value || "").trim().split(/\s+/).filter(Boolean).length;
+}
+
+function validateDraftAnalysisOutput(
+  analysis: string,
+  allowedHeroes: string[]
+): { valid: boolean; reasons: string[] } {
+  const reasons: string[] = [];
+  const text = String(analysis || "");
+  const allowedKeys = new Set(allowedHeroes.map((entry) => normalizeName(entry)));
+
+  if (countWords(text) > 350) {
+    reasons.push("output exceeds 350 words");
+  }
+
+  const unauthorizedMentions = KNOWN_HERO_NAMES.filter((heroName) => {
+    const key = normalizeName(heroName);
+    if (!key || allowedKeys.has(key)) return false;
+    const regex = new RegExp(`(^|[^A-Za-z])${escapeRegex(heroName)}([^A-Za-z]|$)`, "i");
+    return regex.test(text);
+  });
+
+  if (unauthorizedMentions.length > 0) {
+    reasons.push(`unauthorized hero mentions: ${unauthorizedMentions.slice(0, 5).join(", ")}`);
+  }
+
+  return {
+    valid: reasons.length === 0,
+    reasons,
+  };
+}
+
+function collectAllowedDraftHeroes(payload: any): string[] {
+  const names = new Set<string>();
+  const addName = (value: any) => {
+    const cleaned = cleanText(String(value || ""));
+    if (cleaned) names.add(cleaned);
+  };
+  const addList = (list: any) => {
+    if (!Array.isArray(list)) return;
+    for (const entry of list) {
+      if (typeof entry === "string") {
+        addName(entry);
+      } else if (entry && typeof entry === "object") {
+        addName(entry.heroName);
+        addName(entry.name);
+      }
+    }
+  };
+
+  addList(payload?.bluePicks);
+  addList(payload?.redPicks);
+  addList(payload?.blueBans);
+  addList(payload?.redBans);
+  addList(payload?.currentDraftState?.bluePicks);
+  addList(payload?.currentDraftState?.redPicks);
+  addList(payload?.currentDraftState?.blueBans);
+  addList(payload?.currentDraftState?.redBans);
+  addList(payload?.recommendationCandidatesTop5);
+  addList(payload?.topTeamPicks?.blue);
+  addList(payload?.topTeamPicks?.red);
+  addList(payload?.topTeamBans?.blue);
+  addList(payload?.topTeamBans?.red);
+
+  return Array.from(names);
+}
 
 // Initialize Gemini AI Client
 const getGeminiClient = () => {
@@ -974,7 +1056,7 @@ app.post("/api/draft/recommendation", (req, res) => {
       redBans,
       currentPhase,
       currentTurnSide,
-      mode: mode as "mpl" | "ranked",
+      mode: mode as "mpl" | "ranked" | "custom",
       blueTeam,
       redTeam,
     };
@@ -1003,16 +1085,23 @@ app.post("/api/draft/recommendation", (req, res) => {
           matchHistoryService
         );
 
-        const mplRecommendations = generateMplRecommendations(
-          payload, heroDatabase, heroesMaster,
-          blueIdentity, redIdentity, matchup, patterns
-        );
-        const recommendationSource =
-          matchup.headToHeadGames > 0
-            ? "matchup-history"
-            : blueIdentity.totalGames > 0 || redIdentity.totalGames > 0
-              ? "team-history"
-              : "global-fallback";
+        const retrieval = historicalDraftRetriever.retrieve({
+          mode: "mpl",
+          blueTeam: normalizedBlueTeam,
+          redTeam: normalizedRedTeam,
+          bluePicks,
+          redPicks,
+          blueBans,
+          redBans,
+          currentPicks: currentTurnSide === "BLUE" ? bluePicks : redPicks,
+          currentBans: currentTurnSide === "BLUE" ? blueBans : redBans,
+          currentTurn: currentTurnSide,
+          currentPhase,
+        }, heroDatabase, heroesMaster);
+        const mplRecommendations = [...retrieval.recommendationCandidates]
+          .sort((left, right) => right.totalScore - left.totalScore)
+          .slice(0, 5);
+        const recommendationSource = retrieval.recommendationSource;
         const debug = {
           mode: "MPL",
           blueTeamId: normalizedBlueTeam,
@@ -1027,22 +1116,126 @@ app.post("/api/draft/recommendation", (req, res) => {
           blueTopBans: blueIdentity.priorityBans.map(h => h.heroName).slice(0, 5),
           redTopBans: redIdentity.priorityBans.map(h => h.heroName).slice(0, 5),
           recommendationSource,
+          cacheHit: retrieval.cacheHit,
+          similarGames: retrieval.similarGames.length,
         };
 
         // Debug log for MPL intelligence
         console.log("[MPL Draft Intelligence]", debug);
 
-        return res.json({
-          recommendations: mplRecommendations,
-          laneStatus,
-          debug,
-          mplIntelligence: {
-            blueProfileGames: blueIdentity.totalGames,
-            redProfileGames: redIdentity.totalGames,
-            headToHeadGames: matchup.headToHeadGames,
-            recommendationSource,
-          }
+        const compactPayloadEstimate = Math.ceil(JSON.stringify(retrieval.compactWaferPayload).length / 4);
+        const shouldExplainWithAI = retrieval.compactWaferPayload.recommendationCandidatesTop5.length > 0
+          && retrieval.compactWaferPayload.constraints.missingData.length < 3
+          && compactPayloadEstimate <= 900;
+
+        if (!shouldExplainWithAI) {
+          return res.json({
+            recommendations: mplRecommendations,
+            laneStatus,
+            debug,
+            overallStrategy: buildLocalDraftAnalysis(retrieval.compactWaferPayload),
+            cached: retrieval.cacheHit,
+            tokenEstimate: null,
+            estimatedCost: 0,
+            historicalContext: {
+              teamProfiles: retrieval.teamProfiles,
+              matchupProfile: retrieval.matchupProfile,
+              similarGames: retrieval.similarGames,
+              draftPatternMatches: retrieval.draftPatternMatches,
+              likelyRepicks: retrieval.likelyRepicks,
+              likelyRebans: retrieval.likelyRebans,
+              pivotCandidates: retrieval.pivotCandidates,
+              compactWaferPayload: retrieval.compactWaferPayload,
+            },
+            mplIntelligence: {
+              blueProfileGames: blueIdentity.totalGames,
+              redProfileGames: redIdentity.totalGames,
+              headToHeadGames: matchup.headToHeadGames,
+              recommendationSource,
+            }
+          });
+        }
+
+        const aiTimeoutMs = 8000;
+        const explainPromise = aiProviderRouter.generateRecommendation(retrieval.compactWaferPayload, {
+          provider: req.body?.provider || "auto",
         });
+        const timeoutPromise = new Promise((resolve) =>
+          setTimeout(
+            () =>
+              resolve({
+                success: false,
+                text: buildLocalDraftAnalysis(retrieval.compactWaferPayload),
+                provider: "local",
+                model: "local-engine",
+                latencyMs: aiTimeoutMs,
+                cached: retrieval.cacheHit,
+                error: "AI timeout",
+              }),
+            aiTimeoutMs
+          )
+        );
+
+        Promise.race([explainPromise, timeoutPromise]).then((aiResult: any) => {
+          const overallStrategy = aiResult.success && aiResult.response
+            ? aiResult.response
+            : buildLocalDraftAnalysis(retrieval.compactWaferPayload);
+
+          return res.json({
+            recommendations: mplRecommendations,
+            laneStatus,
+            debug,
+            overallStrategy,
+            cached: retrieval.cacheHit || aiResult.cached,
+            tokenEstimate: aiResult.tokenEstimate || null,
+            estimatedCost: aiResult.estimatedCost || 0,
+            payloadSize: aiResult.payloadSize || 0,
+            historicalContext: {
+              teamProfiles: retrieval.teamProfiles,
+              matchupProfile: retrieval.matchupProfile,
+              similarGames: retrieval.similarGames,
+              draftPatternMatches: retrieval.draftPatternMatches,
+              likelyRepicks: retrieval.likelyRepicks,
+              likelyRebans: retrieval.likelyRebans,
+              pivotCandidates: retrieval.pivotCandidates,
+              compactWaferPayload: retrieval.compactWaferPayload,
+            },
+            mplIntelligence: {
+              blueProfileGames: blueIdentity.totalGames,
+              redProfileGames: redIdentity.totalGames,
+              headToHeadGames: matchup.headToHeadGames,
+              recommendationSource,
+            }
+          });
+        }).catch((waferError) => {
+          console.error("[MPL Draft Intelligence] Realtime explain fallback:", waferError);
+          return res.json({
+            recommendations: mplRecommendations,
+            laneStatus,
+            debug,
+            overallStrategy: buildLocalDraftAnalysis(retrieval.compactWaferPayload),
+            cached: retrieval.cacheHit,
+            tokenEstimate: null,
+            estimatedCost: 0,
+            historicalContext: {
+              teamProfiles: retrieval.teamProfiles,
+              matchupProfile: retrieval.matchupProfile,
+              similarGames: retrieval.similarGames,
+              draftPatternMatches: retrieval.draftPatternMatches,
+              likelyRepicks: retrieval.likelyRepicks,
+              likelyRebans: retrieval.likelyRebans,
+              pivotCandidates: retrieval.pivotCandidates,
+              compactWaferPayload: retrieval.compactWaferPayload,
+            },
+            mplIntelligence: {
+              blueProfileGames: blueIdentity.totalGames,
+              redProfileGames: redIdentity.totalGames,
+              headToHeadGames: matchup.headToHeadGames,
+              recommendationSource,
+            }
+          });
+        });
+        return;
       } catch (mplError) {
         console.error("[MPL Draft Intelligence] Fallback to generic:", mplError);
         // Fall through to generic recommendations if MPL engine fails
@@ -1104,7 +1297,7 @@ app.post("/api/draft/final-analysis", async (req, res): Promise<any> => {
     const redSection = redHeroes.map(formatHeroForPrompt).join("\n");
 
     return `Anda adalah analis draft profesional MLBB. Berikan analisis strategis mendalam berdasarkan komposisi draft berikut.
-Mode: ${mode === "mpl" ? "MPL (Pro Scene)" : "Ranked (Solo Queue Meta)"}
+Mode: ${mode === "mpl" ? "MPL (Pro Scene)" : mode === "custom" ? "Custom Draft" : "Ranked (Solo Queue Meta)"}
 
 ## TIM BIRU (Picks):
 ${blueSection}
@@ -1203,6 +1396,40 @@ Gunakan data draftTags, counterTags, synergyTags, macroTags, dan powerSpikeTags 
   };
 
   // Try Gemini AI first
+  if (!bluePicks.length && !redPicks.length) {
+    return res.json({ analysis: generateFallbackAnalysis() });
+  }
+
+  const analysisPayload = {
+    mode,
+    teams: { blue: req.body.blueTeam || "BLUE", red: req.body.redTeam || "RED" },
+    currentDraftState: {
+      bluePicks,
+      redPicks,
+      blueBans,
+      redBans,
+      currentTurn: "BLUE",
+      currentPhase: "COMPLETED",
+    },
+    topTeamPicks: { blue: [], red: [] },
+    topTeamBans: { blue: [], red: [] },
+    headToHeadSummary: {
+      summary: "data tidak tersedia",
+      games: 0,
+      teamSeriesWins: 0,
+      opponentSeriesWins: 0,
+    },
+    similarGamesTop3: [],
+    recommendationCandidatesTop5: [],
+    constraints: {
+      maxWords: 200,
+      noRawDataDump: true,
+      noFabrication: true,
+      aiNotSourceOfTruth: true,
+      missingData: [],
+    },
+  };
+
   const ai = getGeminiClient();
   if (!ai) {
     return res.json({ analysis: generateFallbackAnalysis() });
@@ -1211,10 +1438,21 @@ Gunakan data draftTags, counterTags, synergyTags, macroTags, dan powerSpikeTags 
   try {
     const prompt = buildPrompt();
     const response = await ai.models.generateContent({
-      model: "gemini-2.0-flash",
+      model: "qwen3.6-35b-a3b",
       contents: prompt,
     });
-    const analysis = response.text || generateFallbackAnalysis();
+    const fallbackAnalysis = generateFallbackAnalysis();
+    const analysis = response.text || fallbackAnalysis;
+    const validation = validateDraftAnalysisOutput(analysis, [
+      ...bluePicks,
+      ...redPicks,
+      ...blueBans,
+      ...redBans,
+    ]);
+    if (!validation.valid) {
+      console.warn("[Final Analysis] Output validation failed:", validation.reasons.join("; "));
+      return res.json({ analysis: fallbackAnalysis, validationFallback: true });
+    }
     res.json({ analysis });
   } catch (error: any) {
     console.error("[Final Analysis] Gemini AI error:", error.message);
@@ -1246,7 +1484,7 @@ app.post("/api/draft/ai-recommend", async (req, res): Promise<any> => {
       { heroName: "Valentina", role: "Mage", reason: "Flex pick with ultimate copy." },
       { heroName: "Mathilda", role: "Support", reason: "Roam priority with engage." },
     ];
-    const available = fallbackPool.filter(h => !unavailable.has(h.heroName)).slice(0, 3);
+    const available = fallbackPool.filter(h => !unavailable.has(h.heroName)).slice(0, 5);
     return res.status(503).json({
       error:
         "AI service is currently unavailable. Ensure GEMINI_API_KEY or OPENAI_API_KEY is configured in Settings.",
@@ -1274,7 +1512,7 @@ ${JSON.stringify([...bluePicks, ...redPicks, ...blueBans, ...redBans])}
 JANGAN PERNAH merekomendasikan hero yang ada di daftar di atas. Hanya rekomendasikan hero yang BELUM dipilih/dibanned.
 
 Pertimbangkan stats Hero (Tier, Meta) yang ideal untuk counter/sinergi.
-Berikan 3 rekomendasi terbaik (Prioritas tertinggi ke rendah) untuk aksi saat ini.
+Berikan 5 rekomendasi terbaik (Prioritas tertinggi ke rendah) untuk aksi saat ini.
 
 FORMAT JSON:
 {
@@ -1430,10 +1668,10 @@ Muat poin berikut:
 
 // ——— WAFER AI ENDPOINTS (Server-side proxy) ———
 
-// GET /api/ai/test — Test Wafer AI connection
+// GET /api/ai/test — Test Wafer AI connection (backward compat)
 app.get("/api/ai/test", async (_req, res) => {
   try {
-    const result = await testConnection();
+    const result = await testWafer();
     res.json({
       success: result.success,
       model: result.model,
@@ -1454,30 +1692,283 @@ app.get("/api/ai/test", async (_req, res) => {
   }
 });
 
-// POST /api/ai/draft-analysis — Full draft analysis via Wafer AI (Tier 2)
+// GET /api/ai/providers/test — Test all AI providers (TokenPlan + Wafer)
+app.get("/api/ai/providers/test", async (_req, res) => {
+  try {
+    const results = await aiProviderRouter.testAllProviders();
+    const config = aiProviderRouter.getRouterConfig();
+    res.json({
+      primaryProvider: config.primary,
+      fallbackProvider: config.fallback,
+      providers: results.map(r => ({
+        provider: r.provider,
+        connected: r.connected,
+        model: r.model,
+        latencyMs: r.latencyMs,
+        error: r.error,
+      })),
+    });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// GET /api/ai/providers/benchmark — Benchmark all models across providers
+app.get("/api/ai/providers/benchmark", async (_req, res) => {
+  try {
+    const testMsg = [
+      { role: "system", content: "Reply with exactly 10 words about MLBB draft." },
+      { role: "user", content: "Test benchmark" },
+    ];
+    
+    const benchmarks: Array<{ provider: string; model: string; tier: string; latencyMs: number; success: boolean; outputLength: number; recommendedUse: string }> = [];
+    
+    // TokenPlan realtime
+    const tpRealtimeStart = Date.now();
+    const tpRealtime = await fetch((process.env.TOKENPLAN_BASE_URL || 'https://token-plan-sgp.xiaomimimo.com/v1') + '/chat/completions', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + process.env.TOKENPLAN_API_KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: process.env.TOKENPLAN_REALTIME_MODEL || 'mimo-v2.5', messages: testMsg, max_tokens: 50 }),
+    }).catch(() => null);
+    const tpRealtimeMs = Date.now() - tpRealtimeStart;
+    const tpRealtimeData = tpRealtime?.ok ? await tpRealtime.json() : null;
+    benchmarks.push({ provider: 'tokenplan', model: process.env.TOKENPLAN_REALTIME_MODEL || 'mimo-v2.5', tier: 'realtime', latencyMs: tpRealtimeMs, success: !!tpRealtimeData?.choices, outputLength: (tpRealtimeData?.choices?.[0]?.message?.content || '').length, recommendedUse: 'Realtime recommendation, coach panel' });
+    
+    // Wafer realtime
+    const wfRealtimeStart = Date.now();
+    const wfRealtime = await fetch('https://pass.wafer.ai/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + process.env.WAFER_API_KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: process.env.WAFER_REALTIME_MODEL || 'deepseek-v4-flash', messages: testMsg, max_tokens: 50 }),
+    }).catch(() => null);
+    const wfRealtimeMs = Date.now() - wfRealtimeStart;
+    const wfRealtimeData = wfRealtime?.ok ? await wfRealtime.json() : null;
+    benchmarks.push({ provider: 'wafer', model: process.env.WAFER_REALTIME_MODEL || 'deepseek-v4-flash', tier: 'realtime', latencyMs: wfRealtimeMs, success: !!wfRealtimeData?.choices, outputLength: (wfRealtimeData?.choices?.[0]?.message?.content || '').length, recommendedUse: 'Realtime fallback, fast analysis' });
+    
+    // TokenPlan analysis (now mimo-v2.5, not pro)
+    const tpAnalysisStart = Date.now();
+    const tpAnalysis = await fetch((process.env.TOKENPLAN_BASE_URL || 'https://token-plan-sgp.xiaomimimo.com/v1') + '/chat/completions', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + process.env.TOKENPLAN_API_KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: process.env.TOKENPLAN_ANALYSIS_MODEL || 'mimo-v2.5', messages: testMsg, max_tokens: 100 }),
+    }).catch(() => null);
+    const tpAnalysisMs = Date.now() - tpAnalysisStart;
+    const tpAnalysisData = tpAnalysis?.ok ? await tpAnalysis.json() : null;
+    benchmarks.push({ provider: 'tokenplan', model: process.env.TOKENPLAN_ANALYSIS_MODEL || 'mimo-v2.5', tier: 'analysis', latencyMs: tpAnalysisMs, success: !!tpAnalysisData?.choices, outputLength: (tpAnalysisData?.choices?.[0]?.message?.content || '').length, recommendedUse: 'Standard final analysis (fast)' });
+    
+    // Wafer analysis
+    const wfAnalysisStart = Date.now();
+    const wfAnalysis = await fetch('https://pass.wafer.ai/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + process.env.WAFER_API_KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: process.env.WAFER_ANALYSIS_MODEL || 'Qwen3.6-35B-A3B', messages: testMsg, max_tokens: 100 }),
+    }).catch(() => null);
+    const wfAnalysisMs = Date.now() - wfAnalysisStart;
+    const wfAnalysisData = wfAnalysis?.ok ? await wfAnalysis.json() : null;
+    benchmarks.push({ provider: 'wafer', model: process.env.WAFER_ANALYSIS_MODEL || 'Qwen3.6-35B-A3B', tier: 'analysis', latencyMs: wfAnalysisMs, success: !!wfAnalysisData?.choices, outputLength: (wfAnalysisData?.choices?.[0]?.message?.content || '').length, recommendedUse: 'Analysis fallback' });
+    
+    res.json({ benchmarks, fastest: benchmarks.filter(b => b.success).sort((a, b) => a.latencyMs - b.latencyMs)[0] || null });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// POST /api/ai/draft-analysis — Full draft analysis via AI Provider Router (auto-failover)
 app.post("/api/ai/draft-analysis", async (req, res) => {
   try {
-    const { mode, blueTeam, redTeam, bluePicks, redPicks, blueBans, redBans, teamProfiles, matchupProfile } = req.body;
+    const { mode, blueTeam, redTeam, bluePicks = [], redPicks = [], blueBans = [], redBans = [], provider } = req.body;
+    const isCompletedDraft = bluePicks.length >= 5 && redPicks.length >= 5;
 
-    const result = await analyzeDraft({
+    let compactPayload = req.body?.compactPayload;
+    let recommendationSource = "global-fallback";
+    let cacheHit = false;
+    let similarGamesCount = 0;
+
+    if (!compactPayload && mode === "mpl" && blueTeam && redTeam) {
+      const masterPath = path.join(ROOT, "src", "data", "heroes_master.json");
+      const heroesMaster: any[] = safeJson(masterPath, []);
+      const heroesDir = path.join(DATA_DIR, "heroes");
+      const heroDatabase: any[] = [];
+      if (fs.existsSync(heroesDir)) {
+        const heroFiles = fs.readdirSync(heroesDir).filter((f) => f.endsWith(".json"));
+        for (const file of heroFiles) {
+          const heroData = safeJson(path.join(heroesDir, file), null);
+          if (heroData) heroDatabase.push(heroData);
+        }
+      }
+
+      const retrieval = historicalDraftRetriever.retrieve({
+        mode: "mpl",
+        blueTeam,
+        redTeam,
+        bluePicks,
+        redPicks,
+        blueBans,
+        redBans,
+        currentPicks: bluePicks.length <= redPicks.length ? bluePicks : redPicks,
+        currentBans: blueBans.length <= redBans.length ? blueBans : redBans,
+        currentTurn: bluePicks.length <= redPicks.length ? "BLUE" : "RED",
+        currentPhase: "COMPLETED",
+      }, heroDatabase, heroesMaster);
+      compactPayload = retrieval.compactWaferPayload;
+      recommendationSource = retrieval.recommendationSource;
+      cacheHit = retrieval.cacheHit;
+      similarGamesCount = retrieval.similarGames.length;
+    }
+
+    const fallbackPayload = compactPayload || {
       mode,
-      blueTeam,
-      redTeam,
-      bluePicks,
-      redPicks,
-      blueBans,
-      redBans,
-      teamProfiles,
-      matchupProfile,
+      teams: { blue: blueTeam || "BLUE", red: redTeam || "RED" },
+      currentDraftState: {
+        bluePicks,
+        redPicks,
+        blueBans,
+        redBans,
+        currentTurn: "BLUE",
+        currentPhase: "COMPLETED",
+      },
+      topTeamPicks: { blue: [], red: [] },
+      topTeamBans: { blue: [], red: [] },
+      headToHeadSummary: {
+        summary: "data tidak tersedia",
+        games: 0,
+        teamSeriesWins: 0,
+        opponentSeriesWins: 0,
+      },
+      similarGamesTop3: [],
+      recommendationCandidatesTop5: [],
+      constraints: {
+        maxWords: 350,
+        noRawDataDump: true,
+        noFabrication: true,
+        aiNotSourceOfTruth: true,
+        missingData: ["team history tidak tersedia"],
+      }
+    };
+    const fallbackAnalysis = buildLocalDraftAnalysis(fallbackPayload);
+    const allowedHeroes = collectAllowedDraftHeroes(fallbackPayload);
+
+    if (!isCompletedDraft) {
+      return res.json({
+        success: true,
+        analysis: fallbackAnalysis,
+        model: "local-engine",
+        tier: "analysis",
+        latencyMs: 0,
+        tokenEstimate: { input: 0, output: 0 },
+        estimatedCost: 0,
+        payloadSize: Buffer.byteLength(JSON.stringify(fallbackPayload), "utf8"),
+        cached: true,
+      });
+    }
+
+    // AI_ENV development mode: skip AI providers entirely, return local structured analysis
+    if (process.env.AI_ENV === 'development') {
+      logAIRequest({
+        sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+        teamBlue: blueTeam,
+        teamRed: redTeam,
+        draftPhase: 'final_analysis',
+        requestType: 'final_analysis',
+        providerUsed: 'local',
+        modelUsed: 'local-engine',
+        responseTimeMs: 0,
+        cacheHit: true,
+        fallbackUsed: false,
+      });
+      return res.json({
+        success: true,
+        analysis: fallbackAnalysis,
+        model: 'local-engine',
+        provider: 'local',
+        tier: 'analysis',
+        latencyMs: 0,
+        cached: true,
+        source: 'local-engine-only',
+      });
+    }
+
+    // Use AI Provider Router with auto-failover (tokenplan → wafer → local)
+    const result = await aiProviderRouter.analyzeDraft(fallbackPayload, {
+      provider: provider || undefined,
     });
 
+    if (result.localFallback || !result.text) {
+      // All providers failed, return local analysis
+      logAIRequest({
+        sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+        teamBlue: blueTeam,
+        teamRed: redTeam,
+        draftPhase: 'final_analysis',
+        requestType: 'final_analysis',
+        providerUsed: 'local',
+        modelUsed: 'local-engine',
+        responseTimeMs: result.latencyMs || 0,
+        cacheHit: cacheHit,
+        fallbackUsed: true,
+      });
+      return res.json({
+        success: true,
+        analysis: fallbackAnalysis,
+        model: "local-engine",
+        provider: "local",
+        tier: "analysis",
+        latencyMs: result.latencyMs,
+        payloadSize: Buffer.byteLength(JSON.stringify(fallbackPayload), "utf8"),
+        cached: cacheHit,
+      });
+    }
+
+    const validation = validateDraftAnalysisOutput(result.text, allowedHeroes);
+    if (!validation.valid) {
+      console.warn("[Draft Analysis] Output validation failed:", validation.reasons.join("; "));
+      logAIRequest({
+        sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+        teamBlue: blueTeam,
+        teamRed: redTeam,
+        draftPhase: 'final_analysis',
+        requestType: 'final_analysis',
+        providerUsed: 'local',
+        modelUsed: 'local-engine',
+        responseTimeMs: result.latencyMs || 0,
+        cacheHit: !!(cacheHit || result.cached),
+        fallbackUsed: true,
+        errorCode: 'validation_fallback',
+      });
+      return res.json({
+        success: true,
+        analysis: fallbackAnalysis,
+        model: "local-engine",
+        provider: result.provider,
+        tier: "analysis",
+        latencyMs: result.latencyMs,
+        cached: cacheHit || result.cached,
+        validationFallback: true,
+        validationReasons: validation.reasons,
+      });
+    }
+
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      teamBlue: blueTeam,
+      teamRed: redTeam,
+      draftPhase: 'final_analysis',
+      requestType: 'final_analysis',
+      providerUsed: result.provider || 'local',
+      modelUsed: result.model || 'local-engine',
+      responseTimeMs: result.latencyMs || 0,
+      cacheHit: !!(cacheHit || result.cached),
+      fallbackUsed: !!result.fallbackUsed,
+    });
     res.json({
       success: result.success,
-      analysis: result.response,
+      analysis: result.text,
       model: result.model,
-      tier: result.tier,
+      provider: result.provider,
+      tier: "analysis",
       latencyMs: result.latencyMs,
-      tokenEstimate: result.tokenEstimate,
+      cached: cacheHit || result.cached,
+      fallbackUsed: result.fallbackUsed,
       ...(result.error ? { error: result.error } : {}),
     });
   } catch (error: any) {
@@ -1488,23 +1979,45 @@ app.post("/api/ai/draft-analysis", async (req, res) => {
   }
 });
 
-// GET /api/ai/cache-stats — Show cache status
+// GET /api/ai/cache-stats — Show cache status (all providers)
 app.get("/api/ai/cache-stats", (_req, res) => {
-  res.json(getCacheStats());
+  res.json(aiProviderRouter.getCacheStats());
 });
 
-// POST /api/ai/deep-analysis — Premium tier (explicit user action only)
+// POST /api/ai/deep-analysis — Premium tier via router (explicit user action only)
 app.post("/api/ai/deep-analysis", async (req, res) => {
   try {
-    const result = await deepAnalysis(req.body);
+    const { provider, ...payload } = req.body;
+    const result = await aiProviderRouter.deepAnalysis(payload, { provider: provider || undefined });
     res.json({
       success: result.success,
-      analysis: result.response,
+      analysis: result.text,
       model: result.model,
-      tier: result.tier,
+      provider: result.provider,
+      tier: "premium",
       latencyMs: result.latencyMs,
-      tokenEstimate: result.tokenEstimate,
+      cached: result.cached,
       ...(result.error ? { error: result.error } : {}),
+    });
+  } catch (error: any) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// POST /api/ai/recommendation-explain — Realtime recommendation explanation via router
+app.post("/api/ai/recommendation-explain", async (req, res) => {
+  try {
+    const { context, draftData, provider } = req.body;
+    const payload = draftData || { recommendationCandidatesTop5: [], teams: {}, headToHeadSummary: { summary: context || '' }, similarGamesTop3: [], constraints: { maxWords: 350, noRawDataDump: true, noFabrication: true, aiNotSourceOfTruth: true, missingData: [] }, currentDraftState: { bluePicks: [], redPicks: [], blueBans: [], redBans: [], currentTurn: 'BLUE', currentPhase: 'BAN' }, topTeamPicks: { blue: [], red: [] }, topTeamBans: { blue: [], red: [] } };
+    const result = await aiProviderRouter.generateRecommendation(payload, { provider: provider || undefined });
+    res.json({
+      success: result.success,
+      explanation: result.text,
+      model: result.model,
+      provider: result.provider,
+      latencyMs: result.latencyMs,
+      cached: result.cached,
+      fallbackUsed: result.fallbackUsed,
     });
   } catch (error: any) {
     res.status(500).json({ success: false, error: error.message });

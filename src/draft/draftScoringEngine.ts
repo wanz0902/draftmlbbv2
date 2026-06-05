@@ -363,59 +363,153 @@ function findHeroByName(name: string, heroDatabase: HeroData[]): HeroData | unde
 export function scoreMplHero(heroSlug: string, context: MplScoringContext): MplScoreBreakdown {
   const heroNameLower = normalizeHeroKey(heroSlug);
 
-  let teamHistory = 0;
-  let headToHead = 0;
-  let draftPattern = 0; // placeholder — filled later by draftPatternEngine
-  let teamComfort = 0;
-  let teamDeny = 0;
-  let meta = 0;
+  let matchupHistoryScore = 0;
+  let teamHistoryScore = 0;
+  let comfortScore = 0;
+  let patternScore = 0;
+  let repickScore = 0;
+  let rebanScore = 0;
+  let pivotScore = 0;
+  let counterScore = 0;
+  let availabilityScore = 20;
+  let metaScore = 0;
 
-  // teamHistory: ally's winRate with this hero × 0.30 (max 30 pts)
   if (context.allyIdentity) {
     for (const [name, stats] of context.allyIdentity.heroStats) {
       if (normalizeHeroKey(name) === heroNameLower && stats.pickCount >= 2) {
-        teamHistory = Math.round((stats.winRate / 100) * 30);
+        const volumeBoost = Math.min(8, stats.pickCount * 1.5);
+        teamHistoryScore = Math.round((stats.winRate / 100) * 22 + volumeBoost);
         break;
       }
     }
   }
 
-  // headToHead: matchup-specific winRate × 0.25 (max 25 pts)
   if (context.matchupProfile) {
     const h2hComfort = context.matchupProfile.teamMatchupComfort.find(
       (h) => normalizeHeroKey(h.heroName) === heroNameLower
     );
     if (h2hComfort) {
-      headToHead = Math.round((h2hComfort.winRate / 100) * 25);
+      matchupHistoryScore = Math.round((h2hComfort.winRate / 100) * 22 + Math.min(10, h2hComfort.pickCount * 2));
+    }
+
+    const denyBan = context.matchupProfile.opponentMatchupBans.find(
+      (h) => normalizeHeroKey(h.heroName) === heroNameLower
+    );
+    if (denyBan) {
+      rebanScore += Math.min(12, denyBan.banCount * 3);
     }
   }
 
-  // draftPattern: placeholder 0 (will be integrated later from draftPatternEngine in task 2.3)
-  draftPattern = 0;
-
-  // teamComfort: 15 if hero is in ally comfort list, 0 otherwise
   if (context.allyIdentity) {
-    const isComfort = context.allyIdentity.comfortHeroes.some(
+    const comfortEntry = context.allyIdentity.comfortHeroes.find(
       (h) => normalizeHeroKey(h.heroName) === heroNameLower
     );
-    if (isComfort) teamComfort = 15;
+    if (comfortEntry) {
+      comfortScore = Math.min(18, 8 + comfortEntry.pickCount * 2 + Math.round(comfortEntry.winRate / 20));
+      repickScore = Math.min(14, comfortEntry.pickCount * 2);
+    }
   }
 
-  // teamDeny: 10 if hero is in enemy comfort list, 0 otherwise
   if (context.enemyIdentity) {
-    const isEnemyComfort = context.enemyIdentity.comfortHeroes.some(
+    const isEnemyComfort = context.enemyIdentity.comfortHeroes.find(
       (h) => normalizeHeroKey(h.heroName) === heroNameLower
     );
-    if (isEnemyComfort) teamDeny = 10;
+    if (isEnemyComfort) {
+      counterScore += Math.min(12, 5 + isEnemyComfort.pickCount * 2);
+    }
   }
 
-  // meta: effectively 0 — only 0.01 × metaTier numeric value as tiebreaker
-  // S=5, A=4, B=3, C=2, D=1
-  // Note: metaTier is not available in MplScoringContext directly,
-  // so this defaults to 0. The recommendation engine can override if needed.
-  meta = 0;
+  if (context.draftPatterns) {
+    const firstPickHit = context.draftPatterns.firstPickTendencies.find(
+      (entry) => normalizeHeroKey(entry.heroName) === heroNameLower
+    );
+    if (firstPickHit) {
+      patternScore += Math.min(14, Math.round(firstPickHit.frequency * 12));
+    }
 
-  return { teamHistory, headToHead, draftPattern, teamComfort, teamDeny, meta };
+    const sequencingHits = Array.from(context.draftPatterns.heroSequencing.entries()).flatMap(
+      ([baseHero, followUps]) =>
+        context.currentPicks.some((pick) => normalizeHeroKey(pick) === normalizeHeroKey(baseHero))
+          ? followUps.filter((entry) => normalizeHeroKey(entry.followHero) === heroNameLower)
+          : []
+    );
+
+    if (sequencingHits.length > 0) {
+      patternScore += Math.min(
+        18,
+        sequencingHits.reduce((sum, entry) => sum + Math.round(entry.frequency * 10), 0)
+      );
+      pivotScore += Math.min(12, sequencingHits.reduce((sum, entry) => sum + Math.round(entry.frequency * 7), 0));
+    }
+  }
+
+  if (context.enemyPicks.length > 0 && context.heroDatabase?.length) {
+    const hero = context.heroDatabase.find(
+      (entry: any) =>
+        normalizeHeroKey(entry.heroName || entry.name || entry.id) === heroNameLower
+    );
+    const counterTags = new Set(Array.from(hero?.counterTags || []).map((tag) => String(tag).toLowerCase()));
+    const enemyTagBag = new Set<string>();
+
+    context.enemyPicks.forEach((pick) => {
+      const enemyHero = context.heroDatabase?.find(
+        (entry: any) =>
+          normalizeHeroKey(entry.heroName || entry.name || entry.id) === normalizeHeroKey(pick)
+      );
+      ((enemyHero?.playstyleTags || []) as string[]).forEach((tag) => enemyTagBag.add(String(tag).toLowerCase()));
+      ((enemyHero?.draftTags || []) as string[]).forEach((tag) => enemyTagBag.add(String(tag).toLowerCase()));
+      ((enemyHero?.synergyTags || []) as string[]).forEach((tag) => enemyTagBag.add(String(tag).toLowerCase()));
+    });
+
+    const tagHits = Array.from(counterTags).filter((tag) => enemyTagBag.has(tag)).length;
+    counterScore += Math.min(18, tagHits * 4);
+  }
+
+  const metaTierHero = context.heroDatabase?.find(
+    (entry: any) =>
+      normalizeHeroKey(entry.heroName || entry.name || entry.id) === heroNameLower
+  );
+  const tier = String(metaTierHero?.metaTier || "D").toUpperCase();
+  metaScore = tier === "S" ? 4 : tier === "A" ? 3 : tier === "B" ? 2 : 1;
+
+  const historyExists =
+    matchupHistoryScore > 0 ||
+    teamHistoryScore > 0 ||
+    comfortScore > 0 ||
+    patternScore > 0 ||
+    repickScore > 0 ||
+    rebanScore > 0 ||
+    pivotScore > 0;
+
+  if (historyExists) {
+    metaScore = Math.min(metaScore, 2);
+  }
+
+  if (context.currentPicks.some((pick) => normalizeHeroKey(pick) === heroNameLower)) {
+    availabilityScore = 0;
+  }
+  if ((context.currentBans || []).some((ban) => normalizeHeroKey(ban) === heroNameLower)) {
+    availabilityScore = 0;
+  }
+  if ((context.enemyBans || []).some((ban) => normalizeHeroKey(ban) === heroNameLower)) {
+    availabilityScore = 0;
+  }
+  if (context.enemyPicks.some((pick) => normalizeHeroKey(pick) === heroNameLower)) {
+    availabilityScore = 0;
+  }
+
+  return {
+    matchupHistoryScore,
+    teamHistoryScore,
+    comfortScore,
+    patternScore,
+    repickScore,
+    rebanScore,
+    pivotScore,
+    counterScore,
+    availabilityScore,
+    metaScore,
+  };
 }
 
 /**
@@ -424,11 +518,15 @@ export function scoreMplHero(heroSlug: string, context: MplScoringContext): MplS
  */
 export function calculateMplTotalScore(breakdown: MplScoreBreakdown): number {
   return (
-    breakdown.teamHistory +
-    breakdown.headToHead +
-    breakdown.draftPattern +
-    breakdown.teamComfort +
-    breakdown.teamDeny +
-    breakdown.meta
+    breakdown.matchupHistoryScore +
+    breakdown.teamHistoryScore +
+    breakdown.comfortScore +
+    breakdown.patternScore +
+    breakdown.repickScore +
+    breakdown.rebanScore +
+    breakdown.pivotScore +
+    breakdown.counterScore +
+    breakdown.availabilityScore +
+    breakdown.metaScore
   );
 }

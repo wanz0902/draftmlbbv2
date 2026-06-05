@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { HeroStats } from "../types";
-import { Search, Flame, ShieldAlert, Users, Compass, ShieldCheck } from "lucide-react";
+import { ArrowLeft, Search, Flame, ShieldAlert, Users, Compass, ShieldCheck } from "lucide-react";
 import { getHeroImageUrl } from "../lib/heroUtils";
 import FallbackImage from "./FallbackImage";
 
@@ -79,6 +79,19 @@ export default function CounterMatrixPanel({ heroes, heroAssets }: CounterMatrix
 
   return (
     <div className="space-y-6 page-enter">
+      <div className="flex items-center justify-between gap-3 sm:hidden">
+        <button
+          type="button"
+          onClick={() => window.history.back()}
+          className="btn-ghost justify-start text-xs"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Kembali
+        </button>
+        <div className="ui-badge border-white/10 bg-white/[0.04] text-slate-300">
+          Counter Matrix
+        </div>
+      </div>
       {/* Selector and Main Display Card */}
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Left Selector: Search & Select */}

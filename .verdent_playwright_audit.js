@@ -1,0 +1,27 @@
+﻿const { chromium } = require('playwright');
+(async()=>{
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
+  const log = [];
+  page.on('console', msg => { if (msg.type() === 'error') log.push('console:'+msg.text()); });
+  await page.goto('http://localhost:3001', { waitUntil: 'networkidle' });
+  await page.click('text=Open Draft Master').catch(()=>page.click('text=Mulai Draft Simulator'));
+  await page.waitForTimeout(1200);
+  const draftVisible = await page.locator('text=Draft Master').count();
+  await page.click('text=MPL Mode').catch(()=>{});
+  await page.waitForTimeout(300);
+  const onic = page.locator('text=ONIC').first();
+  if (await onic.count()) await onic.click().catch(()=>{});
+  const rrq = page.locator('text=RRQ').first();
+  if (await rrq.count()) await rrq.click().catch(()=>{});
+  const start = page.locator('text=Mulai Simulasi MPL').first();
+  if (await start.count()) await start.click().catch(()=>{});
+  await page.waitForTimeout(1500);
+  const hasBackButton = await page.locator('text=Back to Home').count();
+  const hasTimeline = await page.locator('text=Draft Phase Timeline').count();
+  const hasHeroPool = await page.locator('text=Interactive Hero Pool').count();
+  const bodyWidth = await page.evaluate(() => document.body.scrollWidth);
+  const viewWidth = await page.evaluate(() => window.innerWidth);
+  console.log(JSON.stringify({draftVisible,hasBackButton,hasTimeline,hasHeroPool,bodyWidth,viewWidth,overflow:bodyWidth>viewWidth,errors:log.slice(0,20)}, null, 2));
+  await browser.close();
+})();

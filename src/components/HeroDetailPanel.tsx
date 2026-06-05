@@ -91,13 +91,13 @@ export default function HeroDetailPanel({ hero, onClose, heroAssets }: Props) {
         <div className="relative shrink-0 flex flex-col bg-gradient-to-b from-blue-950/20 to-transparent border-b border-gray-800/50">
           <button
             onClick={onClose}
-            className="absolute top-4 right-16 z-20 flex items-center gap-1.5 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm text-gray-300 transition-colors"
+            className="absolute left-4 top-4 z-20 flex items-center gap-1.5 rounded-xl border border-white/10 bg-gray-800/90 px-3 py-2 text-sm text-gray-200 transition-colors hover:bg-gray-700"
           >
             <ArrowLeft className="w-4 h-4" /> Kembali
           </button>
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-20 p-2 bg-black/60 hover:bg-red-500/80 rounded border border-gray-700 text-white transition-colors"
+            className="absolute right-4 top-4 z-20 rounded-xl border border-gray-700 bg-black/60 p-2 text-white transition-colors hover:bg-red-500/80"
           >
             <X className="w-5 h-5" />
           </button>
