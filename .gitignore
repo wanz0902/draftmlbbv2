@@ -48,3 +48,6 @@ data/*.db-journal
 # Kiro workspace
 .kiro/
 .verdent_*
+
+# Local debug artifacts (screenshots, test outputs)
+debug/
