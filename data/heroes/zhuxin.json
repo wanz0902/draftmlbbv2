@@ -43,7 +43,8 @@
       "strategicPurpose": "",
       "iconName": "Crimson_Butterflies",
       "displayLabel": "Passive",
-      "skillSlot": "passive"
+      "skillSlot": "passive",
+      "iconUrl": "/raw-assets/skill_icons/zhuxin/crimson_butterflies.png"
     },
     "skill1": {
       "name": "Fluttering Grace",
@@ -79,7 +80,8 @@
       "strategicPurpose": "",
       "iconName": "Fluttering_Grace",
       "displayLabel": "Skill 1",
-      "skillSlot": "skill1"
+      "skillSlot": "skill1",
+      "iconUrl": "/raw-assets/skill_icons/zhuxin/fluttering_grace.png"
     },
     "skill2": {
       "name": "Lantern Flare",
@@ -116,7 +118,8 @@
       "strategicPurpose": "",
       "iconName": "Lantern_Flare",
       "displayLabel": "Skill 2",
-      "skillSlot": "skill2"
+      "skillSlot": "skill2",
+      "iconUrl": "/raw-assets/skill_icons/zhuxin/lantern_flare.png"
     },
     "ultimate": {
       "name": "Crimson Beacon",
@@ -147,7 +150,8 @@
       "strategicPurpose": "",
       "iconName": "Crimson_Beacon",
       "displayLabel": "Ultimate",
-      "skillSlot": "ultimate"
+      "skillSlot": "ultimate",
+      "iconUrl": "/raw-assets/skill_icons/zhuxin/crimson_beacon.png"
     }
   },
   "name": "Zhuxin",
