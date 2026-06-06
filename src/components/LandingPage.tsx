@@ -319,36 +319,40 @@ export default function LandingPage({ onChangeTab, heroesCount }: LandingPagePro
                 </div>
               </div>
 
-              <div className="mt-4 grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
+              <div className="mt-4 grid gap-4 min-[1800px]:grid-cols-[1.08fr_0.92fr]">
                 <div className="space-y-4">
-                  <div className="rounded-2xl border border-blue-400/15 bg-blue-400/5 p-4">
+                  <div className="rounded-2xl border border-blue-400/15 bg-blue-400/5 p-3 sm:p-4">
                     <div className="mb-3 flex items-center justify-between">
                       <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-blue-300">Blue Draft Board</div>
                       <div className="text-xs text-slate-400">First Pick Side</div>
                     </div>
-                    <div className="grid grid-cols-5 gap-2">
+                    <div className="grid grid-cols-5 gap-1.5 sm:gap-2">
                       {["Fanny", "Freya", "Phoveus", "Chip", "Harley"].map((hero) => (
-                        <div key={hero} className="rounded-xl border border-rose-400/15 bg-rose-400/8 px-2 py-3 text-center">
-                          <div className="mx-auto h-12 w-12 overflow-hidden rounded-xl border border-rose-400/20">
-                            <img src={getHeroImageUrl(hero, heroAssets)} alt={hero} className="h-full w-full object-cover" />
+                        <div key={hero} className="min-w-0 rounded-xl border border-rose-400/15 bg-rose-400/8 p-1.5 text-center">
+                          <div className="relative mx-auto aspect-square w-full max-w-14 overflow-hidden rounded-xl border border-rose-400/20 bg-[#07111d]">
+                            <img src={getHeroImageUrl(hero, heroAssets)} alt={hero} className="block h-full w-full object-cover object-center" />
+                            <div className="absolute inset-x-1 bottom-1 rounded-md bg-rose-950/80 py-0.5 text-[8px] font-black uppercase tracking-normal text-rose-200 ring-1 ring-rose-300/20">
+                              Ban
+                            </div>
                           </div>
-                          <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-rose-300">Ban</div>
-                          <div className="mt-1 text-xs font-semibold text-white">{hero}</div>
+                          <div className="mt-1 truncate text-[10px] font-semibold leading-tight text-white">{hero}</div>
                         </div>
                       ))}
                     </div>
-                    <div className="mt-3 grid grid-cols-5 gap-2">
+                    <div className="mt-3 grid grid-cols-5 gap-1.5 sm:gap-2">
                       {["Mathilda", "Harith", "Fredrinn", "Zhuxin", "Flex Slot"].map((hero, index) => (
-                        <div key={hero} className={`rounded-xl border px-2 py-4 text-center ${index === 4 ? "border-dashed border-cyan-400/25 bg-cyan-400/6" : "border-cyan-400/15 bg-cyan-400/8"}`}>
-                          <div className="mx-auto h-12 w-12 overflow-hidden rounded-xl border border-cyan-400/20 bg-[#07111d]">
+                        <div key={hero} className={`min-w-0 rounded-xl border p-1.5 text-center ${index === 4 ? "border-dashed border-cyan-400/25 bg-cyan-400/6" : "border-cyan-400/15 bg-cyan-400/8"}`}>
+                          <div className="relative mx-auto aspect-square w-full max-w-14 overflow-hidden rounded-xl border border-cyan-400/20 bg-[#07111d]">
                             {index === 4 ? (
-                              <div className="flex h-full w-full items-center justify-center text-[10px] font-mono uppercase tracking-[0.18em] text-cyan-300">Flex</div>
+                              <div className="flex h-full w-full items-center justify-center text-[9px] font-black uppercase tracking-normal text-cyan-300">Flex</div>
                             ) : (
-                              <img src={getHeroImageUrl(hero, heroAssets)} alt={hero} className="h-full w-full object-cover" />
+                              <img src={getHeroImageUrl(hero, heroAssets)} alt={hero} className="block h-full w-full object-cover object-center" />
                             )}
+                            <div className="absolute inset-x-1 bottom-1 rounded-md bg-cyan-950/80 py-0.5 text-[8px] font-black uppercase tracking-normal text-cyan-200 ring-1 ring-cyan-300/20">
+                              {index === 4 ? "Flex" : "Pick"}
+                            </div>
                           </div>
-                          <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-cyan-300">Pick</div>
-                          <div className="mt-1 text-xs font-semibold text-white">{hero}</div>
+                          <div className="mt-1 truncate text-[10px] font-semibold leading-tight text-white">{index === 4 ? "Flex" : hero}</div>
                         </div>
                       ))}
                     </div>
@@ -376,19 +380,18 @@ export default function LandingPage({ onChangeTab, heroesCount }: LandingPagePro
                       <Sparkles className="h-4 w-4 text-cyan-300" />
                     </div>
                     <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/8 p-4">
-                      <div className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">Recommended Ban</div>
-                      <div className="mt-3 flex items-start gap-3">
-                        <div className="h-16 w-16 overflow-hidden rounded-2xl border border-cyan-400/20">
-                          <img src={getHeroImageUrl("Fanny", heroAssets)} alt="Fanny" className="h-full w-full object-cover" />
+                      <div className="flex items-center gap-3">
+                        <div className="h-16 w-16 shrink-0 aspect-square overflow-hidden rounded-2xl border border-cyan-400/20 bg-[#07111d]">
+                          <img src={getHeroImageUrl("Fanny", heroAssets)} alt="Fanny" className="block h-full w-full object-cover object-center" />
                         </div>
-                        <div>
+                        <div className="min-w-0 flex-1">
+                          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">Recommended Ban</div>
                           <div className="text-2xl font-bold text-white">Fanny</div>
-                          <p className="mt-2 text-sm leading-7 text-slate-300">
-                            Enemy jungler comfort + high snowball risk. Ban ini menutup jalur tempo cepat dan
-                            memaksa lawan pindah ke setup yang lebih mudah dibaca.
-                          </p>
                         </div>
                       </div>
+                      <p className="mt-3 text-sm leading-6 text-slate-300">
+                        Enemy jungler comfort + snowball risk. Ban ini menutup tempo cepat dan memaksa lawan pivot.
+                      </p>
                     </div>
                     <div className="mt-3 grid gap-2">
                       <div className="rounded-xl border border-white/8 bg-[#0b1727] px-3 py-3">
@@ -605,8 +608,8 @@ export default function LandingPage({ onChangeTab, heroesCount }: LandingPagePro
               <div className="space-y-3">
                 {topPresence.map((hero) => (
                   <div key={hero.hero} className="flex items-center gap-3 rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 hover:bg-white/[0.06] transition-colors">
-                    <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-[#0b1727]">
-                      <img src={getHeroImageUrl(hero.hero, heroAssets)} alt={hero.hero} className="h-full w-full object-cover" />
+                    <div className="h-12 w-12 aspect-square shrink-0 overflow-hidden rounded-xl border border-white/10 bg-[#0b1727]">
+                      <img src={getHeroImageUrl(hero.hero, heroAssets)} alt={hero.hero} className="block h-full w-full object-cover object-center" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="font-semibold text-white truncate">{hero.hero}</div>

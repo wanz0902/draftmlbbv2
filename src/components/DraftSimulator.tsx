@@ -29,6 +29,7 @@ import {
   ChevronLeft,
   Sparkle,
   Undo2,
+  Pause,
 } from "lucide-react";
 import { HeroStats } from "../types";
 import { DraftMode, LaneStatus, DraftRecommendation, MplDraftRecommendation } from "../draft/draftTypes";
@@ -165,6 +166,19 @@ interface CompactDraftTimelineEntry {
   isPast: boolean;
 }
 
+type CoachRecommendationTone = "ban" | "pick" | "priority" | "counter" | "comfort" | "deny" | "meta" | "adaptive";
+
+interface CoachRecommendationView {
+  heroName: string;
+  label: string;
+  reason: string;
+  source: string;
+  evidence: string;
+  score: number;
+  tone: CoachRecommendationTone;
+  scoreBreakdown?: Record<string, number>;
+}
+
 export default function DraftSimulator({
   heroes,
   heroAssets,
@@ -234,6 +248,9 @@ export default function DraftSimulator({
   // Auto-recommendation state (fires on each draft step)
   const [draftRecommendations, setDraftRecommendations] = useState<DraftRecommendation[]>([]);
   const [recsLoading, setRecsLoading] = useState(false);
+  const [recommendationsPaused, setRecommendationsPaused] = useState(false);
+  const recommendationCacheRef = useRef<Map<string, DraftRecommendation[]>>(new Map());
+  const aiCoachCacheRef = useRef<Map<string, AIRecommendResult>>(new Map());
 
   const [soundEnabled, setSoundEnabled] = useState(true);
 
@@ -251,8 +268,20 @@ export default function DraftSimulator({
   // Auto-fetch recommendations on each draft step change
   useEffect(() => {
     if (!draftStarted || isCompleted) return;
+    if (recommendationsPaused) {
+      setRecsLoading(false);
+      return;
+    }
 
     const fetchRecommendations = async () => {
+      const cacheKey = buildRecommendationCacheKey();
+      const cached = recommendationCacheRef.current.get(cacheKey);
+      if (cached) {
+        setDraftRecommendations(cached);
+        setRecsLoading(false);
+        return;
+      }
+
       setRecsLoading(true);
       try {
         const response = await fetch("/api/draft/recommendation", {
@@ -273,7 +302,9 @@ export default function DraftSimulator({
         if (response.ok) {
           const data = await response.json();
           if (data.recommendations && Array.isArray(data.recommendations)) {
-            setDraftRecommendations(data.recommendations.slice(0, 5));
+            const nextRecommendations = data.recommendations.slice(0, 5);
+            recommendationCacheRef.current.set(cacheKey, nextRecommendations);
+            setDraftRecommendations(nextRecommendations);
           }
         }
       } catch (err) {
@@ -285,7 +316,7 @@ export default function DraftSimulator({
     };
 
     fetchRecommendations();
-  }, [currentStepIdx, draftStarted, draftMode, selectedBlueTeam, selectedRedTeam, blueTeam, redTeam, bluePicks, redPicks, blueBans, redBans]);
+  }, [currentStepIdx, draftStarted, draftMode, selectedBlueTeam, selectedRedTeam, blueTeam, redTeam, bluePicks, redPicks, blueBans, redBans, recommendationsPaused]);
 
   // Fetch lane status from recommendation endpoint whenever picks change
   useEffect(() => {
@@ -363,6 +394,149 @@ export default function DraftSimulator({
 
   const normalizeHeroKey = (value: string) =>
     String(value || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+
+  const buildRecommendationCacheKey = (
+    side = currentStep?.side || "BLUE",
+    phase = currentStep?.label || "PICKS_1",
+    mode = draftMode || "ranked"
+  ) =>
+    JSON.stringify({
+      bluePicks,
+      redPicks,
+      blueBans,
+      redBans,
+      currentStepIdx,
+      currentPhase: phase,
+      currentTurnSide: side,
+      mode,
+      blueTeam: draftMode === "mpl" ? selectedBlueTeam : blueTeam,
+      redTeam: draftMode === "mpl" ? selectedRedTeam : redTeam,
+    });
+
+  const getRecommendationTone = (label: string, fallbackAction?: "BAN" | "PICK"): CoachRecommendationTone => {
+    const text = String(label || "").toLowerCase();
+    if (text.includes("deny")) return "deny";
+    if (text.includes("counter") || text.includes("target")) return "counter";
+    if (text.includes("comfort") || text.includes("signature")) return "comfort";
+    if (text.includes("priority") || text.includes("team need")) return "priority";
+    if (text.includes("meta")) return "meta";
+    if (text.includes("ban") || fallbackAction === "BAN") return "ban";
+    if (text.includes("pick") || fallbackAction === "PICK") return "pick";
+    return "adaptive";
+  };
+
+  const coachToneClass: Record<CoachRecommendationTone, {
+    card: string;
+    badge: string;
+    accent: string;
+    score: string;
+    title: string;
+  }> = {
+    ban: {
+      card: "border-red-500/30 bg-red-950/15 hover:border-red-400/55",
+      badge: "border-red-400/40 bg-red-500/15 text-red-200",
+      accent: "bg-red-400 shadow-[0_0_12px_rgba(248,113,113,0.65)]",
+      score: "text-red-300",
+      title: "text-red-50",
+    },
+    pick: {
+      card: "border-cyan-500/28 bg-cyan-950/12 hover:border-cyan-400/55",
+      badge: "border-cyan-400/40 bg-cyan-500/15 text-cyan-200",
+      accent: "bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.65)]",
+      score: "text-cyan-300",
+      title: "text-cyan-50",
+    },
+    priority: {
+      card: "border-amber-400/28 bg-amber-950/10 hover:border-amber-300/50",
+      badge: "border-amber-300/40 bg-amber-500/15 text-amber-200",
+      accent: "bg-amber-300 shadow-[0_0_12px_rgba(252,211,77,0.6)]",
+      score: "text-amber-300",
+      title: "text-amber-50",
+    },
+    counter: {
+      card: "border-orange-400/28 bg-orange-950/10 hover:border-orange-300/50",
+      badge: "border-orange-300/40 bg-orange-500/15 text-orange-200",
+      accent: "bg-orange-300 shadow-[0_0_12px_rgba(251,146,60,0.6)]",
+      score: "text-orange-300",
+      title: "text-orange-50",
+    },
+    comfort: {
+      card: "border-violet-400/28 bg-violet-950/12 hover:border-violet-300/50",
+      badge: "border-violet-300/40 bg-violet-500/15 text-violet-200",
+      accent: "bg-violet-300 shadow-[0_0_12px_rgba(196,181,253,0.6)]",
+      score: "text-violet-300",
+      title: "text-violet-50",
+    },
+    deny: {
+      card: "border-pink-400/28 bg-pink-950/12 hover:border-pink-300/50",
+      badge: "border-pink-300/40 bg-pink-500/15 text-pink-200",
+      accent: "bg-pink-300 shadow-[0_0_12px_rgba(249,168,212,0.6)]",
+      score: "text-pink-300",
+      title: "text-pink-50",
+    },
+    meta: {
+      card: "border-slate-400/20 bg-slate-900/30 hover:border-slate-300/35",
+      badge: "border-slate-300/25 bg-slate-500/10 text-slate-300",
+      accent: "bg-slate-400",
+      score: "text-slate-300",
+      title: "text-white",
+    },
+    adaptive: {
+      card: "border-indigo-400/24 bg-indigo-950/12 hover:border-indigo-300/45",
+      badge: "border-indigo-300/35 bg-indigo-500/15 text-indigo-200",
+      accent: "bg-indigo-300 shadow-[0_0_12px_rgba(165,180,252,0.6)]",
+      score: "text-indigo-300",
+      title: "text-indigo-50",
+    },
+  };
+
+  const formatSourceLabel = (sourceKey?: string) => {
+    if (!sourceKey) return "";
+    const sourceMap: Record<string, string> = {
+      matchupHistoryScore: "Matchup History",
+      matchupHistory: "Matchup History",
+      teamHistoryScore: "Team History",
+      teamHistory: "Team History",
+      comfortScore: "Comfort Pool",
+      comfortPick: "Comfort Pool",
+      patternScore: "Draft Pattern",
+      similarDraft: "Similar Draft",
+      repickScore: "Repick Pattern",
+      repickPattern: "Repick Pattern",
+      rebanScore: "Reban Pattern",
+      rebanPattern: "Reban Pattern",
+      pivotScore: "Pivot Read",
+      pivotPick: "Pivot Read",
+      counterScore: "Counter Read",
+      counter: "Counter Read",
+      metaScore: "Meta Fallback",
+      meta: "Meta Fallback",
+      laneFit: "Lane Fit",
+      roleBalance: "Role Balance",
+      draftPhase: "Draft Phase",
+      denyPick: "Deny Pick",
+      flexValue: "Flex Value",
+      availabilityScore: "Availability",
+    };
+    return sourceMap[sourceKey] || sourceKey.replace(/([A-Z])/g, " $1").replace(/Score$/, "").replace(/^./, (s) => s.toUpperCase()).trim();
+  };
+
+  const getTopScoreEntries = (scoreBreakdown?: Record<string, number>) =>
+    Object.entries(scoreBreakdown || {})
+      .filter(([, value]) => Number(value) > 0)
+      .sort(([, left], [, right]) => Number(right) - Number(left))
+      .slice(0, 3);
+
+  const resetHeroFilters = () => {
+    setSearchQuery("");
+    setRoleFilter("ALL");
+    setLaneFilter("ALL");
+    setTierFilter("ALL");
+    setRecommendedOnly(false);
+    setCounterOnly(false);
+    setSynergyOnly(false);
+    setComfortOnly(false);
+  };
 
   const turnDurationSeconds = getDraftTurnDuration(draftMode);
   const normalizedMode: DraftMode = draftMode || "ranked";
@@ -580,50 +754,75 @@ export default function DraftSimulator({
 
   const displayedCoachRecommendations = useMemo(() => {
     if (aiResult?.recommendations?.length) {
-      return aiResult.recommendations.slice(0, 5).map((entry) => ({
-        heroName: entry.heroName,
-        label: entry.pickType || entry.banType || entry.role || "Adaptive",
-        reason: entry.reason,
-        source: entry.evidence?.source || entry.evidence?.team || "AI Coach",
-        evidence:
-          entry.evidence?.source ||
-          entry.evidence?.team ||
-          (entry.evidence?.winRate ? `WR ${entry.evidence.winRate.toFixed(0)}%` : "") ||
-          (entry.evidence?.pickCount ? `Pick ${entry.evidence.pickCount}` : "") ||
-          "AI Coach",
-        score: (entry as any).priorityScore ?? entry.totalScore ?? 0,
-      }));
+      return aiResult.recommendations.slice(0, 5).map((entry): CoachRecommendationView => {
+        const label = entry.pickType || entry.banType || (currentStep?.type === "BAN" ? "Target Ban" : "Priority Pick");
+        const evidenceParts = [
+          entry.evidence?.team ? `Team: ${entry.evidence.team}` : "",
+          entry.evidence?.pickCount ? `Pick ${entry.evidence.pickCount}` : "",
+          entry.evidence?.banCount ? `Ban ${entry.evidence.banCount}` : "",
+          entry.evidence?.winRate ? `WR ${entry.evidence.winRate.toFixed(0)}%` : "",
+        ].filter(Boolean);
+        const source =
+          entry.evidence?.recommendationSource === "matchup-history" ? "Matchup History" :
+          entry.evidence?.recommendationSource === "team-history" ? "Team History" :
+          entry.evidence?.recommendationSource === "global-fallback" ? "Meta Fallback" :
+          entry.evidence?.source || "AI Coach";
+        const scoreBreakdown = entry.scoreBreakdown as unknown as Record<string, number> | undefined;
+        return {
+          heroName: entry.heroName,
+          label,
+          reason: entry.reason,
+          source,
+          evidence: evidenceParts.join(" · ") || entry.evidence?.source || "Local coach evidence",
+          score: (entry as any).priorityScore ?? entry.totalScore ?? 0,
+          tone: getRecommendationTone(label, currentStep?.type),
+          scoreBreakdown,
+        };
+      });
     }
 
     if (draftRecommendations.length) {
-      return draftRecommendations.slice(0, 5).map((entry) => {
-        const topFactor = Object.entries(entry.scoreBreakdown || {})
-          .sort(([, left], [, right]) => Number(right) - Number(left))[0];
+      return draftRecommendations.slice(0, 5).map((entry): CoachRecommendationView => {
+        const mplEntry = entry as DraftRecommendation & Partial<MplDraftRecommendation>;
+        const scoreBreakdown = entry.scoreBreakdown as unknown as Record<string, number>;
+        const topFactor = getTopScoreEntries(scoreBreakdown)[0];
         // Determine source label from score breakdown
         const sourcePriority = [
-          "matchupHistory", "teamHistory", "similarDraft", "comfortPick",
-          "rebanPattern", "repickPattern", "pivotPick",
+          "matchupHistoryScore", "matchupHistory", "teamHistoryScore", "teamHistory",
+          "comfortScore", "comfortPick", "counterScore", "counter", "patternScore",
+          "similarDraft", "rebanScore", "rebanPattern", "repickScore", "repickPattern",
+          "pivotScore", "pivotPick", "metaScore", "meta",
         ];
-        const topSource = sourcePriority.find((k) => ((entry.scoreBreakdown as unknown as Record<string, number>)?.[k] ?? 0) > 0);
-        const sourceLabel = topSource
-          ? topSource
-              .replace(/([A-Z])/g, " $1")
-              .replace(/^./, (s) => s.toUpperCase())
-              .trim()
-          : "Meta Fallback";
+        const topSource = sourcePriority.find((k) => (scoreBreakdown?.[k] ?? 0) > 0);
+        const sourceLabel =
+          mplEntry.evidence?.recommendationSource === "matchup-history" ? "Matchup History" :
+          mplEntry.evidence?.recommendationSource === "team-history" ? "Team History" :
+          mplEntry.evidence?.recommendationSource === "global-fallback" ? "Meta Fallback" :
+          formatSourceLabel(topSource) || "Local Engine";
+        const label = mplEntry.pickType || mplEntry.banType || (currentStep?.type === "BAN"
+          ? sourceLabel === "Meta Fallback" ? "Meta Fallback Ban" : sourceLabel === "Counter Read" ? "Counter Ban" : "Target Ban"
+          : sourceLabel === "Comfort Pool" ? "Comfort Pick" : sourceLabel === "Counter Read" ? "Counter Pick" : sourceLabel === "Meta Fallback" ? "Meta Fallback Pick" : "Priority Pick");
+        const evidenceParts = [
+          mplEntry.evidence?.team ? `Team: ${mplEntry.evidence.team}` : "",
+          mplEntry.evidence?.pickCount ? `Pick ${mplEntry.evidence.pickCount}` : "",
+          mplEntry.evidence?.banCount ? `Ban ${mplEntry.evidence.banCount}` : "",
+          mplEntry.evidence?.winRate ? `WR ${mplEntry.evidence.winRate.toFixed(0)}%` : "",
+        ].filter(Boolean);
         return {
           heroName: entry.heroName,
-          label: entry.role || entry.lane || "Adaptive",
+          label,
           reason: entry.reason,
           source: sourceLabel,
-          evidence: topFactor ? `${topFactor[0]} ${topFactor[1]}` : `${entry.totalScore}/100`,
+          evidence: evidenceParts.join(" · ") || mplEntry.evidence?.source || (topFactor ? `${formatSourceLabel(topFactor[0])} ${topFactor[1]}` : `${entry.totalScore}/100`),
           score: entry.totalScore ?? 0,
+          tone: getRecommendationTone(label, currentStep?.type),
+          scoreBreakdown,
         };
       });
     }
 
     return [];
-  }, [aiResult, draftRecommendations]);
+  }, [aiResult, draftRecommendations, currentStep?.type]);
 
   const localTeamIntel = useMemo(() => {
     return {
@@ -686,6 +885,9 @@ export default function DraftSimulator({
     setBlueLaneStatus({ gold: null, exp: null, mid: null, jungle: null, roam: null });
     setRedLaneStatus({ gold: null, exp: null, mid: null, jungle: null, roam: null });
     setDraftRecommendations([]);
+    setRecommendationsPaused(false);
+    recommendationCacheRef.current.clear();
+    aiCoachCacheRef.current.clear();
   };
 
   // Start draft without resetting mode/team selection
@@ -702,6 +904,9 @@ export default function DraftSimulator({
     setEvaluationResult("");
     setEvaluationMeta(null);
     setDraftRecommendations([]);
+    setRecommendationsPaused(false);
+    recommendationCacheRef.current.clear();
+    aiCoachCacheRef.current.clear();
     setDraftStarted(true);
   };
 
@@ -846,6 +1051,15 @@ export default function DraftSimulator({
       return;
     }
 
+    const cacheKey = buildRecommendationCacheKey();
+    const cachedCoach = aiCoachCacheRef.current.get(cacheKey);
+    if (cachedCoach) {
+      setAiError("");
+      setAiResult(cachedCoach);
+      setLocalIntelGeneratedAt(Date.now());
+      return;
+    }
+
     setAiLoading(true);
     setAiError("");
     setAiResult(null);
@@ -902,13 +1116,15 @@ export default function DraftSimulator({
       if (filteredRecs.length === 0) {
         setAiError("Semua rekomendasi AI sudah tidak tersedia (sudah di-ban/pick). Coba generate ulang.");
       } else {
-        setAiResult({
+        const nextAiResult = {
           ...result,
           recommendations: filteredRecs,
           overallStrategy: draftMode === "mpl"
             ? `Local MPL engine aktif: rekomendasi memakai ${result.debug?.recommendationSource || result.mplIntelligence?.recommendationSource || "team-history"} untuk ${currentStep.side === "BLUE" ? blueTeam : redTeam}.`
             : result.overallStrategy,
-        });
+        };
+        aiCoachCacheRef.current.set(cacheKey, nextAiResult);
+        setAiResult(nextAiResult);
       }
     } catch (err: any) {
       console.error("AI Coach Error:", err);
@@ -1333,10 +1549,10 @@ export default function DraftSimulator({
 
   // ── helpers for inline render ──────────────────────────────────────────────
   const BanSlot = ({ heroName, side }: { heroName: string; side: "blue" | "red" }) => (
-    <div className={`h-8 w-8 rounded-full overflow-hidden border ${side === "blue" ? "border-blue-900/50" : "border-red-900/50"} bg-slate-900/60 shrink-0`}>
+    <div className={`h-9 w-9 xl:h-10 xl:w-10 aspect-square rounded-full overflow-hidden border ${side === "blue" ? "border-blue-900/50" : "border-red-900/50"} bg-slate-900/60 shrink-0`}>
       {heroName ? (
         <FallbackImage src={getHeroImgUrl(heroName)} fallbackText={heroName} alt={heroName}
-          className="h-full w-full object-cover grayscale opacity-70"
+          className="block h-full w-full object-cover object-center grayscale opacity-75"
           containerClassName="h-full w-full text-[6px]" />
       ) : <div className="h-full w-full" />}
     </div>
@@ -1345,7 +1561,7 @@ export default function DraftSimulator({
   const PickSlot = ({
     heroName, index, isBlue, isActive, assignment,
   }: { heroName: string; index: number; isBlue: boolean; isActive: boolean; assignment: any }) => (
-    <div className={`flex items-center gap-2 h-12 rounded-lg px-2 border transition-all
+    <div className={`flex items-center gap-2 h-14 xl:h-16 rounded-xl px-2.5 border transition-all
       ${isActive ? (isBlue ? "border-cyan-500/50 bg-cyan-950/20 shadow-[0_0_8px_rgba(6,182,212,0.15)]" : "border-rose-500/50 bg-rose-950/20 shadow-[0_0_8px_rgba(244,63,94,0.12)]")
         : (isBlue ? "border-blue-900/20 bg-blue-950/10" : "border-red-900/20 bg-red-950/10")}`}>
       {!isBlue && heroName && (
@@ -1354,11 +1570,11 @@ export default function DraftSimulator({
           <div className="text-[9px] text-red-300/60">{assignment?.lane || getHeroRole(heroName)}</div>
         </div>
       )}
-      <div className={`h-9 w-9 rounded shrink-0 overflow-hidden border flex items-center justify-center
+      <div className={`h-11 w-11 xl:h-12 xl:w-12 aspect-square rounded-xl shrink-0 overflow-hidden border flex items-center justify-center bg-slate-950/70
         ${heroName ? (isBlue ? "border-blue-700/50" : "border-red-700/50") : "border-dashed border-white/10"}`}>
         {heroName ? (
           <FallbackImage src={getHeroImgUrl(heroName)} fallbackText={heroName} alt={heroName}
-            className="h-full w-full object-cover" containerClassName="h-full w-full text-[7px]" />
+            className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[7px]" />
         ) : (
           isActive
             ? <div className={`h-2 w-2 rounded-full animate-pulse ${isBlue ? "bg-cyan-400" : "bg-rose-400"}`} />
@@ -1764,9 +1980,9 @@ export default function DraftSimulator({
                 {Array.from({ length: 5 }).map((_, i) => {
                   const h = bluePicks[i] || "";
                   return (
-                    <div key={i} className={`h-8 w-8 rounded overflow-hidden border shrink-0 ${h ? "border-blue-700/50" : "border-blue-900/20 border-dashed"} bg-slate-900/40`}>
+                    <div key={i} className={`h-9 w-9 xl:h-10 xl:w-10 aspect-square rounded-lg overflow-hidden border shrink-0 ${h ? "border-blue-700/50" : "border-blue-900/20 border-dashed"} bg-slate-900/40`}>
                       {h ? (
-                        <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
+                        <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[6px]" />
                       ) : (
                         <div className="h-full w-full flex items-center justify-center text-[8px] text-blue-900/50">{i + 1}</div>
                       )}
@@ -1817,9 +2033,9 @@ export default function DraftSimulator({
                 {Array.from({ length: 5 }).map((_, i) => {
                   const h = redPicks[i] || "";
                   return (
-                    <div key={i} className={`h-8 w-8 rounded overflow-hidden border shrink-0 ${h ? "border-red-700/50" : "border-red-900/20 border-dashed"} bg-slate-900/40`}>
+                    <div key={i} className={`h-9 w-9 xl:h-10 xl:w-10 aspect-square rounded-lg overflow-hidden border shrink-0 ${h ? "border-red-700/50" : "border-red-900/20 border-dashed"} bg-slate-900/40`}>
                       {h ? (
-                        <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
+                        <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[6px]" />
                       ) : (
                         <div className="h-full w-full flex items-center justify-center text-[8px] text-red-900/50">{i + 1}</div>
                       )}
@@ -1924,52 +2140,87 @@ export default function DraftSimulator({
 
               {/* Hero grid */}
               <div className="flex-1 overflow-y-auto p-2 scrollbar-thin scrollbar-thumb-white/10">
-                <div className="grid grid-cols-5 sm:grid-cols-6 lg:grid-cols-7 xl:grid-cols-5 2xl:grid-cols-7 gap-1.5">
-                  {sortedHeroesList.map((hero) => {
-                    const heroKey = normalizeHeroKey(hero.hero_name);
-                    const insight = heroInsights[heroKey];
-                    const isUsed = usedHeroesMap.has(heroKey);
-                    const isSelected = selectedHeroName === hero.hero_name;
-                    const isRec = insight?.status === "recommended";
-                    const isBanned = insight?.status === "banned";
-                    const isPicked = insight?.status === "picked";
-                    return (
-                      <button
-                        key={hero.hero_name}
-                        disabled={isUsed || isCompleted}
-                        onClick={() => handleSelectHero(hero.hero_name)}
-                        title={insight?.whyRecommended || hero.hero_name}
-                        className={`relative flex flex-col items-center gap-0.5 p-1.5 rounded-xl border transition-all ${isSelected ? "border-cyan-400/60 bg-cyan-900/20 ring-1 ring-cyan-400/25 scale-105" : isRec && !isUsed ? "border-emerald-500/40 bg-emerald-900/10" : isBanned ? "border-red-900/20 opacity-30 cursor-not-allowed" : isPicked ? "border-blue-900/20 opacity-30 cursor-not-allowed" : insight?.status === "risky" ? "border-amber-500/20 bg-amber-900/5" : "border-white/[0.05] hover:border-white/[0.15] hover:bg-white/[0.03]"} ${!isUsed && !isCompleted ? "cursor-pointer hover:-translate-y-0.5" : ""}`}
-                      >
-                        <div className={`relative h-11 w-11 rounded-xl overflow-hidden border ${isSelected ? "border-cyan-500/50" : isRec && !isUsed ? "border-emerald-500/25" : "border-white/[0.06]"}`}>
-                          <FallbackImage
-                            src={getHeroImgUrl(hero.hero_name)}
-                            fallbackText={hero.hero_name}
-                            alt={hero.hero_name}
-                            className={`h-full w-full object-cover ${(isBanned || isPicked) ? "grayscale" : ""}`}
-                            containerClassName="h-full w-full text-[7px]"
-                          />
-                          {isBanned && (
-                            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                              <div className="h-4 w-4 rounded-full border border-red-500/60 flex items-center justify-center">
-                                <span className="text-red-400 text-[8px] font-black">✕</span>
+                {sortedHeroesList.length > 0 ? (
+                  <div className="grid grid-cols-5 sm:grid-cols-6 lg:grid-cols-7 xl:grid-cols-5 2xl:grid-cols-7 gap-1.5">
+                    {sortedHeroesList.map((hero) => {
+                      const heroKey = normalizeHeroKey(hero.hero_name);
+                      const insight = heroInsights[heroKey];
+                      const recommendationView = displayedCoachRecommendations.find(
+                        (rec) => normalizeHeroKey(rec.heroName) === heroKey
+                      );
+                      const recTone = recommendationView ? coachToneClass[recommendationView.tone] : null;
+                      const recMiniLabel = recommendationView?.label?.toLowerCase().includes("comfort")
+                        ? "COM"
+                        : recommendationView?.label?.toLowerCase().includes("counter")
+                          ? "CTR"
+                          : recommendationView?.label?.toLowerCase().includes("deny")
+                            ? "DENY"
+                            : currentStep?.type === "BAN"
+                              ? "BAN"
+                              : "PICK";
+                      const isUsed = usedHeroesMap.has(heroKey);
+                      const isSelected = selectedHeroName === hero.hero_name;
+                      const isRec = insight?.status === "recommended";
+                      const isBanned = insight?.status === "banned";
+                      const isPicked = insight?.status === "picked";
+                      return (
+                        <button
+                          key={hero.hero_name}
+                          disabled={isUsed || isCompleted}
+                          onClick={() => handleSelectHero(hero.hero_name)}
+                          title={insight?.whyRecommended || hero.hero_name}
+                          className={`relative flex flex-col items-center gap-0.5 p-1.5 rounded-xl border transition-all ${isSelected ? "border-cyan-400/60 bg-cyan-900/20 ring-1 ring-cyan-400/25 scale-105" : recommendationView && !isUsed && recTone ? recTone.card : isRec && !isUsed ? "border-emerald-500/40 bg-emerald-900/10" : isBanned ? "border-red-900/20 opacity-30 cursor-not-allowed" : isPicked ? "border-blue-900/20 opacity-30 cursor-not-allowed" : insight?.status === "risky" ? "border-amber-500/20 bg-amber-900/5" : "border-white/[0.05] hover:border-white/[0.15] hover:bg-white/[0.03]"} ${!isUsed && !isCompleted ? "cursor-pointer hover:-translate-y-0.5" : ""}`}
+                        >
+                          <div className={`relative h-12 w-12 xl:h-[52px] xl:w-[52px] aspect-square rounded-xl overflow-hidden border bg-slate-950/70 ${isSelected ? "border-cyan-500/50" : isRec && !isUsed ? "border-emerald-500/25" : "border-white/[0.06]"}`}>
+                            <FallbackImage
+                              src={getHeroImgUrl(hero.hero_name)}
+                              fallbackText={hero.hero_name}
+                              alt={hero.hero_name}
+                              className={`block h-full w-full object-cover object-center ${(isBanned || isPicked) ? "grayscale" : ""}`}
+                              containerClassName="h-full w-full text-[7px]"
+                            />
+                            {isBanned && (
+                              <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                                <div className="h-4 w-4 rounded-full border border-red-500/60 flex items-center justify-center">
+                                  <span className="text-red-400 text-[8px] font-black">x</span>
+                                </div>
                               </div>
+                            )}
+                            {isRec && !isUsed && (
+                              <div className="absolute top-0.5 right-0.5 h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_4px_rgba(74,222,128,0.8)]" />
+                            )}
+                          </div>
+                          <span className={`text-[9px] font-medium truncate w-full text-center leading-tight ${isSelected ? "text-cyan-200" : isRec && !isUsed ? "text-emerald-200" : (isBanned || isPicked) ? "text-gray-700" : "text-gray-400"}`}>
+                            {hero.hero_name}
+                          </span>
+                          {(isRec || recommendationView) && !isUsed && (
+                            <div className={`absolute -top-0.5 -right-0.5 text-[7px] font-black px-1 rounded-full leading-tight border ${recTone ? recTone.badge : "border-emerald-400/40 bg-emerald-500 text-black"}`}>
+                              {recMiniLabel}
                             </div>
                           )}
-                          {isRec && !isUsed && (
-                            <div className="absolute top-0.5 right-0.5 h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_4px_rgba(74,222,128,0.8)]" />
-                          )}
-                        </div>
-                        <span className={`text-[9px] font-medium truncate w-full text-center leading-tight ${isSelected ? "text-cyan-200" : isRec && !isUsed ? "text-emerald-200" : (isBanned || isPicked) ? "text-gray-700" : "text-gray-400"}`}>
-                          {hero.hero_name}
-                        </span>
-                        {isRec && !isUsed && (
-                          <div className="absolute -top-0.5 -right-0.5 text-[7px] bg-emerald-500 text-black font-black px-1 rounded-full leading-tight">AI</div>
-                        )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="h-full min-h-[220px] flex items-center justify-center rounded-2xl border border-dashed border-white/[0.08] bg-black/20 px-4 text-center">
+                    <div className="max-w-sm">
+                      <div className="mx-auto mb-3 h-10 w-10 rounded-2xl border border-cyan-400/20 bg-cyan-950/20 flex items-center justify-center">
+                        <Search className="h-5 w-5 text-cyan-300" />
+                      </div>
+                      <div className="text-sm font-bold text-white">Tidak ada hero cocok dengan filter ini</div>
+                      <p className="mt-1 text-xs leading-relaxed text-gray-500">
+                        Counter, Synergy, dan Comfort bergantung pada draft yang sudah terkunci dan data team. Kalau masih kosong, reset filter atau lock hero dulu.
+                      </p>
+                      <button
+                        onClick={resetHeroFilters}
+                        className="mt-3 rounded-xl border border-cyan-400/30 bg-cyan-500/10 px-3 py-1.5 text-xs font-bold text-cyan-200 hover:bg-cyan-500/20"
+                      >
+                        Reset filter
                       </button>
-                    );
-                  })}
-                </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Lock bar */}
@@ -1977,8 +2228,8 @@ export default function DraftSimulator({
                 <div className="border-t border-white/[0.05] bg-black/40 px-3 py-2 flex items-center gap-2 shrink-0">
                   {selectedHeroName ? (
                     <div className="flex items-center gap-2 flex-1 min-w-0">
-                      <div className="h-8 w-8 rounded-lg overflow-hidden border border-cyan-500/40 shrink-0">
-                        <FallbackImage src={getHeroImgUrl(selectedHeroName)} fallbackText={selectedHeroName} alt={selectedHeroName} className="h-full w-full object-cover" containerClassName="h-full w-full text-[7px]" />
+                      <div className="h-10 w-10 aspect-square rounded-xl overflow-hidden border border-cyan-500/40 shrink-0 bg-slate-950/70">
+                        <FallbackImage src={getHeroImgUrl(selectedHeroName)} fallbackText={selectedHeroName} alt={selectedHeroName} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[7px]" />
                       </div>
                       <div className="min-w-0">
                         <div className="text-sm font-bold text-cyan-200 truncate">{selectedHeroName}</div>
@@ -1996,6 +2247,18 @@ export default function DraftSimulator({
                   >
                     <Undo2 className="h-3.5 w-3.5" />
                     Undo
+                  </button>
+                  <button
+                    onClick={() => setRecommendationsPaused((value) => !value)}
+                    title={recommendationsPaused ? "Resume auto recommendations" : "Pause auto recommendations supaya tidak fetch ulang saat mikir draft"}
+                    className={`flex items-center gap-1 px-2.5 py-1.5 text-[11px] rounded-lg border transition-colors shrink-0 ${
+                      recommendationsPaused
+                        ? "bg-slate-800/70 border-slate-500/30 text-slate-200 hover:bg-slate-700/70"
+                        : "bg-cyan-900/25 border-cyan-500/25 text-cyan-300 hover:bg-cyan-900/40"
+                    }`}
+                  >
+                    {recommendationsPaused ? <Play className="h-3.5 w-3.5" /> : <Pause className="h-3.5 w-3.5" />}
+                    {recommendationsPaused ? "Resume" : "Pause"}
                   </button>
                   <button onClick={fetchAICoach} disabled={aiLoading} className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 rounded-lg hover:bg-indigo-900/60 transition-colors disabled:opacity-50 shrink-0">
                     <Sparkles className="h-3.5 w-3.5" />
@@ -2066,8 +2329,8 @@ export default function DraftSimulator({
                   const h = bluePicks[i] || "";
                   return (
                     <div key={i} className="flex items-center gap-1.5 h-8">
-                      <div className="h-7 w-7 rounded border border-blue-900/30 overflow-hidden bg-slate-900/40 shrink-0">
-                        {h ? <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" /> : <div className="h-full w-full" />}
+                      <div className="h-8 w-8 aspect-square rounded-lg border border-blue-900/30 overflow-hidden bg-slate-900/40 shrink-0">
+                        {h ? <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[6px]" /> : <div className="h-full w-full" />}
                       </div>
                       <span className="text-[10px] text-gray-400 truncate">{h || "—"}</span>
                     </div>
@@ -2083,8 +2346,8 @@ export default function DraftSimulator({
                   return (
                     <div key={i} className="flex items-center gap-1.5 h-8 justify-end">
                       <span className="text-[10px] text-gray-400 truncate">{h || "—"}</span>
-                      <div className="h-7 w-7 rounded border border-red-900/30 overflow-hidden bg-slate-900/40 shrink-0">
-                        {h ? <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" /> : <div className="h-full w-full" />}
+                      <div className="h-8 w-8 aspect-square rounded-lg border border-red-900/30 overflow-hidden bg-slate-900/40 shrink-0">
+                        {h ? <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[6px]" /> : <div className="h-full w-full" />}
                       </div>
                     </div>
                   );
@@ -2110,43 +2373,93 @@ export default function DraftSimulator({
                   <span className="hidden sm:inline">{label}</span>
                 </button>
               ))}
-              {recsLoading && <span className="ml-auto text-[10px] text-gray-500 animate-pulse pr-3">Updating…</span>}
+              {recommendationsPaused ? (
+                <span className="ml-auto text-[10px] text-amber-300/80 pr-3">Paused · cache only</span>
+              ) : recsLoading ? (
+                <span className="ml-auto text-[10px] text-gray-500 animate-pulse pr-3">Updating…</span>
+              ) : null}
             </div>
-            <div className="p-3 min-h-[90px]">
+            <div className="p-3 min-h-[150px]">
               {analysisTab === "rec" && (
-                <div className="flex gap-2 overflow-x-auto scrollbar-none pb-1">
-                  {displayedCoachRecommendations.length > 0
-                    ? displayedCoachRecommendations.map((rec, i) => (
-                      <button
-                        key={`${rec.heroName}-${i}`}
-                        onClick={() => handleSelectHero(rec.heroName)}
-                        disabled={usedHeroesMap.has(normalizeHeroKey(rec.heroName))}
-                        className="shrink-0 w-[240px] flex items-start gap-2.5 p-3 rounded-xl border border-white/[0.07] bg-white/[0.02] hover:border-indigo-500/40 transition-all disabled:opacity-50 text-left"
-                      >
-                        <div className="h-10 w-10 rounded-lg overflow-hidden border border-white/[0.08] shrink-0">
-                          <FallbackImage src={getHeroImgUrl(rec.heroName)} fallbackText={rec.heroName} alt={rec.heroName} className="h-full w-full object-cover" containerClassName="h-full w-full text-[7px]" />
-                        </div>
-                        <div className="min-w-0 flex-1" title={rec.reason}>
-                          <div className="flex items-center gap-1 mb-0.5">
-                            <span className="text-sm font-bold text-white truncate">{rec.heroName}</span>
-                            <span className="text-[10px] px-1.5 py-0.5 rounded-full border border-indigo-500/30 bg-indigo-900/30 text-indigo-300 shrink-0">{rec.label}</span>
-                          </div>
-                          {(rec as any).source && (
-                            <div className="text-[10px] text-cyan-400/80 mb-0.5 truncate">{(rec as any).source}</div>
-                          )}
-                          <p className="text-xs text-gray-400 line-clamp-3 leading-relaxed">{rec.reason}</p>
-                          <div className="flex items-center justify-between mt-1">
-                            {rec.evidence && <div className="text-[10px] text-gray-500 truncate max-w-[120px]">{rec.evidence}</div>}
-                            {(rec as any).score > 0 && (
-                              <div className="text-[10px] text-indigo-400/70 shrink-0 ml-1">{(rec as any).score}pt</div>
-                            )}
-                          </div>
-                        </div>
-                      </button>
-                    ))
-                    : <div className="text-xs text-gray-600 py-3">{recsLoading ? "Loading recommendations…" : "Recommendations appear as draft progresses. Click AI to force fetch."}</div>
-                  }
-                  {aiError && <div className="shrink-0 max-w-[240px] text-xs text-amber-400 p-2.5 rounded-xl border border-amber-500/20 bg-amber-900/5">{aiError}</div>}
+                <div className="space-y-3">
+                  <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-wider">
+                    <span className="text-gray-500">Action signals</span>
+                    {[
+                      { label: "Ban", tone: "ban" as const },
+                      { label: "Pick", tone: "pick" as const },
+                      { label: "Priority", tone: "priority" as const },
+                      { label: "Counter", tone: "counter" as const },
+                      { label: "Comfort", tone: "comfort" as const },
+                      { label: "Deny", tone: "deny" as const },
+                    ].map((item) => (
+                      <span key={item.label} className={`rounded-full border px-2 py-0.5 ${coachToneClass[item.tone].badge}`}>
+                        {item.label}
+                      </span>
+                    ))}
+                  </div>
+                  {displayedCoachRecommendations.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-5 gap-2.5">
+                      {displayedCoachRecommendations.map((rec, i) => {
+                        const tone = coachToneClass[rec.tone];
+                        const isUnavailable = usedHeroesMap.has(normalizeHeroKey(rec.heroName));
+                        const scoreEntries = getTopScoreEntries(rec.scoreBreakdown);
+                        return (
+                          <button
+                            key={`${rec.heroName}-${i}`}
+                            onClick={() => handleSelectHero(rec.heroName)}
+                            disabled={isUnavailable}
+                            className={`group relative min-h-[170px] overflow-hidden rounded-2xl border p-3 text-left transition-all disabled:opacity-45 disabled:cursor-not-allowed ${tone.card}`}
+                          >
+                            <div className={`absolute left-0 top-0 h-full w-1 ${tone.accent}`} />
+                            <div className="flex items-start gap-3">
+                              <div className="relative h-14 w-14 aspect-square rounded-xl overflow-hidden border border-white/[0.1] shrink-0 bg-black/30">
+                                <FallbackImage src={getHeroImgUrl(rec.heroName)} fallbackText={rec.heroName} alt={rec.heroName} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[7px]" />
+                                {isUnavailable && <div className="absolute inset-0 bg-black/60 flex items-center justify-center text-[9px] font-black text-red-300">USED</div>}
+                              </div>
+                              <div className="min-w-0 flex-1">
+                                <div className="flex items-start justify-between gap-2">
+                                  <div className={`text-base font-black leading-tight ${tone.title}`}>{rec.heroName}</div>
+                                  {rec.score > 0 && <div className={`text-[11px] font-black shrink-0 ${tone.score}`}>{Math.round(rec.score)}pt</div>}
+                                </div>
+                                <div className="mt-1 flex flex-wrap gap-1">
+                                  <span className={`text-[10px] px-1.5 py-0.5 rounded-full border font-bold ${tone.badge}`}>{rec.label}</span>
+                                  {rec.source && <span className="text-[10px] px-1.5 py-0.5 rounded-full border border-cyan-400/20 bg-cyan-500/10 text-cyan-200">{rec.source}</span>}
+                                </div>
+                              </div>
+                            </div>
+                            <p className="mt-3 text-xs leading-relaxed text-gray-300 whitespace-normal">
+                              {rec.reason}
+                            </p>
+                            <div className="mt-3 space-y-2">
+                              {rec.evidence && (
+                                <div className="rounded-lg border border-white/[0.06] bg-black/20 px-2 py-1.5 text-[10px] leading-relaxed text-gray-400">
+                                  {rec.evidence}
+                                </div>
+                              )}
+                              {scoreEntries.length > 0 && (
+                                <div className="flex flex-wrap gap-1">
+                                  {scoreEntries.map(([key, value]) => (
+                                    <span key={key} className="rounded-full border border-white/[0.07] bg-white/[0.04] px-1.5 py-0.5 text-[9px] text-gray-400">
+                                      {formatSourceLabel(key)} {value}
+                                    </span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div className="rounded-2xl border border-dashed border-white/[0.08] bg-black/20 p-5 text-center">
+                      <Sparkles className="mx-auto h-6 w-6 text-cyan-300/70" />
+                      <div className="mt-2 text-sm font-bold text-white">{recsLoading ? "Loading recommendations…" : "Belum ada rekomendasi untuk step ini"}</div>
+                      <p className="mx-auto mt-1 max-w-md text-xs leading-relaxed text-gray-500">
+                        Rekomendasi muncul otomatis saat draft berjalan. Klik AI untuk memaksa fetch, atau lock hero dulu agar engine punya konteks pick/ban.
+                      </p>
+                    </div>
+                  )}
+                  {aiError && <div className="text-xs text-amber-300 p-3 rounded-xl border border-amber-500/20 bg-amber-900/10">{aiError}</div>}
                 </div>
               )}
               {analysisTab === "counter" && (
@@ -2399,15 +2712,15 @@ export default function DraftSimulator({
                           </div>
                           <div className="flex items-center justify-between gap-2">
                             <div className="flex flex-col items-center gap-1">
-                              <div className="h-10 w-10 rounded-lg overflow-hidden border border-blue-900/40">
-                                <FallbackImage src={getHeroImgUrl(lane.blueHero)} fallbackText={lane.blueHero} alt={lane.blueHero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
+                              <div className="h-11 w-11 aspect-square rounded-xl overflow-hidden border border-blue-900/40 bg-slate-950/70">
+                                <FallbackImage src={getHeroImgUrl(lane.blueHero)} fallbackText={lane.blueHero} alt={lane.blueHero} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[6px]" />
                               </div>
                               <div className="text-[9px] text-blue-300 truncate max-w-[52px] text-center">{lane.blueHero}</div>
                             </div>
                             <span className="text-[10px] text-gray-600 font-bold">vs</span>
                             <div className="flex flex-col items-center gap-1">
-                              <div className="h-10 w-10 rounded-lg overflow-hidden border border-red-900/40">
-                                <FallbackImage src={getHeroImgUrl(lane.redHero)} fallbackText={lane.redHero} alt={lane.redHero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
+                              <div className="h-11 w-11 aspect-square rounded-xl overflow-hidden border border-red-900/40 bg-slate-950/70">
+                                <FallbackImage src={getHeroImgUrl(lane.redHero)} fallbackText={lane.redHero} alt={lane.redHero} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[6px]" />
                               </div>
                               <div className="text-[9px] text-red-300 truncate max-w-[52px] text-center">{lane.redHero}</div>
                             </div>
