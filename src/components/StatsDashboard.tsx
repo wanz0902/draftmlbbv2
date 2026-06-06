@@ -20,13 +20,13 @@ import { getHeroImageUrl, getHeroRole } from "../lib/heroUtils";
 interface StatsDashboardProps {
   heroes: HeroStats[];
   heroAssets: Record<string, string>;
-  onChangeTab?: (tab: string) => void;
+  onOpenHeroIntelligence?: (heroName: string) => void;
 }
 
 export default function StatsDashboard({
   heroes,
   heroAssets,
-  onChangeTab,
+  onOpenHeroIntelligence,
 }: StatsDashboardProps) {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRole, setSelectedRole] = useState("ALL");
@@ -284,7 +284,7 @@ export default function StatsDashboard({
                 </div>
 
                 <button
-                  onClick={() => onChangeTab?.("intelligence")}
+                  onClick={() => onOpenHeroIntelligence?.(selectedHero.hero_name)}
                   className="flex items-center gap-1.5 rounded bg-indigo-600/20 px-3 py-1.5 text-xs font-bold text-indigo-400 hover:bg-indigo-600/30 hover:text-indigo-300 transition-colors border border-indigo-500/30 cursor-pointer"
                   title="View in Hero Intelligence Tab"
                 >
@@ -439,7 +439,7 @@ export default function StatsDashboard({
               {/* Advanced Profile Button */}
               <div className="mt-2 border-t border-gray-900 pt-3">
                 <button
-                  onClick={() => onChangeTab?.("intelligence")}
+                  onClick={() => onOpenHeroIntelligence?.(selectedHero.hero_name)}
                   className="w-full flex items-center justify-center gap-2 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-400 hover:text-indigo-300 font-bold py-3 rounded-lg shadow-lg shadow-indigo-500/10 cursor-pointer border border-indigo-500/20 hover:border-indigo-500/40 transition-all"
                   title="Open Hero Intelligence Dashboard"
                 >
@@ -501,7 +501,7 @@ export default function StatsDashboard({
                 unpickedHeroes.map((h) => (
                   <button
                     key={h.hero_name}
-                    onClick={() => onChangeTab?.("intelligence")}
+                    onClick={() => onOpenHeroIntelligence?.(h.hero_name)}
                     className="relative group/icon"
                     title={`View ${h.hero_name} Intelligence`}
                   >
@@ -560,7 +560,7 @@ export default function StatsDashboard({
                 unbannedHeroes.map((h) => (
                   <button
                     key={h.hero_name}
-                    onClick={() => onChangeTab?.("intelligence")}
+                    onClick={() => onOpenHeroIntelligence?.(h.hero_name)}
                     className="relative group/icon"
                     title={`View ${h.hero_name} Intelligence`}
                   >
@@ -619,7 +619,7 @@ export default function StatsDashboard({
                 completelyIgnored.map((h) => (
                   <button
                     key={h.hero_name}
-                    onClick={() => onChangeTab?.("intelligence")}
+                    onClick={() => onOpenHeroIntelligence?.(h.hero_name)}
                     className="relative group/icon"
                     title={`View ${h.hero_name} Intelligence`}
                   >

@@ -9,9 +9,10 @@ import { getHeroImageUrl } from "../lib/heroUtils";
 
 interface Props {
   heroAssets: Record<string, string>;
+  initialHeroName?: string | null;
 }
 
-export default function HeroIntelligenceDashboard({ heroAssets }: Props) {
+export default function HeroIntelligenceDashboard({ heroAssets, initialHeroName }: Props) {
   const [heroes, setHeroes] = useState<DetailedHero[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
@@ -21,11 +22,31 @@ export default function HeroIntelligenceDashboard({ heroAssets }: Props) {
     fetch("/api/heroes")
       .then((res) => res.json())
       .then((data) => {
-        setHeroes(Array.isArray(data) ? data : []);
+        const heroList = Array.isArray(data) ? data : [];
+        setHeroes(heroList);
+        // Auto-select hero if initialHeroName is provided
+        if (initialHeroName) {
+          const target = heroList.find((h: any) => {
+            const name = (h.hero_name || h.name || h.heroName || "").toLowerCase();
+            return name === initialHeroName.toLowerCase();
+          });
+          if (target) setSelectedHero(target);
+        }
       })
       .catch((err) => console.error(err))
       .finally(() => setLoading(false));
   }, []);
+
+  // React to initialHeroName changes after heroes are loaded
+  useEffect(() => {
+    if (initialHeroName && heroes.length > 0) {
+      const target = heroes.find((h: any) => {
+        const name = (h.hero_name || h.name || h.heroName || "").toLowerCase();
+        return name === initialHeroName.toLowerCase();
+      });
+      if (target) setSelectedHero(target);
+    }
+  }, [initialHeroName, heroes]);
 
   const filteredHeroes = heroes.filter((h: any) => {
     const heroName = h.hero_name || h.name || h.heroName || "";

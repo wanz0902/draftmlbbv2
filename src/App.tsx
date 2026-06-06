@@ -31,6 +31,7 @@ export default function App() {
   const [teamsData, setTeamsData] = useState<TeamStats[]>([]);
   const [heroAssets, setHeroAssets] = useState<Record<string, string>>({});
   const [historyData, setHistoryData] = useState<any[]>([]);
+  const [intelligenceTarget, setIntelligenceTarget] = useState<string | null>(null);
 
   const tabLabels: Record<string, string> = {
     home: "Home",
@@ -98,7 +99,16 @@ export default function App() {
       setPendingTab(newTab);
       return;
     }
+    // Clear intelligence target when navigating to non-intelligence tabs
+    if (newTab !== "intelligence") {
+      setIntelligenceTarget(null);
+    }
     setCurrentTab(newTab);
+  };
+
+  const handleOpenHeroIntelligence = (heroName: string) => {
+    setIntelligenceTarget(heroName);
+    setCurrentTab("intelligence");
   };
 
   return (
@@ -163,7 +173,7 @@ export default function App() {
             )}
 
             {currentTab === "intelligence" && (
-              <HeroIntelligenceDashboard heroAssets={heroAssets} />
+              <HeroIntelligenceDashboard heroAssets={heroAssets} initialHeroName={intelligenceTarget} />
             )}
 
             {currentTab === "tier" && (
@@ -175,7 +185,7 @@ export default function App() {
             )}
 
             {currentTab === "heroes" && (
-              <StatsDashboard heroes={heroes} heroAssets={heroAssets} onChangeTab={handleTabChange} />
+              <StatsDashboard heroes={heroes} heroAssets={heroAssets} onOpenHeroIntelligence={handleOpenHeroIntelligence} />
             )}
 
             {currentTab === "teams" && (
