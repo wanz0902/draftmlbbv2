@@ -28,7 +28,7 @@
 |----------|---------|-------------|---------------|-------------|--------------|-------------------|-----------|-------------------|
 | `POST /api/draft/recommendation` | MPL + Ranked draft hero recommendation | ✅ User | **Local engine only** (no AI) | N/A | N/A (instant) | None (pure local) | None | ✅ Production |
 | `POST /api/ai/draft-analysis` | Post-draft narrative analysis | ✅ User | Router: Wafer → TokenPlan → Local | ✅ Logged | ✅ 5min TTL | Low (validated) | Low (analysis tier) | ✅ Production |
-| `POST /api/ai/deep-analysis` | Premium deep strategic analysis | ⚠️ Manual only | Router: Premium model (expensive) | ❌ **NOT logged** | ❌ No cache | Medium (less constrained) | ⚠️ HIGH | ⚠️ Needs logging + gate |
+| `POST /api/ai/deep-analysis` | Premium deep strategic analysis | ⚠️ Manual only | Router: Premium model (expensive) | ✅ Logged | ❌ No cache | Medium (less constrained) | ⚠️ HIGH | ✅ Gated (DEEP_ANALYSIS_ENABLED + token) |
 | `POST /api/ai/recommendation-explain` | Realtime recommendation narration | ✅ User | Router: Realtime model (cheap) | ❌ **NOT logged** | ✅ Provider cache | Low (short output) | Low | ✅ Production |
 | `GET /api/ai/test` | Wafer connection test | ⚠️ Internal | Wafer realtime | No | No | None | Minimal | ✅ OK |
 | `GET /api/ai/providers/test` | Test all providers | ⚠️ Internal | Both | No | No | None | Minimal | ✅ OK |
@@ -127,9 +127,9 @@
 
 | Priority | Task | Risk If Not Done |
 |----------|------|-----------------|
-| 🔴 High | Add `logAIRequest()` to `/api/ai/deep-analysis` | Expensive calls untracked |
-| 🔴 High | Add `logAIRequest()` to `/api/ai/recommendation-explain` | Realtime calls untracked at scale |
-| 🟡 Medium | Add auth/rate-limit gate on `/api/ai/deep-analysis` | Anyone can burn premium credits |
+| 🔴 High | Add `logAIRequest()` to `/api/ai/deep-analysis` | ~~Expensive calls untracked~~ ✅ Done (Step 4C) |
+| 🔴 High | Add `logAIRequest()` to `/api/ai/recommendation-explain` | ~~Realtime calls untracked~~ ✅ Done (Step 4C) |
+| 🟡 Medium | Add auth/rate-limit gate on `/api/ai/deep-analysis` | ~~Anyone can burn premium credits~~ ✅ Done (Step 4D — DEEP_ANALYSIS_ENABLED + token gate) |
 | 🟡 Medium | Review/deprecate legacy Gemini endpoints | Weaker hallucination controls |
 | 🟡 Medium | Add rate limiting before public traffic grows | Abuse risk |
 | 🟢 Low | Clarify MiMo ToS for production fallback use | Low risk if fallback only |

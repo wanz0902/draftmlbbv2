@@ -1986,6 +1986,43 @@ app.get("/api/ai/cache-stats", (_req, res) => {
 
 // POST /api/ai/deep-analysis — Premium tier via router (explicit user action only)
 app.post("/api/ai/deep-analysis", async (req, res) => {
+  // Gate: deep-analysis uses expensive premium model — require explicit enablement + access token
+  const deepEnabled = process.env.DEEP_ANALYSIS_ENABLED === 'true';
+  const accessToken = process.env.DEEP_ANALYSIS_ACCESS_TOKEN;
+
+  if (!deepEnabled) {
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      draftPhase: 'deep_analysis',
+      requestType: 'deep_analysis',
+      providerUsed: 'none',
+      responseTimeMs: 0,
+      errorCode: 'access_denied_disabled',
+    });
+    return res.status(403).json({
+      success: false,
+      error: 'Deep analysis endpoint is currently disabled. Set DEEP_ANALYSIS_ENABLED=true to enable.',
+    });
+  }
+
+  if (accessToken && accessToken !== 'your_deep_analysis_access_token_here') {
+    const requestToken = req.headers['x-deep-analysis-token'] as string;
+    if (!requestToken || requestToken !== accessToken) {
+      logAIRequest({
+        sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+        draftPhase: 'deep_analysis',
+        requestType: 'deep_analysis',
+        providerUsed: 'none',
+        responseTimeMs: 0,
+        errorCode: 'access_denied_token',
+      });
+      return res.status(403).json({
+        success: false,
+        error: 'Deep analysis requires valid access token in x-deep-analysis-token header.',
+      });
+    }
+  }
+
   try {
     const { provider, ...payload } = req.body;
     const result = await aiProviderRouter.deepAnalysis(payload, { provider: provider || undefined });
