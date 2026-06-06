@@ -1,29 +1,32 @@
-node_modules/
-build/
-dist/
-coverage/
-.DS_Store
-*.log
-.env*
-!.env.example
-firebase-applet-config.json
-
-# Auto-generated entries
 # Dependencies
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Build outputs
 dist/
 build/
-*.log
+.vite/
 
-# Environment files
+# Environment files (NEVER commit secrets)
 .env
-.env.*
+.env.local
+.env.*.local
+.env.production
+.env.development
 !.env.example
+
+# Firebase config with real credentials
+firebase-applet-config.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
 
 # IDE files
 .vscode/
@@ -31,20 +34,12 @@ build/
 *.swp
 *.swo
 
-# OS files
-.DS_Store
-Thumbs.db
-
 # Temporary files
 *.tmp
 *.temp
 .cache/
+coverage/
 
-# Sensitive files (auto-detected)
-.env
-.env.example
-dist
-node_modules
-
-.env.local
-.env.*.local
+# Kiro workspace
+.kiro/
+.verdent_*
