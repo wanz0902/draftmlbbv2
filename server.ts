@@ -1680,23 +1680,34 @@ FORMAT JSON:
     });
     res.json(parsedData);
   } catch (error: any) {
-    console.error("Gemini AI API Call failed:", error);
+    console.error("AI recommendation provider failed:", error.message || error);
+    // Return fallback recommendations instead of 500
+    const unavailable = new Set([...bluePicks, ...redPicks, ...blueBans, ...redBans]);
+    const fallbackPool = [
+      { heroName: "Zhuxin", role: "Mage", reason: "Standard pick/ban priority." },
+      { heroName: "Suyou", role: "Assassin", reason: "Great high tier flexible pick." },
+      { heroName: "Harith", role: "Marksman", reason: "Strong sidelane lane pressure." },
+      { heroName: "Ling", role: "Assassin", reason: "High mobility jungle carry." },
+      { heroName: "Valentina", role: "Mage", reason: "Flex pick with ultimate copy." },
+      { heroName: "Mathilda", role: "Support", reason: "Roam priority with engage." },
+    ];
+    const available = fallbackPool.filter(h => !unavailable.has(h.heroName)).slice(0, 5);
     logAIRequest({
       sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
       requestType: 'legacy_ai_recommend',
       draftPhase: currentPhase || 'recommendation',
-      providerUsed: 'none',
+      providerUsed: 'static_fallback',
+      modelUsed: 'none',
       responseTimeMs: Date.now() - requestStartTime,
       cacheHit: false,
-      fallbackUsed: false,
+      fallbackUsed: true,
       errorCode: 'provider_exception',
     });
-    res
-      .status(500)
-      .json({
-        error: "Failed to query Gemini AI model",
-        details: error.message,
-      });
+    res.json({
+      recommendations: available.length > 0 ? available : [{ heroName: "N/A", role: "N/A", reason: "Semua fallback hero sudah terpakai." }],
+      overallStrategy: "AI provider tidak tersedia. Menampilkan rekomendasi berdasarkan meta priority saat ini.",
+      fallback: true,
+    });
   }
 });
 
