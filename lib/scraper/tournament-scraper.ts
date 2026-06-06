@@ -115,7 +115,7 @@ export async function scrapeTournamentStats(
         }
 
         const found = masterData.find(
-          (h: any) => norm(h.hero_name) === mapped || h.slug === mapped || (h.slug && mapped.includes(h.slug))
+          (h: any) => norm(h.hero_name) === mapped || h.slug === mapped
         );
 
         if (found) {

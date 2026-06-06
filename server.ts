@@ -2401,8 +2401,7 @@ app.post("/api/scrape/liquipedia", async (req, res) => {
         const found = masterData.find(
           (h: any) =>
             norm(h.hero_name) === mapped ||
-            h.slug === mapped ||
-            (h.slug && mapped.includes(h.slug)),
+            h.slug === mapped,
         );
 
         if (found) {
