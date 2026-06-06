@@ -1773,8 +1773,59 @@ app.get("/api/ai/providers/benchmark", async (_req, res) => {
   }
 });
 
+// ─── Lightweight In-Memory Rate Limiter for AI Endpoints ──────────────────────
+const aiRateLimitStore = new Map<string, { count: number; resetAt: number }>();
+const AI_RATE_WINDOW_MS = parseInt(process.env.AI_RATE_LIMIT_WINDOW_MS || '60000', 10);
+const AI_DRAFT_ANALYSIS_LIMIT = parseInt(process.env.AI_DRAFT_ANALYSIS_LIMIT || '10', 10);
+const AI_RECOMMENDATION_EXPLAIN_LIMIT = parseInt(process.env.AI_RECOMMENDATION_EXPLAIN_LIMIT || '30', 10);
+
+function checkAiRateLimit(req: any, endpointKey: string, limit: number): { allowed: boolean; remaining: number } {
+  const clientId = (req.headers['x-session-id'] as string) || req.ip || 'unknown';
+  const key = `${clientId}::${endpointKey}`;
+  const now = Date.now();
+
+  const entry = aiRateLimitStore.get(key);
+  if (!entry || now >= entry.resetAt) {
+    aiRateLimitStore.set(key, { count: 1, resetAt: now + AI_RATE_WINDOW_MS });
+    return { allowed: true, remaining: limit - 1 };
+  }
+
+  if (entry.count >= limit) {
+    return { allowed: false, remaining: 0 };
+  }
+
+  entry.count++;
+  return { allowed: true, remaining: limit - entry.count };
+}
+
+// Periodic cleanup of expired rate limit entries (every 5 minutes)
+setInterval(() => {
+  const now = Date.now();
+  for (const [key, entry] of aiRateLimitStore) {
+    if (now >= entry.resetAt) aiRateLimitStore.delete(key);
+  }
+}, 5 * 60 * 1000);
+
 // POST /api/ai/draft-analysis — Full draft analysis via AI Provider Router (auto-failover)
 app.post("/api/ai/draft-analysis", async (req, res) => {
+  // Rate limit check
+  const rateCheck = checkAiRateLimit(req, 'draft-analysis', AI_DRAFT_ANALYSIS_LIMIT);
+  if (!rateCheck.allowed) {
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      requestType: 'final_analysis',
+      draftPhase: 'final_analysis',
+      providerUsed: 'none',
+      responseTimeMs: 0,
+      errorCode: 'rate_limited',
+    });
+    return res.status(429).json({
+      success: false,
+      error: 'Terlalu banyak permintaan analisis. Silakan tunggu sebentar sebelum mencoba lagi.',
+      retryAfterMs: AI_RATE_WINDOW_MS,
+    });
+  }
+
   try {
     const { mode, blueTeam, redTeam, bluePicks = [], redPicks = [], blueBans = [], redBans = [], provider } = req.body;
     const isCompletedDraft = bluePicks.length >= 5 && redPicks.length >= 5;
@@ -2066,6 +2117,24 @@ app.post("/api/ai/deep-analysis", async (req, res) => {
 
 // POST /api/ai/recommendation-explain — Realtime recommendation explanation via router
 app.post("/api/ai/recommendation-explain", async (req, res) => {
+  // Rate limit check
+  const rateCheck = checkAiRateLimit(req, 'recommendation-explain', AI_RECOMMENDATION_EXPLAIN_LIMIT);
+  if (!rateCheck.allowed) {
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      requestType: 'recommendation_explain',
+      draftPhase: 'recommendation',
+      providerUsed: 'none',
+      responseTimeMs: 0,
+      errorCode: 'rate_limited',
+    });
+    return res.status(429).json({
+      success: false,
+      error: 'Terlalu banyak permintaan rekomendasi. Silakan tunggu sebentar.',
+      retryAfterMs: AI_RATE_WINDOW_MS,
+    });
+  }
+
   try {
     const { context, draftData, provider } = req.body;
     const payload = draftData || { recommendationCandidatesTop5: [], teams: {}, headToHeadSummary: { summary: context || '' }, similarGamesTop3: [], constraints: { maxWords: 350, noRawDataDump: true, noFabrication: true, aiNotSourceOfTruth: true, missingData: [] }, currentDraftState: { bluePicks: [], redPicks: [], blueBans: [], redBans: [], currentTurn: 'BLUE', currentPhase: 'BAN' }, topTeamPicks: { blue: [], red: [] }, topTeamBans: { blue: [], red: [] } };

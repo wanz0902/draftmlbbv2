@@ -94,9 +94,12 @@
    Do not call providers for the same payload within the TTL window.
 3. **Premium/deep analysis** must have explicit user trigger only — never auto-fire.
 4. **Add rate limiting** before public traffic grows:
-   - Suggested: max 5 AI explain calls per draft session
-   - Suggested: max 1 final analysis per completed draft
-   - Suggested: max 30 AI requests per IP per hour
+   - ✅ Implemented: in-memory rate limiter per session/IP on `/api/ai/draft-analysis`
+     (default: 10 requests/minute) and `/api/ai/recommendation-explain` (default: 30/min).
+   - Rate limit returns HTTP 429 **before** calling AI provider — zero token spend.
+   - Configurable via `AI_RATE_LIMIT_WINDOW_MS`, `AI_DRAFT_ANALYSIS_LIMIT`,
+     `AI_RECOMMENDATION_EXPLAIN_LIMIT` in `.env`.
+   - Local-only `/api/draft/recommendation` is NOT rate-limited (no AI spend).
 5. **max_tokens limits must remain strict** — do not increase without cost review.
 6. **Monitor `ai_request_logs`** weekly: check for cost spikes, unexpected models, abuse.
 
