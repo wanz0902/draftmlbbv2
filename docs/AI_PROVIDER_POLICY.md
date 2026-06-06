@@ -36,7 +36,7 @@
 | `GET /api/ai/cache-stats` | Show cache status | ⚠️ Internal | N/A | N/A | N/A | None | None | ✅ OK |
 | `POST /api/draft/ai-recommend` | **Legacy** Gemini AI coach | ✅ User (Ranked) | Gemini/OpenAI | ❌ Not logged | No | ⚠️ Medium | Medium | ⚠️ Legacy — review/deprecate |
 | `POST /api/draft/final-analysis` | **Legacy** Gemini final analysis | ✅ User (fallback) | Gemini | ❌ Not logged | No | ⚠️ Medium | Medium | ⚠️ Legacy — review/deprecate |
-| `POST /api/draft/evaluate` | **Legacy** Gemini evaluation | ❓ Unclear | Gemini | ❌ Not logged | No | ⚠️ Medium | Medium | ⚠️ May be dead code |
+| `POST /api/draft/evaluate` | ~~Legacy Gemini evaluation~~ **DEPRECATED (Step 5C)** | ❌ Dead code | ~~Gemini~~ → 410 Gone | N/A | N/A | ~~High (fabricated win %)~~ Removed | None | 🚫 Deprecated — returns 410 |
 
 ---
 

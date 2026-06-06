@@ -1700,81 +1700,16 @@ FORMAT JSON:
   }
 });
 
-// API ROUTE: GEMINI AI DRAFT GLOBAL EVALUATION
-app.post("/api/draft/evaluate", async (req, res): Promise<any> => {
-  const {
-    bluePicks = [],
-    redPicks = [],
-    blueBans = [],
-    redBans = [],
-  } = req.body;
-
-  const ai = getGeminiClient();
-  const openAI = getOpenAIClient();
-  if (!ai && !openAI) {
-    return res.status(503).json({
-      error:
-        "AI service is currently unavailable. Ensure GEMINI_API_KEY or OPENAI_API_KEY is configured in Settings.",
-      evaluation: `## Analisis Draf (API Key Hilang)
-      
-Silakan konfigurasi \`GEMINI_API_KEY\` atau \`OPENAI_API_KEY\` Anda di panel **Settings > Secrets** untuk mengaktifkan asisten pelatih analisis draf Gemini secara real-time.
-
-### Lineup Draft Terpilih:
-- **Tim Biru**: ${bluePicks.join(", ") || "Belum ada"}
-- **Tim Merah**: ${redPicks.join(", ") || "Belum ada"}`,
-    });
-  }
-
-  try {
-    const prompt = `Lakukan evaluasi post-draf singkat, ringkas, dan to the point.
-Anda adalah seorang analis pro scene MLBB. Bahasa jangan kaku, gunakan bahasa semi-kasual tapi profesional dan penuh data/fakta. Minta user baca dalam waktu singkat.
-JANGAN gunakan paragraf panjang, gunakan bullet points saja. Max 10-15 detik waktu baca.
-
-- Tim Biru: Picks: ${JSON.stringify(bluePicks)} (Bans: ${JSON.stringify(blueBans)})
-- Tim Merah: Picks: ${JSON.stringify(redPicks)} (Bans: ${JSON.stringify(redBans)})
-
-Muat poin berikut:
-1. Sinergi Biru & Power Spike.
-2. Sinergi Merah & Power Spike.
-3. Win Condition masing-masing.
-4. Kesimpulan probabilitas menang (misal: Biru 55% vs Merah 45%) berdasarkan counter/draft.`;
-
-    let evaluationText = "Gagal memperoleh draf analisis dari AI.";
-    
-    let openaiFailed = false;
-    if (openAI) {
-      try {
-        const completion = await openAI.chat.completions.create({
-          model: "gpt-4-turbo",
-          messages: [
-            { role: "system", content: "Lakukan output text biasa dan informatif." },
-            { role: "user", content: prompt }
-          ]
-        });
-        evaluationText = completion.choices[0].message.content || evaluationText;
-      } catch (err: any) {
-        console.warn("OpenAI evaluate Failed:", err.message);
-        openaiFailed = true;
-      }
-    } 
-    
-    if ((!openAI || openaiFailed) && ai) {
-      const response = await ai.models.generateContent({
-        model: "gemini-2.0-flash",
-        contents: prompt,
-      });
-      evaluationText = response.text || evaluationText;
-    }
-
-    res.json({
-      evaluation: evaluationText,
-    });
-  } catch (error: any) {
-    console.error("Gemini Post-Draft Evaluation failed:", error);
-    res
-      .status(500)
-      .json({ error: "Failed to evaluate draft", details: error.message });
-  }
+// API ROUTE: DEPRECATED — /api/draft/evaluate
+// This endpoint is DEPRECATED as of Step 5C. It previously asked AI to fabricate
+// win probability percentages (e.g., "Blue 55% vs Red 45%") which violates the
+// project's anti-hallucination policy. Use /api/ai/draft-analysis instead.
+app.post("/api/draft/evaluate", (_req, res): any => {
+  return res.status(410).json({
+    success: false,
+    error: "Endpoint deprecated. Use /api/ai/draft-analysis for post-draft analysis powered by local engine + AI narration.",
+    reason: "This endpoint asked AI to fabricate win probability percentages without data backing. All draft analysis must now use local engine as source of truth.",
+  });
 });
 
 // ——— WAFER AI ENDPOINTS (Server-side proxy) ———
