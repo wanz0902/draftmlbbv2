@@ -20,11 +20,13 @@ import { getHeroImageUrl, getHeroRole } from "../lib/heroUtils";
 interface StatsDashboardProps {
   heroes: HeroStats[];
   heroAssets: Record<string, string>;
+  onChangeTab?: (tab: string) => void;
 }
 
 export default function StatsDashboard({
   heroes,
   heroAssets,
+  onChangeTab,
 }: StatsDashboardProps) {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRole, setSelectedRole] = useState("ALL");
@@ -282,7 +284,8 @@ export default function StatsDashboard({
                 </div>
 
                 <button
-                  className="flex items-center gap-1.5 rounded bg-indigo-600/20 px-3 py-1.5 text-xs font-bold text-indigo-400 opacity-50 cursor-not-allowed border border-indigo-500/30"
+                  onClick={() => onChangeTab?.("intelligence")}
+                  className="flex items-center gap-1.5 rounded bg-indigo-600/20 px-3 py-1.5 text-xs font-bold text-indigo-400 hover:bg-indigo-600/30 hover:text-indigo-300 transition-colors border border-indigo-500/30 cursor-pointer"
                   title="View in Hero Intelligence Tab"
                 >
                   <Database className="h-3.5 w-3.5" />
@@ -436,10 +439,11 @@ export default function StatsDashboard({
               {/* Advanced Profile Button */}
               <div className="mt-2 border-t border-gray-900 pt-3">
                 <button
-                  className="w-full flex items-center justify-center gap-2 bg-indigo-600/30 text-indigo-400 font-bold py-3 rounded-lg shadow-lg shadow-indigo-500/10 cursor-not-allowed border border-indigo-500/20"
-                  title="Use the Hero Intelligence Tab instead"
+                  onClick={() => onChangeTab?.("intelligence")}
+                  className="w-full flex items-center justify-center gap-2 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-400 hover:text-indigo-300 font-bold py-3 rounded-lg shadow-lg shadow-indigo-500/10 cursor-pointer border border-indigo-500/20 hover:border-indigo-500/40 transition-all"
+                  title="Open Hero Intelligence Dashboard"
                 >
-                  <Cpu className="h-5 w-5 opacity-50" />
+                  <Cpu className="h-5 w-5" />
                   View Intelligence Profile
                 </button>
               </div>
@@ -495,16 +499,18 @@ export default function StatsDashboard({
             <div className="flex flex-wrap gap-2 transition">
               {unpickedHeroes.length > 0 ? (
                 unpickedHeroes.map((h) => (
-                  <div
+                  <button
                     key={h.hero_name}
-                    className="relative group/icon cursor-help"
+                    onClick={() => onChangeTab?.("intelligence")}
+                    className="relative group/icon"
+                    title={`View ${h.hero_name} Intelligence`}
                   >
                     <FallbackImage
                       src={getHeroImageUrl(h.hero_name, heroAssets)}
                       fallbackText={h.hero_name}
                       alt={h.hero_name}
-                      containerClassName="w-8 h-8 rounded shrink-0 text-[10px]"
-                      className="w-8 h-8 rounded shrink-0 object-cover border border-gray-700 opacity-60 hover:opacity-100 hover:border-orange-500 transition-all"
+                      containerClassName="w-9 h-9 rounded-lg shrink-0 text-[10px]"
+                      className="w-9 h-9 rounded-lg shrink-0 object-cover border border-gray-700 opacity-60 group-hover/icon:opacity-100 group-hover/icon:border-orange-500 group-hover/icon:scale-110 transition-all duration-200"
                     />
                     <div className="absolute opacity-0 group-hover/icon:opacity-100 transition-opacity bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-xs text-white px-3 py-2 rounded shadow-2xl z-20 pointer-events-none border border-gray-700 flex flex-col items-center gap-1">
                       <span className="font-bold text-sm text-gray-100">
@@ -522,7 +528,7 @@ export default function StatsDashboard({
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </button>
                 ))
               ) : (
                 <span className="text-xs text-gray-600 font-mono italic">
@@ -552,16 +558,18 @@ export default function StatsDashboard({
             <div className="flex flex-wrap gap-2 transition">
               {unbannedHeroes.length > 0 ? (
                 unbannedHeroes.map((h) => (
-                  <div
+                  <button
                     key={h.hero_name}
-                    className="relative group/icon cursor-help"
+                    onClick={() => onChangeTab?.("intelligence")}
+                    className="relative group/icon"
+                    title={`View ${h.hero_name} Intelligence`}
                   >
                     <FallbackImage
                       src={getHeroImageUrl(h.hero_name, heroAssets)}
                       fallbackText={h.hero_name}
                       alt={h.hero_name}
-                      containerClassName="w-8 h-8 rounded shrink-0 text-[10px]"
-                      className="w-8 h-8 rounded shrink-0 object-cover border border-gray-700 opacity-60 hover:opacity-100 hover:border-emerald-500 transition-all"
+                      containerClassName="w-9 h-9 rounded-lg shrink-0 text-[10px]"
+                      className="w-9 h-9 rounded-lg shrink-0 object-cover border border-gray-700 opacity-60 group-hover/icon:opacity-100 group-hover/icon:border-emerald-500 group-hover/icon:scale-110 transition-all duration-200"
                     />
                     <div className="absolute opacity-0 group-hover/icon:opacity-100 transition-opacity bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-xs text-white px-3 py-2 rounded shadow-2xl z-20 pointer-events-none border border-gray-700 flex flex-col items-center gap-1">
                       <span className="font-bold text-sm text-gray-100">
@@ -579,7 +587,7 @@ export default function StatsDashboard({
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </button>
                 ))
               ) : (
                 <span className="text-xs text-gray-600 font-mono italic">
@@ -609,16 +617,18 @@ export default function StatsDashboard({
             <div className="flex flex-wrap gap-2 transition">
               {completelyIgnored.length > 0 ? (
                 completelyIgnored.map((h) => (
-                  <div
+                  <button
                     key={h.hero_name}
-                    className="relative group/icon cursor-help"
+                    onClick={() => onChangeTab?.("intelligence")}
+                    className="relative group/icon"
+                    title={`View ${h.hero_name} Intelligence`}
                   >
                     <FallbackImage
                       src={getHeroImageUrl(h.hero_name, heroAssets)}
                       fallbackText={h.hero_name}
                       alt={h.hero_name}
-                      containerClassName="w-8 h-8 rounded shrink-0 text-[10px]"
-                      className="w-8 h-8 rounded shrink-0 object-cover border border-gray-800 opacity-40 hover:opacity-100 hover:border-red-500 transition-all grayscale hover:grayscale-0"
+                      containerClassName="w-9 h-9 rounded-lg shrink-0 text-[10px]"
+                      className="w-9 h-9 rounded-lg shrink-0 object-cover border border-gray-800 opacity-40 group-hover/icon:opacity-100 group-hover/icon:border-red-500 group-hover/icon:scale-110 transition-all duration-200 grayscale group-hover/icon:grayscale-0"
                     />
                     <div className="absolute opacity-0 group-hover/icon:opacity-100 transition-opacity bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-red-950 border border-red-800 text-xs text-white px-3 py-2 rounded shadow-2xl z-20 pointer-events-none flex flex-col items-center gap-1">
                       <span className="font-bold text-sm text-gray-100">
@@ -636,7 +646,7 @@ export default function StatsDashboard({
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </button>
                 ))
               ) : (
                 <span className="text-xs text-gray-600 font-mono italic">

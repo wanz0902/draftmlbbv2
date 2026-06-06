@@ -175,7 +175,7 @@ export default function App() {
             )}
 
             {currentTab === "heroes" && (
-              <StatsDashboard heroes={heroes} heroAssets={heroAssets} />
+              <StatsDashboard heroes={heroes} heroAssets={heroAssets} onChangeTab={handleTabChange} />
             )}
 
             {currentTab === "teams" && (
