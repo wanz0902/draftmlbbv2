@@ -2257,8 +2257,27 @@ app.post("/api/ai/recommendation-explain", async (req, res) => {
   }
 });
 
-// API ROUTE: LIVE INTERNET SCAN & SCRAPING (OPTIMIZED LOGIC)
-app.post("/api/scrape/liquipedia", async (req, res) => {
+// API ROUTE: LIVE INTERNET SCAN & SCRAPING (OPTIMIZED LOGIC) — ADMIN ONLY
+app.post("/api/scrape/liquipedia", async (req, res): Promise<any> => {
+  // Admin gate: require ADMIN_TOOLS_ENABLED=true and valid access token
+  const adminEnabled = process.env.ADMIN_TOOLS_ENABLED === 'true';
+  if (!adminEnabled) {
+    return res.status(403).json({
+      success: false,
+      error: 'Admin tools are disabled. Set ADMIN_TOOLS_ENABLED=true to enable.',
+    });
+  }
+  const expectedToken = process.env.ADMIN_TOOLS_ACCESS_TOKEN;
+  if (expectedToken) {
+    const providedToken = req.headers['x-admin-tools-token'] as string;
+    if (providedToken !== expectedToken) {
+      return res.status(403).json({
+        success: false,
+        error: 'Invalid or missing admin access token.',
+      });
+    }
+  }
+
   try {
     const apiEndpoint = "https://liquipedia.net/mobilelegends/api.php";
     const params = new URLSearchParams({

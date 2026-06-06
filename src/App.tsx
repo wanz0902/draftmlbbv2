@@ -7,7 +7,6 @@ import HeroIntelligenceDashboard from "./components/HeroIntelligenceDashboard";
 import StatsDashboard from "./components/StatsDashboard";
 import TeamAnalytics from "./components/TeamAnalytics";
 import ItemsCatalog from "./components/ItemsCatalog";
-import LiquipediaScraper from "./components/LiquipediaScraper";
 import TierListPanel from "./components/TierListPanel";
 import CounterMatrixPanel from "./components/CounterMatrixPanel";
 import LandingPage from "./components/LandingPage";
@@ -42,7 +41,6 @@ export default function App() {
     heroes: "Hero Stats",
     teams: "Team Analytics",
     items: "Items Catalog",
-    scraper: "Liquipedia Updates",
   };
 
   // Fetch initial analytical data
@@ -197,17 +195,6 @@ export default function App() {
             )}
 
             {currentTab === "items" && <ItemsCatalog items={items} />}
-
-            {currentTab === "scraper" && (
-              <LiquipediaScraper
-                heroesCount={heroes.length}
-                matchesCount={
-                  teamsData.reduce((acc, t) => acc + t.matchesPlayed, 0) / 2
-                } // Since each game lists 2 team records, match counts represent total divide 2
-                historyCount={historyData.length}
-                onRefreshAllData={loadAllData}
-              />
-            )}
           </div>
         )}
       </main>

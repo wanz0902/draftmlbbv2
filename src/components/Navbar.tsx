@@ -47,7 +47,6 @@ const groupedLinks = [
     label: "Data",
     icon: Database,
     items: [
-      { id: "scraper", label: "Liquipedia Updates" },
       { id: "items", label: "Items Catalog" },
     ],
   },
@@ -67,7 +66,6 @@ const mobileSections = [
   {
     title: "Data",
     items: [
-      { id: "scraper", label: "Liquipedia Updates", icon: Database },
       { id: "items", label: "Items Catalog", icon: Database },
     ],
   },
