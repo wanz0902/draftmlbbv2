@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useCallback, useRef } from "react";
 import {
   ArrowLeft,
   Search,
@@ -13,8 +13,10 @@ import {
   Target,
 } from "lucide-react";
 import { HeroStats } from "../types";
+import { DetailedHero } from "../types/hero";
 import heroesMaster from "../data/heroes_master.json";
 import FallbackImage from "./FallbackImage";
+import HeroDetailPanel from "./HeroDetailPanel";
 import { getHeroImageUrl, getHeroRole } from "../lib/heroUtils";
 
 interface StatsDashboardProps {
@@ -34,6 +36,35 @@ export default function StatsDashboard({
     "presence" | "winrate" | "picks" | "bans" | "name"
   >("presence");
   const [selectedHero, setSelectedHero] = useState<HeroStats | null>(null);
+
+  // Hero intelligence detail panel state
+  const [detailHero, setDetailHero] = useState<DetailedHero | null>(null);
+  const detailedHeroesCache = useRef<DetailedHero[]>([]);
+
+  const openHeroDetail = useCallback(async (heroName: string) => {
+    // Use cache if available
+    if (detailedHeroesCache.current.length === 0) {
+      try {
+        const res = await fetch("/api/heroes");
+        const data = await res.json();
+        detailedHeroesCache.current = Array.isArray(data) ? data : [];
+      } catch {
+        // Fallback: just navigate to full page
+        onOpenHeroIntelligence?.(heroName);
+        return;
+      }
+    }
+    const found = detailedHeroesCache.current.find((h: any) => {
+      const name = (h.hero_name || h.name || h.heroName || "").toLowerCase();
+      return name === heroName.toLowerCase();
+    });
+    if (found) {
+      setDetailHero(found);
+    } else {
+      // Not found in detailed data, navigate to full page as fallback
+      onOpenHeroIntelligence?.(heroName);
+    }
+  }, [onOpenHeroIntelligence]);
 
   const roles = [
     "ALL",
@@ -284,7 +315,7 @@ export default function StatsDashboard({
                 </div>
 
                 <button
-                  onClick={() => onOpenHeroIntelligence?.(selectedHero.hero_name)}
+                  onClick={() => openHeroDetail(selectedHero.hero_name)}
                   className="flex items-center gap-1.5 rounded bg-indigo-600/20 px-3 py-1.5 text-xs font-bold text-indigo-400 hover:bg-indigo-600/30 hover:text-indigo-300 transition-colors border border-indigo-500/30 cursor-pointer"
                   title="View in Hero Intelligence Tab"
                 >
@@ -439,7 +470,7 @@ export default function StatsDashboard({
               {/* Advanced Profile Button */}
               <div className="mt-2 border-t border-gray-900 pt-3">
                 <button
-                  onClick={() => onOpenHeroIntelligence?.(selectedHero.hero_name)}
+                  onClick={() => openHeroDetail(selectedHero.hero_name)}
                   className="w-full flex items-center justify-center gap-2 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-400 hover:text-indigo-300 font-bold py-3 rounded-lg shadow-lg shadow-indigo-500/10 cursor-pointer border border-indigo-500/20 hover:border-indigo-500/40 transition-all"
                   title="Open Hero Intelligence Dashboard"
                 >
@@ -501,7 +532,7 @@ export default function StatsDashboard({
                 unpickedHeroes.map((h) => (
                   <button
                     key={h.hero_name}
-                    onClick={() => onOpenHeroIntelligence?.(h.hero_name)}
+                    onClick={() => openHeroDetail(h.hero_name)}
                     className="relative group/icon"
                     title={`View ${h.hero_name} Intelligence`}
                   >
@@ -560,7 +591,7 @@ export default function StatsDashboard({
                 unbannedHeroes.map((h) => (
                   <button
                     key={h.hero_name}
-                    onClick={() => onOpenHeroIntelligence?.(h.hero_name)}
+                    onClick={() => openHeroDetail(h.hero_name)}
                     className="relative group/icon"
                     title={`View ${h.hero_name} Intelligence`}
                   >
@@ -619,7 +650,7 @@ export default function StatsDashboard({
                 completelyIgnored.map((h) => (
                   <button
                     key={h.hero_name}
-                    onClick={() => onOpenHeroIntelligence?.(h.hero_name)}
+                    onClick={() => openHeroDetail(h.hero_name)}
                     className="relative group/icon"
                     title={`View ${h.hero_name} Intelligence`}
                   >
@@ -657,6 +688,15 @@ export default function StatsDashboard({
           </div>
         </div>
       </div>
+
+      {/* Hero Intelligence Detail Panel (inline modal) */}
+      {detailHero && (
+        <HeroDetailPanel
+          hero={detailHero}
+          onClose={() => setDetailHero(null)}
+          heroAssets={heroAssets}
+        />
+      )}
     </div>
   );
 }
