@@ -429,11 +429,59 @@ function printReport(): void {
 }
 
 // ===========================================================================
+// Hero stats duplicate/collision check (data/heroes_stats.json)
+// ===========================================================================
+function validateHeroStats(): void {
+  const statsPath = path.join(CWD, 'data', 'heroes_stats.json');
+  const statsRel = path.relative(CWD, statsPath);
+
+  let raw: string;
+  try {
+    raw = fs.readFileSync(statsPath, 'utf-8');
+  } catch {
+    addWarning(statsRel, 'file', 'Hero stats file not found (optional).');
+    return;
+  }
+
+  let stats: any[];
+  try {
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return;
+    stats = parsed;
+  } catch {
+    addWarning(statsRel, 'parse', 'Could not parse hero stats JSON.');
+    return;
+  }
+
+  // Check for duplicate normalized hero names
+  const seen = new Map<string, number>();
+  stats.forEach((entry, index) => {
+    const name = typeof entry?.hero_name === 'string' ? entry.hero_name.trim() : '';
+    if (!name) {
+      addWarning(statsRel, `index ${index}`, 'Hero stats entry has empty hero_name.');
+      return;
+    }
+    const norm = name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const prev = seen.get(norm);
+    if (prev !== undefined) {
+      addError(
+        statsRel,
+        `index ${index}`,
+        `Duplicate normalized hero name "${name}" (normalized: "${norm}") — first at index ${prev}. This may cause dedup/collision issues.`,
+      );
+    } else {
+      seen.set(norm, index);
+    }
+  });
+}
+
+// ===========================================================================
 // Main
 // ===========================================================================
 function main(): void {
   validateHeroes();
   validateHeroesDir();
+  validateHeroStats();
   validateMatchData();
   printReport();
   process.exit(errors.length === 0 ? 0 : 1);
