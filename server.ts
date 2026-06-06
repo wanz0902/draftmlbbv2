@@ -1989,6 +1989,21 @@ app.post("/api/ai/deep-analysis", async (req, res) => {
   try {
     const { provider, ...payload } = req.body;
     const result = await aiProviderRouter.deepAnalysis(payload, { provider: provider || undefined });
+
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      teamBlue: payload.teams?.blue || payload.blueTeam,
+      teamRed: payload.teams?.red || payload.redTeam,
+      draftPhase: 'deep_analysis',
+      requestType: 'deep_analysis',
+      providerUsed: result.provider || 'unknown',
+      modelUsed: result.model || 'unknown',
+      responseTimeMs: result.latencyMs || 0,
+      cacheHit: false,
+      fallbackUsed: !!result.fallbackUsed,
+      errorCode: result.error ? 'provider_error' : undefined,
+    });
+
     res.json({
       success: result.success,
       analysis: result.text,
@@ -2000,6 +2015,14 @@ app.post("/api/ai/deep-analysis", async (req, res) => {
       ...(result.error ? { error: result.error } : {}),
     });
   } catch (error: any) {
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      draftPhase: 'deep_analysis',
+      requestType: 'deep_analysis',
+      providerUsed: 'none',
+      responseTimeMs: 0,
+      errorCode: 'exception',
+    });
     res.status(500).json({ success: false, error: error.message });
   }
 });
@@ -2010,6 +2033,21 @@ app.post("/api/ai/recommendation-explain", async (req, res) => {
     const { context, draftData, provider } = req.body;
     const payload = draftData || { recommendationCandidatesTop5: [], teams: {}, headToHeadSummary: { summary: context || '' }, similarGamesTop3: [], constraints: { maxWords: 350, noRawDataDump: true, noFabrication: true, aiNotSourceOfTruth: true, missingData: [] }, currentDraftState: { bluePicks: [], redPicks: [], blueBans: [], redBans: [], currentTurn: 'BLUE', currentPhase: 'BAN' }, topTeamPicks: { blue: [], red: [] }, topTeamBans: { blue: [], red: [] } };
     const result = await aiProviderRouter.generateRecommendation(payload, { provider: provider || undefined });
+
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      teamBlue: payload.teams?.blue,
+      teamRed: payload.teams?.red,
+      draftPhase: payload.currentDraftState?.currentPhase || 'recommendation',
+      requestType: 'recommendation_explain',
+      providerUsed: result.provider || 'local',
+      modelUsed: result.model || 'local-engine',
+      responseTimeMs: result.latencyMs || 0,
+      cacheHit: !!result.cached,
+      fallbackUsed: !!result.fallbackUsed,
+      errorCode: result.localFallback ? 'local_fallback' : (result.error ? 'provider_error' : undefined),
+    });
+
     res.json({
       success: result.success,
       explanation: result.text,
@@ -2020,6 +2058,14 @@ app.post("/api/ai/recommendation-explain", async (req, res) => {
       fallbackUsed: result.fallbackUsed,
     });
   } catch (error: any) {
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      draftPhase: 'recommendation',
+      requestType: 'recommendation_explain',
+      providerUsed: 'none',
+      responseTimeMs: 0,
+      errorCode: 'exception',
+    });
     res.status(500).json({ success: false, error: error.message });
   }
 });
