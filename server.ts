@@ -1254,6 +1254,25 @@ app.post("/api/draft/recommendation", (req, res) => {
 
 // API ROUTE: FINAL DRAFT ANALYSIS (POST-DRAFT)
 app.post("/api/draft/final-analysis", async (req, res): Promise<any> => {
+  // Rate limit check (reuses existing helper from Step 4E)
+  const rateCheck = checkAiRateLimit(req, 'legacy-final-analysis', AI_LEGACY_FINAL_ANALYSIS_LIMIT);
+  if (!rateCheck.allowed) {
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      requestType: 'legacy_final_analysis',
+      draftPhase: 'final_analysis',
+      providerUsed: 'none',
+      responseTimeMs: 0,
+      errorCode: 'rate_limited',
+    });
+    return res.status(429).json({
+      success: false,
+      error: 'Terlalu banyak permintaan analisis. Silakan tunggu sebentar.',
+      retryAfterMs: AI_RATE_WINDOW_MS,
+    });
+  }
+
+  const requestStartTime = Date.now();
   const {
     bluePicks = [],
     redPicks = [],
@@ -1432,6 +1451,17 @@ Gunakan data draftTags, counterTags, synergyTags, macroTags, dan powerSpikeTags 
 
   const ai = getGeminiClient();
   if (!ai) {
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      requestType: 'legacy_final_analysis',
+      draftPhase: 'final_analysis',
+      providerUsed: 'local_fallback',
+      modelUsed: 'none',
+      responseTimeMs: Date.now() - requestStartTime,
+      cacheHit: false,
+      fallbackUsed: true,
+      errorCode: 'no_api_key',
+    });
     return res.json({ analysis: generateFallbackAnalysis() });
   }
 
@@ -1451,17 +1481,67 @@ Gunakan data draftTags, counterTags, synergyTags, macroTags, dan powerSpikeTags 
     ]);
     if (!validation.valid) {
       console.warn("[Final Analysis] Output validation failed:", validation.reasons.join("; "));
+      logAIRequest({
+        sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+        requestType: 'legacy_final_analysis',
+        draftPhase: 'final_analysis',
+        providerUsed: 'gemini',
+        modelUsed: 'qwen3.6-35b-a3b',
+        responseTimeMs: Date.now() - requestStartTime,
+        cacheHit: false,
+        fallbackUsed: true,
+        errorCode: 'validation_fallback',
+      });
       return res.json({ analysis: fallbackAnalysis, validationFallback: true });
     }
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      requestType: 'legacy_final_analysis',
+      draftPhase: 'final_analysis',
+      providerUsed: 'gemini',
+      modelUsed: 'qwen3.6-35b-a3b',
+      responseTimeMs: Date.now() - requestStartTime,
+      cacheHit: false,
+      fallbackUsed: false,
+    });
     res.json({ analysis });
   } catch (error: any) {
     console.error("[Final Analysis] Gemini AI error:", error.message);
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      requestType: 'legacy_final_analysis',
+      draftPhase: 'final_analysis',
+      providerUsed: 'none',
+      responseTimeMs: Date.now() - requestStartTime,
+      cacheHit: false,
+      fallbackUsed: true,
+      errorCode: 'provider_exception',
+    });
     res.json({ analysis: generateFallbackAnalysis() });
   }
 });
 
 // API ROUTE: GEMINI AI DRAFT ANALYST & RECOMMENDATION
 app.post("/api/draft/ai-recommend", async (req, res): Promise<any> => {
+  // Rate limit check (reuses existing helper from Step 4E)
+  const rateCheck = checkAiRateLimit(req, 'legacy-ai-recommend', AI_LEGACY_RECOMMEND_LIMIT);
+  if (!rateCheck.allowed) {
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      requestType: 'legacy_ai_recommend',
+      draftPhase: 'recommendation',
+      providerUsed: 'none',
+      responseTimeMs: 0,
+      errorCode: 'rate_limited',
+    });
+    return res.status(429).json({
+      success: false,
+      error: 'Terlalu banyak permintaan rekomendasi. Silakan tunggu sebentar.',
+      retryAfterMs: AI_RATE_WINDOW_MS,
+    });
+  }
+
+  const requestStartTime = Date.now();
   const {
     bluePicks = [],
     redPicks = [],
@@ -1485,6 +1565,17 @@ app.post("/api/draft/ai-recommend", async (req, res): Promise<any> => {
       { heroName: "Mathilda", role: "Support", reason: "Roam priority with engage." },
     ];
     const available = fallbackPool.filter(h => !unavailable.has(h.heroName)).slice(0, 5);
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      requestType: 'legacy_ai_recommend',
+      draftPhase: currentPhase || 'recommendation',
+      providerUsed: 'static_fallback',
+      modelUsed: 'none',
+      responseTimeMs: Date.now() - requestStartTime,
+      cacheHit: false,
+      fallbackUsed: true,
+      errorCode: 'no_api_key',
+    });
     return res.status(503).json({
       error:
         "AI service is currently unavailable. Ensure GEMINI_API_KEY or OPENAI_API_KEY is configured in Settings.",
@@ -1577,9 +1668,29 @@ FORMAT JSON:
     }
 
     const parsedData = JSON.parse(responseText);
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      requestType: 'legacy_ai_recommend',
+      draftPhase: currentPhase || 'recommendation',
+      providerUsed: openaiFailed ? 'gemini' : (openAI ? 'openai' : 'gemini'),
+      modelUsed: openaiFailed ? 'gemini-2.0-flash' : (openAI ? 'gpt-4-turbo' : 'gemini-2.0-flash'),
+      responseTimeMs: Date.now() - requestStartTime,
+      cacheHit: false,
+      fallbackUsed: !!openaiFailed,
+    });
     res.json(parsedData);
   } catch (error: any) {
     console.error("Gemini AI API Call failed:", error);
+    logAIRequest({
+      sessionId: (req.headers['x-session-id'] as string) || 'anonymous',
+      requestType: 'legacy_ai_recommend',
+      draftPhase: currentPhase || 'recommendation',
+      providerUsed: 'none',
+      responseTimeMs: Date.now() - requestStartTime,
+      cacheHit: false,
+      fallbackUsed: false,
+      errorCode: 'provider_exception',
+    });
     res
       .status(500)
       .json({
@@ -1778,6 +1889,8 @@ const aiRateLimitStore = new Map<string, { count: number; resetAt: number }>();
 const AI_RATE_WINDOW_MS = parseInt(process.env.AI_RATE_LIMIT_WINDOW_MS || '60000', 10);
 const AI_DRAFT_ANALYSIS_LIMIT = parseInt(process.env.AI_DRAFT_ANALYSIS_LIMIT || '10', 10);
 const AI_RECOMMENDATION_EXPLAIN_LIMIT = parseInt(process.env.AI_RECOMMENDATION_EXPLAIN_LIMIT || '30', 10);
+const AI_LEGACY_RECOMMEND_LIMIT = parseInt(process.env.AI_LEGACY_RECOMMEND_LIMIT || '20', 10);
+const AI_LEGACY_FINAL_ANALYSIS_LIMIT = parseInt(process.env.AI_LEGACY_FINAL_ANALYSIS_LIMIT || '10', 10);
 
 function checkAiRateLimit(req: any, endpointKey: string, limit: number): { allowed: boolean; remaining: number } {
   const clientId = (req.headers['x-session-id'] as string) || req.ip || 'unknown';

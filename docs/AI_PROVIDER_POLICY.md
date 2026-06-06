@@ -133,8 +133,8 @@
 | 🔴 High | Add `logAIRequest()` to `/api/ai/deep-analysis` | ~~Expensive calls untracked~~ ✅ Done (Step 4C) |
 | 🔴 High | Add `logAIRequest()` to `/api/ai/recommendation-explain` | ~~Realtime calls untracked~~ ✅ Done (Step 4C) |
 | 🟡 Medium | Add auth/rate-limit gate on `/api/ai/deep-analysis` | ~~Anyone can burn premium credits~~ ✅ Done (Step 4D — DEEP_ANALYSIS_ENABLED + token gate) |
-| 🟡 Medium | Review/deprecate legacy Gemini endpoints | Weaker hallucination controls |
-| 🟡 Medium | Add rate limiting before public traffic grows | Abuse risk |
+| 🟡 Medium | Review/deprecate legacy Gemini endpoints | Weaker hallucination controls — but now logged and rate-limited (Step 5B) |
+| 🟡 Medium | Add rate limiting before public traffic grows | ~~Abuse risk~~ ✅ Done (Steps 4E + 5B — all user-facing AI endpoints rate-limited) |
 | 🟢 Low | Clarify MiMo ToS for production fallback use | Low risk if fallback only |
 | 🟢 Low | Define real subscription/paywall system if product will sell plans | No urgency — "premium" is model tier only today |
 
