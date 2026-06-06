@@ -32,113 +32,177 @@
   },
   "skills": {
     "passive": {
-      "name": "Passive Skill",
-      "description": "Passive description.",
-      "cooldown": [],
-      "manaCost": [],
-      "damageType": "PHYSICAL",
+      "name": "Platinum Snap",
+      "description": "Marcel's split soul, Clemar, enters the camera to freeze the moment. Marcel's Basic Attacks deal 50 (+40% Total Physical Attack) (+40% Total Magic Defense) (+40% Total Physical Defense) Physical Damage (cannot Crit). He cannot benefit from extra Attack Speed. Extra HP is converted into 1.5% Hybrid Defense.\nClemar automatically snaps photos of enemy heroes near Marcel, causing a brief Frozen Moment and dealing 20 (+5% their Max HP) True Damage (triggers Attack Effects). It also grants a shield of the same value to Marcel and a nearby allied hero. Cooldown: 12s per target (each Basic Attack from Marcel reduces this cooldown by 1s).",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(+40% Total Physical Attack)",
+        "(+40% Total Magic Defense)",
+        "(+40% Total Physical Defense)",
+        "(+5% their Max HP)"
       ],
-      "crowdControlType": [
-        "NONE"
-      ],
+      "scalingTable": [],
+      "crowdControlType": [],
       "strategicTags": [
-        "Passive"
+        "CC2"
       ],
+      "iconName": "Platinum_Snap",
+      "iconUrl": "/raw-assets/skill_icons/marcel/platinum_snap.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Passive_Skill",
-      "displayLabel": "Passive",
-      "skillSlot": "passive"
+      "strategicPurpose": ""
     },
     "skill1": {
-      "name": "Skill 1",
-      "description": "Skill 1 description.",
-      "cooldown": [
-        10,
-        9,
-        8
-      ],
-      "manaCost": [
-        50,
-        60,
-        70
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Framed Moment",
+      "description": "Clemar focuses on an area around Marcel, slowing enemy heroes within by 20%. After 2.5s, he completes the shot, dealing 370 (+50% Total Physical Attack) (+100% Total Magic Defense) (+100% Total Physical Defense) Physical Damage to enemies within and immobilizing them for 1s.",
+      "cooldown": "12.5",
+      "manaCost": "40",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(+50% Total Physical Attack)",
+        "(+100% Total Magic Defense)",
+        "(+100% Total Physical Defense)"
       ],
-      "crowdControlType": [
-        "NONE"
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.5",
+            "12.0",
+            "11.5",
+            "11.0",
+            "10.5",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "40",
+            "45",
+            "50",
+            "55",
+            "60",
+            "65"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "370",
+            "400",
+            "430",
+            "460",
+            "490",
+            "520"
+          ]
+        }
       ],
+      "crowdControlType": [],
       "strategicTags": [
-        "Damage"
+        "AOE2"
       ],
+      "iconName": "Framed_Moment",
+      "iconUrl": "/raw-assets/skill_icons/marcel/framed_moment.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_1",
-      "displayLabel": "Skill 1",
-      "skillSlot": "skill1"
+      "strategicPurpose": ""
     },
     "skill2": {
-      "name": "Skill 2",
-      "description": "Skill 2 description.",
-      "cooldown": [
-        12,
-        11,
-        10
-      ],
-      "manaCost": [
-        60,
-        70,
-        80
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Tracking Shot",
+      "description": "Artist inspiration time! Marcel enters the Tracking Haste state for 3s, gaining 15% Movement Speed (increases to 75% when moving toward enemy heroes).\nUse Again: Marcel dashes in the target direction, leaving a framing phantom behind. If Framed Moment is active, Clemar remains at the original location to continue shooting.",
+      "cooldown": "12.5",
+      "manaCost": "70",
+      "damageType": "Not specified in source",
       "scaling": [
-        "100% Physical Attack"
+        "None"
       ],
-      "crowdControlType": [
-        "NONE"
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.5",
+            "12.0",
+            "11.5",
+            "11.0",
+            "10.5",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "70",
+            "75",
+            "80",
+            "85",
+            "90",
+            "95"
+          ]
+        },
+        {
+          "label": "Movement Speed Bonus",
+          "values": [
+            "15%",
+            "17.5%",
+            "20%",
+            "22.5%",
+            "25%",
+            "27.5%"
+          ]
+        },
+        {
+          "label": "Movement Speed Boost",
+          "values": [
+            "75%",
+            "82.5%",
+            "90%",
+            "97.5%",
+            "105%",
+            "112.5%"
+          ]
+        }
       ],
+      "crowdControlType": [],
       "strategicTags": [
-        "Mobility"
+        "Speed Up2"
       ],
+      "iconName": "Tracking_Shot",
+      "iconUrl": "/raw-assets/skill_icons/marcel/tracking_shot.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_2",
-      "displayLabel": "Skill 2",
-      "skillSlot": "skill2"
+      "strategicPurpose": ""
     },
     "ultimate": {
-      "name": "Ultimate",
-      "description": "Ultimate description.",
-      "cooldown": [
-        40,
-        35,
-        30
-      ],
-      "manaCost": [
-        100,
-        120,
-        150
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Golden Hour",
+      "description": "Marcel and Clemar perform a joint shoot. After a short delay, Clemar takes a wide-angle shot of the target area for 3s. During this time, Marcel enters the Tracking Haste state while inside the area. All other units in the area are put into a Frozen Moment and are immune to all effects except from Marcel. All ranged Basic Attacks and projectiles are also frozen and will continue after a delay.\nGolden Hour resets the cooldown of Platinum Snap for each enemy hero.\nAllied heroes with the Platinum Snap shield can move freely within the area.",
+      "cooldown": "74.0",
+      "manaCost": "150",
+      "damageType": "Not specified in source",
       "scaling": [
-        "200% Physical Attack"
+        "None"
       ],
-      "crowdControlType": [
-        "STUN"
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "74.0",
+            "68.0",
+            "62.0"
+          ]
+        }
       ],
+      "crowdControlType": [],
       "strategicTags": [
-        "CC",
-        "Burst"
+        "CC2"
       ],
+      "iconName": "Golden_Hour",
+      "iconUrl": "/raw-assets/skill_icons/marcel/golden_hour.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Ultimate",
-      "displayLabel": "Ultimate",
-      "skillSlot": "ultimate"
+      "strategicPurpose": ""
     }
   },
   "strategicData": {

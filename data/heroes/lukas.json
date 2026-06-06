@@ -32,113 +32,331 @@
   },
   "skills": {
     "passive": {
-      "name": "Passive Skill",
-      "description": "Passive description.",
-      "cooldown": [],
-      "manaCost": [],
-      "damageType": "PHYSICAL",
+      "name": "Hero's Resolve",
+      "description": "Lukas gains 0.5 Resolve per second and an additional 2 Resolve when attacking heroes.\nLukas consumes 10 Resolve per second while in Sacred Beast form.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
       "scaling": [
-        "100% Physical Attack"
+        "None"
       ],
-      "crowdControlType": [
-        "NONE"
-      ],
+      "scalingTable": [],
+      "crowdControlType": [],
       "strategicTags": [
-        "Passive"
+        "Buff"
       ],
+      "iconName": "Hero's_Resolve",
+      "iconUrl": "/raw-assets/skill_icons/lukas/hero_s_resolve.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Passive_Skill",
-      "displayLabel": "Passive",
-      "skillSlot": "passive"
+      "strategicPurpose": ""
     },
     "skill1": {
-      "name": "Skill 1",
-      "description": "Skill 1 description.",
-      "cooldown": [
-        10,
-        9,
-        8
-      ],
-      "manaCost": [
-        50,
-        60,
-        70
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Flash Combo",
+      "description": "Passive: Basic Attacks enhance Flash Combo up to 2 times, lasting 4s.\nLukas consumes all Vigor to unleash Pulverize, dealing 220 (+120% Total Physical Attack) Physical Damage and recovering 5% of his Max HP when hitting a hero or minion.\n1 Stack: Lukas briefly stuns the target and spins his tonfa hammers to deal 100 (+45% Total Physical Attack) Physical Damage 3 times, pulling the enemy toward him.\n2 Stacks: Lukas briefly stuns the target and follows up with 2 attacks that deal 50 (+20% Total Physical Attack) Physical Damage each. He then spin his tonfa hammers to deal 100 (+45% Total Physical Attack) Physical Damage 3 times, gaining Control Immunity during this period.",
+      "cooldown": "5.5",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(+120% Total Physical Attack)",
+        "(+45% Total Physical Attack)",
+        "(+20% Total Physical Attack)",
+        "(+45% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "220",
+            "280",
+            "340",
+            "400",
+            "460",
+            "520"
+          ]
+        },
+        {
+          "label": "Combo Damage",
+          "values": [
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"
+          ]
+        },
+        {
+          "label": "Spin Damage",
+          "values": [
+            "100",
+            "120",
+            "140",
+            "160",
+            "180",
+            "200"
+          ]
+        }
       ],
       "crowdControlType": [
-        "NONE"
+        "CC"
       ],
       "strategicTags": [
-        "Damage"
+        "Damage",
+        "CC"
       ],
+      "iconName": "Flash_Combo",
+      "iconUrl": "/raw-assets/skill_icons/lukas/flash_combo.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_1",
-      "displayLabel": "Skill 1",
-      "skillSlot": "skill1"
+      "strategicPurpose": ""
     },
     "skill2": {
-      "name": "Skill 2",
-      "description": "Skill 2 description.",
-      "cooldown": [
-        12,
-        11,
-        10
-      ],
-      "manaCost": [
-        60,
-        70,
-        80
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Flash Combo",
+      "description": "Passive: Basic Attacks enhance Flash Combo up to 2 times, lasting 4s.\nLukas consumes all Vigor to unleash a tail swing, dealing 220 (+120% Total Physical Attack) Physical Damage and recovers 5% of his Max HP when hitting a hero.\n1 Stack: Lukas briefly stuns the target and punces to deal 100 (+45% Total Physical Attack) Physical Damage 3 times, knocking the enemy back.\n2 Stacks: Lukas briefly stuns the target and leaps to deal 50 (+20% Total Physical Attack) Physical Damage 2 times, then summons sacred lightning, dealing 100 (+45% Total Physical Attack) Physical Damage 3 times, and gaining Control Immunity during this period.",
+      "cooldown": "5.5",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(+120% Total Physical Attack)",
+        "(+45% Total Physical Attack)",
+        "(+20% Total Physical Attack)",
+        "(+45% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "220",
+            "280",
+            "340",
+            "400",
+            "460",
+            "520"
+          ]
+        },
+        {
+          "label": "Combo Damage",
+          "values": [
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"
+          ]
+        },
+        {
+          "label": "Spin Damage",
+          "values": [
+            "100",
+            "120",
+            "140",
+            "160",
+            "180",
+            "200"
+          ]
+        }
       ],
       "crowdControlType": [
-        "NONE"
+        "CC"
       ],
       "strategicTags": [
-        "Mobility"
+        "Damage",
+        "CC"
       ],
+      "iconName": "Flash_Combo_Beast",
+      "iconUrl": "/raw-assets/skill_icons/lukas/flash_combo_beast.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_2",
-      "displayLabel": "Skill 2",
-      "skillSlot": "skill2"
+      "strategicPurpose": ""
     },
     "ultimate": {
-      "name": "Ultimate",
-      "description": "Ultimate description.",
-      "cooldown": [
-        40,
-        35,
-        30
-      ],
-      "manaCost": [
-        100,
-        120,
-        150
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Flash Step",
+      "description": "Lukas dashes in the target direction and turns his next Basic Attack within 4s into Flash Strike.\nFlash Strike: Lukas blinks behind the enemy, dealing 60 (+125% Total Physical Attack) Physical Damage. He then increased Attack Range, 20% Movement Speed and Attack Speed, and his Basic Attacks trigger lightning storms to deal 50 (+25% Total Physical Attack) extra Physical Damage, lasting for 4s.",
+      "cooldown": "12.0",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "200% Physical Attack"
+        "(+125% Total Physical Attack)",
+        "(+25% Total Physical Attack)"
       ],
-      "crowdControlType": [
-        "STUN"
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.2",
+            "10.4",
+            "9.6",
+            "8.8",
+            "9.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "60",
+            "72",
+            "84",
+            "96",
+            "108",
+            "120"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"
+          ]
+        }
       ],
+      "crowdControlType": [],
       "strategicTags": [
-        "CC",
+        "Mobility",
+        "Buff"
+      ],
+      "iconName": "Flash_Step",
+      "iconUrl": "/raw-assets/skill_icons/lukas/flash_step.png",
+      "variant": "",
+      "comboUsage": "",
+      "strategicPurpose": ""
+    },
+    "extra1": {
+      "name": "Flash Step",
+      "description": "Lukas dashes in the target direction and turns his next Basic Attack within 4s into Lightning Clash.\nLightning Clash: Lukas charges toward the enemy, knocking them back and dealing 60 (+125% Total Physical Attack) Physical Damage. He then gains 20% Movement Speed and Attack Speed, and summons sacred lightning with Basic Attacks to deal 50 (+25% Total Physical Attack) extra Physical Damage, lasting for 4s.",
+      "cooldown": "12.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+125% Total Physical Attack)",
+        "(+25% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.2",
+            "10.4",
+            "9.6",
+            "8.8",
+            "9.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "60",
+            "72",
+            "84",
+            "96",
+            "108",
+            "120"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Buff"
+      ],
+      "iconName": "Flash_Step_Beast",
+      "iconUrl": "/raw-assets/skill_icons/lukas/flash_step_beast.png",
+      "variant": "",
+      "comboUsage": "",
+      "strategicPurpose": ""
+    },
+    "extra2": {
+      "name": "Unleash the Beast",
+      "description": "Lukas transforms into his Sacred Beast form (briefly gains Control Immunity). His base Movement Speed is increased by 30, all attributes are increased by 15%, and his skills gain new effects.\nUse Again: Fires a Shockwave Blast in the target direction that will explode upon hitting an enemy hero or reaching its maximum range, dealing 450 (+155% Total Physical Attack) Physical Damage.\nAll attributes: HP, Physical Attack, Attack Speed, Physical & Magic Defense, and Attack Range.",
+      "cooldown": "0.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+155% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Attribute Increase",
+          "values": [
+            "15%",
+            "17.5%",
+            "20%"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "450",
+            "775",
+            "1100"
+          ]
+        },
+        {
+          "label": "Resolve Regen",
+          "values": [
+            "1",
+            "1.5",
+            "2"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Morph",
+        "Buff"
+      ],
+      "iconName": "Unleash_the_Beast",
+      "iconUrl": "/raw-assets/skill_icons/lukas/unleash_the_beast.png",
+      "variant": "",
+      "comboUsage": "",
+      "strategicPurpose": ""
+    },
+    "extra3": {
+      "name": "Shockwave Blast",
+      "description": "The Sacred Beast fires a Shockwave Blast in the target direction (gains Control Immunity during the cast) that will explode upon hitting an enemy hero or reaching its maximum range, dealing 450 (+155% Total Physical Attack) Physical Damage.",
+      "cooldown": "0.1",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+155% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "450",
+            "775",
+            "1100"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
         "Burst"
       ],
+      "iconName": "Shockwave_Blast",
+      "iconUrl": "/raw-assets/skill_icons/lukas/shockwave_blast.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Ultimate",
-      "displayLabel": "Ultimate",
-      "skillSlot": "ultimate"
+      "strategicPurpose": ""
     }
   },
   "strategicData": {

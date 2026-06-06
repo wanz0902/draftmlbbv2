@@ -33,113 +33,146 @@
   },
   "skills": {
     "passive": {
-      "name": "Passive Skill",
-      "description": "Passive description.",
-      "cooldown": [],
-      "manaCost": [],
-      "damageType": "PHYSICAL",
+      "name": "Surge of Life",
+      "description": "After casting a skill, Kalea creates a Water Zone on the ground. When Kalea casts a skill within this zone, she will absorb the Water Zone to enhance her next three Basic Attacks with different effects:\nFirst Basic Attack: Kalea dashes to the target, dealing (100% Total Physical Attack) Physical Damage.\nSecond Basic Attack: Kalea unleashes a flurry of attacks, dealing 200 (+100% Total Physical Attack) Physical Damage and recovering 40 (+10% Total HP) (+60% Total Magic Power) HP for herself and the nearby ally with the lowest HP.\nThird Basic Attack: Kalea uses her tail to strike the area around her target, dealing 100 (+100% Total Physical Attack) Physical Damage and creating a new Water Zone. Enhanced Basic Attacks are not affected by Attack Speed.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(100% Total Physical Attack)",
+        "(+100% Total Physical Attack)",
+        "(+10% Total HP)",
+        "(+60% Total Magic Power)",
+        "(+100% Total Physical Attack)"
       ],
-      "crowdControlType": [
-        "NONE"
-      ],
+      "scalingTable": [],
+      "crowdControlType": [],
       "strategicTags": [
-        "Passive"
+        "Buff"
       ],
+      "iconName": "Surge_of_Life",
+      "iconUrl": "/raw-assets/skill_icons/kalea/surge_of_life.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Passive_Skill",
-      "displayLabel": "Passive",
-      "skillSlot": "passive"
+      "strategicPurpose": ""
     },
     "skill1": {
-      "name": "Skill 1",
-      "description": "Skill 1 description.",
-      "cooldown": [
-        10,
-        9,
-        8
-      ],
-      "manaCost": [
-        50,
-        60,
-        70
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Wavebreaker",
+      "description": "Kalea slams her fist into the ground, creating a wave that deals 200 (+5% Total HP) Physical Damage to nearby enemies and slows them by 40% for 1.5 seconds.",
+      "cooldown": "4.0",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(+5% Total HP)"
       ],
-      "crowdControlType": [
-        "NONE"
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "230",
+            "260",
+            "290",
+            "320",
+            "350"
+          ]
+        }
       ],
+      "crowdControlType": [],
       "strategicTags": [
-        "Damage"
+        "AOE"
       ],
+      "iconName": "Wavebreaker",
+      "iconUrl": "/raw-assets/skill_icons/kalea/wavebreaker.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_1",
-      "displayLabel": "Skill 1",
-      "skillSlot": "skill1"
+      "strategicPurpose": ""
     },
     "skill2": {
-      "name": "Skill 2",
-      "description": "Skill 2 description.",
-      "cooldown": [
-        12,
-        11,
-        10
-      ],
-      "manaCost": [
-        60,
-        70,
-        80
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Tidal Strike",
+      "description": "Kalea charges forward and body slams the first enemy hero she encounters, knocking them airborne for 0.6s (unaffected with Resilience) while dealing 150 (+60% Total Physical Attack) Physical Damage.\nIf she collides with an obstacle or touches the edge of a Water Zone during her charge, Kalea will leap into the air. Cast the skill again to slam down at a target location, dealing 150 (+60% Total Physical Attack) Physical Damage and knocking enemies airborne for 0.6s (unaffected with Resilience).",
+      "cooldown": "13.0",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(+60% Total Physical Attack)",
+        "(+60% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "13.0",
+            "12.6",
+            "12.2",
+            "11.8",
+            "11.4",
+            "11.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "150",
+            "175",
+            "200",
+            "225",
+            "250",
+            "275"
+          ]
+        }
       ],
       "crowdControlType": [
-        "NONE"
+        "CC"
       ],
       "strategicTags": [
-        "Mobility"
+        "Mobility",
+        "CC"
       ],
+      "iconName": "Tidal_Strike",
+      "iconUrl": "/raw-assets/skill_icons/kalea/tidal_strike.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_2",
-      "displayLabel": "Skill 2",
-      "skillSlot": "skill2"
+      "strategicPurpose": ""
     },
     "ultimate": {
-      "name": "Ultimate",
-      "description": "Ultimate description.",
-      "cooldown": [
-        40,
-        35,
-        30
-      ],
-      "manaCost": [
-        100,
-        120,
-        150
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Tsunami Slam",
+      "description": "Kalea grabs an enemy hero with her tail and slams them down in the Joystick's direction (drag the Joystick to change landing spot). She gains Control Immunity during this process. Upon landing, deals 300 (+80% Total Physical Attack) Physical Damage to the target and nearby enemies.",
+      "cooldown": "56.0",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "200% Physical Attack"
+        "(+80% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "56.0",
+            "52.0",
+            "48.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "400",
+            "500"
+          ]
+        }
       ],
       "crowdControlType": [
-        "STUN"
+        "CC"
       ],
       "strategicTags": [
-        "CC",
-        "Burst"
+        "CC"
       ],
+      "iconName": "Tsunami_Slam",
+      "iconUrl": "/raw-assets/skill_icons/kalea/tsunami_slam.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Ultimate",
-      "displayLabel": "Ultimate",
-      "skillSlot": "ultimate"
+      "strategicPurpose": ""
     }
   },
   "strategicData": {

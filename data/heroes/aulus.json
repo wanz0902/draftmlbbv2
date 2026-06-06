@@ -77,8 +77,8 @@
       "skillSlot": "skill1"
     },
     "skill2": {
-      "name": "",
-      "description": "",
+      "name": "Undying Fury",
+      "description": "Aulus swings his axe, dealing Physical Damage to enemies in a fan-shaped area. Each enemy hero hit grants Aulus extra Attack Speed for a short duration. Aulus also regenerates HP upon hitting enemies.",
       "cooldown": [
         10
       ],
@@ -93,10 +93,11 @@
       "strategicTags": [],
       "comboUsage": "",
       "strategicPurpose": "",
-      "iconName": "Skill_2",
+      "iconName": "Undying_Fury",
       "tips": "Aulus' primary damage source. Use this skill to hit as many enemies as possible, and it will provide a huge attack speed bonus and regen. In this way, Aulus' output and survivability are both greatly increased.",
       "displayLabel": "Skill 2",
-      "skillSlot": "skill2"
+      "skillSlot": "skill2",
+      "iconUrl": "/raw-assets/skill_icons/aulus/undying_fury.png"
     },
     "ultimate": {
       "name": "The Power of Axe",

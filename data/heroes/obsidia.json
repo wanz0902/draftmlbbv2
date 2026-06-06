@@ -36,113 +36,152 @@
   },
   "skills": {
     "passive": {
-      "name": "Passive Skill",
-      "description": "Passive description.",
-      "cooldown": [],
-      "manaCost": [],
-      "damageType": "PHYSICAL",
+      "name": "Return to Bone",
+      "description": "Obsidia gains Bone Energy whenever she deals damage. Basic Attacks grant 1 Energy against non-hero units and 2 against hero units. Skills grant Energy equal to 3 times the amount granted by Basic Attacks against the same unit type. No Energy is gained from hitting creeps.\nAt 30 Bone Energy, it forms a Bone Shard (up to 25 shards). Killing an enemy hero instantly grants 1 Bone Shard(s). When Obsidia uses Basic Attacks, all Bone Shards strike the target, each dealing (6% Total Physical Attack) Physical Damage (inherits 6% Attack Effects).\nObsidia's Basic Attacks deal 70 (+70% Total Physical Attack) Physical Damage (inherits 100% Attack Effects).",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(6% Total Physical Attack)",
+        "(+70% Total Physical Attack)"
       ],
-      "crowdControlType": [
-        "NONE"
-      ],
+      "scalingTable": [],
+      "crowdControlType": [],
       "strategicTags": [
-        "Passive"
+        "Buff"
       ],
+      "iconName": "Return_to_Bone",
+      "iconUrl": "/raw-assets/skill_icons/obsidia/return_to_bone.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Passive_Skill",
-      "displayLabel": "Passive",
-      "skillSlot": "passive"
+      "strategicPurpose": ""
     },
     "skill1": {
-      "name": "Skill 1",
-      "description": "Skill 1 description.",
-      "cooldown": [
-        10,
-        9,
-        8
-      ],
-      "manaCost": [
-        50,
-        60,
-        70
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Abyssal Bone Needle",
+      "description": "Obsidia launches an Abyssal Bone Needle, dealing 325 (+80% Total Physical Attack) Physical Damage to enemies hit and triggering Return to Bone on the first enemy hero struck.",
+      "cooldown": "4.5",
+      "manaCost": "35",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(+80% Total Physical Attack)"
       ],
-      "crowdControlType": [
-        "NONE"
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "4.5",
+            "4.2",
+            "3.9",
+            "3.6",
+            "3.3",
+            "3.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "35",
+            "38",
+            "41",
+            "44",
+            "47",
+            "50"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "325",
+            "360",
+            "395",
+            "430",
+            "465",
+            "500"
+          ]
+        }
       ],
+      "crowdControlType": [],
       "strategicTags": [
-        "Damage"
+        "Damage",
+        "AOE"
       ],
+      "iconName": "Abyssal_Bone_Needle",
+      "iconUrl": "/raw-assets/skill_icons/obsidia/abyssal_bone_needle.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_1",
-      "displayLabel": "Skill 1",
-      "skillSlot": "skill1"
+      "strategicPurpose": ""
     },
     "skill2": {
-      "name": "Skill 2",
-      "description": "Skill 2 description.",
-      "cooldown": [
-        12,
-        11,
-        10
-      ],
-      "manaCost": [
-        60,
-        70,
-        80
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Phantom Shadowmeld",
+      "description": "Obsidia descends into the Abyss and enters Shadowmeld Form, gaining 500% Movement Speed for 0.3s.",
+      "cooldown": "4.5",
+      "manaCost": "40",
+      "damageType": "Not specified in source",
       "scaling": [
-        "100% Physical Attack"
+        "None"
       ],
-      "crowdControlType": [
-        "NONE"
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "4.5",
+            "4.2",
+            "3.9",
+            "3.6",
+            "3.3",
+            "3.0"
+          ]
+        }
       ],
+      "crowdControlType": [],
       "strategicTags": [
-        "Mobility"
+        "Speed Up"
       ],
+      "iconName": "Phantom_Shadowmeld",
+      "iconUrl": "/raw-assets/skill_icons/obsidia/phantom_shadowmeld.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_2",
-      "displayLabel": "Skill 2",
-      "skillSlot": "skill2"
+      "strategicPurpose": ""
     },
     "ultimate": {
-      "name": "Ultimate",
-      "description": "Ultimate description.",
-      "cooldown": [
-        40,
-        35,
-        30
-      ],
-      "manaCost": [
-        100,
-        120,
-        150
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Hunt of Bone",
+      "description": "Obsidia shoots Bones of Wrath in the target direction, dealing 125 (+60% Extra Physical Attack) Physical Damage and briefly stunning the first enemy hero hit, then pulling herself to the target. The Bones of Wrath tether Obsidia to the enemy, preventing her from moving more than 4 units away. While tethered, The enemy cannot use displacement skills, and their movement will drag Obsidia along. During this time, Obsidia gains 5 temporary Bone Shards and 30% Attack Speed. This effect lasts 3s.\nWhile tethered, Obsidia can move through obstacles and use Basic Attacks while moving. Phantom Shadowmeld is enhanced, with its duration increased to 1s and cooldown reduced to 33%.",
+      "cooldown": "40.0",
+      "manaCost": "100",
+      "damageType": "Physical",
       "scaling": [
-        "200% Physical Attack"
+        "(+60% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "40.0",
+            "35.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "125",
+            "175",
+            "200"
+          ]
+        }
       ],
       "crowdControlType": [
-        "STUN"
+        "CC"
       ],
       "strategicTags": [
         "CC",
-        "Burst"
+        "Mobility"
       ],
+      "iconName": "Hunt_of_Bone",
+      "iconUrl": "/raw-assets/skill_icons/obsidia/hunt_of_bone.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Ultimate",
-      "displayLabel": "Ultimate",
-      "skillSlot": "ultimate"
+      "strategicPurpose": ""
     }
   },
   "strategicData": {

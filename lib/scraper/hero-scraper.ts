@@ -52,7 +52,7 @@ export const HERO_LIQUIPEDIA_MAP: Record<string, string> = {
   'yve':           'Yve',
   'zhask':         'Zhask',
   'zhuxin':        'Zhuxin',
-  'zetian':        'Wu_Zetian',
+  'zetian':        'Zetian',
   // ——— MARKSMEN ———
   'beatrix':       'Beatrix',
   'brody':         'Brody',
@@ -100,6 +100,8 @@ export const HERO_LIQUIPEDIA_MAP: Record<string, string> = {
   'silvanna':      'Silvanna',
   'sun':           'Sun',
   'suyou':         'Suyou',
+  'lukas':         'Lukas',
+  'aulus':         'Aulus',
   'terizla':       'Terizla',
   'thamuz':        'Thamuz',
   'xborg':         'X.Borg',

@@ -254,7 +254,8 @@
       "strategicPurpose": "",
       "iconName": "Moonlit_Waltz",
       "displayLabel": "Extra Skill",
-      "skillSlot": "extra1"
+      "skillSlot": "extra1",
+      "iconUrl": "/raw-assets/skill_icons/cecilion/moonlit_waltz.png"
     }
   },
   "strategicData": {

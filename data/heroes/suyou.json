@@ -36,113 +36,228 @@
   },
   "skills": {
     "passive": {
-      "name": "Passive Skill",
-      "description": "Passive description.",
-      "cooldown": [],
-      "manaCost": [],
-      "damageType": "PHYSICAL",
+      "name": "Transient Immortal",
+      "description": "Tap-casting any skill will put Suyou in his Mortal form, granting him 40 Movement Speed and decreasing the interval between Basic Attacks.\nHold-casting any skill will put Suyou in his Immortal form, increasing the damage of Basic Attacks to 125% and granting him 20% Physical Damage Reduction. In this form, for every 20 extra Physical Attack Suyou has, he gains 1% Physical Damage Reduction (up to 40%).",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "None"
       ],
-      "crowdControlType": [
-        "NONE"
-      ],
+      "scalingTable": [],
+      "crowdControlType": [],
       "strategicTags": [
-        "Passive"
+        "Buff"
       ],
+      "iconName": "Transient_Immortal",
+      "iconUrl": "/raw-assets/skill_icons/suyou/transient_immortal.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Passive_Skill",
-      "displayLabel": "Passive",
-      "skillSlot": "passive"
+      "strategicPurpose": ""
     },
     "skill1": {
-      "name": "Skill 1",
-      "description": "Skill 1 description.",
-      "cooldown": [
-        10,
-        9,
-        8
-      ],
-      "manaCost": [
-        50,
-        60,
-        70
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Blade Surge",
+      "description": "Tap: Suyou throws his weapon in the target direction, dealing 250 (+100% Extra Physical Attack) Physical Damage to enemies in its path. Suyou then blinks to the weapon's location, catches it, and performs a slash in the opposite direction, dealing 375 (+150% Extra Physical Attack) Physical Damage.\nHold: Suyou channels the Immortal's power and charges in the target direction, dealing 250 (+100% Extra Physical Attack) Physical Damage to enemies along the path. When hitting an enemy hero, he stops and stuns enemies in a rectangular area in front for 0.6s. The charge distance increases with the hold time.\nSuyou can be controlled while charging, but the skill cannot be interrupted.",
+      "cooldown": "8.5",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(+100% Extra Physical Attack)",
+        "(+150% Extra Physical Attack)",
+        "(+100% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.5",
+            "8.1",
+            "7.8",
+            "7.4",
+            "7.0"
+          ]
+        },
+        {
+          "label": "Damage by Tap",
+          "values": [
+            "250",
+            "270",
+            "290",
+            "310",
+            "330"
+          ]
+        },
+        {
+          "label": "Slash Damage",
+          "values": [
+            "375",
+            "420",
+            "465",
+            "510",
+            "555"
+          ]
+        },
+        {
+          "label": "Damage by Hold",
+          "values": [
+            "250",
+            "270",
+            "290",
+            "310",
+            "330"
+          ]
+        }
       ],
       "crowdControlType": [
-        "NONE"
+        "CC"
       ],
       "strategicTags": [
-        "Damage"
+        "Mobility",
+        "CC"
       ],
+      "iconName": "Blade_Surge",
+      "iconUrl": "/raw-assets/skill_icons/suyou/blade_surge.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_1",
-      "displayLabel": "Skill 1",
-      "skillSlot": "skill1"
+      "strategicPurpose": ""
     },
     "skill2": {
-      "name": "Skill 2",
-      "description": "Skill 2 description.",
-      "cooldown": [
-        12,
-        11,
-        10
-      ],
-      "manaCost": [
-        60,
-        70,
-        80
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Soul Sever",
+      "description": "Tap: Suyou performs a sweeping attack with his weapon, dealing Physical Damage equal to 300 (+200% Extra Physical Attack) plus 15% of target's Lost HP to enemies in a fan-shaped area.\nHold: Suyou channels the power of the Immortal to perform 3 cleaves in a fan-shaped area. The first two strikes deal 250 (+80% Extra Physical Attack) Physical Damage each, while the final strike deals 400 (+128% Extra Physical Attack) Physical Damage and recovers 150 (+50% Extra Physical Attack) HP for himself.",
+      "cooldown": "8.5",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(+200% Extra Physical Attack)",
+        "(+80% Extra Physical Attack)",
+        "(+128% Extra Physical Attack)",
+        "(+50% Extra Physical Attack)"
       ],
-      "crowdControlType": [
-        "NONE"
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.5",
+            "8.1",
+            "7.8",
+            "7.4",
+            "7.0"
+          ]
+        },
+        {
+          "label": "Damage by Tap",
+          "values": [
+            "300",
+            "348",
+            "396",
+            "444",
+            "492"
+          ]
+        },
+        {
+          "label": "Damage by Hold",
+          "values": [
+            "250",
+            "290",
+            "330",
+            "370",
+            "410"
+          ]
+        },
+        {
+          "label": "Enhanced Damage",
+          "values": [
+            "400",
+            "464",
+            "528",
+            "592",
+            "656"
+          ]
+        },
+        {
+          "label": "HP Regen",
+          "values": [
+            "150",
+            "170",
+            "190",
+            "210",
+            "230"
+          ]
+        },
+        {
+          "label": "Minion Damage Ratio",
+          "values": [
+            "60%",
+            "70%",
+            "80%",
+            "90%",
+            "100%"
+          ]
+        }
       ],
+      "crowdControlType": [],
       "strategicTags": [
-        "Mobility"
-      ],
-      "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_2",
-      "displayLabel": "Skill 2",
-      "skillSlot": "skill2"
-    },
-    "ultimate": {
-      "name": "Ultimate",
-      "description": "Ultimate description.",
-      "cooldown": [
-        40,
-        35,
-        30
-      ],
-      "manaCost": [
-        100,
-        120,
-        150
-      ],
-      "damageType": "PHYSICAL",
-      "scaling": [
-        "200% Physical Attack"
-      ],
-      "crowdControlType": [
-        "STUN"
-      ],
-      "strategicTags": [
-        "CC",
+        "AOE",
         "Burst"
       ],
+      "iconName": "Soul_Sever",
+      "iconUrl": "/raw-assets/skill_icons/suyou/soul_sever.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Ultimate",
-      "displayLabel": "Ultimate",
-      "skillSlot": "ultimate"
+      "strategicPurpose": ""
+    },
+    "ultimate": {
+      "name": "Evil Queller",
+      "description": "Tap: Suyou glides backward and swings his weapon in the target direction, dealing 420 (+120% Extra Physical Attack) Physical Damage to enemies in a rectangular area and on his path backward, and reducing their Movement Speed by 30% for 1.5s.\nHold: Suyou uses the Immortal's power to shoot a deadly arrow in the target direction, dealing 580 (+165% Extra Physical Attack) Physical Damage to the target hit. The range increases with the hold time.\nSuyou can be controlled while charging, but the skill cannot be interrupted.",
+      "cooldown": "8.5",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+120% Extra Physical Attack)",
+        "(+165% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.5",
+            "8.1",
+            "7.8",
+            "7.4",
+            "7.0"
+          ]
+        },
+        {
+          "label": "Damage by Tap",
+          "values": [
+            "420",
+            "460",
+            "500",
+            "540",
+            "580"
+          ]
+        },
+        {
+          "label": "Damage by Hold",
+          "values": [
+            "580",
+            "635",
+            "690",
+            "745",
+            "800"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage",
+        "Debuff"
+      ],
+      "iconName": "Evil_Queller",
+      "iconUrl": "/raw-assets/skill_icons/suyou/evil_queller.png",
+      "variant": "",
+      "comboUsage": "",
+      "strategicPurpose": ""
     }
   },
   "strategicData": {

@@ -32,72 +32,212 @@
   },
   "skills": {
     "passive": {
-      "name": "Passive",
-      "description": "Intelligence data missing.",
+      "name": "Celestial Armament",
+      "description": "Phoenix Crown: When Zetian hits enemy heroes with Phoenix Strike or Phoenix Descent, she gains 1% Spell Vamp for 5s, stacking up to 10 times.\nCelestial Robe: The power of the Phoenix periodically protects Zetian, knocking back and stunning any enemy hero who dares approach her while dealing 90 (+10*Hero Level) (+50% Total Magic Power) Magic Damage to them. She also gains a 300 (+20*Hero Level) (+50% Total Magic Power) Shield that lasts 3s. This effect has a 120s cooldown.",
       "cooldown": "0",
       "manaCost": "0",
-      "damageType": "NONE",
+      "damageType": "Magic",
       "scaling": [
-        "None"
+        "(+10*Hero Level)",
+        "(+50% Total Magic Power)",
+        "(+20*Hero Level)",
+        "(+50% Total Magic Power)"
       ],
-      "crowdControlType": [],
-      "strategicTags": [],
+      "scalingTable": [],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Shield",
+        "CC"
+      ],
+      "iconName": "Celestial_Armament",
+      "iconUrl": "/raw-assets/skill_icons/zetian/celestial_armament.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Passive",
-      "displayLabel": "Passive",
-      "skillSlot": "passive"
+      "strategicPurpose": ""
     },
     "skill1": {
-      "name": "Skill 1",
-      "description": "Intelligence data missing.",
-      "cooldown": "10",
-      "manaCost": "50",
-      "damageType": "PHYSICAL",
+      "name": "Phoenix Strike",
+      "description": "Zetian unleashes a Phoenix Wave in the target direction. If it hits an enemy, she automatically casts another wave, up to 3 times. While casting, Zetian can use other skills.\nThe 1st, 2nd, and 3rd Phoenix Waves deal 150 (+50% Total Magic Power) Magic Damage, 150 (+50% Total Magic Power) Magic Damage, and 360 (+120% Total Magic Power) Magic Damage, respectively. The third wave has a larger area and pulls enemies toward the cast direction (not considered a control effect).\nThe Spell Vamp ratio is limted to 65% against Minions.",
+      "cooldown": "5.0",
+      "manaCost": "60",
+      "damageType": "Magic",
       "scaling": [
-        "None"
+        "(+50% Total Magic Power)",
+        "(+50% Total Magic Power)",
+        "(+120% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "150",
+            "175",
+            "200",
+            "225",
+            "250",
+            "275"
+          ]
+        },
+        {
+          "label": "Extra Base Damage",
+          "values": [
+            "360",
+            "420",
+            "480",
+            "540",
+            "600",
+            "660"
+          ]
+        }
       ],
       "crowdControlType": [],
-      "strategicTags": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "iconName": "Phoenix_Strike",
+      "iconUrl": "/raw-assets/skill_icons/zetian/phoenix_strike.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_1",
-      "displayLabel": "Skill 1",
-      "skillSlot": "skill1"
+      "strategicPurpose": ""
     },
     "skill2": {
-      "name": "Skill 2",
-      "description": "Intelligence data missing.",
-      "cooldown": "10",
-      "manaCost": "50",
-      "damageType": "PHYSICAL",
+      "name": "Phoenix Descent",
+      "description": "Zetian summons a Phoenix Spirit at the target location, dealing 150 (+45% Total Magic Power) Magic Damage and applying a brief 50% slow effect to enemies in the area. The Phoenix Spirit hovers at the location for 3s, dealing 20 (+10% Total Magic Power) Magic Damage every 0.5s and reducing enemies' Magic Defense by 10% while revealing their surrounding area.\nWhile the Phoenix Spirit is active, Zetian can use this skill again to command it to charge toward a designated location, dealing 150 (+45% Total Magic Power) Magic Damage and applying a brief 50% slow effect upon arrival.",
+      "cooldown": "15.0",
+      "manaCost": "80",
+      "damageType": "Magic",
       "scaling": [
-        "None"
+        "(+45% Total Magic Power)",
+        "(+10% Total Magic Power)",
+        "(+45% Total Magic Power)"
       ],
-      "crowdControlType": [],
-      "strategicTags": [],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "80",
+            "90",
+            "100",
+            "110",
+            "120",
+            "130"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "150",
+            "170",
+            "190",
+            "210",
+            "230",
+            "250"
+          ]
+        },
+        {
+          "label": "Extra Base Damage",
+          "values": [
+            "20",
+            "24",
+            "28",
+            "32",
+            "36",
+            "40"
+          ]
+        },
+        {
+          "label": "Magic Defense Reduction",
+          "values": [
+            "10%",
+            "12%",
+            "14%",
+            "16%",
+            "18%",
+            "20%"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Slow",
+        "Debuff"
+      ],
+      "iconName": "Phoenix_Descent",
+      "iconUrl": "/raw-assets/skill_icons/zetian/phoenix_descent.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_2",
-      "displayLabel": "Skill 2",
-      "skillSlot": "skill2"
+      "strategicPurpose": ""
     },
     "ultimate": {
-      "name": "Ultimate",
-      "description": "Intelligence data missing.",
-      "cooldown": "30",
-      "manaCost": "100",
-      "damageType": "PHYSICAL",
+      "name": "Fury of the Phoenix",
+      "description": "Zetian calls upon her divine mandate and the hearts of her people, granting all allied heroes 40% Movement Speed that gradually decays over 3s, while bringing divine retribution upon all enemy heroes, dealing 400 (+100% Total Magic Power) Magic Damage and stunning them for 0.8s. Zetian gains vision of all enemy heroes during this time.\nZetian can cast other skills while channeling this skill.",
+      "cooldown": "90.0",
+      "manaCost": "150",
+      "damageType": "Magic",
       "scaling": [
-        "None"
+        "(+100% Total Magic Power)"
       ],
-      "crowdControlType": [],
-      "strategicTags": [],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "90.0",
+            "80.0",
+            "70.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "150",
+            "180",
+            "210"
+          ]
+        },
+        {
+          "label": "Movement Speed Bonus",
+          "values": [
+            "40%",
+            "50%",
+            "60%"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "400",
+            "550",
+            "700"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "AOE"
+      ],
+      "iconName": "Fury_of_the_Phoenix",
+      "iconUrl": "/raw-assets/skill_icons/zetian/fury_of_the_phoenix.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Ultimate",
-      "displayLabel": "Ultimate",
-      "skillSlot": "ultimate"
+      "strategicPurpose": ""
     }
   },
   "strategicData": {

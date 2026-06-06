@@ -36,113 +36,417 @@
   },
   "skills": {
     "passive": {
-      "name": "Passive Skill",
-      "description": "Passive description.",
-      "cooldown": [],
-      "manaCost": [],
-      "damageType": "PHYSICAL",
+      "name": "Mystic Surge",
+      "description": "Sora can ascend to Thunder or Torrent by using his Ultimate. After ascending, dealing damage to heroes or summoned units grants 1 stack of Cloudstep. Upon reaching 5 stacks, he unlocks his True Art.\nThunder: Adopts an assassin style, converting 30% Max HP into Physical Attack (Equal to 10% of Max HP).\nTorrent: Adopts a tank style, converting 30% Physical Attack into Max HP (Gains 10 HP for every 1 Attack).",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
       "scaling": [
-        "100% Physical Attack"
+        "None"
       ],
-      "crowdControlType": [
-        "NONE"
-      ],
+      "scalingTable": [],
+      "crowdControlType": [],
       "strategicTags": [
-        "Passive"
+        "Buff"
       ],
+      "iconName": "Mystic_Surge",
+      "iconUrl": "/raw-assets/skill_icons/sora/mystic_surge.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Passive_Skill",
-      "displayLabel": "Passive",
-      "skillSlot": "passive"
+      "strategicPurpose": ""
     },
     "skill1": {
-      "name": "Skill 1",
-      "description": "Skill 1 description.",
-      "cooldown": [
-        10,
-        9,
-        8
-      ],
-      "manaCost": [
-        50,
-        60,
-        70
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Sundering Strike",
+      "description": "Sora strikes twice, dealing 140 (+50% Total Physical Attack) Physical Damage, then lunges forward, dealing 240 (+5% Total HP) Physical Damage. He can dash after striking.",
+      "cooldown": "5.0",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(+50% Total Physical Attack)",
+        "(+5% Total HP)"
       ],
-      "crowdControlType": [
-        "NONE"
+      "scalingTable": [
+        {
+          "label": "Strike Damage",
+          "values": [
+            "140",
+            "156",
+            "172",
+            "188",
+            "204",
+            "220"
+          ]
+        },
+        {
+          "label": "Lunge Damage",
+          "values": [
+            "240",
+            "280",
+            "320",
+            "360",
+            "400",
+            "440"
+          ]
+        }
       ],
+      "crowdControlType": [],
       "strategicTags": [
         "Damage"
       ],
+      "iconName": "Sundering_Strike",
+      "iconUrl": "/raw-assets/skill_icons/sora/sundering_strike.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_1",
-      "displayLabel": "Skill 1",
-      "skillSlot": "skill1"
+      "strategicPurpose": ""
     },
     "skill2": {
-      "name": "Skill 2",
-      "description": "Skill 2 description.",
-      "cooldown": [
-        12,
-        11,
-        10
-      ],
-      "manaCost": [
-        60,
-        70,
-        80
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Sundering Strike - Thunderflash",
+      "description": "Sora strikes four times, dealing 140 (+50% Total Physical Attack) Physical Damage, then lunges forward, dealing 240 (+5% Total HP) Physical Damage. He can move freely during this skill.",
+      "cooldown": "5.0",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "100% Physical Attack"
+        "(+50% Total Physical Attack)",
+        "(+5% Total HP)"
       ],
-      "crowdControlType": [
-        "NONE"
+      "scalingTable": [
+        {
+          "label": "Strike Damage",
+          "values": [
+            "140",
+            "156",
+            "172",
+            "188",
+            "204",
+            "220"
+          ]
+        },
+        {
+          "label": "Lunge Damage",
+          "values": [
+            "240",
+            "280",
+            "320",
+            "360",
+            "400",
+            "440"
+          ]
+        }
       ],
+      "crowdControlType": [],
       "strategicTags": [
-        "Mobility"
+        "Damage"
       ],
+      "iconName": "Sundering_Strike_Thunderflash",
+      "iconUrl": "/raw-assets/skill_icons/sora/sundering_strike_thunderflash.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Skill_2",
-      "displayLabel": "Skill 2",
-      "skillSlot": "skill2"
+      "strategicPurpose": ""
     },
     "ultimate": {
-      "name": "Ultimate",
-      "description": "Ultimate description.",
-      "cooldown": [
-        40,
-        35,
-        30
-      ],
-      "manaCost": [
-        100,
-        120,
-        150
-      ],
-      "damageType": "PHYSICAL",
+      "name": "Sundering Strike - Overwhelm",
+      "description": "Sora strikes twice, dealing 140 (+50% Total Physical Attack) Physical Damage and slowing enemies for 40%. He then lunges forward, dealing 240 (+5% Total HP) Physical Damage, stunning enemies for 0.5s.",
+      "cooldown": "5.0",
+      "manaCost": "0",
+      "damageType": "Physical",
       "scaling": [
-        "200% Physical Attack"
+        "(+50% Total Physical Attack)",
+        "(+5% Total HP)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Strike Damage",
+          "values": [
+            "140",
+            "156",
+            "172",
+            "188",
+            "204",
+            "220"
+          ]
+        },
+        {
+          "label": "Lunge Damage",
+          "values": [
+            "240",
+            "280",
+            "320",
+            "360",
+            "400",
+            "440"
+          ]
+        }
       ],
       "crowdControlType": [
-        "STUN"
+        "CC"
       ],
       "strategicTags": [
-        "CC",
-        "Burst"
+        "Damage",
+        "CC"
       ],
+      "iconName": "Sundering_Strike_Overwhelm",
+      "iconUrl": "/raw-assets/skill_icons/sora/sundering_strike_overwhelm.png",
+      "variant": "",
       "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Ultimate",
-      "displayLabel": "Ultimate",
-      "skillSlot": "ultimate"
+      "strategicPurpose": ""
+    },
+    "extra1": {
+      "name": "Windstride",
+      "description": "Sora leaps forward, dealing 140 (+55% Total Physical Attack) Physical Damage. If he hits an enemy hero or reaches max range, he slams the ground, dealing an additional 140 (+8% Total HP) Physical Damage and slowing them by 40% for 0.5s. Successful hits reduce the cooldown by 2s.",
+      "cooldown": "8.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+55% Total Physical Attack)",
+        "(+8% Total HP)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "140",
+            "152",
+            "164",
+            "176",
+            "188",
+            "200"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "140",
+            "152",
+            "164",
+            "176",
+            "188",
+            "200"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Damage"
+      ],
+      "iconName": "Windstride",
+      "iconUrl": "/raw-assets/skill_icons/sora/windstride.png",
+      "variant": "",
+      "comboUsage": "",
+      "strategicPurpose": ""
+    },
+    "extra2": {
+      "name": "Windstride - Thunder Rush",
+      "description": "Sora leaps forward, dealing 120 (+45% Total Physical Attack) Physical Damage. Upon hitting a hero or reaching the max distance, he summons a thunderstorm, dealing 120 (+6% Total HP) Physical Damage and slowing enemies by 50% for 0.5s. This skill can be cast again within 4s if it hits an enemy.",
+      "cooldown": "8.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+45% Total Physical Attack)",
+        "(+6% Total HP)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "120",
+            "132",
+            "144",
+            "156",
+            "168",
+            "180"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "120",
+            "132",
+            "144",
+            "156",
+            "168",
+            "180"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Damage"
+      ],
+      "iconName": "Windstride_Thunder_Rush",
+      "iconUrl": "/raw-assets/skill_icons/sora/windstride_thunder_rush.png",
+      "variant": "",
+      "comboUsage": "",
+      "strategicPurpose": ""
+    },
+    "extra3": {
+      "name": "Windstride - Skyfall",
+      "description": "Sora leaps forward, dealing 140 (+55% Total Physical Attack) Physical Damage, knocking enemies airborne, and knocking them back to the landing point. He then smashes the ground, knocking enemies airborne again for 0.5s, dealing 140 (+8% Total HP) Physical Damage, and slowing them by 50% for 1s. Hits reduce cooldown by 2s.",
+      "cooldown": "8.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+55% Total Physical Attack)",
+        "(+8% Total HP)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "140",
+            "152",
+            "164",
+            "176",
+            "188",
+            "200"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "140",
+            "152",
+            "164",
+            "176",
+            "188",
+            "200"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Mobility",
+        "CC"
+      ],
+      "iconName": "Windstride_Skyfall",
+      "iconUrl": "/raw-assets/skill_icons/sora/windstride_skyfall.png",
+      "variant": "",
+      "comboUsage": "",
+      "strategicPurpose": ""
+    },
+    "extra4": {
+      "name": "Shifting Skies",
+      "description": "Swipe left to ascend into Thunder for 10s. Sora gains a brief bonus Movement Speed and becomes untargetable. He then summons lightning to strike nearby enemies 3 time(s), each dealing 140 (+50% Total Physical Attack) Physical Damage.\nSwipe right to ascend into Torrent for 10s. Sora gains Control Immunity. After a short delay, he pulls nearby enemies in and deals 250 (+8% Total HP) Physical Damage.",
+      "cooldown": "32.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+50% Total Physical Attack)",
+        "(+8% Total HP)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "32.0",
+            "28.0",
+            "24.0"
+          ]
+        },
+        {
+          "label": "Thunder Damage",
+          "values": [
+            "140",
+            "170",
+            "200"
+          ]
+        },
+        {
+          "label": "Torrent Damage",
+          "values": [
+            "250",
+            "350",
+            "450"
+          ]
+        },
+        {
+          "label": "Cooldown - Thunder",
+          "values": [
+            "32",
+            "28",
+            "24"
+          ]
+        },
+        {
+          "label": "Cooldown - Torrent",
+          "values": [
+            "32",
+            "28",
+            "24"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage",
+        "Buff"
+      ],
+      "iconName": "Shifting_Skies",
+      "iconUrl": "/raw-assets/skill_icons/sora/shifting_skies.png",
+      "variant": "",
+      "comboUsage": "",
+      "strategicPurpose": ""
+    },
+    "extra5": {
+      "name": "Heaven's Wrath",
+      "description": "Sora leaps into the air and strikes a target area 16 time(s), dealing 60 (+40% Total Physical Attack) Physical Damage with each hit. Sora can move freely and ignore terrain during this skill.",
+      "cooldown": "0.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+40% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "60",
+            "80",
+            "100"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage"
+      ],
+      "iconName": "Heaven's_Wrath",
+      "iconUrl": "/raw-assets/skill_icons/sora/heaven_s_wrath.png",
+      "variant": "",
+      "comboUsage": "",
+      "strategicPurpose": ""
+    },
+    "extra6": {
+      "name": "Stormbind",
+      "description": "Sora leaps into the air and strikes the target area 5 time(s), dealing 100 (+6% Total HP) Physical Damage and briefly stunning enemies with each hit. Sora can move freely and ignore terrain during this skill.",
+      "cooldown": "0.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+6% Total HP)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "100",
+            "125",
+            "150"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage"
+      ],
+      "iconName": "Stormbind",
+      "iconUrl": "/raw-assets/skill_icons/sora/stormbind.png",
+      "variant": "",
+      "comboUsage": "",
+      "strategicPurpose": ""
     }
   },
   "strategicData": {

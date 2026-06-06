@@ -267,7 +267,8 @@
       "iconName": "Order_&_Chaos",
       "displayLabel": "Special Mechanic",
       "skillSlot": "special",
-      "variant": ""
+      "variant": "",
+      "iconUrl": "/raw-assets/skill_icons/lunox/order_chaos.png"
     },
     "extra2": {
       "name": "Power of Order: Brilliance",

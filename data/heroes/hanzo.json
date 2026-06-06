@@ -304,7 +304,8 @@
       "iconName": "Kinjutsu:_Pinnacle_Ninja",
       "displayLabel": "Ultimate (Transform)",
       "skillSlot": "ultimate",
-      "variant": "Transform"
+      "variant": "Transform",
+      "iconUrl": "/raw-assets/skill_icons/hanzo/kinjutsu_pinnacle_ninja.png"
     },
     "extra3": {
       "name": "Ninjutsu Flee: Return",
