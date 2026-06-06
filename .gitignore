@@ -40,6 +40,11 @@ Thumbs.db
 .cache/
 coverage/
 
+# SQLite runtime files (auto-generated, never commit)
+data/*.db-shm
+data/*.db-wal
+data/*.db-journal
+
 # Kiro workspace
 .kiro/
 .verdent_*
