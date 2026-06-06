@@ -1,0 +1,370 @@
+{
+  "id": "lunox",
+  "name": "Lunox",
+  "heroName": "Lunox",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2440,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 115,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.01",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Dreamland Twist",
+      "description": "Lunox is twisted by the powers of Chaos and Order.\nWhen Lunox uses Power of Order, she gains 0.5% of Spell Vamp for every 1% of Magic Penetration.\nWhen Lunox uses Power of Chaos, she gains 0.5% of Magic Penetration for every 1% of Spell Vamp.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dreamland_Twist"
+    },
+    "skill1": {
+      "name": "Starlight Pulse",
+      "description": "Lunox summons a rain of starlight upon nearby enemies, dealing 200 (+110% Total Magic Power) Magic Damage. The starlight then returns to Lunox, each restoring 75 (+30% Total Magic Power) HP to her. The HP restored is doubled when hitting enemy heroes.\nThis skill shares cooldown with Chaos Assault. Grants one stack of Power of Order after use and ends the Power of Chaos enhanced state.\n|stats1=Skill Cost|stats1_value=30/35/40/45/50/55\n|stats2=Base Damage|stats2_value=200/230/260/290/320/350\n|stats3=HP Regen|stats3_value=75/80/85/90/95/100",
+      "cooldown": "2.0",
+      "manaCost": "30",
+      "damageType": "Magic",
+      "scaling": [
+        "(+110% Total Magic Power)",
+        "(+30% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "230",
+            "260",
+            "290",
+            "320",
+            "350"
+          ]
+        },
+        {
+          "label": "HP Regen",
+          "values": [
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE",
+        "Heal"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Starlight_Pulse"
+    },
+    "skill2": {
+      "name": "Chaos Assault",
+      "description": "Lunox unleashes Chaos Energy at an enemy, dealing Magic Damage equal to 250 (+120% Total Magic Power) plus 2.5% of target's Max HP (1.5% of Max HP against Creeps).\nWhile enhanced by Power of Chaos, this skill has a brief cooldown and its cast interval is unaffected by Cooldown Reduction.\n|stats1=Base Damage|stats1_value=250/270/290/310/330/350\n|stats2=Extra Percentage Damage|stats2_value=2.5%/3%/3.5%/4%/4.5%/5%\n|stats3=Damage to Creeps|stats3_value=1.5%/1.8%/2.1%/2.4%/2.7%/3%",
+      "cooldown": "0.3",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+120% Total Magic Power)",
+        "(1.5% of Max HP against Creeps)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "270",
+            "290",
+            "310",
+            "330",
+            "350"
+          ]
+        },
+        {
+          "label": "Extra Percentage Damage",
+          "values": [
+            "2.5%",
+            "3%",
+            "3.5%",
+            "4%",
+            "4.5%",
+            "5%"
+          ]
+        },
+        {
+          "label": "Damage to Creeps",
+          "values": [
+            "1.5%",
+            "1.8%",
+            "2.1%",
+            "2.4%",
+            "2.7%",
+            "3%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Chaos_Assault"
+    },
+    "ultimate": {
+      "name": "Cosmic Fission",
+      "description": "When Lunox uses the power of Order and Chaos, she will deal 300 (+150% Total Magic Power) Magic Damage to the targets along the way and slowing them by 40% for 2s.\n|stats1=Cooldown|stats1_value=10.0/9.5/9.0/8.5/8.0/7.5\n|stats2=Skill Cost|stats2_value=70/80/90/100/110/120\n|stats3=Base Damage|stats3_value=300/340/380/420/460/500",
+      "cooldown": "10.0",
+      "manaCost": "70",
+      "damageType": "Magic",
+      "scaling": [
+        "(+150% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "10.0",
+            "9.5",
+            "9.0",
+            "8.5",
+            "8.0",
+            "7.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "70",
+            "80",
+            "90",
+            "100",
+            "110",
+            "120"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "340",
+            "380",
+            "420",
+            "460",
+            "500"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Cosmic_Fission"
+    },
+    "extra1": {
+      "name": "Order & Chaos",
+      "description": "Lunox is twisted by the powers of Chaos and Order.\nWhen Lunox uses Power of Order, she gains Brilliance and becomes invincible while dealing continuous damage to nearby enemies.\nWhen Lunox uses Power of Chaos, she gains Darkening and can blink in a target direction and greatly reduces the cooldown of Chaos Assault for a brief period.\n|stats1=Cooldown|stats1_value=30.0/26.0/22.0\n|stats2=Skill Cost|stats2_value=120/160/200",
+      "cooldown": "30.0",
+      "manaCost": "120",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "30.0",
+            "26.0",
+            "22.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "160",
+            "200"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Invincible",
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Order_&_Chaos"
+    },
+    "extra2": {
+      "name": "Power of Order: Brilliance",
+      "description": "Lunox extends the Light Barrier, becomes invincible for 2.5s, and gains 30% extra Movement Speed while dealing 100 (+50% Total Magic Power) Magic Damage every 0.5s to nearby enemies.\n|stats1=Cooldown|stats1_value=30.0/26.0/22.0\n|stats2=Skill Cost|stats2_value=120/160/200\n|stats3=Base Damage|stats3_value=100/120/140",
+      "cooldown": "30.0",
+      "manaCost": "120",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "30.0",
+            "26.0",
+            "22.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "100",
+            "120",
+            "140"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Invincible",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Power_of_Order:_Brilliance"
+    },
+    "extra3": {
+      "name": "Power of Chaos: Darkening",
+      "description": "Lunox blinks in the target direction, dealing 250 (+100% Total Magic Power) Magic Damage to nearby enemies, slowing them by 30% for 4s.\nFor the next 4s, Lunox enhances her Power of Chaos to greatly reduce the cooldown of Chaos Assault (unaffected by CD Reduction), but using Starlight Pulse will end this enhanced state.\n|stats1=Cooldown|stats1_value=30.0/26.0/22.0\n|stats2=Skill Cost|stats2_value=120/160/200\n|stats3=Base Damage|stats3_value=250/350/450",
+      "cooldown": "30.0",
+      "manaCost": "120",
+      "damageType": "Magic",
+      "scaling": [
+        "(+100% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "30.0",
+            "26.0",
+            "22.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "350",
+            "450"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Power_of_Chaos:_Darkening"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

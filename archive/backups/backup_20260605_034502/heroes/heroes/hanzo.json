@@ -1,0 +1,333 @@
+{
+  "id": "hanzo",
+  "name": "Hanzo",
+  "heroName": "Hanzo",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2594,
+    "hpRegen": 7,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 108,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.08",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Ame no Habakiri",
+      "description": "Damage dealt by Hanzo's Basic Attacks and skills inflicts a stack of Dark Ninjutsu on the target, up to 5 stacks. Ninjutsu: Demon Feast can only be cast on targets with full stacks of Dark Ninjutsu.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ame_no_Habakiri"
+    },
+    "skill1": {
+      "name": "Ninjutsu: Demon Feast",
+      "description": "The skill can only be used on targets with max stacks of Dark Ninjutsu.\nWhen targeting a creep, Hanzo will immediately devour it and digest it over a period of time to recover 20% HP.\nWhen targeting the Turtle, Lord, or enemy heroes, he deals 600 (+120% Extra Physical Attack) Physical Damage, recovers 10% HP, and reduces this skill's cooldown by 60%.\n|stats1=Cooldown|stats1_value=30.0/28.0/26.0/24.0/22.0/20.0\n|stats2=Base Damage|stats2_value=600/640/680/720/760/800\n|stats3=HP Regen|stats3_value=10%/12%/14%/16%/18%/20%\n|stats4=Physical Bonus|stats4_value=120%/128%/136%/144%/152%/160%",
+      "cooldown": "30.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+120% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "30.0",
+            "28.0",
+            "26.0",
+            "24.0",
+            "22.0",
+            "20.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "600",
+            "640",
+            "680",
+            "720",
+            "760",
+            "800"
+          ]
+        },
+        {
+          "label": "HP Regen",
+          "values": [
+            "10%",
+            "12%",
+            "14%",
+            "16%",
+            "18%",
+            "20%"
+          ]
+        },
+        {
+          "label": "Physical Bonus",
+          "values": [
+            "120%",
+            "128%",
+            "136%",
+            "144%",
+            "152%",
+            "160%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ninjutsu:_Demon_Feast"
+    },
+    "skill2": {
+      "name": "Forbidden Ninjutsu: Soul Snatch",
+      "description": "Hanekage dashes to an enemy hero, dealing 300 (+60% Extra Physical Attack) Physical Damage to the target and its surrounding units after a brief delay. Each stack of Dark Ninjutsu on the target increases the damage by 20% (surrounding units are not affected by this bonus). When the target has max stacks of Dark Ninjutsu, it deals additional damage equal to 15 (+2% Extra Physical Attack)% of the target's Max HP (this damage ignores 30% of the target's Physical Defense) and recovers 20% HP for Hanzo.\n|stats1=Cooldown|stats1_value=10.0/9.6/9.2/8.8/8.4/8.0\n|stats2=Base Damage|stats2_value=300/320/340/360/380/400\n|stats3=Physical Bonus|stats3_value=60%/64%/68%/72%/76%/80%",
+      "cooldown": "10.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+60% Extra Physical Attack)",
+        "(+2% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "10.0",
+            "9.6",
+            "9.2",
+            "8.8",
+            "8.4",
+            "8.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "320",
+            "340",
+            "360",
+            "380",
+            "400"
+          ]
+        },
+        {
+          "label": "Physical Bonus",
+          "values": [
+            "60%",
+            "64%",
+            "68%",
+            "72%",
+            "76%",
+            "80%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Forbidden_Ninjutsu:_Soul_Snatch"
+    },
+    "ultimate": {
+      "name": "Ninjutsu: Dark Mist",
+      "description": "Hanzo dashes in the target direction, leaving Dark Mist in front that deals 90 (+45% Extra Physical Attack) Physical Damage to enemies in the area every 0.5s, up to 5 times (this damage counts as Basic Attack damage but cannot Crit).\nThe Dark Mist slows enemies in the area by 40% and grants Hanzo 20% Movement Speed.\n|stats1=Cooldown|stats1_value=10.0/9.6/9.2/8.8/8.4/8.0\n|stats2=Base Damage|stats2_value=90/100/110/120/130/140",
+      "cooldown": "10.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+45% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "10.0",
+            "9.6",
+            "9.2",
+            "8.8",
+            "8.4",
+            "8.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "90",
+            "100",
+            "110",
+            "120",
+            "130",
+            "140"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ninjutsu:_Dark_Mist"
+    },
+    "extra1": {
+      "name": "Forbidden Ninjutsu: Black Mist",
+      "description": "Hanekage dashes in the target direction, briefly knocking enemies in his path airborne for 0.4s and leaving Dark Mist in the area he passes through (recovers 200 Energy when hitting an enemy hero). The mist deals 135 (+45% Extra Physical Attack) Physical Damage to enemies in the area every 0.5s, up to 5 times (this damage counts as Basic Attack damage but cannot Crit).\nThe Dark Mist slows enemies in the area by 40%.\n|stats1=Cooldown|stats1_value=10.0/9.6/9.2/8.8/8.4/8.0\n|stats2=Base Damage|stats2_value=135/150/165/180/195/210",
+      "cooldown": "10.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+45% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "10.0",
+            "9.6",
+            "9.2",
+            "8.8",
+            "8.4",
+            "8.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "135",
+            "150",
+            "165",
+            "180",
+            "195",
+            "210"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "AOE",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Forbidden_Ninjutsu:_Black_Mist"
+    },
+    "extra2": {
+      "name": "Kinjutsu: Pinnacle Ninja",
+      "description": "Hanzo charges into battle as Hanekage, consuming 170 Energy per second. He gains 20 Energy when a nearby non-hero unit dies and 200 Energy if it's a hero. He gains 15 Energy when attacking a hero, and 45 Energy when attacking the Turtle or the Lord. When Energy runs out, Hanzo's body will be slowly drawn to Hanekage's position.\nWhile in Hanekage form, Hanzo's body is invincible, while Hanekage ignores obstacles and gains 50% Movement Speed and 30% Attack Speed.\n|stats1=Cooldown|stats1_value=24.0/20.0/16.0",
+      "cooldown": "24.0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "24.0",
+            "20.0",
+            "16.0"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Morph",
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Kinjutsu:_Pinnacle_Ninja"
+    },
+    "extra3": {
+      "name": "Ninjutsu Flee: Return",
+      "description": "Hanekage returns to Hanzo's body and exits the Hanekage form.",
+      "cooldown": "1.0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ninjutsu_Flee:_Return"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

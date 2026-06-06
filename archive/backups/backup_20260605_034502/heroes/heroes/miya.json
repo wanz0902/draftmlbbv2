@@ -1,0 +1,223 @@
+{
+  "id": "miya",
+  "name": "Miya",
+  "heroName": "Miya",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold Lane",
+  "lanes": [
+    "Gold Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2320,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 115,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.06",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Moon Blessing",
+      "description": "Each time Miya hits a target with her Basic Attack, she gains 5% Attack Speed for 4s. Stacks up to 5 times.\nAfter reaching full stacks, Miya summons a Moonlight Shadow with each Basic Attack that deals 30 (+25% Total Physical Attack) Physical Damage and inherits a portion of Attack Effects.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+25% Total Physical Attack)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Moon_Blessing",
+      "iconUrl": "/raw-assets/skill_icons/miya/moon_blessing.png"
+    },
+    "skill1": {
+      "name": "Moon Arrow",
+      "description": "Miya shoots two extra arrows with each Basic Attack, dealing 10 (+100% Total Physical Attack) Physical Damage to the target enemy and 30% damage to nearby targets. This effect lasts 4s. Each extra arrows inherits a portion of Attack Effects.",
+      "cooldown": "11.0",
+      "manaCost": "60",
+      "damageType": "Physical",
+      "scaling": [
+        "(+100% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35"
+          ]
+        },
+        {
+          "label": "Duration",
+          "values": [
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Moon_Arrow",
+      "iconUrl": "/raw-assets/skill_icons/miya/moon_arrow.png"
+    },
+    "skill2": {
+      "name": "Arrow of Eclipse",
+      "description": "Miya launches an empowered arrow on the target area, dealing 270 (+45% Total Physical Attack) Physical Damage to enemies within and immobilizing them for 1.2s. The arrow then splits into 6 scattering minor arrows, each dealing 40 (+20% Total Physical Attack) Physical Damage to the first enemy hit and slowing them by 30% for 2s.",
+      "cooldown": "8.0",
+      "manaCost": "80",
+      "damageType": "Physical",
+      "scaling": [
+        "(+45% Total Physical Attack)",
+        "(+20% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "270",
+            "300",
+            "330",
+            "360",
+            "390",
+            "420"
+          ]
+        },
+        {
+          "label": "Arrow Damage",
+          "values": [
+            "40",
+            "53",
+            "66",
+            "79",
+            "92",
+            "105"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Arrow_of_Eclipse",
+      "iconUrl": "/raw-assets/skill_icons/miya/arrow_of_eclipse.png"
+    },
+    "ultimate": {
+      "name": "Hidden Moonlight",
+      "description": "Miya removes all debuffs on her and conceals herself, gaining 65% extra Movement Speed. This state lasts 2s or until she launches an attack.\nMiya gains full stacks of Moon Blessing upon leaving the state.",
+      "cooldown": "30.0",
+      "manaCost": "120",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "30.0",
+            "25.0",
+            "20.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "145",
+            "170"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Conceal",
+        "Remove CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Hidden_Moonlight",
+      "iconUrl": "/raw-assets/skill_icons/miya/hidden_moonlight.png"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry",
+      "Gold Lane Farming"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

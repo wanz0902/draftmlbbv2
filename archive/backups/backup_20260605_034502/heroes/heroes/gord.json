@@ -1,0 +1,237 @@
+{
+  "id": "gord",
+  "name": "Gord",
+  "heroName": "Gord",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "0.96",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Mystic Favor",
+      "description": "After Gord hits an enemy 4 times with skills within a short period of time, the next skill damage will deal an additional 140 (+8*Hero Level) (40% Magic Power) True Damage and slow them by 20% for 1s (the slow effect stacks up 2 times).\n|quote=Concentrated energy is capable of reaping anything apart!",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "True",
+      "scaling": [
+        "(+8*Hero Level)",
+        "(40% Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Buff",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mystic_Favor"
+    },
+    "skill1": {
+      "name": "Mystic Projectile",
+      "description": "Gord conjures a Mystic Orb that bounces in the target direction and explodes on the first enemy hit, dealing 225 (+65% Total Magic Power) Magic Damage to enemies in the area, while stunning them and revealing their location for 1s.",
+      "cooldown": "8.0",
+      "manaCost": "80",
+      "damageType": "Magic",
+      "scaling": [
+        "(+65% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.0",
+            "7.6",
+            "7.2",
+            "6.8",
+            "6.4",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "80",
+            "86",
+            "92",
+            "98",
+            "104",
+            "110"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "225",
+            "265",
+            "305",
+            "345",
+            "385",
+            "425"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mystic_Projectile"
+    },
+    "skill2": {
+      "name": "Mystic Injunction",
+      "description": "Gord creates an energy field in the target area, dealing 30 (+10% Total Magic Power) Magic Damage every 0.25s to enemies within (up to 16 times).",
+      "cooldown": "8.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+10% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.0",
+            "7.6",
+            "7.2",
+            "6.8",
+            "6.4",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85"
+          ]
+        },
+        {
+          "label": "Damage Per Hit",
+          "values": [
+            "30",
+            "36",
+            "42",
+            "48",
+            "54",
+            "60"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mystic_Injunction"
+    },
+    "ultimate": {
+      "name": "Mystic Gush",
+      "description": "Gord unleashes an energy beam in the target direction, dealing 110 (+32% Total Magic Power) Magic Damage to enemies hit every 0.2s (up to 16 times).\nThe direction of the beam can be adjusted using the Joystick.",
+      "cooldown": "44.0",
+      "manaCost": "150",
+      "damageType": "Magic",
+      "scaling": [
+        "(+32% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "44.0",
+            "40.0",
+            "36.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "150",
+            "170",
+            "190"
+          ]
+        },
+        {
+          "label": "Damage Per Hit",
+          "values": [
+            "110",
+            "160",
+            "210"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mystic_Gush"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

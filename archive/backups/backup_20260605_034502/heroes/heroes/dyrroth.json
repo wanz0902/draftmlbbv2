@@ -1,0 +1,224 @@
+{
+  "id": "dyrroth",
+  "name": "Dyrroth",
+  "heroName": "Dyrroth",
+  "role": [
+    "Fighter"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP",
+  "lanes": [
+    "EXP",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2580,
+    "hpRegen": 8,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 117,
+    "physicalDefense": 22,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.13",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 265
+  },
+  "skills": {
+    "passive": {
+      "name": "Wrath of the Abyss",
+      "description": "When Dyrroth's Rage reaches 50%, he enhances Burst Strike and Spectre Step.\nAfter every 2 Basic Attacks, Dyrroth releases a Circle Strike, dealing (150% Total Physical Attack) - (180% Total Physical Attack) (scales with level) Physical Damage to enemies in the circle and recovering 7% - 10% Max HP (scales with level, halved against minions). This strike does not trigger Attack Effect.\nEach time he damages an enemy, the cooldown of Burst Strike and Spectre Step is reduced by 1s.\nDyrroth recovers 2% - 5% Rage per second (scales with level).",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(150% Total Physical Attack)",
+        "(180% Total Physical Attack)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff",
+        "Heal"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Wrath_of_the_Abyss"
+    },
+    "skill1": {
+      "name": "Burst Strike",
+      "description": "Dyrroth releases a burst strike in a designated direction. Each burst deals 240 (+60% Total Physical Attack)\nPhysical Damage to enemies and slows them by 25% for 1.5s. (The damage decays against the same target and decreases to only 75% on minions).\nAbyss Enhanced: Burst Strike has a longer range, deals 140% of the original damage, and its Slowing Effect is doubled.\n|stats1=Cooldown|stats1_value=6.0/5.6/5.2/4.8/4.4/4.0\n|stats2=Base Damage|stats2_value=240/296/352/408/464/520",
+      "cooldown": "6.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+60% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "6.0",
+            "5.6",
+            "5.2",
+            "4.8",
+            "4.4",
+            "4.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "240",
+            "296",
+            "352",
+            "408",
+            "464",
+            "520"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Burst_Strike"
+    },
+    "skill2": {
+      "name": "Spectre Step",
+      "description": "Dyrroth dashes in the designated direction. He will stop when he has traveled the max distance or hits one enemy hero or a Creep, dealing 230 (+60% Extra Physical Attack) Physical Damage to the target and slightly knocking them back. When he uses this skill again, he will lock onto a target and release a Fatal Strike, dealing 345 (+120% Extra Physical Attack) Physical Damage and reducing the target's Physical Defense by 40% for 4s.\nAbyss Enhanced: Fatal Strike will reach further and deal 150% of the original damage, slow the target by an extra 90% and reduce the target's Physical Defense by 60% for 4s.\n|stats2=Base Damage|stats2_value=230/255/280/305/330/355\n|stats3=Extra Damage|stats3_value=345/390/435/480/525/570",
+      "cooldown": "6.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+60% Extra Physical Attack)",
+        "(+120% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "230",
+            "255",
+            "280",
+            "305",
+            "330",
+            "355"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "345",
+            "390",
+            "435",
+            "480",
+            "525",
+            "570"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Spectre_Step"
+    },
+    "ultimate": {
+      "name": "Abysm Strike",
+      "description": "After a short delay, Dyrroth launches a destructive strike in the target direction (this skill can only be interrupted by Suppression), dealing 650 (+250% Extra Physical Attack) plus 20% of the target's lost HP as Physical Damage to enemies in its path, and slowing them by 55% for 0.8s. This skill deals up to 1500 damage to non-hero enemies.\n|stats1=Cooldown|stats1_value=36.0/32.0/28.0\n|stats2=Base Damage|stats2_value=650/950/1250\n|stats3=Non-Hero Unit Damage Cap|stats3_value=1500/2000/2500\n|stats4=|stats4_value",
+      "cooldown": "36.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+250% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "36.0",
+            "32.0",
+            "28.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "650",
+            "950",
+            "1250"
+          ]
+        },
+        {
+          "label": "Non-Hero Unit Damage Cap",
+          "values": [
+            "1500",
+            "2000",
+            "2500"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Burst",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Abysm_Strike"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

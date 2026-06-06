@@ -1,0 +1,282 @@
+{
+  "id": "zhask",
+  "name": "Zhask",
+  "heroName": "Zhask",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 107,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Decimation",
+      "description": "Upon death, Zhask summons a frenzied Nightmaric Spawn on the spot, which gradually loses HP over time until death.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Summon"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Decimation"
+    },
+    "skill1": {
+      "name": "Nightmaric Spawn",
+      "description": "Zhask summons a Nightmaric Spawn that inherits 55% of his Attributes (HP, Hybrid Defense, and Magic Power). Nightmaric Spawn will automatically attack nearby enemies by firing a Death Ray at the target, dealing 55 (+20% extra Attack Speed) (+20% Magic Power) Magic Damage and slowing them by up to 30%. If Zhask is too far away from Nightmaric Spawn, it will disappear.\nDeath Ray is considered as a Basic Attack but cannot Crit.\nFusion Enhanced: The damage of Nightmaric Spawn is increased to 180%, and it can be repositioned.\n|stats1=Cooldown|stats1_value=13.0/12.0/11.0/10.0\n|stats2=Skill Cost|stats2_value=60/70/80/90\n|stats3=Attributes Inherited|stats3_value=55%/70%/85%/100%",
+      "cooldown": "13.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+20% extra Attack Speed)",
+        "(+20% Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "13.0",
+            "12.0",
+            "11.0",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "70",
+            "80",
+            "90"
+          ]
+        },
+        {
+          "label": "Attributes Inherited",
+          "values": [
+            "55%",
+            "70%",
+            "85%",
+            "100%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Summon"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Nightmaric_Spawn"
+    },
+    "skill2": {
+      "name": "Mind Eater",
+      "description": "Zhask fires a penetrating mental missile in the designated direction, dealing 300 (+100% Total Magic Power) Magic Damage. Afterward, Nightmaric Spawn will attack enemies hit by Mind Eater for 120 (+80% Total Magic Power) Magic Damage and stun them for 0.5s.\nFusion Enhanced: Increases the damage dealt by Mind Eater by 540 (+180% Total Magic Power).\n|stats1=Skill Cost|stats1_value=50/65/80/95\n|stats2=Base Damage|stats2_value=300/380/460/540\n|stats3=Complete Damage|stats3_value=540/685/830/975",
+      "cooldown": "8.0",
+      "manaCost": "50",
+      "damageType": "Magic",
+      "scaling": [
+        "(+100% Total Magic Power)",
+        "(+80% Total Magic Power)",
+        "(+180% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "50",
+            "65",
+            "80",
+            "95"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "380",
+            "460",
+            "540"
+          ]
+        },
+        {
+          "label": "Complete Damage",
+          "values": [
+            "540",
+            "685",
+            "830",
+            "975"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Mind_Eater"
+    },
+    "ultimate": {
+      "name": "Hive Clones",
+      "description": "Zhask releases a swarm of Hive Clones in the targeted direction. The clones will explode and deal 55 (+18% Total Magic Power) Magic Damage to enemies on contact, reducing their Movement Speed by 80% for 1s.\nIf Hive Clones find no target, they will burrow into the ground and ambush enemies passing by.\nFusion Enhanced: Zhask releases several swarms of Hive Clones.\nSubsequent damage dealt to the target decays to 20%.\n|stats1=Skill Cost|stats1_value=60/75/90/105\n|stats2=Base Damage|stats2_value=55/70/85/100",
+      "cooldown": "10.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+18% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "75",
+            "90",
+            "105"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "55",
+            "70",
+            "85",
+            "100"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Slow",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Hive_Clones"
+    },
+    "extra1": {
+      "name": "Dominator's Descent",
+      "description": "Zhask selects a designated position to summon Nightmaric Spawn and fuses with it. Nightmaric Spawn can inherit 100% of his attributes and get extra of them. His skills are enhanced during the fusion period.\nUse Again: Zhask immediately gets off Nightmaric Spawn and loses enhancement.\n|stats1=Cooldown|stats1_value=48.0/44.0/40.0\n|stats2=Skill Cost|stats2_value=120/150/180\n|stats3=Extra HP|stats3_value=750/1625/2500\n|stats4=Extra Hybrid Defense|stats4_value=20/30/40\n|stats5=Lifesteal|stats5_value=50%/50%/50%",
+      "cooldown": "48.0",
+      "manaCost": "120",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "48.0",
+            "44.0",
+            "40.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "150",
+            "180"
+          ]
+        },
+        {
+          "label": "Extra HP",
+          "values": [
+            "750",
+            "1625",
+            "2500"
+          ]
+        },
+        {
+          "label": "Extra Hybrid Defense",
+          "values": [
+            "20",
+            "30",
+            "40"
+          ]
+        },
+        {
+          "label": "Lifesteal",
+          "values": [
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Morph",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dominator's_Descent"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "id": "brody",
+  "name": "Brody",
+  "heroName": "Brody",
+  "role": [
+    "Marksman"
+  ],
+  "specialty": [
+    "Damage",
+    "Reap"
+  ],
+  "lane": "Gold",
+  "lanes": [
+    "Gold",
+    "Mid"
+  ],
+  "flex_lanes": [
+    "Mid"
+  ],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2260,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 105,
+    "physicalDefense": 16,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.2",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Abyss Corrosion",
+      "description": "With his Basic Attacks resonated with the Abyss Power within his body, Brody is able to move while winding up his Basic Attacks (which will be interrupted when casting skills), at the cost of having longer Basic Attack Animation and lower Attack Speed Bonus. Each Basic Attack deals (140% Total Physical Attack) (+45*Hero Level) Physical Damage (of which the damage scaling with level cannot be critical), increases Movement Speed by 30% (which will decay rapidly in 1.2s), and applies 1 stack of Abyss Mark on the enemy, capped at 4 stacks.\nEach stack of Abyss Mark increases Brody's damage against the target by 5% and his Movement Speed by 5%.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(140% Total Physical Attack)",
+        "(+45*Hero Level)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Abyss_Corrosion"
+    },
+    "skill1": {
+      "name": "Abyss Impact",
+      "description": "Brody launches a shockwave in the target direction, dealing 200 (+170% Total Physical Attack) Physical Damage and slowing enemies by 30% for 1.2s while applying one stack of Abyss Mark.\nFor each enemy hit by the shockwave, they take an extra 5% slow and one extra Abyss Mark stack (capped at 45% slow and 4 stacks).\n|stats1=Skill Cost|stats1_value=50/55/60/65/70/75\n|stats2=Base Damage|stats2_value=200/260/320/380/440/500",
+      "cooldown": "4.0",
+      "manaCost": "50",
+      "damageType": "Physical",
+      "scaling": [
+        "(+170% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "50",
+            "55",
+            "60",
+            "65",
+            "70",
+            "75"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "260",
+            "320",
+            "380",
+            "440",
+            "500"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Abyss_Impact"
+    },
+    "skill2": {
+      "name": "Corrosive Strike",
+      "description": "Brody dashes to an enemy, dealing 200 (+70% Total Physical Attack) Physical Damage to the target, stunning the target for 0.8s, and applying 1 stack of Abyss Mark on the target.\nUpon hitting the target, he is able to move one more time in the movement direction, gaining 45% Movement Speed that will decay rapidly in 1.2s\n|stats1=Cooldown|stats1_value=8.0/7.6/7.2/6.8/6.4/6.0\n|stats2=Base Damage|stats2_value=200/230/260/290/320/350",
+      "cooldown": "8.0",
+      "manaCost": "90",
+      "damageType": "Physical",
+      "scaling": [
+        "(+70% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.0",
+            "7.6",
+            "7.2",
+            "6.8",
+            "6.4",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "230",
+            "260",
+            "290",
+            "320",
+            "350"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Mobility",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Corrosive_Strike"
+    },
+    "ultimate": {
+      "name": "Torn-Apart Memory",
+      "description": "Brody locks on all the targets within 8 unit(s), dealing 216 (+165% Extra Physical Attack) Physical Damage to them. If the target has an Abyss Mark, all Abyss Marks will be reset, dealing Physical Damage equal to 94 (+72% Extra Physical Attack) plus 4% of the target's lost HP for each stack the target has.\n|quote=Memories are nowhere to be placed. Everything is for me to protect.\n|stats1=Cooldown|stats1_value=32.0/28.0/24.0\n|stats2=Skill Cost|stats2_value=120/160/200\n|stats3=Base Damage|stats3_value=216/378/540\n|stats4=Damage per Stack|stats4_value=94/163/232\n|stats5=Lost HP Multiplier|stats5_value=4%/7%/10%",
+      "cooldown": "32.0",
+      "manaCost": "120",
+      "damageType": "Physical",
+      "scaling": [
+        "(+165% Extra Physical Attack)",
+        "(+72% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "32.0",
+            "28.0",
+            "24.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "216",
+            "378",
+            "540"
+          ]
+        },
+        {
+          "label": "Damage per Stack",
+          "values": [
+            "94",
+            "163",
+            "232"
+          ]
+        },
+        {
+          "label": "Lost HP Multiplier",
+          "values": [
+            "4%",
+            "7%",
+            "10%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Torn-Apart_Memory"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Objective DPS",
+      "Late Game Carry"
+    ],
+    "tempoClassification": "Late",
+    "powerSpikeTiming": [
+      "2 Core Items",
+      "Late Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

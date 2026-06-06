@@ -1,0 +1,252 @@
+{
+  "id": "yve",
+  "name": "Yve",
+  "heroName": "Yve",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2320,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 115,
+    "physicalDefense": 16,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "0.98",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 245
+  },
+  "skills": {
+    "passive": {
+      "name": "Galactic Power",
+      "description": "When Yve deals damage to enemy heroes with her skills, she gains Galactic Power (Cooldown: 0.5s), up to 3 stacks. Each stack provides Yve with a 120 (+10*Hero Level) (+50% Total Magic Power) shield for 3s.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "(+10*Hero Level)",
+        "(+50% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Shield"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Galactic_Power"
+    },
+    "skill1": {
+      "name": "Void Blast",
+      "description": "Yve detonates Galactic Energy at the target location, dealing 290 (+150% Total Magic Power) Magic Damage to enemies in the area.\nSuccessfully hitting an enemy grants Yve 55% extra Movement Speed (halved if a non-hero enemy is hit) that decreases over 1s.\n|stats1=Cooldown|stats1_value=3.0/2.7/2.4/2.1/1.8/1.5\n|stats2=Skill Cost|stats2_value=40/45/50/55/60/65\n|stats3=Base Damage|stats3_value=290/340/390/440/490/540",
+      "cooldown": "3.0",
+      "manaCost": "40",
+      "damageType": "Magic",
+      "scaling": [
+        "(+150% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "3.0",
+            "2.7",
+            "2.4",
+            "2.1",
+            "1.8",
+            "1.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "40",
+            "45",
+            "50",
+            "55",
+            "60",
+            "65"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "290",
+            "340",
+            "390",
+            "440",
+            "490",
+            "540"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Void_Blast"
+    },
+    "skill2": {
+      "name": "Void Crystal",
+      "description": "Yve summons a Void Crystal at the target location, dealing 220 (+40% Total Magic Power) Magic Damage to nearby enemies.\nUse Again: Yve commands the Crystal to fire materialized energy in the target direction for 2.7s, dealing 75 (+10% Total Magic Power) Magic Damage every 0.45s to enemies hit and slowing them by 20%. Enemies hit multiple times are slowed by an extra 4% for each hit after the first hit (up to 40%).\n|stats1=Cooldown|stats1_value=14.0/13.2/12.4/11.6/10.8/10.0\n|stats2=Skill Cost|stats2_value=80/90/100/110/120/130\n|stats3=Base Damage|stats3_value=220/260/300/340/380/420\n|stats4=Sustained Damage|stats4_value=75/85/95/105/115/125",
+      "cooldown": "14.0",
+      "manaCost": "80",
+      "damageType": "Magic",
+      "scaling": [
+        "(+40% Total Magic Power)",
+        "(+10% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "14.0",
+            "13.2",
+            "12.4",
+            "11.6",
+            "10.8",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "80",
+            "90",
+            "100",
+            "110",
+            "120",
+            "130"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "220",
+            "260",
+            "300",
+            "340",
+            "380",
+            "420"
+          ]
+        },
+        {
+          "label": "Sustained Damage",
+          "values": [
+            "75",
+            "85",
+            "95",
+            "105",
+            "115",
+            "125"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Slow",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Void_Crystal"
+    },
+    "ultimate": {
+      "name": "Real World Manipulation",
+      "description": "Yve creates a Starfield that lasts 15s. Within the duration, you can Tap or Swipe the screen to attack up to 20 times.\nTap: Deals 340 (+150% Total Magic Power) Magic Damage to enemies in the target area.\nSwipe: Deals 85 (+10% Total Magic Power) Magic Damage every 0.45s to enemies in the target area for 2.7s and slows them by 40%.\nEnemies leaving or entering the Starfield will be immobilized for 0.8s (only once against the same target).\nYve cannot be displaced while the Starfield is active, and the Starfield will remain even if Yve is controlled (except for Suppression).\n|stats1=Skill Cost|stats1_value=180/220/260\n|stats2=Tap Damage|stats2_value=340/440/540\n|stats3=Swipe Damage|stats3_value=85/105/125",
+      "cooldown": "60.0",
+      "manaCost": "180",
+      "damageType": "Magic",
+      "scaling": [
+        "(+150% Total Magic Power)",
+        "(+10% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "180",
+            "220",
+            "260"
+          ]
+        },
+        {
+          "label": "Tap Damage",
+          "values": [
+            "340",
+            "440",
+            "540"
+          ]
+        },
+        {
+          "label": "Swipe Damage",
+          "values": [
+            "85",
+            "105",
+            "125"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Burst",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Real_World_Manipulation"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

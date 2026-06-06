@@ -1,0 +1,251 @@
+{
+  "id": "novaria",
+  "name": "Novaria",
+  "heroName": "Novaria",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2260,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 115,
+    "physicalDefense": 15,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.01",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Star Trail",
+      "description": "Astral Sphere continuously slows nearby enemies by 20% and reveals their position.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Star_Trail"
+    },
+    "skill1": {
+      "name": "Astral Meteor",
+      "description": "Novaria summons an Astral Sphere at the target location, dealing 75 (+25% Total Magic Power) Magic Damage every 0.33s and applying a continuously increasing slow effect (up to 2.5 times the original). After 2s, the Astral Sphere explodes, dealing 260 (+50% Total Magic Power) (+4% target's Max HP) Magic Damage and applying 2.5 times the slow effect.\n|stats1=Cooldown|stats1_value=8.0/7.6/7.2/6.8/6.4/6.0\n|stats2=Skill Cost|stats2_value=60/68/76/84/92/100\n|stats3=Base Damage|stats3_value=75/90/105/120/135/150\n|stats4=Base Damage|stats4_value=260/285/310/335/360/385\n|stats5=Extra Percentage Damage|stats5_value=4%/4%/4%/4%/4%/4%",
+      "cooldown": "8.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+25% Total Magic Power)",
+        "(+50% Total Magic Power)",
+        "(+4% target's Max HP)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.0",
+            "7.6",
+            "7.2",
+            "6.8",
+            "6.4",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "68",
+            "76",
+            "84",
+            "92",
+            "100"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "75",
+            "90",
+            "105",
+            "120",
+            "135",
+            "150"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "260",
+            "285",
+            "310",
+            "335",
+            "360",
+            "385"
+          ]
+        },
+        {
+          "label": "Extra Percentage Damage",
+          "values": [
+            "4%",
+            "4%",
+            "4%",
+            "4%",
+            "4%",
+            "4%"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Slow",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Astral_Meteor"
+    },
+    "skill2": {
+      "name": "Astral Recall",
+      "description": "Novaria summons an Astral Sphere at a distance and draws it towards herself. She gains 20% Movement Speed and can pass through terrain. Moving through terrain increases the Movement Speed boost to 60%.\nUpon catching the Astral Sphere, Novaria can launch the Star Shatter in the target direction within 5s. The sphere will explode when hitting an enemy hero, dealing 230 (+90% Total Magic Power) Magic Damage plus 4% of the target's Max HP. The damage will increase based on the Astral Sphere's travel distance (during both draw and launch), up to 2.5 times the original damage.\n|stats1=Skill Cost|stats1_value=60/70/80/90/100/110\n|stats2=Base Damage|stats2_value=230/260/290/320/350/380\n|stats3=Extra Percentage Damage|stats3_value=4%/4%/4%/4%/4%/4%",
+      "cooldown": "7.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+90% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "70",
+            "80",
+            "90",
+            "100",
+            "110"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "230",
+            "260",
+            "290",
+            "320",
+            "350",
+            "380"
+          ]
+        },
+        {
+          "label": "Extra Percentage Damage",
+          "values": [
+            "4%",
+            "4%",
+            "4%",
+            "4%",
+            "4%",
+            "4%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Astral_Recall"
+    },
+    "ultimate": {
+      "name": "Astral Echo",
+      "description": "Novaria scatters Astral Echo in the target direction, briefly slowing enemy heroes hit by 50% while applying Astral Ring on them. It increases targets' hitbox by 2.5 times and reveals their position for 5s.\n|stats1=Cooldown|stats1_value=48.0/44.0/40.0\n|stats2=Skill Cost|stats2_value=100/50/0",
+      "cooldown": "48.0",
+      "manaCost": "100",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "48.0",
+            "44.0",
+            "40.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "100",
+            "50",
+            "0"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Astral_Echo"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

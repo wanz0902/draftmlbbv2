@@ -1,0 +1,203 @@
+{
+  "id": "nolan",
+  "name": "Nolan",
+  "heroName": "Nolan",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2390,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 124,
+    "physicalDefense": 16,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.08",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Dimensional Rift",
+      "description": "Nolan's skills will leave a Rift. When a rift comes into contact with another rift, they will activate and pull enemies to their center and deal 240 (+140% Extra Physical Attack) Physical Damage after a short delay. Each time a rift activation hits an enemy, Nolan will gain 20 Energy. If an enemy is hit by multiple rift activations, the damage after the first hit will be reduced by 40%.\nCosmic Leap: If Nolan does not deal or take damage for 5s, he enhances his next Basic Attack to dash to the target, dealing (120% Total Physical Attack) Physical Damage and leaving a Rift. (Damage to and from Minions or Creeps will not prevent Nolan from getting this effect).\n|quote=The father who swore to protect his shining star.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+140% Extra Physical Attack)",
+        "(120% Total Physical Attack)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dimensional_Rift"
+    },
+    "skill1": {
+      "name": "Expansion",
+      "description": "Nolan cuts a rectangular area in front of him with his cosmic gauge, dealing 230 (+40% Total Physical Attack) Physical Damage and leaving a Rift at the first enemy hit.\n|quote=The scholar that explored the edge of the universe.\n|stats1=Cooldown|stats1_value=2.5/2.2/1.9/1.6/1.3/1.0\n|stats2=Base Damage|stats2_value=230/280/330/380/430/480",
+      "cooldown": "2.5",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+40% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "2.5",
+            "2.2",
+            "1.9",
+            "1.6",
+            "1.3",
+            "1.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "230",
+            "280",
+            "330",
+            "380",
+            "430",
+            "480"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Expansion"
+    },
+    "skill2": {
+      "name": "Gauge",
+      "description": "Nolan charges in the target direction and slashes with his cosmic gauge, dealing 70 (+13% Total Physical Attack) Physical Damage to enemies in his path and leaving a Rift.\n|quote=The wayfinder that measured the distance of the stars.\n|stats1=Cooldown|stats1_value=2.5/2.2/1.9/1.6/1.3/1.0\n|stats2=Base Damage|stats2_value=70/100/130/160/190/220",
+      "cooldown": "2.5",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+13% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "2.5",
+            "2.2",
+            "1.9",
+            "1.6",
+            "1.3",
+            "1.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "70",
+            "100",
+            "130",
+            "160",
+            "190",
+            "220"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Gauge"
+    },
+    "ultimate": {
+      "name": "Fracture",
+      "description": "Nolan slashes at the target location 3 times, dealing 120 (+50% Extra Physical Attack) Physical Damage with each slash while leaving 3 rifts and slowing the target hit by 30% for 0.5s. The rifts will be activated automatically while Nolan dashes backward.\n|quote=The hero that finally returned home.\n|stats1=Cooldown|stats1_value=21.0/18.0/15.0\n|stats2=Base Damage|stats2_value=120/150/180",
+      "cooldown": "21.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+50% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "21.0",
+            "18.0",
+            "15.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "120",
+            "150",
+            "180"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Fracture"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

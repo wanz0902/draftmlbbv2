@@ -1,0 +1,146 @@
+{
+  "id": "yin",
+  "name": "Yin",
+  "heroName": "Yin",
+  "role": [
+    "Fighter",
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "EXP Lane",
+  "lanes": [
+    "EXP Lane",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Jungle"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2500,
+    "hpRegen": 30,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 110,
+    "physicalDefense": 20,
+    "magicPower": 0,
+    "magicDefense": 10,
+    "attackSpeed": 0.8,
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Passive",
+      "description": "Intelligence data missing.",
+      "cooldown": [],
+      "manaCost": [],
+      "damageType": "NONE",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Passive"
+    },
+    "skill1": {
+      "name": "Skill 1",
+      "description": "Intelligence data missing.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Skill_1"
+    },
+    "skill2": {
+      "name": "Skill 2",
+      "description": "Intelligence data missing.",
+      "cooldown": [
+        10
+      ],
+      "manaCost": [
+        50
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Skill_2"
+    },
+    "ultimate": {
+      "name": "Ultimate",
+      "description": "Intelligence data missing.",
+      "cooldown": [
+        30
+      ],
+      "manaCost": [
+        100
+      ],
+      "damageType": "PHYSICAL",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ultimate"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Split Push",
+      "Sustained Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

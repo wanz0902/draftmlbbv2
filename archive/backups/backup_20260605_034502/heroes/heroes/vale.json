@@ -1,0 +1,240 @@
+{
+  "id": "vale",
+  "name": "Vale",
+  "heroName": "Vale",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 6,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 115,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Windtalk",
+      "description": "Vale gains 1 stack of Windtalk each time he gets a kill or an assist that increases his Movement Speed by 8. This effect can stack up to 10 times.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff",
+        "Speed Up"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Windtalk"
+    },
+    "skill1": {
+      "name": "Wind Blade",
+      "description": "Vale unleashes two wind blades toward the left and right of a target area, each dealing 250 (+80% Total Magic Power) Magic Damage to enemies hit.",
+      "cooldown": "6.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+80% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "6.0",
+            "5.6",
+            "5.2",
+            "4.8",
+            "4.4",
+            "4.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "290",
+            "330",
+            "370",
+            "410",
+            "450"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Wind_Blade"
+    },
+    "skill2": {
+      "name": "Windblow",
+      "description": "Vale sends a whirlwind in the target direction, dealing 350 (+100% Total Magic Power) Magic Damage to enemies hit and knocking them airborne for 0.8s (each enemy can only be knocked airborne 1 time). When the whirlwind reaches its destination, it will remain for 1.6s while continuously dealing a total of 150 (+30% Total Magic Power) Magic Damage to enemies in range.",
+      "cooldown": "12.0",
+      "manaCost": "70",
+      "damageType": "Magic",
+      "scaling": [
+        "(+100% Total Magic Power)",
+        "(+30% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.2",
+            "10.4",
+            "9.6",
+            "8.8",
+            "8.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "70",
+            "74",
+            "78",
+            "82",
+            "86",
+            "90"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "350",
+            "420",
+            "490",
+            "560",
+            "630",
+            "700"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Windblow"
+    },
+    "ultimate": {
+      "name": "Windstorm",
+      "description": "Vale summons a windstorm at the target location, dealing a total of 150 (+30% Total Magic Power) Magic Damage to enemies in the area and slowing them by 20% while continuously pulling them into its center. After 1s, the windstorem will explode, dealing 900 (+240% Total Magic Power) Magic Damage.\nThe remaining whirlwinds will also be pulled into the center.",
+      "cooldown": "36.0",
+      "manaCost": "120",
+      "damageType": "Magic",
+      "scaling": [
+        "(+30% Total Magic Power)",
+        "(+240% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "36.0",
+            "33.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "140",
+            "160"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "900",
+            "1150",
+            "1400"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Windstorm"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

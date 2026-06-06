@@ -1,0 +1,131 @@
+{
+  "id": "chou",
+  "heroName": "Chou",
+  "role": [
+    "Fighter"
+  ],
+  "secondaryRole": "TANK",
+  "specialty": [
+    "Charge",
+    "Crowd Control"
+  ],
+  "lane": "EXP",
+  "releaseYear": 2016,
+  "baseStats": {
+    "hp": 2530,
+    "hpRegen": 7,
+    "mana": 0,
+    "manaRegen": 0,
+    "physicalAttack": 121,
+    "physicalDefense": 23,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Only Fast",
+      "description": "After traveling 5 units, Chou deals 180% damage on his next Basic Attack (cannot Crit), briefly slows the target by 90% and reduces their Physical Defense by 10(+1*Hero Level) for 3s (up to 2 stacks).",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Only_Fast"
+    },
+    "skill1": {
+      "name": "Jeet Kune Do",
+      "description": "Chou strikes in the target direction, dealing 180 {{bgcolortext|cinnabar-theme-dark-alt-text|(+70% Total Physical Attack)",
+      "cooldown": "9.5",
+      "manaCost": "0",
+      "damageType": "AOE, Mobility",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Jeet_Kune_Do"
+    },
+    "skill2": {
+      "name": "Shunpo",
+      "description": "Chou charges in the target direction, gaining Control Immunity and a 200 {{bgcolortext|cinnabar-theme-dark-alt-text|(+200% Extra Physical Attack)",
+      "cooldown": "5.0",
+      "manaCost": "0",
+      "damageType": "Mobility",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Shunpo"
+    },
+    "ultimate": {
+      "name": "The Way of Dragon",
+      "description": "Chou strikes a roundhouse kick at the target enemy hero, dealing them 400 {{bgcolortext|cinnabar-theme-dark-alt-text|(+200% Extra Physical Attack)",
+      "cooldown": "34.0",
+      "manaCost": "0",
+      "damageType": "CC, Burst",
+      "scaling": [
+        "None"
+      ],
+      "crowdControlType": [],
+      "strategicTags": [],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "The_Way_of_Dragon"
+    }
+  },
+  "name": "Chou",
+  "strategicData": {
+    "draftSignals": [
+      "Aggressive isolation",
+      "Potential Roam Flex"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Pick-off Specialist"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4"
+    ],
+    "counterSystem": {
+      "strongAgainst": [
+        "Gusion",
+        "Fanny",
+        "Lancelot"
+      ],
+      "weakAgainst": [
+        "Minsitthar",
+        "Phoveus",
+        "Gatotkaca"
+      ],
+      "synergyWith": [
+        "Mathilda",
+        "Kadita",
+        "Lancelot"
+      ]
+    },
+    "deceptionValue": 8
+  },
+  "lanes": [
+    "EXP",
+    "Roam",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Roam",
+    "Jungle"
+  ]
+}

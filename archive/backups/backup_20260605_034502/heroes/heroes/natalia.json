@@ -1,0 +1,196 @@
+{
+  "id": "natalia",
+  "name": "Natalia",
+  "heroName": "Natalia",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2480,
+    "hpRegen": 7,
+    "mana": 400,
+    "manaRegen": 15,
+    "physicalAttack": 121,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Assassin Instinct",
+      "description": "If Natalia stays in a bush without taking damage for 1s, she will enter Camouflage state and gain 15% Movement Speed. In this state, Natalia's next Basic Attack will teleport her behind her target and deal 200 (+110% Total Physical Attack) Physical Damage while silencing the target for 0.25s.\nDealing damage, taking damage or using skills will immediately end the Camouflage state, but her next Basic Attack will remain enhanced for another 1s.\nNatalia's base Crit Damage is reduced to 150%, but her damage to Creeps is increased to 150%.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+110% Total Physical Attack)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Assassin_Instinct"
+    },
+    "skill1": {
+      "name": "Claw Dash",
+      "description": "Natalia dashes in the target direction, dealing 250 (+50% Total Physical Attack) Physical Damage to enemies in her path.\nAfter hitting an enemy, she can cast this skill again within 5s.\n|stats1=Cooldown|stats1_value=10.0/9.2/8.4/7.6/6.8/6.0\n|stats2=Base Damage|stats2_value=250/270/290/310/330/350",
+      "cooldown": "10.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+50% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "10.0",
+            "9.2",
+            "8.4",
+            "7.6",
+            "6.8",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "270",
+            "290",
+            "310",
+            "330",
+            "350"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Claw_Dash"
+    },
+    "skill2": {
+      "name": "Smoke Bomb",
+      "description": "Natalia releases a Smoke Bomb at her location, slowing enemies within by 25% while Natalia becomes immune to enemy Basic Attacks for 4s.\n|quote=No one beats me in my own game.\n|stats1=Slow Effect|stats1_value=25%/35%/45%/55%/65%/75%",
+      "cooldown": "12.0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Slow Effect",
+          "values": [
+            "25%",
+            "35%",
+            "45%",
+            "55%",
+            "65%",
+            "75%"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Buff",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Smoke_Bomb"
+    },
+    "ultimate": {
+      "name": "The Hunt",
+      "description": "Passive: Natalia gains 15% extra Crit Chance.\nActive: Natalia immediately enters Assassin Instinct state. Natalia can store up to 2 charges of her Ultimate and each charge has a recharge time of 30s. Creep kills will reduce the current remaining recharge time by 50% of the full recharge time.\n|stats1=Crit Chance|stats1_value=15%/30%/45%\n|stats2=Skill Recharge Time|stats2_value=30/24/18",
+      "cooldown": "3.0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Crit Chance",
+          "values": [
+            "15%",
+            "30%",
+            "45%"
+          ]
+        },
+        {
+          "label": "Skill Recharge Time",
+          "values": [
+            "30",
+            "24",
+            "18"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Camouflage",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "The_Hunt"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

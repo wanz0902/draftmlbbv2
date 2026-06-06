@@ -1,0 +1,401 @@
+{
+  "id": "kagura",
+  "name": "Kagura",
+  "heroName": "Kagura",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 118,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.02",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 240
+  },
+  "skills": {
+    "passive": {
+      "name": "Yin Yang Gathering",
+      "description": "Upon retrieving the Seimei Umbrella, Kagura gains a 450 (+80% Total Magic Power) shield, stuns nearby enemies for 0.5s, and slows them by 60% for 1s. Cooldown: 4.5s.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "(+80% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Shield",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Yin_Yang_Gathering"
+    },
+    "skill1": {
+      "name": "Seimei Umbrella Open",
+      "description": "Kagura sends the Seimei Umbrella to the target location, dealing 365 (+105% Total Magic Power) Magic Damage to enemies in its path and slowing them by 60% for 0.5s. The Umbrella will automatically return to Kagura when she's too far away.\nThis skill deals 130% damage to non-hero enemies.\n|stats1=Cooldown|stats1_value=5.0/4.7/4.4/4.1/3.8/3.5\n|stats2=Skill Cost|stats2_value=45/50/55/60/65/70\n|stats3=Base Damage|stats3_value=365/410/455/500/545/590",
+      "cooldown": "5.0",
+      "manaCost": "45",
+      "damageType": "Magic",
+      "scaling": [
+        "(+105% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "5.0",
+            "4.7",
+            "4.4",
+            "4.1",
+            "3.8",
+            "3.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "365",
+            "410",
+            "455",
+            "500",
+            "545",
+            "590"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Damage",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Seimei_Umbrella_Open_variant_1",
+      "variant": "Variant 1",
+      "displayName": "Seimei Umbrella Open (Variant 1)"
+    },
+    "skill2": {
+      "name": "Seimei Umbrella Open",
+      "description": "Kagura sends the Seimei Umbrella to the target location, dealing 365 (+105% Total Magic Power) Magic Damage to enemies in its path and slowing them by 60% for 0.5s. The Umbrella will automatically return to Kagura when she's too far away.\nThis skill deals 130% damage to non-hero enemies.\n|stats1=Cooldown|stats1_value=5.0/4.7/4.4/4.1/3.8/3.5\n|stats2=Skill Cost|stats2_value=45/50/55/60/65/70\n|stats3=Base Damage|stats3_value=365/410/455/500/545/590",
+      "cooldown": "5.0",
+      "manaCost": "45",
+      "damageType": "Magic",
+      "scaling": [
+        "(+105% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "5.0",
+            "4.7",
+            "4.4",
+            "4.1",
+            "3.8",
+            "3.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "365",
+            "410",
+            "455",
+            "500",
+            "545",
+            "590"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Damage",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Seimei_Umbrella_Open_variant_2",
+      "variant": "Variant 2",
+      "displayName": "Seimei Umbrella Open (Variant 2)"
+    },
+    "ultimate": {
+      "name": "Rasho Umbrella Flee",
+      "description": "Kagura removes all debuffs on her and leaps in the target direction, while leaving the Seimei Umbrella behind.\n|stats1=Cooldown|stats1_value=12.0/11.5/11.0/10.5/10.0/9.5\n|stats2=Skill Cost|stats2_value=55/60/65/70/75/80",
+      "cooldown": "12.0",
+      "manaCost": "55",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.5",
+            "11.0",
+            "10.5",
+            "10.0",
+            "9.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Remove CC",
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Rasho_Umbrella_Flee_variant_1",
+      "variant": "Variant 1",
+      "displayName": "Rasho Umbrella Flee (Variant 1)"
+    },
+    "extra1": {
+      "name": "Rasho Umbrella Flee",
+      "description": "Kagura teleports to the Seimei Umbrella's location and retrieves it, dealing 300 (+90% Total Magic Power) Magic Damage to the nearby enemies.\n|stats1=Cooldown|stats1_value=12.0/11.5/11.0/10.5/10.0/9.5\n|stats2=Skill Cost|stats2_value=55/60/65/70/75/80\n|stats3=Base Damage|stats3_value=300/320/340/360/380/400",
+      "cooldown": "12.0",
+      "manaCost": "55",
+      "damageType": "Magic",
+      "scaling": [
+        "(+90% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.5",
+            "11.0",
+            "10.5",
+            "10.0",
+            "9.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "300",
+            "320",
+            "340",
+            "360",
+            "380",
+            "400"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Rasho_Umbrella_Flee_variant_2",
+      "variant": "Variant 2",
+      "displayName": "Rasho Umbrella Flee (Variant 2)"
+    },
+    "extra2": {
+      "name": "Yin Yang Overturn",
+      "description": "Kagura invokes the power of the Seimei Umbrella, dealing 250 (+95% Total Magic Power) Magic Damage to nearby enemies, knocking them back, and slowing them by 60% for 0.5s.\n|quote=Don't get to close to my Seimei Umbrella.\n|stats1=Cooldown|stats1_value=36.0/33.0/30.0\n|stats2=Skill Cost|stats2_value=60/75/90\n|stats3=Base Damage|stats3_value=250/335/420",
+      "cooldown": "36.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+95% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "36.0",
+            "33.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "75",
+            "90"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "335",
+            "420"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Yin_Yang_Overturn"
+    },
+    "extra3": {
+      "name": "Yin yang Overturn",
+      "description": "Kagura invokes the power of the Seimei Umbrella, resetting the cooldown of Seimei Umbrella Open, dealing 235 (+60% Total Magic Power) Magic Damage to enemies around the Umbrella, and slowing them by 60%. After 1.5s, enemy heroes around the Umbrella will be pulled toward it and take 480 (+155% Total Magic Power) Magic Damage.\n|quote=Don't get to close to my Seimei Umbrella.\n|stats1=Cooldown|stats1_value=36.0/33.0/30.0\n|stats2=Skill Cost|stats2_value=60/75/90\n|stats3=Base Damage|stats3_value=235/295/355\n|stats4=Extra Damage|stats4_value=480/600/720",
+      "cooldown": "36.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)",
+        "(+155% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "36.0",
+            "33.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "75",
+            "90"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "235",
+            "295",
+            "355"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "480",
+            "600",
+            "720"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Burst",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Yin_yang_Overturn"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

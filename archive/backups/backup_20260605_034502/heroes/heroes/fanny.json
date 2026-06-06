@@ -1,0 +1,214 @@
+{
+  "id": "fanny",
+  "name": "Fanny",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Reap"
+  ],
+  "lane": "Jungle",
+  "releaseYear": 2016,
+  "difficulty": 10,
+  "metaTier": "S",
+  "pickBanPresence": 85,
+  "baseStats": {
+    "hp": 2267,
+    "hpRegen": 6,
+    "mana": 100,
+    "manaRegen": 0,
+    "physicalAttack": 126,
+    "physicalDefense": 16,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.11",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 265
+  },
+  "skills": {
+    "passive": {
+      "name": "Air Superiority",
+      "description": "During flight, Fanny deals 10%-20% extra damage to enemies hit (scales with flying speed) and applies a stack of Prey Mark to them (up to 2 stacks) on each attack. Her subsequent skill hits on marked enemy heroes restore 8 energy per stack for her. The energy restoration is reduced if she hits multiple enemy heroes within a short period of time.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Air_Superiority"
+    },
+    "skill1": {
+      "name": "Tornado Strike",
+      "description": "Fanny whirls her blades, dealing 275 (+85% Total Physical Attack) Physical Damage to nearby enemies.",
+      "cooldown": "3.5",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+85% Total Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "3.5",
+            "3.3",
+            "3.1",
+            "2.9",
+            "2.7",
+            "2.5"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "275",
+            "325",
+            "375",
+            "425",
+            "475",
+            "525"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Tornado_Strike"
+    },
+    "skill2": {
+      "name": "Steel Cable",
+      "description": "Fanny shoots a cable in the target direction that pulls her to the first obstacle hit. She can cast this skill again within 2s until her energy runs out. Each successive cast reduces the skill's energy cost by 2.\nFanny automatically casts Tornado Strike upon hitting an enemy mid-flight, ss long as her energy is sufficient.\n|quote=No way I'm going on foot!",
+      "cooldown": "0.0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "19",
+            "18",
+            "17",
+            "16",
+            "15",
+            "14"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Steel_Cable"
+    },
+    "ultimate": {
+      "name": "Cut Throat",
+      "description": "Fanny leaps at the target enemy hero or Creep with her blades, dealing 400 (+200% Extra Physical Attack) Physical Damage. Each stack of Prey Mark on the target increases this damage by 30%.",
+      "cooldown": "35.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+200% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "35.0",
+            "30.0",
+            "25.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "400",
+            "525",
+            "650"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst",
+        "Mobility"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Cut_Throat"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Aggressive early invade",
+      "Blue Buff Dependency",
+      "Split push potential"
+    ],
+    "hiddenGameplans": [
+      "Punish immobile mages",
+      "Force early surrenders"
+    ],
+    "macroIdentity": [
+      "Backline Diver",
+      "Map Pressure"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 2 (Blue Buff)",
+      "Level 4"
+    ],
+    "objectiveControlValue": 4,
+    "snowballPotential": 10,
+    "flexibilityRating": 2,
+    "deceptionValue": 3,
+    "comfortPickImportance": "Critical (Requires Mechanical God)",
+    "draftPhilosophyTags": [
+      "Early Tempo",
+      "High Risk",
+      "Dive",
+      "Skill Cap"
+    ],
+    "counterSystem": {
+      "strongAgainst": [
+        "Pharsa",
+        "Yve",
+        "Hanabi"
+      ],
+      "weakAgainst": [
+        "Khufra",
+        "Minsitthar",
+        "Chou",
+        "Saber"
+      ],
+      "synergyWith": [
+        "Angela",
+        "Tigreal"
+      ],
+      "draftPairings": [
+        "Angela + Fanny"
+      ]
+    }
+  },
+  "lanes": [
+    "Jungle",
+    "EXP"
+  ],
+  "flex_lanes": [
+    "EXP"
+  ]
+}

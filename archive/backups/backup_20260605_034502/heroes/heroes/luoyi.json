@@ -1,0 +1,244 @@
+{
+  "id": "luoyi",
+  "name": "Luo Yi",
+  "heroName": "Luo Yi",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2440,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 107,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "0.99",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Duality",
+      "description": "Luo Yi's skills can create Sigils of Yin/Yang on the battlefield. Each Sigil lasts up to 6s.\nSigils of opposite attributes will trigger Yin-Yang Reaction when they are within a certain distance, dealing 300 (+25*Hero Level) (+190% Total Magic Power) Magic Damage to the marked enemies, stunning them for 0.3s, and pulling them toward each other.\nEach time Luo Yi applies a new Sigil to a marked enemy, she gains a 300 (+10*Hero Level) (+150% Total Magic Power) shield (up to 3 stacks) and 50% extra Movement Speed that decays over 2s.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "(+25*Hero Level)",
+        "(+190% Total Magic Power)",
+        "(+10*Hero Level)",
+        "(+150% Total Magic Power)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Burst",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Duality"
+    },
+    "skill1": {
+      "name": "Dispersion",
+      "description": "Luo Yi casts the energy of Yin/Yang in the target direction, dealing 285 (+135% Total Magic Power) Magic Damage to the first enemy hit and those behind them in a fan-shaped area. Enemy heroes hit are marked with a Sigil of Yin/Yang.\nLuo Yi stores up to 4 Dispersion charges and gains 1 charge every 8s. She also immediately gains 1 charge each time Yin-Yang Reaction is triggered.\nThe state of this skill changes on each cast.\n|stats1=Skill Cost|stats1_value=50/56/62/68/74/80\n|stats2=Base Damage|stats2_value=285/330/375/420/465/510\n|stats3=Skill Recharge Time|stats3_value=8/7.7/7.4/7.1/6.8/6.5",
+      "cooldown": "1.2",
+      "manaCost": "50",
+      "damageType": "Magic",
+      "scaling": [
+        "(+135% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "50",
+            "56",
+            "62",
+            "68",
+            "74",
+            "80"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "285",
+            "330",
+            "375",
+            "420",
+            "465",
+            "510"
+          ]
+        },
+        {
+          "label": "Skill Recharge Time",
+          "values": [
+            "8",
+            "7.7",
+            "7.4",
+            "7.1",
+            "6.8",
+            "6.5"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Dispersion"
+    },
+    "skill2": {
+      "name": "Rotation",
+      "description": "Luo Yi summons Fire of Yang/Aqua of Yin at the target location, dealing 250 (+50% Total Magic Power) Magic Damage to enemies hit and slowing them by 60% for 0.5s.\nFire of Yang/Aqua of Yin then remains at the location for 6s, dealing 50 (+10% Total Magic Power) Magic Damage every 0.7s to nearby enemies. It can also trigger Yin-Yang Reaction with Sigils of opposite attributes.\nThe state of this skill changes on each cast.\n|stats1=Cooldown|stats1_value=12.0/11.6/11.2/10.8/10.4/10.0\n|stats2=Skill Cost|stats2_value=75/80/85/90/95/100\n|stats3=Base Damage|stats3_value=250/270/290/310/330/350\n|stats4=Sustained Damage|stats4_value=50/54/58/62/66/70",
+      "cooldown": "12.0",
+      "manaCost": "75",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Magic Power)",
+        "(+10% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.6",
+            "11.2",
+            "10.8",
+            "10.4",
+            "10.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "270",
+            "290",
+            "310",
+            "330",
+            "350"
+          ]
+        },
+        {
+          "label": "Sustained Damage",
+          "values": [
+            "50",
+            "54",
+            "58",
+            "62",
+            "66",
+            "70"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "AOE",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Rotation"
+    },
+    "ultimate": {
+      "name": "Diversion",
+      "description": "Luo Yi creates a Teleport Circle around herself and marks the target location (within 28 units) as its destination. After a 3s delay, allied heroes (including herself) within the Circle will be teleported to the location.\nPassive: Luo Yi's Cooldown Reduction is increased by 6%.\n|stats1=CD Reduction|stats1_value=6%/8%/10%\n|stats2=Max Range|stats2_value=28/32/36",
+      "cooldown": "60.0",
+      "manaCost": "0",
+      "damageType": "Not specified in source",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [
+        {
+          "label": "CD Reduction",
+          "values": [
+            "6%",
+            "8%",
+            "10%"
+          ]
+        },
+        {
+          "label": "Max Range",
+          "values": [
+            "28",
+            "32",
+            "36"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Teleport"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Diversion"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

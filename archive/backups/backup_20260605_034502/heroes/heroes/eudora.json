@@ -1,0 +1,269 @@
+{
+  "id": "eudora",
+  "name": "Eudora",
+  "heroName": "Eudora",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid",
+  "lanes": [
+    "Mid",
+    "Roam"
+  ],
+  "flex_lanes": [
+    "Roam"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2440,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 112,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Superconductor",
+      "description": "Eudora's skills inflict Superconductor for 3s on non-minion units hit and can trigger additional effects against enemies affected by Superconductor.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Superconductor"
+    },
+    "skill1": {
+      "name": "Forked Lightning",
+      "description": "Eudora casts Forked Lightning in a fan-shaped area, dealing 275 (+100% Total Magic Power) Magic Damage (increased to 200% against minions) to enemies within.\nWhen hitting targets affected by Superconductor, Eudora forms a lightning chain with the target, gaining 40% Movement Speed during the chain for up to 1s.\nThe lightning chain deals 10 (+4% Total Magic Power) Magic Damage over time and an additional 275 (+100% Total Magic Power) Magic Damage when it ends. If this hit lands, it reduces this skill's cooldown by 1.5%.\n|stats1=Skill Cost|stats1_value=60/66/72/78/84/90\n|stats2=Base Damage|stats2_value=275/320/365/410/455/500\n|stats3=Trigger Damage|stats3_value=10/12/14/16/18/20\n|stats4=Delayed Damage|stats4_value=275/320/365/410/455/500",
+      "cooldown": "5.0",
+      "manaCost": "60",
+      "damageType": "Magic",
+      "scaling": [
+        "(+100% Total Magic Power)",
+        "(+4% Total Magic Power)",
+        "(+100% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "60",
+            "66",
+            "72",
+            "78",
+            "84",
+            "90"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "275",
+            "320",
+            "365",
+            "410",
+            "455",
+            "500"
+          ]
+        },
+        {
+          "label": "Trigger Damage",
+          "values": [
+            "10",
+            "12",
+            "14",
+            "16",
+            "18",
+            "20"
+          ]
+        },
+        {
+          "label": "Delayed Damage",
+          "values": [
+            "275",
+            "320",
+            "365",
+            "410",
+            "455",
+            "500"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Forked_Lightning"
+    },
+    "skill2": {
+      "name": "Ball Lightning",
+      "description": "Eudora hurls an orb of lightning at the target enemy, reducing their Magic Defense by 10 for 1.8s, dealing them 300 (+50% Total Magic Power) Magic Damage, and stunning them for 1s.\nIf the target is affected by Superconductor, the lightning orb reduces the Magic Defense of nearby enemies, deals AOE damage centered on the target, and stuns all nearby enemies.\n|stats1=Cooldown|stats1_value=11.0/10.5/10.0/9.5/9.0/8.5\n|stats2=Skill Cost|stats2_value=80/85/90/95/100/105\n|stats3=Magic Defense Reduction|stats3_value=10/13/16/19/22/25",
+      "cooldown": "11.0",
+      "manaCost": "80",
+      "damageType": "Magic",
+      "scaling": [
+        "(+50% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "11.0",
+            "10.5",
+            "10.0",
+            "9.5",
+            "9.0",
+            "8.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "80",
+            "85",
+            "90",
+            "95",
+            "100",
+            "105"
+          ]
+        },
+        {
+          "label": "Magic Defense Reduction",
+          "values": [
+            "10",
+            "13",
+            "16",
+            "19",
+            "22",
+            "25"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ball_Lightning"
+    },
+    "ultimate": {
+      "name": "Thunder's Wrath",
+      "description": "Eudora calls down a blast of lightning on the target area, dealing 600 (+160% Total Magic Power) Magic Damage to targets at the center. Then it strikes targets outside the center, dealing 300 (+100% Total Magic Power) Magic Damage.\nEvery time Thunder's Wrath hit a target affected by Superconductor, it triggers a Thunderburst centered on the Superconductor target after a short delay, dealing 330 (+110% Total Magic Power) Magic Damage.\n|stats1=Cooldown|stats1_value=32.0/29.0/26.0\n|stats2=Skill Cost|stats2_value=130/160/190\n|stats3=Base Damage|stats3_value=600/800/1000\n|stats4=Delayed Damage|stats4_value=300/400/500\n|stats5=Diffusion Damage|stats5_value=330/440/550",
+      "cooldown": "32.0",
+      "manaCost": "130",
+      "damageType": "Magic",
+      "scaling": [
+        "(+160% Total Magic Power)",
+        "(+100% Total Magic Power)",
+        "(+110% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "32.0",
+            "29.0",
+            "26.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "130",
+            "160",
+            "190"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "600",
+            "800",
+            "1000"
+          ]
+        },
+        {
+          "label": "Delayed Damage",
+          "values": [
+            "300",
+            "400",
+            "500"
+          ]
+        },
+        {
+          "label": "Diffusion Damage",
+          "values": [
+            "330",
+            "440",
+            "550"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Thunder's_Wrath"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage",
+      "Map Rotation"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

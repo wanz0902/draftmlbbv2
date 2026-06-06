@@ -1,0 +1,273 @@
+{
+  "id": "cecilion",
+  "name": "Cecilion",
+  "heroName": "Cecilion",
+  "role": [
+    "Mage"
+  ],
+  "specialty": [
+    "Burst",
+    "Poke"
+  ],
+  "lane": "Mid",
+  "lanes": [
+    "Mid",
+    "Gold"
+  ],
+  "flex_lanes": [
+    "Gold"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2380,
+    "hpRegen": 6,
+    "mana": 700,
+    "manaRegen": 15,
+    "physicalAttack": 105,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Overflowing",
+      "description": "Cecilion gains 10 extra Max Mana and recovers 10 Mana each time his skill hits an enemy. Cooldown: 1s.\nCecilion has higher Max Mana and Mana Regen, and his skill damage scales with his Max Mana.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Overflowing"
+    },
+    "skill1": {
+      "name": "Bat Impact",
+      "description": "Cecilion commands a giant bat to dive at the target location, gaining 30% extra Movement Speed for 1s, dealing 85 (+70% Total Magic Power) (+7% Total Mana) Magic Damage to enemies in its path. The bat also deals 170 (+140% Total Magic Power) (+14% Total Mana) extra Magic Damage to those near the landing point, and applies Overflowing effect once.\nEach subsequent cast within 6s increases this skill's Mana cost by 1.5 times (up to 4 stacks).\n|stats1=Base Damage|stats1_value=85/102/119/136/153/170\n|stats2=Destination Damage|stats2_value=170/204/238/272/306/340\n|stats3=Mana Cost|stats3_value=1.5/1.56/1.62/1.68/1.74/1.8",
+      "cooldown": "1.5",
+      "manaCost": "75",
+      "damageType": "Magic",
+      "scaling": [
+        "(+70% Total Magic Power)",
+        "(+7% Total Mana)",
+        "(+140% Total Magic Power)",
+        "(+14% Total Mana)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Base Damage",
+          "values": [
+            "85",
+            "102",
+            "119",
+            "136",
+            "153",
+            "170"
+          ]
+        },
+        {
+          "label": "Destination Damage",
+          "values": [
+            "170",
+            "204",
+            "238",
+            "272",
+            "306",
+            "340"
+          ]
+        },
+        {
+          "label": "Mana Cost",
+          "values": [
+            "1.5",
+            "1.56",
+            "1.62",
+            "1.68",
+            "1.74",
+            "1.8"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "AOE",
+        "Speed Up"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Bat_Impact"
+    },
+    "skill2": {
+      "name": "Sanguine Claws",
+      "description": "Cecilion summons a pair of opposing claws at the target location that will clasp together after a short delay, pulling enemies in their paths to the center while dealing them 200 (+45% Total Magic Power) (+1.2% Total Mana) Magic Damage and immobilizing them for 1s.\n|stats1=Cooldown|stats1_value=12.0/11.2/10.4/9.6/8.8/8.0\n|stats2=Skill Cost|stats2_value=95/100/105/110/115/120\n|stats3=Base Damage|stats3_value=200/220/240/260/280/300",
+      "cooldown": "12.0",
+      "manaCost": "95",
+      "damageType": "Magic",
+      "scaling": [
+        "(+45% Total Magic Power)",
+        "(+1.2% Total Mana)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "12.0",
+            "11.2",
+            "10.4",
+            "9.6",
+            "8.8",
+            "8.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "95",
+            "100",
+            "105",
+            "110",
+            "115",
+            "120"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "200",
+            "220",
+            "240",
+            "260",
+            "280",
+            "300"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "CC",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Sanguine_Claws"
+    },
+    "ultimate": {
+      "name": "Bats Feast",
+      "description": "Cecilion unleashes his Blood Demon power, gaining 60% extra Movement Speed (decays over the duration) and Slow Immunity for 1.5s. Meanwhile, he fires 36 bolts of blood energy at nearby enemies, each dealing 35 (+8% Total Magic Power) (+0.3% Total Mana) Magic Damage to the enemy hit and slowing them by 3% (up to 30%) for 1s.\nEach bolt also restores 10 plus 1% of Cecilion's lost HP for him on hit.\n|stats1=Cooldown|stats1_value=44.0/41.0/38.0\n|stats2=Skill Cost|stats2_value=150/200/250\n|stats3=Base Damage|stats3_value=35/40/45\n|stats4=HP Regen|stats4_value=10/12.5/15",
+      "cooldown": "44.0",
+      "manaCost": "150",
+      "damageType": "Magic",
+      "scaling": [
+        "(+8% Total Magic Power)",
+        "(+0.3% Total Mana)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "44.0",
+            "41.0",
+            "38.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "150",
+            "200",
+            "250"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "35",
+            "40",
+            "45"
+          ]
+        },
+        {
+          "label": "HP Regen",
+          "values": [
+            "10",
+            "12.5",
+            "15"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst",
+        "Speed Up"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Bats_Feast"
+    },
+    "extra1": {
+      "name": "Moonlit Waltz",
+      "description": "When Carmilla is nearby, Cecilion can summon her to become a Vermil Shadow around him, granting him a 520-800 shield (scales with Carmilla's level).\nCarmilla can choose to leave Cecilion and charge at the target location, gaining an equal shield while dealing 520-800 Magic Damage (scales with level) to nearby enemies and slowing them by 30% for 1s.",
+      "cooldown": "45.0",
+      "manaCost": "0",
+      "damageType": "Magic",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [
+        "Slow"
+      ],
+      "strategicTags": [
+        "Shield",
+        "Slow"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Moonlit_Waltz"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

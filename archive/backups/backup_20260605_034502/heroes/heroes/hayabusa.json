@@ -1,0 +1,236 @@
+{
+  "id": "hayabusa",
+  "name": "Hayabusa",
+  "heroName": "Hayabusa",
+  "role": [
+    "Assassin"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Jungle",
+  "lanes": [
+    "Jungle"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2270,
+    "hpRegen": 7,
+    "mana": 100,
+    "manaRegen": 15,
+    "physicalAttack": 117,
+    "physicalDefense": 17,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.06",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Ninjutsu: Trace of Shadow",
+      "description": "Hayabusa's attacks apply a stack of Shadow Mark on hit (up to 4 stacks). Each stack lasts 6s and increases Hayabusa's damage to the enemy by 5%.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ninjutsu:_Trace_of_Shadow"
+    },
+    "skill1": {
+      "name": "Ninjutsu: Phantom Shuriken",
+      "description": "Hayabusa throws three returning shurikens in the target direction, each dealing 220 (+75% Extra Physical Attack) Physical Damage to enemies hit and slowing them by 35% for 2s. Enemies hit by multiple shurikens take 70% less damage after the first hit, and Creeps take 50% less damage after the first hit. Hayabusa restores 10 energy when hitting non-Minion enemies.\nPassive: Hayabusa permanently gains 3% Spell Vamp.\n|stats1=Skill Cost|stats1_value=30/28/26/24/22/20\n|stats2=Spell Vamp|stats2_value=3%/6%/9%/12%/15%/18%\n|stats3=Base Damage|stats3_value=220/232/244/256/268/280",
+      "cooldown": "4.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+75% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "30",
+            "28",
+            "26",
+            "24",
+            "22",
+            "20"
+          ]
+        },
+        {
+          "label": "Spell Vamp",
+          "values": [
+            "3%",
+            "6%",
+            "9%",
+            "12%",
+            "15%",
+            "18%"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "220",
+            "232",
+            "244",
+            "256",
+            "268",
+            "280"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage",
+        "Buff"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ninjutsu:_Phantom_Shuriken"
+    },
+    "skill2": {
+      "name": "Ninjutsu: Quad Shadow",
+      "description": "Hayabusa dashes in the target direction and releases four phantoms that travel in separate directions. The phantoms will remain at the end of their paths or attach themselves to the first enemy hero hit, dealing 130 (+30% Extra Physical Attack) Physical Damage and slowing them by 40% for 2s. Hayabusa will immediately stop if he hits an enemy hero during the dash.\nUse Again: Hayabusa teleports to a phantom's location and reduces the cooldown of Ninjutsu: Phantom Shuriken by 1s. If the phantom is attached to an enemy hero, he also deals 130 (+30% Extra Physical Attack) Physical Damage to the enemy.\n|stats1=Cooldown|stats1_value=16.0/15.6/15.2/14.8/14.4/14.0\n|stats2=Base Damage|stats2_value=130/140/150/160/170/180\n|stats3=Extra Damage|stats3_value=130/140/150/160/170/180",
+      "cooldown": "16.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+30% Extra Physical Attack)",
+        "(+30% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "16.0",
+            "15.6",
+            "15.2",
+            "14.8",
+            "14.4",
+            "14.0"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "130",
+            "140",
+            "150",
+            "160",
+            "170",
+            "180"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "130",
+            "140",
+            "150",
+            "160",
+            "170",
+            "180"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "Summon"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ninjutsu:_Quad_Shadow"
+    },
+    "ultimate": {
+      "name": "Ougi: Shadow Kill",
+      "description": "Hayabusa blends into the shadows and launches 6 single-target attacks on enemies in the area, each dealing 140 (+32% Extra Physical Attack) Physical Damage.\nThe attacks prioritize enemies with Shadow Mark and each will consume a mark to deal 90 (+40% Extra Physical Attack) extra Physical Damage. Shadow Kill does not apply Shadow Mark.\n|quote=I, will be Akakage.\n|stats1=Hits|stats1_value=6/9/12\n|stats2=Extra Damage|stats2_value=90/120/150\n|stats3=Extra Damage Bonus|stats3_value=40%/50%/60%",
+      "cooldown": "40.0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(+32% Extra Physical Attack)",
+        "(+40% Extra Physical Attack)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Hits",
+          "values": [
+            "6",
+            "9",
+            "12"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "90",
+            "120",
+            "150"
+          ]
+        },
+        {
+          "label": "Extra Damage Bonus",
+          "values": [
+            "40%",
+            "50%",
+            "60%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ougi:_Shadow_Kill"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Jungle Tempo"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

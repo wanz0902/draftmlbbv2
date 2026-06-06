@@ -1,0 +1,263 @@
+{
+  "id": "bane",
+  "name": "Bane",
+  "heroName": "Bane",
+  "role": [
+    "Fighter",
+    "Mage"
+  ],
+  "specialty": [
+    "Damage",
+    "Crowd Control"
+  ],
+  "lane": "EXP",
+  "lanes": [
+    "EXP",
+    "Mid",
+    "Gold",
+    "Jungle"
+  ],
+  "flex_lanes": [
+    "Mid",
+    "Gold",
+    "Jungle"
+  ],
+  "releaseYear": 2024,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2381,
+    "hpRegen": 8,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 117,
+    "physicalDefense": 23,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1.06",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 260
+  },
+  "skills": {
+    "passive": {
+      "name": "Shark Bite",
+      "description": "Bane infuses his weapon with a stack of Tidal Energy each time he uses a skill (up to 2 stacks). Each of his subsequent Basic Attacks consumes a stack to deal Physical Damage equal to (95% Total Physical Attack) plus 4 (+0.4*Hero Level)% of the target's Max HP to nearby enemies.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "Physical",
+      "scaling": [
+        "(95% Total Physical Attack)",
+        "(+0.4*Hero Level)"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Shark_Bite"
+    },
+    "skill1": {
+      "name": "Crab Claw Cannon",
+      "description": "Bane fires his Crab Claw Cannon in the target direction, dealing 150 (+160% Total Physical Attack) Physical Damage to the first enemy hit and then 150% damage to a random enemy behind them (prioritizes enemy heroes). Enemies hit are slowed by 10 (+10% Total Magic Power)% for 1s.\nEvery 100 Physical Attack Bane possesses reduces this skill's cooldown by an additional 8%.\n|stats1=Cooldown|stats1_value=8.0/7.6/7.2/6.8/6.4/6.0\n|stats2=Target Damage|stats2_value=150/190/230/270/310/350\n|stats3=Extra Damage|stats3_value=150%/160%/170%/180%/190%/200%",
+      "cooldown": "8.0",
+      "manaCost": "30",
+      "damageType": "Physical",
+      "scaling": [
+        "(+160% Total Physical Attack)",
+        "(+10% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "8.0",
+            "7.6",
+            "7.2",
+            "6.8",
+            "6.4",
+            "6.0"
+          ]
+        },
+        {
+          "label": "Target Damage",
+          "values": [
+            "150",
+            "190",
+            "230",
+            "270",
+            "310",
+            "350"
+          ]
+        },
+        {
+          "label": "Extra Damage",
+          "values": [
+            "150%",
+            "160%",
+            "170%",
+            "180%",
+            "190%",
+            "200%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Damage"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Crab_Claw_Cannon"
+    },
+    "skill2": {
+      "name": "Sea Ink",
+      "description": "Bane swallows a cup of sea ink, recovering 200 (+150% Total Magic Power) (+5 (+1.5% Total Magic Power)% of his lost HP), gaining 50% Movement Speed that decays over 2.5s.\nUse Again: Bane spits corrosive ink in a fan-shaped area, dealing 140 (+130% Total Magic Power) Magic Damage (up to 200% with charging time).\nEvery 100 Magic Power Bane possesses additionally reduces this skill's cooldown by 7%.\n|stats1=Cooldown|stats1_value=7.5/6.9/6.3/5.7/5.1/4.5\n|stats2=Skill Cost|stats2_value=50/55/60/65/70/75\n|stats3=Venom Damage|stats3_value=140/180/220/260/300/340\n|stats4=HP Regen|stats4_value=5%/6%/7%/8%/9%/10%",
+      "cooldown": "7.5",
+      "manaCost": "50",
+      "damageType": "Magic",
+      "scaling": [
+        "(+150% Total Magic Power)",
+        "(+5 (+1.5% Total Magic Power)",
+        "(+130% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "7.5",
+            "6.9",
+            "6.3",
+            "5.7",
+            "5.1",
+            "4.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "50",
+            "55",
+            "60",
+            "65",
+            "70",
+            "75"
+          ]
+        },
+        {
+          "label": "Venom Damage",
+          "values": [
+            "140",
+            "180",
+            "220",
+            "260",
+            "300",
+            "340"
+          ]
+        },
+        {
+          "label": "HP Regen",
+          "values": [
+            "5%",
+            "6%",
+            "7%",
+            "8%",
+            "9%",
+            "10%"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Heal",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Sea_Ink"
+    },
+    "ultimate": {
+      "name": "Deadly Catch",
+      "description": "Bane summons a school of sharks to charge in the target direction, dealing 700 (+80% Total Physical Attack) (+150% Total Magic Power) Magic Damage to enemies hit, knocking them airborne for 0.6s, and slowing them by 75% (decays over 3s).\nThis skill deals 40% damage to turrets.\n|stats1=Cooldown|stats1_value=40.0/35.0/30.0\n|stats2=Skill Cost|stats2_value=120/140/160\n|stats3=Base Damage|stats3_value=700/900/1100",
+      "cooldown": "40.0",
+      "manaCost": "120",
+      "damageType": "Magic",
+      "scaling": [
+        "(+80% Total Physical Attack)",
+        "(+150% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "40.0",
+            "35.0",
+            "30.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "140",
+            "160"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "700",
+            "900",
+            "1100"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "Burst",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Deadly_Catch"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [
+      "Intelligence profile incomplete"
+    ],
+    "hiddenGameplans": [],
+    "macroIdentity": [
+      "Split Push",
+      "Sustained Damage",
+      "Zone Control",
+      "Burst Damage",
+      "Jungle Tempo",
+      "EXP Lane Pressure"
+    ],
+    "tempoClassification": "Mid",
+    "powerSpikeTiming": [
+      "Mid Game",
+      "Level 8"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}

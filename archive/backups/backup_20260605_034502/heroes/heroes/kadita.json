@@ -1,0 +1,237 @@
+{
+  "id": "kadita",
+  "name": "Kadita",
+  "heroName": "Kadita",
+  "role": [
+    "Assassin",
+    "Mage"
+  ],
+  "specialty": [
+    "Charge",
+    "Burst"
+  ],
+  "lane": "Mid Lane",
+  "lanes": [
+    "Mid Lane"
+  ],
+  "flex_lanes": [],
+  "releaseYear": 2020,
+  "difficulty": 5,
+  "metaTier": "B",
+  "baseStats": {
+    "hp": 2440,
+    "hpRegen": 7,
+    "mana": 500,
+    "manaRegen": 15,
+    "physicalAttack": 105,
+    "physicalDefense": 18,
+    "magicPower": 0,
+    "magicDefense": 15,
+    "attackSpeed": "1",
+    "attackSpeedRatio": 100,
+    "movementSpeed": 250
+  },
+  "skills": {
+    "passive": {
+      "name": "Thalassophobia",
+      "description": "Kadita gains the Blessing of the Ocean every 30s. The Blessing is triggered when she takes damage from enemy heroes and lasts 4s, allowing her to recover 65% of the HP lost within the duration afterward.",
+      "cooldown": "0",
+      "manaCost": "0",
+      "damageType": "None",
+      "scaling": [
+        "None"
+      ],
+      "scalingTable": [],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Heal"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Thalassophobia"
+    },
+    "skill1": {
+      "name": "Ocean Ode",
+      "description": "Kadita summons an ocean wave to carry her in the target direction and back, dealing 250 (+90% Total Magic Power) Magic Damage to enemies hit and slow them by 30%. While inside the wave, she gains Control Immunity and 50% Damage Reduction when inside the wave. This skill can pass through obstacles and terrain.\nUse Again: Kadita exits the wave without interrupting the wave's movement.\n|stats1=Cooldown|stats1_value=9.0/8.5/8.0/7.5/7.0/6.5\n|stats2=Skill Cost|stats2_value=55/60/65/70/75/80\n|stats3=Base Damage|stats3_value=250/290/330/370/410/450",
+      "cooldown": "9.0",
+      "manaCost": "55",
+      "damageType": "Magic",
+      "scaling": [
+        "(+90% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "9.0",
+            "8.5",
+            "8.0",
+            "7.5",
+            "7.0",
+            "6.5"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "250",
+            "290",
+            "330",
+            "370",
+            "410",
+            "450"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Mobility",
+        "AOE"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Ocean_Ode"
+    },
+    "skill2": {
+      "name": "Breath of the Ocean",
+      "description": "After a short delay, Kadita summons an ocean wave to erupt at the target location, dealing 350 (+140% Total Magic Power) Magic Damage to enemies hit and knocking them airborne for 1s.\nKadita can cast this skill during Ocean Ode to summon an ocean wave beneath her with a shorter eruption delay.\n|stats1=Skill Cost|stats1_value=75/80/85/90/95/100\n|stats2=Base Damage|stats2_value=350/380/410/440/470/500",
+      "cooldown": "8.0",
+      "manaCost": "75",
+      "damageType": "Magic",
+      "scaling": [
+        "(+140% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Skill Cost",
+          "values": [
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "350",
+            "380",
+            "410",
+            "440",
+            "470",
+            "500"
+          ]
+        }
+      ],
+      "crowdControlType": [
+        "CC"
+      ],
+      "strategicTags": [
+        "AOE",
+        "CC"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Breath_of_the_Ocean"
+    },
+    "ultimate": {
+      "name": "Rough Waves",
+      "description": "Kadita dives into the ground and sends ocean waves in all directions (this skill can only be interrupted by Suppression), each dealing 270 (+60% Total Magic Power) Magic Damage to enemies hit and slowing them by 30%. Enemies hit by multiple waves take increased damage. After a short period, the waves return to Kadita, each dealing 180 (+40% Total Magic Power) Magic Damage to enemies hit.\nWhen underground, Kadita becomes untargetable and gains 60% Movement Speed.\n|quote=Seas and oceans take orders from me!\n|stats1=Cooldown|stats1_value=40.0/36.0/32.0\n|stats2=Skill Cost|stats2_value=120/150/180\n|stats3=Base Damage|stats3_value=270/300/330\n|stats4=Return Damage|stats4_value=180/200/220",
+      "cooldown": "40.0",
+      "manaCost": "120",
+      "damageType": "Magic",
+      "scaling": [
+        "(+60% Total Magic Power)",
+        "(+40% Total Magic Power)"
+      ],
+      "scalingTable": [
+        {
+          "label": "Cooldown",
+          "values": [
+            "40.0",
+            "36.0",
+            "32.0"
+          ]
+        },
+        {
+          "label": "Skill Cost",
+          "values": [
+            "120",
+            "150",
+            "180"
+          ]
+        },
+        {
+          "label": "Base Damage",
+          "values": [
+            "270",
+            "300",
+            "330"
+          ]
+        },
+        {
+          "label": "Return Damage",
+          "values": [
+            "180",
+            "200",
+            "220"
+          ]
+        }
+      ],
+      "crowdControlType": [],
+      "strategicTags": [
+        "Burst",
+        "Invincible"
+      ],
+      "comboUsage": "",
+      "strategicPurpose": "",
+      "iconName": "Rough_Waves"
+    }
+  },
+  "strategicData": {
+    "draftSignals": [],
+    "hiddenGameplans": [
+      "Synergizes with generic team comps."
+    ],
+    "macroIdentity": [
+      "Backline Threat",
+      "Pick-off Specialist",
+      "Zone Control",
+      "Burst Damage"
+    ],
+    "tempoClassification": "Early",
+    "powerSpikeTiming": [
+      "Level 4",
+      "Early-Mid Game"
+    ],
+    "objectiveControlValue": 5,
+    "snowballPotential": 5,
+    "flexibilityRating": 5,
+    "deceptionValue": 5,
+    "draftPhilosophyTags": [],
+    "counterSystem": {
+      "strongAgainst": [],
+      "weakAgainst": [],
+      "synergyWith": []
+    }
+  },
+  "matchupSystem": {
+    "strongAgainst": [],
+    "weakAgainst": [],
+    "synergyHeroes": [],
+    "counterHeroes": []
+  }
+}
