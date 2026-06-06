@@ -1714,8 +1714,27 @@ app.post("/api/draft/evaluate", (_req, res): any => {
 
 // ——— WAFER AI ENDPOINTS (Server-side proxy) ———
 
+// ─── AI Diagnostics Gate — blocks test/benchmark endpoints from public access ──
+function checkDiagnosticsAccess(req: any, res: any): boolean {
+  const enabled = process.env.AI_DIAGNOSTICS_ENABLED === 'true';
+  if (!enabled) {
+    res.status(403).json({ success: false, error: 'AI diagnostics endpoints are disabled. Set AI_DIAGNOSTICS_ENABLED=true to enable.' });
+    return false;
+  }
+  const token = process.env.AI_DIAGNOSTICS_ACCESS_TOKEN;
+  if (token && token !== 'your_ai_diagnostics_access_token_here') {
+    const requestToken = req.headers['x-ai-diagnostics-token'] as string;
+    if (!requestToken || requestToken !== token) {
+      res.status(403).json({ success: false, error: 'AI diagnostics requires valid access token in x-ai-diagnostics-token header.' });
+      return false;
+    }
+  }
+  return true;
+}
+
 // GET /api/ai/test — Test Wafer AI connection (backward compat)
-app.get("/api/ai/test", async (_req, res) => {
+app.get("/api/ai/test", async (req, res) => {
+  if (!checkDiagnosticsAccess(req, res)) return;
   try {
     const result = await testWafer();
     res.json({
@@ -1739,7 +1758,8 @@ app.get("/api/ai/test", async (_req, res) => {
 });
 
 // GET /api/ai/providers/test — Test all AI providers (TokenPlan + Wafer)
-app.get("/api/ai/providers/test", async (_req, res) => {
+app.get("/api/ai/providers/test", async (req, res) => {
+  if (!checkDiagnosticsAccess(req, res)) return;
   try {
     const results = await aiProviderRouter.testAllProviders();
     const config = aiProviderRouter.getRouterConfig();
@@ -1760,7 +1780,8 @@ app.get("/api/ai/providers/test", async (_req, res) => {
 });
 
 // GET /api/ai/providers/benchmark — Benchmark all models across providers
-app.get("/api/ai/providers/benchmark", async (_req, res) => {
+app.get("/api/ai/providers/benchmark", async (req, res) => {
+  if (!checkDiagnosticsAccess(req, res)) return;
   try {
     const testMsg = [
       { role: "system", content: "Reply with exactly 10 words about MLBB draft." },
@@ -2079,7 +2100,8 @@ app.post("/api/ai/draft-analysis", async (req, res) => {
 });
 
 // GET /api/ai/cache-stats — Show cache status (all providers)
-app.get("/api/ai/cache-stats", (_req, res) => {
+app.get("/api/ai/cache-stats", (req, res) => {
+  if (!checkDiagnosticsAccess(req, res)) return;
   res.json(aiProviderRouter.getCacheStats());
 });
 

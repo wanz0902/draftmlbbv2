@@ -30,10 +30,10 @@
 | `POST /api/ai/draft-analysis` | Post-draft narrative analysis | ✅ User | Router: Wafer → TokenPlan → Local | ✅ Logged | ✅ 5min TTL | Low (validated) | Low (analysis tier) | ✅ Production |
 | `POST /api/ai/deep-analysis` | Premium deep strategic analysis | ⚠️ Manual only | Router: Premium model (expensive) | ✅ Logged | ❌ No cache | Medium (less constrained) | ⚠️ HIGH | ✅ Gated (DEEP_ANALYSIS_ENABLED + token) |
 | `POST /api/ai/recommendation-explain` | Realtime recommendation narration | ✅ User | Router: Realtime model (cheap) | ❌ **NOT logged** | ✅ Provider cache | Low (short output) | Low | ✅ Production |
-| `GET /api/ai/test` | Wafer connection test | ⚠️ Internal | Wafer realtime | No | No | None | Minimal | ✅ OK |
-| `GET /api/ai/providers/test` | Test all providers | ⚠️ Internal | Both | No | No | None | Minimal | ✅ OK |
-| `GET /api/ai/providers/benchmark` | Benchmark model latencies | ⚠️ Internal | Both (4 calls) | No | No | None | Low | ⚠️ Don't expose publicly |
-| `GET /api/ai/cache-stats` | Show cache status | ⚠️ Internal | N/A | N/A | N/A | None | None | ✅ OK |
+| `GET /api/ai/test` | Wafer connection test | ⚠️ Internal | Wafer realtime | No | No | None | Minimal | ✅ Gated (AI_DIAGNOSTICS_ENABLED) |
+| `GET /api/ai/providers/test` | Test all providers | ⚠️ Internal | Both | No | No | None | Minimal | ✅ Gated (AI_DIAGNOSTICS_ENABLED) |
+| `GET /api/ai/providers/benchmark` | Benchmark model latencies | ⚠️ Internal | Both (4 calls) | No | No | None | ⚠️ HIGH | ✅ Gated (AI_DIAGNOSTICS_ENABLED + token) |
+| `GET /api/ai/cache-stats` | Show cache status | ⚠️ Internal | N/A | N/A | N/A | None | None | ✅ Gated (AI_DIAGNOSTICS_ENABLED) |
 | `POST /api/draft/ai-recommend` | **Legacy** Gemini AI coach | ✅ User (Ranked) | Gemini/OpenAI | ❌ Not logged | No | ⚠️ Medium | Medium | ⚠️ Legacy — review/deprecate |
 | `POST /api/draft/final-analysis` | **Legacy** Gemini final analysis | ✅ User (fallback) | Gemini | ❌ Not logged | No | ⚠️ Medium | Medium | ⚠️ Legacy — review/deprecate |
 | `POST /api/draft/evaluate` | ~~Legacy Gemini evaluation~~ **DEPRECATED (Step 5C)** | ❌ Dead code | ~~Gemini~~ → 410 Gone | N/A | N/A | ~~High (fabricated win %)~~ Removed | None | 🚫 Deprecated — returns 410 |
