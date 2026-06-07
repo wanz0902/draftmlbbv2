@@ -54,42 +54,31 @@
 | Overflow | Could collide | Consistent sizing prevents overlap |
 
 ### LIVE ONLY Badge:
-- **Dihapus dari desktop header** — redundant dengan ONLINE badge yang sudah menunjukkan status live
+- **Dihapus dari desktop header** — redundant dengan ONLINE badge
 - **Dihapus dari mobile header** — juga redundant
-- Online badge sudah cukup untuk menunjukkan status live
 
 ---
 
 ## D. Perbaikan Spacing / Alignment
 
 - Header padding: `px-3 py-3` → `px-4 py-2.5 sm:px-6 lg:px-8`
-- Gap antar sections: `gap-2` → explicit spacing per section
+- Gap antar sections: explicit spacing per section
 - Vertical alignment: `items-center` on all sections
-- Separator antara badges dan auth: vertical divider
-- Nav link text: `text-sm` → `text-[13px]` (slightly smaller, cleaner)
-- Nav link padding: `px-3 py-2` → `px-2.5 py-1.5` (tighter, less overlap)
+- Separator: vertical divider antara badges dan auth
+- Nav links: tighter padding, smaller text
 
 ---
 
 ## E. Responsive Behavior
 
 - Desktop XL: full 3-section layout
-- Desktop LG: badges + auth visible, nav centered
-- Tablet/SM: nav hidden (mobile menu), badges inline on mobile
-- Mobile: hamburger menu, badges in mobile drawer
+- Desktop LG: badges + auth visible
+- Tablet/SM: nav hidden, mobile menu
+- Mobile: hamburger menu, badges in drawer
 
 ---
 
-## F. Files Changed
-
-| File | Perubahan |
-|------|-----------|
-| `src/components/Navbar.tsx` | Full rewrite: 3-section layout, spacing, badge cleanup |
-| `src/components/VisitorStatsBadge.tsx` | Pill sizing, consistency, better spacing |
-
----
-
-## G. QA Results
+## F. QA Results
 
 | Test | Status |
 |------|--------|
@@ -104,7 +93,7 @@
 
 ---
 
-## H. Validation Results
+## G. Validation Results
 
 | Validasi | Status |
 |----------|--------|
@@ -114,7 +103,7 @@
 
 ---
 
-## I. Commit Hash
+## H. Commit Hash
 
 ```
 see below
@@ -122,6 +111,6 @@ see below
 
 ---
 
-## J. Localhost Status
+## I. Localhost Status
 
 - URL: `http://localhost:5173`
