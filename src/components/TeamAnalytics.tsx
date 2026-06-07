@@ -588,21 +588,34 @@ export default function TeamAnalytics({
                       src={getTeamLogoImg(selectedTeam.key)}
                       fallbackText={selectedTeam.name}
                       alt={selectedTeam.name}
-                      className="h-14 w-14 object-contain bg-gray-900 p-2 rounded-xl border border-indigo-500/30 shadow-inner"
-                      containerClassName="h-14 w-14 rounded-xl text-[10px] bg-gray-900 border border-indigo-500/30"
+                      className="h-16 w-16 object-contain bg-gray-900/80 p-2.5 rounded-2xl border border-indigo-500/20 shadow-lg shadow-black/30"
+                      containerClassName="h-16 w-16 rounded-2xl text-sm bg-gray-900 border border-indigo-500/20"
                     />
+                    {selectedStanding && (
+                      <div className="absolute -bottom-1 -right-1 rounded-full bg-gray-950 border border-gray-700 px-1.5 py-0.5 text-[9px] font-mono font-black text-white shadow">
+                        #{selectedStanding.rank}
+                      </div>
+                    )}
                   </div>
                   <div>
-                    <span className="inline-block rounded bg-indigo-900/20 border border-indigo-500/10 px-2 py-0.5 text-[9px] font-semibold text-indigo-400 uppercase tracking-widest mb-1 font-mono">
-                      PORTAL INTEL TIM
-                    </span>
                     <h3 className="font-sans text-lg font-bold tracking-tight text-white mb-0.5">
                       {selectedTeam.name}
                     </h3>
-                    <div className="flex items-center gap-1.5 font-mono text-[9px] text-gray-500">
-                      <span>REGIONAL ID S17</span>
-                      <span>•</span>
-                      <span>KEY: {selectedTeam.key}</span>
+                    <div className="flex items-center gap-2 mt-0.5">
+                      <span className="inline-block rounded bg-indigo-900/20 border border-indigo-500/10 px-2 py-0.5 text-[9px] font-semibold text-indigo-400 uppercase tracking-widest font-mono">
+                        MPL ID S17
+                      </span>
+                      {selectedStanding && (
+                        <span className={`inline-block rounded px-2 py-0.5 text-[9px] font-bold font-mono uppercase tracking-wider ${
+                          selectedStanding.rank <= 2
+                            ? "bg-emerald-950/30 border border-emerald-500/20 text-emerald-400"
+                            : selectedStanding.rank <= 6
+                              ? "bg-indigo-950/30 border border-indigo-500/20 text-indigo-400"
+                              : "bg-rose-950/30 border border-rose-500/20 text-rose-400"
+                        }`}>
+                          {selectedStanding.rank <= 2 ? "Upper Bracket" : selectedStanding.rank <= 6 ? "Playoff" : "Eliminasi"}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -621,7 +634,7 @@ export default function TeamAnalytics({
                     </div>
                   </div>
                   <div className="rounded-lg border border-amber-500/10 bg-amber-950/10 px-3 py-2">
-                    <div className="font-mono text-[9px] uppercase text-amber-400">WR</div>
+                    <div className="font-mono text-[9px] uppercase text-amber-400">Win Rate</div>
                     <div className="font-mono text-sm font-bold text-white">
                       {selectedStanding?.winrate ?? selectedTeam.winRate}%
                     </div>
@@ -670,37 +683,37 @@ export default function TeamAnalytics({
                 <div className="flex flex-col gap-5 animate-fade-in text-gray-250">
                   {/* General Stats summary card */}
                   <div className="grid grid-cols-3 gap-3">
-                    <div className="rounded-xl bg-gray-900/40 border border-gray-950 p-3.5 text-center flex flex-col items-center justify-center shadow-inner">
+                    <div className="rounded-xl bg-gray-900/40 border border-gray-800/50 p-3.5 text-center flex flex-col items-center justify-center shadow-inner">
                       <span className="font-mono text-[9px] text-gray-500 uppercase tracking-wider mb-1">
-                        MATCHES PLAYED
+                        SERIES DIMAINKAN
                       </span>
                       <span className="font-mono text-xl font-bold text-white tracking-tight">
                         {loadingMatches ? "..." : teamMatches.length}
                       </span>
-                      <span className="font-sans text-[8px] text-gray-400 block mt-1 uppercase font-semibold">
-                        Season 17
+                      <span className="font-sans text-[8px] text-gray-500 block mt-1 uppercase font-semibold">
+                        Regular Season
                       </span>
                     </div>
                     <div className="rounded-xl bg-emerald-950/5 border border-emerald-500/10 p-3.5 text-center flex flex-col items-center justify-center">
                       <span className="font-mono text-[9px] text-emerald-500 uppercase tracking-wider mb-1">
-                        TOTAL MATCH WINS
+                        SERIES WINS
                       </span>
                       <span className="font-mono text-xl font-bold text-emerald-400 tracking-tight">
                         {selectedTeam.wins}
                       </span>
-                      <span className="font-sans text-[8px] text-emerald-500/80 block mt-1 uppercase font-bold">
-                        REGULAR SCORE
+                      <span className="font-sans text-[8px] text-emerald-500/60 block mt-1 uppercase font-semibold">
+                        W-L: {selectedTeam.wins}-{selectedTeam.losses}
                       </span>
                     </div>
                     <div className="rounded-xl bg-rose-950/5 border border-rose-500/10 p-3.5 text-center flex flex-col items-center justify-center">
                       <span className="font-mono text-[9px] text-rose-500 uppercase tracking-wider mb-1">
-                        TOTAL LOSSES
+                        SERIES LOSSES
                       </span>
                       <span className="font-mono text-xl font-bold text-rose-400 tracking-tight">
                         {selectedTeam.losses}
                       </span>
-                      <span className="font-sans text-[8px] text-gray-500 block mt-1 uppercase font-bold">
-                        DEFEATED MAP
+                      <span className="font-sans text-[8px] text-gray-500 block mt-1 uppercase font-semibold">
+                        Game Diff: {selectedStanding ? (selectedStanding.gameDiff > 0 ? '+' : '') + selectedStanding.gameDiff : '—'}
                       </span>
                     </div>
                   </div>
@@ -768,9 +781,9 @@ export default function TeamAnalytics({
 
                   {/* Comfort Heroes with Actual Winrates */}
                   <div className="border-t border-gray-900 pt-4 flex flex-col gap-3">
-                    <h4 className="font-sans text-xs font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1.5">
+                    <h4 className="font-sans text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-1.5">
                       <TrendingUp className="h-4 w-4 text-indigo-400" />
-                      Hero Kenyamanan Paling Sering Di-pick (Comfort Picks)
+                      Comfort Picks — Hero Paling Sering Di-pick
                     </h4>
                     {comfortHeroesList.length > 0 ? (
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -797,11 +810,13 @@ export default function TeamAnalytics({
                               </div>
                             </div>
                             <div className="text-right">
-                              <span className="font-mono text-xs font-bold text-emerald-400 block animate-pulse">
+                              <span className={`font-mono text-xs font-bold block ${
+                                hero.winRate >= 60 ? "text-emerald-400" : hero.winRate >= 40 ? "text-amber-400" : "text-rose-400"
+                              }`}>
                                 {hero.winRate}% WR
                               </span>
-                              <span className="font-mono text-[8px] text-gray-500 uppercase tracking-widest font-bold block mt-0.5">
-                                PRIO #{i + 1}
+                              <span className="font-mono text-[8px] text-gray-600 uppercase tracking-widest font-bold block mt-0.5">
+                                #{i + 1} Prio
                               </span>
                             </div>
                           </div>
@@ -809,7 +824,7 @@ export default function TeamAnalytics({
                       </div>
                     ) : (
                       <p className="text-xs text-gray-500 italic pl-1 py-4 font-sans text-center">
-                        Data pick dan history game tim tidak terdeteksi untuk sesi ini.
+                        Belum ada data pick/ban dari game tim ini.
                       </p>
                     )}
                   </div>
@@ -818,18 +833,19 @@ export default function TeamAnalytics({
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 border-t border-gray-900 pt-4">
                     {/* Banned Against us */}
                     <div className="flex flex-col gap-3.5">
-                      <h4 className="font-sans text-xs font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1.5">
+                      <h4 className="font-sans text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-1.5">
                         <AlertTriangle className="h-4 w-4 text-orange-400" />
-                        Apresiasi Target Ban Lawan (Targeted Bans Against us)
+                        Target Ban Lawan ke Tim Ini
                       </h4>
                       {targetBansList.length > 0 ? (
                         <div className="flex flex-col gap-2">
-                          {targetBansList.map((hero) => (
+                          {targetBansList.map((hero, i) => (
                             <div
                               key={hero.name}
                               className="flex items-center justify-between rounded-lg bg-orange-950/5 p-2.5 border border-orange-900/10"
                             >
                               <div className="flex items-center gap-2.5">
+                                <span className="font-mono text-[9px] text-orange-400/60 font-bold w-4">{i + 1}.</span>
                                 <FallbackImage
                                   src={getHeroImg(hero.name)}
                                   fallbackText={hero.name}
@@ -841,31 +857,32 @@ export default function TeamAnalytics({
                                   {hero.name}
                                 </span>
                               </div>
-                              <span className="font-mono text-[10px] text-orange-400 font-bold uppercase bg-orange-950/30 px-2 py-0.5 rounded border border-orange-500/5">
-                                {hero.count} BAN AGAINST
+                              <span className="font-mono text-[10px] text-orange-400 font-bold bg-orange-950/30 px-2 py-0.5 rounded border border-orange-500/5">
+                                {hero.count}×
                               </span>
                             </div>
                           ))}
                         </div>
                       ) : (
-                        <p className="text-xs text-gray-500 italic font-sans py-2 text-center">No target ban data detected.</p>
+                        <p className="text-xs text-gray-500 italic font-sans py-2 text-center">Belum ada data target ban.</p>
                       )}
                     </div>
 
                     {/* Most Banned by us */}
                     <div className="flex flex-col gap-3.5">
-                      <h4 className="font-sans text-xs font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1.5">
+                      <h4 className="font-sans text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-1.5">
                         <ShieldCheck className="h-4 w-4 text-emerald-400" />
-                        Draf Larangan Utama (Our Team Bans)
+                        Ban Favorit Tim Ini
                       </h4>
                       {ourBansList.length > 0 ? (
                         <div className="flex flex-col gap-2">
-                          {ourBansList.map((hero) => (
+                          {ourBansList.map((hero, i) => (
                             <div
                               key={hero.name}
                               className="flex items-center justify-between rounded-lg bg-emerald-950/5 p-2.5 border border-emerald-900/10"
                             >
                               <div className="flex items-center gap-2.5">
+                                <span className="font-mono text-[9px] text-emerald-400/60 font-bold w-4">{i + 1}.</span>
                                 <FallbackImage
                                   src={getHeroImg(hero.name)}
                                   fallbackText={hero.name}
@@ -877,14 +894,14 @@ export default function TeamAnalytics({
                                   {hero.name}
                                 </span>
                               </div>
-                              <span className="font-mono text-[10px] text-emerald-400 font-bold uppercase bg-emerald-950/30 px-2 py-0.5 rounded border border-emerald-500/5">
-                                {hero.count} TOTAL BAN
+                              <span className="font-mono text-[10px] text-emerald-400 font-bold bg-emerald-950/30 px-2 py-0.5 rounded border border-emerald-500/5">
+                                {hero.count}×
                               </span>
                             </div>
                           ))}
                         </div>
                       ) : (
-                        <p className="text-xs text-gray-500 italic font-sans py-2 text-center">No ban stats detected.</p>
+                        <p className="text-xs text-gray-500 italic font-sans py-2 text-center">Belum ada data ban.</p>
                       )}
                     </div>
                   </div>
@@ -896,16 +913,19 @@ export default function TeamAnalytics({
                 <div className="flex flex-col gap-4 animate-fade-in relative">
                   {/* Filter bar */}
                   <div className="flex items-center gap-3 flex-wrap">
-                    {(["all", "win", "lose"] as const).map((f) => (
-                      <button key={f} onClick={() => setMatchResultFilter(f)}
-                        className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                          matchResultFilter === f 
-                            ? "bg-indigo-600 text-white" 
-                            : "bg-gray-900 text-gray-400 hover:text-gray-200"
-                        }`}>
-                        {f === "all" ? "Semua" : f === "win" ? "Menang" : "Kalah"}
-                      </button>
-                    ))}
+                    {(["all", "win", "lose"] as const).map((f) => {
+                      const label = f === "all" ? "Semua Series" : f === "win" ? `Menang${matchHistoryData ? ` (${matchHistoryData.wins})` : ''}` : `Kalah${matchHistoryData ? ` (${matchHistoryData.losses})` : ''}`;
+                      return (
+                        <button key={f} onClick={() => setMatchResultFilter(f)}
+                          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                            matchResultFilter === f 
+                              ? f === "win" ? "bg-emerald-600 text-white" : f === "lose" ? "bg-rose-600 text-white" : "bg-indigo-600 text-white"
+                              : "bg-gray-900 text-gray-400 hover:text-gray-200"
+                          }`}>
+                          {label}
+                        </button>
+                      );
+                    })}
                     <div className="flex items-center gap-1 rounded-lg border border-gray-800 bg-gray-900/50 p-1 flex-wrap">
                       <CalendarDays className="ml-1 h-3.5 w-3.5 text-indigo-400" />
                       {Array.from({ length: 9 }, (_, index) => index + 1).map((week) => (
@@ -944,16 +964,16 @@ export default function TeamAnalytics({
                   {matchHistoryData && (
                     <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-7">
                       {[
-                        ["Total", matchHistoryData.totalMatches, "text-gray-200"],
-                        ["Showing", matchHistoryData.filteredMatches, "text-indigo-300"],
-                        ["W", matchHistoryData.wins, "text-emerald-400"],
-                        ["L", matchHistoryData.losses, "text-red-400"],
-                        ["WR", `${matchHistoryData.winrate}%`, "text-amber-300"],
-                        ["Games", matchHistoryData.gamesCount, "text-gray-200"],
-                        ["Game Rec", matchHistoryData.gameRecord, "text-cyan-300"],
+                        ["Total Series", matchHistoryData.totalMatches, "text-gray-200"],
+                        ["Ditampilkan", matchHistoryData.filteredMatches, "text-indigo-300"],
+                        ["Wins", matchHistoryData.wins, "text-emerald-400"],
+                        ["Losses", matchHistoryData.losses, "text-red-400"],
+                        ["Win Rate", `${matchHistoryData.winrate}%`, "text-amber-300"],
+                        ["Total Games", matchHistoryData.gamesCount, "text-gray-200"],
+                        ["Game W-L", matchHistoryData.gameRecord, "text-cyan-300"],
                       ].map(([label, value, color]) => (
                         <div key={label} className="rounded-lg border border-gray-900 bg-black/20 px-3 py-2">
-                          <div className="font-mono text-[9px] uppercase text-gray-600">{label}</div>
+                          <div className="font-mono text-[9px] uppercase text-gray-500">{label}</div>
                           <div className={`font-mono text-sm font-black ${color}`}>{value}</div>
                         </div>
                       ))}
@@ -971,8 +991,12 @@ export default function TeamAnalytics({
 
                   {/* Empty state */}
                   {!loadingMatchHistory && matchHistoryData && matchHistoryData.series.length === 0 && (
-                    <div className="text-center text-gray-500 py-8 text-sm">
-                      Tidak ada match ditemukan.
+                    <div className="text-center text-gray-500 py-12 text-sm flex flex-col items-center gap-2">
+                      <CalendarDays className="h-8 w-8 text-gray-700" />
+                      <span>Tidak ada series ditemukan untuk filter ini.</span>
+                      <button type="button" onClick={resetMatchFilters} className="text-indigo-400 hover:text-indigo-300 text-xs font-medium mt-1">
+                        Reset filter
+                      </button>
                     </div>
                   )}
 
