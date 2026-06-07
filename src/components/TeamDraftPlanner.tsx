@@ -1,466 +1,570 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
-  ArrowLeft,
+  Ban,
+  BookOpen,
+  ChevronDown,
+  ChevronRight,
+  Compass,
+  Edit3,
+  FileText,
+  Layers,
+  Plus,
+  Save,
+  Search,
   Shield,
+  Star,
   Swords,
   Target,
-  Users,
+  Trash2,
   Trophy,
-  BarChart3,
+  Users,
+  X,
   Zap,
-  ChevronRight,
-  Ban,
-  Star,
-  TrendingUp,
 } from "lucide-react";
 import FallbackImage from "./FallbackImage";
 import { getHeroImageUrl, getHeroRole } from "../lib/heroUtils";
+import { HeroStats } from "../types";
+
+const LANES = ["EXP", "Jungle", "Mid", "Gold", "Roam"] as const;
+type Lane = typeof LANES[number];
+
+interface DraftPlan {
+  id: string;
+  name: string;
+  side: "BLUE" | "RED";
+  teamName: string;
+  createdAt: number;
+  updatedAt: number;
+  lanes: Record<Lane, { main: string; backup: string }>;
+  priorityHeroes: string[];
+  plannedBans: string[];
+  enemyThreats: string[];
+  notes: string;
+}
+
+function emptyPlan(): DraftPlan {
+  const lanes: DraftPlan["lanes"] = {} as any;
+  for (const lane of LANES) lanes[lane] = { main: "", backup: "" };
+  return {
+    id: `plan_${Date.now()}`,
+    name: "Draft Plan Baru",
+    side: "BLUE",
+    teamName: "",
+    createdAt: Date.now(),
+    updatedAt: Date.now(),
+    lanes,
+    priorityHeroes: [],
+    plannedBans: [],
+    enemyThreats: [],
+    notes: "",
+  };
+}
+
+const STORAGE_KEY = "mlbb_tdp_plans";
+
+function loadPlans(): DraftPlan[] {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return [];
+    return JSON.parse(raw);
+  } catch { return []; }
+}
+
+function savePlansToStorage(plans: DraftPlan[]) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(plans)); } catch {}
+}
 
 interface TeamDraftPlannerProps {
+  heroes: HeroStats[];
   heroAssets: Record<string, string>;
   onOpenHeroIntelligence?: (heroName: string) => void;
 }
 
-interface TeamInfo {
-  key: string;
-  name: string;
-  logo: string;
-}
+function HeroPickerModal({
+  heroes,
+  heroAssets,
+  exclude,
+  onSelect,
+  onClose,
+}: {
+  heroes: HeroStats[];
+  heroAssets: Record<string, string>;
+  exclude: Set<string>;
+  onSelect: (name: string) => void;
+  onClose: () => void;
+}) {
+  const [search, setSearch] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => { inputRef.current?.focus(); }, []);
 
-interface ComfortHero {
-  heroName: string;
-  picks: number;
-  wins: number;
-  winRate: number;
-}
+  const filtered = useMemo(() => {
+    const q = search.toLowerCase();
+    return heroes.filter(h =>
+      !exclude.has(h.hero_name) &&
+      h.hero_name.toLowerCase().includes(q)
+    ).slice(0, 30);
+  }, [heroes, search, exclude]);
 
-interface TeamIntel {
-  teamId: string;
-  teamName: string;
-  totalGames: number;
-  totalWins: number;
-  totalLosses: number;
-  winRate: number;
-  blueGames: number;
-  blueWins: number;
-  redGames: number;
-  redWins: number;
-  comfortHeroes: ComfortHero[];
-  topBans: Array<{ heroName: string; count: number }>;
-  targetBans: Array<{ opponent: string; heroes: Array<{ heroName: string; banCount: number }> }>;
-  draftTendencies: string[];
-  signatureCompositions: Array<{ name: string; heroes: string[]; games: number; winRate: number }>;
-  heroPairings: Array<{ heroA: string; heroB: string; games: number; winRate: number }>;
-  firstPickPreference: { heroName: string; count: number; winRate: number } | null;
-  secondPickPreference: { heroName: string; count: number; winRate: number } | null;
-}
-
-const colorMap: Record<string, string> = {
-  cyan: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
-  violet: "text-violet-400 bg-violet-500/10 border-violet-500/20",
-  amber: "text-amber-400 bg-amber-500/10 border-amber-500/20",
-  rose: "text-rose-400 bg-rose-500/10 border-rose-500/20",
-  emerald: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
-};
-
-function StatCard({ label, value, color }: { label: string; value: string | number; color: string }) {
   return (
-    <div className="rounded-xl border border-white/[0.06] bg-[#080e1a]/80 p-3 text-center">
-      <div className="font-display text-2xl font-black text-white">{value}</div>
-      <div className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-slate-500">{label}</div>
-    </div>
-  );
-}
-
-function WinBar({ wins, total }: { wins: number; total: number }) {
-  const pct = total > 0 ? Math.round((wins / total) * 100) : 0;
-  return (
-    <div className="flex items-center gap-2">
-      <div className="flex-1 h-2 overflow-hidden rounded-full bg-white/5">
-        <div className="h-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 transition-all" style={{ width: `${pct}%` }} />
+    <div className="fixed inset-0 z-[9999] flex items-start justify-center pt-[10vh] bg-black/70 backdrop-blur-sm" onClick={onClose}>
+      <div className="w-full max-w-md rounded-2xl border border-white/10 bg-[#0a1020] shadow-2xl overflow-hidden" onClick={e => e.stopPropagation()}>
+        <div className="flex items-center gap-2 border-b border-white/[0.06] px-4 py-3">
+          <Search className="h-4 w-4 text-slate-500 shrink-0" />
+          <input
+            ref={inputRef}
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            placeholder="Cari hero..."
+            className="flex-1 bg-transparent text-sm text-white outline-none placeholder:text-slate-600"
+          />
+          <button onClick={onClose} className="p-1 text-slate-500 hover:text-white"><X className="h-4 w-4" /></button>
+        </div>
+        <div className="max-h-[50vh] overflow-y-auto p-2 grid grid-cols-4 sm:grid-cols-5 gap-1.5">
+          {filtered.map(h => (
+            <button
+              key={h.hero_name}
+              onClick={() => { onSelect(h.hero_name); onClose(); }}
+              className="flex flex-col items-center gap-1 rounded-xl p-2 hover:bg-white/[0.06] transition cursor-pointer"
+            >
+              <div className="h-10 w-10 overflow-hidden rounded-lg border border-white/10 bg-[#060d1a]">
+                <FallbackImage src={getHeroImageUrl(h.hero_name, heroAssets)} fallbackText={h.hero_name} alt={h.hero_name} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
+              </div>
+              <span className="text-[9px] text-slate-400 truncate w-full text-center">{h.hero_name}</span>
+            </button>
+          ))}
+          {filtered.length === 0 && <div className="col-span-full py-6 text-center text-xs text-slate-500">Tidak ditemukan.</div>}
+        </div>
       </div>
-      <span className="font-mono text-[10px] font-bold text-cyan-400 w-8 text-right">{pct}%</span>
     </div>
   );
 }
 
-export default function TeamDraftPlanner({ heroAssets, onOpenHeroIntelligence }: TeamDraftPlannerProps) {
-  const [teams, setTeams] = useState<TeamInfo[]>([]);
-  const [selectedTeam, setSelectedTeam] = useState<string>("");
-  const [intel, setIntel] = useState<TeamIntel | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [activeTab, setActiveTab] = useState<"comfort" | "bans" | "pairings" | "tendencies">("comfort");
+function HeroTag({ name, heroAssets, onRemove, color = "slate" }: { name: string; heroAssets: Record<string, string>; onRemove: () => void; color?: string }) {
+  const colors: Record<string, string> = {
+    slate: "border-white/10 bg-white/[0.04] text-slate-300",
+    amber: "border-amber-500/20 bg-amber-500/10 text-amber-300",
+    rose: "border-rose-500/20 bg-rose-500/10 text-rose-300",
+    cyan: "border-cyan-500/20 bg-cyan-500/10 text-cyan-300",
+  };
+  return (
+    <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[10px] font-bold ${colors[color] || colors.slate}`}>
+      <div className="h-4 w-4 overflow-hidden rounded-full bg-[#060d1a]">
+        <FallbackImage src={getHeroImageUrl(name, heroAssets)} fallbackText={name} alt={name} className="h-full w-full object-cover" containerClassName="h-full w-full text-[4px]" />
+      </div>
+      {name}
+      <button onClick={onRemove} className="ml-0.5 text-slate-500 hover:text-white"><X className="h-3 w-3" /></button>
+    </span>
+  );
+}
 
-  useEffect(() => {
-    fetch("/api/draft/teams")
-      .then((r) => r.json())
-      .then((d) => { if (d.teams) setTeams(d.teams); })
-      .catch(() => {});
+export default function TeamDraftPlanner({ heroes, heroAssets, onOpenHeroIntelligence }: TeamDraftPlannerProps) {
+  const [mode, setMode] = useState<"plan" | "mpl">("plan");
+  const [plans, setPlans] = useState<DraftPlan[]>(() => loadPlans());
+  const [activePlanId, setActivePlanId] = useState<string | null>(plans[0]?.id || null);
+  const [pickerTarget, setPickerTarget] = useState<{ lane?: Lane; field?: "main" | "backup"; list?: "priority" | "bans" | "threats" } | null>(null);
+
+  const activePlan = plans.find(p => p.id === activePlanId) || null;
+
+  const updatePlan = useCallback((id: string, updater: (p: DraftPlan) => DraftPlan) => {
+    setPlans(prev => {
+      const next = prev.map(p => p.id === id ? { ...updater(p), updatedAt: Date.now() } : p);
+      savePlansToStorage(next);
+      return next;
+    });
   }, []);
 
-  useEffect(() => {
-    if (!selectedTeam) { setIntel(null); return; }
-    setLoading(true);
-    setError("");
-    fetch(`/api/draft/team-intel/${selectedTeam}`)
-      .then((r) => { if (!r.ok) throw new Error("Failed"); return r.json(); })
-      .then((d) => setIntel(d))
-      .catch(() => setError("Gagal memuat data tim."))
-      .finally(() => setLoading(false));
-  }, [selectedTeam]);
+  const createPlan = () => {
+    const p = emptyPlan();
+    setPlans(prev => { const next = [p, ...prev]; savePlansToStorage(next); return next; });
+    setActivePlanId(p.id);
+  };
 
-  const selectedTeamInfo = teams.find((t) => t.key === selectedTeam);
+  const deletePlan = (id: string) => {
+    setPlans(prev => { const next = prev.filter(p => p.id !== id); savePlansToStorage(next); return next; });
+    if (activePlanId === id) setActivePlanId(null);
+  };
 
-  const tabs = [
-    { id: "comfort" as const, label: "Comfort Pool", icon: Star },
-    { id: "bans" as const, label: "Ban Tendencies", icon: Ban },
-    { id: "pairings" as const, label: "Hero Pairings", icon: Swords },
-    { id: "tendencies" as const, label: "Draft Style", icon: TrendingUp },
-  ];
+  const usedHeroes = useMemo(() => {
+    if (!activePlan) return new Set<string>();
+    const s = new Set<string>();
+    for (const lane of LANES) {
+      if (activePlan.lanes[lane].main) s.add(activePlan.lanes[lane].main);
+      if (activePlan.lanes[lane].backup) s.add(activePlan.lanes[lane].backup);
+    }
+    activePlan.priorityHeroes.forEach(h => s.add(h));
+    activePlan.plannedBans.forEach(h => s.add(h));
+    activePlan.enemyThreats.forEach(h => s.add(h));
+    return s;
+  }, [activePlan]);
+
+  const handleHeroSelect = (name: string) => {
+    if (!activePlan || !pickerTarget) return;
+    const { lane, field, list } = pickerTarget;
+    if (lane && field) {
+      updatePlan(activePlan.id, p => ({ ...p, lanes: { ...p.lanes, [lane]: { ...p.lanes[lane], [field]: name } } }));
+    } else if (list === "priority") {
+      updatePlan(activePlan.id, p => ({ ...p, priorityHeroes: [...p.priorityHeroes, name] }));
+    } else if (list === "bans") {
+      updatePlan(activePlan.id, p => ({ ...p, plannedBans: [...p.plannedBans, name] }));
+    } else if (list === "threats") {
+      updatePlan(activePlan.id, p => ({ ...p, enemyThreats: [...p.enemyThreats, name] }));
+    }
+  };
+
+  const removeFromList = (list: "priorityHeroes" | "plannedBans" | "enemyThreats", name: string) => {
+    if (!activePlan) return;
+    updatePlan(activePlan.id, p => ({ ...p, [list]: p[list].filter(h => h !== name) }));
+  };
 
   return (
     <div className="mx-auto max-w-5xl space-y-6">
       {/* Header */}
       <div className="text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/20 bg-amber-500/5 px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-amber-400">
-          <Target className="h-3 w-3" />
+          <Compass className="h-3 w-3" />
           Team Draft Planner
         </div>
         <h1 className="mt-4 font-display text-3xl font-black tracking-tight text-white sm:text-4xl">
-          Analisis Tim Lawan
+          Custom Draft Workspace
         </h1>
         <p className="mt-2 text-sm text-slate-400 max-w-lg mx-auto">
-          Pilih tim MPL untuk melihat profil draft, comfort hero, ban tendencies, dan hero pairings.
+          Rancang draft plan manual — pilih hero per role, set ban, catat strategi. Data MPL opsional.
         </p>
       </div>
 
-      {/* Team Selector */}
-      <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-2">
-        {teams.map((t) => (
-          <button
-            key={t.key}
-            onClick={() => setSelectedTeam(selectedTeam === t.key ? "" : t.key)}
-            className={`flex flex-col items-center gap-2 rounded-xl border p-3 transition-all cursor-pointer ${
-              selectedTeam === t.key
-                ? "border-amber-500/40 bg-amber-950/20 shadow-[0_0_20px_-8px_rgba(245,158,11,0.3)]"
-                : "border-white/[0.06] bg-white/[0.02] hover:border-white/[0.12] hover:bg-white/[0.04]"
-            }`}
-          >
-            <div className="h-10 w-10 overflow-hidden rounded-lg border border-white/10 bg-[#060d1a]">
-              {t.logo ? (
-                <img src={t.logo} alt={t.name} className="h-full w-full object-contain p-0.5" />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-[10px] font-black text-amber-400">{t.key.slice(0, 2)}</div>
-              )}
-            </div>
-            <span className={`text-[10px] font-bold uppercase tracking-wider ${selectedTeam === t.key ? "text-amber-300" : "text-slate-500"}`}>
-              {t.key}
-            </span>
+      {/* Mode Toggle */}
+      <div className="flex items-center justify-center gap-1">
+        {(["plan", "mpl"] as const).map(m => (
+          <button key={m} onClick={() => setMode(m)}
+            className={`px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition cursor-pointer ${mode === m ? "bg-amber-500/15 text-amber-300 border border-amber-500/30" : "text-slate-500 hover:text-slate-300 border border-transparent"}`}>
+            {m === "plan" ? "Draft Plan" : "MPL Intel"}
           </button>
         ))}
       </div>
 
-      {/* Loading / Error */}
-      {loading && (
-        <div className="flex items-center justify-center gap-3 py-12">
-          <div className="h-5 w-5 border-2 border-amber-500 border-t-transparent rounded-full animate-spin" />
-          <span className="text-sm text-slate-400">Memuat profil tim...</span>
+      {/* ═══ MODE: CUSTOM DRAFT PLAN ═══ */}
+      {mode === "plan" && (
+        <div className="space-y-4">
+          {/* Plan Selector Bar */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-1">
+            {plans.map(p => (
+              <button key={p.id} onClick={() => setActivePlanId(p.id)}
+                className={`flex items-center gap-2 shrink-0 rounded-xl border px-3 py-2 text-xs font-semibold transition cursor-pointer ${activePlanId === p.id ? "border-amber-500/30 bg-amber-950/20 text-amber-300" : "border-white/[0.06] bg-white/[0.02] text-slate-500 hover:text-slate-300"}`}>
+                <FileText className="h-3.5 w-3.5" />
+                <span className="truncate max-w-[100px]">{p.name}</span>
+              </button>
+            ))}
+            <button onClick={createPlan}
+              className="flex items-center gap-1.5 shrink-0 rounded-xl border border-dashed border-white/10 px-3 py-2 text-xs font-semibold text-slate-500 hover:text-cyan-400 hover:border-cyan-500/30 transition cursor-pointer">
+              <Plus className="h-3.5 w-3.5" /> Baru
+            </button>
+          </div>
+
+          {activePlan ? (
+            <>
+              {/* Plan Header */}
+              <div className="rounded-2xl border border-white/[0.06] bg-[#080e1a]/90 p-5 space-y-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                  <input
+                    value={activePlan.name}
+                    onChange={e => updatePlan(activePlan.id, p => ({ ...p, name: e.target.value }))}
+                    className="flex-1 bg-transparent text-xl font-display font-black text-white outline-none border-b border-transparent focus:border-amber-500/30 transition"
+                    placeholder="Nama plan..."
+                  />
+                  <div className="flex items-center gap-2">
+                    {(["BLUE", "RED"] as const).map(s => (
+                      <button key={s} onClick={() => updatePlan(activePlan.id, p => ({ ...p, side: s }))}
+                        className={`px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition cursor-pointer ${activePlan.side === s ? (s === "BLUE" ? "bg-blue-500/20 text-blue-300 border border-blue-500/30" : "bg-rose-500/20 text-rose-300 border border-rose-500/30") : "text-slate-600 border border-white/[0.06]"}`}>
+                        {s === "BLUE" ? "Blue Side" : "Red Side"}
+                      </button>
+                    ))}
+                    <button onClick={() => deletePlan(activePlan.id)} className="p-1.5 rounded-lg text-slate-600 hover:text-rose-400 hover:bg-rose-500/10 transition cursor-pointer" title="Hapus plan">
+                      <Trash2 className="h-4 w-4" />
+                    </button>
+                  </div>
+                </div>
+                <input
+                  value={activePlan.teamName}
+                  onChange={e => updatePlan(activePlan.id, p => ({ ...p, teamName: e.target.value }))}
+                  className="w-full bg-white/[0.03] rounded-xl border border-white/[0.06] px-4 py-2 text-sm text-white outline-none focus:border-amber-500/30 transition"
+                  placeholder="Nama tim (opsional) — misal: ONIC, RRQ, atau nama tim custom..."
+                />
+              </div>
+
+              {/* Role Planner */}
+              <div className="rounded-2xl border border-white/[0.06] bg-[#080e1a]/90 p-5">
+                <div className="flex items-center gap-2 mb-4">
+                  <Layers className="h-4 w-4 text-amber-400" />
+                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-amber-300">Hero Per Role</span>
+                </div>
+
+                {/* Header */}
+                <div className="hidden sm:grid grid-cols-[80px_1fr_1fr_40px] gap-2 mb-2 px-2">
+                  <div className="text-[9px] font-bold uppercase tracking-wider text-slate-600">Role</div>
+                  <div className="text-[9px] font-bold uppercase tracking-wider text-slate-600">Main Hero</div>
+                  <div className="text-[9px] font-bold uppercase tracking-wider text-slate-600">Backup Hero</div>
+                  <div />
+                </div>
+
+                <div className="space-y-2">
+                  {LANES.map(lane => {
+                    const mainName = activePlan.lanes[lane].main;
+                    const backupName = activePlan.lanes[lane].backup;
+                    return (
+                      <div key={lane} className="grid grid-cols-[70px_1fr] sm:grid-cols-[80px_1fr_1fr_40px] gap-2 items-center rounded-xl border border-white/[0.04] bg-white/[0.02] px-3 py-2.5">
+                        <div className="text-xs font-bold text-slate-400 uppercase">{lane}</div>
+                        {/* Main */}
+                        <button onClick={() => setPickerTarget({ lane, field: "main" })}
+                          className="flex items-center gap-2 rounded-lg border border-white/[0.06] bg-white/[0.03] px-3 py-2 text-left hover:border-cyan-500/30 transition cursor-pointer min-h-[40px]">
+                          {mainName ? (
+                            <>
+                              <div className="h-7 w-7 overflow-hidden rounded-md border border-white/10 bg-[#060d1a]">
+                                <FallbackImage src={getHeroImageUrl(mainName, heroAssets)} fallbackText={mainName} alt={mainName} className="h-full w-full object-cover" containerClassName="h-full w-full text-[5px]" />
+                              </div>
+                              <span className="text-xs font-bold text-white truncate">{mainName}</span>
+                            </>
+                          ) : (
+                            <span className="text-[10px] text-slate-600">+ Pilih main hero</span>
+                          )}
+                        </button>
+                        {/* Backup — hidden on mobile */}
+                        <button onClick={() => setPickerTarget({ lane, field: "backup" })}
+                          className="hidden sm:flex items-center gap-2 rounded-lg border border-white/[0.06] bg-white/[0.03] px-3 py-2 text-left hover:border-violet-500/30 transition cursor-pointer min-h-[40px]">
+                          {backupName ? (
+                            <>
+                              <div className="h-7 w-7 overflow-hidden rounded-md border border-white/10 bg-[#060d1a]">
+                                <FallbackImage src={getHeroImageUrl(backupName, heroAssets)} fallbackText={backupName} alt={backupName} className="h-full w-full object-cover" containerClassName="h-full w-full text-[5px]" />
+                              </div>
+                              <span className="text-xs font-bold text-white truncate">{backupName}</span>
+                            </>
+                          ) : (
+                            <span className="text-[10px] text-slate-600">+ Backup</span>
+                          )}
+                        </button>
+                        {/* Clear */}
+                        <button onClick={() => {
+                          if (!activePlan) return;
+                          updatePlan(activePlan.id, p => ({ ...p, lanes: { ...p.lanes, [lane]: { main: "", backup: "" } } }));
+                        }} className="hidden sm:flex p-1.5 text-slate-600 hover:text-rose-400 transition cursor-pointer justify-center">
+                          <X className="h-3.5 w-3.5" />
+                        </button>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Priority / Bans / Threats */}
+              <div className="grid gap-4 sm:grid-cols-3">
+                {/* Priority Heroes */}
+                <div className="rounded-2xl border border-white/[0.06] bg-[#080e1a]/90 p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Star className="h-3.5 w-3.5 text-amber-400" />
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300">Priority Picks</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5 mb-2 min-h-[28px]">
+                    {activePlan.priorityHeroes.map(h => (
+                      <HeroTag key={h} name={h} heroAssets={heroAssets} onRemove={() => removeFromList("priorityHeroes", h)} color="amber" />
+                    ))}
+                  </div>
+                  <button onClick={() => setPickerTarget({ list: "priority" })}
+                    className="text-[10px] text-amber-400/60 hover:text-amber-400 transition cursor-pointer">+ Tambah hero</button>
+                </div>
+
+                {/* Planned Bans */}
+                <div className="rounded-2xl border border-white/[0.06] bg-[#080e1a]/90 p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Ban className="h-3.5 w-3.5 text-rose-400" />
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-rose-300">Planned Bans</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5 mb-2 min-h-[28px]">
+                    {activePlan.plannedBans.map(h => (
+                      <HeroTag key={h} name={h} heroAssets={heroAssets} onRemove={() => removeFromList("plannedBans", h)} color="rose" />
+                    ))}
+                  </div>
+                  <button onClick={() => setPickerTarget({ list: "bans" })}
+                    className="text-[10px] text-rose-400/60 hover:text-rose-400 transition cursor-pointer">+ Tambah ban</button>
+                </div>
+
+                {/* Enemy Threats */}
+                <div className="rounded-2xl border border-white/[0.06] bg-[#080e1a]/90 p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Zap className="h-3.5 w-3.5 text-cyan-400" />
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-cyan-300">Enemy Threats</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5 mb-2 min-h-[28px]">
+                    {activePlan.enemyThreats.map(h => (
+                      <HeroTag key={h} name={h} heroAssets={heroAssets} onRemove={() => removeFromList("enemyThreats", h)} color="cyan" />
+                    ))}
+                  </div>
+                  <button onClick={() => setPickerTarget({ list: "threats" })}
+                    className="text-[10px] text-cyan-400/60 hover:text-cyan-400 transition cursor-pointer">+ Tambah threat</button>
+                </div>
+              </div>
+
+              {/* Notes */}
+              <div className="rounded-2xl border border-white/[0.06] bg-[#080e1a]/90 p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <BookOpen className="h-4 w-4 text-slate-400" />
+                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-slate-400">Catatan Strategi</span>
+                </div>
+                <textarea
+                  value={activePlan.notes}
+                  onChange={e => updatePlan(activePlan.id, p => ({ ...p, notes: e.target.value }))}
+                  className="w-full h-28 bg-white/[0.03] rounded-xl border border-white/[0.06] px-4 py-3 text-sm text-white outline-none focus:border-amber-500/30 transition resize-none"
+                  placeholder="Tulis catatan strategi draft di sini — misal: prioritas first pick, pivot plan, komposisi alternatif..."
+                />
+              </div>
+
+              {/* Summary */}
+              <div className="rounded-2xl border border-white/[0.06] bg-[#080e1a]/90 p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <FileText className="h-4 w-4 text-slate-400" />
+                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-slate-400">Plan Summary</span>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <div className="rounded-xl border border-white/[0.04] bg-white/[0.02] p-3 text-center">
+                    <div className="font-display text-xl font-black text-white">{LANES.filter(l => activePlan.lanes[l].main).length}/5</div>
+                    <div className="text-[9px] text-slate-500 uppercase tracking-wider">Roles Filled</div>
+                  </div>
+                  <div className="rounded-xl border border-white/[0.04] bg-white/[0.02] p-3 text-center">
+                    <div className="font-display text-xl font-black text-amber-400">{activePlan.priorityHeroes.length}</div>
+                    <div className="text-[9px] text-slate-500 uppercase tracking-wider">Priority Picks</div>
+                  </div>
+                  <div className="rounded-xl border border-white/[0.04] bg-white/[0.02] p-3 text-center">
+                    <div className="font-display text-xl font-black text-rose-400">{activePlan.plannedBans.length}</div>
+                    <div className="text-[9px] text-slate-500 uppercase tracking-wider">Planned Bans</div>
+                  </div>
+                  <div className="rounded-xl border border-white/[0.04] bg-white/[0.02] p-3 text-center">
+                    <div className="font-display text-xl font-black text-cyan-400">{activePlan.enemyThreats.length}</div>
+                    <div className="text-[9px] text-slate-500 uppercase tracking-wider">Enemy Threats</div>
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : (
+            <div className="text-center py-16 rounded-2xl border border-dashed border-white/[0.08] bg-white/[0.01]">
+              <Compass className="mx-auto h-10 w-10 text-slate-600 mb-3" />
+              <div className="text-sm font-bold text-slate-400">Buat Draft Plan Baru</div>
+              <p className="mt-1 text-xs text-slate-600 mb-4">Rancang draft plan manual tanpa perlu data MPL.</p>
+              <button onClick={createPlan}
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white hover:brightness-110 transition cursor-pointer">
+                <Plus className="h-4 w-4" /> Buat Plan Baru
+              </button>
+            </div>
+          )}
         </div>
       )}
-      {error && <div className="text-center text-sm text-rose-400 py-6">{error}</div>}
 
-      {/* Team Profile */}
-      {intel && !loading && (
-        <>
-          {/* Team Header */}
-          <div className="rounded-2xl border border-white/[0.06] bg-[#080e1a]/90 p-6">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-14 w-14 overflow-hidden rounded-xl border border-white/10 bg-[#060d1a]">
-                {selectedTeamInfo?.logo ? (
-                  <img src={selectedTeamInfo.logo} alt={intel.teamName} className="h-full w-full object-contain p-1" />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center text-lg font-black text-amber-400">{selectedTeam}</div>
-                )}
-              </div>
-              <div>
-                <h2 className="font-display text-2xl font-black text-white">{intel.teamName}</h2>
-                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
-                  {intel.totalGames} games &middot; {intel.totalWins}W &middot; {intel.totalLosses}L
-                </div>
-              </div>
-              <div className="ml-auto text-right">
-                <div className="font-display text-3xl font-black text-amber-400">{intel.winRate}%</div>
-                <div className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Win Rate</div>
-              </div>
-            </div>
-
-            {/* Quick Stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <StatCard label="Blue Side" value={`${intel.blueWins}W ${intel.blueGames - intel.blueWins}L`} color="blue" />
-              <StatCard label="Red Side" value={`${intel.redWins}W ${intel.redGames - intel.redWins}L`} color="red" />
-              <StatCard label="Blue WR" value={intel.blueGames > 0 ? `${Math.round((intel.blueWins / intel.blueGames) * 100)}%` : "-"} color="blue" />
-              <StatCard label="Red WR" value={intel.redGames > 0 ? `${Math.round((intel.redWins / intel.redGames) * 100)}%` : "-"} color="red" />
-            </div>
-
-            {/* Pick Preference */}
-            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {intel.firstPickPreference && (
-                <div className="flex items-center gap-3 rounded-xl border border-blue-500/15 bg-blue-950/10 p-3">
-                  <div className="h-10 w-10 overflow-hidden rounded-lg border border-blue-500/20 bg-[#060d1a]">
-                    <FallbackImage src={getHeroImageUrl(intel.firstPickPreference.heroName, heroAssets)} fallbackText={intel.firstPickPreference.heroName} alt={intel.firstPickPreference.heroName} className="h-full w-full object-cover" containerClassName="h-full w-full text-[7px]" />
-                  </div>
-                  <div>
-                    <div className="text-[9px] font-bold uppercase tracking-wider text-blue-400">First Pick Preference</div>
-                    <div className="text-sm font-bold text-white">{intel.firstPickPreference.heroName}</div>
-                    <div className="text-[10px] text-slate-500">WR: {intel.firstPickPreference.winRate}%</div>
-                  </div>
-                </div>
-              )}
-              {intel.secondPickPreference && (
-                <div className="flex items-center gap-3 rounded-xl border border-red-500/15 bg-red-950/10 p-3">
-                  <div className="h-10 w-10 overflow-hidden rounded-lg border border-red-500/20 bg-[#060d1a]">
-                    <FallbackImage src={getHeroImageUrl(intel.secondPickPreference.heroName, heroAssets)} fallbackText={intel.secondPickPreference.heroName} alt={intel.secondPickPreference.heroName} className="h-full w-full object-cover" containerClassName="h-full w-full text-[7px]" />
-                  </div>
-                  <div>
-                    <div className="text-[9px] font-bold uppercase tracking-wider text-red-400">Second Pick Preference</div>
-                    <div className="text-sm font-bold text-white">{intel.secondPickPreference.heroName}</div>
-                    <div className="text-[10px] text-slate-500">WR: {intel.secondPickPreference.winRate}%</div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Tab Navigation */}
-          <div className="flex items-center gap-1 overflow-x-auto scrollbar-none border-b border-white/[0.06] pb-px">
-            {tabs.map((tab) => {
-              const Icon = tab.icon;
-              const active = activeTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-1.5 px-4 py-2.5 text-xs font-semibold shrink-0 border-b-2 -mb-px transition-colors ${
-                    active ? "border-amber-400 text-amber-300" : "border-transparent text-slate-500 hover:text-slate-300"
-                  }`}
-                >
-                  <Icon className="h-3.5 w-3.5" />
-                  {tab.label}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Tab Content */}
-          <div className="rounded-2xl border border-white/[0.06] bg-[#080e1a]/90 p-6">
-            {/* Comfort Pool */}
-            {activeTab === "comfort" && (
-              <div>
-                <div className="flex items-center gap-2 mb-4">
-                  <Star className="h-4 w-4 text-amber-400" />
-                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-amber-300">Comfort Hero Pool</span>
-                  <span className="ml-auto font-mono text-[10px] text-slate-500">{intel.comfortHeroes.length} heroes</span>
-                </div>
-                <div className="grid gap-2">
-                  {intel.comfortHeroes.map((h, i) => (
-                    <div key={h.heroName} className="flex items-center gap-3 rounded-xl border border-white/[0.04] bg-white/[0.02] px-4 py-3 transition hover:bg-white/[0.04]">
-                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-amber-500/10 text-xs font-black text-amber-400">
-                        {i + 1}
-                      </div>
-                      <div className="h-10 w-10 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-[#060d1a]">
-                        <FallbackImage src={getHeroImageUrl(h.heroName, heroAssets)} fallbackText={h.heroName} alt={h.heroName} className="h-full w-full object-cover" containerClassName="h-full w-full text-[7px]" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-sm font-bold text-white truncate">{h.heroName}</div>
-                        <div className="text-[10px] text-slate-500">{getHeroRole(h.heroName)} &middot; {h.picks} picks</div>
-                      </div>
-                      <div className="text-right">
-                        <div className="font-mono text-sm font-bold text-amber-400">{h.winRate}%</div>
-                        <div className="text-[9px] text-slate-500">{h.wins}W {h.picks - h.wins}L</div>
-                      </div>
-                      <WinBar wins={h.wins} total={h.picks} />
-                      {onOpenHeroIntelligence && (
-                        <button onClick={() => onOpenHeroIntelligence(h.heroName)} className="shrink-0 p-1.5 rounded-lg text-slate-500 hover:text-amber-400 hover:bg-amber-500/10 transition">
-                          <ChevronRight className="h-4 w-4" />
-                        </button>
-                      )}
-                    </div>
-                  ))}
-                  {intel.comfortHeroes.length === 0 && (
-                    <div className="text-center py-8 text-sm text-slate-500">Tidak ada data comfort hero.</div>
-                  )}
-                </div>
-              </div>
-            )}
-
-            {/* Ban Tendencies */}
-            {activeTab === "bans" && (
-              <div>
-                <div className="flex items-center gap-2 mb-4">
-                  <Ban className="h-4 w-4 text-rose-400" />
-                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-rose-300">Top Bans by This Team</span>
-                </div>
-                <div className="grid gap-2">
-                  {intel.topBans.map((b, i) => (
-                    <div key={b.heroName} className="flex items-center gap-3 rounded-xl border border-white/[0.04] bg-white/[0.02] px-4 py-3">
-                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-rose-500/10 text-xs font-black text-rose-400">
-                        {i + 1}
-                      </div>
-                      <div className="h-10 w-10 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-[#060d1a]">
-                        <FallbackImage src={getHeroImageUrl(b.heroName, heroAssets)} fallbackText={b.heroName} alt={b.heroName} className="h-full w-full object-cover" containerClassName="h-full w-full text-[7px]" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-sm font-bold text-white truncate">{b.heroName}</div>
-                        <div className="text-[10px] text-slate-500">{getHeroRole(b.heroName)}</div>
-                      </div>
-                      <div className="font-mono text-sm font-bold text-rose-400">{b.count}x</div>
-                    </div>
-                  ))}
-                  {intel.topBans.length === 0 && (
-                    <div className="text-center py-8 text-sm text-slate-500">Tidak ada data ban.</div>
-                  )}
-                </div>
-
-                {/* Target Bans Against Opponents */}
-                {intel.targetBans.length > 0 && (
-                  <div className="mt-6">
-                    <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-3">Target Bans vs Specific Teams</div>
-                    <div className="space-y-3">
-                      {intel.targetBans.map((tb) => (
-                        <div key={tb.opponent} className="rounded-xl border border-white/[0.04] bg-white/[0.02] p-3">
-                          <div className="text-xs font-bold text-amber-300 mb-2">vs {tb.opponent}</div>
-                          <div className="flex flex-wrap gap-2">
-                            {tb.heroes.map((h) => (
-                              <span key={h.heroName} className="inline-flex items-center gap-1.5 rounded-full border border-rose-500/20 bg-rose-500/10 px-2.5 py-1 text-[10px] font-bold text-rose-300">
-                                {h.heroName}
-                                <span className="text-rose-400/60">{h.banCount}x</span>
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Hero Pairings */}
-            {activeTab === "pairings" && (
-              <div>
-                <div className="flex items-center gap-2 mb-4">
-                  <Swords className="h-4 w-4 text-violet-400" />
-                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-violet-300">Signature Hero Pairings</span>
-                </div>
-                <div className="grid gap-2">
-                  {intel.heroPairings.map((p, i) => (
-                    <div key={`${p.heroA}-${p.heroB}`} className="flex items-center gap-3 rounded-xl border border-white/[0.04] bg-white/[0.02] px-4 py-3">
-                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-violet-500/10 text-xs font-black text-violet-400">
-                        {i + 1}
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="h-9 w-9 overflow-hidden rounded-lg border border-white/10 bg-[#060d1a]">
-                          <FallbackImage src={getHeroImageUrl(p.heroA, heroAssets)} fallbackText={p.heroA} alt={p.heroA} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
-                        </div>
-                        <span className="text-[10px] text-slate-500 font-bold">+</span>
-                        <div className="h-9 w-9 overflow-hidden rounded-lg border border-white/10 bg-[#060d1a]">
-                          <FallbackImage src={getHeroImageUrl(p.heroB, heroAssets)} fallbackText={p.heroB} alt={p.heroB} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
-                        </div>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-sm font-bold text-white">{p.heroA} + {p.heroB}</div>
-                        <div className="text-[10px] text-slate-500">{p.games} games together</div>
-                      </div>
-                      <div className="font-mono text-sm font-bold text-violet-400">{p.winRate}%</div>
-                      <WinBar wins={Math.round(p.games * p.winRate / 100)} total={p.games} />
-                    </div>
-                  ))}
-                  {intel.heroPairings.length === 0 && (
-                    <div className="text-center py-8 text-sm text-slate-500">Tidak ada data hero pairings.</div>
-                  )}
-                </div>
-
-                {/* Signature Compositions */}
-                {intel.signatureCompositions.length > 0 && (
-                  <div className="mt-6">
-                    <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-3">Signature Compositions</div>
-                    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                      {intel.signatureCompositions.map((comp) => (
-                        <div key={comp.name} className="rounded-xl border border-violet-500/15 bg-violet-950/10 p-4">
-                          <div className="text-xs font-bold text-violet-300 mb-2">{comp.name}</div>
-                          <div className="flex flex-wrap gap-1.5 mb-3">
-                            {comp.heroes.map((h) => (
-                              <div key={h} className="h-8 w-8 overflow-hidden rounded-lg border border-white/10 bg-[#060d1a]">
-                                <FallbackImage src={getHeroImageUrl(h, heroAssets)} fallbackText={h} alt={h} className="h-full w-full object-cover" containerClassName="h-full w-full text-[5px]" />
-                              </div>
-                            ))}
-                          </div>
-                          <div className="flex items-center justify-between text-[10px]">
-                            <span className="text-slate-500">{comp.games} games</span>
-                            <span className="font-bold text-violet-400">{comp.winRate}% WR</span>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Draft Tendencies */}
-            {activeTab === "tendencies" && (
-              <div>
-                <div className="flex items-center gap-2 mb-4">
-                  <TrendingUp className="h-4 w-4 text-emerald-400" />
-                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-300">Draft Style &amp; Tendencies</span>
-                </div>
-                {intel.draftTendencies.length > 0 ? (
-                  <div className="flex flex-wrap gap-2">
-                    {intel.draftTendencies.map((t) => (
-                      <span key={t} className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-sm font-bold text-emerald-300">
-                        <Zap className="h-3.5 w-3.5" />
-                        {t.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
-                      </span>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="text-center py-8 text-sm text-slate-500">Tidak ada data tendensi draft.</div>
-                )}
-
-                {/* Most Successful Heroes */}
-                <div className="mt-6">
-                  <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-3">Paling Berhasil</div>
-                  <div className="grid gap-2">
-                    {intel.comfortHeroes.slice(0, 5).map((h, i) => (
-                      <div key={h.heroName} className="flex items-center gap-3 rounded-xl border border-white/[0.04] bg-white/[0.02] px-4 py-3">
-                        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-emerald-500/10 text-xs font-black text-emerald-400">
-                          {i + 1}
-                        </div>
-                        <div className="h-9 w-9 shrink-0 overflow-hidden rounded-lg border border-white/10 bg-[#060d1a]">
-                          <FallbackImage src={getHeroImageUrl(h.heroName, heroAssets)} fallbackText={h.heroName} alt={h.heroName} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-sm font-bold text-white truncate">{h.heroName}</div>
-                          <div className="text-[10px] text-slate-500">{h.picks} games</div>
-                        </div>
-                        <div className="font-mono text-sm font-bold text-emerald-400">{h.winRate}%</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-        </>
+      {/* ═══ MODE: MPL INTEL (optional) ═══ */}
+      {mode === "mpl" && (
+        <MplIntelTab heroes={heroes} heroAssets={heroAssets} onOpenHeroIntelligence={onOpenHeroIntelligence} />
       )}
 
-      {/* Empty State */}
-      {!selectedTeam && !loading && (
-        <div className="text-center py-16 rounded-2xl border border-dashed border-white/[0.08] bg-white/[0.01]">
-          <Users className="mx-auto h-10 w-10 text-slate-600 mb-3" />
-          <div className="text-sm font-bold text-slate-400">Pilih tim MPL di atas</div>
-          <p className="mt-1 text-xs text-slate-600">untuk melihat profil draft dan analisis strategi.</p>
+      {/* Hero Picker Modal */}
+      {pickerTarget && (
+        <HeroPickerModal
+          heroes={heroes}
+          heroAssets={heroAssets}
+          exclude={usedHeroes}
+          onSelect={handleHeroSelect}
+          onClose={() => setPickerTarget(null)}
+        />
+      )}
+    </div>
+  );
+}
+
+/* ═══ MPL INTEL SUB-COMPONENT ═══ */
+function MplIntelTab({ heroes, heroAssets, onOpenHeroIntelligence }: { heroes: HeroStats[]; heroAssets: Record<string, string>; onOpenHeroIntelligence?: (name: string) => void }) {
+  const [teams, setTeams] = useState<Array<{ key: string; name: string; logo: string }>>([]);
+  const [selected, setSelected] = useState("");
+  const [intel, setIntel] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/draft/teams").then(r => r.json()).then(d => { if (d.teams) setTeams(d.teams); }).catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    if (!selected) { setIntel(null); return; }
+    setLoading(true);
+    fetch(`/api/draft/team-intel/${selected}`).then(r => r.ok ? r.json() : null).then(setIntel).catch(() => {}).finally(() => setLoading(false));
+  }, [selected]);
+
+  return (
+    <div className="space-y-4">
+      <div className="text-center">
+        <p className="text-xs text-slate-500">Data MPL bersifat opsional — gunakan sebagai referensi untuk draft plan kamu.</p>
+      </div>
+      <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-2">
+        {teams.map(t => (
+          <button key={t.key} onClick={() => setSelected(selected === t.key ? "" : t.key)}
+            className={`flex flex-col items-center gap-2 rounded-xl border p-3 transition cursor-pointer ${selected === t.key ? "border-amber-500/40 bg-amber-950/20" : "border-white/[0.06] bg-white/[0.02] hover:border-white/[0.12]"}`}>
+            <div className="h-10 w-10 overflow-hidden rounded-lg border border-white/10 bg-[#060d1a]">
+              {t.logo ? <img src={t.logo} alt={t.name} className="h-full w-full object-contain p-0.5" /> : <div className="flex h-full w-full items-center justify-center text-[10px] font-black text-amber-400">{t.key.slice(0, 2)}</div>}
+            </div>
+            <span className={`text-[10px] font-bold uppercase tracking-wider ${selected === t.key ? "text-amber-300" : "text-slate-500"}`}>{t.key}</span>
+          </button>
+        ))}
+      </div>
+
+      {loading && <div className="flex items-center justify-center gap-3 py-12"><div className="h-5 w-5 border-2 border-amber-500 border-t-transparent rounded-full animate-spin" /><span className="text-sm text-slate-400">Memuat...</span></div>}
+
+      {intel && !loading && (
+        <div className="rounded-2xl border border-white/[0.06] bg-[#080e1a]/90 p-6 space-y-4">
+          <div className="flex items-center gap-4">
+            <div className="h-12 w-12 overflow-hidden rounded-xl border border-white/10 bg-[#060d1a]">
+              {teams.find(t => t.key === selected)?.logo ? <img src={teams.find(t => t.key === selected)!.logo} alt={selected} className="h-full w-full object-contain p-1" /> : <div className="flex h-full w-full items-center justify-center text-lg font-black text-amber-400">{selected}</div>}
+            </div>
+            <div>
+              <h3 className="font-display text-xl font-black text-white">{selected}</h3>
+              <div className="font-mono text-[10px] text-slate-500">{intel.totalGames} games &middot; {intel.totalWins}W &middot; {intel.totalLosses}L &middot; {Math.round(intel.winRate)}% WR</div>
+            </div>
+          </div>
+
+          <div>
+            <div className="text-[10px] font-bold uppercase tracking-wider text-amber-300 mb-2">Comfort Heroes</div>
+            <div className="flex flex-wrap gap-2">
+              {intel.comfortHeroes?.slice(0, 8).map((h: any) => (
+                <span key={h.heroName} className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-500/10 px-2.5 py-1 text-[10px] font-bold text-amber-300">
+                  <div className="h-4 w-4 overflow-hidden rounded-full bg-[#060d1a]"><FallbackImage src={getHeroImageUrl(h.heroName, heroAssets)} fallbackText={h.heroName} alt={h.heroName} className="h-full w-full object-cover" containerClassName="h-full w-full text-[3px]" /></div>
+                  {h.heroName} <span className="text-amber-400/60">{h.winRate}%</span>
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="text-[10px] font-bold uppercase tracking-wider text-rose-300 mb-2">Top Bans</div>
+            <div className="flex flex-wrap gap-2">
+              {intel.topBans?.slice(0, 6).map((b: any) => (
+                <span key={b.heroName} className="inline-flex items-center gap-1.5 rounded-full border border-rose-500/20 bg-rose-500/10 px-2.5 py-1 text-[10px] font-bold text-rose-300">
+                  {b.heroName} <span className="text-rose-400/60">{b.count}x</span>
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {intel.draftTendencies?.length > 0 && (
+            <div>
+              <div className="text-[10px] font-bold uppercase tracking-wider text-emerald-300 mb-2">Draft Style</div>
+              <div className="flex flex-wrap gap-2">
+                {intel.draftTendencies.map((t: string) => (
+                  <span key={t} className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-[10px] font-bold text-emerald-300">
+                    <Zap className="h-3 w-3" /> {t.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase())}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {!selected && !loading && (
+        <div className="text-center py-12 rounded-2xl border border-dashed border-white/[0.08] bg-white/[0.01]">
+          <Trophy className="mx-auto h-8 w-8 text-slate-600 mb-2" />
+          <div className="text-xs text-slate-500">Pilih tim MPL untuk melihat data intel (opsional)</div>
         </div>
       )}
     </div>
