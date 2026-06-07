@@ -626,6 +626,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
                     ? `${pickerSlot.lane} Main — ${pickerSlot.side === "BLUE" ? "Blue" : "Red"}`
                     : `${pickerSlot.lane} Alt #${pickerSlot.backupIndex + 1} — ${pickerSlot.side === "BLUE" ? "Blue" : "Red"}`}
               </span>
+              <span className="text-[9px] font-mono text-slate-600 ml-1">{heroes.length} heroes</span>
               <input value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search hero..." className="ml-auto flex-1 bg-transparent text-sm text-white outline-none placeholder:text-slate-600 text-right" autoFocus />
               <button onClick={() => setPickerSlot(null)} className="p-1 text-slate-500 hover:text-white cursor-pointer"><X className="h-4 w-4" /></button>
             </div>
@@ -746,10 +747,10 @@ function CircleSlot({ hero, heroAssets, ring, onClick, onClear }: {
 }) {
   const empty = !hero;
   return (
-    <button onClick={onClick} className={`relative h-16 w-16 rounded-full border-2 ${empty ? "border-dashed border-white/[0.08] bg-white/[0.01]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-105`}>
+    <button onClick={onClick} className={`relative h-[72px] w-[72px] rounded-full border-2 ${empty ? "border-dashed border-white/[0.08] bg-white/[0.01]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-105`}>
       {hero ? (
         <>
-          <div className="h-12 w-12 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
+          <div className="h-14 w-14 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
             <FallbackImage src={getHeroImageUrl(hero, heroAssets)} fallbackText={hero} alt={hero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[5px]" />
           </div>
           <button onClick={(e) => { e.stopPropagation(); onClear(); }} className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-500 hover:text-rose-400 hover:border-rose-500/30 transition cursor-pointer">
@@ -767,13 +768,13 @@ function MiniSlot({ hero, heroAssets, ring, onClick, onClear }: {
 }) {
   const empty = !hero;
   return (
-    <button onClick={onClick} className={`relative h-9 w-9 rounded-full border ${empty ? "border-dashed border-white/[0.06] bg-white/[0.01]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-110`}>
+    <button onClick={onClick} className={`relative h-10 w-10 rounded-full border ${empty ? "border-dashed border-white/[0.06] bg-white/[0.01]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-110`}>
       {hero ? (
         <>
-          <div className="h-7 w-7 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
+          <div className="h-8 w-8 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
             <FallbackImage src={getHeroImageUrl(hero, heroAssets)} fallbackText={hero} alt={hero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[3px]" />
           </div>
-          <button onClick={(e) => { e.stopPropagation(); onClear(); }} className="absolute -top-0.5 -right-0.5 h-3 w-3 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-600 hover:text-rose-400 transition cursor-pointer">
+          <button onClick={(e) => { e.stopPropagation(); onClear(); }} className="absolute -top-0.5 -right-0.5 h-3.5 w-3.5 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-600 hover:text-rose-400 transition cursor-pointer">
             <X className="h-2 w-2" />
           </button>
         </>

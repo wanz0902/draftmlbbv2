@@ -85,3 +85,31 @@ When giving recommendations:
 Avoid shallow drafting advice.
 
 This AI must think like a professional MLBB coach, a deception strategist, a macro analyst, and an information warfare system. The AI must prioritize strategic concealment and adaptive planning over simplistic meta drafting.
+
+---
+
+## MANDATORY REPORT WORKFLOW
+
+### Setiap task selesai WAJIB menghasilkan:
+
+1. **Final report di chat** — laporan lengkap dalam Bahasa Indonesia
+2. **File laporan markdown** — ditulis ke project:
+   - `reports/latest-kilo-report.md` (selalu di-overwrite)
+   - `reports/archive/tdp-{deskripsi}-YYYYMMDD-HHMM.md` (arsip timestamp)
+
+### Format laporan wajib berisi:
+- A. Ringkasan task
+- B. Perubahan yang dilakukan
+- C. File yang diubah
+- D. Verifikasi hero source (jumlah, file, endpoint)
+- E. Perubahan UI
+- F. Validasi teknis (typecheck, build, validation)
+- G. Localhost status
+- H. Commit hash + commit message
+- I. Best effort resource summary (tokens, credits, time, model)
+- J. Catatan jika ada limit / hal yang belum sempurna
+
+### Aturan:
+- Jika laporan file belum dibuat, task belum dianggap selesai
+- Setiap task baru harus mengikuti workflow ini
+- Folder `reports/` harus selalu tersedia di project root
