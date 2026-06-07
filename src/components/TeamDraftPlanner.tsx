@@ -1,10 +1,12 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Ban,
   BookOpen,
+  ChevronDown,
   ChevronRight,
   Compass,
   Copy,
+  Download,
   FileText,
   Layers,
   Plus,
@@ -14,6 +16,7 @@ import {
   Trash2,
   X,
 } from "lucide-react";
+import { toPng } from "html-to-image";
 import FallbackImage from "./FallbackImage";
 import { getHeroImageUrl } from "../lib/heroUtils";
 import { HeroStats } from "../types";
@@ -111,10 +114,7 @@ function migrateOldDraft(d: any): DraftPlan {
       if (old) {
         blueLanes[lane] = {
           main: old.main || d.bluePicks?.[LANES.indexOf(lane)] || "",
-          backups: [
-            old.backup || "",
-            ...Array(BACKUP_COUNT - 1).fill(""),
-          ],
+          backups: [old.backup || "", ...Array(BACKUP_COUNT - 1).fill("")],
         };
       }
     }
@@ -125,29 +125,15 @@ function migrateOldDraft(d: any): DraftPlan {
       if (old) {
         redLanes[lane] = {
           main: old.main || d.redPicks?.[LANES.indexOf(lane)] || "",
-          backups: [
-            old.backup || "",
-            ...Array(BACKUP_COUNT - 1).fill(""),
-          ],
+          backups: [old.backup || "", ...Array(BACKUP_COUNT - 1).fill("")],
         };
       }
     }
   }
-  return {
-    ...d,
-    blueLanes,
-    redLanes,
-    blueBans: d.blueBans || Array(5).fill(""),
-    redBans: d.redBans || Array(5).fill(""),
-    notes: d.notes || "",
-  };
+  return { ...d, blueLanes, redLanes, blueBans: d.blueBans || Array(5).fill(""), redBans: d.redBans || Array(5).fill(""), notes: d.notes || "" };
 }
 
-function loadData(): {
-  tournaments: Tournament[];
-  selectedTourId: string | null;
-  selectedDraftId: string | null;
-} {
+function loadData(): { tournaments: Tournament[]; selectedTourId: string | null; selectedDraftId: string | null } {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
@@ -160,23 +146,12 @@ function loadData(): {
     }
   } catch {}
   const t = emptyTournament();
-  return {
-    tournaments: [t],
-    selectedTourId: t.id,
-    selectedDraftId: t.drafts[0].id,
-  };
+  return { tournaments: [t], selectedTourId: t.id, selectedDraftId: t.drafts[0].id };
 }
 
-function saveData(
-  tournaments: Tournament[],
-  selectedTourId: string | null,
-  selectedDraftId: string | null
-) {
+function saveData(tournaments: Tournament[], selectedTourId: string | null, selectedDraftId: string | null) {
   try {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({ tournaments, selectedTourId, selectedDraftId })
-    );
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ tournaments, selectedTourId, selectedDraftId }));
   } catch {}
 }
 
@@ -190,35 +165,37 @@ type PickerTarget =
   | { type: "pick"; side: "BLUE" | "RED"; lane: Lane }
   | { type: "backup"; side: "BLUE" | "RED"; lane: Lane; backupIndex: number };
 
-export default function TeamDraftPlanner({
-  heroes,
-  heroAssets,
-}: TeamDraftPlannerProps) {
+function sanitizeFilename(s: string): string {
+  return s.replace(/[^a-zA-Z0-9_-]/g, "_").toLowerCase();
+}
+
+export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlannerProps) {
   const [tournaments, setTournaments] = useState<Tournament[]>([]);
   const [selectedTourId, setSelectedTourId] = useState<string | null>(null);
   const [selectedDraftId, setSelectedDraftId] = useState<string | null>(null);
   const [pickerSlot, setPickerSlot] = useState<PickerTarget | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [expandedTours, setExpandedTours] = useState<Set<string>>(new Set());
+  const [exporting, setExporting] = useState(false);
+  const boardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const d = loadData();
     setTournaments(d.tournaments);
     setSelectedTourId(d.selectedTourId);
     setSelectedDraftId(d.selectedDraftId);
+    if (d.selectedTourId) {
+      setExpandedTours(new Set([d.selectedTourId]));
+    }
   }, []);
 
-  const persist = useCallback(
-    (tours: Tournament[], tourId: string | null, draftId: string | null) => {
-      saveData(tours, tourId, draftId);
-    },
-    []
-  );
+  const persist = useCallback((tours: Tournament[], tourId: string | null, draftId: string | null) => {
+    saveData(tours, tourId, draftId);
+  }, []);
 
-  const selectedTour =
-    tournaments.find((t) => t.id === selectedTourId) || null;
-  const selectedDraft =
-    selectedTour?.drafts.find((d) => d.id === selectedDraftId) || null;
+  const selectedTour = tournaments.find((t) => t.id === selectedTourId) || null;
+  const selectedDraft = selectedTour?.drafts.find((d) => d.id === selectedDraftId) || null;
 
   const updateDraft = useCallback(
     (updater: (d: DraftPlan) => DraftPlan) => {
@@ -227,14 +204,7 @@ export default function TeamDraftPlanner({
         const next = prev.map((t) =>
           t.id !== selectedTourId
             ? t
-            : {
-                ...t,
-                drafts: t.drafts.map((d) =>
-                  d.id !== selectedDraftId
-                    ? d
-                    : { ...updater(d), updatedAt: Date.now() }
-                ),
-              }
+            : { ...t, drafts: t.drafts.map((d) => (d.id !== selectedDraftId ? d : { ...updater(d), updatedAt: Date.now() })) }
         );
         persist(next, selectedTourId, selectedDraftId);
         return next;
@@ -252,15 +222,14 @@ export default function TeamDraftPlanner({
     });
     setSelectedTourId(t.id);
     setSelectedDraftId(t.drafts[0].id);
+    setExpandedTours((prev) => new Set([...prev, t.id]));
   };
 
   const createDraft = () => {
     if (!selectedTourId) return;
     const d = emptyPlan(`Draft ${(selectedTour?.drafts.length || 0) + 1}`);
     setTournaments((prev) => {
-      const next = prev.map((t) =>
-        t.id !== selectedTourId ? t : { ...t, drafts: [...t.drafts, d] }
-      );
+      const next = prev.map((t) => (t.id !== selectedTourId ? t : { ...t, drafts: [...t.drafts, d] }));
       persist(next, selectedTourId, d.id);
       return next;
     });
@@ -279,9 +248,7 @@ export default function TeamDraftPlanner({
       redLanes: JSON.parse(JSON.stringify(selectedDraft.redLanes)),
     };
     setTournaments((prev) => {
-      const next = prev.map((t) =>
-        t.id !== selectedTourId ? t : { ...t, drafts: [...t.drafts, copy] }
-      );
+      const next = prev.map((t) => (t.id !== selectedTourId ? t : { ...t, drafts: [...t.drafts, copy] }));
       persist(next, selectedTourId, copy.id);
       return next;
     });
@@ -290,22 +257,12 @@ export default function TeamDraftPlanner({
 
   const deleteDraft = (tourId: string, draftId: string) => {
     setTournaments((prev) => {
-      const next = prev.map((t) =>
-        t.id !== tourId
-          ? t
-          : { ...t, drafts: t.drafts.filter((d) => d.id !== draftId) }
-      );
+      const next = prev.map((t) => (t.id !== tourId ? t : { ...t, drafts: t.drafts.filter((d) => d.id !== draftId) }));
       if (selectedDraftId === draftId) {
         const tour = next.find((t) => t.id === tourId);
         setSelectedDraftId(tour?.drafts[0]?.id || null);
       }
-      persist(
-        next,
-        tourId,
-        selectedDraftId === draftId
-          ? next.find((t) => t.id === tourId)?.drafts[0]?.id || null
-          : selectedDraftId
-      );
+      persist(next, tourId, selectedDraftId === draftId ? next.find((t) => t.id === tourId)?.drafts[0]?.id || null : selectedDraftId);
       return next;
     });
   };
@@ -323,6 +280,21 @@ export default function TeamDraftPlanner({
     });
   };
 
+  const toggleTourExpand = (tourId: string) => {
+    setExpandedTours((prev) => {
+      const next = new Set(prev);
+      if (next.has(tourId)) next.delete(tourId);
+      else next.add(tourId);
+      return next;
+    });
+  };
+
+  const selectDraft = (tourId: string, draftId: string) => {
+    setSelectedTourId(tourId);
+    setSelectedDraftId(draftId);
+    setExpandedTours((prev) => new Set([...prev, tourId]));
+  };
+
   const setBan = (side: "BLUE" | "RED", index: number, value: string) => {
     updateDraft((d) => {
       const key = side === "BLUE" ? "blueBans" : "redBans";
@@ -335,71 +307,39 @@ export default function TeamDraftPlanner({
   const setLaneMain = (side: "BLUE" | "RED", lane: Lane, value: string) => {
     updateDraft((d) => {
       const key = side === "BLUE" ? "blueLanes" : "redLanes";
-      return {
-        ...d,
-        [key]: {
-          ...d[key],
-          [lane]: { ...d[key][lane], main: value },
-        },
-      };
+      return { ...d, [key]: { ...d[key], [lane]: { ...d[key][lane], main: value } } };
     });
   };
 
-  const setLaneBackup = (
-    side: "BLUE" | "RED",
-    lane: Lane,
-    backupIndex: number,
-    value: string
-  ) => {
+  const setLaneBackup = (side: "BLUE" | "RED", lane: Lane, backupIndex: number, value: string) => {
     updateDraft((d) => {
       const key = side === "BLUE" ? "blueLanes" : "redLanes";
       const backups = [...d[key][lane].backups];
       backups[backupIndex] = value;
-      return {
-        ...d,
-        [key]: {
-          ...d[key],
-          [lane]: { ...d[key][lane], backups },
-        },
-      };
+      return { ...d, [key]: { ...d[key], [lane]: { ...d[key][lane], backups } } };
     });
   };
 
   const clearSlot = (target: PickerTarget) => {
-    if (target.type === "ban") {
-      setBan(target.side, target.index, "");
-    } else if (target.type === "pick") {
-      setLaneMain(target.side, target.lane, "");
-    } else {
-      setLaneBackup(target.side, target.lane, target.backupIndex, "");
-    }
+    if (target.type === "ban") setBan(target.side, target.index, "");
+    else if (target.type === "pick") setLaneMain(target.side, target.lane, "");
+    else setLaneBackup(target.side, target.lane, target.backupIndex, "");
   };
 
   const applyPick = (target: PickerTarget, heroName: string) => {
-    if (target.type === "ban") {
-      setBan(target.side, target.index, heroName);
-    } else if (target.type === "pick") {
-      setLaneMain(target.side, target.lane, heroName);
-    } else {
-      setLaneBackup(target.side, target.lane, target.backupIndex, heroName);
-    }
+    if (target.type === "ban") setBan(target.side, target.index, heroName);
+    else if (target.type === "pick") setLaneMain(target.side, target.lane, heroName);
+    else setLaneBackup(target.side, target.lane, target.backupIndex, heroName);
   };
 
   const usedHeroes = useMemo(() => {
     if (!selectedDraft) return new Set<string>();
     const s = new Set<string>();
-    [
-      ...selectedDraft.blueBans,
-      ...selectedDraft.redBans,
-    ].forEach((h) => {
-      if (h) s.add(h);
-    });
+    [...selectedDraft.blueBans, ...selectedDraft.redBans].forEach((h) => { if (h) s.add(h); });
     for (const lanes of [selectedDraft.blueLanes, selectedDraft.redLanes]) {
       for (const lane of LANES) {
         if (lanes[lane].main) s.add(lanes[lane].main);
-        for (const b of lanes[lane].backups) {
-          if (b) s.add(b);
-        }
+        for (const b of lanes[lane].backups) { if (b) s.add(b); }
       }
     }
     return s;
@@ -407,31 +347,16 @@ export default function TeamDraftPlanner({
 
   const filteredHeroes = useMemo(() => {
     const q = searchQuery.toLowerCase();
-    return heroes
-      .filter(
-        (h) =>
-          !usedHeroes.has(h.hero_name) &&
-          h.hero_name.toLowerCase().includes(q)
-      )
-      .slice(0, 40);
+    return heroes.filter((h) => !usedHeroes.has(h.hero_name) && h.hero_name.toLowerCase().includes(q)).slice(0, 40);
   }, [heroes, searchQuery, usedHeroes]);
 
   const progress = useMemo(() => {
     if (!selectedDraft) return { bans: 0, picks: 0, pct: 0 };
-    const allBans = [
-      ...selectedDraft.blueBans,
-      ...selectedDraft.redBans,
-    ].filter(Boolean);
-    const allMains = [selectedDraft.blueLanes, selectedDraft.redLanes].flatMap(
-      (l) => LANES.map((lane) => l[lane].main)
-    ).filter(Boolean);
+    const allBans = [...selectedDraft.blueBans, ...selectedDraft.redBans].filter(Boolean);
+    const allMains = [selectedDraft.blueLanes, selectedDraft.redLanes].flatMap((l) => LANES.map((lane) => l[lane].main)).filter(Boolean);
     const total = 20;
     const filled = allBans.length + allMains.length;
-    return {
-      bans: allBans.length,
-      picks: allMains.length,
-      pct: Math.round((filled / total) * 100),
-    };
+    return { bans: allBans.length, picks: allMains.length, pct: Math.round((filled / total) * 100) };
   }, [selectedDraft]);
 
   const openPicker = (target: PickerTarget) => {
@@ -439,97 +364,131 @@ export default function TeamDraftPlanner({
     setSearchQuery("");
   };
 
+  const handleExportPng = async () => {
+    if (!boardRef.current || !selectedDraft || exporting) return;
+    setExporting(true);
+    try {
+      const tourName = sanitizeFilename(selectedTour?.name || "tournament");
+      const draftName = sanitizeFilename(selectedDraft.name);
+      const filename = `${tourName}-${draftName}.png`;
+
+      const dataUrl = await toPng(boardRef.current, {
+        backgroundColor: "#060b16",
+        pixelRatio: 2,
+        cacheBust: true,
+        filter: (node: Element) => {
+          if (node instanceof HTMLElement) {
+            if (node.dataset?.noExport) return false;
+          }
+          return true;
+        },
+      });
+
+      const link = document.createElement("a");
+      link.download = filename;
+      link.href = dataUrl;
+      link.click();
+    } catch (err) {
+      console.error("Export failed:", err);
+    } finally {
+      setExporting(false);
+    }
+  };
+
   return (
     <div className="flex h-[calc(100vh-56px)] overflow-hidden bg-[#060b16]">
       {/* ═══ LEFT SIDEBAR ═══ */}
       <aside
-        className={`${
-          sidebarCollapsed ? "w-[52px]" : "w-[260px]"
-        } shrink-0 flex flex-col border-r border-white/[0.06] bg-[#070c18] transition-all duration-300 overflow-hidden`}
+        className={`${sidebarCollapsed ? "w-[52px]" : "w-[260px]"} shrink-0 flex flex-col border-r border-white/[0.06] bg-[#070c18] transition-all duration-300 overflow-hidden`}
       >
         {sidebarCollapsed ? (
           <div className="flex flex-col items-center py-3 gap-3">
-            <button
-              onClick={() => setSidebarCollapsed(false)}
-              className="p-2 text-slate-500 hover:text-cyan-400 transition cursor-pointer"
-              title="Expand sidebar"
-            >
+            <button onClick={() => setSidebarCollapsed(false)} className="p-2 text-slate-500 hover:text-cyan-400 transition cursor-pointer" title="Expand sidebar">
               <Layers className="h-4 w-4" />
             </button>
           </div>
         ) : (
           <>
             <div className="flex items-center justify-between border-b border-white/[0.06] px-4 py-3">
-              <div className="flex items-center gap-2">
-                <Target className="h-4 w-4 text-cyan-400" />
-                <span className="font-display text-xs font-bold uppercase tracking-wider text-white">
-                  Team Draft Planner
-                </span>
-              </div>
-              <button
-                onClick={() => setSidebarCollapsed(true)}
-                className="p-1 text-slate-600 hover:text-slate-300 transition cursor-pointer"
-              >
+              <span className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500">
+                Team Draft Planner
+              </span>
+              <button onClick={() => setSidebarCollapsed(true)} className="p-1 text-slate-600 hover:text-slate-300 transition cursor-pointer">
                 <X className="h-3.5 w-3.5" />
               </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto p-2 space-y-1">
-              <div className="flex items-center gap-1.5 px-2 py-1.5">
-                <span className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-slate-600">
-                  Tournaments
-                </span>
+            <div className="flex-1 overflow-y-auto p-2 space-y-0.5">
+              <div className="flex items-center justify-between px-2 py-1.5">
+                <span className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-slate-600">Tournaments</span>
+                <button onClick={createTournament} className="rounded bg-amber-500/15 border border-amber-500/25 px-1.5 py-0.5 text-[8px] font-bold text-amber-400 hover:bg-amber-500/25 transition cursor-pointer">
+                  + NEW
+                </button>
               </div>
 
-              {tournaments.map((t) => (
-                <div key={t.id} className="group">
-                  <div className="flex items-center gap-1.5 rounded-lg px-2 py-1.5 hover:bg-white/[0.03] transition">
-                    <Layers className="h-3 w-3 text-slate-600 shrink-0" />
-                    <span
-                      className={`flex-1 truncate text-xs ${
-                        t.id === selectedTourId
-                          ? "font-bold text-cyan-300"
-                          : "text-slate-400"
-                      }`}
-                    >
-                      {t.name}
-                    </span>
+              {tournaments.map((t) => {
+                const isExpanded = expandedTours.has(t.id);
+                const isActive = t.id === selectedTourId;
+                return (
+                  <div key={t.id} className="group">
                     <button
-                      onClick={() => deleteTournament(t.id)}
-                      className="p-0.5 text-slate-700 opacity-0 group-hover:opacity-100 hover:text-rose-400 transition cursor-pointer"
+                      onClick={() => toggleTourExpand(t.id)}
+                      className={`w-full flex items-center gap-2 rounded-lg px-2.5 py-2 transition cursor-pointer ${isActive ? "bg-white/[0.04]" : "hover:bg-white/[0.03]"}`}
                     >
-                      <Trash2 className="h-3 w-3" />
-                    </button>
-                  </div>
-
-                  {t.drafts.map((d) => (
-                    <button
-                      key={d.id}
-                      onClick={() => {
-                        setSelectedTourId(t.id);
-                        setSelectedDraftId(d.id);
-                      }}
-                      className={`ml-4 flex w-[calc(100%-16px)] items-center gap-2 rounded-lg px-2.5 py-1.5 text-left transition cursor-pointer ${
-                        d.id === selectedDraftId
-                          ? "bg-cyan-500/10 text-cyan-300 border border-cyan-500/20"
-                          : "text-slate-500 hover:bg-white/[0.03] hover:text-slate-300 border border-transparent"
-                      }`}
-                    >
-                      <FileText className="h-3 w-3 shrink-0" />
-                      <span className="flex-1 truncate text-[11px]">{d.name}</span>
+                      <ChevronDown className={`h-3 w-3 text-slate-600 shrink-0 transition-transform ${isExpanded ? "" : "-rotate-90"}`} />
+                      <span className={`flex-1 truncate text-xs font-medium ${isActive ? "text-white" : "text-slate-400"}`}>{t.name}</span>
                       <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          deleteDraft(t.id, d.id);
-                        }}
+                        onClick={(e) => { e.stopPropagation(); deleteTournament(t.id); }}
                         className="p-0.5 text-slate-700 opacity-0 group-hover:opacity-100 hover:text-rose-400 transition cursor-pointer"
                       >
-                        <X className="h-2.5 w-2.5" />
+                        <X className="h-3 w-3" />
                       </button>
                     </button>
-                  ))}
-                </div>
-              ))}
+
+                    {isExpanded && (
+                      <div className="ml-4 space-y-0.5">
+                        {t.drafts.map((d) => {
+                          const isDraftActive = d.id === selectedDraftId;
+                          const draftFilled = [...d.blueBans, ...d.redBans].filter(Boolean).length +
+                            [d.blueLanes, d.redLanes].flatMap((l) => LANES.map((lane) => l[lane].main)).filter(Boolean).length;
+                          return (
+                            <button
+                              key={d.id}
+                              onClick={() => selectDraft(t.id, d.id)}
+                              className={`w-full flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-left transition cursor-pointer ${
+                                isDraftActive ? "bg-cyan-500/10 text-cyan-300" : "text-slate-500 hover:bg-white/[0.03] hover:text-slate-300"
+                              }`}
+                            >
+                              <FileText className="h-3 w-3 shrink-0" />
+                              <span className="flex-1 truncate text-[11px]">{d.name}</span>
+                              <span className="text-[9px] font-mono text-slate-600">{draftFilled}/20</span>
+                              <button
+                                onClick={(e) => { e.stopPropagation(); duplicateDraft(); }}
+                                className="p-0.5 text-slate-700 opacity-0 group-hover:opacity-100 hover:text-cyan-400 transition cursor-pointer"
+                                title="Duplicate"
+                              >
+                                <Copy className="h-2.5 w-2.5" />
+                              </button>
+                              <button
+                                onClick={(e) => { e.stopPropagation(); deleteDraft(t.id, d.id); }}
+                                className="p-0.5 text-slate-700 opacity-0 group-hover:opacity-100 hover:text-rose-400 transition cursor-pointer"
+                              >
+                                <X className="h-2.5 w-2.5" />
+                              </button>
+                            </button>
+                          );
+                        })}
+                        <button
+                          onClick={createDraft}
+                          className="w-full flex items-center gap-2 rounded-lg border border-dashed border-white/[0.06] px-2.5 py-1.5 text-[10px] font-bold text-slate-600 hover:text-cyan-400 hover:border-cyan-500/20 transition cursor-pointer"
+                        >
+                          <Plus className="h-2.5 w-2.5" /> ADD DRAFT
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
 
               {tournaments.length === 0 && (
                 <div className="py-8 text-center">
@@ -538,22 +497,6 @@ export default function TeamDraftPlanner({
                 </div>
               )}
             </div>
-
-            <div className="border-t border-white/[0.06] p-2 space-y-1">
-              <button
-                onClick={createTournament}
-                className="flex w-full items-center gap-2 rounded-lg border border-dashed border-white/[0.08] px-3 py-2 text-[10px] font-bold text-slate-500 hover:text-cyan-400 hover:border-cyan-500/30 transition cursor-pointer"
-              >
-                <Plus className="h-3 w-3" /> New Tournament
-              </button>
-              <button
-                onClick={createDraft}
-                disabled={!selectedTourId}
-                className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-[10px] font-bold text-slate-600 hover:text-cyan-400 transition cursor-pointer disabled:opacity-30"
-              >
-                <Plus className="h-3 w-3" /> Add Draft
-              </button>
-            </div>
           </>
         )}
       </aside>
@@ -561,84 +504,77 @@ export default function TeamDraftPlanner({
       {/* ═══ MAIN WORKSPACE ═══ */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* ─── HEADER ─── */}
-        <header className="flex items-center gap-4 border-b border-white/[0.06] bg-[#080e1a]/80 px-5 py-3 backdrop-blur-sm shrink-0">
-          {sidebarCollapsed && (
-            <button
-              onClick={() => setSidebarCollapsed(false)}
-              className="p-1.5 text-slate-500 hover:text-cyan-400 transition cursor-pointer"
-              title="Expand sidebar"
-            >
-              <Layers className="h-4 w-4" />
-            </button>
-          )}
+        <header className="border-b border-white/[0.06] bg-[#080e1a]/80 backdrop-blur-sm shrink-0">
+          <div className="flex items-center gap-4 px-5 py-3">
+            {sidebarCollapsed && (
+              <button onClick={() => setSidebarCollapsed(false)} className="p-1.5 text-slate-500 hover:text-cyan-400 transition cursor-pointer" title="Expand sidebar">
+                <Layers className="h-4 w-4" />
+              </button>
+            )}
 
-          {selectedDraft ? (
-            <>
-              <div className="flex items-center gap-1.5 text-[10px] text-slate-600">
-                <span>{selectedTour?.name}</span>
-                <ChevronRight className="h-3 w-3" />
-              </div>
-              <input
-                value={selectedDraft.name}
-                onChange={(e) =>
-                  updateDraft((d) => ({ ...d, name: e.target.value }))
-                }
-                className="bg-transparent text-sm font-bold text-white outline-none border-b border-transparent focus:border-cyan-500/30 transition min-w-0 max-w-[200px]"
-              />
+            {selectedDraft ? (
+              <>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-1.5 text-[9px] font-mono uppercase tracking-[0.15em] text-slate-600 mb-0.5">
+                    <span>{selectedTour?.name}</span>
+                    <ChevronRight className="h-2.5 w-2.5" />
+                    <span>{selectedDraft.name}</span>
+                  </div>
+                  <input
+                    value={selectedDraft.name}
+                    onChange={(e) => updateDraft((d) => ({ ...d, name: e.target.value }))}
+                    className="bg-transparent text-lg font-black text-white outline-none border-b border-transparent focus:border-cyan-500/30 transition w-full max-w-[240px] font-display"
+                  />
+                </div>
 
-              <div className="flex-1" />
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1 rounded-lg border border-white/[0.06] bg-white/[0.02] p-0.5">
+                    {(["BLUE", "RED"] as const).map((s) => (
+                      <button
+                        key={s}
+                        onClick={() => updateDraft((d) => ({ ...d, side: s }))}
+                        className={`px-3 py-1.5 rounded-md text-[10px] font-bold uppercase tracking-wider transition cursor-pointer ${
+                          selectedDraft.side === s
+                            ? s === "BLUE"
+                              ? "bg-blue-500/20 text-blue-300 shadow-[0_0_8px_rgba(96,165,250,0.15)]"
+                              : "bg-rose-500/20 text-rose-300 shadow-[0_0_8px_rgba(248,113,113,0.15)]"
+                            : "text-slate-600 hover:text-slate-400"
+                        }`}
+                      >
+                        {selectedDraft.side === s ? "Our " : ""}{s === "BLUE" ? "Blue" : "Red"}
+                      </button>
+                    ))}
+                  </div>
 
-              <div className="flex items-center gap-1 rounded-lg border border-white/[0.06] bg-white/[0.02] p-0.5">
-                {(["BLUE", "RED"] as const).map((s) => (
                   <button
-                    key={s}
-                    onClick={() => updateDraft((d) => ({ ...d, side: s }))}
-                    className={`px-3 py-1.5 rounded-md text-[10px] font-bold uppercase tracking-wider transition cursor-pointer ${
-                      selectedDraft.side === s
-                        ? s === "BLUE"
-                          ? "bg-blue-500/20 text-blue-300 shadow-[0_0_8px_rgba(96,165,250,0.15)]"
-                          : "bg-rose-500/20 text-rose-300 shadow-[0_0_8px_rgba(248,113,113,0.15)]"
-                        : "text-slate-600 hover:text-slate-400"
-                    }`}
+                    onClick={handleExportPng}
+                    disabled={exporting}
+                    className="flex items-center gap-1.5 rounded-lg bg-amber-500/15 border border-amber-500/30 px-4 py-1.5 text-[11px] font-bold text-amber-300 hover:bg-amber-500/25 transition cursor-pointer disabled:opacity-50"
                   >
-                    {s === "BLUE" ? "Blue" : "Red"}
+                    <Download className="h-3.5 w-3.5" />
+                    {exporting ? "Exporting..." : "Save"}
                   </button>
-                ))}
+                </div>
+              </>
+            ) : (
+              <div className="flex items-center gap-3 text-slate-600">
+                <Compass className="h-4 w-4" />
+                <span className="text-xs">Select a draft from the sidebar or create a new one</span>
               </div>
+            )}
+          </div>
 
-              <div className="flex items-center gap-4 text-[11px] font-mono text-slate-500">
-                <span>
-                  Bans <span className="text-white font-bold">{progress.bans}</span>/10
-                </span>
-                <span>
-                  Picks <span className="text-white font-bold">{progress.picks}</span>/10
-                </span>
-                <span>
-                  Complete{" "}
-                  <span className={`font-bold ${progress.pct === 100 ? "text-emerald-400" : "text-cyan-400"}`}>
-                    {progress.pct}%
-                  </span>
-                </span>
-              </div>
-
-              <button
-                onClick={duplicateDraft}
-                className="p-1.5 text-slate-500 hover:text-cyan-400 transition cursor-pointer"
-                title="Duplicate Draft"
-              >
-                <Copy className="h-4 w-4" />
-              </button>
-              <button
-                onClick={() => {}}
-                className="flex items-center gap-1.5 rounded-lg bg-amber-500/15 border border-amber-500/25 px-4 py-1.5 text-[11px] font-bold text-amber-300 hover:bg-amber-500/25 transition cursor-pointer"
-              >
-                <Save className="h-3.5 w-3.5" /> Save
-              </button>
-            </>
-          ) : (
-            <div className="flex items-center gap-3 text-slate-600">
-              <Compass className="h-4 w-4" />
-              <span className="text-xs">Select a draft from the sidebar or create a new one</span>
+          {selectedDraft && (
+            <div className="flex items-center justify-end gap-5 border-t border-white/[0.04] px-5 py-1.5">
+              <span className="text-[10px] font-mono text-slate-500">
+                Bans <span className="text-white font-bold">{progress.bans}</span>/10
+              </span>
+              <span className="text-[10px] font-mono text-slate-500">
+                Picks <span className="text-white font-bold">{progress.picks}</span>/10
+              </span>
+              <span className="text-[10px] font-mono text-slate-500">
+                Complete <span className={`font-bold ${progress.pct === 100 ? "text-emerald-400" : "text-cyan-400"}`}>{progress.pct}%</span>
+              </span>
             </div>
           )}
         </header>
@@ -646,38 +582,20 @@ export default function TeamDraftPlanner({
         {/* ─── BOARD AREA ─── */}
         {selectedDraft ? (
           <div className="flex-1 overflow-y-auto">
-            <div className="flex flex-col min-h-full">
+            <div ref={boardRef} className="flex flex-col min-h-full">
               <div className="grid grid-cols-2 flex-1 min-h-0">
-                <BoardPanel
-                  side="BLUE"
-                  draft={selectedDraft}
-                  heroAssets={heroAssets}
-                  openPicker={openPicker}
-                  clearSlot={clearSlot}
-                  isOurSide={selectedDraft.side === "BLUE"}
-                />
-                <BoardPanel
-                  side="RED"
-                  draft={selectedDraft}
-                  heroAssets={heroAssets}
-                  openPicker={openPicker}
-                  clearSlot={clearSlot}
-                  isOurSide={selectedDraft.side === "RED"}
-                />
+                <BoardPanel side="BLUE" draft={selectedDraft} heroAssets={heroAssets} openPicker={openPicker} clearSlot={clearSlot} isOurSide={selectedDraft.side === "BLUE"} />
+                <BoardPanel side="RED" draft={selectedDraft} heroAssets={heroAssets} openPicker={openPicker} clearSlot={clearSlot} isOurSide={selectedDraft.side === "RED"} />
               </div>
 
               <div className="border-t border-white/[0.06] bg-[#070c18]/80 px-5 py-3">
                 <div className="flex items-center gap-2 mb-2">
                   <BookOpen className="h-3.5 w-3.5 text-slate-500" />
-                  <span className="font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
-                    Coach Notes
-                  </span>
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">Coach Notes</span>
                 </div>
                 <textarea
                   value={selectedDraft.notes}
-                  onChange={(e) =>
-                    updateDraft((d) => ({ ...d, notes: e.target.value }))
-                  }
+                  onChange={(e) => updateDraft((d) => ({ ...d, notes: e.target.value }))}
                   className="w-full h-20 bg-white/[0.02] rounded-lg border border-white/[0.06] px-4 py-2.5 text-sm text-white outline-none focus:border-cyan-500/30 transition resize-none placeholder:text-slate-700"
                   placeholder="Strategy notes — ban priorities, win condition, key matchups, rotations..."
                 />
@@ -697,14 +615,8 @@ export default function TeamDraftPlanner({
 
       {/* ═══ HERO PICKER MODAL ═══ */}
       {pickerSlot && selectedDraft && (
-        <div
-          className="fixed inset-0 z-[9999] flex items-start justify-center pt-[10vh] bg-black/70 backdrop-blur-sm"
-          onClick={() => setPickerSlot(null)}
-        >
-          <div
-            className="w-full max-w-lg rounded-2xl border border-white/10 bg-[#0a1020] shadow-2xl overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className="fixed inset-0 z-[9999] flex items-start justify-center pt-[10vh] bg-black/70 backdrop-blur-sm" onClick={() => setPickerSlot(null)}>
+          <div className="w-full max-w-lg rounded-2xl border border-white/10 bg-[#0a1020] shadow-2xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center gap-3 border-b border-white/[0.06] px-4 py-3">
               <Swords className="h-4 w-4 text-slate-500 shrink-0" />
               <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
@@ -714,48 +626,19 @@ export default function TeamDraftPlanner({
                     ? `${pickerSlot.lane} Main — ${pickerSlot.side === "BLUE" ? "Blue" : "Red"}`
                     : `${pickerSlot.lane} Alt #${pickerSlot.backupIndex + 1} — ${pickerSlot.side === "BLUE" ? "Blue" : "Red"}`}
               </span>
-              <input
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search hero..."
-                className="ml-auto flex-1 bg-transparent text-sm text-white outline-none placeholder:text-slate-600 text-right"
-                autoFocus
-              />
-              <button
-                onClick={() => setPickerSlot(null)}
-                className="p-1 text-slate-500 hover:text-white cursor-pointer"
-              >
-                <X className="h-4 w-4" />
-              </button>
+              <input value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search hero..." className="ml-auto flex-1 bg-transparent text-sm text-white outline-none placeholder:text-slate-600 text-right" autoFocus />
+              <button onClick={() => setPickerSlot(null)} className="p-1 text-slate-500 hover:text-white cursor-pointer"><X className="h-4 w-4" /></button>
             </div>
             <div className="max-h-[50vh] overflow-y-auto p-2 grid grid-cols-4 sm:grid-cols-5 gap-1.5">
               {filteredHeroes.map((h) => (
-                <button
-                  key={h.hero_name}
-                  onClick={() => {
-                    applyPick(pickerSlot, h.hero_name);
-                    setPickerSlot(null);
-                    setSearchQuery("");
-                  }}
-                  className="flex flex-col items-center gap-1 rounded-xl p-2 hover:bg-white/[0.06] transition cursor-pointer"
-                >
+                <button key={h.hero_name} onClick={() => { applyPick(pickerSlot, h.hero_name); setPickerSlot(null); setSearchQuery(""); }} className="flex flex-col items-center gap-1 rounded-xl p-2 hover:bg-white/[0.06] transition cursor-pointer">
                   <div className="h-10 w-10 overflow-hidden rounded-lg border border-white/10 bg-[#060d1a]">
-                    <FallbackImage
-                      src={getHeroImageUrl(h.hero_name, heroAssets)}
-                      fallbackText={h.hero_name}
-                      alt={h.hero_name}
-                      className="h-full w-full object-cover"
-                      containerClassName="h-full w-full text-[6px]"
-                    />
+                    <FallbackImage src={getHeroImageUrl(h.hero_name, heroAssets)} fallbackText={h.hero_name} alt={h.hero_name} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
                   </div>
-                  <span className="text-[9px] text-slate-400 truncate w-full text-center">
-                    {h.hero_name}
-                  </span>
+                  <span className="text-[9px] text-slate-400 truncate w-full text-center">{h.hero_name}</span>
                 </button>
               ))}
-              {filteredHeroes.length === 0 && (
-                <div className="col-span-full py-6 text-center text-xs text-slate-500">No heroes found.</div>
-              )}
+              {filteredHeroes.length === 0 && <div className="col-span-full py-6 text-center text-xs text-slate-500">No heroes found.</div>}
             </div>
           </div>
         </div>
@@ -765,14 +648,7 @@ export default function TeamDraftPlanner({
 }
 
 /* ═══ BOARD PANEL ═══ */
-function BoardPanel({
-  side,
-  draft,
-  heroAssets,
-  openPicker,
-  clearSlot,
-  isOurSide,
-}: {
+function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide }: {
   side: "BLUE" | "RED";
   draft: DraftPlan;
   heroAssets: Record<string, string>;
@@ -784,24 +660,17 @@ function BoardPanel({
   const bans = isBlue ? draft.blueBans : draft.redBans;
   const lanes = isBlue ? draft.blueLanes : draft.redLanes;
   const laneOrder = isBlue ? LANE_ORDER_BLUE : LANE_ORDER_RED;
-  const banLabels = isBlue
-    ? ["B1", "B2", "B3", "B4", "B5"]
-    : ["B5", "B4", "B3", "B2", "B1"];
-  const pickLabels = isBlue
-    ? ["P1", "P2", "P3", "P4", "P5"]
-    : ["P5", "P4", "P3", "P2", "P1"];
+  const banLabels = isBlue ? ["B1", "B2", "B3", "B4", "B5"] : ["B5", "B4", "B3", "B2", "B1"];
+  const pickLabels = isBlue ? ["P1", "P2", "P3", "P4", "P5"] : ["P5", "P4", "P3", "P2", "P1"];
 
   const borderColor = isBlue ? "border-blue-500/10" : "border-rose-500/10";
   const headerBg = isBlue ? "bg-blue-950/30" : "bg-rose-950/30";
   const accentText = isBlue ? "text-blue-300" : "text-rose-300";
   const accentDot = isBlue ? "bg-blue-400" : "bg-rose-400";
-  const ringColor = isBlue
-    ? "border-blue-500/25"
-    : "border-rose-500/25";
+  const ringColor = isBlue ? "border-blue-500/25" : "border-rose-500/25";
 
   return (
     <div className={`flex flex-col border-r ${borderColor} overflow-hidden`}>
-      {/* Panel Header */}
       <div className={`flex items-center justify-between px-5 py-2.5 border-b border-white/[0.04] ${headerBg}`}>
         <div className="flex items-center gap-2.5">
           <div className={`h-2 w-2 rounded-full ${accentDot}`} />
@@ -809,20 +678,15 @@ function BoardPanel({
             {side === "BLUE" ? "Blue Side" : "Red Side"}
           </span>
           {isOurSide && (
-            <span className={`rounded px-1.5 py-0.5 text-[8px] font-black uppercase tracking-wider ${isBlue ? "bg-blue-500/20 text-blue-300" : "bg-rose-500/20 text-rose-300"}`}>
-              OURS
-            </span>
+            <span className={`rounded px-1.5 py-0.5 text-[8px] font-black uppercase tracking-wider ${isBlue ? "bg-blue-500/20 text-blue-300" : "bg-rose-500/20 text-rose-300"}`}>OURS</span>
           )}
         </div>
         <span className="text-[10px] font-mono text-slate-500">
-          {banLabels.filter((_, i) => bans[i]).length +
-            laneOrder.filter((l) => lanes[l].main).length}
-          /10
+          {banLabels.filter((_, i) => bans[i]).length + laneOrder.filter((l) => lanes[l].main).length}/10
         </span>
       </div>
 
       <div className="flex-1 overflow-y-auto px-4 py-3 space-y-4">
-        {/* ═══ BANS ROW ═══ */}
         <div>
           <div className="flex items-center gap-1.5 mb-2.5">
             <Ban className="h-3 w-3 text-rose-400/40" />
@@ -831,20 +695,13 @@ function BoardPanel({
           <div className="flex justify-between gap-1">
             {bans.map((h, i) => (
               <div key={i} className="flex flex-col items-center gap-1.5">
-                <CircleSlot
-                  hero={h}
-                  heroAssets={heroAssets}
-                  ring={ringColor}
-                  onClick={() => openPicker({ type: "ban", side, index: i })}
-                  onClear={() => clearSlot({ type: "ban", side, index: i })}
-                />
+                <CircleSlot hero={h} heroAssets={heroAssets} ring={ringColor} onClick={() => openPicker({ type: "ban", side, index: i })} onClear={() => clearSlot({ type: "ban", side, index: i })} />
                 <span className="text-[8px] font-mono font-bold text-slate-600 uppercase">{banLabels[i]}</span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* ═══ PICKS + LANE COLUMNS ═══ */}
         <div>
           <div className="flex items-center gap-1.5 mb-2.5">
             <Swords className="h-3 w-3 text-cyan-400/40" />
@@ -856,44 +713,15 @@ function BoardPanel({
               const lc = LANE_COLORS[lane];
               return (
                 <div key={lane} className="flex flex-col items-center gap-1.5 flex-1">
-                  {/* Main Pick Circle */}
-                  <CircleSlot
-                    hero={plan.main}
-                    heroAssets={heroAssets}
-                    ring={ringColor}
-                    onClick={() => openPicker({ type: "pick", side, lane })}
-                    onClear={() => clearSlot({ type: "pick", side, lane })}
-                  />
-
-                  {/* Lane Pill */}
-                  <button
-                    onClick={() => openPicker({ type: "pick", side, lane })}
-                    className={`inline-flex items-center gap-1 rounded-full border ${lc.border} ${lc.bg} px-2 py-0.5 cursor-pointer transition hover:opacity-80`}
-                  >
-                    <span className={`text-[8px] font-black uppercase tracking-wider ${lc.text}`}>
-                      {LANE_LABEL[lane]}
-                    </span>
+                  <CircleSlot hero={plan.main} heroAssets={heroAssets} ring={ringColor} onClick={() => openPicker({ type: "pick", side, lane })} onClear={() => clearSlot({ type: "pick", side, lane })} />
+                  <button onClick={() => openPicker({ type: "pick", side, lane })} className={`inline-flex items-center gap-1 rounded-full border ${lc.border} ${lc.bg} px-2 py-0.5 cursor-pointer transition hover:opacity-80`}>
+                    <span className={`text-[8px] font-black uppercase tracking-wider ${lc.text}`}>{LANE_LABEL[lane]}</span>
                   </button>
-
-                  {/* 6 Backup Slots — 3x2 Grid */}
                   <div className="grid grid-cols-3 gap-1 mt-0.5">
                     {plan.backups.map((b, bi) => (
-                      <MiniSlot
-                        key={bi}
-                        hero={b}
-                        heroAssets={heroAssets}
-                        ring={ringColor}
-                        onClick={() =>
-                          openPicker({ type: "backup", side, lane, backupIndex: bi })
-                        }
-                        onClear={() =>
-                          clearSlot({ type: "backup", side, lane, backupIndex: bi })
-                        }
-                      />
+                      <MiniSlot key={bi} hero={b} heroAssets={heroAssets} ring={ringColor} onClick={() => openPicker({ type: "backup", side, lane, backupIndex: bi })} onClear={() => clearSlot({ type: "backup", side, lane, backupIndex: bi })} />
                     ))}
                   </div>
-
-                  {/* Labels */}
                   <span className="text-[8px] font-mono font-bold text-cyan-500/60 uppercase mt-0.5">Alt</span>
                   <span className="text-[8px] font-mono font-bold text-slate-600 uppercase">{pickLabels[idx]}</span>
                 </div>
@@ -907,105 +735,43 @@ function BoardPanel({
 }
 
 /* ═══ CIRCLE SLOT (Ban/Pick — large) ═══ */
-function CircleSlot({
-  hero,
-  heroAssets,
-  ring,
-  onClick,
-  onClear,
-}: {
-  hero: string;
-  heroAssets: Record<string, string>;
-  ring: string;
-  onClick: () => void;
-  onClear: () => void;
+function CircleSlot({ hero, heroAssets, ring, onClick, onClear }: {
+  hero: string; heroAssets: Record<string, string>; ring: string; onClick: () => void; onClear: () => void;
 }) {
   const empty = !hero;
   return (
-    <button
-      onClick={onClick}
-      className={`relative h-14 w-14 rounded-full border-2 ${
-        empty
-          ? "border-dashed border-white/[0.08] bg-white/[0.01]"
-          : `${ring} bg-white/[0.03]`
-      } flex items-center justify-center transition cursor-pointer hover:scale-105`}
-    >
+    <button onClick={onClick} className={`relative h-14 w-14 rounded-full border-2 ${empty ? "border-dashed border-white/[0.08] bg-white/[0.01]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-105`}>
       {hero ? (
         <>
           <div className="h-10 w-10 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
-            <FallbackImage
-              src={getHeroImageUrl(hero, heroAssets)}
-              fallbackText={hero}
-              alt={hero}
-              className="h-full w-full object-cover"
-              containerClassName="h-full w-full text-[5px]"
-            />
+            <FallbackImage src={getHeroImageUrl(hero, heroAssets)} fallbackText={hero} alt={hero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[5px]" />
           </div>
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onClear();
-            }}
-            className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-500 hover:text-rose-400 hover:border-rose-500/30 transition cursor-pointer"
-          >
+          <button onClick={(e) => { e.stopPropagation(); onClear(); }} className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-500 hover:text-rose-400 hover:border-rose-500/30 transition cursor-pointer">
             <X className="h-2.5 w-2.5" />
           </button>
         </>
-      ) : (
-        <span className="text-lg text-slate-700">+</span>
-      )}
+      ) : <span className="text-lg text-slate-700">+</span>}
     </button>
   );
 }
 
 /* ═══ MINI SLOT (Backup — small) ═══ */
-function MiniSlot({
-  hero,
-  heroAssets,
-  ring,
-  onClick,
-  onClear,
-}: {
-  hero: string;
-  heroAssets: Record<string, string>;
-  ring: string;
-  onClick: () => void;
-  onClear: () => void;
+function MiniSlot({ hero, heroAssets, ring, onClick, onClear }: {
+  hero: string; heroAssets: Record<string, string>; ring: string; onClick: () => void; onClear: () => void;
 }) {
   const empty = !hero;
   return (
-    <button
-      onClick={onClick}
-      className={`relative h-8 w-8 rounded-full border ${
-        empty
-          ? "border-dashed border-white/[0.06] bg-white/[0.01]"
-          : `${ring} bg-white/[0.03]`
-      } flex items-center justify-center transition cursor-pointer hover:scale-110`}
-    >
+    <button onClick={onClick} className={`relative h-8 w-8 rounded-full border ${empty ? "border-dashed border-white/[0.06] bg-white/[0.01]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-110`}>
       {hero ? (
         <>
           <div className="h-6 w-6 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
-            <FallbackImage
-              src={getHeroImageUrl(hero, heroAssets)}
-              fallbackText={hero}
-              alt={hero}
-              className="h-full w-full object-cover"
-              containerClassName="h-full w-full text-[3px]"
-            />
+            <FallbackImage src={getHeroImageUrl(hero, heroAssets)} fallbackText={hero} alt={hero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[3px]" />
           </div>
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onClear();
-            }}
-            className="absolute -top-0.5 -right-0.5 h-3 w-3 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-600 hover:text-rose-400 transition cursor-pointer"
-          >
+          <button onClick={(e) => { e.stopPropagation(); onClear(); }} className="absolute -top-0.5 -right-0.5 h-3 w-3 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-600 hover:text-rose-400 transition cursor-pointer">
             <X className="h-2 w-2" />
           </button>
         </>
-      ) : (
-        <span className="text-[10px] text-slate-700">+</span>
-      )}
+      ) : <span className="text-[10px] text-slate-700">+</span>}
     </button>
   );
 }
