@@ -25,7 +25,7 @@ import MatchSeriesCard from "./MatchSeriesCard";
 interface TeamAnalyticsProps {
   teamsData: TeamStats[];
   heroAssets: Record<string, string>;
-  heroes?: any[]; // Keep compatible with parent props
+  heroes?: any[];
 }
 
 interface MatchCenterStanding {
@@ -55,7 +55,6 @@ interface MatchCenterData {
   }>;
 }
 
-// Helpers
 export function normalizeTeamName(name: string): string {
   if (!name) return "UNKNOWN";
   const lower = name.toLowerCase().trim();
@@ -84,11 +83,9 @@ export default function TeamAnalytics({
   const [searchTeam, setSearchTeam] = useState<string>("");
   const [teamTab, setTeamTab] = useState<"profile" | "history" | "trends">("profile");
 
-  // Dynamic API Matches States
   const [matches, setMatches] = useState<Match[]>([]);
   const [loadingMatches, setLoadingMatches] = useState<boolean>(true);
 
-  // Match History filters using new API
   const [matchResultFilter, setMatchResultFilter] = useState<"all" | "win" | "lose">("all");
   const [matchOpponentFilter, setMatchOpponentFilter] = useState<string>("");
   const [matchWeekFilter, setMatchWeekFilter] = useState<number | null>(null);
@@ -107,7 +104,6 @@ export default function TeamAnalytics({
 
   const fallbackLogo = "/raw-assets/regular_season_files/36px-Id_hd.png";
 
-  // Load matches for profile tab stats (uses regular_matches.json only — 72 series source)
   useEffect(() => {
     const fetchMatches = async () => {
       try {
@@ -130,25 +126,18 @@ export default function TeamAnalytics({
     fetchMatches();
   }, []);
 
-  // Sync default selected team
   useEffect(() => {
     if (teamsData.length > 0 && !selectedTeam) {
       setSelectedTeam(teamsData[0]);
     }
   }, [teamsData, selectedTeam]);
 
-  // Map any team key to its dynamic logo from teamsData
   const getTeamLogoImg = (teamKey: string) => {
     const normKey = normalizeTeamName(teamKey);
     const found = teamsData.find(t => normalizeTeamName(t.key) === normKey);
     return found?.logo || fallbackLogo;
   };
-  
-  const getTeamLogoStyle = (teamKey: string) => {
-    return undefined;
-  };
 
-  // Helper to fetch Hero Img URLs
   const getHeroImg = (heroName: string) => {
     return getHeroImageUrl(heroName, heroAssets);
   };
@@ -172,7 +161,6 @@ export default function TeamAnalytics({
     setMatchWeekFilter(null);
   };
 
-  // Filtered Teams based on Search input
   const filteredTeams = useMemo(() => {
     return teamsData.filter((t) => {
       const matchName = t.name.toLowerCase().includes(searchTeam.toLowerCase());
@@ -181,7 +169,6 @@ export default function TeamAnalytics({
     });
   }, [teamsData, searchTeam]);
 
-  // Matches played specifically by the selected team
   const teamMatches = useMemo(() => {
     if (!selectedTeam) return [];
     const tKey = selectedTeam.key.toLowerCase();
@@ -192,7 +179,6 @@ export default function TeamAnalytics({
     });
   }, [matches, selectedTeam]);
 
-  // Dynamic calculated stats for the selected team
   const dynamicStats = useMemo(() => {
     let blueGames = 0;
     let blueWins = 0;
@@ -217,7 +203,6 @@ export default function TeamAnalytics({
         const winnerKey = normalizeTeamName(g.winner).toLowerCase();
         const teamWon = winnerKey === targetKey;
 
-        // Sides Performance
         if (isBlue) {
           blueGames++;
           if (teamWon) blueWins++;
@@ -226,7 +211,6 @@ export default function TeamAnalytics({
           if (teamWon) redWins++;
         }
 
-        // Hero usage
         const picks = isBlue ? g.blueTeam?.picks : g.redTeam?.picks;
         if (picks && Array.isArray(picks)) {
           picks.forEach((hero) => {
@@ -236,7 +220,6 @@ export default function TeamAnalytics({
           });
         }
 
-        // Target bans against us
         const oppBans = isBlue ? g.redTeam?.bans : g.blueTeam?.bans;
         if (oppBans && Array.isArray(oppBans)) {
           oppBans.forEach((hero) => {
@@ -244,7 +227,6 @@ export default function TeamAnalytics({
           });
         }
 
-        // Bans made by us
         const ourBans = isBlue ? g.blueTeam?.bans : g.redTeam?.bans;
         if (ourBans && Array.isArray(ourBans)) {
           ourBans.forEach((hero) => {
@@ -257,7 +239,6 @@ export default function TeamAnalytics({
     return { blueGames, blueWins, redGames, redWins, heroCounts, bannedAgainstCounts, ourBanCounts };
   }, [teamMatches, selectedTeam]);
 
-  // Format comfort heroes list
   const comfortHeroesList = useMemo(() => {
     return Object.entries(dynamicStats.heroCounts)
       .map(([name, s]) => ({
@@ -284,7 +265,6 @@ export default function TeamAnalytics({
       .slice(0, 5);
   }, [dynamicStats.ourBanCounts]);
 
-  // Overall Contest rate list
   const overallContestedList = useMemo(() => {
     const presence: Record<string, { picks: number; bans: number; total: number }> = {};
     let totalGames = 0;
@@ -372,7 +352,8 @@ export default function TeamAnalytics({
   }, [selectedTeam, comfortHeroesList, ourBansList, targetBansList, dynamicStats.blueGames, dynamicStats.blueWins, dynamicStats.redGames, dynamicStats.redWins]);
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 min-h-screen">
+      {/* Mobile Back Button */}
       <div className="flex items-center justify-between gap-3 sm:hidden">
         <button
           type="button"
@@ -386,83 +367,107 @@ export default function TeamAnalytics({
           Team Analytics
         </div>
       </div>
-      {/* Top Header Widget */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center rounded-[24px] border border-gray-900 bg-gray-950 p-5 gap-4 relative overflow-hidden animate-fade-in text-gray-200">
-        <div className="absolute right-0 top-0 h-32 w-32 bg-indigo-500/5 blur-3xl pointer-events-none rounded-full" />
-        <div className="flex items-center gap-3">
-          <div className="h-10 w-10 bg-indigo-950/40 border border-indigo-500/25 rounded-lg flex items-center justify-center text-indigo-400">
-            <Gamepad2 className="h-5 w-5" />
+
+      {/* ═══════════════ PAGE HEADER ═══════════════ */}
+      <div className="relative rounded-2xl border border-white/[0.06] bg-gradient-to-br from-[#080e1a] via-[#0a1225] to-[#060b16] p-6 sm:p-7 gap-5 overflow-hidden animate-fade-in">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-24 -right-24 h-56 w-56 bg-indigo-600/[0.06] blur-[100px] rounded-full" />
+          <div className="absolute -bottom-16 -left-16 h-40 w-40 bg-blue-500/[0.04] blur-[80px] rounded-full" />
+        </div>
+        <div className="relative z-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div className="flex items-center gap-4">
+            <div className="h-12 w-12 bg-gradient-to-br from-indigo-500/20 to-blue-600/10 border border-indigo-500/25 rounded-xl flex items-center justify-center text-indigo-400 shadow-lg shadow-indigo-500/10 shrink-0">
+              <Gamepad2 className="h-6 w-6" />
+            </div>
+            <div>
+              <h1 className="text-2xl sm:text-[1.75rem] font-black text-white tracking-tight leading-none" style={{ fontFamily: 'var(--font-display)' }}>
+                Analisis Tim & Sejarah Draf
+              </h1>
+              <p className="text-[13px] text-gray-400 mt-1.5 font-sans max-w-lg leading-relaxed">
+                Portal intelijen esports — taktik pick/ban, riwayat match live, dan preferensi side.
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
-              Analisis Tim & Sejarah Draf
-            </h1>
-            <p className="text-xs text-gray-400 mt-0.5 font-sans">
-              Portal intelijen esports mutakhir untuk menganalisis taktik pick/ban, riwayat match live, dan preferensi side.
-            </p>
+          <div className="flex items-center gap-2 flex-wrap shrink-0">
+            <span className="inline-flex items-center gap-1.5 rounded-lg bg-indigo-950/40 border border-indigo-500/15 px-3 py-1.5 text-[11px] font-mono font-bold text-indigo-300">
+              <div className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse" />
+              Regular Season
+            </span>
+            <span className="inline-flex items-center rounded-lg bg-white/[0.03] border border-white/[0.06] px-3 py-1.5 text-[11px] font-mono font-bold text-gray-400">
+              {matchCenterData?.totalSeries ?? "—"} Series
+            </span>
+            <span className="inline-flex items-center rounded-lg bg-white/[0.03] border border-white/[0.06] px-3 py-1.5 text-[11px] font-mono font-bold text-gray-400">
+              {matchCenterData?.totalGames ?? "—"} Games
+            </span>
           </div>
         </div>
         {import.meta.env.DEV && (
-          <div className="flex items-center gap-2 font-mono text-[10px] text-gray-500 bg-gray-900/40 px-3 py-1.5 rounded-lg border border-gray-800">
+          <div className="relative z-10 flex items-center gap-2 font-mono text-[10px] text-gray-500 bg-gray-900/60 px-3 py-1.5 rounded-lg border border-gray-800/60 w-fit">
             <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
             <span>DATA INTEGRATED: {matches.length} MATCHES RECORDED</span>
           </div>
         )}
       </div>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-        {/* Left Column: Team Selector List */}
-        <div className="lg:col-span-1 flex flex-col gap-4 rounded-xl border border-gray-900 bg-gray-950 p-5 shadow-2xl relative overflow-hidden">
-          {/* Subtle background glow */}
-          <div className="absolute top-0 left-0 w-full h-32 bg-indigo-500/5 blur-[80px] pointer-events-none"></div>
+      {/* ═══════════════ MAIN 2-COLUMN LAYOUT ═══════════════ */}
+      <div className="grid grid-cols-1 gap-6 lg:gap-7" style={{ gridTemplateColumns: 'minmax(0, 2fr) minmax(0, 3.5fr)' }}>
 
-          {/* Header */}
-          <div className="flex items-center justify-between border-b border-gray-800/80 pb-3 relative z-10">
-            <div className="flex items-center gap-2">
-              <Trophy className="w-4 h-4 text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]" />
-              <h2 className="text-sm font-bold text-white uppercase tracking-widest">S17 Standings</h2>
+        {/* ─── LEFT COLUMN: STANDINGS & LEADERBOARD ─── */}
+        <div className="flex flex-col gap-4 rounded-2xl border border-white/[0.06] bg-gradient-to-b from-[#080e1a] to-[#060b14] p-5 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-40 bg-indigo-500/[0.04] blur-[90px] pointer-events-none" />
+
+          {/* Standings Header */}
+          <div className="flex items-center justify-between border-b border-white/[0.06] pb-4 relative z-10">
+            <div className="flex items-center gap-3">
+              <div className="h-8 w-8 rounded-lg bg-amber-950/40 border border-amber-500/20 flex items-center justify-center">
+                <Trophy className="w-4 h-4 text-amber-400" />
+              </div>
+              <h2 className="text-sm font-black text-white uppercase tracking-widest" style={{ fontFamily: 'var(--font-display)' }}>
+                S17 Standings
+              </h2>
             </div>
-            <div className="text-[9px] font-mono text-indigo-300 bg-indigo-950/40 px-2 py-0.5 rounded border border-indigo-500/20 shadow-inner">WEEK 9</div>
+            <div className="text-[10px] font-mono font-bold text-indigo-300 bg-indigo-950/50 px-3 py-1 rounded-lg border border-indigo-500/20">
+              WEEK 9
+            </div>
           </div>
 
-          {/* Teams Table Container */}
-          <div className="overflow-hidden rounded-lg border border-gray-800/60 bg-[#0a0a0c] relative z-10 shadow-inner">
+          {/* Standings Table */}
+          <div className="overflow-hidden rounded-xl border border-white/[0.04] bg-black/30 relative z-10">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-gray-900/60 border-b border-gray-800/80 font-mono text-[9px] text-gray-500 uppercase tracking-wider">
-                  <th className="py-2.5 px-3 w-8 text-center">#</th>
-                  <th className="py-2.5 px-2">Franchise</th>
-                  <th className="py-2.5 px-1 text-center w-12">Series W</th>
-                  <th className="py-2.5 px-1 text-center w-12">Series L</th>
-                  <th className="py-2.5 px-2 text-center w-14">Win Rate</th>
+                <tr className="bg-white/[0.02] border-b border-white/[0.06]">
+                  <th className="py-3 px-3 w-9 text-center font-mono text-[10px] text-gray-400 uppercase tracking-widest font-bold">#</th>
+                  <th className="py-3 px-3 font-mono text-[10px] text-gray-400 uppercase tracking-widest font-bold">Team</th>
+                  <th className="py-3 px-3 text-center font-mono text-[10px] text-gray-400 uppercase tracking-widest font-bold w-11">W</th>
+                  <th className="py-3 px-3 text-center font-mono text-[10px] text-gray-400 uppercase tracking-widest font-bold w-11">L</th>
+                  <th className="py-3 px-3 text-center font-mono text-[10px] text-gray-400 uppercase tracking-widest font-bold w-[72px]">WR</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-800/40">
+              <tbody className="divide-y divide-white/[0.03]">
                 {(matchCenterData?.standings || []).map((teamData) => {
                   const teamDetails = teamsData.find((t) => t.key === teamData.team) || { logo: "", name: teamData.team };
                   const isSelected = selectedTeam?.key === teamData.team;
                   const teamZone = teamData.rank <= 2 ? "upper" : teamData.rank <= 6 ? "playoff" : "eliminated";
                   
-                  // Zone styling
-                  let rowBg = "hover:bg-gray-900/40";
+                  let rowBg = "hover:bg-white/[0.02] transition-colors duration-150";
                   let rankColor = "text-gray-500";
                   let borderLeft = "border-l-[3px] border-transparent";
                   
                   if (teamZone === "upper") {
-                    borderLeft = "border-l-[3px] border-emerald-500/50";
-                    rankColor = "text-emerald-400/80";
+                    borderLeft = "border-l-[3px] border-emerald-500/60";
+                    rankColor = "text-emerald-400";
                   } else if (teamZone === "playoff") {
                     borderLeft = "border-l-[3px] border-indigo-500/40";
-                    rankColor = "text-indigo-400/80";
+                    rankColor = "text-indigo-400";
                   } else {
                     borderLeft = "border-l-[3px] border-rose-600/50";
-                    rankColor = "text-rose-500/80";
-                    rowBg = "bg-[#1c0808] hover:bg-[#280c0c]";
+                    rankColor = "text-rose-400/70";
+                    rowBg = "bg-rose-950/[0.03] hover:bg-rose-950/[0.06] transition-colors duration-150";
                   }
 
                   if (isSelected) {
-                    rowBg = teamZone === "eliminated" ? "bg-[#2d0e0e]" : "bg-indigo-950/30";
-                    borderLeft = borderLeft.replace('/50', '').replace('/40', '').replace('/30', '');
+                    rowBg = teamZone === "eliminated" ? "bg-rose-950/10" : "bg-indigo-950/20";
+                    borderLeft = borderLeft.replace('/60', '').replace('/40', '');
                     rankColor = "text-white font-bold";
                   }
 
@@ -476,48 +481,48 @@ export default function TeamAnalytics({
                           setTeamTab("profile");
                         }
                       }}
-                      className={`cursor-pointer transition duration-200 ${rowBg}`}
+                      className={`cursor-pointer ${rowBg}`}
                     >
-                      <td className={`py-2 px-2 text-center text-xs font-mono ${rankColor} ${borderLeft}`}>
+                      <td className={`py-3 px-3 text-center text-[12px] font-mono font-bold ${rankColor} ${borderLeft}`}>
                         {teamData.rank}
                       </td>
-                      <td className="py-2 px-2">
-                        <div className="flex items-center gap-2.5">
+                      <td className="py-3 px-3">
+                        <div className="flex items-center gap-3">
                           {getTeamLogoImg(teamData.team) ? (
-                            <div className="relative flex items-center justify-center h-6 w-6">
+                            <div className="relative flex items-center justify-center h-7 w-7 shrink-0">
                               <img 
                                 src={getTeamLogoImg(teamData.team)} 
                                 alt={teamDetails.name} 
-                                className={`relative h-full w-full object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]`} 
+                                className="relative h-full w-full object-contain" 
                                 loading="lazy" 
                               />
                             </div>
                           ) : (
-                            <div className="h-6 w-6 rounded bg-gray-800/80 border border-gray-700/50" />
+                            <div className="h-7 w-7 rounded-lg bg-white/[0.03] border border-white/[0.06] shrink-0" />
                           )}
-                          <span className={`relative text-[12px] font-semibold tracking-tight truncate max-w-[110px] sm:max-w-none ${
-                            isSelected ? 'text-indigo-200 drop-shadow-md' : 'text-gray-200'
+                          <span className={`relative text-[13px] font-semibold tracking-tight truncate max-w-[140px] ${
+                            isSelected ? 'text-indigo-200' : 'text-gray-200'
                           }`}>
                             {teamDetails.name}
                           </span>
                         </div>
                       </td>
-                      <td className="py-2 px-1 text-center text-[11px] font-mono font-medium text-emerald-400">
+                      <td className="py-3 px-3 text-center text-[13px] font-mono font-bold text-emerald-400">
                         {teamData.wins}
                       </td>
-                      <td className="py-2 px-1 text-center text-[11px] font-mono font-medium text-rose-400">
+                      <td className="py-3 px-3 text-center text-[13px] font-mono font-bold text-rose-400">
                         {teamData.losses}
                       </td>
-                      <td className="py-2 px-2 text-center">
-                        <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
+                      <td className="py-3 px-3 text-center">
+                        <span className={`text-[12px] font-mono font-bold px-2.5 py-1 rounded-lg inline-block ${
                           teamData.winrate >= 50
-                            ? "bg-indigo-950/30 text-indigo-400" 
-                            : "bg-rose-950/20 text-rose-400"
+                            ? "bg-emerald-950/40 text-emerald-400 border border-emerald-500/15" 
+                            : "bg-rose-950/30 text-rose-400 border border-rose-500/10"
                         }`}>
                           {teamData.winrate}%
                         </span>
-                        <div className="mt-0.5 text-[8px] font-mono text-gray-500">
-                          G {teamData.gameRecord}
+                        <div className="text-[10px] font-mono text-gray-600 mt-1.5 tabular-nums">
+                          {teamData.gameRecord}
                         </div>
                       </td>
                     </tr>
@@ -527,44 +532,44 @@ export default function TeamAnalytics({
             </table>
           </div>
           
-          {/* Legend / Tiebreakers */}
-          <div className="flex flex-col gap-1.5 px-1 mt-2">
-            <div className="flex items-center justify-between text-[9px] font-mono text-gray-500">
-              <div className="flex gap-3">
-                <span className="flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50"></div> Upper Bracket (#1-2)</span>
-                <span className="flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-indigo-500/40"></div> Playoff (#3-6)</span>
-                <span className="flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-rose-900/40"></div> Eliminasi (#7-9)</span>
-              </div>
+          {/* Zone Legend */}
+          <div className="flex flex-col gap-2.5 px-1 mt-1 relative z-10">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-[11px] font-mono text-gray-400">
+              <span className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-emerald-500/60" /> Upper Bracket</span>
+              <span className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-indigo-500/40" /> Playoff</span>
+              <span className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-rose-600/50" /> Eliminasi</span>
             </div>
-            <div className="text-[8px] font-mono text-gray-600 leading-relaxed">
+            <div className="text-[10px] font-mono text-gray-600">
               Tiebreak: Series Record → Game Diff → Head-to-Head
             </div>
           </div>
 
-          {/* Top Contested overall widget */}
-          <div className="mt-2 p-3.5 bg-gray-900/20 rounded-xl border border-gray-900/60 flex flex-col gap-2">
-            <h3 className="text-xs font-bold text-gray-300 uppercase tracking-widest mb-1 flex items-center gap-1.5">
-              <Flame className="h-3.5 w-3.5 text-orange-400 animate-pulse" />
-              Top Presensi Hero Turnamen
+          {/* ═══ Top Presensi Hero ═══ */}
+          <div className="mt-1 p-4 bg-white/[0.015] rounded-xl border border-white/[0.04] flex flex-col gap-3.5 relative z-10">
+            <h3 className="text-[12px] font-black text-gray-300 uppercase tracking-widest flex items-center gap-2.5" style={{ fontFamily: 'var(--font-display)' }}>
+              <div className="h-6 w-6 rounded-lg bg-orange-950/40 border border-orange-500/20 flex items-center justify-center">
+                <Flame className="h-3.5 w-3.5 text-orange-400" />
+              </div>
+              Top Presensi Hero
             </h3>
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-3.5">
               {overallContestedList.slice(0, 3).map((item) => (
-                <div key={item.name} className="flex flex-col gap-1">
-                  <div className="flex justify-between items-center text-xs">
-                    <div className="flex items-center gap-1.5">
+                <div key={item.name} className="flex flex-col gap-2">
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-2.5">
                       <FallbackImage
                         src={getHeroImg(item.name)}
                         fallbackText={item.name}
-                        className="h-5 w-5 rounded object-cover border border-gray-800"
-                        containerClassName="h-5 w-5 rounded text-[6px] border border-gray-800 bg-gray-900"
+                        className="h-7 w-7 rounded-lg object-cover border border-white/[0.06]"
+                        containerClassName="h-7 w-7 rounded-lg text-[7px] border border-white/[0.06] bg-gray-900"
                       />
-                      <span className="font-medium text-white text-[11px] font-sans">{item.name}</span>
+                      <span className="font-sans text-[13px] font-bold text-white">{item.name}</span>
                     </div>
-                    <span className="font-mono text-[10px] font-semibold text-gray-400">
-                      {item.presenceRate}% presensi
+                    <span className="font-mono text-[11px] font-bold text-orange-400 tabular-nums">
+                      {item.presenceRate}%
                     </span>
                   </div>
-                  <div className="h-1.5 w-full bg-gray-900 rounded-full overflow-hidden">
+                  <div className="h-1.5 w-full bg-white/[0.04] rounded-full overflow-hidden">
                     <div
                       className="h-full rounded-full bg-gradient-to-r from-orange-500 to-amber-400"
                       style={{ width: `${item.presenceRate}%` }}
@@ -576,99 +581,105 @@ export default function TeamAnalytics({
           </div>
         </div>
 
-        {/* Right Column: Deep-dive Esports Dashboard Container */}
-        <div className="lg:col-span-2 flex flex-col gap-5 rounded-xl border border-gray-900 bg-gray-950 p-5 shadow-xl min-h-[500px] relative">
+        {/* ─── RIGHT COLUMN: TEAM ANALYTICS ─── */}
+        <div className="flex flex-col gap-5 rounded-2xl border border-white/[0.06] bg-gradient-to-b from-[#080e1a] to-[#060b14] p-6 shadow-2xl min-h-[500px] relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-600/[0.03] blur-[100px] pointer-events-none rounded-full" />
+
           {selectedTeam ? (
             <>
-              {/* Selected Team Profile Header */}
-              <div className="flex items-center justify-between border-b border-gray-900 pb-4 flex-wrap gap-3">
-                <div className="flex items-center gap-4">
-                  <div className="relative flex items-center justify-center">
-                    <FallbackImage
-                      src={getTeamLogoImg(selectedTeam.key)}
-                      fallbackText={selectedTeam.name}
-                      alt={selectedTeam.name}
-                      className="h-16 w-16 object-contain bg-gray-900/80 p-2.5 rounded-2xl border border-indigo-500/20 shadow-lg shadow-black/30"
-                      containerClassName="h-16 w-16 rounded-2xl text-sm bg-gray-900 border border-indigo-500/20"
-                    />
-                    {selectedStanding && (
-                      <div className="absolute -bottom-1 -right-1 rounded-full bg-gray-950 border border-gray-700 px-1.5 py-0.5 text-[9px] font-mono font-black text-white shadow">
-                        #{selectedStanding.rank}
-                      </div>
-                    )}
-                  </div>
-                  <div>
-                    <h3 className="font-sans text-lg font-bold tracking-tight text-white mb-0.5">
-                      {selectedTeam.name}
-                    </h3>
-                    <div className="flex items-center gap-2 mt-0.5">
-                      <span className="inline-block rounded bg-indigo-900/20 border border-indigo-500/10 px-2 py-0.5 text-[9px] font-semibold text-indigo-400 uppercase tracking-widest font-mono">
-                        MPL ID S17
-                      </span>
+              {/* ═══════════════ TEAM PROFILE HEADER ═══════════════ */}
+              <div className="relative z-10 flex flex-col gap-5 border-b border-white/[0.06] pb-5">
+                <div className="flex items-start justify-between gap-5 flex-wrap">
+                  {/* Logo + Name + Badges */}
+                  <div className="flex items-center gap-5">
+                    <div className="relative flex items-center justify-center shrink-0">
+                      <FallbackImage
+                        src={getTeamLogoImg(selectedTeam.key)}
+                        fallbackText={selectedTeam.name}
+                        alt={selectedTeam.name}
+                        className="h-[72px] w-[72px] object-contain bg-black/40 p-3 rounded-2xl border border-white/[0.06] shadow-xl shadow-black/40"
+                        containerClassName="h-[72px] w-[72px] rounded-2xl text-sm bg-black/40 border border-white/[0.06]"
+                      />
                       {selectedStanding && (
-                        <span className={`inline-block rounded px-2 py-0.5 text-[9px] font-bold font-mono uppercase tracking-wider ${
-                          selectedStanding.rank <= 2
-                            ? "bg-emerald-950/30 border border-emerald-500/20 text-emerald-400"
-                            : selectedStanding.rank <= 6
-                              ? "bg-indigo-950/30 border border-indigo-500/20 text-indigo-400"
-                              : "bg-rose-950/30 border border-rose-500/20 text-rose-400"
-                        }`}>
-                          {selectedStanding.rank <= 2 ? "Upper Bracket" : selectedStanding.rank <= 6 ? "Playoff" : "Eliminasi"}
-                        </span>
+                        <div className="absolute -bottom-1.5 -right-1.5 rounded-full bg-gray-950 border-2 border-gray-700 px-2 py-0.5 text-[10px] font-mono font-black text-white shadow-lg">
+                          #{selectedStanding.rank}
+                        </div>
                       )}
                     </div>
+                    <div className="flex flex-col gap-2">
+                      <h3 className="text-2xl font-black tracking-tight text-white leading-none" style={{ fontFamily: 'var(--font-display)' }}>
+                        {selectedTeam.name}
+                      </h3>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="inline-flex items-center rounded-lg bg-indigo-950/50 border border-indigo-500/20 px-2.5 py-1 text-[10px] font-bold text-indigo-400 uppercase tracking-widest font-mono">
+                          MPL ID S17
+                        </span>
+                        {selectedStanding && (
+                          <span className={`inline-flex items-center rounded-lg px-2.5 py-1 text-[10px] font-bold font-mono uppercase tracking-wider ${
+                            selectedStanding.rank <= 2
+                              ? "bg-emerald-950/40 border border-emerald-500/20 text-emerald-400"
+                              : selectedStanding.rank <= 6
+                                ? "bg-indigo-950/40 border border-indigo-500/20 text-indigo-400"
+                                : "bg-rose-950/30 border border-rose-500/20 text-rose-400"
+                          }`}>
+                            {selectedStanding.rank <= 2 ? "Upper Bracket" : selectedStanding.rank <= 6 ? "Playoff" : "Eliminasi"}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Stat Pills */}
+                  <div className="grid grid-cols-3 gap-3 text-center">
+                    <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-5 py-3 min-w-[80px]">
+                      <div className="font-mono text-[10px] uppercase text-gray-500 tracking-widest mb-1 font-bold">Series</div>
+                      <div className="font-mono text-lg font-black text-white tabular-nums">
+                        {selectedStanding?.record || `${selectedTeam.wins}-${selectedTeam.losses}`}
+                      </div>
+                    </div>
+                    <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-5 py-3 min-w-[80px]">
+                      <div className="font-mono text-[10px] uppercase text-gray-500 tracking-widest mb-1 font-bold">Games</div>
+                      <div className="font-mono text-lg font-black text-white tabular-nums">
+                        {selectedStanding?.gameRecord || "0-0"}
+                      </div>
+                    </div>
+                    <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-5 py-3 min-w-[80px]">
+                      <div className="font-mono text-[10px] uppercase text-gray-500 tracking-widest mb-1 font-bold">Win Rate</div>
+                      <div className="font-mono text-lg font-black text-white tabular-nums">
+                        {selectedStanding?.winrate ?? selectedTeam.winRate}%
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-2 text-center">
-                  <div className="rounded-lg border border-emerald-500/10 bg-emerald-950/10 px-3 py-2">
-                    <div className="font-mono text-[9px] uppercase text-emerald-500">Series</div>
-                    <div className="font-mono text-sm font-bold text-white">
-                      {selectedStanding?.record || `${selectedTeam.wins}-${selectedTeam.losses}`}
-                    </div>
-                  </div>
-                  <div className="rounded-lg border border-indigo-500/10 bg-indigo-950/10 px-3 py-2">
-                    <div className="font-mono text-[9px] uppercase text-indigo-400">Games</div>
-                    <div className="font-mono text-sm font-bold text-white">
-                      {selectedStanding?.gameRecord || "0-0"}
-                    </div>
-                  </div>
-                  <div className="rounded-lg border border-amber-500/10 bg-amber-950/10 px-3 py-2">
-                    <div className="font-mono text-[9px] uppercase text-amber-400">Win Rate</div>
-                    <div className="font-mono text-sm font-bold text-white">
-                      {selectedStanding?.winrate ?? selectedTeam.winRate}%
-                    </div>
-                  </div>
-                </div>
-
-                {/* Main Tabs Selection */}
-                <div className="flex bg-gray-900 rounded-lg p-0.5 border border-gray-800 shrink-0">
+                {/* Tab Controls */}
+                <div className="flex bg-white/[0.02] rounded-xl p-1.5 border border-white/[0.06] shrink-0 w-fit">
                   <button
                     onClick={() => setTeamTab("profile")}
-                    className={`px-3 py-1.5 text-xs rounded-md font-medium transition ${
+                    className={`px-5 py-2.5 text-[13px] rounded-lg font-bold transition-all duration-200 ${
                       teamTab === "profile"
-                        ? "bg-indigo-600 text-white shadow font-semibold"
-                        : "text-gray-400 hover:text-white"
+                        ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25"
+                        : "text-gray-500 hover:text-white hover:bg-white/[0.03]"
                     }`}
                   >
                     Profil
                   </button>
                   <button
                     onClick={() => setTeamTab("history")}
-                    className={`px-3 py-1.5 text-xs rounded-md font-medium transition flex items-center gap-1 ${
+                    className={`px-5 py-2.5 text-[13px] rounded-lg font-bold transition-all duration-200 flex items-center gap-1.5 ${
                       teamTab === "history"
-                        ? "bg-indigo-600 text-white shadow font-semibold"
-                        : "text-gray-400 hover:text-white"
+                        ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25"
+                        : "text-gray-500 hover:text-white hover:bg-white/[0.03]"
                     }`}
                   >
                     Match ({loadingMatchHistory ? "..." : matchHistoryData?.filteredMatches ?? 0})
                   </button>
                   <button
                     onClick={() => setTeamTab("trends")}
-                    className={`px-3 py-1.5 text-xs rounded-md font-medium transition ${
+                    className={`px-5 py-2.5 text-[13px] rounded-lg font-bold transition-all duration-200 ${
                       teamTab === "trends"
-                        ? "bg-indigo-600 text-white shadow font-semibold"
-                        : "text-gray-400 hover:text-white"
+                        ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25"
+                        : "text-gray-500 hover:text-white hover:bg-white/[0.03]"
                     }`}
                   >
                     Taktis
@@ -676,102 +687,101 @@ export default function TeamAnalytics({
                 </div>
               </div>
 
-              {/* RENDER ACTIVE TAB */}
-
-              {/* TAB 1: PROFIL ANALISIS */}
+              {/* ═══════════════ TAB 1: PROFIL ANALISIS ═══════════════ */}
               {teamTab === "profile" && (
-                <div className="flex flex-col gap-5 animate-fade-in text-gray-250">
-                  {/* General Stats summary card */}
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="rounded-xl bg-gray-900/40 border border-gray-800/50 p-3.5 text-center flex flex-col items-center justify-center shadow-inner">
-                      <span className="font-mono text-[9px] text-gray-500 uppercase tracking-wider mb-1">
+                <div className="flex flex-col gap-6 animate-fade-in text-gray-250 relative z-10">
+
+                  {/* Series Stat Cards */}
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="rounded-xl bg-white/[0.02] border border-white/[0.06] p-5 text-center flex flex-col items-center justify-center gap-1">
+                      <span className="font-mono text-[10px] text-gray-400 uppercase tracking-widest font-bold">
                         SERIES DIMAINKAN
                       </span>
-                      <span className="font-mono text-xl font-bold text-white tracking-tight">
+                      <span className="font-mono text-3xl font-black text-white tracking-tight tabular-nums">
                         {loadingMatches ? "..." : teamMatches.length}
                       </span>
-                      <span className="font-sans text-[8px] text-gray-500 block mt-1 uppercase font-semibold">
+                      <span className="text-[11px] text-gray-500 font-sans">
                         Regular Season
                       </span>
                     </div>
-                    <div className="rounded-xl bg-emerald-950/5 border border-emerald-500/10 p-3.5 text-center flex flex-col items-center justify-center">
-                      <span className="font-mono text-[9px] text-emerald-500 uppercase tracking-wider mb-1">
+                    <div className="rounded-xl bg-emerald-950/[0.08] border border-emerald-500/10 p-5 text-center flex flex-col items-center justify-center gap-1">
+                      <span className="font-mono text-[10px] text-emerald-400 uppercase tracking-widest font-bold">
                         SERIES WINS
                       </span>
-                      <span className="font-mono text-xl font-bold text-emerald-400 tracking-tight">
+                      <span className="font-mono text-3xl font-black text-emerald-400 tracking-tight tabular-nums">
                         {selectedTeam.wins}
                       </span>
-                      <span className="font-sans text-[8px] text-emerald-500/60 block mt-1 uppercase font-semibold">
+                      <span className="text-[11px] text-emerald-500/60 font-sans">
                         W-L: {selectedTeam.wins}-{selectedTeam.losses}
                       </span>
                     </div>
-                    <div className="rounded-xl bg-rose-950/5 border border-rose-500/10 p-3.5 text-center flex flex-col items-center justify-center">
-                      <span className="font-mono text-[9px] text-rose-500 uppercase tracking-wider mb-1">
+                    <div className="rounded-xl bg-rose-950/[0.08] border border-rose-500/10 p-5 text-center flex flex-col items-center justify-center gap-1">
+                      <span className="font-mono text-[10px] text-rose-400 uppercase tracking-widest font-bold">
                         SERIES LOSSES
                       </span>
-                      <span className="font-mono text-xl font-bold text-rose-400 tracking-tight">
+                      <span className="font-mono text-3xl font-black text-rose-400 tracking-tight tabular-nums">
                         {selectedTeam.losses}
                       </span>
-                      <span className="font-sans text-[8px] text-gray-500 block mt-1 uppercase font-semibold">
+                      <span className="text-[11px] text-gray-500 font-sans">
                         Game Diff: {selectedStanding ? (selectedStanding.gameDiff > 0 ? '+' : '') + selectedStanding.gameDiff : '—'}
                       </span>
                     </div>
                   </div>
 
-                  {/* Side Preference (Blue vs Red wins) */}
-                  <div className="p-4 rounded-xl bg-gray-900/30 border border-gray-900 flex flex-col gap-3">
-                    <h4 className="text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-1.5">
-                      <Layers className="h-4 w-4 text-indigo-400" />
-                      Analisis Preferensi Sisi (Blue vs Red Side Preference)
+                  {/* Side Preference */}
+                  <div className="p-5 rounded-xl bg-white/[0.015] border border-white/[0.04] flex flex-col gap-4">
+                    <h4 className="text-[12px] font-black text-gray-300 uppercase tracking-widest flex items-center gap-2.5" style={{ fontFamily: 'var(--font-display)' }}>
+                      <div className="h-6 w-6 rounded-lg bg-indigo-950/40 border border-indigo-500/20 flex items-center justify-center">
+                        <Layers className="h-3.5 w-3.5 text-indigo-400" />
+                      </div>
+                      Analisis Preferensi Sisi
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {/* Blue side analysis */}
-                      <div className="bg-gray-950/60 p-3 rounded-lg border border-gray-900 flex flex-col gap-2 shadow-inner">
-                        <div className="flex justify-between items-center text-xs">
-                          <span className="text-blue-400 font-bold uppercase tracking-wider font-mono text-[10px]">
+                      <div className="bg-black/30 p-4 rounded-xl border border-white/[0.04] flex flex-col gap-2.5">
+                        <div className="flex justify-between items-center">
+                          <span className="text-blue-400 font-bold uppercase tracking-wider font-mono text-[11px]">
                             Laga Blue Side
                           </span>
-                          <span className="font-mono font-semibold text-white">
+                          <span className="font-mono font-semibold text-white text-[13px] tabular-nums">
                             {dynamicStats.blueWins}W - {dynamicStats.blueGames - dynamicStats.blueWins}L
                           </span>
                         </div>
                         <div className="flex justify-between items-baseline">
-                          <span className="text-2xl font-bold text-white font-mono">
+                          <span className="text-[1.75rem] font-bold text-white font-mono tabular-nums leading-none">
                             {dynamicStats.blueGames > 0 ? Math.round((dynamicStats.blueWins / dynamicStats.blueGames) * 100) : 0}%
                           </span>
-                          <span className="text-[9px] text-gray-500 uppercase font-mono">
+                          <span className="text-[10px] text-gray-500 uppercase font-mono font-bold">
                             {dynamicStats.blueGames} Game Dimainkan
                           </span>
                         </div>
-                        <div className="h-1.5 w-full bg-gray-900 rounded-full overflow-hidden">
+                        <div className="h-2 w-full bg-white/[0.04] rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-blue-500 rounded-full"
+                            className="h-full bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"
                             style={{ width: `${dynamicStats.blueGames > 0 ? (dynamicStats.blueWins / dynamicStats.blueGames) * 100 : 0}%` }}
                           />
                         </div>
                       </div>
 
-                      {/* Red side analysis */}
-                      <div className="bg-gray-950/60 p-3 rounded-lg border border-gray-900 flex flex-col gap-2 shadow-inner">
-                        <div className="flex justify-between items-center text-xs">
-                          <span className="text-rose-400 font-bold uppercase tracking-wider font-mono text-[10px]">
+                      <div className="bg-black/30 p-4 rounded-xl border border-white/[0.04] flex flex-col gap-2.5">
+                        <div className="flex justify-between items-center">
+                          <span className="text-rose-400 font-bold uppercase tracking-wider font-mono text-[11px]">
                             Laga Red Side
                           </span>
-                          <span className="font-mono font-semibold text-white">
+                          <span className="font-mono font-semibold text-white text-[13px] tabular-nums">
                             {dynamicStats.redWins}W - {dynamicStats.redGames - dynamicStats.redWins}L
                           </span>
                         </div>
                         <div className="flex justify-between items-baseline">
-                          <span className="text-2xl font-bold text-white font-mono">
+                          <span className="text-[1.75rem] font-bold text-white font-mono tabular-nums leading-none">
                             {dynamicStats.redGames > 0 ? Math.round((dynamicStats.redWins / dynamicStats.redGames) * 100) : 0}%
                           </span>
-                          <span className="text-[9px] text-gray-500 uppercase font-mono">
+                          <span className="text-[10px] text-gray-500 uppercase font-mono font-bold">
                             {dynamicStats.redGames} Game Dimainkan
                           </span>
                         </div>
-                        <div className="h-1.5 w-full bg-gray-900 rounded-full overflow-hidden">
+                        <div className="h-2 w-full bg-white/[0.04] rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-rose-500 rounded-full"
+                            className="h-full bg-gradient-to-r from-rose-500 to-rose-400 rounded-full"
                             style={{ width: `${dynamicStats.redGames > 0 ? (dynamicStats.redWins / dynamicStats.redGames) * 100 : 0}%` }}
                           />
                         </div>
@@ -779,10 +789,12 @@ export default function TeamAnalytics({
                     </div>
                   </div>
 
-                  {/* Comfort Heroes with Actual Winrates */}
-                  <div className="border-t border-gray-900 pt-4 flex flex-col gap-3">
-                    <h4 className="font-sans text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-1.5">
-                      <TrendingUp className="h-4 w-4 text-indigo-400" />
+                  {/* Comfort Picks */}
+                  <div className="flex flex-col gap-4">
+                    <h4 className="text-[12px] font-black text-gray-300 uppercase tracking-widest flex items-center gap-2.5" style={{ fontFamily: 'var(--font-display)' }}>
+                      <div className="h-6 w-6 rounded-lg bg-indigo-950/40 border border-indigo-500/20 flex items-center justify-center">
+                        <TrendingUp className="h-3.5 w-3.5 text-indigo-400" />
+                      </div>
                       Comfort Picks — Hero Paling Sering Di-pick
                     </h4>
                     {comfortHeroesList.length > 0 ? (
@@ -790,32 +802,32 @@ export default function TeamAnalytics({
                         {comfortHeroesList.map((hero, i) => (
                           <div
                             key={hero.name}
-                            className="flex items-center justify-between rounded-xl bg-gray-900/30 p-3 border border-gray-900 hover:border-indigo-500/20 transition group"
+                            className="flex items-center justify-between rounded-xl bg-white/[0.02] p-3.5 border border-white/[0.04] hover:border-indigo-500/20 transition-all duration-200 group"
                           >
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-3.5">
                               <FallbackImage
                                 src={getHeroImg(hero.name)}
                                 fallbackText={hero.name}
                                 alt={hero.name}
-                                className="h-9 w-9 rounded-lg bg-gray-955 object-cover border border-gray-800 group-hover:border-indigo-500/30 transition duration-150"
-                                containerClassName="h-9 w-9 rounded-lg text-[8px] bg-gray-950 border border-gray-800"
+                                className="h-10 w-10 rounded-lg object-cover border border-white/[0.06] group-hover:border-indigo-500/30 transition duration-150"
+                                containerClassName="h-10 w-10 rounded-lg text-[8px] bg-gray-900 border border-white/[0.06]"
                               />
-                              <div>
-                                <span className="font-sans text-xs text-white font-bold block">
+                              <div className="flex flex-col gap-0.5">
+                                <span className="font-sans text-[13px] text-white font-bold">
                                   {hero.name}
                                 </span>
-                                <span className="font-sans text-[10px] text-gray-500 font-medium block mt-0.5">
-                                  {hero.picks} Pick • {hero.wins}W - {hero.picks - hero.wins}L
+                                <span className="font-sans text-[11px] text-gray-500 font-medium">
+                                  {hero.picks} Pick &bull; {hero.wins}W - {hero.picks - hero.wins}L
                                 </span>
                               </div>
                             </div>
-                            <div className="text-right">
-                              <span className={`font-mono text-xs font-bold block ${
+                            <div className="text-right flex flex-col items-end gap-0.5">
+                              <span className={`font-mono text-[13px] font-bold tabular-nums ${
                                 hero.winRate >= 60 ? "text-emerald-400" : hero.winRate >= 40 ? "text-amber-400" : "text-rose-400"
                               }`}>
                                 {hero.winRate}% WR
                               </span>
-                              <span className="font-mono text-[8px] text-gray-600 uppercase tracking-widest font-bold block mt-0.5">
+                              <span className="font-mono text-[9px] text-gray-600 uppercase tracking-widest font-bold">
                                 #{i + 1} Prio
                               </span>
                             </div>
@@ -823,55 +835,59 @@ export default function TeamAnalytics({
                         ))}
                       </div>
                     ) : (
-                      <p className="text-xs text-gray-500 italic pl-1 py-4 font-sans text-center">
+                      <p className="text-[13px] text-gray-500 italic py-6 font-sans text-center">
                         Belum ada data pick/ban dari game tim ini.
                       </p>
                     )}
                   </div>
 
-                  {/* Target Bans Against us vs Our bans */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 border-t border-gray-900 pt-4">
+                  {/* Target Bans + Our Bans */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {/* Banned Against us */}
                     <div className="flex flex-col gap-3.5">
-                      <h4 className="font-sans text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-1.5">
-                        <AlertTriangle className="h-4 w-4 text-orange-400" />
-                        Target Ban Lawan ke Tim Ini
+                      <h4 className="text-[12px] font-black text-gray-300 uppercase tracking-widest flex items-center gap-2.5" style={{ fontFamily: 'var(--font-display)' }}>
+                        <div className="h-6 w-6 rounded-lg bg-orange-950/40 border border-orange-500/20 flex items-center justify-center">
+                          <AlertTriangle className="h-3.5 w-3.5 text-orange-400" />
+                        </div>
+                        Target Ban Lawan
                       </h4>
                       {targetBansList.length > 0 ? (
                         <div className="flex flex-col gap-2">
                           {targetBansList.map((hero, i) => (
                             <div
                               key={hero.name}
-                              className="flex items-center justify-between rounded-lg bg-orange-950/5 p-2.5 border border-orange-900/10"
+                              className="flex items-center justify-between rounded-xl bg-orange-950/[0.04] p-3 border border-orange-500/[0.06]"
                             >
-                              <div className="flex items-center gap-2.5">
-                                <span className="font-mono text-[9px] text-orange-400/60 font-bold w-4">{i + 1}.</span>
+                              <div className="flex items-center gap-3">
+                                <span className="font-mono text-[11px] text-orange-400/60 font-bold w-5 text-center">{i + 1}</span>
                                 <FallbackImage
                                   src={getHeroImg(hero.name)}
                                   fallbackText={hero.name}
                                   alt={hero.name}
-                                  className="h-8 w-8 rounded bg-gray-950 object-cover border border-gray-800"
-                                  containerClassName="h-8 w-8 rounded text-[8px] bg-gray-950 border border-gray-800"
+                                  className="h-9 w-9 rounded-lg bg-gray-900 object-cover border border-white/[0.06]"
+                                  containerClassName="h-9 w-9 rounded-lg text-[8px] bg-gray-900 border border-white/[0.06]"
                                 />
-                                <span className="font-sans text-xs text-white font-medium">
+                                <span className="font-sans text-[13px] text-white font-medium">
                                   {hero.name}
                                 </span>
                               </div>
-                              <span className="font-mono text-[10px] text-orange-400 font-bold bg-orange-950/30 px-2 py-0.5 rounded border border-orange-500/5">
-                                {hero.count}×
+                              <span className="font-mono text-[11px] text-orange-400 font-bold bg-orange-950/30 px-2.5 py-1 rounded-lg border border-orange-500/10 tabular-nums">
+                                {hero.count}&times;
                               </span>
                             </div>
                           ))}
                         </div>
                       ) : (
-                        <p className="text-xs text-gray-500 italic font-sans py-2 text-center">Belum ada data target ban.</p>
+                        <p className="text-[13px] text-gray-500 italic font-sans py-4 text-center">Belum ada data target ban.</p>
                       )}
                     </div>
 
                     {/* Most Banned by us */}
                     <div className="flex flex-col gap-3.5">
-                      <h4 className="font-sans text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-1.5">
-                        <ShieldCheck className="h-4 w-4 text-emerald-400" />
+                      <h4 className="text-[12px] font-black text-gray-300 uppercase tracking-widest flex items-center gap-2.5" style={{ fontFamily: 'var(--font-display)' }}>
+                        <div className="h-6 w-6 rounded-lg bg-emerald-950/40 border border-emerald-500/20 flex items-center justify-center">
+                          <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
+                        </div>
                         Ban Favorit Tim Ini
                       </h4>
                       {ourBansList.length > 0 ? (
@@ -879,90 +895,89 @@ export default function TeamAnalytics({
                           {ourBansList.map((hero, i) => (
                             <div
                               key={hero.name}
-                              className="flex items-center justify-between rounded-lg bg-emerald-950/5 p-2.5 border border-emerald-900/10"
+                              className="flex items-center justify-between rounded-xl bg-emerald-950/[0.04] p-3 border border-emerald-500/[0.06]"
                             >
-                              <div className="flex items-center gap-2.5">
-                                <span className="font-mono text-[9px] text-emerald-400/60 font-bold w-4">{i + 1}.</span>
+                              <div className="flex items-center gap-3">
+                                <span className="font-mono text-[11px] text-emerald-400/60 font-bold w-5 text-center">{i + 1}</span>
                                 <FallbackImage
                                   src={getHeroImg(hero.name)}
                                   fallbackText={hero.name}
                                   alt={hero.name}
-                                  className="h-8 w-8 rounded bg-gray-950 object-cover border border-gray-800"
-                                  containerClassName="h-8 w-8 rounded text-[8px] bg-gray-950 border border-gray-800"
+                                  className="h-9 w-9 rounded-lg bg-gray-900 object-cover border border-white/[0.06]"
+                                  containerClassName="h-9 w-9 rounded-lg text-[8px] bg-gray-900 border border-white/[0.06]"
                                 />
-                                <span className="font-sans text-xs text-white font-medium">
+                                <span className="font-sans text-[13px] text-white font-medium">
                                   {hero.name}
                                 </span>
                               </div>
-                              <span className="font-mono text-[10px] text-emerald-400 font-bold bg-emerald-950/30 px-2 py-0.5 rounded border border-emerald-500/5">
-                                {hero.count}×
+                              <span className="font-mono text-[11px] text-emerald-400 font-bold bg-emerald-950/30 px-2.5 py-1 rounded-lg border border-emerald-500/10 tabular-nums">
+                                {hero.count}&times;
                               </span>
                             </div>
                           ))}
                         </div>
                       ) : (
-                        <p className="text-xs text-gray-500 italic font-sans py-2 text-center">Belum ada data ban.</p>
+                        <p className="text-[13px] text-gray-500 italic font-sans py-4 text-center">Belum ada data ban.</p>
                       )}
                     </div>
                   </div>
                 </div>
               )}
 
-              {/* TAB 2: GAME & DRAFT HISTORY */}
+              {/* ═══════════════ TAB 2: GAME & DRAFT HISTORY ═══════════════ */}
               {teamTab === "history" && (
-                <div className="flex flex-col gap-4 animate-fade-in relative">
+                <div className="flex flex-col gap-5 animate-fade-in relative z-10">
                   {/* Filter bar */}
                   <div className="flex items-center gap-3 flex-wrap">
                     {(["all", "win", "lose"] as const).map((f) => {
                       const label = f === "all" ? "Semua Series" : f === "win" ? `Menang${matchHistoryData ? ` (${matchHistoryData.wins})` : ''}` : `Kalah${matchHistoryData ? ` (${matchHistoryData.losses})` : ''}`;
                       return (
                         <button key={f} onClick={() => setMatchResultFilter(f)}
-                          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                          className={`px-3.5 py-2 rounded-lg text-[13px] font-medium transition-colors ${
                             matchResultFilter === f 
                               ? f === "win" ? "bg-emerald-600 text-white" : f === "lose" ? "bg-rose-600 text-white" : "bg-indigo-600 text-white"
-                              : "bg-gray-900 text-gray-400 hover:text-gray-200"
+                              : "bg-white/[0.03] text-gray-400 hover:text-gray-200 border border-white/[0.04]"
                           }`}>
                           {label}
                         </button>
                       );
                     })}
-                    <div className="flex items-center gap-1 rounded-lg border border-gray-800 bg-gray-900/50 p-1 flex-wrap">
-                      <CalendarDays className="ml-1 h-3.5 w-3.5 text-indigo-400" />
+                    <div className="flex items-center gap-1 rounded-lg border border-white/[0.06] bg-white/[0.02] p-1 flex-wrap">
+                      <CalendarDays className="ml-1 h-4 w-4 text-indigo-400" />
                       {Array.from({ length: 9 }, (_, index) => index + 1).map((week) => (
                         <button
                           key={week}
                           onClick={() => setMatchWeekFilter(matchWeekFilter === week ? null : week)}
-                          className={`rounded px-2 py-1 text-[10px] font-bold transition ${
+                          className={`rounded-md px-2.5 py-1 text-[11px] font-bold transition ${
                             matchWeekFilter === week
                               ? "bg-indigo-600 text-white"
-                              : "text-gray-500 hover:bg-gray-800 hover:text-gray-200"
+                              : "text-gray-500 hover:bg-white/[0.04] hover:text-gray-200"
                           }`}
                         >
                           {week}
                         </button>
                       ))}
                     </div>
-                    {/* Opponent search */}
                     <input
                       type="text"
                       placeholder="Cari lawan..."
                       value={matchOpponentFilter}
                       onChange={(e) => setMatchOpponentFilter(e.target.value)}
-                      className="px-3 py-1.5 rounded-lg text-xs bg-gray-900 border border-gray-800 text-gray-200 placeholder-gray-500 w-40"
+                      className="px-3.5 py-2 rounded-lg text-[13px] bg-white/[0.02] border border-white/[0.06] text-gray-200 placeholder-gray-500 w-40"
                     />
                     <button
                       type="button"
                       onClick={resetMatchFilters}
-                      className="flex items-center gap-1 rounded-lg border border-gray-800 bg-gray-900 px-3 py-1.5 text-xs font-medium text-gray-400 transition hover:text-white"
+                      className="flex items-center gap-1.5 rounded-lg border border-white/[0.06] bg-white/[0.02] px-3.5 py-2 text-[13px] font-medium text-gray-400 transition hover:text-white"
                     >
-                      <RotateCcw className="h-3.5 w-3.5" />
+                      <RotateCcw className="h-4 w-4" />
                       Reset
                     </button>
                   </div>
 
                   {/* Stats summary */}
                   {matchHistoryData && (
-                    <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-7">
+                    <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4 lg:grid-cols-7">
                       {[
                         ["Total Series", matchHistoryData.totalMatches, "text-gray-200"],
                         ["Ditampilkan", matchHistoryData.filteredMatches, "text-indigo-300"],
@@ -972,9 +987,9 @@ export default function TeamAnalytics({
                         ["Total Games", matchHistoryData.gamesCount, "text-gray-200"],
                         ["Game W-L", matchHistoryData.gameRecord, "text-cyan-300"],
                       ].map(([label, value, color]) => (
-                        <div key={label} className="rounded-lg border border-gray-900 bg-black/20 px-3 py-2">
-                          <div className="font-mono text-[9px] uppercase text-gray-500">{label}</div>
-                          <div className={`font-mono text-sm font-black ${color}`}>{value}</div>
+                        <div key={label} className="rounded-xl border border-white/[0.04] bg-white/[0.015] px-3.5 py-2.5">
+                          <div className="font-mono text-[10px] uppercase text-gray-500 font-bold">{label}</div>
+                          <div className={`font-mono text-sm font-black ${color} tabular-nums`}>{value}</div>
                         </div>
                       ))}
                     </div>
@@ -984,17 +999,17 @@ export default function TeamAnalytics({
                   {loadingMatchHistory && (
                     <div className="flex flex-col gap-3">
                       {[1,2,3].map(i => (
-                        <div key={i} className="h-14 bg-gray-900/50 rounded-lg animate-pulse" />
+                        <div key={i} className="h-16 bg-white/[0.02] rounded-xl animate-pulse" />
                       ))}
                     </div>
                   )}
 
                   {/* Empty state */}
                   {!loadingMatchHistory && matchHistoryData && matchHistoryData.series.length === 0 && (
-                    <div className="text-center text-gray-500 py-12 text-sm flex flex-col items-center gap-2">
-                      <CalendarDays className="h-8 w-8 text-gray-700" />
+                    <div className="text-center text-gray-500 py-16 text-[13px] flex flex-col items-center gap-3">
+                      <CalendarDays className="h-10 w-10 text-gray-700" />
                       <span>Tidak ada series ditemukan untuk filter ini.</span>
-                      <button type="button" onClick={resetMatchFilters} className="text-indigo-400 hover:text-indigo-300 text-xs font-medium mt-1">
+                      <button type="button" onClick={resetMatchFilters} className="text-indigo-400 hover:text-indigo-300 text-[13px] font-medium mt-1">
                         Reset filter
                       </button>
                     </div>
@@ -1002,7 +1017,7 @@ export default function TeamAnalytics({
 
                   {/* Series list */}
                   {!loadingMatchHistory && matchHistoryData && matchHistoryData.series.length > 0 && (
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-3">
                       {matchHistoryData.series.map((s) => (
                         <MatchSeriesCard
                           key={s.id}
@@ -1016,34 +1031,34 @@ export default function TeamAnalytics({
                   )}
 
                   {matchCenterData && (
-                    <details className="rounded-xl border border-gray-900 bg-black/20 p-4 text-xs text-gray-400">
+                    <details className="rounded-xl border border-white/[0.04] bg-white/[0.015] p-5 text-[13px] text-gray-400">
                       <summary className="cursor-pointer font-bold text-gray-300 hover:text-white flex items-center gap-2">
                         <CalendarDays className="h-4 w-4 text-indigo-400" />
                         <span>Match Center — Jadwal Week 1 sampai Week 9</span>
-                        <span className="ml-auto text-[9px] font-mono text-gray-600">
-                          {matchCenterData.totalSeries} series • {matchCenterData.totalGames} games
+                        <span className="ml-auto text-[11px] font-mono text-gray-600">
+                          {matchCenterData.totalSeries} series &bull; {matchCenterData.totalGames} games
                         </span>
                       </summary>
                       <div className="mt-4 space-y-5">
                         {visibleWeekGroups.map((week) => (
-                          <div key={week.week} className="rounded-xl border border-gray-800/60 bg-gray-950/60 p-4">
+                          <div key={week.week} className="rounded-xl border border-white/[0.04] bg-black/30 p-4">
                             <h4 className="mb-3 font-sans text-sm font-bold text-indigo-300 flex items-center gap-2">
-                              <span className="rounded bg-indigo-950/50 px-2 py-0.5 text-[10px] font-mono border border-indigo-500/20">
+                              <span className="rounded-lg bg-indigo-950/50 px-2.5 py-1 text-[11px] font-mono border border-indigo-500/20">
                                 WEEK {week.week}
                               </span>
-                              <span className="text-[10px] font-mono text-gray-600">
+                              <span className="text-[11px] font-mono text-gray-600">
                                 {week.days.reduce((sum, d) => sum + d.series.length, 0)} series
                               </span>
                             </h4>
                             <div className="space-y-4">
                               {week.days.map((day) => (
                                 <div key={`${week.week}-${day.day}`}>
-                                  <div className="mb-2 flex items-center gap-2 border-b border-gray-900/60 pb-1.5">
-                                    <span className="font-mono text-[10px] font-bold uppercase text-gray-400">
+                                  <div className="mb-2 flex items-center gap-2 border-b border-white/[0.04] pb-1.5">
+                                    <span className="font-mono text-[11px] font-bold uppercase text-gray-400">
                                       Day {day.day}
                                     </span>
                                     {day.series[0]?.date && (
-                                      <span className="text-[9px] font-mono text-gray-600">
+                                      <span className="text-[10px] font-mono text-gray-600">
                                         — {day.series[0].date}
                                       </span>
                                     )}
@@ -1060,31 +1075,31 @@ export default function TeamAnalytics({
                                       return (
                                         <div
                                           key={seriesItem.seriesId}
-                                          className={`flex items-center gap-3 rounded-lg px-3 py-2 transition ${
+                                          className={`flex items-center gap-3 rounded-xl px-4 py-2.5 transition ${
                                             isInvolved
                                               ? selectedWon
                                                 ? "bg-emerald-950/20 border border-emerald-500/15"
                                                 : "bg-rose-950/20 border border-rose-500/15"
-                                              : "bg-gray-900/30 border border-gray-900/40"
+                                              : "bg-white/[0.015] border border-white/[0.04]"
                                           }`}
                                         >
-                                          <div className="flex items-center gap-2 flex-1 min-w-0">
+                                          <div className="flex items-center gap-2.5 flex-1 min-w-0">
                                             <img
                                               src={getTeamLogoImg(seriesItem.teamA)}
                                               alt={seriesItem.teamA}
                                               className="h-5 w-5 object-contain"
                                             />
-                                            <span className={`text-[11px] font-bold truncate ${
+                                            <span className={`text-[12px] font-bold truncate ${
                                               seriesItem.teamAScore > seriesItem.teamBScore ? "text-white" : "text-gray-500"
                                             }`}>
                                               {seriesItem.teamA}
                                             </span>
                                           </div>
-                                          <div className="rounded bg-black/40 border border-gray-800 px-2.5 py-0.5 font-mono text-xs font-black text-white shrink-0">
+                                          <div className="rounded-lg bg-black/40 border border-white/[0.06] px-3 py-1 font-mono text-[13px] font-black text-white shrink-0 tabular-nums">
                                             {seriesItem.teamAScore} - {seriesItem.teamBScore}
                                           </div>
-                                          <div className="flex items-center gap-2 flex-1 min-w-0 justify-end">
-                                            <span className={`text-[11px] font-bold truncate text-right ${
+                                          <div className="flex items-center gap-2.5 flex-1 min-w-0 justify-end">
+                                            <span className={`text-[12px] font-bold truncate text-right ${
                                               seriesItem.teamBScore > seriesItem.teamAScore ? "text-white" : "text-gray-500"
                                             }`}>
                                               {seriesItem.teamB}
@@ -1108,9 +1123,8 @@ export default function TeamAnalytics({
                     </details>
                   )}
 
-                  {/* Error state */}
                   {matchHistoryError && (
-                    <div className="text-center text-red-400 py-4 text-xs">
+                    <div className="text-center text-red-400 py-4 text-[13px]">
                       Error: {matchHistoryError}
                     </div>
                   )}
@@ -1118,62 +1132,62 @@ export default function TeamAnalytics({
                 </div>
               )}
 
-              {/* TAB 3: TACTICAL & TRENDS */}
+              {/* ═══════════════ TAB 3: TACTICAL & TRENDS ═══════════════ */}
               {teamTab === "trends" && (
-                <div className="flex flex-col gap-5 animate-fade-in text-gray-300 leading-relaxed text-xs">
-                  <div className="p-4 bg-gray-900/30 rounded-xl border border-gray-900 flex flex-col gap-3">
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-1.5 border-b border-gray-900 pb-2 font-sans">
+                <div className="flex flex-col gap-6 animate-fade-in text-gray-300 leading-relaxed text-[13px] relative z-10">
+                  <div className="p-5 bg-white/[0.015] rounded-xl border border-white/[0.04] flex flex-col gap-4">
+                    <h4 className="text-[13px] font-bold text-white uppercase tracking-wider flex items-center gap-2 border-b border-white/[0.04] pb-3 font-sans">
                       <Sparkles className="h-4 w-4 text-amber-400 animate-pulse" />
                       Gaya Bermain & Kecenderungan Draf (Tournament Draft Assessment)
                     </h4>
                     
-                    <div className="space-y-3 font-sans text-[11px] text-gray-400 leading-relaxed">
+                    <div className="space-y-4 font-sans text-[12px] text-gray-400 leading-relaxed">
                       <p>
                         Berdasarkan integrasi data taktis dari {teamMatches.length} pertandingan turnamen, tim <strong className="text-white font-bold">{selectedTeam.name}</strong> menunjukkan karakteristik draft yang berbeda dari comfort pool, target ban, dan performa sisi.
                       </p>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-1">
-                        <div className="bg-gray-950/60 p-3 rounded-lg border border-gray-900 flex flex-col gap-1.5">
-                          <span className="text-white font-bold block text-xs flex items-center gap-1">
-                            <Zap className="h-3 w-3 text-indigo-400" /> Draft Identity
+                        <div className="bg-black/30 p-4 rounded-xl border border-white/[0.04] flex flex-col gap-2">
+                          <span className="text-white font-bold block text-[13px] flex items-center gap-1.5">
+                            <Zap className="h-3.5 w-3.5 text-indigo-400" /> Draft Identity
                           </span>
-                          <p className="text-[10px] text-gray-500">
+                          <p className="text-[11px] text-gray-500">
                             Pembacaan pola utama dari hero comfort yang paling sering mereka kembalikan:
                           </p>
-                          <span className="font-mono text-xs font-bold text-emerald-400 uppercase">
+                          <span className="font-mono text-[13px] font-bold text-emerald-400 uppercase">
                             {tacticalRead?.style || "Belum terbaca"}
                           </span>
                         </div>
 
-                        <div className="bg-gray-950/60 p-3 rounded-lg border border-gray-900 flex flex-col gap-1.5">
-                          <span className="text-white font-bold block text-xs flex items-center gap-1">
-                            <ShieldCheck className="h-3 w-3 text-emerald-400" /> Side Preference
+                        <div className="bg-black/30 p-4 rounded-xl border border-white/[0.04] flex flex-col gap-2">
+                          <span className="text-white font-bold block text-[13px] flex items-center gap-1.5">
+                            <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" /> Side Preference
                           </span>
-                          <p className="text-[10px] text-gray-500">
+                          <p className="text-[11px] text-gray-500">
                             Kecenderungan performa saat blue/red side:
                           </p>
-                          <span className="text-[11px] text-indigo-300 leading-relaxed">
+                          <span className="text-[12px] text-indigo-300 leading-relaxed">
                             {tacticalRead?.sideRead || "Belum terbaca"}
                           </span>
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                        <div className="rounded-xl border border-gray-900 bg-black/20 p-3">
-                          <div className="text-[10px] font-bold uppercase tracking-wider text-cyan-300">Comfort Core</div>
-                          <div className="mt-2 text-[11px] text-gray-300 leading-relaxed">
+                        <div className="rounded-xl border border-white/[0.04] bg-white/[0.015] p-4">
+                          <div className="text-[11px] font-bold uppercase tracking-wider text-cyan-300">Comfort Core</div>
+                          <div className="mt-2 text-[12px] text-gray-300 leading-relaxed">
                             {tacticalRead?.opener || "Belum ada data."}
                           </div>
                         </div>
-                        <div className="rounded-xl border border-gray-900 bg-black/20 p-3">
-                          <div className="text-[10px] font-bold uppercase tracking-wider text-rose-300">Enemy Respect Ban</div>
-                          <div className="mt-2 text-[11px] text-gray-300 leading-relaxed">
+                        <div className="rounded-xl border border-white/[0.04] bg-white/[0.015] p-4">
+                          <div className="text-[11px] font-bold uppercase tracking-wider text-rose-300">Enemy Respect Ban</div>
+                          <div className="mt-2 text-[12px] text-gray-300 leading-relaxed">
                             {tacticalRead?.denial || "Belum ada data."}
                           </div>
                         </div>
-                        <div className="rounded-xl border border-gray-900 bg-black/20 p-3">
-                          <div className="text-[10px] font-bold uppercase tracking-wider text-amber-300">Prep Ban Plan</div>
-                          <div className="mt-2 text-[11px] text-gray-300 leading-relaxed">
+                        <div className="rounded-xl border border-white/[0.04] bg-white/[0.015] p-4">
+                          <div className="text-[11px] font-bold uppercase tracking-wider text-amber-300">Prep Ban Plan</div>
+                          <div className="mt-2 text-[12px] text-gray-300 leading-relaxed">
                             {tacticalRead?.prep || "Belum ada data."}
                           </div>
                         </div>
@@ -1181,35 +1195,35 @@ export default function TeamAnalytics({
                     </div>
                   </div>
 
-                  {/* Top Contested tournament-wide table for context */}
-                  <div className="border-t border-gray-900 pt-3">
-                    <h4 className="font-sans text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider flex items-center gap-1.5">
-                      <LineChart className="h-4 w-4 text-indigo-450" />
+                  {/* Top Contested tournament-wide table */}
+                  <div className="border-t border-white/[0.04] pt-4">
+                    <h4 className="font-sans text-[13px] font-semibold text-gray-400 mb-4 uppercase tracking-wider flex items-center gap-2">
+                      <LineChart className="h-4 w-4 text-indigo-400" />
                       Hero Paling Diwaspadai Turnamen (Tournament Contested Rate)
                     </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {overallContestedList.map((item, i) => (
                         <div
                           key={item.name}
-                          className="flex items-center justify-between p-2.5 rounded-lg bg-gray-900/30 border border-gray-900"
+                          className="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04]"
                         >
-                          <div className="flex items-center gap-2.5">
+                          <div className="flex items-center gap-3">
                             <FallbackImage
                               src={getHeroImg(item.name)}
                               fallbackText={item.name}
-                              className="h-8 w-8 rounded-lg object-cover border border-gray-800"
-                              containerClassName="h-8 w-8 rounded-lg text-[8px] bg-gray-950 border border-gray-800"
+                              className="h-9 w-9 rounded-lg object-cover border border-white/[0.06]"
+                              containerClassName="h-9 w-9 rounded-lg text-[8px] bg-gray-900 border border-white/[0.06]"
                             />
-                            <div>
-                              <span className="text-xs font-sans text-white font-bold block">
+                            <div className="flex flex-col gap-0.5">
+                              <span className="text-[13px] font-sans text-white font-bold">
                                 {item.name}
                               </span>
-                              <span className="text-[9px] font-sans text-gray-500 font-semibold uppercase">
-                                {item.picks} Picks • {item.bans} Bans
+                              <span className="text-[10px] font-sans text-gray-500 font-semibold uppercase">
+                                {item.picks} Picks &bull; {item.bans} Bans
                               </span>
                             </div>
                           </div>
-                          <span className="font-mono text-xs font-bold text-orange-400 bg-orange-950/30 px-2 py-0.5 rounded border border-orange-500/10">
+                          <span className="font-mono text-[12px] font-bold text-orange-400 bg-orange-950/30 px-2.5 py-1 rounded-lg border border-orange-500/10 tabular-nums">
                             {item.presenceRate}% presensi
                           </span>
                         </div>
@@ -1221,8 +1235,8 @@ export default function TeamAnalytics({
             </>
           ) : (
             <div className="flex h-full flex-col items-center justify-center text-center py-24 text-gray-600">
-              <Award className="h-10 w-10 mb-2 opacity-30 animate-bounce" />
-              <p className="text-sm font-sans text-gray-500 pl-2">
+              <Award className="h-12 w-12 mb-3 opacity-30 animate-bounce" />
+              <p className="text-[15px] font-sans text-gray-500 pl-2 max-w-sm">
                 Pilih salah satu tim franchise di sebelah kiri untuk menganalisis taktik draf, rekam jejak draf, dan history match.
               </p>
             </div>
