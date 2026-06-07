@@ -11,6 +11,7 @@ export default function FallbackImage({
   className = "",
   src,
   alt,
+  style,
   ...props
 }: FallbackImageProps) {
   const [error, setError] = useState(false);
@@ -32,7 +33,7 @@ export default function FallbackImage({
     return (
       <div
         className={`flex items-center justify-center bg-gray-800 text-gray-300 font-bold tracking-wider leading-none shadow-inner border border-gray-700/50 ${containerClassName || className}`}
-        style={{ minWidth: '24px', minHeight: '24px' }}
+        style={{ minWidth: '24px', minHeight: '24px', ...style }}
         title={fallbackText}
       >
         <span>{fallbackLetters}</span>
@@ -45,6 +46,7 @@ export default function FallbackImage({
       src={src}
       alt={alt || fallbackText}
       className={className}
+      style={style}
       onError={() => setError(true)}
       {...props}
     />

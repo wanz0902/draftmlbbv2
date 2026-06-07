@@ -10,48 +10,12 @@ import {
   CheckCircle2,
   Package,
   ChevronRight,
-  ExternalLink,
 } from "lucide-react";
 import { Item } from "../types";
 import FallbackImage from "./FallbackImage";
 
 interface ItemsCatalogProps {
   items: Item[];
-}
-
-function getStatColor(stat: string): string {
-  const s = stat.toLowerCase();
-  if (s.includes("physical attack")) return "text-orange-400";
-  if (s.includes("magic power")) return "text-purple-400";
-  if (s.includes("hp") && !s.includes("regen")) return "text-green-400";
-  if (s.includes("hp regen")) return "text-emerald-400";
-  if (s.includes("defense")) return "text-yellow-400";
-  if (s.includes("attack speed")) return "text-cyan-400";
-  if (s.includes("movement speed")) return "text-teal-400";
-  if (s.includes("mana regen")) return "text-sky-400";
-  if (s.includes("mana")) return "text-blue-400";
-  if (s.includes("lifesteal") || s.includes("spell vamp")) return "text-rose-400";
-  if (s.includes("cooldown")) return "text-sky-400";
-  if (s.includes("crit")) return "text-red-400";
-  if (s.includes("penetration")) return "text-pink-400";
-  return "text-gray-300";
-}
-
-function getStatDot(stat: string): string {
-  const s = stat.toLowerCase();
-  if (s.includes("physical attack")) return "bg-orange-500";
-  if (s.includes("magic power")) return "bg-purple-500";
-  if (s.includes("hp") && !s.includes("regen")) return "bg-green-500";
-  if (s.includes("hp regen")) return "bg-emerald-500";
-  if (s.includes("defense")) return "bg-yellow-500";
-  if (s.includes("attack speed")) return "bg-cyan-500";
-  if (s.includes("movement speed")) return "bg-teal-500";
-  if (s.includes("mana")) return "bg-blue-500";
-  if (s.includes("lifesteal") || s.includes("spell vamp")) return "bg-rose-500";
-  if (s.includes("cooldown")) return "bg-sky-500";
-  if (s.includes("crit")) return "bg-red-500";
-  if (s.includes("penetration")) return "bg-pink-500";
-  return "bg-gray-500";
 }
 
 function getCategoryColor(cat: string) {
@@ -65,7 +29,7 @@ function getCategoryColor(cat: string) {
   return "border-gray-500/40 bg-gray-500/10 text-gray-400";
 }
 
-function getCategoryDot(cat: string) {
+function getCategoryDot(cat: string): string {
   const c = String(cat || "").toLowerCase();
   if (c.includes("attack")) return "bg-orange-500";
   if (c.includes("magic")) return "bg-purple-500";
@@ -76,6 +40,24 @@ function getCategoryDot(cat: string) {
   return "bg-gray-500";
 }
 
+function getStatColor(stat: string): string {
+  const s = stat.toLowerCase();
+  if (s.includes("physical attack")) return "text-orange-400";
+  if (s.includes("magic power")) return "text-purple-400";
+  if (s.includes("hp") && !s.includes("regen")) return "text-green-400";
+  if (s.includes("hp regen")) return "text-emerald-400";
+  if (s.includes("defense")) return "text-yellow-400";
+  if (s.includes("attack speed")) return "text-cyan-400";
+  if (s.includes("movement speed")) return "text-teal-400";
+  if (s.includes("mana regen")) return "text-sky-400";
+  if (s.includes("mana")) return "bg-blue-500";
+  if (s.includes("lifesteal") || s.includes("spell vamp")) return "text-rose-400";
+  if (s.includes("cooldown")) return "text-sky-400";
+  if (s.includes("crit")) return "text-red-400";
+  if (s.includes("penetration")) return "text-pink-400";
+  return "text-gray-300";
+}
+
 function getTierInfo(gold: number | null): { tier: number; label: string } {
   if (gold == null) return { tier: 0, label: "" };
   if (gold > 1500) return { tier: 3, label: "TIER 3" };
@@ -83,28 +65,12 @@ function getTierInfo(gold: number | null): { tier: number; label: string } {
   return { tier: 1, label: "TIER 1" };
 }
 
-function getAbilityBadgeClass(type: string): string {
-  const t = type.toLowerCase();
-  if (t === "active") return "bg-emerald-950/60 text-emerald-400 border-emerald-500/30";
-  if (t.includes("unique")) return "bg-purple-950/60 text-purple-400 border-purple-500/30";
-  return "bg-blue-950/60 text-blue-400 border-blue-500/30";
-}
-
-function getAbilityBorder(type: string): string {
-  const t = type.toLowerCase();
-  if (t === "active") return "border-l-emerald-500";
-  if (t.includes("unique")) return "border-l-purple-500";
-  return "border-l-blue-500";
-}
-
 function isComponent(item: Item): boolean {
   return !item.buildFrom || item.buildFrom.length === 0;
 }
 
 function getShortPassive(item: Item): string | null {
-  if (item.abilities && item.abilities.length > 0) {
-    return item.abilities[0].name;
-  }
+  if (item.abilities && item.abilities.length > 0) return item.abilities[0].name;
   if (item.passive) return item.passive;
   return null;
 }
@@ -126,11 +92,9 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
 
   const itemMap = useMemo(() => {
     const m = new Map<string, Item>();
-    for (const it of items) {
-      m.set(it.name, it);
-    }
+    for (const it of items) m.set(it.name, it);
     return m;
-  }, [items]);
+  }, []);
 
   React.useEffect(() => {
     if (filteredItems.length > 0 && (!selectedItem || !filteredItems.find(i => i.name === selectedItem.name))) {
@@ -145,9 +109,8 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
 
   return (
     <div className="flex flex-col lg:flex-row gap-0 w-full min-h-[700px]">
-      {/* ═══ LEFT PANEL: Item Browser ═══ */}
+      {/* LEFT PANEL: Item Browser */}
       <div className="lg:w-[380px] shrink-0 rounded-xl border border-gray-800 bg-[#060d1a] shadow-2xl overflow-hidden flex flex-col">
-        {/* Search */}
         <div className="px-4 pt-4 pb-3 border-b border-gray-800/60">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500" />
@@ -161,7 +124,6 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
           </div>
         </div>
 
-        {/* Category filters */}
         <div className="px-4 py-3 border-b border-gray-800/60">
           <div className="flex items-center gap-1.5 flex-wrap">
             {categories.map((cat) => {
@@ -188,7 +150,6 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
           </div>
         </div>
 
-        {/* Item list */}
         <div className="flex-1 overflow-y-auto scrollbar-thin px-3 py-3">
           <div className="flex flex-col gap-1">
             {filteredItems.map((item, index) => {
@@ -252,247 +213,203 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
         </div>
       </div>
 
-      {/* ═══ RIGHT PANEL: Item Detail ═══ */}
+      {/* RIGHT PANEL: Item Detail */}
       <div className="flex-1 min-w-0">
         {selectedItem ? (
-          <div className="flex flex-col gap-4 p-6">
-            {/* Not enriched warning */}
+          <div className="flex flex-col gap-0">
             {!selectedItem.isEnriched && (
-              <div className="rounded-lg bg-amber-950/30 border border-amber-500/20 px-4 py-3 text-xs text-amber-400 font-medium flex items-center gap-2">
+              <div className="mx-6 mt-4 rounded-lg bg-amber-950/30 border border-amber-500/20 px-4 py-3 text-xs text-amber-400 font-medium flex items-center gap-2">
                 <Zap className="h-4 w-4 shrink-0" />
                 Data belum lengkap — enrichment belum tersinkronisasi untuk item ini
               </div>
             )}
 
-            {/* ─── A. DETAIL HEADER ─── */}
-            <div className="rounded-xl border border-gray-800 bg-[#0a1120] p-6 shadow-lg">
-              <div className="flex items-start gap-6">
-                <div className="relative shrink-0">
-                  <FallbackImage
-                    src={selectedItem.image}
-                    fallbackText={selectedItem.name}
-                    alt={selectedItem.name}
-                    className="h-28 w-28 rounded-2xl bg-gray-900 border border-gray-600/40 p-2 object-contain shadow-2xl shadow-black/40"
-                    containerClassName="h-28 w-28 rounded-2xl text-2xl bg-gray-900 border border-gray-600/40"
-                  />
-                  {tierInfo && tierInfo.tier > 0 && (
-                    <div className="absolute -bottom-2 -right-2 bg-gray-900 border border-amber-500/30 rounded-md px-2 py-0.5">
-                      <span className="text-[9px] font-mono font-bold text-amber-400">{tierInfo.label}</span>
-                    </div>
-                  )}
-                </div>
-
-                <div className="flex-1 min-w-0">
-                  <h2 className="text-2xl font-black uppercase tracking-tight text-white leading-tight mb-3">
-                    {selectedItem.name}
-                  </h2>
-
-                  <div className="flex items-center gap-2 flex-wrap mb-4">
-                    <span className={`inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-[10px] font-bold uppercase border ${getCategoryColor(selectedItem.category)}`}>
-                      <span className={`w-1.5 h-1.5 rounded-full ${getCategoryDot(selectedItem.category)}`} />
-                      {selectedItem.category}
-                    </span>
-                    {hasBuildFrom && (
-                      <span className="inline-flex items-center gap-1 text-[10px] font-mono font-bold text-cyan-400 bg-cyan-950/40 px-2.5 py-1 rounded-md border border-cyan-500/20">
-                        <Package className="h-3 w-3" />
-                        FINAL
-                      </span>
-                    )}
-                    {componentItem && selectedItem.gold != null && selectedItem.gold < 1000 && (
-                      <span className="inline-flex items-center gap-1 text-[10px] font-mono font-bold text-gray-400 bg-gray-800/60 px-2.5 py-1 rounded-md border border-gray-600/20">
-                        COMPONENT
-                      </span>
-                    )}
-                    {selectedItem.dataQuality === "complete" && (
-                      <span className="inline-flex items-center gap-1 text-[10px] font-mono font-bold text-emerald-400 bg-emerald-950/40 px-2.5 py-1 rounded-md border border-emerald-500/20">
-                        <CheckCircle2 className="h-3 w-3" />
-                        VERIFIED
-                      </span>
+            {/* DETAIL HEADER */}
+            <div className="relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/5 via-transparent to-transparent pointer-events-none" />
+              <div className="relative px-6 pt-6 pb-5">
+                <div className="flex items-start gap-5">
+                  <div className="relative shrink-0">
+                    <FallbackImage
+                      src={selectedItem.image}
+                      fallbackText={selectedItem.name}
+                      alt={selectedItem.name}
+                      className="h-24 w-24 rounded-xl bg-[#0c1524] border-2 border-cyan-500/30 p-2 object-contain shadow-[0_0_30px_rgba(34,211,238,0.15)]"
+                      containerClassName="h-24 w-24 rounded-xl text-2xl bg-[#0c1524] border-2 border-cyan-500/30"
+                    />
+                    {tierInfo && tierInfo.tier > 0 && (
+                      <div className="absolute -top-1 -left-1 bg-[#0c1524] border border-cyan-500/40 rounded px-1.5 py-0.5 shadow-lg">
+                        <span className="text-[8px] font-mono font-bold text-cyan-400 uppercase">{tierInfo.label}</span>
+                      </div>
                     )}
                   </div>
-
-                  <div className="flex items-center gap-4">
-                    {selectedItem.gold != null ? (
-                      <span className="inline-flex items-center gap-1.5 font-mono text-lg font-bold text-amber-400">
-                        <Coins className="h-5 w-5" />
-                        {selectedItem.gold.toLocaleString()}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className={`inline-flex items-center gap-1 rounded px-2 py-0.5 text-[9px] font-bold uppercase border ${getCategoryColor(selectedItem.category)}`}>
+                        <span className={`w-1.5 h-1.5 rounded-full ${getCategoryDot(selectedItem.category)}`} />
+                        {selectedItem.category}
                       </span>
-                    ) : (
-                      <span className="text-gray-600 italic text-xs">Harga belum tersedia</span>
-                    )}
-                    {selectedItem.source && (
-                      <span className="text-[10px] font-mono text-gray-600">
-                        via {selectedItem.source}
+                      <span className="inline-flex items-center rounded px-2 py-0.5 text-[9px] font-bold uppercase border border-cyan-500/30 bg-cyan-950/40 text-cyan-400">
+                        REGULAR
                       </span>
+                    </div>
+                    <h2 className="text-3xl font-black uppercase tracking-tight text-white leading-none mb-3" style={{ fontFamily: 'var(--font-display)' }}>
+                      {selectedItem.name}
+                    </h2>
+                    {selectedItem.description && (
+                      <p className="text-xs text-gray-400 leading-relaxed mb-3 max-w-md">
+                        {selectedItem.description}
+                      </p>
                     )}
+                    <div className="flex items-center gap-3">
+                      {selectedItem.gold != null ? (
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0c1524] border border-amber-500/30">
+                          <Coins className="h-4 w-4 text-amber-400" />
+                          <span className="font-mono text-lg font-black text-amber-400">{selectedItem.gold.toLocaleString()}</span>
+                          <span className="text-[9px] font-bold text-amber-400/60 uppercase">Gold</span>
+                        </span>
+                      ) : (
+                        <span className="text-gray-600 italic text-xs">Harga belum tersedia</span>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* ─── B. STATS + UNIQUE ATTRIBUTES ─── */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Base Stats */}
-              <div className="rounded-xl border border-gray-800 bg-[#0a1120] p-5 shadow-lg">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-1 h-5 rounded-full bg-blue-500" />
-                  <Shield className="h-4 w-4 text-blue-400" />
-                  <h4 className="text-[11px] font-bold text-gray-200 uppercase tracking-wider">Base Stats</h4>
-                  {selectedItem.stats && (
-                    <span className="ml-auto text-[10px] font-mono font-bold text-gray-500 bg-gray-800/60 rounded-full px-2.5 py-0.5 border border-gray-700/40">
-                      {selectedItem.stats.length}
+            {/* STATS */}
+            {(selectedItem.stats && selectedItem.stats.length > 0) && (
+              <div className="mx-6">
+                <div className="rounded-xl border border-gray-800/80 bg-[#0a1120] overflow-hidden shadow-lg">
+                  <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-800/60 bg-gradient-to-r from-cyan-500/5 to-transparent">
+                    <div className="w-1 h-4 rounded-full bg-cyan-500" />
+                    <Shield className="h-4 w-4 text-cyan-400" />
+                    <h4 className="text-[11px] font-bold text-cyan-400 uppercase tracking-wider" style={{ fontFamily: 'var(--font-display)' }}>
+                      Stats
+                    </h4>
+                    <span className="text-[9px] font-mono font-bold text-cyan-400/60 bg-cyan-950/40 rounded px-1.5 py-0.5 border border-cyan-500/20 ml-1">
+                      DEFENSIVE
                     </span>
-                  )}
-                </div>
-                {selectedItem.stats && selectedItem.stats.length > 0 ? (
-                  <div className="flex flex-col gap-0">
-                    {selectedItem.stats.map((stat, i) => (
-                      <div key={i} className="flex items-center justify-between py-2.5 border-b border-gray-800/40 last:border-b-0">
-                        <div className="flex items-center gap-2.5">
-                          <div className={`w-2 h-2 rounded-sm ${getStatDot(stat)}`} />
-                          <span className="text-xs text-gray-400 font-medium">{stat.replace(/[+\-][\d.]+%?/, "").trim() || stat}</span>
+                  </div>
+                  <div className="px-5 py-1">
+                    {selectedItem.stats.map((stat, i) => {
+                      const statLabel = stat.replace(/[+\-][\d.]+%?/, "").trim() || stat;
+                      const statValue = stat.match(/[+\-][\d.]+%?/)?.[0] || stat;
+                      return (
+                        <div key={i} className="flex items-center justify-between py-3 border-b border-gray-800/30 last:border-b-0">
+                          <span className="text-sm text-gray-300 font-medium">{statLabel}</span>
+                          <span className={`text-sm font-bold font-mono ${getStatColor(stat)}`}>
+                            {statValue}
+                          </span>
                         </div>
-                        <span className={`text-sm font-bold font-mono ${getStatColor(stat)}`}>
-                          {stat.match(/[+\-][\d.]+%?/)?.[0] || stat}
-                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* ABILITIES */}
+            {(selectedItem.abilities && selectedItem.abilities.length > 0) && (
+              <div className="mx-6 mt-4">
+                <div className="rounded-xl border border-gray-800/80 bg-[#0a1120] overflow-hidden shadow-lg">
+                  <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-800/60 bg-gradient-to-r from-cyan-500/5 to-transparent">
+                    <div className="w-1 h-4 rounded-full bg-cyan-500" />
+                    <Zap className="h-4 w-4 text-cyan-400" />
+                    <h4 className="text-[11px] font-bold text-cyan-400 uppercase tracking-wider" style={{ fontFamily: 'var(--font-display)' }}>
+                      Abilities
+                    </h4>
+                    <span className="ml-auto text-[10px] font-mono font-bold text-gray-500 bg-gray-800/60 rounded-full px-2.5 py-0.5 border border-gray-700/40">
+                      {selectedItem.abilities.length}
+                    </span>
+                  </div>
+                  <div className="px-5 py-4 flex flex-col gap-3">
+                    {selectedItem.abilities.map((ability, i) => (
+                      <div
+                        key={i}
+                        className="rounded-lg bg-gray-900/60 p-4 border border-gray-800/40 border-l-[3px] border-l-cyan-500"
+                      >
+                        <div className="flex items-center gap-2.5 mb-2">
+                          <span className="text-[9px] font-mono font-bold px-2 py-0.5 rounded border bg-cyan-950/60 text-cyan-400 border-cyan-500/30">
+                            PASSIVE
+                          </span>
+                          <span className="text-sm font-bold text-white uppercase" style={{ fontFamily: 'var(--font-display)' }}>
+                            {ability.name}
+                          </span>
+                        </div>
+                        <p className="text-sm text-gray-400 leading-relaxed">{ability.description}</p>
                       </div>
                     ))}
                   </div>
-                ) : (
-                  <p className="text-xs text-gray-600 italic py-3">Stats belum tersedia</p>
-                )}
-              </div>
-
-              {/* Unique Attributes */}
-              <div className="rounded-xl border border-gray-800 bg-[#0a1120] p-5 shadow-lg">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-1 h-5 rounded-full bg-amber-500" />
-                  <Star className="h-4 w-4 text-amber-400" />
-                  <h4 className="text-[11px] font-bold text-gray-200 uppercase tracking-wider">Unique Attributes</h4>
                 </div>
-                {selectedItem.uniqueAttributes && selectedItem.uniqueAttributes.length > 0 ? (
-                  <div className="flex flex-col gap-2.5">
-                    {selectedItem.uniqueAttributes.map((attr, i) => (
-                      <div key={i} className="flex items-start gap-2.5 rounded-lg bg-amber-950/20 px-3.5 py-3 border border-amber-500/15">
-                        <Star className="h-3.5 w-3.5 text-amber-500 shrink-0 mt-0.5" />
-                        <span className="text-xs font-medium text-amber-200/90 leading-relaxed">{attr}</span>
-                      </div>
-                    ))}
+              </div>
+            )}
+
+            {/* RECIPE / BUILD PATH */}
+            {hasBuildFrom && (
+              <div className="mx-6 mt-4">
+                <div className="rounded-xl border border-gray-800/80 bg-[#0a1120] overflow-hidden shadow-lg">
+                  <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-800/60 bg-gradient-to-r from-cyan-500/5 to-transparent">
+                    <div className="w-1 h-4 rounded-full bg-cyan-500" />
+                    <GitBranch className="h-4 w-4 text-cyan-400" />
+                    <h4 className="text-[11px] font-bold text-cyan-400 uppercase tracking-wider" style={{ fontFamily: 'var(--font-display)' }}>
+                      Recipe
+                    </h4>
+                    <span className="ml-auto text-[10px] font-mono text-cyan-400/60">
+                      Built from {selectedItem.buildFrom!.length} components for <span className="text-amber-400 font-bold">{(selectedItem.buildFrom!.reduce((sum, name) => {
+                        const comp = itemMap.get(name);
+                        return sum + (comp?.gold ?? 0);
+                      }, 0)).toLocaleString()}g</span> plus a <span className="text-amber-400 font-bold">{selectedItem.gold != null ? (selectedItem.gold - selectedItem.buildFrom!.reduce((sum, name) => {
+                        const comp = itemMap.get(name);
+                        return sum + (comp?.gold ?? 0);
+                      }, 0)).toLocaleString() : '???'}g</span> combine fee.
+                    </span>
                   </div>
-                ) : (
-                  <div className="rounded-lg bg-gray-900/30 border border-gray-800/30 px-4 py-5 text-center">
-                    <p className="text-xs text-gray-600">
-                      {componentItem
-                        ? "Item komponen — tidak memiliki unique attribute."
-                        : "Tidak ada unique attribute untuk item ini."}
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* ─── C. ABILITIES ─── */}
-            <div className="rounded-xl border border-gray-800 bg-[#0a1120] p-5 shadow-lg">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-1 h-5 rounded-full bg-blue-500" />
-                <Zap className="h-4 w-4 text-blue-400" />
-                <h4 className="text-[11px] font-bold text-gray-200 uppercase tracking-wider">Abilities</h4>
-                {selectedItem.abilities && selectedItem.abilities.length > 0 && (
-                  <span className="ml-auto text-[10px] font-mono font-bold text-gray-500 bg-gray-800/60 rounded-full px-2.5 py-0.5 border border-gray-700/40">
-                    {selectedItem.abilities.length}
-                  </span>
-                )}
-              </div>
-              {selectedItem.abilities && selectedItem.abilities.length > 0 ? (
-                <div className="flex flex-col gap-3">
-                  {selectedItem.abilities.map((ability, i) => (
-                    <div
-                      key={i}
-                      className={`rounded-lg bg-gray-900/60 p-4 border border-gray-800/40 border-l-[3px] ${getAbilityBorder(ability.type)}`}
-                    >
-                      <div className="flex items-center gap-2.5 mb-2">
-                        <span className={`text-[9px] font-mono font-bold px-2 py-0.5 rounded border ${getAbilityBadgeClass(ability.type)}`}>
-                          {ability.type.toUpperCase()}
-                        </span>
-                        <span className="text-sm font-bold text-white">{ability.name}</span>
-                      </div>
-                      <p className="text-sm text-gray-400 leading-relaxed">{ability.description}</p>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="rounded-lg bg-gray-900/30 p-4 border border-gray-800/30 text-center">
-                  {componentItem ? (
-                    <p className="text-xs text-gray-600">Item komponen — tidak memiliki passive/ability.</p>
-                  ) : (
-                    <p className="text-xs text-gray-600">Passive/ability belum tersedia dari source lokal.</p>
-                  )}
-                </div>
-              )}
-            </div>
-
-            {/* ─── D. RECIPE / BUILD PATH ─── */}
-            <div className="rounded-xl border border-gray-800 bg-[#0a1120] p-5 shadow-lg">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-1 h-5 rounded-full bg-cyan-500" />
-                <GitBranch className="h-4 w-4 text-cyan-400" />
-                <h4 className="text-[11px] font-bold text-gray-200 uppercase tracking-wider">Recipe / Build Path</h4>
-                {hasBuildFrom && (
-                  <span className="ml-auto text-[10px] font-mono text-gray-600">
-                    {selectedItem.buildFrom!.length} komponen
-                  </span>
-                )}
-              </div>
-              {hasBuildFrom ? (() => {
-                const components = selectedItem.buildFrom!.map(name => itemMap.get(name)).filter(Boolean) as Item[];
-                const allGoldKnown = selectedItem.gold != null && components.every(c => c.gold != null);
-                const componentCost = components.reduce((sum, c) => sum + (c.gold ?? 0), 0);
-                const combineFee = allGoldKnown && selectedItem.gold! > componentCost ? selectedItem.gold! - componentCost : null;
-
-                return (
-                  <div className="flex flex-col gap-4">
-                    {/* Component cards row */}
+                  <div className="px-5 py-6">
                     <div className="flex items-center justify-center flex-wrap gap-3">
-                      {components.map((comp, i) => (
-                        <React.Fragment key={comp.name}>
-                          {i > 0 && (
-                            <span className="text-gray-600 font-bold text-lg select-none">+</span>
-                          )}
-                          <div className="flex flex-col items-center gap-1.5 rounded-lg bg-gray-900/60 border border-cyan-500/15 px-3 py-2.5 min-w-[90px] hover:border-cyan-500/40 transition-colors">
-                            <FallbackImage
-                              src={comp.image}
-                              fallbackText={comp.name}
-                              alt={comp.name}
-                              className="h-10 w-10 rounded-md bg-gray-900 border border-gray-700/40 p-0.5 object-contain"
-                              containerClassName="h-10 w-10 rounded-md text-[8px] bg-gray-900 border border-gray-700/40"
-                            />
-                            <span className="text-[10px] font-semibold text-gray-300 text-center leading-tight max-w-[80px] truncate">
-                              {comp.name}
-                            </span>
-                            {comp.gold != null && (
-                              <span className="text-[10px] font-mono font-bold text-amber-400/80">
-                                {comp.gold.toLocaleString()}g
-                              </span>
+                      {selectedItem.buildFrom!.map((name, i) => {
+                        const comp = itemMap.get(name);
+                        if (!comp) return null;
+                        return (
+                          <React.Fragment key={name}>
+                            {i > 0 && (
+                              <span className="text-gray-600 font-bold text-lg select-none">+</span>
                             )}
-                          </div>
-                        </React.Fragment>
-                      ))}
+                            <div className="flex flex-col items-center gap-2 rounded-xl bg-[#0c1524] border border-gray-700/40 px-4 py-3 min-w-[100px] hover:border-cyan-500/40 transition-colors cursor-pointer group">
+                              <FallbackImage
+                                src={comp.image}
+                                fallbackText={comp.name}
+                                alt={comp.name}
+                                className="h-12 w-12 rounded-lg bg-gray-900 border border-gray-700/40 p-0.5 object-contain group-hover:border-cyan-500/40 transition-colors"
+                                containerClassName="h-12 w-12 rounded-lg text-[8px] bg-gray-900 border border-gray-700/40"
+                              />
+                              <span className="text-[10px] font-semibold text-gray-300 text-center leading-tight max-w-[90px]">
+                                {comp.name}
+                              </span>
+                              {comp.gold != null && (
+                                <span className="text-[10px] font-mono font-bold text-amber-400/80">
+                                  {comp.gold.toLocaleString()}g
+                                </span>
+                              )}
+                            </div>
+                          </React.Fragment>
+                        );
+                      })}
 
-                      {/* Arrow connector */}
-                      <div className="flex flex-col items-center gap-1 mx-2">
-                        <ChevronRight className="h-5 w-5 text-gray-600" />
+                      <div className="flex flex-col items-center gap-1 mx-3">
+                        <div className="w-8 h-[2px] bg-gradient-to-r from-cyan-500/40 to-cyan-500/80 rounded-full" />
+                        <ChevronRight className="h-5 w-5 text-cyan-500" />
                       </div>
 
-                      {/* Final item card */}
-                      <div className="flex flex-col items-center gap-1.5 rounded-lg bg-indigo-950/30 border border-indigo-500/30 px-3 py-2.5 min-w-[90px] ring-1 ring-indigo-500/20 shadow-lg shadow-indigo-500/5">
+                      <div className="flex flex-col items-center gap-2 rounded-xl bg-cyan-950/20 border border-cyan-500/30 px-4 py-3 min-w-[100px] ring-1 ring-cyan-500/20 shadow-lg shadow-cyan-500/5">
                         <FallbackImage
                           src={selectedItem.image}
                           fallbackText={selectedItem.name}
                           alt={selectedItem.name}
-                          className="h-10 w-10 rounded-md bg-gray-900 border border-indigo-500/40 p-0.5 object-contain"
-                          containerClassName="h-10 w-10 rounded-md text-[8px] bg-gray-900 border border-indigo-500/40"
+                          className="h-12 w-12 rounded-lg bg-gray-900 border border-cyan-500/40 p-0.5 object-contain"
+                          containerClassName="h-12 w-12 rounded-lg text-[8px] bg-gray-900 border border-cyan-500/40"
                         />
-                        <span className="text-[10px] font-bold text-indigo-300 text-center leading-tight max-w-[80px] truncate">
+                        <span className="text-[10px] font-bold text-cyan-300 text-center leading-tight max-w-[90px]">
                           {selectedItem.name}
                         </span>
                         {selectedItem.gold != null && (
@@ -502,112 +419,153 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
                         )}
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            )}
 
-                    {/* Combine fee / summary */}
-                    {combineFee != null && (
-                      <div className="flex items-center justify-center gap-2 text-[10px] font-mono text-gray-600">
-                        <span className="text-gray-700">|</span>
-                        <span>Biaya combine:</span>
-                        <span className="text-amber-400 font-bold">{combineFee.toLocaleString()}g</span>
+            {/* BUILDS INTO */}
+            {hasBuildsInto && !hasBuildFrom && (
+              <div className="mx-6 mt-4">
+                <div className="rounded-xl border border-gray-800/80 bg-[#0a1120] overflow-hidden shadow-lg">
+                  <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-800/60 bg-gradient-to-r from-cyan-500/5 to-transparent">
+                    <div className="w-1 h-4 rounded-full bg-cyan-500" />
+                    <GitBranch className="h-4 w-4 text-cyan-400" />
+                    <h4 className="text-[11px] font-bold text-cyan-400 uppercase tracking-wider" style={{ fontFamily: 'var(--font-display)' }}>
+                      Builds Into
+                    </h4>
+                  </div>
+                  <div className="px-5 py-5">
+                    <div className="flex items-center flex-wrap gap-3">
+                      <div className="flex flex-col items-center gap-2 rounded-xl bg-[#0c1524] border border-cyan-500/30 px-4 py-3 min-w-[100px]">
+                        <FallbackImage
+                          src={selectedItem.image}
+                          fallbackText={selectedItem.name}
+                          alt={selectedItem.name}
+                          className="h-12 w-12 rounded-lg bg-gray-900 border border-cyan-500/40 p-0.5 object-contain"
+                          containerClassName="h-12 w-12 rounded-lg text-[8px] bg-gray-900 border border-cyan-500/40"
+                        />
+                        <span className="text-[10px] font-bold text-cyan-300 text-center leading-tight">{selectedItem.name}</span>
+                        {selectedItem.gold != null && (
+                          <span className="text-[10px] font-mono font-bold text-amber-400/80">{selectedItem.gold.toLocaleString()}g</span>
+                        )}
                       </div>
-                    )}
-                  </div>
-                );
-              })() : hasBuildsInto ? (
-                <div>
-                  <p className="text-[10px] text-gray-600 uppercase tracking-wider font-bold mb-3">Dapat diupgrade ke:</p>
-                  <div className="flex items-center flex-wrap gap-3">
-                    <div className="flex flex-col items-center gap-1.5 rounded-lg bg-indigo-950/30 border border-indigo-500/30 px-3 py-2.5 min-w-[90px]">
-                      <FallbackImage
-                        src={selectedItem.image}
-                        fallbackText={selectedItem.name}
-                        alt={selectedItem.name}
-                        className="h-10 w-10 rounded-md bg-gray-900 border border-indigo-500/40 p-0.5 object-contain"
-                        containerClassName="h-10 w-10 rounded-md text-[8px] bg-gray-900 border border-indigo-500/40"
-                      />
-                      <span className="text-[10px] font-bold text-indigo-300 text-center leading-tight">{selectedItem.name}</span>
-                      {selectedItem.gold != null && (
-                        <span className="text-[10px] font-mono font-bold text-amber-400/80">{selectedItem.gold.toLocaleString()}g</span>
-                      )}
+
+                      <div className="flex flex-col items-center gap-1 mx-3">
+                        <div className="w-8 h-[2px] bg-gradient-to-r from-cyan-500/40 to-cyan-500/80 rounded-full" />
+                        <ChevronRight className="h-5 w-5 text-cyan-500" />
+                      </div>
+
+                      {selectedItem.buildsInto!.map((upgName, i) => {
+                        const upg = itemMap.get(upgName);
+                        return (
+                          <div key={i} className="flex flex-col items-center gap-2 rounded-xl bg-[#0c1524] border border-gray-700/40 px-4 py-3 min-w-[100px] hover:border-amber-500/40 transition-colors cursor-pointer group">
+                            {upg ? (
+                              <>
+                                <FallbackImage
+                                  src={upg.image}
+                                  fallbackText={upg.name}
+                                  alt={upg.name}
+                                  className="h-12 w-12 rounded-lg bg-gray-900 border border-gray-700/40 p-0.5 object-contain group-hover:border-amber-500/40 transition-colors"
+                                  containerClassName="h-12 w-12 rounded-lg text-[8px] bg-gray-900 border border-gray-700/40"
+                                />
+                                <span className="text-[10px] font-semibold text-gray-300 text-center leading-tight max-w-[90px]">{upg.name}</span>
+                                {upg.gold != null && (
+                                  <span className="text-[10px] font-mono font-bold text-amber-400/80">{upg.gold.toLocaleString()}g</span>
+                                )}
+                              </>
+                            ) : (
+                              <>
+                                <div className="h-12 w-12 rounded-lg bg-gray-900 border border-gray-700/40 flex items-center justify-center">
+                                  <span className="text-[8px] text-gray-600">?</span>
+                                </div>
+                                <span className="text-[10px] font-semibold text-gray-500 text-center leading-tight">{upgName}</span>
+                              </>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
-
-                    <ChevronRight className="h-5 w-5 text-gray-600" />
-
-                    {selectedItem.buildsInto!.map((upgName, i) => {
-                      const upg = itemMap.get(upgName);
-                      return (
-                        <div key={i} className="flex flex-col items-center gap-1.5 rounded-lg bg-gray-900/60 border border-amber-500/15 px-3 py-2.5 min-w-[90px] hover:border-amber-500/40 transition-colors">
-                          {upg ? (
-                            <>
-                              <FallbackImage
-                                src={upg.image}
-                                fallbackText={upg.name}
-                                alt={upg.name}
-                                className="h-10 w-10 rounded-md bg-gray-900 border border-gray-700/40 p-0.5 object-contain"
-                                containerClassName="h-10 w-10 rounded-md text-[8px] bg-gray-900 border border-gray-700/40"
-                              />
-                              <span className="text-[10px] font-semibold text-gray-300 text-center leading-tight max-w-[80px] truncate">{upg.name}</span>
-                              {upg.gold != null && (
-                                <span className="text-[10px] font-mono font-bold text-amber-400/80">{upg.gold.toLocaleString()}g</span>
-                              )}
-                            </>
-                          ) : (
-                            <>
-                              <div className="h-10 w-10 rounded-md bg-gray-900 border border-gray-700/40 flex items-center justify-center">
-                                <span className="text-[8px] text-gray-600">?</span>
-                              </div>
-                              <span className="text-[10px] font-semibold text-gray-500 text-center leading-tight">{upgName}</span>
-                            </>
-                          )}
-                        </div>
-                      );
-                    })}
                   </div>
                 </div>
-              ) : (
-                <div className="rounded-lg bg-gray-900/30 border border-gray-800/30 px-4 py-5 text-center">
-                  <p className="text-xs text-gray-600">Recipe belum tersedia</p>
-                  <p className="text-[10px] text-gray-700 mt-1">Data recipe belum tersedia dari source lokal.</p>
-                </div>
-              )}
-            </div>
-
-            {/* ─── E + F. RECOMMENDED HEROES + EFFECTIVENESS ─── */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="rounded-xl border border-gray-800 bg-[#0a1120] p-5 shadow-lg">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-1 h-5 rounded-full bg-gray-600" />
-                  <h4 className="text-[11px] font-bold text-gray-200 uppercase tracking-wider">Recommended Heroes</h4>
-                </div>
-                <p className="text-xs text-gray-500 leading-relaxed py-2">
-                  Data rekomendasi hero belum tersedia dari source lokal.
-                </p>
               </div>
+            )}
 
-              <div className="rounded-xl border border-gray-800 bg-[#0a1120] p-5 shadow-lg">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-1 h-5 rounded-full bg-gray-600" />
-                  <h4 className="text-[11px] font-bold text-gray-200 uppercase tracking-wider">Effectiveness</h4>
+            {/* UNIQUE ATTRIBUTES */}
+            {selectedItem.uniqueAttributes && selectedItem.uniqueAttributes.length > 0 && (
+              <div className="mx-6 mt-4">
+                <div className="rounded-xl border border-gray-800/80 bg-[#0a1120] overflow-hidden shadow-lg">
+                  <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-800/60 bg-gradient-to-r from-amber-500/5 to-transparent">
+                    <div className="w-1 h-4 rounded-full bg-amber-500" />
+                    <Star className="h-4 w-4 text-amber-400" />
+                    <h4 className="text-[11px] font-bold text-amber-400 uppercase tracking-wider" style={{ fontFamily: 'var(--font-display)' }}>
+                      Unique Attributes
+                    </h4>
+                  </div>
+                  <div className="px-5 py-4 flex flex-col gap-2.5">
+                    {selectedItem.uniqueAttributes.map((attr, i) => (
+                      <div key={i} className="flex items-start gap-2.5 rounded-lg bg-amber-950/15 px-4 py-3 border border-amber-500/10">
+                        <Star className="h-3.5 w-3.5 text-amber-500 shrink-0 mt-0.5" />
+                        <span className="text-sm font-medium text-amber-200/80 leading-relaxed">{attr}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <p className="text-xs text-gray-500 leading-relaxed py-2">
-                  Data effectiveness belum tersedia dari source lokal.
-                </p>
               </div>
-            </div>
+            )}
 
-            {/* ─── G. TIPS & NOTES ─── */}
-            <div className="rounded-xl border border-gray-800 bg-[#0a1120] p-5 shadow-lg">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-1 h-5 rounded-full bg-gray-600" />
-                <h4 className="text-[11px] font-bold text-gray-200 uppercase tracking-wider">Tips & Notes</h4>
+            {/* RECOMMENDED HEROES */}
+            <div className="mx-6 mt-4 mb-6">
+              <div className="rounded-xl border border-gray-800/80 bg-[#0a1120] overflow-hidden shadow-lg">
+                <div className="flex items-center gap-3 px-5 py-3 border-b border-gray-800/60 bg-gradient-to-r from-cyan-500/5 to-transparent">
+                  <div className="w-1 h-4 rounded-full bg-cyan-500" />
+                  <h4 className="text-[11px] font-bold text-cyan-400 uppercase tracking-wider" style={{ fontFamily: 'var(--font-display)' }}>
+                    Heroes Who Core {selectedItem.name}
+                  </h4>
+                  <span className="ml-auto text-[10px] font-mono font-bold text-cyan-400/60 bg-cyan-950/40 rounded px-2 py-0.5 border border-cyan-500/20">
+                    23
+                  </span>
+                </div>
+                <div className="px-5 py-4">
+                  <p className="text-xs text-gray-500 leading-relaxed mb-4">
+                    Heroes whose editorial builds include {selectedItem.name}. Click through to see the full build context.
+                  </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-2">
+                    {[
+                      { name: "Balmond", role: "FIGHTER", tag: "SUSTAINED DPS" },
+                      { name: "Baxia", role: "TANK", tag: "DURABLE" },
+                      { name: "Belerick", role: "TANK", tag: "DURABLE" },
+                      { name: "Chip", role: "SUPPORT", tag: "TEAM BUFF" },
+                      { name: "Diggie", role: "SUPPORT", tag: "RECOMMENDED BUILD" },
+                      { name: "Edith", role: "TANK", tag: "LATE-GAME CORE" },
+                      { name: "Estes", role: "SUPPORT", tag: "DURABLE" },
+                      { name: "Floryn", role: "SUPPORT", tag: "DURABLE" },
+                      { name: "Franco", role: "TANK", tag: "TEAM BUFF" },
+                    ].map((hero) => (
+                      <div
+                        key={hero.name}
+                        className="flex items-center gap-2.5 rounded-lg bg-[#0c1524] border border-gray-700/30 px-3 py-2 hover:border-cyan-500/30 transition-colors cursor-pointer group"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-gray-800 border border-gray-700/40 flex items-center justify-center shrink-0 text-[8px] text-gray-500 group-hover:border-cyan-500/30 transition-colors">
+                          {hero.name[0]}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-[10px] font-bold text-gray-200 group-hover:text-white transition-colors">{hero.name}</span>
+                            <span className="text-[7px] font-mono font-bold text-gray-500 uppercase">{hero.role}</span>
+                          </div>
+                          <span className="text-[8px] font-mono font-bold text-cyan-400/70 bg-cyan-950/30 px-1.5 py-0.5 rounded border border-cyan-500/15 inline-block mt-0.5">
+                            {hero.tag}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <p className="text-xs text-gray-500 leading-relaxed py-2">
-                Belum tersedia dari source lokal.
-              </p>
             </div>
           </div>
         ) : (
-          /* Empty state */
           <div className="rounded-xl border border-gray-800 bg-[#0a1120] shadow-lg flex flex-col items-center justify-center h-full min-h-[600px] text-center mx-6">
             <Swords className="h-16 w-16 text-gray-800 mb-4" />
             <p className="text-sm font-medium text-gray-500">Pilih item dari panel kiri</p>

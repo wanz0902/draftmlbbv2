@@ -2,16 +2,19 @@
   {
     "name": "Berserker's Fury",
     "category": "Attack",
-    "gold": 2350,
+    "gold": 2390,
     "stats": [
       "+65 Physical Attack",
       "+25% Critical Chance"
+    ],
+    "uniqueAttributes": [
+      "+40% Critical Damage"
     ],
     "abilities": [
       {
         "type": "passive",
         "name": "Doom",
-        "description": "Critical hits increase Physical Attack by 5% for 2s."
+        "description": "Critical strikes grant 5% extra Physical Attack for 2s."
       }
     ],
     "buildFrom": [

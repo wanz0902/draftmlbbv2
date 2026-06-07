@@ -377,7 +377,16 @@ function getItemsList() {
         image: assetUrl(file),
         gold: isEnriched ? (enriched.gold ?? null) : null,
         stats: isEnriched ? (baseStats.length > 0 ? baseStats : null) : null,
-        uniqueAttributes: isEnriched ? (uniqueAttrs.length > 0 ? uniqueAttrs : null) : null,
+        uniqueAttributes: isEnriched ? (() => {
+          const merged = [...uniqueAttrs];
+          const enrichedUA = enriched.uniqueAttributes ?? [];
+          for (const ua of enrichedUA) {
+            if (!merged.some((m: string) => m.toLowerCase() === ua.toLowerCase())) {
+              merged.push(ua);
+            }
+          }
+          return merged.length > 0 ? merged : null;
+        })() : null,
         passive: isEnriched ? passive : null,
         description: isEnriched ? description : null,
         abilities: isEnriched ? (enriched.abilities ?? null) : null,
