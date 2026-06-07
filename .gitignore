@@ -50,6 +50,7 @@ data/backups/
 
 # Kiro workspace
 .kiro/
+.kilo/
 .verdent_*
 
 # Local debug artifacts (screenshots, test outputs)

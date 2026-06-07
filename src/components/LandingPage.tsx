@@ -175,8 +175,8 @@ export default function LandingPage({ onChangeTab, heroesCount }: LandingPagePro
         <div className="absolute bottom-[10%] left-[10%] h-[30rem] w-[30rem] rounded-full bg-rose-500/[0.04] blur-[160px]" />
       </div>
 
-      {/* ═══ SECTION 1: HERO — Full viewport ═══ */}
-      <section className="relative z-10 mx-auto flex min-h-[85vh] max-w-7xl flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
+      {/* ═══ SECTION 1: HERO ═══ */}
+      <section className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col items-center justify-center px-4 pt-24 pb-16 text-center sm:px-6 lg:px-8">
         <SectionLabel>
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400/70" />
@@ -185,19 +185,19 @@ export default function LandingPage({ onChangeTab, heroesCount }: LandingPagePro
           MPL ID S17 — Live Data Engine
         </SectionLabel>
 
-        <h1 className="mt-8 max-w-5xl font-display text-5xl font-black leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-8xl">
+        <h1 className="mt-5 max-w-5xl font-display text-5xl font-black leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-8xl">
           Draft MLBB
           <span className="block bg-gradient-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent">
             Seperti Analyst Pro
           </span>
         </h1>
 
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
+        <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
           Pick/ban analysis, hero intelligence, team history, dan meta snapshot —
           semua dalam satu workspace.
         </p>
 
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <button onClick={() => onChangeTab("draft")} className="group inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-[0_0_40px_-8px_rgba(34,211,238,0.5)] transition-all hover:shadow-[0_0_60px_-8px_rgba(34,211,238,0.7)] hover:brightness-110">
             Buka Draft Simulator
             <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
@@ -209,7 +209,7 @@ export default function LandingPage({ onChangeTab, heroesCount }: LandingPagePro
         </div>
 
         {/* Live stats bar */}
-        <div className="mt-16 grid w-full max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="mt-12 grid w-full max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
           {liveStats.map((s) => {
             const Icon = s.icon;
             return (
@@ -225,7 +225,7 @@ export default function LandingPage({ onChangeTab, heroesCount }: LandingPagePro
         </div>
 
         {/* Scroll hint */}
-        <div className="mt-12 animate-bounce text-slate-600">
+        <div className="mt-8 animate-bounce text-slate-600">
           <ChevronRight className="h-5 w-5 rotate-90" />
         </div>
       </section>

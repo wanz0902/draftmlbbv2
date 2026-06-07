@@ -19,7 +19,6 @@ import VisitorStatsBadge from "./VisitorStatsBadge";
 interface NavbarProps {
   currentTab: string;
   onChangeTab: (tab: string) => void;
-  scrapingStatus?: string;
   user?: User | null;
 }
 
@@ -72,7 +71,6 @@ const mobileSections = [
 export default function Navbar({
   currentTab,
   onChangeTab,
-  scrapingStatus,
   user,
 }: NavbarProps) {
   const [authLoading, setAuthLoading] = useState(false);
@@ -180,10 +178,6 @@ export default function Navbar({
           </div>
         </button>
 
-        <div className="hidden items-center gap-2 lg:flex">
-          <VisitorStatsBadge />
-        </div>
-
         <div
           ref={dropdownRef}
           className="hidden min-w-0 flex-1 items-center justify-center gap-1.5 xl:flex"
@@ -276,26 +270,27 @@ export default function Navbar({
           })}
         </div>
 
-        <div className="ml-auto hidden items-center gap-3 lg:flex">
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/15 bg-emerald-400/8 px-3 py-2">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+        <div className="ml-auto hidden items-center gap-2 lg:flex">
+          <VisitorStatsBadge />
+          <div className="inline-flex items-center gap-1.5 rounded-md border border-emerald-500/20 bg-emerald-500/10 px-2 py-1">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-            <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-emerald-300">
-              {scrapingStatus || "Live data"}
+            <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-300">
+              Live Only
             </span>
           </div>
           {renderAuthButton()}
         </div>
 
         <div className="ml-auto flex items-center gap-2 xl:hidden">
-          <div className="hidden items-center gap-2 rounded-full border border-emerald-400/15 bg-emerald-400/8 px-3 py-2 sm:inline-flex">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+          <div className="hidden items-center gap-1.5 rounded-md border border-emerald-500/20 bg-emerald-500/10 px-2 py-1 sm:inline-flex">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-emerald-300">
+            <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-300">
               Live
             </span>
           </div>
@@ -323,12 +318,12 @@ export default function Navbar({
               Back to Home
             </button>
             <div className="flex items-center justify-between rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 lg:hidden">
-              <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-300">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/75" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+              <div className="inline-flex items-center gap-1.5 font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-300">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                 </span>
-                {scrapingStatus || "Live data"}
+                Live Only
               </div>
               {renderAuthButton()}
             </div>

@@ -23,9 +23,6 @@ export default function App() {
   const [draftInProgress, setDraftInProgress] = useState(false);
   const [showExitModal, setShowExitModal] = useState(false);
   const [pendingTab, setPendingTab] = useState<string | null>(null);
-  const [scrapingStatus, setScrapingStatus] = useState(
-    "Scraped: MLBB API active",
-  );
 
   // Global Loaded States
   const [heroes, setHeroes] = useState<HeroStats[]>([]);
@@ -71,11 +68,6 @@ export default function App() {
       setTeamsData(Array.isArray(teamsDataRaw) ? teamsDataRaw : []);
       setItems(Array.isArray(itemsData) ? itemsData : []);
       setHistoryData(Array.isArray(historyDataRaw) ? historyDataRaw : []);
-
-      // If heroes list is parsed, update scraping label
-      if (heroesData.length > 0) {
-        setScrapingStatus(`Scraped: ${heroesData.length} Heroes Live`);
-      }
     } catch (error) {
       console.error("Failed to fetch initial application data:", error);
     } finally {
@@ -127,7 +119,6 @@ export default function App() {
       <Navbar
         currentTab={currentTab}
         onChangeTab={handleTabChange}
-        scrapingStatus={scrapingStatus}
         user={user}
       />
 
