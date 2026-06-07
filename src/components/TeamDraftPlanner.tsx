@@ -347,8 +347,8 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
 
   const filteredHeroes = useMemo(() => {
     const q = searchQuery.toLowerCase();
-    return heroes.filter((h) => !usedHeroes.has(h.hero_name) && h.hero_name.toLowerCase().includes(q)).slice(0, 40);
-  }, [heroes, searchQuery, usedHeroes]);
+    return heroes.filter((h) => h.hero_name.toLowerCase().includes(q));
+  }, [heroes, searchQuery]);
 
   const progress = useMemo(() => {
     if (!selectedDraft) return { bans: 0, picks: 0, pct: 0 };
@@ -630,14 +630,20 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
               <button onClick={() => setPickerSlot(null)} className="p-1 text-slate-500 hover:text-white cursor-pointer"><X className="h-4 w-4" /></button>
             </div>
             <div className="max-h-[50vh] overflow-y-auto p-2 grid grid-cols-4 sm:grid-cols-5 gap-1.5">
-              {filteredHeroes.map((h) => (
-                <button key={h.hero_name} onClick={() => { applyPick(pickerSlot, h.hero_name); setPickerSlot(null); setSearchQuery(""); }} className="flex flex-col items-center gap-1 rounded-xl p-2 hover:bg-white/[0.06] transition cursor-pointer">
-                  <div className="h-10 w-10 overflow-hidden rounded-lg border border-white/10 bg-[#060d1a]">
-                    <FallbackImage src={getHeroImageUrl(h.hero_name, heroAssets)} fallbackText={h.hero_name} alt={h.hero_name} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
-                  </div>
-                  <span className="text-[9px] text-slate-400 truncate w-full text-center">{h.hero_name}</span>
-                </button>
-              ))}
+              {filteredHeroes.map((h) => {
+                const isUsed = usedHeroes.has(h.hero_name);
+                return (
+                  <button key={h.hero_name} onClick={() => { applyPick(pickerSlot, h.hero_name); setPickerSlot(null); setSearchQuery(""); }} className={`relative flex flex-col items-center gap-1 rounded-xl p-2 transition cursor-pointer ${isUsed ? "opacity-45 hover:opacity-70" : "hover:bg-white/[0.06]"}`}>
+                    <div className={`h-10 w-10 overflow-hidden rounded-lg border bg-[#060d1a] ${isUsed ? "border-white/[0.04]" : "border-white/10"}`}>
+                      <FallbackImage src={getHeroImageUrl(h.hero_name, heroAssets)} fallbackText={h.hero_name} alt={h.hero_name} className="h-full w-full object-cover" containerClassName="h-full w-full text-[6px]" />
+                    </div>
+                    <span className={`text-[9px] truncate w-full text-center ${isUsed ? "text-slate-600" : "text-slate-400"}`}>{h.hero_name}</span>
+                    {isUsed && (
+                      <span className="absolute top-1 right-1 rounded bg-slate-500/30 px-1 py-[1px] text-[6px] font-bold uppercase text-slate-400 leading-none">Used</span>
+                    )}
+                  </button>
+                );
+              })}
               {filteredHeroes.length === 0 && <div className="col-span-full py-6 text-center text-xs text-slate-500">No heroes found.</div>}
             </div>
           </div>
@@ -740,17 +746,17 @@ function CircleSlot({ hero, heroAssets, ring, onClick, onClear }: {
 }) {
   const empty = !hero;
   return (
-    <button onClick={onClick} className={`relative h-14 w-14 rounded-full border-2 ${empty ? "border-dashed border-white/[0.08] bg-white/[0.01]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-105`}>
+    <button onClick={onClick} className={`relative h-16 w-16 rounded-full border-2 ${empty ? "border-dashed border-white/[0.08] bg-white/[0.01]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-105`}>
       {hero ? (
         <>
-          <div className="h-10 w-10 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
+          <div className="h-12 w-12 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
             <FallbackImage src={getHeroImageUrl(hero, heroAssets)} fallbackText={hero} alt={hero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[5px]" />
           </div>
           <button onClick={(e) => { e.stopPropagation(); onClear(); }} className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-500 hover:text-rose-400 hover:border-rose-500/30 transition cursor-pointer">
             <X className="h-2.5 w-2.5" />
           </button>
         </>
-      ) : <span className="text-lg text-slate-700">+</span>}
+      ) : <span className="text-xl text-slate-700">+</span>}
     </button>
   );
 }
@@ -761,17 +767,17 @@ function MiniSlot({ hero, heroAssets, ring, onClick, onClear }: {
 }) {
   const empty = !hero;
   return (
-    <button onClick={onClick} className={`relative h-8 w-8 rounded-full border ${empty ? "border-dashed border-white/[0.06] bg-white/[0.01]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-110`}>
+    <button onClick={onClick} className={`relative h-9 w-9 rounded-full border ${empty ? "border-dashed border-white/[0.06] bg-white/[0.01]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-110`}>
       {hero ? (
         <>
-          <div className="h-6 w-6 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
+          <div className="h-7 w-7 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
             <FallbackImage src={getHeroImageUrl(hero, heroAssets)} fallbackText={hero} alt={hero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[3px]" />
           </div>
           <button onClick={(e) => { e.stopPropagation(); onClear(); }} className="absolute -top-0.5 -right-0.5 h-3 w-3 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-600 hover:text-rose-400 transition cursor-pointer">
             <X className="h-2 w-2" />
           </button>
         </>
-      ) : <span className="text-[10px] text-slate-700">+</span>}
+      ) : <span className="text-[11px] text-slate-700">+</span>}
     </button>
   );
 }
