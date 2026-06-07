@@ -6,12 +6,11 @@ import {
   ChevronRight,
   Crosshair,
   Download,
-  HelpCircle,
   Layers,
-  Shield,
   Swords,
   Target,
   Users,
+  X,
 } from "lucide-react";
 
 const TUTORIAL_STORAGE_KEY = "tdp_tutorial_completed";
@@ -132,6 +131,8 @@ interface TdpOnboardingProps {
 
 export default function TdpOnboarding({ onComplete }: TdpOnboardingProps) {
   const [step, setStep] = useState(0);
+  const [showExitConfirm, setShowExitConfirm] = useState(false);
+  const [restartNotice, setRestartNotice] = useState(false);
 
   const steps: Step[] = [
     {
@@ -168,19 +169,46 @@ export default function TdpOnboarding({ onComplete }: TdpOnboardingProps) {
 
   const currentStep = steps[step];
   const isLast = step === steps.length - 1;
+  const isFirst = step === 0;
 
-  const handleStart = () => {
+  const handleComplete = () => {
     try { localStorage.setItem(TUTORIAL_STORAGE_KEY, "true"); } catch {}
     onComplete();
   };
 
-  const handleRestart = () => {
+  const handleRestartFromFinal = () => {
+    setRestartNotice(true);
     setStep(0);
+    setTimeout(() => setRestartNotice(false), 2000);
+  };
+
+  const handleBackClick = () => {
+    if (isFirst) {
+      setShowExitConfirm(true);
+    } else {
+      setStep((s) => s - 1);
+    }
+  };
+
+  const handleExitConfirm = (action: "workspace" | "stay" | "restart") => {
+    setShowExitConfirm(false);
+    if (action === "workspace") {
+      handleComplete();
+    } else if (action === "restart") {
+      setStep(0);
+    }
   };
 
   return (
     <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-[#040810]">
       <div className="w-full max-w-xl mx-4">
+        {/* Restart notice */}
+        {restartNotice && (
+          <div className="mb-4 mx-auto w-fit rounded-lg bg-cyan-500/15 border border-cyan-500/25 px-4 py-2 text-[11px] font-bold text-cyan-300 animate-pulse">
+            Tutorial diulang dari awal.
+          </div>
+        )}
+
         {/* Progress dots */}
         <div className="flex items-center justify-center gap-2 mb-6">
           {steps.map((_, i) => (
@@ -205,27 +233,23 @@ export default function TdpOnboarding({ onComplete }: TdpOnboardingProps) {
           </div>
 
           <div className="border-t border-white/[0.06] px-8 py-4 flex items-center justify-between">
-            {step > 0 ? (
-              <button
-                onClick={() => setStep((s) => s - 1)}
-                className="flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-white transition cursor-pointer"
-              >
-                <ChevronLeft className="h-4 w-4" /> Kembali
-              </button>
-            ) : (
-              <div />
-            )}
+            <button
+              onClick={handleBackClick}
+              className="flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-white transition cursor-pointer"
+            >
+              {isFirst ? <><X className="h-4 w-4" /> Tutup</> : <><ChevronLeft className="h-4 w-4" /> Kembali</>}
+            </button>
 
             {isLast ? (
               <div className="flex items-center gap-2">
                 <button
-                  onClick={handleRestart}
+                  onClick={handleRestartFromFinal}
                   className="px-4 py-2 rounded-lg border border-white/10 text-xs font-bold text-slate-400 hover:text-white hover:border-white/20 transition cursor-pointer"
                 >
-                  Ulangi
+                  Ulangi Penjelasan
                 </button>
                 <button
-                  onClick={handleStart}
+                  onClick={handleComplete}
                   className="px-5 py-2 rounded-lg bg-cyan-500/20 border border-cyan-500/30 text-xs font-bold text-cyan-300 hover:bg-cyan-500/30 transition cursor-pointer"
                 >
                   Ya, mulai TDP
@@ -245,13 +269,45 @@ export default function TdpOnboarding({ onComplete }: TdpOnboardingProps) {
         {/* Skip link */}
         <div className="text-center mt-4">
           <button
-            onClick={handleStart}
+            onClick={handleComplete}
             className="text-[10px] font-bold text-slate-600 hover:text-slate-400 transition cursor-pointer uppercase tracking-wider"
           >
             Lewati tutorial
           </button>
         </div>
       </div>
+
+      {/* ═══ EXIT CONFIRMATION MODAL ═══ */}
+      {showExitConfirm && (
+        <div className="fixed inset-0 z-[10001] flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="w-full max-w-sm mx-4 rounded-2xl border border-white/10 bg-[#0e1525] shadow-2xl p-6" onClick={(e) => e.stopPropagation()}>
+            <h3 className="text-base font-black text-white font-display mb-2">Keluar dari tutorial?</h3>
+            <p className="text-xs text-slate-400 leading-relaxed mb-5">
+              Kamu bisa lanjut ke workspace sekarang atau ulang tutorial dari awal kapan saja.
+            </p>
+            <div className="flex flex-col gap-2">
+              <button
+                onClick={() => handleExitConfirm("workspace")}
+                className="w-full px-4 py-2.5 rounded-lg bg-cyan-500/20 border border-cyan-500/30 text-xs font-bold text-cyan-300 hover:bg-cyan-500/30 transition cursor-pointer"
+              >
+                Lanjut ke Workspace
+              </button>
+              <button
+                onClick={() => handleExitConfirm("restart")}
+                className="w-full px-4 py-2.5 rounded-lg border border-white/10 text-xs font-bold text-slate-400 hover:text-white hover:border-white/20 transition cursor-pointer"
+              >
+                Mulai Ulang
+              </button>
+              <button
+                onClick={() => handleExitConfirm("stay")}
+                className="w-full px-4 py-2.5 rounded-lg text-[11px] font-bold text-slate-600 hover:text-slate-400 transition cursor-pointer"
+              >
+                Tetap di Tutorial
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

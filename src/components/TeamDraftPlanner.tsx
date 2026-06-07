@@ -181,6 +181,8 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
   const [expandedTours, setExpandedTours] = useState<Set<string>>(new Set());
   const [exporting, setExporting] = useState(false);
   const [showTutorial, setShowTutorial] = useState(() => !isTdpTutorialCompleted());
+  const [showReplayConfirm, setShowReplayConfirm] = useState(false);
+  const [showReminder, setShowReminder] = useState(() => isTdpTutorialCompleted());
   const boardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -400,7 +402,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
 
   return (
     <>
-    {showTutorial && <TdpOnboarding onComplete={() => setShowTutorial(false)} />}
+    {showTutorial && <TdpOnboarding onComplete={() => { setShowTutorial(false); setShowReminder(true); }} />}
     <div className="flex h-[calc(100vh-56px)] overflow-hidden bg-[#0a0f1c]">
       {/* ═══ LEFT SIDEBAR ═══ */}
       <aside
@@ -552,7 +554,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
                   </div>
 
                   <button
-                    onClick={() => setShowTutorial(true)}
+                    onClick={() => setShowReplayConfirm(true)}
                     className="p-1.5 text-slate-500 hover:text-cyan-400 transition cursor-pointer"
                     title="Buka Tutorial"
                   >
@@ -591,6 +593,14 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
             </div>
           )}
         </header>
+
+        {/* Reminder banner */}
+        {showReminder && selectedDraft && (
+          <div className="flex items-center justify-center gap-2 bg-cyan-500/[0.06] border-b border-cyan-500/10 px-4 py-1.5">
+            <span className="text-[10px] text-cyan-400/70">Butuh panduan? Buka ulang tutorial TDP kapan saja.</span>
+            <button onClick={() => setShowReminder(false)} className="text-[10px] text-slate-600 hover:text-slate-400 cursor-pointer ml-1">✕</button>
+          </div>
+        )}
 
         {/* ─── BOARD AREA ─── */}
         {selectedDraft ? (
@@ -659,6 +669,32 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
                 );
               })}
               {filteredHeroes.length === 0 && <div className="col-span-full py-6 text-center text-xs text-slate-500">No heroes found.</div>}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ═══ REPLAY CONFIRMATION MODAL ═══ */}
+      {showReplayConfirm && (
+        <div className="fixed inset-0 z-[10001] flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowReplayConfirm(false)}>
+          <div className="w-full max-w-sm mx-4 rounded-2xl border border-white/10 bg-[#0e1525] shadow-2xl p-6" onClick={(e) => e.stopPropagation()}>
+            <h3 className="text-base font-black text-white font-display mb-2">Ulangi Tutorial TDP?</h3>
+            <p className="text-xs text-slate-400 leading-relaxed mb-5">
+              Tutorial akan dimulai dari awal dan menjelaskan ulang Ban, Pick, Role Lane, Backup Hero, Coach Notes, dan Export.
+            </p>
+            <div className="flex gap-2">
+              <button
+                onClick={() => setShowReplayConfirm(false)}
+                className="flex-1 px-4 py-2.5 rounded-lg border border-white/10 text-xs font-bold text-slate-400 hover:text-white hover:border-white/20 transition cursor-pointer"
+              >
+                Batal
+              </button>
+              <button
+                onClick={() => { setShowReplayConfirm(false); setShowTutorial(true); }}
+                className="flex-1 px-4 py-2.5 rounded-lg bg-cyan-500/20 border border-cyan-500/30 text-xs font-bold text-cyan-300 hover:bg-cyan-500/30 transition cursor-pointer"
+              >
+                Ya, mulai dari awal
+              </button>
             </div>
           </div>
         </div>
