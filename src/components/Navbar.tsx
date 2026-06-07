@@ -7,6 +7,7 @@ import {
   LogOut,
   Menu,
   Sparkles,
+  Target,
   Trophy,
   User as UserIcon,
   Users,
@@ -25,6 +26,7 @@ interface NavbarProps {
 const directLinks = [
   { id: "home", label: "Home", icon: Home },
   { id: "draft", label: "Draft", icon: CloudLightning },
+  { id: "tdp", label: "TDP", icon: Target },
   { id: "teams", label: "Teams", icon: Users },
   { id: "tier", label: "Meta", icon: Trophy },
 ];

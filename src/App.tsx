@@ -13,6 +13,7 @@ import TierListPanel from "./components/TierListPanel";
 // Component preserved at src/components/CounterMatrixPanel.tsx for future rebuild.
 // import CounterMatrixPanel from "./components/CounterMatrixPanel";
 import LandingPage from "./components/LandingPage";
+import TeamDraftPlanner from "./components/TeamDraftPlanner";
 import { HeroStats, Item, TeamStats } from "./types";
 import { ArrowLeft, CloudLightning, ShieldCheck } from "lucide-react";
 
@@ -35,6 +36,7 @@ export default function App() {
   const tabLabels: Record<string, string> = {
     home: "Home",
     draft: "Draft Simulator",
+    tdp: "Team Draft Planner",
     intelligence: "Hero Intelligence",
     tier: "Tier List",
     heroes: "Hero Stats",
@@ -175,6 +177,10 @@ export default function App() {
 
             {currentTab === "intelligence" && (
               <HeroIntelligenceDashboard heroAssets={heroAssets} initialHeroName={intelligenceTarget} />
+            )}
+
+            {currentTab === "tdp" && (
+              <TeamDraftPlanner heroAssets={heroAssets} onOpenHeroIntelligence={handleOpenHeroIntelligence} />
             )}
 
             {currentTab === "tier" && (

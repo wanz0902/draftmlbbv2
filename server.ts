@@ -1070,6 +1070,64 @@ app.get("/api/draft/teams", (req, res) => {
   res.json({ teams });
 });
 
+// API ROUTE: TEAM DRAFT PLANNER — TEAM INTELLIGENCE PROFILE
+app.get("/api/draft/team-intel/:teamId", (req, res) => {
+  try {
+    const teamId = String(req.params.teamId || "").trim();
+    if (!teamId) return res.status(400).json({ error: "teamId required" });
+
+    const identity = buildTeamIdentity(teamId, matchHistoryService);
+
+    // Convert Map fields to arrays for JSON serialization
+    const targetBansArray: any[] = [];
+    identity.targetBans.forEach((profile, opponent) => {
+      targetBansArray.push({
+        opponent,
+        heroes: profile.bans.slice(0, 3),
+      });
+    });
+
+    return res.json({
+      teamId: identity.teamId,
+      teamName: identity.teamId,
+      totalGames: identity.totalGames,
+      totalWins: identity.wins,
+      totalLosses: identity.losses,
+      winRate: identity.winRate,
+      blueGames: identity.sideStats.blue.games,
+      blueWins: identity.sideStats.blue.wins,
+      redGames: identity.sideStats.red.games,
+      redWins: identity.sideStats.red.wins,
+      comfortHeroes: identity.comfortHeroes.slice(0, 10).map(h => ({
+        heroName: h.heroName,
+        picks: h.pickCount,
+        wins: h.winCount,
+        winRate: h.winRate,
+      })),
+      topBans: identity.priorityBans.slice(0, 10).map(b => ({ heroName: b.heroName, count: b.banCount })),
+      targetBans: targetBansArray.slice(0, 5),
+      draftTendencies: identity.draftTendencies,
+      signatureCompositions: identity.signatureCompositions.slice(0, 3).map(c => ({
+        name: c.heroes.join(" + "),
+        heroes: c.heroes,
+        games: c.gameCount,
+        winRate: c.winRate,
+      })),
+      heroPairings: identity.heroPairings.slice(0, 5).map(p => ({
+        heroA: p.heroA,
+        heroB: p.heroB,
+        games: p.coOccurrence,
+        winRate: p.winRate,
+      })),
+      firstPickPreference: identity.firstPickPreferences[0] || null,
+      secondPickPreference: identity.secondPickPreferences[0] || null,
+    });
+  } catch (err) {
+    console.error("[TeamIntel] Error:", err);
+    return res.status(500).json({ error: "Failed to build team profile" });
+  }
+});
+
 // API ROUTE: DRAFT COACH — HERO RECOMMENDATIONS
 app.post("/api/draft/recommendation", (req, res) => {
   try {
