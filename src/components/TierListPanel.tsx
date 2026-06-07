@@ -1,8 +1,10 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useCallback, useRef } from "react";
 import { HeroStats } from "../types";
+import { DetailedHero } from "../types/hero";
 import { ArrowLeft, Award, Search } from "lucide-react";
 import { getHeroImageUrl } from "../lib/heroUtils";
 import FallbackImage from "./FallbackImage";
+import HeroDetailPanel from "./HeroDetailPanel";
 import heroesMaster from "../data/heroes_master.json";
 
 interface TierListPanelProps {
@@ -12,10 +14,45 @@ interface TierListPanelProps {
 
 const TIERS = ["S+", "S", "A", "B", "C", "D"] as const;
 
+// Lane normalization: map filter label to all possible equivalent data values
+const LANE_ALIASES: Record<string, string[]> = {
+  "Jungle": ["Jungle", "Jungler"],
+  "EXP Lane": ["EXP Lane", "EXP"],
+  "Mid Lane": ["Mid Lane", "Mid"],
+  "Gold Lane": ["Gold Lane", "Gold"],
+  "Roamer": ["Roam", "Roamer", "Roam Lane"],
+};
+
+function matchesLane(heroLanes: any, heroLane: any, filterValue: string): boolean {
+  if (filterValue === "ALL") return true;
+  const aliases = LANE_ALIASES[filterValue] || [filterValue];
+  const lanesToCheck: string[] = [];
+  if (Array.isArray(heroLanes)) lanesToCheck.push(...heroLanes);
+  if (typeof heroLane === "string" && heroLane) lanesToCheck.push(heroLane);
+  return lanesToCheck.some(l => aliases.includes(l));
+}
+
 export default function TierListPanel({ heroes, heroAssets }: TierListPanelProps) {
   const [roleFilter, setRoleFilter] = useState<string>("ALL");
   const [laneFilter, setLaneFilter] = useState<string>("ALL");
   const [searchQuery, setSearchQuery] = useState("");
+  const [detailHero, setDetailHero] = useState<DetailedHero | null>(null);
+  const detailedHeroesCache = useRef<DetailedHero[]>([]);
+
+  const openHeroDetail = useCallback(async (heroName: string) => {
+    if (detailedHeroesCache.current.length === 0) {
+      try {
+        const res = await fetch("/api/heroes");
+        const data = await res.json();
+        detailedHeroesCache.current = Array.isArray(data) ? data : [];
+      } catch { return; }
+    }
+    const found = detailedHeroesCache.current.find((h: any) => {
+      const name = (h.hero_name || h.name || h.heroName || "").toLowerCase();
+      return name === heroName.toLowerCase();
+    });
+    if (found) setDetailHero(found);
+  }, []);
 
   const roles = ["ALL", "Assassin", "Fighter", "Mage", "Marksman", "Support", "Tank"];
   const lanes = ["ALL", "Jungle", "EXP Lane", "Mid Lane", "Gold Lane", "Roamer"];
@@ -67,10 +104,7 @@ export default function TierListPanel({ heroes, heroAssets }: TierListPanelProps
         (Array.isArray(hero.role) && hero.role.includes(roleFilter)) ||
         hero.role === roleFilter;
 
-      const laneMatch =
-        laneFilter === "ALL" ||
-        (Array.isArray(hero.lanes) && hero.lanes.includes(laneFilter)) ||
-        hero.lane === laneFilter;
+      const laneMatch = matchesLane(hero.lanes, hero.lane, laneFilter);
 
       return nameMatch && roleMatch && laneMatch;
     });
@@ -251,15 +285,16 @@ export default function TierListPanel({ heroes, heroAssets }: TierListPanelProps
                     {list.map((h) => {
                       const img = getHeroImageUrl(h.hero_name, heroAssets);
                       return (
-                        <div
+                        <button
                           key={h.id}
-                          className="flex items-center gap-2.5 p-1.5 bg-gray-950/25 border border-white/5 rounded-lg hover:border-blue-500/20 transition-all duration-200"
+                          onClick={() => openHeroDetail(h.hero_name)}
+                          className="flex items-center gap-2.5 p-1.5 bg-gray-950/25 border border-white/5 rounded-lg hover:border-blue-500/30 hover:bg-blue-950/10 transition-all duration-200 text-left cursor-pointer group"
                         >
-                          <div className="relative h-9 w-9 overflow-hidden rounded-md border border-white/5 shrink-0">
+                          <div className="relative h-9 w-9 overflow-hidden rounded-md border border-white/5 shrink-0 group-hover:scale-105 transition-transform duration-200">
                             <FallbackImage src={img} fallbackText={h.hero_name} className="h-full w-full object-cover" />
                           </div>
                           <div className="min-w-0 flex-1">
-                            <h4 className="font-sans text-xs font-bold text-gray-100 truncate">
+                            <h4 className="font-sans text-xs font-bold text-gray-100 truncate group-hover:text-blue-300 transition-colors">
                               {h.hero_name}
                             </h4>
                             <p className="font-mono text-[8px] text-emerald-400 font-bold">
@@ -269,7 +304,7 @@ export default function TierListPanel({ heroes, heroAssets }: TierListPanelProps
                               P {h.picks_total || "0"} • B {h.bans_total || "0"}
                             </p>
                           </div>
-                        </div>
+                        </button>
                       );
                     })}
                   </div>
@@ -279,6 +314,15 @@ export default function TierListPanel({ heroes, heroAssets }: TierListPanelProps
           );
         })}
       </div>
+
+      {/* Hero Detail Panel (inline modal) */}
+      {detailHero && (
+        <HeroDetailPanel
+          hero={detailHero}
+          onClose={() => setDetailHero(null)}
+          heroAssets={heroAssets}
+        />
+      )}
     </div>
   );
 }
