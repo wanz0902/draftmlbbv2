@@ -1,0 +1,8 @@
+{
+  "source": "moonton_rank",
+  "source_url": "https://www.mobilelegends.com/rank",
+  "source_updated_at": null,
+  "time_range": "past_1_day",
+  "rank_filter": "ALL",
+  "heroes": []
+}

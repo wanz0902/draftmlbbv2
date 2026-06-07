@@ -20,6 +20,7 @@ import { getDb, getDbHealth, seedHeroesIfEmpty, needsRescrape, logAIRequest } fr
 import { batchScrapeHeroes, scrapeAndSaveHero } from './lib/scraper/hero-scraper.js';
 import { getGatewayQueueStatus } from './lib/scraper/liquipedia-gateway.js';
 import { scrapeTournamentStats, scrapeTournament } from './lib/scraper/tournament-scraper.js';
+import { scrapeGlobalRank } from './lib/scraper/global-rank-scraper.js';
 import { generateRecommendations, generateMplRecommendations } from './src/draft/draftRecommendationEngine.js';
 import { resolveLanes } from './src/draft/laneResolver.js';
 import { MatchHistoryService } from './src/services/matchHistoryService.js';
@@ -2525,6 +2526,278 @@ app.post("/api/admin/liquipedia/apply-updates", async (req, res): Promise<any> =
   } catch (error: any) {
     console.error("Admin apply failed:", error.message);
     res.status(500).json({ success: false, error: error.message, note: "Apply failed. Local data may be unchanged or rolled back." });
+  }
+});
+
+// ====================================================================
+// API ROUTE: GLOBAL RANK — PUBLIC READ-ONLY
+// ====================================================================
+app.get("/api/global-rank-stats", (req, res) => {
+  const filePath = path.join(DATA_DIR, "global_rank_stats.json");
+  try {
+    if (!fs.existsSync(filePath)) {
+      return res.json({ heroes: [], available: false });
+    }
+    const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    if (!data.heroes || data.heroes.length === 0) {
+      return res.json({ heroes: [], available: false });
+    }
+    return res.json({ ...data, available: true });
+  } catch {
+    return res.json({ heroes: [], available: false });
+  }
+});
+
+// ====================================================================
+// API ROUTE: ADMIN-ONLY GLOBAL RANK CHECK-UPDATES (PREVIEW, NO WRITE)
+// ====================================================================
+app.post("/api/admin/global-rank/check-updates", async (req, res): Promise<any> => {
+  // Admin gate
+  const adminEnabled = process.env.ADMIN_TOOLS_ENABLED === 'true';
+  if (!adminEnabled) {
+    return res.status(403).json({ success: false, error: 'Admin tools are disabled.' });
+  }
+  const expectedToken = process.env.ADMIN_TOOLS_ACCESS_TOKEN;
+  if (expectedToken) {
+    const providedToken = req.headers['x-admin-tools-token'] as string;
+    if (providedToken !== expectedToken) {
+      return res.status(403).json({ success: false, error: 'Invalid or missing admin access token.' });
+    }
+  }
+
+  try {
+    const scrapeResult = await scrapeGlobalRank();
+
+    // Load current local data
+    const localFilePath = path.join(DATA_DIR, "global_rank_stats.json");
+    const localData = safeJson(localFilePath, { heroes: [] });
+    const localHeroes: any[] = localData.heroes || [];
+
+    const normFn = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    const localNames = new Set(localHeroes.map((h: any) => normFn(h.hero_name)));
+    const scrapedNames = new Set(scrapeResult.heroes.map(h => normFn(h.hero_name)));
+
+    const added = scrapeResult.heroes
+      .filter(h => !localNames.has(normFn(h.hero_name)))
+      .map(h => h.hero_name);
+    const removed = localHeroes
+      .filter((h: any) => !scrapedNames.has(normFn(h.hero_name)))
+      .map((h: any) => h.hero_name);
+
+    // Changed: heroes present in both but with different win_rate
+    let changed = 0;
+    const changedHeroes: string[] = [];
+    for (const sh of scrapeResult.heroes) {
+      const localMatch = localHeroes.find((lh: any) => normFn(lh.hero_name) === normFn(sh.hero_name));
+      if (localMatch && (
+        Math.abs(localMatch.win_rate - sh.win_rate) > 0.01 ||
+        Math.abs(localMatch.pick_rate - sh.pick_rate) > 0.01 ||
+        Math.abs(localMatch.ban_rate - sh.ban_rate) > 0.01
+      )) {
+        changed++;
+        changedHeroes.push(sh.hero_name);
+      }
+    }
+
+    // Identity checks
+    const identityChecks = {
+      mathilda: scrapeResult.heroes.some(h => normFn(h.hero_name) === 'mathilda'),
+      yiSunShin: scrapeResult.heroes.some(h => normFn(h.hero_name) === 'yisunshin'),
+      valentina: scrapeResult.heroes.some(h => normFn(h.hero_name) === 'valentina'),
+      luoYiSeparate: scrapeResult.heroes.some(h => normFn(h.hero_name) === 'luoyi') &&
+        scrapeResult.heroes.some(h => normFn(h.hero_name) === 'yisunshin') &&
+        normFn('Luo Yi') !== normFn('Yi Sun-shin'),
+      sun: scrapeResult.heroes.some(h => normFn(h.hero_name) === 'sun'),
+    };
+
+    // Validate
+    const warnings: string[] = [];
+    const validationErrors: string[] = [];
+
+    if (!scrapeResult.success) {
+      validationErrors.push('Scrape did not succeed: ' + (scrapeResult.errors?.join('; ') || 'unknown'));
+    }
+    if (scrapeResult.heroes.length < 120) {
+      warnings.push(`Only ${scrapeResult.heroes.length} heroes scraped (expected >=120)`);
+    }
+    if (scrapeResult.errors && scrapeResult.errors.length > 0) {
+      warnings.push(...scrapeResult.errors);
+    }
+
+    // Check for duplicate normalized names
+    const seenNorms = new Set<string>();
+    for (const h of scrapeResult.heroes) {
+      const n = normFn(h.hero_name);
+      if (seenNorms.has(n)) {
+        validationErrors.push(`Duplicate normalized name: ${h.hero_name}`);
+      }
+      seenNorms.add(n);
+    }
+
+    const safeToApply = scrapeResult.success &&
+      scrapeResult.heroes.length >= 120 &&
+      validationErrors.length === 0 &&
+      identityChecks.mathilda &&
+      identityChecks.yiSunShin;
+
+    return res.json({
+      success: true,
+      mode: "preview",
+      local: { count: localHeroes.length },
+      scraped: { count: scrapeResult.heroes.length },
+      diff: { added, removed, changed, changedHeroes: changedHeroes.slice(0, 20) },
+      identityChecks,
+      validation: { safeToApply, warnings, errors: validationErrors },
+      updateTime: scrapeResult.updateTime || null,
+      errors: scrapeResult.errors || [],
+    });
+  } catch (error: any) {
+    console.error("[GlobalRank] Check-updates failed:", error.message);
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// ====================================================================
+// API ROUTE: ADMIN-ONLY GLOBAL RANK APPLY-UPDATES (RE-SCRAPES + WRITES)
+// ====================================================================
+app.post("/api/admin/global-rank/apply-updates", async (req, res): Promise<any> => {
+  // Admin gate
+  const adminEnabled = process.env.ADMIN_TOOLS_ENABLED === 'true';
+  if (!adminEnabled) {
+    return res.status(403).json({ success: false, error: 'Admin tools are disabled.' });
+  }
+  const expectedToken = process.env.ADMIN_TOOLS_ACCESS_TOKEN;
+  if (expectedToken) {
+    const providedToken = req.headers['x-admin-tools-token'] as string;
+    if (providedToken !== expectedToken) {
+      return res.status(403).json({ success: false, error: 'Invalid or missing admin access token.' });
+    }
+  }
+
+  const targetFile = path.join(DATA_DIR, "global_rank_stats.json");
+  const backupDir = path.join(DATA_DIR, "backups");
+  let backupPath = '';
+
+  try {
+    // Re-scrape (never trust frontend payload)
+    const scrapeResult = await scrapeGlobalRank();
+
+    if (!scrapeResult.success) {
+      return res.status(500).json({
+        success: false,
+        error: 'Scrape failed: ' + (scrapeResult.errors?.join('; ') || 'unknown'),
+      });
+    }
+
+    const normFn = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    // Validation: count >= 120
+    if (scrapeResult.heroes.length < 120) {
+      return res.status(400).json({
+        success: false,
+        error: `Only ${scrapeResult.heroes.length} heroes scraped (minimum 120 required)`,
+      });
+    }
+
+    // Validation: no duplicate normalized names
+    const seenNorms = new Set<string>();
+    for (const h of scrapeResult.heroes) {
+      const n = normFn(h.hero_name);
+      if (seenNorms.has(n)) {
+        return res.status(400).json({
+          success: false,
+          error: `Duplicate hero detected: ${h.hero_name}`,
+        });
+      }
+      seenNorms.add(n);
+    }
+
+    // Validation: key heroes present
+    const keyHeroes = ['mathilda', 'yisunshin', 'valentina', 'luoyi', 'sun'];
+    const scrapedNorms = new Set(scrapeResult.heroes.map(h => normFn(h.hero_name)));
+    const missingKey = keyHeroes.filter(k => !scrapedNorms.has(k));
+    if (missingKey.length > 0) {
+      return res.status(400).json({
+        success: false,
+        error: `Key heroes missing: ${missingKey.join(', ')}`,
+      });
+    }
+
+    // Create backup
+    fs.mkdirSync(backupDir, { recursive: true });
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace('T', '_').slice(0, 19);
+    backupPath = path.join(backupDir, `global_rank_stats_${timestamp}.json`);
+    if (fs.existsSync(targetFile)) {
+      fs.copyFileSync(targetFile, backupPath);
+    }
+
+    // Calculate tier from win_rate
+    function calcTier(winRate: number): string {
+      if (winRate >= 54) return 'S+';
+      if (winRate >= 52) return 'S';
+      if (winRate >= 50) return 'A';
+      if (winRate >= 48) return 'B';
+      if (winRate >= 46) return 'C';
+      return 'D';
+    }
+
+    const heroesWithTier = scrapeResult.heroes.map(h => ({
+      ...h,
+      tier: calcTier(h.win_rate),
+    }));
+
+    const outputData = {
+      source: "moonton_rank",
+      source_url: "https://www.mobilelegends.com/rank",
+      source_updated_at: new Date().toISOString(),
+      time_range: "past_1_day",
+      rank_filter: "ALL",
+      heroes: heroesWithTier,
+    };
+
+    // Write via temp file + rename for atomicity
+    const tempFile = targetFile + '.tmp';
+    fs.writeFileSync(tempFile, JSON.stringify(outputData, null, 2), 'utf8');
+    fs.renameSync(tempFile, targetFile);
+
+    // Post-validate written file
+    const postWriteErrors: string[] = [];
+    try {
+      const written = JSON.parse(fs.readFileSync(targetFile, 'utf8'));
+      if (!written.heroes || written.heroes.length !== heroesWithTier.length) {
+        postWriteErrors.push('Post-write hero count mismatch');
+      }
+    } catch (e: any) {
+      postWriteErrors.push(`Post-write parse error: ${e.message}`);
+    }
+
+    if (postWriteErrors.length > 0) {
+      // Rollback
+      if (fs.existsSync(backupPath)) {
+        fs.copyFileSync(backupPath, targetFile);
+      }
+      return res.status(500).json({
+        success: false,
+        error: 'Post-write validation failed',
+        postWriteErrors,
+        rolledBack: true,
+      });
+    }
+
+    return res.json({
+      success: true,
+      count: heroesWithTier.length,
+      backupPath: path.relative(ROOT, backupPath),
+      updateTime: scrapeResult.updateTime || null,
+    });
+  } catch (error: any) {
+    // Rollback on failure
+    if (backupPath && fs.existsSync(backupPath) && fs.existsSync(targetFile)) {
+      try { fs.copyFileSync(backupPath, targetFile); } catch {}
+    }
+    console.error("[GlobalRank] Apply failed:", error.message);
+    return res.status(500).json({ success: false, error: error.message });
   }
 });
 
