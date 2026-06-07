@@ -1,248 +1,453 @@
-[
-  {
-    "name": "Assassin Emblem",
-    "slug": "assassin-emblem",
-    "iconUrl": "/raw-assets/aset_emblem/assassin_emblem.png",
-    "talents": [
-      {
-        "name": "Rupture",
-        "tier": 1,
-        "description": "Adaptive Penetration +6"
+{
+  "universalTalents": [
+    {
+      "name": "Agility",
+      "slug": "agility",
+      "tier": 1,
+      "tierLabel": "Attribute Bonus",
+      "description": "Gain 4% extra Movement Speed.",
+      "iconUrl": "/raw-assets/aset_talent/agility.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Fatal",
+      "slug": "fatal",
+      "tier": 1,
+      "tierLabel": "Attribute Bonus",
+      "description": "Gain 5% Crit Chance and 5% extra Crit Damage.",
+      "iconUrl": "/raw-assets/aset_talent/fatal.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Firmness",
+      "slug": "firmness",
+      "tier": 1,
+      "tierLabel": "Attribute Bonus",
+      "description": "Gain 8 extra Physical & Magic Defense.",
+      "iconUrl": "/raw-assets/aset_talent/firmness.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Inspire",
+      "slug": "inspire",
+      "tier": 1,
+      "tierLabel": "Attribute Bonus",
+      "description": "Cooldown Reduction is increased by 5% and Mana Regen by 2.",
+      "iconUrl": "/raw-assets/aset_talent/inspire_talent.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Rupture",
+      "slug": "rupture",
+      "tier": 1,
+      "tierLabel": "Attribute Bonus",
+      "description": "Gain 5 Adaptive Penetration. Gain Physical Penetration if extra Physical Attack is higher than extra Magic Power; otherwise, gain Magic Penetration.",
+      "iconUrl": "/raw-assets/aset_talent/rupture.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Swift",
+      "slug": "swift",
+      "tier": 1,
+      "tierLabel": "Attribute Bonus",
+      "description": "Gain 10% Extra Attack Speed.",
+      "iconUrl": "/raw-assets/aset_talent/swift.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Thrill",
+      "slug": "thrill",
+      "tier": 1,
+      "tierLabel": "Attribute Bonus",
+      "description": "Gain 16 Adaptive Attack.",
+      "iconUrl": "/raw-assets/aset_talent/thrill.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Vitality",
+      "slug": "vitality",
+      "tier": 1,
+      "tierLabel": "Attribute Bonus",
+      "description": "Gain 225 extra max HP.",
+      "iconUrl": "/raw-assets/aset_talent/vitality.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Bargain Hunter",
+      "slug": "bargain-hunter",
+      "tier": 2,
+      "tierLabel": "Triggered Ability",
+      "description": "Equipment can be purchased at 95% of their base price.",
+      "iconUrl": "/raw-assets/aset_talent/bargain_hunter.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Festival of Blood",
+      "slug": "festival-of-blood",
+      "tier": 2,
+      "tierLabel": "Triggered Ability",
+      "description": "Gain 6% Spell Vamp. Each hero kill or assist grants an additional 0.5% Spell Vamp, up to 12 stacks.",
+      "iconUrl": "/raw-assets/aset_talent/festival_of_blood.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Master Assassin",
+      "slug": "master-assassin",
+      "tier": 2,
+      "tierLabel": "Triggered Ability",
+      "description": "If there is only one enemy hero nearby, damage dealt to them is increased by 7%.",
+      "iconUrl": "/raw-assets/aset_talent/master_assassin.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Pull Yourself Together",
+      "slug": "pull-yourself-together",
+      "tier": 2,
+      "tierLabel": "Triggered Ability",
+      "description": "Cooldowns of Battle Spells and equipment's active skills are reduced by 12% initially. Each hero kill or assist grants an additional 1% reduction, up to 8 stacks.",
+      "iconUrl": "/raw-assets/aset_talent/pull_yourself_together.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Seasoned Hunter",
+      "slug": "seasoned-hunter",
+      "tier": 2,
+      "tierLabel": "Triggered Ability",
+      "description": "Damage against Lord and Turtle is increased by 15%. This bonus is halved against regular Creeps and doesn't affect the damage of Retribution.",
+      "iconUrl": "/raw-assets/aset_talent/seasoned_hunter.png",
+      "source": "MLBBHub (https://mlbbhub.com/emblems/common)",
+      "sourceUrl": "https://mlbbhub.com/emblems/common",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Tenacity",
+      "slug": "tenacity",
+      "tier": 2,
+      "tierLabel": "Triggered Ability",
+      "description": "When HP is below 50%, Damage Reduction is increased by 5%.",
+      "iconUrl": "/raw-assets/aset_talent/tenacity.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Weapon Master",
+      "slug": "weapon-master",
+      "tier": 2,
+      "tierLabel": "Triggered Ability",
+      "description": "Physical Attack and Magic Power gained from equipment, emblem, talents, and skills are increased by 8%.",
+      "iconUrl": "/raw-assets/aset_talent/weapon_master_talent.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Wilderness Blessing",
+      "slug": "wilderness-blessing",
+      "tier": 2,
+      "tierLabel": "Triggered Ability",
+      "description": "Movement Speed in the Jungle and River is increased by 10%. This bonus is halved when in combat with enemy heroes, Lord or Turtle.",
+      "iconUrl": "/raw-assets/aset_talent/wilderness_blessing.png",
+      "source": "MLBB Fandom Wiki (Patch Notes 1.8.20, 1.8.30)",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Brave Smite",
+      "slug": "brave-smite",
+      "tier": 3,
+      "tierLabel": "Core Talent",
+      "cooldown": 6,
+      "description": "Dealing skill damage to an enemy hero recovers 5% Max HP.",
+      "iconUrl": "/raw-assets/aset_talent/brave_smite.png",
+      "source": "MLBB Fandom Wiki (Patch Notes 1.8.78)",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Concussive Blast",
+      "slug": "concussive-blast",
+      "tier": 3,
+      "tierLabel": "Core Talent",
+      "cooldown": 15,
+      "description": "After the next Basic Attack, deal 100(+7% Total HP) Magic Damage to nearby enemies.",
+      "iconUrl": "/raw-assets/aset_talent/concussive_blast.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Focusing Mark",
+      "slug": "focusing-mark",
+      "tier": 3,
+      "tierLabel": "Core Talent",
+      "cooldown": 4,
+      "description": "After damaging an enemy hero, allied heroes deal 6% more damage to them and gain 10% Movement Speed. Duration: 3 seconds.",
+      "iconUrl": "/raw-assets/aset_talent/focusing_mark.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Impure Rage",
+      "slug": "impure-rage",
+      "tier": 3,
+      "tierLabel": "Core Talent",
+      "cooldown": 5,
+      "description": "Dealing damage with skills deals 4% of target's Max HP extra Adaptive Damage and restores 2% Mana on hit. If the hero does not use Mana, restores 1% HP instead. Extra Adaptive Damage to non-hero units is up to 120.",
+      "iconUrl": "/raw-assets/aset_talent/impure_rage.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Killing Spree",
+      "slug": "killing-spree",
+      "tier": 3,
+      "tierLabel": "Core Talent",
+      "cooldown": 30,
+      "description": "When damaging heroes below 30% HP, instantly recover 15% of Lost HP and gains 20% Movement Speed. Additional Effect: Reset cooldown upon killing an enemy hero. Duration: 3 seconds.",
+      "iconUrl": "/raw-assets/aset_talent/killing_spree.png",
+      "source": "MLBB Fandom Wiki (Patch Notes 1.8.78)",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Lethal Ignition",
+      "slug": "lethal-ignition",
+      "tier": 3,
+      "tierLabel": "Core Talent",
+      "cooldown": 15,
+      "description": "Dealing damage greater than 7% of an enemy hero's Max HP 3 times within 5s will scorch the target for an additional 162-750 Adaptive Damage (scales with level).",
+      "iconUrl": "/raw-assets/aset_talent/lethal_ignition.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Quantum Charge",
+      "slug": "quantum-charge",
+      "tier": 3,
+      "tierLabel": "Core Talent",
+      "cooldown": 10,
+      "description": "Dealing damage with Basic Attacks increases Movement Speed by 30% for 1.5s and restores 75-180 HP (scales with level).",
+      "iconUrl": "/raw-assets/aset_talent/quantum_charge.png",
+      "source": "MLBB Fandom Wiki",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Temporal Reign",
+      "slug": "temporal-reign",
+      "tier": 3,
+      "tierLabel": "Core Talent",
+      "cooldown": 20,
+      "description": null,
+      "iconUrl": "/raw-assets/aset_talent/temporal_reign.png",
+      "source": "MLBB Fandom Wiki (Patch Notes 1.8.92)",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "partial",
+      "dataQualityNote": "Wiki description is identical to War Cry (copy-paste error). Cooldown 20s verified from in-game screenshot."
+    },
+    {
+      "name": "War Cry",
+      "slug": "war-cry",
+      "tier": 3,
+      "tierLabel": "Core Talent",
+      "cooldown": 6,
+      "description": "After every 3 separate Basic Attacks or skill hits on an enemy hero, all damage dealt increases by 8% for 6s. A single Basic Attack or skill that deals multiple hits only counts as 1.",
+      "iconUrl": "/raw-assets/aset_talent/war_cry.png",
+      "source": "MLBBHub (https://mlbbhub.com/emblems/common)",
+      "sourceUrl": "https://mlbbhub.com/emblems/common",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Weakness Finder",
+      "slug": "weakness-finder",
+      "tier": 3,
+      "tierLabel": "Core Talent",
+      "cooldown": 10,
+      "description": "Basic Attacks slow enemies by 50% and reduce their Attack Speed by 30%. Duration: 1 second. Each Basic Attack reduces cooldown by 1 second, down to 3 seconds.",
+      "iconUrl": "/raw-assets/aset_talent/weakness_finder.png",
+      "source": "MLBB Fandom Wiki (Patch Notes 1.8.78)",
+      "sourceUrl": "https://mobile-legends.fandom.com/wiki/Emblems",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "dataQuality": "verified"
+    }
+  ],
+  "emblems": [
+    {
+      "name": "Basic Common",
+      "slug": "basic-common",
+      "type": "COMMON",
+      "iconUrl": "/raw-assets/aset_emblem/basic_common_emblem.png",
+      "attributes": {
+        "hybridRegen": "+12",
+        "hp": "+275",
+        "adaptiveAttack": "+22"
       },
-      {
-        "name": "Master Assassin",
-        "tier": 1,
-        "description": "When alone, damage dealt increased by 7%"
+      "recommendedTalents": ["Thrill", "Swift", "Wilderness Blessing", "Seasoned Hunter", "Impure Rage", "Quantum Charge", "War Cry", "Temporal Reign"],
+      "talentBreakdown": {
+        "standard": ["Thrill", "Swift", "Wilderness Blessing", "Seasoned Hunter"],
+        "core": ["Impure Rage", "Quantum Charge", "War Cry", "Temporal Reign"]
       },
-      {
-        "name": "Seasoned Hunter",
-        "tier": 2,
-        "description": "Damage to Lord and Turtle +15%"
+      "source": "MLBBHub (https://mlbbhub.com/emblems/common)",
+      "sourceUrl": "https://mlbbhub.com/emblems/common",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "recommendationQuality": "confirmed",
+      "recommendationNote": "Verified from MLBBHub. 4 standard + 4 core = 8 total. Widest talent pool in the game.",
+      "dataQuality": "verified"
+    },
+    {
+      "name": "Tank",
+      "slug": "tank",
+      "type": "TANK",
+      "iconUrl": "/raw-assets/aset_emblem/tank_emblem.png",
+      "attributes": {
+        "hp": "+500",
+        "hybridDefense": "+10",
+        "hpRegen": "+4"
       },
-      {
-        "name": "Lethal Ignition",
-        "tier": 2,
-        "description": "Dealing damage > 7% of enemy max HP 3 times in 5s deals adaptive damage equal to 16% of their max HP"
+      "recommendedTalents": ["Vitality", "Tenacity", "Concussive Blast"],
+      "source": "MLBB Fandom Wiki + MLBBHub",
+      "sourceUrl": "https://mlbbhub.com/emblems/tank",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "recommendationQuality": "confirmed",
+      "recommendationNote": "Verified from MLBB Fandom Wiki and MLBBHub. 2 standard + 1 core."
+    },
+    {
+      "name": "Assassin",
+      "slug": "assassin",
+      "type": "ASSASSIN",
+      "iconUrl": "/raw-assets/aset_emblem/assassin_emblem.png",
+      "attributes": {
+        "adaptivePenetration": "+14",
+        "adaptiveAttack": "+10",
+        "movementSpeed": "+3%"
       },
-      {
-        "name": "Killing Spree",
-        "tier": 3,
-        "description": "After a kill, restore 12% HP and gain 15% Movement Speed for 5s"
+      "recommendedTalents": ["Rupture", "Master Assassin", "Killing Spree"],
+      "source": "MLBB Fandom Wiki + MLBBHub",
+      "sourceUrl": "https://mlbbhub.com/emblems/assassin",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "recommendationQuality": "confirmed",
+      "recommendationNote": "Verified from MLBB Fandom Wiki and MLBBHub. 2 standard + 1 core."
+    },
+    {
+      "name": "Mage",
+      "slug": "mage",
+      "type": "MAGE",
+      "iconUrl": "/raw-assets/aset_emblem/mage_emblem.png",
+      "attributes": {
+        "magicPower": "+30",
+        "cooldownReduction": "+5%",
+        "magicPenetration": "+8"
       },
-      {
-        "name": "Brave Smite",
-        "tier": 3,
-        "description": "Dealing skill damage heals 5% of Max HP. CD: 6s"
-      }
-    ],
-    "source": "liquipedia",
-    "sourceUrl": "https://liquipedia.net/mobilelegends/Emblem_System",
-    "sourceUpdatedAt": "2026-06-07T03:24:28.406Z",
-    "dataQuality": "complete"
-  },
-  {
-    "name": "Fighter Emblem",
-    "slug": "fighter-emblem",
-    "iconUrl": "/raw-assets/aset_emblem/fighter_emblem.png",
-    "talents": [
-      {
-        "name": "Firmness",
-        "tier": 1,
-        "description": "Physical and Magic Defense +6"
+      "recommendedTalents": ["Inspire", "Bargain Hunter", "Lethal Ignition"],
+      "source": "MLBB Fandom Wiki + MLBBHub",
+      "sourceUrl": "https://mlbbhub.com/emblems/mage",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "recommendationQuality": "confirmed",
+      "recommendationNote": "Verified from MLBB Fandom Wiki and MLBBHub. 2 standard + 1 core."
+    },
+    {
+      "name": "Fighter",
+      "slug": "fighter",
+      "type": "FIGHTER",
+      "iconUrl": "/raw-assets/aset_emblem/fighter_emblem.png",
+      "attributes": {
+        "hybridLifesteal": "+10%",
+        "adaptiveAttack": "+16",
+        "hybridDefense": "+8"
       },
-      {
-        "name": "Unbending Will",
-        "tier": 1,
-        "description": "Damage increased by 3% when HP below 50%"
+      "recommendedTalents": ["Firmness", "Festival of Blood", "Brave Smite"],
+      "source": "MLBB Fandom Wiki + MLBBHub",
+      "sourceUrl": "https://mlbbhub.com/emblems/fighter",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "recommendationQuality": "confirmed",
+      "recommendationNote": "Verified from MLBB Fandom Wiki and MLBBHub. 2 standard + 1 core."
+    },
+    {
+      "name": "Support",
+      "slug": "support",
+      "type": "SUPPORT",
+      "iconUrl": "/raw-assets/aset_emblem/support_emblem.png",
+      "attributes": {
+        "healingEffect": "+12%",
+        "cooldownReduction": "+10%",
+        "movementSpeed": "+6%"
       },
-      {
-        "name": "Festival of Blood",
-        "tier": 2,
-        "description": "Skill damage grants 6% Spell Vamp"
+      "recommendedTalents": ["Agility", "Pull Yourself Together", "Focusing Mark"],
+      "source": "MLBB Fandom Wiki + MLBBHub",
+      "sourceUrl": "https://mlbbhub.com/emblems/support",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "recommendationQuality": "confirmed",
+      "recommendationNote": "Verified from MLBB Fandom Wiki and MLBBHub. 2 standard + 1 core."
+    },
+    {
+      "name": "Marksman",
+      "slug": "marksman",
+      "type": "MARKSMAN",
+      "iconUrl": "/raw-assets/aset_emblem/marksman_emblem.png",
+      "attributes": {
+        "attackSpeed": "+15%",
+        "adaptiveAttack": "+16",
+        "adaptivePenetration": "+10%"
       },
-      {
-        "name": "Disabling Strike",
-        "tier": 2,
-        "description": "After hitting enemy with skill, reduces Movement Speed by 30% for 1s"
-      },
-      {
-        "name": "War Axe",
-        "tier": 3,
-        "description": "Dealing damage grants 9 Physical Attack and 3 Adaptive Pen per stack (max 8)"
-      },
-      {
-        "name": "Quantum Charge",
-        "tier": 3,
-        "description": "Dealing Basic Attack damage restores 60 HP and grants 30% Movement Speed for 1.5s. CD: 8s"
-      }
-    ],
-    "source": "liquipedia",
-    "sourceUrl": "https://liquipedia.net/mobilelegends/Emblem_System",
-    "sourceUpdatedAt": "2026-06-07T03:24:28.408Z",
-    "dataQuality": "complete"
-  },
-  {
-    "name": "Mage Emblem",
-    "slug": "mage-emblem",
-    "iconUrl": "/raw-assets/aset_emblem/mage_emblem.png",
-    "talents": [
-      {
-        "name": "Inspire",
-        "tier": 1,
-        "description": "Cooldown Reduction +5%"
-      },
-      {
-        "name": "Wilderness Blessing",
-        "tier": 1,
-        "description": "Movement Speed in jungle +10%"
-      },
-      {
-        "name": "Bargain Hunter",
-        "tier": 2,
-        "description": "Equipment price reduced by 90 gold total"
-      },
-      {
-        "name": "Lethal Ignition",
-        "tier": 2,
-        "description": "Dealing damage > 7% of enemy max HP 3 times in 5s deals adaptive damage equal to 16% of their max HP"
-      },
-      {
-        "name": "Magic Worship",
-        "tier": 3,
-        "description": "Dealing damage > 7% of max HP burns target for 3s, dealing 82-250 Magic Damage total"
-      },
-      {
-        "name": "Impure Rage",
-        "tier": 3,
-        "description": "Skills deal extra 4% target max HP as Magic Damage and restore 3% Mana. CD: 5s"
-      }
-    ],
-    "source": "liquipedia",
-    "sourceUrl": "https://liquipedia.net/mobilelegends/Emblem_System",
-    "sourceUpdatedAt": "2026-06-07T03:24:28.409Z",
-    "dataQuality": "complete"
-  },
-  {
-    "name": "Marksman Emblem",
-    "slug": "marksman-emblem",
-    "iconUrl": "/raw-assets/aset_emblem/marksman_emblem.png",
-    "talents": [
-      {
-        "name": "Swift",
-        "tier": 1,
-        "description": "Attack Speed +10%"
-      },
-      {
-        "name": "Greed",
-        "tier": 1,
-        "description": "Extra 25% gold from killing non-hero units"
-      },
-      {
-        "name": "Weapons Master",
-        "tier": 2,
-        "description": "Physical Attack from equipment +5%"
-      },
-      {
-        "name": "Electro Flash",
-        "tier": 2,
-        "description": "After dealing damage with Basic Attack, deals 50 + 20% bonus Physical ATK to up to 3 targets"
-      },
-      {
-        "name": "Weakness Finder",
-        "tier": 3,
-        "description": "Basic Attacks slow enemies by 90% for 0.8s and reduce Attack Speed by 50%. CD: 3.5s"
-      },
-      {
-        "name": "Quantum Charge",
-        "tier": 3,
-        "description": "Dealing Basic Attack damage restores 60 HP and grants 30% Movement Speed for 1.5s. CD: 8s"
-      }
-    ],
-    "source": "liquipedia",
-    "sourceUrl": "https://liquipedia.net/mobilelegends/Emblem_System",
-    "sourceUpdatedAt": "2026-06-07T03:24:28.409Z",
-    "dataQuality": "complete"
-  },
-  {
-    "name": "Tank Emblem",
-    "slug": "tank-emblem",
-    "iconUrl": "/raw-assets/aset_emblem/tank_emblem.png",
-    "talents": [
-      {
-        "name": "Vitality",
-        "tier": 1,
-        "description": "HP +280"
-      },
-      {
-        "name": "Tenacity",
-        "tier": 1,
-        "description": "When HP below 50%, Physical and Magic Defense +15"
-      },
-      {
-        "name": "Concussive Blast",
-        "tier": 2,
-        "description": "After Basic Attack, deals 100 + 4% Max HP as Magic Damage to nearby enemies. CD: 12s"
-      },
-      {
-        "name": "Pulling Power",
-        "tier": 2,
-        "description": "After using skill, pull nearest enemy slightly. CD: 12s"
-      },
-      {
-        "name": "Cursed Helmet",
-        "tier": 3,
-        "description": "Deals 1.2% Max HP as Magic Damage per second to nearby enemies"
-      },
-      {
-        "name": "Brave Smite",
-        "tier": 3,
-        "description": "Dealing skill damage heals 5% of Max HP. CD: 6s"
-      }
-    ],
-    "source": "liquipedia",
-    "sourceUrl": "https://liquipedia.net/mobilelegends/Emblem_System",
-    "sourceUpdatedAt": "2026-06-07T03:24:28.409Z",
-    "dataQuality": "complete"
-  },
-  {
-    "name": "Support Emblem",
-    "slug": "support-emblem",
-    "iconUrl": "/raw-assets/aset_emblem/support_emblem.png",
-    "talents": [
-      {
-        "name": "Agility",
-        "tier": 1,
-        "description": "Movement Speed +6%"
-      },
-      {
-        "name": "Recovery",
-        "tier": 1,
-        "description": "HP Regen + Heal Effect +10%"
-      },
-      {
-        "name": "Pull Yourself Together",
-        "tier": 2,
-        "description": "Reduces Battle Spell and equipment Active CD by 15%"
-      },
-      {
-        "name": "Avarice",
-        "tier": 2,
-        "description": "Gain extra 9 gold every 4s when near ally. Max bonus: 1000 gold"
-      },
-      {
-        "name": "Focusing Mark",
-        "tier": 3,
-        "description": "After hitting enemy, ally Basic Attacks deal extra 6% damage to them for 3s"
-      },
-      {
-        "name": "Brave Smite",
-        "tier": 3,
-        "description": "Dealing skill damage heals 5% of Max HP. CD: 6s"
-      }
-    ],
-    "source": "liquipedia",
-    "sourceUrl": "https://liquipedia.net/mobilelegends/Emblem_System",
-    "sourceUpdatedAt": "2026-06-07T03:24:28.409Z",
-    "dataQuality": "complete"
-  }
-]
+      "recommendedTalents": ["Fatal", "Weapon Master", "Weakness Finder"],
+      "source": "MLBB Fandom Wiki + MLBBHub",
+      "sourceUrl": "https://mlbbhub.com/emblems/marksman",
+      "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
+      "recommendationQuality": "confirmed",
+      "recommendationNote": "Verified from MLBB Fandom Wiki and MLBBHub. 2 standard + 1 core."
+    }
+  ]
+}

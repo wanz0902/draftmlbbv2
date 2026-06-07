@@ -62,15 +62,15 @@ const KNOWN_SPELLS: Array<{ name: string; cooldown: number; effect: string; unlo
   { name: 'Flicker', cooldown: 120, effect: 'Teleport a short distance in a designated direction. Gains 5 (+1 per level) Physical and Magic Defense for 1s after teleporting.', unlockLevel: 1 },
   { name: 'Retribution', cooldown: 35, effect: 'Deals 480-1260 True Damage to the targeted jungle monster or minion. Grants Jungling equipment effects.', unlockLevel: 1 },
   { name: 'Execute', cooldown: 90, effect: 'Deals 200-520 (+25% lost HP) True Damage to target enemy hero. Damage scales with enemy missing HP.', unlockLevel: 1 },
-  { name: 'Inspire', cooldown: 75, effect: 'Gain 55% Attack Speed for 5s. Basic Attacks ignore 8 Physical Defense of the target during the duration.', unlockLevel: 1 },
+  { name: 'Inspire', cooldown: 75, effect: 'Gain 55% Attack Speed for 5s. Basic Attacks ignore 8 Physical Defense of the target during the duration.', unlockLevel: 5 },
   { name: 'Sprint', cooldown: 100, effect: 'Increases Movement Speed by 42% for 6s. Slowly decays over the duration. Immune to slow effects for 2s.', unlockLevel: 1 },
-  { name: 'Flameshot', cooldown: 55, effect: 'Fires a flaming shot in designated direction, dealing 160-640 Magic Damage and knocking enemies back. Damage increases with distance.', unlockLevel: 1 },
-  { name: 'Aegis', cooldown: 75, effect: 'Generates a shield that absorbs 750-1500 damage for 3s. Nearby allies receive 50% of the shield.', unlockLevel: 1 },
-  { name: 'Petrify', cooldown: 75, effect: 'Deals 100-250 Magic Damage to surrounding enemies and petrifies them for 0.8s.', unlockLevel: 1 },
-  { name: 'Purify', cooldown: 90, effect: 'Immediately removes all negative effects and gains Control Immunity and 15% Movement Speed for 1.2s.', unlockLevel: 1 },
-  { name: 'Revitalize', cooldown: 75, effect: 'Creates a Healing Spring around you for 4s. Allies in the area continuously recover HP (total 400-800 HP) and gain 25% increased healing.', unlockLevel: 1 },
-  { name: 'Vengeance', cooldown: 75, effect: 'Gain 25% Damage Reduction for 3s. Deals 40-120 + 20% Magic Damage back to attackers.', unlockLevel: 1 },
-  { name: 'Arrival', cooldown: 75, effect: 'Channels for 3s then teleports to allied turret or minion. Gains 60% extra Movement Speed for 3s upon arrival. Can be interrupted.', unlockLevel: 1 },
+  { name: 'Flameshot', cooldown: 55, effect: 'Fires a flaming shot in designated direction, dealing 160-640 Magic Damage and knocking enemies back. Damage increases with distance.', unlockLevel: 10 },
+  { name: 'Aegis', cooldown: 75, effect: 'Generates a shield that absorbs 750-1500 damage for 3s. Nearby allies receive 50% of the shield.', unlockLevel: 10 },
+  { name: 'Petrify', cooldown: 75, effect: 'Deals 100-250 Magic Damage to surrounding enemies and petrifies them for 0.8s.', unlockLevel: 15 },
+  { name: 'Purify', cooldown: 90, effect: 'Immediately removes all negative effects and gains Control Immunity and 15% Movement Speed for 1.2s.', unlockLevel: 15 },
+  { name: 'Revitalize', cooldown: 75, effect: 'Creates a Healing Spring around you for 4s. Allies in the area continuously recover HP (total 400-800 HP) and gain 25% increased healing.', unlockLevel: 20 },
+  { name: 'Vengeance', cooldown: 75, effect: 'Gain 25% Damage Reduction for 3s. Deals 40-120 + 20% Magic Damage back to attackers.', unlockLevel: 20 },
+  { name: 'Arrival', cooldown: 75, effect: 'Channels for 3s then teleports to allied turret or minion. Gains 60% extra Movement Speed for 3s upon arrival. Can be interrupted.', unlockLevel: 25 },
 ];
 
 function parseBattleSpellsFromHtml(html: string): BattleSpell[] {
