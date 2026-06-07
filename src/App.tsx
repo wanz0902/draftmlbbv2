@@ -132,7 +132,7 @@ export default function App() {
       />
 
       {/* Main Container */}
-      <main className="flex-1 mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:py-8">
+      <main className={`flex-1 w-full ${currentTab === "home" ? "" : "mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:py-8"}`}>
         {loading ? (
           /* High-end loading template */
           <div className="flex h-[60vh] flex-col items-center justify-center text-center gap-4 animate-pulse">
@@ -154,7 +154,7 @@ export default function App() {
         ) : (
           /* Dynamic Component Rendering based on tab */
           <div className="animate-fade-in">
-            {currentTab !== "home" && (
+            {currentTab !== "home" && currentTab !== "draft" && (
               <div className="mb-5 flex items-center justify-between gap-3">
                 <button
                   onClick={() => handleTabChange("home")}
@@ -202,7 +202,7 @@ export default function App() {
               />
             )}
 
-            {currentTab === "items" && <DataCatalog items={items} />}
+            {currentTab === "items" && <DataCatalog items={items} heroAssets={heroAssets} heroes={heroes} />}
 
             {currentTab === "admin" && <AdminTools />}
           </div>

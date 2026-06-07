@@ -1,21 +1,20 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowRight,
   ArrowUp,
   BarChart3,
   BrainCircuit,
-  CheckCircle2,
   CloudLightning,
   Database,
-  GitBranch,
-  ShieldAlert,
-  Sparkles,
+  Shield,
   Swords,
   Target,
   Trophy,
   Users,
   Zap,
   ChevronRight,
+  Eye,
+  TrendingUp,
 } from "lucide-react";
 import { getHeroImageUrl } from "../lib/heroUtils";
 
@@ -42,168 +41,91 @@ interface AssetsResponse {
   heroes?: Record<string, string>;
 }
 
-const previewCards = [
-  {
-    id: "draft",
-    title: "Draft Simulator",
-    badge: "Realtime Coach",
-    accent: "from-cyan-500/25 via-blue-500/10 to-transparent",
-    icon: CloudLightning,
-    points: [
-      "Real-time pick/ban analysis",
-      "Role & lane balance",
-      "Counter warning",
-    ],
-    statLabel: "Draft Engine",
-    statValue: "Live",
-    button: "Open Draft",
-  },
-  {
-    id: "intelligence",
-    title: "Hero Intelligence",
-    badge: "Micro + Macro",
-    accent: "from-violet-500/25 via-fuchsia-500/10 to-transparent",
-    icon: BrainCircuit,
-    points: [
-      "Skill data & mechanic category",
-      "Counter & synergy tags",
-      "Power spike reading",
-    ],
-    statLabel: "Hero Layer",
-    statValue: "Deep",
-    button: "Explore Heroes",
-  },
-  {
-    id: "teams",
-    title: "Team Analytics",
-    badge: "MPL History",
-    accent: "from-rose-500/25 via-red-500/10 to-transparent",
-    icon: Users,
-    points: [
-      "MPL match history",
-      "Comfort hero tracking",
-      "Draft tendency profile",
-    ],
-    statLabel: "Team Reads",
-    statValue: "Ready",
-    button: "Analyze Teams",
-  },
-];
+function AnimatedCounter({ target, duration = 2000 }: { target: number; duration?: number }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const started = useRef(false);
 
-const featureHighlights = [
-  {
-    id: "heroes",
-    icon: Swords,
-    title: "Hero Matchups",
-    text: "Lihat pressure point lineup lawan sebelum mereka menutup draft.",
-    badge: "Matchup Read",
-    glow: "shadow-[0_24px_60px_-30px_rgba(34,211,238,0.55)]",
-  },
-  {
-    id: "teams",
-    icon: Database,
-    title: "MPL Match History",
-    text: "Riwayat series, game, comfort hero, dan pattern tim disusun jadi insight.",
-    badge: "Historical Layer",
-    glow: "shadow-[0_24px_60px_-30px_rgba(99,102,241,0.55)]",
-  },
-  {
-    id: "heroes",
-    icon: Zap,
-    title: "Hero Skill Database",
-    text: "Skill, role, power spike, lane, dan kecenderungan mekanik dalam satu panel.",
-    badge: "Hero Intel",
-    glow: "shadow-[0_24px_60px_-30px_rgba(168,85,247,0.55)]",
-  },
-  {
-    id: "draft",
-    icon: ShieldAlert,
-    title: "AI Draft Analysis",
-    text: "AI hanya menjelaskan evidence dari engine lokal agar keputusan tetap terukur.",
-    badge: "Coach Layer",
-    glow: "shadow-[0_24px_60px_-30px_rgba(244,63,94,0.45)]",
-  },
-];
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started.current) {
+          started.current = true;
+          const start = performance.now();
+          const animate = (now: number) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setCount(Math.floor(eased * target));
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+          requestAnimationFrame(animate);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [target, duration]);
 
-const howItWorks = [
-  {
-    step: "01",
-    title: "Pilih Mode",
-    text: "Masuk ke Ranked, MPL, atau custom draft flow sesuai kebutuhan scrim dan prep match.",
-    icon: Target,
-  },
-  {
-    step: "02",
-    title: "Bangun Draft",
-    text: "Pick/ban hero, pilih tim, lalu lihat lane balance, comfort overlap, dan warning.",
-    icon: GitBranch,
-  },
-  {
-    step: "03",
-    title: "Baca Analisis",
-    text: "Sistem menjelaskan counter, synergy, power spike, dan risk dengan evidence lokal.",
-    icon: Sparkles,
-  },
-];
+  return <div ref={ref}>{count}</div>;
+}
+
+function GlowCard({ children, className = "", glow = "cyan" }: { children: React.ReactNode; className?: string; glow?: string }) {
+  const glowColors: Record<string, string> = {
+    cyan: "hover:shadow-[0_0_60px_-12px_rgba(34,211,238,0.3)] hover:border-cyan-500/30",
+    violet: "hover:shadow-[0_0_60px_-12px_rgba(139,92,246,0.3)] hover:border-violet-500/30",
+    amber: "hover:shadow-[0_0_60px_-12px_rgba(245,158,11,0.3)] hover:border-amber-500/30",
+    rose: "hover:shadow-[0_0_60px_-12px_rgba(244,63,94,0.3)] hover:border-rose-500/30",
+  };
+  return (
+    <div className={`relative overflow-hidden rounded-2xl border border-white/[0.06] bg-[#080e1a]/90 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 ${glowColors[glow] || glowColors.cyan} ${className}`}>
+      {children}
+    </div>
+  );
+}
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-cyan-400">
+      {children}
+    </div>
+  );
+}
 
 export default function LandingPage({ onChangeTab, heroesCount }: LandingPageProps) {
   const [matchCenter, setMatchCenter] = useState<MatchCenterResponse | null>(null);
   const [teamAssets, setTeamAssets] = useState<Record<string, string>>({});
   const [heroAssets, setHeroAssets] = useState<Record<string, string>>({});
   const [showScrollBtn, setShowScrollBtn] = useState(false);
+  const [hoveredFeature, setHoveredFeature] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
-
     const loadData = async () => {
       try {
-        const [matchCenterRes, assetsRes] = await Promise.all([
+        const [mcRes, assetsRes] = await Promise.all([
           fetch("/api/mpl/match-center"),
           fetch("/api/assets"),
         ]);
-
-        const matchCenterJson = matchCenterRes.ok ? await matchCenterRes.json() : null;
-        const assetsJson = assetsRes.ok ? ((await assetsRes.json()) as AssetsResponse) : null;
-
+        const mc = mcRes.ok ? await mcRes.json() : null;
+        const assets = assetsRes.ok ? ((await assetsRes.json()) as AssetsResponse) : null;
         if (!active) return;
-
-        if (matchCenterJson) {
-          setMatchCenter({
-            totalSeries: matchCenterJson.totalSeries || 72,
-            totalGames: matchCenterJson.totalGames || 174,
-            standings: Array.isArray(matchCenterJson.standings)
-              ? matchCenterJson.standings.slice(0, 5)
-              : [],
-          });
-        }
-
-        if (assetsJson?.teams) {
-          setTeamAssets(assetsJson.teams);
-        }
-        if (assetsJson?.heroes) {
-          setHeroAssets(assetsJson.heroes);
-        }
-      } catch (error) {
+        if (mc) setMatchCenter({ totalSeries: mc.totalSeries || 72, totalGames: mc.totalGames || 174, standings: Array.isArray(mc.standings) ? mc.standings.slice(0, 5) : [] });
+        if (assets?.teams) setTeamAssets(assets.teams);
+        if (assets?.heroes) setHeroAssets(assets.heroes);
+      } catch {
         if (!active) return;
-        setMatchCenter({
-          totalSeries: 72,
-          totalGames: 174,
-          standings: [
-            { team: "ONIC", wins: 13, losses: 3, winrate: 81 },
-            { team: "TLID", wins: 10, losses: 6, winrate: 63 },
-            { team: "DEWA", wins: 9, losses: 7, winrate: 56 },
-            { team: "BTR", wins: 9, losses: 7, winrate: 56 },
-            { team: "EVOS", wins: 8, losses: 8, winrate: 50 },
-          ],
-        });
+        setMatchCenter({ totalSeries: 72, totalGames: 174, standings: [
+          { team: "ONIC", wins: 13, losses: 3, winrate: 81 },
+          { team: "TLID", wins: 10, losses: 6, winrate: 63 },
+          { team: "DEWA", wins: 9, losses: 7, winrate: 56 },
+          { team: "BTR", wins: 9, losses: 7, winrate: 56 },
+          { team: "EVOS", wins: 8, losses: 8, winrate: 50 },
+        ]});
       }
     };
-
     loadData();
-
-    return () => {
-      active = false;
-    };
+    return () => { active = false; };
   }, []);
 
   useEffect(() => {
@@ -212,488 +134,334 @@ export default function LandingPage({ onChangeTab, heroesCount }: LandingPagePro
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const liveStats = useMemo(() => [
+    { icon: Swords, label: "Heroes", value: heroesCount || 132, color: "text-cyan-400" },
+    { icon: Database, label: "Series", value: matchCenter?.totalSeries || 72, color: "text-violet-400" },
+    { icon: BarChart3, label: "Games", value: matchCenter?.totalGames || 174, color: "text-amber-400" },
+    { icon: Users, label: "Teams", value: 9, color: "text-emerald-400" },
+  ], [heroesCount, matchCenter]);
 
-  const dataLayer = useMemo(
-    () => [
-      { label: "Heroes", value: heroesCount || 132 },
-      { label: "Series", value: matchCenter?.totalSeries || 72 },
-      { label: "Games", value: matchCenter?.totalGames || 174 },
-      { label: "Teams", value: 9 },
-      { label: "Weeks", value: "1-9" },
-      { label: "Draft Logs", value: "Pick/Ban" },
-    ],
-    [heroesCount, matchCenter]
-  );
-
-  const topPresence = [
-    { hero: "Zhuxin", presence: "Priority Mid", accent: "bg-cyan-500/15 text-cyan-300 border-cyan-500/30" },
-    { hero: "Harith", presence: "Flexible Tempo", accent: "bg-violet-500/15 text-violet-300 border-violet-500/30" },
-    { hero: "Fanny", presence: "High Ban Pressure", accent: "bg-rose-500/15 text-rose-300 border-rose-500/30" },
+  const features = [
+    { id: "draft", icon: CloudLightning, title: "Draft Simulator", desc: "Real-time pick/ban analysis dengan counter warning dan lane balance.", color: "cyan", badge: "LIVE ENGINE" },
+    { id: "intelligence", icon: BrainCircuit, title: "Hero Intelligence", desc: "Deep dive skill, counter, synergy, power spike setiap hero.", color: "violet", badge: "DEEP DATA" },
+    { id: "tier", icon: TrendingUp, title: "Tier List", desc: "Meta snapshot berdasarkan data MPL terbaru.", color: "amber", badge: "META READ" },
+    { id: "heroes", icon: Eye, title: "Hero Stats", desc: "Winrate, pick rate, ban rate, presence dari semua hero.", color: "rose", badge: "ANALYTICS" },
+    { id: "teams", icon: Users, title: "Team Analytics", desc: "MPL match history, comfort hero, draft tendency per tim.", color: "cyan", badge: "MPL HISTORY" },
+    { id: "items", icon: Shield, title: "Data Catalog", desc: "Item, emblem, battle spell — semua data terstruktur.", color: "violet", badge: "CATALOG" },
   ];
 
+  const topPresence = [
+    { hero: "Zhuxin", tag: "Priority Mid", color: "cyan" },
+    { hero: "Harith", tag: "Flexible Tempo", color: "violet" },
+    { hero: "Fanny", tag: "High Ban Pressure", color: "rose" },
+    { hero: "Fredrinn", tag: "Tank Core", color: "amber" },
+    { hero: "Mathilda", tag: "Roam Meta", color: "emerald" },
+  ];
+
+  const colorMap: Record<string, string> = {
+    cyan: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
+    violet: "text-violet-400 bg-violet-500/10 border-violet-500/20",
+    amber: "text-amber-400 bg-amber-500/10 border-amber-500/20",
+    rose: "text-rose-400 bg-rose-500/10 border-rose-500/20",
+    emerald: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+  };
+
   return (
-    <div className="relative overflow-x-clip overflow-y-visible pb-20 text-white page-enter">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-cyan-500/8 blur-[160px]" />
-        <div className="absolute top-[18%] right-[8%] h-[24rem] w-[24rem] rounded-full bg-fuchsia-500/8 blur-[150px]" />
-        <div className="absolute bottom-0 left-[4%] h-[22rem] w-[22rem] rounded-full bg-rose-500/8 blur-[150px]" />
-        <div
-          className="absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
-            backgroundSize: "120px 120px",
-            maskImage: "radial-gradient(circle at center, black 35%, transparent 90%)",
-          }}
-        />
+    <div className="relative overflow-x-clip pb-20">
+      {/* Background effects */}
+      <div className="pointer-events-none fixed inset-0 z-0">
+        <div className="absolute -top-32 left-1/2 h-[50rem] w-[50rem] -translate-x-1/2 rounded-full bg-cyan-500/[0.07] blur-[180px]" />
+        <div className="absolute top-[30%] right-[5%] h-[35rem] w-[35rem] rounded-full bg-violet-500/[0.05] blur-[160px]" />
+        <div className="absolute bottom-[10%] left-[10%] h-[30rem] w-[30rem] rounded-full bg-rose-500/[0.04] blur-[160px]" />
       </div>
 
-      <section className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-8 sm:px-6 lg:grid-cols-[1.15fr_0.95fr] lg:items-center lg:gap-14 lg:px-8 lg:pt-12">
-        <div className="relative z-10 max-w-3xl">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-400/10 px-4 py-2 font-mono text-[11px] font-semibold uppercase tracking-[0.26em] text-cyan-300 shadow-[0_0_40px_-24px_rgba(34,211,238,0.8)]">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-300/70" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-cyan-300" />
-            </span>
-            MLBB Draft Analyst Desk
-          </div>
+      {/* ═══ SECTION 1: HERO — Full viewport ═══ */}
+      <section className="relative z-10 mx-auto flex min-h-[85vh] max-w-7xl flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
+        <SectionLabel>
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400/70" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-400" />
+          </span>
+          MPL ID S17 — Live Data Engine
+        </SectionLabel>
 
-          <h1 className="max-w-4xl font-display text-5xl font-bold leading-[0.96] tracking-tight text-white sm:text-6xl lg:text-7xl">
-            Analisis Draft MPL
-            <span className="block bg-gradient-to-r from-cyan-300 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent">
-              untuk MLBB yang terasa serius
-            </span>
-          </h1>
+        <h1 className="mt-8 max-w-5xl font-display text-5xl font-black leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-8xl">
+          Draft MLBB
+          <span className="block bg-gradient-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent">
+            Seperti Analyst Pro
+          </span>
+        </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            Website ini dibuat untuk membaca pick/ban MLBB dengan sudut pandang analyst:
-            matchup, comfort hero, pressure ban, lane coverage, counter matrix, dan riwayat MPL ID
-            dalam satu workspace premium.
-          </p>
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
+          Pick/ban analysis, hero intelligence, team history, dan meta snapshot —
+          semua dalam satu workspace.
+        </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <button
-              onClick={() => onChangeTab("draft")}
-              className="btn-primary group"
-            >
-              Open Draft Master
-              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-            </button>
-            <button
-              onClick={() => onChangeTab("teams")}
-              className="btn-secondary group"
-            >
-              Explore Team Analytics
-              <Users className="h-4 w-4 text-cyan-300 transition group-hover:scale-110" />
-            </button>
-          </div>
-
-          <div className="mt-10 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 backdrop-blur-sm">
-              <div className="ui-caption">Focus</div>
-              <div className="mt-2 text-base font-semibold text-white">Pick/ban evidence, bukan tebakan</div>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 backdrop-blur-sm">
-              <div className="ui-caption">Coverage</div>
-              <div className="mt-2 text-base font-semibold text-white">MPL team history + hero intelligence</div>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 backdrop-blur-sm">
-              <div className="ui-caption">Output</div>
-              <div className="mt-2 text-base font-semibold text-white">Recommendation, risk, final dashboard</div>
-            </div>
-          </div>
+        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <button onClick={() => onChangeTab("draft")} className="group inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-[0_0_40px_-8px_rgba(34,211,238,0.5)] transition-all hover:shadow-[0_0_60px_-8px_rgba(34,211,238,0.7)] hover:brightness-110">
+            Buka Draft Simulator
+            <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+          </button>
+          <button onClick={() => onChangeTab("heroes")} className="group inline-flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.03] px-8 py-4 text-sm font-bold uppercase tracking-wider text-slate-300 transition-all hover:border-white/20 hover:bg-white/[0.06] hover:text-white">
+            Lihat Hero Stats
+            <Eye className="h-4 w-4 text-cyan-400" />
+          </button>
         </div>
 
-        <div className="relative z-10">
-          <div className="relative translate-y-2 overflow-hidden rounded-[32px] border border-cyan-400/15 bg-[#06101d]/92 p-4 shadow-[0_38px_130px_-38px_rgba(8,145,178,0.72)] transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 lg:translate-y-8">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.16),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(236,72,153,0.12),transparent_32%),linear-gradient(180deg,rgba(8,18,32,0.58),rgba(4,10,18,0.9))]" />
-            <div className="relative">
-              <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3">
-                <div>
-                  <div className="ui-caption text-cyan-300">Floating Showcase</div>
-                  <div className="mt-1 text-lg font-semibold text-white">Draft analyst snapshot</div>
-                </div>
-                <div className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.22em] text-emerald-300">
-                  Live Engine
-                </div>
-              </div>
-
-              <div className="mt-4 grid gap-4 min-[1800px]:grid-cols-[1.08fr_0.92fr]">
-                <div className="space-y-4">
-                  <div className="rounded-2xl border border-blue-400/15 bg-blue-400/5 p-3 sm:p-4">
-                    <div className="mb-3 flex items-center justify-between">
-                      <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-blue-300">Blue Draft Board</div>
-                      <div className="text-xs text-slate-400">First Pick Side</div>
-                    </div>
-                    <div className="grid grid-cols-5 gap-1.5 sm:gap-2">
-                      {["Fanny", "Freya", "Phoveus", "Chip", "Harley"].map((hero) => (
-                        <div key={hero} className="min-w-0 rounded-xl border border-rose-400/15 bg-rose-400/8 p-1.5 text-center">
-                          <div className="relative mx-auto aspect-square w-full max-w-14 overflow-hidden rounded-xl border border-rose-400/20 bg-[#07111d]">
-                            <img src={getHeroImageUrl(hero, heroAssets)} alt={hero} className="block h-full w-full object-cover object-center" />
-                            <div className="absolute inset-x-1 bottom-1 rounded-md bg-rose-950/80 py-0.5 text-[8px] font-black uppercase tracking-normal text-rose-200 ring-1 ring-rose-300/20">
-                              Ban
-                            </div>
-                          </div>
-                          <div className="mt-1 truncate text-[10px] font-semibold leading-tight text-white">{hero}</div>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="mt-3 grid grid-cols-5 gap-1.5 sm:gap-2">
-                      {["Mathilda", "Harith", "Fredrinn", "Zhuxin", "Flex Slot"].map((hero, index) => (
-                        <div key={hero} className={`min-w-0 rounded-xl border p-1.5 text-center ${index === 4 ? "border-dashed border-cyan-400/25 bg-cyan-400/6" : "border-cyan-400/15 bg-cyan-400/8"}`}>
-                          <div className="relative mx-auto aspect-square w-full max-w-14 overflow-hidden rounded-xl border border-cyan-400/20 bg-[#07111d]">
-                            {index === 4 ? (
-                              <div className="flex h-full w-full items-center justify-center text-[9px] font-black uppercase tracking-normal text-cyan-300">Flex</div>
-                            ) : (
-                              <img src={getHeroImageUrl(hero, heroAssets)} alt={hero} className="block h-full w-full object-cover object-center" />
-                            )}
-                            <div className="absolute inset-x-1 bottom-1 rounded-md bg-cyan-950/80 py-0.5 text-[8px] font-black uppercase tracking-normal text-cyan-200 ring-1 ring-cyan-300/20">
-                              {index === 4 ? "Flex" : "Pick"}
-                            </div>
-                          </div>
-                          <div className="mt-1 truncate text-[10px] font-semibold leading-tight text-white">{index === 4 ? "Flex" : hero}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                    <div className="mb-3 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-400">Signal Layer</div>
-                    <div className="grid gap-2 text-sm text-slate-300">
-                      <div className="flex items-start gap-2 rounded-xl border border-white/8 bg-[#0b1727] px-3 py-3">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" />
-                        Team Pattern: RRQ often prioritizes EXP pressure after banning mobility junglers.
-                      </div>
-                      <div className="flex items-start gap-2 rounded-xl border border-white/8 bg-[#0b1727] px-3 py-3">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-fuchsia-300" />
-                        Similar Game: MPL ID S17 Week 5 Game 1 showed pivot into scaling backline.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                    <div className="mb-3 flex items-center justify-between">
-                      <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-slate-400">Analyst Recommendation</div>
-                      <Sparkles className="h-4 w-4 text-cyan-300" />
-                    </div>
-                    <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/8 p-4">
-                      <div className="flex items-center gap-3">
-                        <div className="h-16 w-16 shrink-0 aspect-square overflow-hidden rounded-2xl border border-cyan-400/20 bg-[#07111d]">
-                          <img src={getHeroImageUrl("Fanny", heroAssets)} alt="Fanny" className="block h-full w-full object-cover object-center" />
-                        </div>
-                        <div className="min-w-0 flex-1">
-                          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">Recommended Ban</div>
-                          <div className="text-2xl font-bold text-white">Fanny</div>
-                        </div>
-                      </div>
-                      <p className="mt-3 text-sm leading-6 text-slate-300">
-                        Enemy jungler comfort + snowball risk. Ban ini menutup tempo cepat dan memaksa lawan pivot.
-                      </p>
-                    </div>
-                    <div className="mt-3 grid gap-2">
-                      <div className="rounded-xl border border-white/8 bg-[#0b1727] px-3 py-3">
-                        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">Why Now</div>
-                        <div className="mt-1 text-sm text-white">Comfort overlap + matchup denial sebelum pick phase.</div>
-                      </div>
-                      <div className="rounded-xl border border-white/8 bg-[#0b1727] px-3 py-3">
-                        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">Fallback</div>
-                        <div className="mt-1 text-sm text-white">Jika sudah banned, pindah ke Freya atau Phoveus pressure lane.</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                    <div className="mb-3 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-400">Quick Product Read</div>
-                    <div className="grid gap-3 sm:grid-cols-2">
-                      <div className="rounded-xl border border-white/8 bg-[#0b1727] p-3">
-                        <div className="text-sm font-semibold text-white">Draft tempo</div>
-                        <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/8">
-                          <div className="h-full w-[74%] rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" />
-                        </div>
-                      </div>
-                      <div className="rounded-xl border border-white/8 bg-[#0b1727] p-3">
-                        <div className="text-sm font-semibold text-white">Counter pressure</div>
-                        <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/8">
-                          <div className="h-full w-[61%] rounded-full bg-gradient-to-r from-fuchsia-400 to-rose-500" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="pointer-events-none absolute -bottom-8 left-4 right-4 h-10 rounded-full bg-cyan-400/10 blur-3xl" />
-        </div>
-      </section>
-
-      <section className="relative mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 flex items-end justify-between gap-6">
-          <div>
-            <div className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan-300">Product Preview</div>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Lihat sistem dari sudut yang langsung terasa berguna
-            </h2>
-          </div>
-        </div>
-
-        <div className="grid gap-6 xl:grid-cols-3">
-          {previewCards.map((card) => {
-            const Icon = card.icon;
+        {/* Live stats bar */}
+        <div className="mt-16 grid w-full max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
+          {liveStats.map((s) => {
+            const Icon = s.icon;
             return (
-              <div
-                key={card.id}
-                className="group relative overflow-hidden rounded-[26px] border border-white/10 bg-[#081120]/90 p-6 shadow-[0_24px_80px_-40px_rgba(15,23,42,1)] transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30"
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${card.accent} opacity-80`} />
-                <div className="relative">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <div className="inline-flex rounded-full border border-white/10 bg-white/6 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.22em] text-slate-300">
-                        {card.badge}
-                      </div>
-                      <h3 className="mt-4 font-display text-2xl font-bold tracking-tight text-white">{card.title}</h3>
-                    </div>
-                    <div className="rounded-2xl border border-white/10 bg-white/6 p-3">
-                      <Icon className="h-5 w-5 text-cyan-300" />
-                    </div>
-                  </div>
-
-                  <div className="mt-6 rounded-2xl border border-white/10 bg-[#0b1727]/90 p-4">
-                    <div className="mb-3 flex items-center justify-between">
-                      <div className="text-sm font-semibold text-white">{card.statLabel}</div>
-                      <div className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-1 text-[10px] font-mono uppercase tracking-[0.2em] text-cyan-300">
-                        {card.statValue}
-                      </div>
-                    </div>
-                    <div className="grid gap-2">
-                      {card.points.map((point) => (
-                        <div key={point} className="flex items-center gap-2 rounded-xl border border-white/8 bg-white/[0.03] px-3 py-2.5 text-sm text-slate-300">
-                          <CheckCircle2 className="h-4 w-4 shrink-0 text-cyan-300" />
-                          {point}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <button
-                    onClick={() => onChangeTab(card.id)}
-                    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200"
-                  >
-                    {card.button}
-                    <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-                  </button>
+              <div key={s.label} className="group rounded-xl border border-white/[0.06] bg-[#080e1a]/80 px-4 py-5 text-center backdrop-blur-sm transition-all hover:border-white/10 hover:bg-white/[0.03]">
+                <Icon className={`mx-auto h-5 w-5 ${s.color} mb-2 transition group-hover:scale-110`} />
+                <div className="font-display text-3xl font-black text-white">
+                  <AnimatedCounter target={typeof s.value === "number" ? s.value : 0} />
                 </div>
+                <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.25em] text-slate-500">{s.label}</div>
               </div>
             );
           })}
         </div>
+
+        {/* Scroll hint */}
+        <div className="mt-12 animate-bounce text-slate-600">
+          <ChevronRight className="h-5 w-5 rotate-90" />
+        </div>
       </section>
 
-      <section className="relative mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-8">
-          <div className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan-300">Feature Highlights</div>
-          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Toolset yang terasa seperti analyst desk, bukan halaman template
+      {/* ═══ SECTION 2: FEATURES — Interactive grid ═══ */}
+      <section className="relative z-10 mx-auto mt-10 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <SectionLabel>Fitur Utama</SectionLabel>
+          <h2 className="mt-4 font-display text-4xl font-black tracking-tight text-white sm:text-5xl">
+            Semua dalam Satu Tempat
           </h2>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {featureHighlights.map((feature) => {
-            const Icon = feature.icon;
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((f) => {
+            const Icon = f.icon;
+            const isHovered = hoveredFeature === f.id;
             return (
-              <button
-                key={feature.id}
-                onClick={() => onChangeTab(feature.id)}
-                className={`group rounded-[24px] border border-white/10 bg-[#081120]/85 p-6 text-left transition duration-300 hover:-translate-y-1 hover:border-cyan-400/25 ${feature.glow}`}
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05]">
-                  <Icon className="h-5 w-5 text-cyan-300" />
-                </div>
-                <div className="mt-5 inline-flex rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.22em] text-slate-400">
-                  {feature.badge}
-                </div>
-                <h3 className="mt-4 text-xl font-semibold text-white">{feature.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{feature.text}</p>
-              </button>
+              <GlowCard key={f.id} glow={f.color}>
+                <button
+                  onClick={() => onChangeTab(f.id)}
+                  onMouseEnter={() => setHoveredFeature(f.id)}
+                  onMouseLeave={() => setHoveredFeature(null)}
+                  className="w-full p-6 text-left"
+                >
+                  <div className="flex items-start justify-between">
+                    <div className={`flex h-12 w-12 items-center justify-center rounded-xl border transition-all ${colorMap[f.color]} ${isHovered ? "scale-110" : ""}`}>
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <span className={`rounded-full border px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.2em] ${colorMap[f.color]}`}>
+                      {f.badge}
+                    </span>
+                  </div>
+                  <h3 className="mt-5 text-xl font-bold text-white">{f.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{f.desc}</p>
+                  <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 transition group-hover:gap-2.5">
+                    Buka <ArrowRight className="h-3 w-3" />
+                  </div>
+                </button>
+              </GlowCard>
             );
           })}
         </div>
       </section>
 
-      <section className="relative mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-8 xl:grid-cols-[1.05fr_0.95fr]">
-          <div className="rounded-[28px] border border-white/10 bg-[#07101d]/88 p-7">
-            <div className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan-300">MPL Data Intelligence Section</div>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              MPL ID S17 Data Layer
-            </h2>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300">
-              Homepage ini bukan sekadar styling. Ia menjelaskan bahwa produk ditopang data hero,
-              riwayat series, game count, dan standing MPL yang benar-benar dipakai sistem.
-            </p>
+      {/* ═══ SECTION 3: LIVE DRAFT PREVIEW ═══ */}
+      <section className="relative z-10 mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <SectionLabel>Preview</SectionLabel>
+          <h2 className="mt-4 font-display text-4xl font-black tracking-tight text-white sm:text-5xl">
+            Seperti Ini Draft-nya
+          </h2>
+        </div>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-              {dataLayer.map((item) => (
-                <div key={item.label} className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4">
-                  <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500">{item.label}</div>
-                  <div className="mt-2 text-2xl font-bold text-white">{item.value}</div>
+        <GlowCard className="p-6 sm:p-8" glow="cyan">
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            {/* Draft board */}
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-cyan-400">Blue Side Draft</span>
+                <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 font-mono text-[10px] font-bold uppercase text-emerald-400">Live Engine</span>
+              </div>
+
+              {/* Bans */}
+              <div className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-rose-400/70">Bans</div>
+              <div className="grid grid-cols-5 gap-2 mb-4">
+                {["Fanny", "Freya", "Phoveus", "Chip", "Harley"].map((h) => (
+                  <div key={h} className="rounded-xl border border-rose-500/15 bg-rose-500/[0.06] p-2 text-center">
+                    <div className="aspect-square overflow-hidden rounded-lg border border-rose-500/20 bg-[#060d1a]">
+                      <img src={getHeroImageUrl(h, heroAssets)} alt={h} className="h-full w-full object-cover opacity-70" />
+                    </div>
+                    <div className="mt-1 truncate text-[9px] font-semibold text-rose-300">{h}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Picks */}
+              <div className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-cyan-400/70">Picks</div>
+              <div className="grid grid-cols-5 gap-2">
+                {["Mathilda", "Harith", "Fredrinn", "Zhuxin", "Moskov"].map((h) => (
+                  <div key={h} className="rounded-xl border border-cyan-500/15 bg-cyan-500/[0.06] p-2 text-center transition hover:border-cyan-500/30">
+                    <div className="aspect-square overflow-hidden rounded-lg border border-cyan-500/20 bg-[#060d1a]">
+                      <img src={getHeroImageUrl(h, heroAssets)} alt={h} className="h-full w-full object-cover" />
+                    </div>
+                    <div className="mt-1 truncate text-[9px] font-semibold text-cyan-300">{h}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Analysis panel */}
+            <div className="space-y-4">
+              <div className="rounded-xl border border-white/[0.06] bg-[#060d1a]/80 p-4">
+                <div className="flex items-center gap-2 mb-3">
+                  <Zap className="h-4 w-4 text-cyan-400" />
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan-400">AI Recommendation</span>
+                </div>
+                <div className="flex items-center gap-3 rounded-xl border border-cyan-500/20 bg-cyan-500/[0.06] p-3">
+                  <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-cyan-500/20 bg-[#060d1a]">
+                    <img src={getHeroImageUrl("Fanny", heroAssets)} alt="Fanny" className="h-full w-full object-cover" />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-bold uppercase tracking-wider text-cyan-400">Recommended Ban</div>
+                    <div className="text-xl font-black text-white">Fanny</div>
+                  </div>
+                </div>
+                <p className="mt-3 text-xs leading-relaxed text-slate-400">
+                  Enemy jungler comfort + snowball risk. Ban ini menutup tempo cepat dan memaksa lawan pivot.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-xl border border-white/[0.06] bg-[#060d1a]/80 p-3">
+                  <div className="text-[10px] font-mono uppercase text-slate-500">Draft Tempo</div>
+                  <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/5">
+                    <div className="h-full w-[74%] rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" />
+                  </div>
+                  <div className="mt-1 text-right text-xs font-bold text-cyan-400">74%</div>
+                </div>
+                <div className="rounded-xl border border-white/[0.06] bg-[#060d1a]/80 p-3">
+                  <div className="text-[10px] font-mono uppercase text-slate-500">Counter Pressure</div>
+                  <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/5">
+                    <div className="h-full w-[61%] rounded-full bg-gradient-to-r from-violet-400 to-rose-500" />
+                  </div>
+                  <div className="mt-1 text-right text-xs font-bold text-violet-400">61%</div>
+                </div>
+              </div>
+
+              <button onClick={() => onChangeTab("draft")} className="w-full rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:brightness-110">
+                Buka Draft Simulator →
+              </button>
+            </div>
+          </div>
+        </GlowCard>
+      </section>
+
+      {/* ═══ SECTION 4: MPL STANDINGS + META ═══ */}
+      <section className="relative z-10 mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-6 lg:grid-cols-2">
+          {/* Standings */}
+          <GlowCard className="p-6" glow="amber">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-amber-400">MPL ID S17</div>
+                <div className="mt-1 text-xl font-bold text-white">Top Standings</div>
+              </div>
+              <Trophy className="h-5 w-5 text-amber-400" />
+            </div>
+            <div className="space-y-2">
+              {(matchCenter?.standings || []).map((t, i) => (
+                <div key={t.team} className="flex items-center gap-3 rounded-xl border border-white/[0.04] bg-white/[0.02] px-4 py-3 transition hover:bg-white/[0.05]">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-500/10 text-sm font-black text-amber-400">
+                    {i + 1}
+                  </div>
+                  <div className="h-9 w-9 shrink-0 overflow-hidden rounded-lg border border-white/10 bg-[#060d1a]">
+                    {teamAssets[t.team] ? (
+                      <img src={teamAssets[t.team]} alt={t.team} className="h-full w-full object-contain p-1" />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center text-[10px] font-black text-amber-400">{t.team.slice(0, 2)}</div>
+                    )}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-semibold text-white truncate">{t.team}</div>
+                    <div className="text-[11px] text-slate-500">{t.wins}W · {t.losses}L</div>
+                  </div>
+                  <div className="font-mono text-sm font-bold text-amber-400">{t.winrate}%</div>
                 </div>
               ))}
             </div>
+            <button onClick={() => onChangeTab("teams")} className="mt-4 w-full rounded-xl border border-amber-500/20 bg-amber-500/5 py-2.5 text-xs font-bold uppercase tracking-wider text-amber-400 transition hover:bg-amber-500/10">
+              Lihat Semua Tim →
+            </button>
+          </GlowCard>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              {Object.entries(teamAssets)
-                .slice(0, 9)
-                .map(([team, logo]) => (
-                  <div key={team} className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-2">
-                    {logo ? (
-                      <img src={logo} alt={team} className="h-6 w-6 rounded-full object-contain" />
-                    ) : (
-                      <div className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-400/10 text-[10px] font-bold text-cyan-300">
-                        {team.slice(0, 2)}
-                      </div>
-                    )}
-                    <span className="text-sm text-slate-300">{team}</span>
-                  </div>
-                ))}
+          {/* Meta heroes */}
+          <GlowCard className="p-6" glow="rose">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-rose-400">Meta Snapshot</div>
+                <div className="mt-1 text-xl font-bold text-white">Top Presence Heroes</div>
+              </div>
+              <Target className="h-5 w-5 text-rose-400" />
             </div>
-          </div>
-
-          <div className="grid gap-6">
-            <div className="rounded-[28px] border border-white/10 bg-[#081120]/88 p-6">
-              <div className="mb-4 flex items-center justify-between">
-                <div>
-                  <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500">Mini Standing</div>
-                  <div className="mt-1 text-xl font-semibold text-white">Top MPL Snapshot</div>
+            <div className="space-y-2">
+              {topPresence.map((h) => (
+                <div key={h.hero} className="flex items-center gap-3 rounded-xl border border-white/[0.04] bg-white/[0.02] px-4 py-3 transition hover:bg-white/[0.05]">
+                  <div className="h-11 w-11 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-[#060d1a]">
+                    <img src={getHeroImageUrl(h.hero, heroAssets)} alt={h.hero} className="h-full w-full object-cover" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-semibold text-white truncate">{h.hero}</div>
+                    <div className="text-[11px] text-slate-500">{h.tag}</div>
+                  </div>
+                  <span className={`rounded-full border px-3 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.15em] ${colorMap[h.color]}`}>
+                    Meta
+                  </span>
                 </div>
-                <Trophy className="h-5 w-5 text-cyan-300" />
-              </div>
-              <div className="space-y-3">
-                {(matchCenter?.standings || []).slice(0, 5).map((team, index) => (
-                  <div key={team.team} className="flex items-center justify-between rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 hover:bg-white/[0.06] transition-colors">
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cyan-400/10 text-sm font-bold text-cyan-300">
-                        {index + 1}
-                      </div>
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-[#0b1727]">
-                        {teamAssets[team.team] ? (
-                          <img src={teamAssets[team.team]} alt={team.team} className="h-8 w-8 object-contain" />
-                        ) : (
-                          <div className="text-xs font-black text-cyan-300">{team.team.slice(0, 2)}</div>
-                        )}
-                      </div>
-                      <div className="min-w-0">
-                        <div className="font-semibold text-white truncate">{team.team}</div>
-                        <div className="text-xs text-slate-500">{team.wins}W · {team.losses}L</div>
-                      </div>
-                    </div>
-                    <div className="ml-2 text-sm font-semibold text-cyan-300 shrink-0">{team.winrate}%</div>
-                  </div>
-                ))}
-              </div>
+              ))}
             </div>
-
-            <div className="rounded-[28px] border border-white/10 bg-[#081120]/88 p-6">
-              <div className="mb-4 flex items-center justify-between">
-                <div>
-                  <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500">Top Presence Heroes</div>
-                  <div className="mt-1 text-xl font-semibold text-white">Meta Pressure Read</div>
-                </div>
-                <BarChart3 className="h-5 w-5 text-cyan-300 shrink-0" />
-              </div>
-              <div className="space-y-3">
-                {topPresence.map((hero) => (
-                  <div key={hero.hero} className="flex items-center gap-3 rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 hover:bg-white/[0.06] transition-colors">
-                    <div className="h-12 w-12 aspect-square shrink-0 overflow-hidden rounded-xl border border-white/10 bg-[#0b1727]">
-                      <img src={getHeroImageUrl(hero.hero, heroAssets)} alt={hero.hero} className="block h-full w-full object-cover object-center" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="font-semibold text-white truncate">{hero.hero}</div>
-                      <div className="text-xs text-slate-500 truncate">{hero.presence}</div>
-                    </div>
-                    <div className={`shrink-0 rounded-full border px-3 py-1 text-[10px] font-mono uppercase tracking-[0.2em] ${hero.accent}`}>
-                      Meta
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+            <button onClick={() => onChangeTab("heroes")} className="mt-4 w-full rounded-xl border border-rose-500/20 bg-rose-500/5 py-2.5 text-xs font-bold uppercase tracking-wider text-rose-400 transition hover:bg-rose-500/10">
+              Lihat Semua Hero →
+            </button>
+          </GlowCard>
         </div>
       </section>
 
-      <section className="relative mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-8">
-          <div className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan-300">How It Works</div>
-          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Flow yang sederhana untuk prep draft lebih cepat
+      {/* ═══ SECTION 5: CTA ═══ */}
+      <section className="relative z-10 mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-3xl border border-cyan-500/15 bg-gradient-to-br from-[#060d1a] to-[#0a1628] p-8 text-center shadow-[0_0_100px_-20px_rgba(34,211,238,0.3)] sm:p-12">
+          <h2 className="font-display text-4xl font-black tracking-tight text-white sm:text-5xl">
+            Siap Draft Seperti
+            <span className="block bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent">Analyst MPL?</span>
           </h2>
-        </div>
-
-        <div className="grid gap-5 lg:grid-cols-3">
-          {howItWorks.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div key={item.step} className="rounded-[26px] border border-white/10 bg-[#081120]/88 p-6">
-                <div className="flex items-center justify-between">
-                  <div className="font-mono text-sm uppercase tracking-[0.24em] text-cyan-300">{item.step}</div>
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04]">
-                    <Icon className="h-5 w-5 text-cyan-300" />
-                  </div>
-                </div>
-                <h3 className="mt-5 text-2xl font-semibold text-white">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{item.text}</p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="relative mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-[32px] border border-cyan-400/15 bg-[linear-gradient(135deg,rgba(6,16,29,0.92),rgba(12,20,38,0.96))] p-8 shadow-[0_30px_120px_-40px_rgba(14,165,233,0.45)] sm:p-10">
-          <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-            <div>
-              <div className="font-mono text-[11px] uppercase tracking-[0.28em] text-cyan-300">Final CTA</div>
-              <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
-                Siap membaca draft seperti analyst MPL?
-              </h2>
-              <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300">
-                Masuk ke simulator, cek team analytics, lalu ubah draft dari tebakan menjadi keputusan
-                yang punya konteks, data, dan arah permainan.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <button
-                onClick={() => onChangeTab("draft")}
-                className="btn-primary"
-              >
-                Mulai Draft Simulator
-                <ArrowRight className="h-4 w-4" />
-              </button>
-              <button
-                onClick={() => onChangeTab("teams")}
-                className="btn-secondary"
-              >
-                Buka Team Analytics
-                <Users className="h-4 w-4 text-cyan-300" />
-              </button>
-            </div>
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-slate-400">
+            Masuk ke simulator, cek team analytics, lalu ubah draft dari tebakan menjadi keputusan yang punya data.
+          </p>
+          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <button onClick={() => onChangeTab("draft")} className="group inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-[0_0_40px_-8px_rgba(34,211,238,0.5)] transition hover:shadow-[0_0_60px_-8px_rgba(34,211,238,0.7)] hover:brightness-110">
+              Mulai Sekarang
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+            </button>
+            <button onClick={() => onChangeTab("items")} className="inline-flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.03] px-8 py-4 text-sm font-bold uppercase tracking-wider text-slate-300 transition hover:border-white/20 hover:text-white">
+              Jelajahi Data
+              <Database className="h-4 w-4 text-cyan-400" />
+            </button>
           </div>
         </div>
       </section>
 
-      {/* ── SCROLL TO TOP BUTTON ────────────────────────────────────── */}
+      {/* Scroll to top */}
       {showScrollBtn && (
         <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 flex items-center justify-center gap-2 rounded-full bg-cyan-500/20 px-5 py-3 text-sm font-semibold text-cyan-300 ring-1 ring-cyan-400/30 backdrop-blur-md transition-all hover:-translate-y-0.5 hover:bg-cyan-500/30 hover:shadow-[0_0_24px_rgba(6,182,212,0.4)] hover:ring-cyan-300/50"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-cyan-500/20 bg-[#080e1a]/90 text-cyan-400 backdrop-blur-md transition-all hover:-translate-y-0.5 hover:border-cyan-400/40 hover:shadow-[0_0_24px_rgba(6,182,212,0.3)]"
         >
-          <ArrowUp className="h-4 w-4 transition group-hover:-translate-y-0.5" />
-          Top
+          <ArrowUp className="h-5 w-5" />
         </button>
       )}
     </div>
