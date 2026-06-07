@@ -1565,7 +1565,7 @@ export default function DraftSimulator({
     setRetryCount((c) => c + 1);
   };
 
-  const [analysisTab, setAnalysisTab] = useState<"rec" | "counter" | "intel">("rec");
+  const [analysisTab, setAnalysisTab] = useState<"counter" | "intel">("counter");
 
   // -- helpers for inline render ----------------------------------------------
   const BanSlot = ({ heroName, side }: { heroName: string; side: "blue" | "red" }) => (
@@ -2067,7 +2067,7 @@ export default function DraftSimulator({
           </div>
 
           {/* -- ZONE 3: MAIN DRAFT BOARD --------------------------------------- */}
-          <div className="relative z-10 flex" style={{ minHeight: "520px" }}>
+          <div className="relative z-10 flex" style={{ minHeight: "580px" }}>
             {/* LEFT: Blue team pick slots (xl+) */}
             <div className="hidden xl:flex w-[210px] shrink-0 flex-col border-r border-blue-900/20 bg-blue-950/5">
               <div className="px-3 pt-3 pb-1">
@@ -2155,6 +2155,50 @@ export default function DraftSimulator({
                   <div className={`h-1.5 w-1.5 rounded-full animate-pulse ${currentStep?.side === "BLUE" ? "bg-blue-400" : "bg-red-400"}`} />
                   {currentStep?.side === "BLUE" ? blueTeam : redTeam} · {currentStep?.type === "BAN" ? "Ban a hero" : "Pick a hero"}
                   <span className="ml-auto text-[10px] opacity-60">Lane: {laneNeeds.length ? laneNeeds.join(", ") : "all covered"}</span>
+                </div>
+              )}
+
+              {/* AI Recommendation Strip */}
+              {displayedCoachRecommendations.length > 0 && (
+                <div className="px-3 py-2 bg-black/30 border-b border-white/[0.04]">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Sparkles className="h-3.5 w-3.5 text-amber-400" />
+                    <span className="text-[11px] font-bold text-amber-300 uppercase tracking-wider">AI Recommendations</span>
+                    {recsLoading && <span className="text-[10px] text-cyan-400 animate-pulse">Analyzing…</span>}
+                  </div>
+                  <div className="flex gap-2 overflow-x-auto scrollbar-none pb-1">
+                    {displayedCoachRecommendations.map((rec, i) => {
+                      const tone = coachToneClass[rec.tone];
+                      const isUnavailable = usedHeroesMap.has(normalizeHeroKey(rec.heroName));
+                      const isSelected = selectedHeroName === rec.heroName;
+                      return (
+                        <button
+                          key={`${rec.heroName}-${i}`}
+                          onClick={() => handleSelectHero(rec.heroName)}
+                          disabled={isUnavailable || isCompleted || isPaused}
+                          className={`shrink-0 flex items-center gap-2.5 p-2 rounded-xl border transition-all ${
+                            isSelected
+                              ? "border-cyan-400/60 bg-cyan-900/20 ring-1 ring-cyan-400/30 scale-105"
+                              : isUnavailable
+                                ? "border-white/[0.04] bg-white/[0.01] opacity-40 cursor-not-allowed"
+                                : tone.card + " hover:scale-[1.03] cursor-pointer"
+                          }`}
+                        >
+                          <div className="relative h-11 w-11 rounded-lg overflow-hidden border border-white/[0.1] bg-black/30 shrink-0">
+                            <FallbackImage src={getHeroImgUrl(rec.heroName)} fallbackText={rec.heroName} alt={rec.heroName} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[7px]" />
+                            {isUnavailable && <div className="absolute inset-0 bg-black/60 flex items-center justify-center text-[8px] font-black text-red-300">USED</div>}
+                          </div>
+                          <div className="min-w-0">
+                            <div className="flex items-center gap-1.5">
+                              <span className={`text-sm font-bold leading-tight ${tone.title}`}>{rec.heroName}</span>
+                              {rec.score > 0 && <span className={`text-[10px] font-bold ${tone.score}`}>{Math.round(rec.score)}pt</span>}
+                            </div>
+                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full border inline-block mt-0.5 ${tone.badge}`}>{rec.label}</span>
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
               )}
 
@@ -2385,7 +2429,6 @@ export default function DraftSimulator({
           <div className="relative z-10 border-t border-white/[0.05]">
             <div className="flex items-center gap-0 px-2 border-b border-white/[0.04] bg-black/20">
               {([
-                { id: "rec", label: "Recommendations", Icon: Sparkles },
                 { id: "counter", label: "Counter Read", Icon: Swords },
                 { id: "intel", label: "Team Intel", Icon: HelpCircle },
               ] as const).map(({ id, label, Icon }) => (
@@ -2405,88 +2448,6 @@ export default function DraftSimulator({
               ) : null}
             </div>
             <div className="p-3 min-h-[150px]">
-              {analysisTab === "rec" && (
-                <div className="space-y-3">
-                  <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-wider">
-                    <span className="text-gray-500">Action signals</span>
-                    {[
-                      { label: "Ban", tone: "ban" as const },
-                      { label: "Pick", tone: "pick" as const },
-                      { label: "Priority", tone: "priority" as const },
-                      { label: "Counter", tone: "counter" as const },
-                      { label: "Comfort", tone: "comfort" as const },
-                      { label: "Deny", tone: "deny" as const },
-                    ].map((item) => (
-                      <span key={item.label} className={`rounded-full border px-2 py-0.5 ${coachToneClass[item.tone].badge}`}>
-                        {item.label}
-                      </span>
-                    ))}
-                  </div>
-                  {displayedCoachRecommendations.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-5 gap-2.5">
-                      {displayedCoachRecommendations.map((rec, i) => {
-                        const tone = coachToneClass[rec.tone];
-                        const isUnavailable = usedHeroesMap.has(normalizeHeroKey(rec.heroName));
-                        const scoreEntries = getTopScoreEntries(rec.scoreBreakdown);
-                        return (
-                          <button
-                            key={`${rec.heroName}-${i}`}
-                            onClick={() => handleSelectHero(rec.heroName)}
-                            disabled={isUnavailable}
-                            className={`group relative min-h-[170px] overflow-hidden rounded-2xl border p-3 text-left transition-all disabled:opacity-45 disabled:cursor-not-allowed ${tone.card}`}
-                          >
-                            <div className={`absolute left-0 top-0 h-full w-1 ${tone.accent}`} />
-                            <div className="flex items-start gap-3">
-                              <div className="relative h-14 w-14 aspect-square rounded-xl overflow-hidden border border-white/[0.1] shrink-0 bg-black/30">
-                                <FallbackImage src={getHeroImgUrl(rec.heroName)} fallbackText={rec.heroName} alt={rec.heroName} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[7px]" />
-                                {isUnavailable && <div className="absolute inset-0 bg-black/60 flex items-center justify-center text-[9px] font-black text-red-300">USED</div>}
-                              </div>
-                              <div className="min-w-0 flex-1">
-                                <div className="flex items-start justify-between gap-2">
-                                  <div className={`text-base font-black leading-tight ${tone.title}`}>{rec.heroName}</div>
-                                  {rec.score > 0 && <div className={`text-[11px] font-black shrink-0 ${tone.score}`}>{Math.round(rec.score)}pt</div>}
-                                </div>
-                                <div className="mt-1 flex flex-wrap gap-1">
-                                  <span className={`text-[10px] px-1.5 py-0.5 rounded-full border font-bold ${tone.badge}`}>{rec.label}</span>
-                                  {rec.source && <span className="text-[10px] px-1.5 py-0.5 rounded-full border border-cyan-400/20 bg-cyan-500/10 text-cyan-200">{rec.source}</span>}
-                                </div>
-                              </div>
-                            </div>
-                            <p className="mt-3 text-xs leading-relaxed text-gray-300 whitespace-normal">
-                              {rec.reason}
-                            </p>
-                            <div className="mt-3 space-y-2">
-                              {rec.evidence && (
-                                <div className="rounded-lg border border-white/[0.06] bg-black/20 px-2 py-1.5 text-[10px] leading-relaxed text-gray-400">
-                                  {rec.evidence}
-                                </div>
-                              )}
-                              {scoreEntries.length > 0 && (
-                                <div className="flex flex-wrap gap-1">
-                                  {scoreEntries.map(([key, value]) => (
-                                    <span key={key} className="rounded-full border border-white/[0.07] bg-white/[0.04] px-1.5 py-0.5 text-[9px] text-gray-400">
-                                      {formatSourceLabel(key)} {value}
-                                    </span>
-                                  ))}
-                                </div>
-                              )}
-                            </div>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  ) : (
-                    <div className="rounded-2xl border border-dashed border-white/[0.08] bg-black/20 p-5 text-center">
-                      <Sparkles className="mx-auto h-6 w-6 text-cyan-300/70" />
-                      <div className="mt-2 text-sm font-bold text-white">Belum ada rekomendasi untuk step ini</div>
-                      <p className="mx-auto mt-1 max-w-md text-xs leading-relaxed text-gray-500">
-                        Rekomendasi muncul otomatis saat draft berjalan. Klik AI untuk memaksa fetch, atau lock hero dulu agar engine punya konteks pick/ban.
-                      </p>
-                    </div>
-                  )}
-                  {aiError && <div className="text-xs text-amber-300 p-3 rounded-xl border border-amber-500/20 bg-amber-900/10">{aiError}</div>}
-                </div>
-              )}
               {analysisTab === "counter" && (
                 <div className="flex gap-2 overflow-x-auto scrollbar-none pb-1">
                   {[
