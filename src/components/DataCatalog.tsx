@@ -31,22 +31,22 @@ export default function DataCatalog({ items }: DataCatalogProps) {
   return (
     <div className="flex flex-col gap-6">
       {/* Tab switcher */}
-      <div className="flex items-center gap-2 bg-[#0a111f]/60 border border-blue-900/20 rounded-xl p-2">
+      <div className="flex items-center gap-1.5 bg-[#060d1a] border border-gray-800 rounded-xl p-1.5 shadow-lg">
         <button
           onClick={() => setTab("items")}
-          className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all ${tab === "items" ? "bg-indigo-600/20 text-indigo-300 border border-indigo-500/35" : "text-gray-400 hover:text-white border border-transparent"}`}
+          className={`flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold transition-all ${tab === "items" ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/25 ring-1 ring-indigo-400/30" : "text-gray-400 hover:text-white hover:bg-gray-800/60"}`}
         >
           <ShoppingBag className="h-4 w-4" /> Items
         </button>
         <button
           onClick={() => setTab("emblems")}
-          className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all ${tab === "emblems" ? "bg-purple-600/20 text-purple-300 border border-purple-500/35" : "text-gray-400 hover:text-white border border-transparent"}`}
+          className={`flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold transition-all ${tab === "emblems" ? "bg-purple-600 text-white shadow-lg shadow-purple-600/25 ring-1 ring-purple-400/30" : "text-gray-400 hover:text-white hover:bg-gray-800/60"}`}
         >
           <Shield className="h-4 w-4" /> Emblems
         </button>
         <button
           onClick={() => setTab("spells")}
-          className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all ${tab === "spells" ? "bg-amber-600/20 text-amber-300 border border-amber-500/35" : "text-gray-400 hover:text-white border border-transparent"}`}
+          className={`flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold transition-all ${tab === "spells" ? "bg-amber-600 text-white shadow-lg shadow-amber-600/25 ring-1 ring-amber-400/30" : "text-gray-400 hover:text-white hover:bg-gray-800/60"}`}
         >
           <Zap className="h-4 w-4" /> Battle Spells
         </button>

@@ -384,6 +384,11 @@ function getItemsList() {
         buildFrom: isEnriched ? (enriched.buildFrom ?? null) : null,
         buildsInto: isEnriched ? (enriched.buildsInto ?? null) : null,
         isEnriched,
+        slug: isEnriched ? (enriched.slug ?? null) : null,
+        source: isEnriched ? (enriched.source ?? null) : null,
+        sourceUrl: isEnriched ? (enriched.sourceUrl ?? null) : null,
+        sourceUpdatedAt: isEnriched ? (enriched.sourceUpdatedAt ?? null) : null,
+        dataQuality: isEnriched ? (enriched.dataQuality ?? null) : null,
       };
     })
     .sort(

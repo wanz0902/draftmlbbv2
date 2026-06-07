@@ -90,6 +90,9 @@ export interface Item {
   buildsInto: string[] | null;
   isEnriched: boolean;
   slug?: string;
+  source?: string;
+  sourceUrl?: string;
+  sourceUpdatedAt?: string;
   dataQuality?: string;
 }
 

@@ -108,14 +108,19 @@
     "category": "Attack",
     "gold": 2180,
     "stats": [
-      "+35% Attack Speed",
-      "+25 Physical Attack"
+      "+35 Physical Attack",
+      "+20% Attack Speed"
     ],
     "abilities": [
       {
         "type": "passive",
+        "name": "Engulf",
+        "description": "Basic Attacks deal extra Physical Damage equal to 8% of the target's current HP (capped at 60 against minions)."
+      },
+      {
+        "type": "passive",
         "name": "Devour",
-        "description": "Basic Attacks deal extra Physical Damage equal to 9% of target's current HP. Gain 3% Lifesteal per attack for 3s (max 6 stacks)."
+        "description": "Each Basic Attack recovers 10 (+4 x Hero Level) HP. Effect is halved against minions."
       }
     ],
     "buildFrom": [
@@ -132,19 +137,19 @@
   {
     "name": "Endless Battle",
     "category": "Attack",
-    "gold": 2470,
+    "gold": 2330,
     "stats": [
-      "+65 Physical Attack",
-      "+5% Movement Speed",
+      "+60 Physical Attack",
       "+250 HP",
-      "+10% Physical Lifesteal",
-      "+10% Cooldown Reduction"
+      "+10% Cooldown Reduction",
+      "+5% Movement Speed",
+      "+5 Mana Regen"
     ],
     "abilities": [
       {
         "type": "passive",
         "name": "Divine Justice",
-        "description": "After using a skill, next Basic Attack deals extra 60% Physical Attack as True Damage. 1.5s cooldown."
+        "description": "After using a skill, next Basic Attack within 3s deals extra True Damage equal to 60% of Total Physical Attack and recovers 80 (+40% Total Physical Attack) HP. 1.5s cooldown."
       }
     ],
     "buildFrom": [
@@ -275,7 +280,12 @@
       {
         "type": "passive",
         "name": "Armor Buster",
-        "description": "Each point of enemy Physical Defense increases Physical Penetration by 0.05%."
+        "description": "Increases Physical Penetration by 35%."
+      },
+      {
+        "type": "passive",
+        "name": "Breaker",
+        "description": "Each point of enemy Physical Defense grants 0.1% extra Physical Penetration (capped at 30%)."
       }
     ],
     "buildFrom": [
