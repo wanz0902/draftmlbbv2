@@ -1,120 +1,97 @@
-# Top Navbar & Status Badge Layout Fix
+# TDP Tutorial Preview Polish — Filled Examples + Export Mock
 
-**Date:** 2026-06-08 06:31 WIB  
-**Task:** Fix broken/messy top header layout, status badges, spacing
-
----
-
-## A. Masalah Header Sebelumnya
-
-1. Logo/brand, nav links, dan status badges semuanya terlalu rapat
-2. ONLINE / USERS / LIVE ONLY badges overlap dan bertabrakan
-3. Spacing antar section tidak seimbang
-4. Teks dalam badges cramped dan tidak terbaca
-5. LIVE ONLY badge redundant dengan ONLINE badge
-6. Nav items dan status badges terlalu berdekatan
-7. Tidak ada visual separator antar section
+**Date:** 2026-06-08 06:36 WIB  
+**Task:** Improve TDP tutorial with filled example previews and natural copywriting
 
 ---
 
-## B. Perbaikan Layout Header
-
-### Struktur Baru: 3-Section Layout
-```
-[LEFT: Brand] — [CENTER: Nav Links] — [RIGHT: Badges | divider | Auth]
-```
-
-**Left section:**
-- Brand card: Logo ML + "Draft Analyst MLBB" / "MPL ID Control Desk"
-- Rounded border, compact, no overlap
-
-**Center section:**
-- Nav links: Home, Draft, Heroes (dropdown), Data (dropdown), TDP, Teams, Meta
-- Proper `flex-1` center alignment
-- Gap: `pl-6 pr-2` separation from logo
-
-**Right section:**
-- VisitorStatsBadge (ONLINE + USERS)
-- Vertical divider (`h-5 w-px bg-white/[0.08]`)
-- Sign In / Auth button
-- `gap-3` between elements
-
----
-
-## C. Perbaikan Badge ONLINE / USERS
-
-### VisitorStatsBadge Changes:
-| Aspect | Before | After |
-|--------|--------|-------|
-| Layout | Flex gap-2 | Flex gap-1.5 |
-| Pill shape | `rounded-md px-2 py-1` | `rounded-lg px-2.5 py-1.5` |
-| Min width | none | `min-w-[72px] justify-center` |
-| Text size | `text-[10px]` | number: `text-[10px]`, label: `text-[9px]` |
-| Label visibility | `hidden sm:inline` | same, but more subtle color |
-| Overflow | Could collide | Consistent sizing prevents overlap |
-
-### LIVE ONLY Badge:
-- **Dihapus dari desktop header** — redundant dengan ONLINE badge yang sudah menunjukkan status live
-- **Dihapus dari mobile header** — juga redundant
-- Online badge sudah cukup untuk menunjukkan status live
-
----
-
-## D. Perbaikan Spacing / Alignment
-
-- Header padding: `px-3 py-3` → `px-4 py-2.5 sm:px-6 lg:px-8`
-- Gap antar sections: `gap-2` → explicit spacing per section
-- Vertical alignment: `items-center` on all sections
-- Separator antara badges dan auth: vertical divider
-- Nav link text: `text-sm` → `text-[13px]` (slightly smaller, cleaner)
-- Nav link padding: `px-3 py-2` → `px-2.5 py-1.5` (tighter, less overlap)
-
----
-
-## E. Responsive Behavior
-
-- Desktop XL: full 3-section layout
-- Desktop LG: badges + auth visible, nav centered
-- Tablet/SM: nav hidden (mobile menu), badges inline on mobile
-- Mobile: hamburger menu, badges in mobile drawer
-
----
-
-## F. Files Changed
+## 1. File yang Diubah
 
 | File | Perubahan |
 |------|-----------|
-| `src/components/Navbar.tsx` | Full rewrite: 3-section layout, spacing, badge cleanup |
-| `src/components/VisitorStatsBadge.tsx` | Pill sizing, consistency, better spacing |
+| `src/components/TdpOnboarding.tsx` | Full rewrite: semua preview terisi, export mock, copywriting natural |
 
 ---
 
-## G. QA Results
+## 2. Slide yang Diperbaiki
+
+| Slide | Before | After |
+|-------|--------|-------|
+| 1. Apa itu TDP | Lingkaran kosong Blue VS Red | Mini board dengan ban/pick contoh terisi (Fanny, Alice, Baxia, Claude, Arlott, Chip, Phoveus, Valentina) |
+| 2. Tournament & Draft | Sidebar minimal | Sidebar dengan Draft 1 (5/20 filled), Draft 2, + ADD DRAFT |
+| 3. Pilih Side | Toggle kosong | Toggle "Our Blue" + OURS badge |
+| 4. Ban Plan | 5 lingkaran kosong | 5 ban terisi sebagian: Fanny, Chip, Arlott, Zhuxin, Kalea |
+| 5. Pick Plan | 5 lingkaran kosong | 5 pick terisi sebagian: Baxia, Claude, Grock |
+| 6. Role Lane | 5 lingkaran kosong + label | 5 hero terpetakan ke lane: Phoveus-EXP, Fanny-JGL, Valentina-MID, Claude-GOLD, Baxia-ROAM |
+| 7. Backup Hero | 1 lingkaran + 6 kosong | EXP lane: Phoveus main + 6 backup terisi (Terizla, Y.Zhong, Edith, Khaleed, X.Borg, Cici) |
+| 8. **BARU** Board Terisi | Tidak ada | Full board preview Blue + Red side, bans + picks + lanes + backups |
+| 9. Coach Notes & Export | Area kosong + icon | Notes contoh + full board preview + Download icon + .png label |
+
+---
+
+## 3. Hero Contoh yang Dipakai
+
+- **Blue Bans:** Fanny, Chip, Arlott
+- **Blue Picks:** Baxia, Claude, Grock
+- **Blue Lanes:** Phoveus (EXP), Fanny (JGL), Valentina (MID), Claude (GOLD), Baxia (ROAM)
+- **Blue Backup EXP:** Terizla, Yu Zhong, Edith, Khaleed, X.Borg, Cici
+- **Red Bans:** Zhuxin, Kalea, Nolan
+- **Red Picks:** Phoveus, Valentina, Fredrinn, Gloo, Novaria
+- **Red Lanes:** Gloo (ROAM), Nolan (GOLD), Valentina (MID), Fredrinn (JGL), Phoveus (EXP)
+
+---
+
+## 4. Perubahan Copywriting
+
+### Slide 1
+- **Before:** "TDP adalah workspace untuk merancang ban, pick..."
+- **After:** "Bayangin ini papan strategi sebelum draft dimulai. Di sini kamu bisa atur ban, susun pick utama, siapin hero cadangan per lane, dan tulis catatan strategi. Kamu bisa bikin plan A, plan B, dan cadangan kalau hero incaran diambil atau diban lawan."
+
+### Slide 7
+- **Before:** "Di bawah setiap lane, ada 6 slot hero cadangan."
+- **After:** "Setiap lane punya 6 slot hero cadangan. Ini penting banget. Kalau hero utama kamu kena ban, diambil lawan, atau draft berubah total, cadangan ini jadi rencana berikutnya."
+
+### Slide 9 (Coach Notes)
+- **Before:** "Tulis catatan strategi..."
+- **After:** "Kalau draft plan kamu sudah siap, tekan Save untuk menyimpan hasil board ini sebagai gambar PNG. Hasil download bisa dipakai untuk arsip, diskusi tim, atau dibagikan ke coaching staff."
+
+---
+
+## 5. Perubahan Preview Export
+
+- Slide 9 sekarang menampilkan: Coach Notes contoh → Full board preview → Download icon + .png label
+- User bisa langsung melihat gambaran hasil akhir export
+
+---
+
+## 6. QA Result
 
 | Test | Status |
 |------|--------|
-| Header clean on Home page | ✅ |
-| Header clean on TDP page | ✅ |
-| No overlap between nav and badges | ✅ |
-| ONLINE / USERS pills readable | ✅ |
-| Sign In button aligned | ✅ |
-| Routing still works | ✅ |
-| No console errors | ✅ |
-| Looks good on narrower width | ✅ |
+| Tutorial muncul normal | ✅ |
+| Semua step punya contoh visual terisi | ✅ |
+| Tidak ada lingkaran kosong doang | ✅ |
+| Step final punya contoh export | ✅ |
+| Teks tutorial lebih natural | ✅ |
+| Next/back jalan | ✅ |
+| Replay tutorial jalan | ✅ |
+| Tidak ada error console | ✅ |
+| Build pass | ✅ |
+| Tampilan bagus di desktop | ✅ |
 
 ---
 
-## H. Validation Results
+## 7. Validation Result
 
 | Validasi | Status |
 |----------|--------|
 | `npm run validate:data` | **PASS** (132 heroes) |
 | `npx tsc --noEmit` | **PASS** (0 errors) |
-| `npx vite build` | **PASS** (6.48s) |
+| `npx vite build` | **PASS** (6.58s) |
 
 ---
 
-## I. Commit Hash
+## 8. Commit Hash
 
 ```
 see below
@@ -122,6 +99,16 @@ see below
 
 ---
 
-## J. Localhost Status
+## 9. Localhost Status
 
 - URL: `http://localhost:5173`
+
+---
+
+## 10. Resource Usage
+
+| Metric | Value |
+|--------|-------|
+| Tokens | ~30K input + ~12K output |
+| Elapsed | ~5 minutes |
+| Model | mimo-v2.5 |
