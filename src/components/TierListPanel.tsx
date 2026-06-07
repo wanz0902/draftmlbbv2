@@ -313,8 +313,8 @@ export default function TierListPanel({ heroes, heroAssets }: TierListPanelProps
 
       {mode === "global" && !globalLoading && (!globalData?.available) && (
         <div className="text-center py-12">
-          <p className="text-sm text-gray-400 mb-1">Global Rank data not yet loaded.</p>
-          <p className="text-xs text-gray-600">Use Admin Tools to sync from Moonton's rank page.</p>
+          <p className="text-sm text-gray-400 mb-1">Global Rank data belum disinkronkan. Jalankan npm run sync:global-rank di terminal.</p>
+          <p className="text-xs text-gray-600">Data akan tersimpan di data/global_rank_stats.json.</p>
         </div>
       )}
 

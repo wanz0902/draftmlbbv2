@@ -10,7 +10,8 @@
     "start": "node dist/server.cjs",
     "lint": "tsc --noEmit",
     "validate:data": "tsx scripts/validate-data.ts",
-    "validate:assets": "tsx scripts/validate-assets.ts"
+    "validate:assets": "tsx scripts/validate-assets.ts",
+    "sync:global-rank": "tsx scripts/sync-global-rank.ts"
   },
   "keywords": [
     "mlbb",
