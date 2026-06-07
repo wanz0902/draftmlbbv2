@@ -356,12 +356,28 @@ function getItemsList() {
       const passive = enriched?.passive || (passiveAbility?.name) || null;
       const description = enriched?.description || (passiveAbility?.description) || null;
 
+      // Separate unique attributes from base stats
+      // Unique attributes are stats containing: Penetration, Lifesteal, Spell Vamp, Cooldown Reduction, Critical
+      const uniqueKeywords = ['penetration', 'lifesteal', 'spell vamp', 'cooldown reduction', 'critical chance', 'critical damage'];
+      const allStats = isEnriched ? (enriched.stats ?? []) : [];
+      const baseStats: string[] = [];
+      const uniqueAttrs: string[] = [];
+      for (const s of allStats) {
+        const lower = s.toLowerCase();
+        if (uniqueKeywords.some((k: string) => lower.includes(k))) {
+          uniqueAttrs.push(s);
+        } else {
+          baseStats.push(s);
+        }
+      }
+
       return {
         name,
         category: category.charAt(0).toUpperCase() + category.slice(1),
         image: assetUrl(file),
         gold: isEnriched ? (enriched.gold ?? null) : null,
-        stats: isEnriched ? (enriched.stats ?? null) : null,
+        stats: isEnriched ? (baseStats.length > 0 ? baseStats : null) : null,
+        uniqueAttributes: isEnriched ? (uniqueAttrs.length > 0 ? uniqueAttrs : null) : null,
         passive: isEnriched ? passive : null,
         description: isEnriched ? description : null,
         abilities: isEnriched ? (enriched.abilities ?? null) : null,

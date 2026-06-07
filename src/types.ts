@@ -82,12 +82,15 @@ export interface Item {
   image: string;
   gold: number | null;
   stats: string[] | null;
+  uniqueAttributes: string[] | null;
   passive: string | null;
   description: string | null;
   abilities: Array<{ type: string; name: string; description: string }> | null;
   buildFrom: string[] | null;
   buildsInto: string[] | null;
   isEnriched: boolean;
+  slug?: string;
+  dataQuality?: string;
 }
 
 export interface DraftState {
