@@ -23,6 +23,35 @@ import { getHeroImageUrl } from "../lib/heroUtils";
 import { HeroStats } from "../types";
 import TdpOnboarding, { isTdpTutorialCompleted } from "./TdpOnboarding";
 import TdpGuidedTour, { isGuidedTourCompleted, markGuidedTourCompleted } from "./TdpGuidedTour";
+import heroesMaster from "../data/heroes_master.json";
+
+const HERO_LANE_MAP: Record<string, string[]> = {};
+(heroesMaster as any[]).forEach((h) => {
+  const key = (h.hero_name || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const lanes: string[] = [];
+  if (h.lanes) {
+    h.lanes.forEach((l: string) => {
+      const lower = l.toLowerCase();
+      if (lower.includes("exp")) lanes.push("EXP");
+      else if (lower.includes("jungle") || lower.includes("jungler")) lanes.push("Jungle");
+      else if (lower.includes("mid")) lanes.push("Mid");
+      else if (lower.includes("gold")) lanes.push("Gold");
+      else if (lower.includes("roam") || lower.includes("roamer") || lower.includes("support")) lanes.push("Roam");
+    });
+  }
+  if (h.role && Array.isArray(h.role)) {
+    h.role.forEach((r: string) => {
+      const lower = r.toLowerCase();
+      if (lower.includes("tank") && !lanes.includes("Roam")) lanes.push("Roam");
+      if (lower.includes("support") && !lanes.includes("Roam")) lanes.push("Roam");
+    });
+  }
+  if (lanes.length === 0 && key) {
+    HERO_LANE_MAP[key] = ["EXP", "Jungle", "Mid", "Gold", "Roam"];
+  } else if (key) {
+    HERO_LANE_MAP[key] = [...new Set(lanes)];
+  }
+});
 
 const LANES = ["EXP", "Jungle", "Mid", "Gold", "Roam"] as const;
 type Lane = (typeof LANES)[number];
@@ -178,6 +207,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
   const [selectedDraftId, setSelectedDraftId] = useState<string | null>(null);
   const [pickerSlot, setPickerSlot] = useState<PickerTarget | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [laneFilter, setLaneFilter] = useState<string>("All");
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [expandedTours, setExpandedTours] = useState<Set<string>>(new Set());
   const [exporting, setExporting] = useState(false);
@@ -352,10 +382,42 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
     return s;
   }, [selectedDraft]);
 
+  const heroRosterCount = heroes.length >= 100 ? heroes.length : heroesMaster.length;
+
   const filteredHeroes = useMemo(() => {
     const q = searchQuery.toLowerCase();
-    return heroes.filter((h) => h.hero_name.toLowerCase().includes(q));
-  }, [heroes, searchQuery]);
+    let list: HeroStats[] = heroes.length >= 100 ? heroes : (heroesMaster as any[]).map((m: any) => ({
+      hero_name: m.hero_name,
+      picks_total: "0",
+      picks_win: "0",
+      picks_loss: "0",
+      winrate: "0%",
+      tournament_presence: "0%",
+      blue_side_picks: "0",
+      blue_side_win: "0",
+      blue_side_loss: "0",
+      blue_side_wr: "0%",
+      red_side_picks: "0",
+      red_side_win: "0",
+      red_side_loss: "0",
+      red_side_wr: "0%",
+      bans_total: "0",
+      bans_presence: "0",
+      picks_bans_total: "0",
+      picks_bans_presence: "0",
+    } as HeroStats));
+    if (q) {
+      list = list.filter((h) => h.hero_name.toLowerCase().includes(q));
+    }
+    if (laneFilter !== "All") {
+      list = list.filter((h) => {
+        const key = h.hero_name.toLowerCase().replace(/[^a-z0-9]/g, "");
+        const heroLanes = HERO_LANE_MAP[key];
+        return heroLanes && heroLanes.includes(laneFilter);
+      });
+    }
+    return list;
+  }, [heroes, searchQuery, laneFilter]);
 
   const progress = useMemo(() => {
     if (!selectedDraft) return { bans: 0, picks: 0, pct: 0 };
@@ -369,6 +431,11 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
   const openPicker = (target: PickerTarget) => {
     setPickerSlot(target);
     setSearchQuery("");
+    if (target.type === "pick" || target.type === "backup") {
+      setLaneFilter(target.lane);
+    } else {
+      setLaneFilter("All");
+    }
   };
 
   const handleExportPng = async () => {
@@ -659,9 +726,29 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
                     ? `${pickerSlot.lane} Main — ${pickerSlot.side === "BLUE" ? "Blue" : "Red"}`
                     : `${pickerSlot.lane} Alt #${pickerSlot.backupIndex + 1} — ${pickerSlot.side === "BLUE" ? "Blue" : "Red"}`}
               </span>
-              <span className="text-[9px] font-mono text-slate-600 ml-1">{heroes.length} heroes</span>
+              <span className="text-[9px] font-mono text-slate-600 ml-1">{filteredHeroes.length} / {heroRosterCount} heroes</span>
               <input value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search hero..." className="ml-auto flex-1 bg-transparent text-sm text-white outline-none placeholder:text-slate-600 text-right" autoFocus />
               <button onClick={() => setPickerSlot(null)} className="p-1 text-slate-500 hover:text-white cursor-pointer"><X className="h-4 w-4" /></button>
+            </div>
+            <div className="flex gap-1 px-4 py-2 border-b border-white/[0.04] overflow-x-auto">
+              {["All", "EXP", "Jungle", "Mid", "Gold", "Roam"].map((lf) => (
+                <button
+                  key={lf}
+                  onClick={() => setLaneFilter(lf)}
+                  className={`shrink-0 px-2.5 py-1 rounded-md text-[9px] font-bold uppercase tracking-wider transition cursor-pointer ${
+                    laneFilter === lf
+                      ? lf === "All" ? "bg-white/10 text-white border border-white/20"
+                        : lf === "EXP" ? "bg-rose-500/20 text-rose-300 border border-rose-500/30"
+                        : lf === "Jungle" ? "bg-blue-500/20 text-blue-300 border border-blue-500/30"
+                        : lf === "Mid" ? "bg-slate-400/15 text-slate-300 border border-slate-400/30"
+                        : lf === "Gold" ? "bg-yellow-500/20 text-yellow-300 border border-yellow-500/30"
+                        : "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+                      : "text-slate-600 border border-transparent hover:text-slate-400 hover:bg-white/[0.03]"
+                  }`}
+                >
+                  {lf}
+                </button>
+              ))}
             </div>
             <div className="max-h-[50vh] overflow-y-auto p-2 grid grid-cols-4 sm:grid-cols-5 gap-1.5">
               {filteredHeroes.map((h) => {
