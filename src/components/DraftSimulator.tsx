@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import { User } from "firebase/auth";
 import { saveDraft } from "../lib/firebase";
@@ -73,7 +73,7 @@ const DRAFT_SEQUENCE: DraftStep[] = [
   { idx: 19, side: "RED", type: "PICK", label: "Red Pick 5" },
 ];
 
-// Static fallback data — used if API fetch fails
+// Static fallback data � used if API fetch fails
 const FALLBACK_MPL_TEAMS: Array<{ key: string; name: string; logo: string }> = [
   { key: "RRQ", name: "Rex Regum Qeon", logo: "" },
   { key: "EVOS", name: "EVOS Esports", logo: "" },
@@ -201,7 +201,7 @@ export default function DraftSimulator({
   const [bluePicks, setBluePicks] = useState<string[]>([]);
   const [redPicks, setRedPicks] = useState<string[]>([]);
 
-  // Undo history — snapshots taken BEFORE each lock action
+  // Undo history � snapshots taken BEFORE each lock action
   type DraftSnapshot = {
     stepIdx: number;
     blueBans: string[];
@@ -251,6 +251,11 @@ export default function DraftSimulator({
   const [recommendationsPaused, setRecommendationsPaused] = useState(false);
   const recommendationCacheRef = useRef<Map<string, DraftRecommendation[]>>(new Map());
   const aiCoachCacheRef = useRef<Map<string, AIRecommendResult>>(new Map());
+
+  // Full pause system
+  const [isPaused, setIsPaused] = useState(false);
+  const [countdownValue, setCountdownValue] = useState<number | null>(null);
+  const savedTimerRef = useRef<number>(getDraftTurnDuration(null));
 
   const [soundEnabled, setSoundEnabled] = useState(true);
 
@@ -308,7 +313,7 @@ export default function DraftSimulator({
           }
         }
       } catch (err) {
-        // Silently fail — recommendations are non-critical
+        // Silently fail � recommendations are non-critical
         console.error("Auto-recommendation fetch failed:", err);
       } finally {
         setRecsLoading(false);
@@ -352,7 +357,7 @@ export default function DraftSimulator({
           }
         }
       } catch (err) {
-        // Silently fail — lane status is non-critical UI enhancement
+        // Silently fail � lane status is non-critical UI enhancement
       }
     };
 
@@ -773,7 +778,7 @@ export default function DraftSimulator({
           label,
           reason: entry.reason,
           source,
-          evidence: evidenceParts.join(" · ") || entry.evidence?.source || "Local coach evidence",
+          evidence: evidenceParts.join(" � ") || entry.evidence?.source || "Local coach evidence",
           score: (entry as any).priorityScore ?? entry.totalScore ?? 0,
           tone: getRecommendationTone(label, currentStep?.type),
           scoreBreakdown,
@@ -813,7 +818,7 @@ export default function DraftSimulator({
           label,
           reason: entry.reason,
           source: sourceLabel,
-          evidence: evidenceParts.join(" · ") || mplEntry.evidence?.source || (topFactor ? `${formatSourceLabel(topFactor[0])} ${topFactor[1]}` : `${entry.totalScore}/100`),
+          evidence: evidenceParts.join(" � ") || mplEntry.evidence?.source || (topFactor ? `${formatSourceLabel(topFactor[0])} ${topFactor[1]}` : `${entry.totalScore}/100`),
           score: entry.totalScore ?? 0,
           tone: getRecommendationTone(label, currentStep?.type),
           scoreBreakdown,
@@ -886,6 +891,8 @@ export default function DraftSimulator({
     setRedLaneStatus({ gold: null, exp: null, mid: null, jungle: null, roam: null });
     setDraftRecommendations([]);
     setRecommendationsPaused(false);
+    setIsPaused(false);
+    setCountdownValue(null);
     recommendationCacheRef.current.clear();
     aiCoachCacheRef.current.clear();
   };
@@ -905,6 +912,8 @@ export default function DraftSimulator({
     setEvaluationMeta(null);
     setDraftRecommendations([]);
     setRecommendationsPaused(false);
+    setIsPaused(false);
+    setCountdownValue(null);
     recommendationCacheRef.current.clear();
     aiCoachCacheRef.current.clear();
     setDraftStarted(true);
@@ -913,6 +922,7 @@ export default function DraftSimulator({
   // Turn simulation timer ticks
   useEffect(() => {
     if (!draftStarted || isCompleted) return;
+    if (isPaused || countdownValue !== null) return;
 
     if (timerSeconds <= 0) {
       // Time is up. Only lock if a hero is actually selected, otherwise skip
@@ -930,10 +940,19 @@ export default function DraftSimulator({
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [draftStarted, isCompleted, timerSeconds, selectedHeroName]);
+  }, [draftStarted, isCompleted, timerSeconds, selectedHeroName, isPaused, countdownValue]);
+
+  // Countdown effect for resume
+  useEffect(() => {
+    if (countdownValue === null) return;
+    if (countdownValue <= 0) { setCountdownValue(null); return; }
+    const t = setTimeout(() => setCountdownValue((prev) => (prev !== null ? prev - 1 : null)), 800);
+    return () => clearTimeout(t);
+  }, [countdownValue]);
 
   // Actions
   const handleSelectHero = (name: string) => {
+    if (isPaused || countdownValue !== null) return;
     sounds.playSelect();
     setSelectedHeroName(name);
   };
@@ -941,6 +960,7 @@ export default function DraftSimulator({
   const lastLockTime = useRef<number>(0);
   const handleLockHero = (name: string) => {
     if (!draftStarted || isCompleted) return;
+    if (isPaused || countdownValue !== null) return;
     
     // Prevent double clicking / double processing within 500ms
     const now = Date.now();
@@ -1199,14 +1219,14 @@ export default function DraftSimulator({
       if (hasTank && hasSupport) strengths.push("Double frontline untuk perlindungan ekstra");
       if (hasAssassin && hasMage) strengths.push("Burst combo tinggi untuk pick-off");
 
-      if (!hasTank && !hasSupport) weaknesses.push("Tidak ada frontline — rentan terhadap dive");
+      if (!hasTank && !hasSupport) weaknesses.push("Tidak ada frontline � rentan terhadap dive");
       if (!hasMarksman) weaknesses.push("Kurang sustained DPS untuk late game objective");
-      if (!hasMage) weaknesses.push("Kurang magic damage — musuh bisa build full armor");
+      if (!hasMage) weaknesses.push("Kurang magic damage � musuh bisa build full armor");
       if (!hasAssassin && !hasMage) weaknesses.push("Kurang burst damage untuk eliminasi carry");
       if (!hasFighter) weaknesses.push("Kurang pressure di EXP lane");
 
       const uniqueRoles = new Set(roles);
-      if (uniqueRoles.size <= 2 && picks.length >= 4) weaknesses.push("Role diversity rendah — komposisi monoton");
+      if (uniqueRoles.size <= 2 && picks.length >= 4) weaknesses.push("Role diversity rendah � komposisi monoton");
 
       // Power spike analysis
       let powerSpike = "Mid Game";
@@ -1239,11 +1259,11 @@ export default function DraftSimulator({
     md += `## Predicted Lane Assignment\n\n`;
     md += `**Tim Biru:**\n`;
     bluePicks.forEach(name => {
-      md += `- ${name} → ${predictLane(name)} (${getHeroRole(name)})\n`;
+      md += `- ${name} ? ${predictLane(name)} (${getHeroRole(name)})\n`;
     });
     md += `\n**Tim Merah:**\n`;
     redPicks.forEach(name => {
-      md += `- ${name} → ${predictLane(name)} (${getHeroRole(name)})\n`;
+      md += `- ${name} ? ${predictLane(name)} (${getHeroRole(name)})\n`;
     });
 
     md += `\n## Kekuatan Tim Biru\n`;
@@ -1316,7 +1336,7 @@ export default function DraftSimulator({
     return md;
   };
 
-  // Final Expert Evaluation — AI Provider Router (primary → fallback → local)
+  // Final Expert Evaluation � AI Provider Router (primary ? fallback ? local)
   const evaluateDraftGame = async () => {
     setEvaluationLoading(true);
     setEvaluationResult("");
@@ -1324,7 +1344,7 @@ export default function DraftSimulator({
     let aiStatus = "";
 
     try {
-      // Try AI Provider Router (server handles tokenplan → wafer → local failover)
+      // Try AI Provider Router (server handles tokenplan ? wafer ? local failover)
       const controller = new AbortController();
       const timeoutId = window.setTimeout(() => controller.abort(), 12000);
       const aiResponse = await fetch("/api/ai/draft-analysis", {
@@ -1350,17 +1370,17 @@ export default function DraftSimulator({
           setEvaluationMeta(aiResult);
           return; // AI analysis succeeded
         }
-        // AI returned success:false — check for credit/config issues
+        // AI returned success:false � check for credit/config issues
         const errMsg = aiResult.error || "";
         if (errMsg.includes("insufficient") || errMsg.includes("402") || errMsg.includes("credit")) {
-          aiStatus = "> ⚠️ *AI Analyst: credit habis (insufficient credits). Menggunakan fallback.*\n\n";
+          aiStatus = "> ?? *AI Analyst: credit habis (insufficient credits). Menggunakan fallback.*\n\n";
         } else if (errMsg.includes("not configured") || errMsg.includes("YOUR_KEY")) {
-          aiStatus = "> ⚠️ *AI Analyst: API key belum dikonfigurasi. Menggunakan fallback.*\n\n";
+          aiStatus = "> ?? *AI Analyst: API key belum dikonfigurasi. Menggunakan fallback.*\n\n";
         } else {
-          aiStatus = "> ⚠️ *AI Analyst tidak tersedia. Menggunakan analisis alternatif.*\n\n";
+          aiStatus = "> ?? *AI Analyst tidak tersedia. Menggunakan analisis alternatif.*\n\n";
         }
       } else {
-        aiStatus = "> ⚠️ *AI Analyst tidak tersedia. Menggunakan analisis alternatif.*\n\n";
+        aiStatus = "> ?? *AI Analyst tidak tersedia. Menggunakan analisis alternatif.*\n\n";
       }
 
       // Fallback to existing Gemini endpoint
@@ -1390,7 +1410,7 @@ export default function DraftSimulator({
       setEvaluationMeta({
         success: false,
         analysis: aiStatus + generateLocalFallbackAnalysis(),
-        dataNotes: ["Heuristic estimate — fallback lokal karena endpoint analisis tidak tersedia."],
+        dataNotes: ["Heuristic estimate � fallback lokal karena endpoint analisis tidak tersedia."],
       });
     } finally {
       setEvaluationLoading(false);
@@ -1532,7 +1552,7 @@ export default function DraftSimulator({
         })
         .catch((err) => {
           console.error("Failed to fetch MPL teams:", err);
-          setTeamsError("Gagal memuat data tim MPL — menggunakan data lokal");
+          setTeamsError("Gagal memuat data tim MPL � menggunakan data lokal");
           setMplTeams(FALLBACK_MPL_TEAMS);
         })
         .finally(() => setTeamsLoading(false));
@@ -1547,7 +1567,7 @@ export default function DraftSimulator({
 
   const [analysisTab, setAnalysisTab] = useState<"rec" | "counter" | "intel">("rec");
 
-  // ── helpers for inline render ──────────────────────────────────────────────
+  // -- helpers for inline render ----------------------------------------------
   const BanSlot = ({ heroName, side }: { heroName: string; side: "blue" | "red" }) => (
     <div className={`h-9 w-9 xl:h-10 xl:w-10 aspect-square rounded-full overflow-hidden border ${side === "blue" ? "border-blue-900/50" : "border-red-900/50"} bg-slate-900/60 shrink-0`}>
       {heroName ? (
@@ -1588,10 +1608,10 @@ export default function DraftSimulator({
         </div>
       )}
       {isBlue && !heroName && (
-        <div className="text-[11px] text-white/20">{isActive ? "Picking…" : `Slot ${index + 1}`}</div>
+        <div className="text-[11px] text-white/20">{isActive ? "Picking�" : `Slot ${index + 1}`}</div>
       )}
       {!isBlue && !heroName && (
-        <div className="text-[11px] text-white/20 flex-1 text-right">{isActive ? "Picking…" : `Slot ${index + 1}`}</div>
+        <div className="text-[11px] text-white/20 flex-1 text-right">{isActive ? "Picking�" : `Slot ${index + 1}`}</div>
       )}
     </div>
   );
@@ -1690,7 +1710,7 @@ export default function DraftSimulator({
             </>
           )}
 
-          {/* Step 2: MPL Mode — Team Selection */}
+          {/* Step 2: MPL Mode � Team Selection */}
           {draftMode === "mpl" && (
             <>
               <button
@@ -1707,7 +1727,7 @@ export default function DraftSimulator({
 
               <div>
                 <h2 className="text-xl font-bold text-white tracking-tight">
-                  MPL Mode — Pilih Tim
+                  MPL Mode � Pilih Tim
                 </h2>
                 <p className="text-sm text-gray-400 mt-1 leading-relaxed">
                   Pilih tim MPL untuk sisi Biru dan Merah. Rekomendasi akan disesuaikan berdasarkan profil tim.
@@ -1782,7 +1802,7 @@ export default function DraftSimulator({
               )}
 
               {selectedBlueTeam && selectedRedTeam && selectedBlueTeam === selectedRedTeam && (
-                <p className="text-xs text-amber-400 text-center mt-1">⚠️ Blue Team dan Red Team tidak boleh sama.</p>
+                <p className="text-xs text-amber-400 text-center mt-1">?? Blue Team dan Red Team tidak boleh sama.</p>
               )}
 
               <div className="flex flex-col gap-2 w-full sm:flex-row sm:justify-center mt-3">
@@ -1804,7 +1824,7 @@ export default function DraftSimulator({
             </>
           )}
 
-          {/* Step 2: Ranked Mode — Free text team names */}
+          {/* Step 2: Ranked Mode � Free text team names */}
           {draftMode === "ranked" && (
             <>
               <button
@@ -1924,7 +1944,7 @@ export default function DraftSimulator({
           )}
         </div>
       ) : (
-        /* ── MLBB-STYLE DRAFT BOARD ─────────────────────────────────────────── */
+        /* -- MLBB-STYLE DRAFT BOARD ------------------------------------------- */
         <div className="relative rounded-2xl overflow-hidden border border-white/[0.06] shadow-2xl bg-gradient-to-b from-[#060e1e] to-[#030810]">
           {/* Atmospheric background */}
           <div className="absolute inset-0 pointer-events-none z-0">
@@ -1934,7 +1954,7 @@ export default function DraftSimulator({
             <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle,#ffffff 1px,transparent 1px)", backgroundSize: "28px 28px" }} />
           </div>
 
-          {/* ── ZONE 1: TOP HEADER BAR ──────────────────────────────────────── */}
+          {/* -- ZONE 1: TOP HEADER BAR ---------------------------------------- */}
           <div className="relative z-10 flex items-center gap-2 px-3 h-11 bg-black/50 border-b border-white/[0.06]">
             <button onClick={handleReset} className="flex items-center gap-1 text-gray-400 hover:text-white text-xs transition-colors shrink-0">
               <ArrowLeft className="h-4 w-4" />
@@ -1965,7 +1985,7 @@ export default function DraftSimulator({
             </div>
           </div>
 
-          {/* ── ZONE 2: BAN / PICK PREVIEW STRIP ────────────────────────────── */}
+          {/* -- ZONE 2: BAN / PICK PREVIEW STRIP ------------------------------ */}
           <div className="relative z-10 flex items-stretch bg-black/30 border-b border-white/[0.04]">
             {/* Blue side */}
             <div className="flex-1 flex flex-col gap-1 px-3 py-2">
@@ -2000,7 +2020,7 @@ export default function DraftSimulator({
                     {currentStep?.side === "BLUE" ? blueTeam : redTeam}
                   </div>
                   <div className={`text-3xl font-black tabular-nums leading-none ${timerSeconds <= 8 ? "text-red-400 animate-pulse" : "text-white"}`}>
-                    {String(timerSeconds).padStart(2, "0")}
+                    {isPaused ? "--" : String(timerSeconds).padStart(2, "0")}
                   </div>
                   <div className={`text-[11px] uppercase tracking-widest mt-0.5 ${currentStep?.type === "BAN" ? "text-red-400/70" : "text-cyan-400/70"}`}>
                     {currentStep?.type}
@@ -2046,12 +2066,12 @@ export default function DraftSimulator({
             </div>
           </div>
 
-          {/* ── ZONE 3: MAIN DRAFT BOARD ─────────────────────────────────────── */}
+          {/* -- ZONE 3: MAIN DRAFT BOARD --------------------------------------- */}
           <div className="relative z-10 flex" style={{ minHeight: "520px" }}>
             {/* LEFT: Blue team pick slots (xl+) */}
             <div className="hidden xl:flex w-[210px] shrink-0 flex-col border-r border-blue-900/20 bg-blue-950/5">
               <div className="px-3 pt-3 pb-1">
-                <div className="text-[9px] text-blue-400/60 uppercase tracking-widest font-bold">Blue · First Pick</div>
+                <div className="text-[9px] text-blue-400/60 uppercase tracking-widest font-bold">Blue � First Pick</div>
                 <div className="text-sm font-bold text-blue-200 truncate">{blueTeam}</div>
               </div>
               <div className="flex-1 flex flex-col gap-1.5 px-2 pb-2 overflow-y-auto">
@@ -2072,7 +2092,7 @@ export default function DraftSimulator({
                   <span className={evaluationDashboard.teamPanels.blue.missingLanes.length ? "text-amber-400" : "text-emerald-400"}>
                     {evaluationDashboard.teamPanels.blue.missingLanes.length
                       ? `Missing: ${evaluationDashboard.teamPanels.blue.missingLanes.join(", ")}`
-                      : "Lanes covered ✓"}
+                      : "Lanes covered ?"}
                   </span>
                 </div>
                 {evaluationDashboard.teamPanels.blue.roleWarnings[0] && (
@@ -2112,7 +2132,7 @@ export default function DraftSimulator({
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search…"
+                    placeholder="Search�"
                     className="w-full pl-6 pr-2 py-1 text-xs bg-white/[0.04] border border-white/[0.06] rounded-lg text-white placeholder:text-gray-600 outline-none focus:border-cyan-500/40"
                   />
                 </div>
@@ -2133,7 +2153,7 @@ export default function DraftSimulator({
               {!isCompleted && (
                 <div className={`px-3 py-1.5 text-xs font-semibold flex items-center gap-2 ${currentStep?.side === "BLUE" ? "bg-blue-950/20 text-blue-300" : "bg-red-950/15 text-red-300"}`}>
                   <div className={`h-1.5 w-1.5 rounded-full animate-pulse ${currentStep?.side === "BLUE" ? "bg-blue-400" : "bg-red-400"}`} />
-                  {currentStep?.side === "BLUE" ? blueTeam : redTeam} · {currentStep?.type === "BAN" ? "Ban a hero" : "Pick a hero"}
+                  {currentStep?.side === "BLUE" ? blueTeam : redTeam} � {currentStep?.type === "BAN" ? "Ban a hero" : "Pick a hero"}
                   <span className="ml-auto text-[10px] opacity-60">Lane: {laneNeeds.length ? laneNeeds.join(", ") : "all covered"}</span>
                 </div>
               )}
@@ -2166,24 +2186,29 @@ export default function DraftSimulator({
                       return (
                         <button
                           key={hero.hero_name}
-                          disabled={isUsed || isCompleted}
+                          disabled={isUsed || isCompleted || isPaused || countdownValue !== null}
                           onClick={() => handleSelectHero(hero.hero_name)}
-                          title={insight?.whyRecommended || hero.hero_name}
-                          className={`relative flex flex-col items-center gap-0.5 p-1.5 rounded-xl border transition-all ${isSelected ? "border-cyan-400/60 bg-cyan-900/20 ring-1 ring-cyan-400/25 scale-105" : recommendationView && !isUsed && recTone ? recTone.card : isRec && !isUsed ? "border-emerald-500/40 bg-emerald-900/10" : isBanned ? "border-red-900/20 opacity-30 cursor-not-allowed" : isPicked ? "border-blue-900/20 opacity-30 cursor-not-allowed" : insight?.status === "risky" ? "border-amber-500/20 bg-amber-900/5" : "border-white/[0.05] hover:border-white/[0.15] hover:bg-white/[0.03]"} ${!isUsed && !isCompleted ? "cursor-pointer hover:-translate-y-0.5" : ""}`}
+                          title={isBanned ? "Sudah di-ban" : isPicked ? "Sudah di-pick" : insight?.whyRecommended || hero.hero_name}
+                          className={`relative flex flex-col items-center gap-0.5 p-1.5 rounded-xl border transition-all ${isSelected ? "border-cyan-400/60 bg-cyan-900/20 ring-1 ring-cyan-400/25 scale-105" : recommendationView && !isUsed && recTone ? recTone.card : isRec && !isUsed ? "border-emerald-500/40 bg-emerald-900/10" : isBanned ? "border-red-500/25 bg-red-950/15 opacity-40" : isPicked ? "border-blue-500/20 bg-blue-950/15 opacity-40" : insight?.status === "risky" ? "border-amber-500/20 bg-amber-900/5" : "border-white/[0.05] hover:border-white/[0.15] hover:bg-white/[0.03]"} ${(isUsed || isCompleted || isPaused || countdownValue !== null) ? "cursor-not-allowed" : "cursor-pointer hover:-translate-y-0.5"}`}
                         >
-                          <div className={`relative h-12 w-12 xl:h-[52px] xl:w-[52px] aspect-square rounded-xl overflow-hidden border bg-slate-950/70 ${isSelected ? "border-cyan-500/50" : isRec && !isUsed ? "border-emerald-500/25" : "border-white/[0.06]"}`}>
+                          <div className={`relative h-12 w-12 xl:h-[52px] xl:w-[52px] aspect-square rounded-xl overflow-hidden border bg-slate-950/70 ${isSelected ? "border-cyan-500/50" : isRec && !isUsed ? "border-emerald-500/25" : isBanned ? "border-red-500/30" : isPicked ? "border-blue-500/25" : "border-white/[0.06]"}`}>
                             <FallbackImage
                               src={getHeroImgUrl(hero.hero_name)}
                               fallbackText={hero.hero_name}
                               alt={hero.hero_name}
-                              className={`block h-full w-full object-cover object-center ${(isBanned || isPicked) ? "grayscale" : ""}`}
+                              className={`block h-full w-full object-cover object-center ${(isBanned || isPicked) ? "grayscale brightness-50" : ""}`}
                               containerClassName="h-full w-full text-[7px]"
                             />
                             {isBanned && (
-                              <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                                <div className="h-4 w-4 rounded-full border border-red-500/60 flex items-center justify-center">
-                                  <span className="text-red-400 text-[8px] font-black">x</span>
-                                </div>
+                              <div className="absolute inset-0 bg-red-950/60 backdrop-blur-[1px] flex flex-col items-center justify-center gap-0.5">
+                                <svg className="h-5 w-5 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
+                                <span className="text-[7px] font-black text-red-300 uppercase tracking-widest">BANNED</span>
+                              </div>
+                            )}
+                            {isPicked && !isBanned && (
+                              <div className="absolute inset-0 bg-blue-950/60 backdrop-blur-[1px] flex flex-col items-center justify-center gap-0.5">
+                                <CheckCircle2 className="h-4 w-4 text-blue-300" />
+                                <span className="text-[7px] font-black text-blue-200 uppercase tracking-widest">PICKED</span>
                               </div>
                             )}
                             {isRec && !isUsed && (
@@ -2225,7 +2250,7 @@ export default function DraftSimulator({
 
               {/* Lock bar */}
               {!isCompleted ? (
-                <div className="border-t border-white/[0.05] bg-black/40 px-3 py-2 flex items-center gap-2 shrink-0">
+                <div className="border-t border-white/[0.05] bg-black/80 backdrop-blur-md px-3 py-2.5 flex items-center gap-2 shrink-0 sticky bottom-0 z-20">
                   {selectedHeroName ? (
                     <div className="flex items-center gap-2 flex-1 min-w-0">
                       <div className="h-10 w-10 aspect-square rounded-xl overflow-hidden border border-cyan-500/40 shrink-0 bg-slate-950/70">
@@ -2249,24 +2274,24 @@ export default function DraftSimulator({
                     Undo
                   </button>
                   <button
-                    onClick={() => setRecommendationsPaused((value) => !value)}
-                    title={recommendationsPaused ? "Resume auto recommendations" : "Pause auto recommendations supaya tidak fetch ulang saat mikir draft"}
+                    onClick={() => { if (isPaused) { savedTimerRef.current = timerSeconds; setCountdownValue(3); setIsPaused(false); setRecommendationsPaused(false); } else { savedTimerRef.current = timerSeconds; setIsPaused(true); setRecommendationsPaused(true); } }}
+                    title={isPaused ? "Resume draft" : "Pause draft supaya tidak fetch ulang saat mikir draft"}
                     className={`flex items-center gap-1 px-2.5 py-1.5 text-[11px] rounded-lg border transition-colors shrink-0 ${
                       recommendationsPaused
                         ? "bg-slate-800/70 border-slate-500/30 text-slate-200 hover:bg-slate-700/70"
                         : "bg-cyan-900/25 border-cyan-500/25 text-cyan-300 hover:bg-cyan-900/40"
                     }`}
                   >
-                    {recommendationsPaused ? <Play className="h-3.5 w-3.5" /> : <Pause className="h-3.5 w-3.5" />}
-                    {recommendationsPaused ? "Resume" : "Pause"}
+                    {isPaused ? <Play className="h-3.5 w-3.5" /> : <Pause className="h-3.5 w-3.5" />}
+                    {isPaused ? "Resume" : "Pause"}
                   </button>
-                  <button onClick={fetchAICoach} disabled={aiLoading} className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 rounded-lg hover:bg-indigo-900/60 transition-colors disabled:opacity-50 shrink-0">
+                  <button onClick={fetchAICoach} disabled={aiLoading || isPaused} className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 rounded-lg hover:bg-indigo-900/60 transition-colors disabled:opacity-50 shrink-0">
                     <Sparkles className="h-3.5 w-3.5" />
-                    {aiLoading ? "…" : "AI"}
+                    {aiLoading ? "�" : "AI"}
                   </button>
                   <button
                     onClick={() => handleLockHero(selectedHeroName)}
-                    disabled={!selectedHeroName}
+                    disabled={!selectedHeroName || isPaused || countdownValue !== null}
                     className={`flex items-center gap-2 px-5 py-2 rounded-xl font-bold text-sm uppercase tracking-wider transition-all shrink-0 ${selectedHeroName ? "bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white shadow-[0_0_16px_rgba(6,182,212,0.3)]" : "bg-slate-900 text-slate-600 cursor-not-allowed"}`}
                   >
                     <CheckCircle2 className="h-4 w-4" />
@@ -2277,12 +2302,12 @@ export default function DraftSimulator({
                 <div className="border-t border-white/[0.05] bg-black/40 px-3 py-2 flex items-center gap-2 shrink-0 flex-wrap">
                   <button onClick={() => { evaluateDraftGame(); setShowAnalysis(true); }} disabled={evaluationLoading} className="flex items-center gap-2 px-4 py-2 text-xs bg-emerald-700/40 border border-emerald-500/40 text-emerald-300 rounded-xl font-bold uppercase hover:bg-emerald-700/60 transition-colors disabled:opacity-50">
                     <BarChart3 className="h-4 w-4" />
-                    {evaluationLoading ? "Analyzing…" : "Run Final Analysis"}
+                    {evaluationLoading ? "Analyzing�" : "Run Final Analysis"}
                   </button>
                   {user && (
                     <button onClick={handleSaveDraft} disabled={isSaving || saveSuccess} className="flex items-center gap-2 px-4 py-2 text-xs bg-blue-700/40 border border-blue-500/40 text-blue-300 rounded-xl font-bold uppercase hover:bg-blue-700/60 transition-colors disabled:opacity-50">
                       <Save className="h-4 w-4" />
-                      {saveSuccess ? "Saved" : isSaving ? "Saving…" : "Save Draft"}
+                      {saveSuccess ? "Saved" : isSaving ? "Saving�" : "Save Draft"}
                     </button>
                   )}
                 </div>
@@ -2292,7 +2317,7 @@ export default function DraftSimulator({
             {/* RIGHT: Red team pick slots (xl+) */}
             <div className="hidden xl:flex w-[210px] shrink-0 flex-col border-l border-red-900/20 bg-red-950/5">
               <div className="px-3 pt-3 pb-1 text-right">
-                <div className="text-[9px] text-red-400/60 uppercase tracking-widest font-bold">Second Pick · Red</div>
+                <div className="text-[9px] text-red-400/60 uppercase tracking-widest font-bold">Second Pick � Red</div>
                 <div className="text-sm font-bold text-red-200 truncate">{redTeam}</div>
               </div>
               <div className="flex-1 flex flex-col gap-1.5 px-2 pb-2 overflow-y-auto">
@@ -2313,7 +2338,7 @@ export default function DraftSimulator({
                   <span className={evaluationDashboard.teamPanels.red.missingLanes.length ? "text-amber-400" : "text-emerald-400"}>
                     {evaluationDashboard.teamPanels.red.missingLanes.length
                       ? `Missing: ${evaluationDashboard.teamPanels.red.missingLanes.join(", ")}`
-                      : "Lanes covered ✓"}
+                      : "Lanes covered ?"}
                   </span>
                 </div>
               </div>
@@ -2332,7 +2357,7 @@ export default function DraftSimulator({
                       <div className="h-8 w-8 aspect-square rounded-lg border border-blue-900/30 overflow-hidden bg-slate-900/40 shrink-0">
                         {h ? <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[6px]" /> : <div className="h-full w-full" />}
                       </div>
-                      <span className="text-[10px] text-gray-400 truncate">{h || "—"}</span>
+                      <span className="text-[10px] text-gray-400 truncate">{h || "�"}</span>
                     </div>
                   );
                 })}
@@ -2345,7 +2370,7 @@ export default function DraftSimulator({
                   const h = redPicks[i] || "";
                   return (
                     <div key={i} className="flex items-center gap-1.5 h-8 justify-end">
-                      <span className="text-[10px] text-gray-400 truncate">{h || "—"}</span>
+                      <span className="text-[10px] text-gray-400 truncate">{h || "�"}</span>
                       <div className="h-8 w-8 aspect-square rounded-lg border border-red-900/30 overflow-hidden bg-slate-900/40 shrink-0">
                         {h ? <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[6px]" /> : <div className="h-full w-full" />}
                       </div>
@@ -2356,7 +2381,7 @@ export default function DraftSimulator({
             </div>
           </div>
 
-          {/* ── ZONE 4: ANALYSIS PANEL ───────────────────────────────────────── */}
+          {/* -- ZONE 4: ANALYSIS PANEL ----------------------------------------- */}
           <div className="relative z-10 border-t border-white/[0.05]">
             <div className="flex items-center gap-0 px-2 border-b border-white/[0.04] bg-black/20">
               {([
@@ -2373,10 +2398,10 @@ export default function DraftSimulator({
                   <span className="hidden sm:inline">{label}</span>
                 </button>
               ))}
-              {recommendationsPaused ? (
-                <span className="ml-auto text-[10px] text-amber-300/80 pr-3">Paused · cache only</span>
+              {isPaused ? (
+                <span className="ml-auto text-[10px] text-amber-300/80 pr-3">Paused � cache only</span>
               ) : recsLoading ? (
-                <span className="ml-auto text-[10px] text-gray-500 animate-pulse pr-3">Updating…</span>
+                <span className="ml-auto text-[10px] text-cyan-300/80 animate-pulse pr-3">Analyzing�</span>
               ) : null}
             </div>
             <div className="p-3 min-h-[150px]">
@@ -2453,7 +2478,7 @@ export default function DraftSimulator({
                   ) : (
                     <div className="rounded-2xl border border-dashed border-white/[0.08] bg-black/20 p-5 text-center">
                       <Sparkles className="mx-auto h-6 w-6 text-cyan-300/70" />
-                      <div className="mt-2 text-sm font-bold text-white">{recsLoading ? "Loading recommendations…" : "Belum ada rekomendasi untuk step ini"}</div>
+                      <div className="mt-2 text-sm font-bold text-white">Belum ada rekomendasi untuk step ini</div>
                       <p className="mx-auto mt-1 max-w-md text-xs leading-relaxed text-gray-500">
                         Rekomendasi muncul otomatis saat draft berjalan. Klik AI untuk memaksa fetch, atau lock hero dulu agar engine punya konteks pick/ban.
                       </p>
@@ -2489,10 +2514,10 @@ export default function DraftSimulator({
               )}
               {analysisTab === "intel" && (
                 <div className="flex gap-2 overflow-x-auto scrollbar-none pb-1">
-                  {/* Local data — always shown immediately */}
+                  {/* Local data � always shown immediately */}
                   {draftMode === "mpl" && (selectedBlueTeam || selectedRedTeam) ? (
                     <>
-                      {/* Blue team comfort heroes — local or AI enriched */}
+                      {/* Blue team comfort heroes � local or AI enriched */}
                       <div className="shrink-0 w-[180px] p-2.5 rounded-xl border border-blue-500/20 bg-blue-950/10">
                         <div className="text-[8px] text-blue-400/70 uppercase tracking-wider mb-1.5">{blueTeam} Comfort</div>
                         {blueComfortHeroes.length > 0 ? (
@@ -2502,7 +2527,7 @@ export default function DraftSimulator({
                             ))}
                           </div>
                         ) : (
-                          <div className="text-[9px] text-gray-600 italic">{aiLoading ? "Loading…" : "Click AI to load"}</div>
+                          <div className="text-[9px] text-gray-600 italic">{aiLoading ? "Loading�" : "Click AI to load"}</div>
                         )}
                       </div>
                       {/* Red team comfort heroes */}
@@ -2515,12 +2540,12 @@ export default function DraftSimulator({
                             ))}
                           </div>
                         ) : (
-                          <div className="text-[9px] text-gray-600 italic">{aiLoading ? "Loading…" : "Click AI to load"}</div>
+                          <div className="text-[9px] text-gray-600 italic">{aiLoading ? "Loading�" : "Click AI to load"}</div>
                         )}
                       </div>
                     </>
                   ) : null}
-                  {/* Global meta context — always available instantly */}
+                  {/* Global meta context � always available instantly */}
                   <div className="shrink-0 w-[180px] p-2.5 rounded-xl border border-white/[0.07] bg-white/[0.02]">
                     <div className="text-[8px] text-gray-500 uppercase tracking-wider mb-1.5">Meta Top Picks</div>
                     <div className="flex flex-wrap gap-1">
@@ -2582,7 +2607,7 @@ export default function DraftSimulator({
             </div>
           </div>
 
-          {/* ── ZONE 5: POST-DRAFT ANALYSIS (summary strip, always visible after complete) ──── */}
+          {/* -- ZONE 5: POST-DRAFT ANALYSIS (summary strip, always visible after complete) ---- */}
           {isCompleted && !showAnalysis && (
             <div className="relative z-10 border-t border-white/[0.05] px-4 py-3 flex flex-wrap items-center gap-3 bg-black/30">
               <div className="flex-1 flex flex-wrap gap-2 min-w-0">
@@ -2610,7 +2635,7 @@ export default function DraftSimulator({
               </button>
             </div>
           )}
-          {/* ── FULL ANALYSIS VIEW OVERLAY ──────────────────────────────────── */}
+          {/* -- FULL ANALYSIS VIEW OVERLAY ------------------------------------ */}
           {isCompleted && showAnalysis && (
             <div className="absolute inset-0 z-50 bg-[#08091a] overflow-y-auto">
               {/* Back bar */}
@@ -2623,7 +2648,7 @@ export default function DraftSimulator({
                   Back to Draft
                 </button>
                 <div className="flex-1 text-center text-sm font-bold text-white">Draft Analysis</div>
-                <div className="text-[10px] text-gray-600 w-20 text-right">{evaluationLoading ? "Analyzing…" : "Complete"}</div>
+                <div className="text-[10px] text-gray-600 w-20 text-right">{evaluationLoading ? "Analyzing�" : "Complete"}</div>
               </div>
               {/* Analysis cards */}
               <div className="p-4 space-y-4">
@@ -2650,7 +2675,7 @@ export default function DraftSimulator({
                     <div className={`text-sm font-black mt-1 ${evaluationDashboard.predictedWinner === "blue" ? "text-blue-300" : evaluationDashboard.predictedWinner === "red" ? "text-red-300" : "text-gray-300"}`}>
                       {evaluationDashboard.predictedWinner === "even" ? "Even Draft" : evaluationDashboard.predictedWinner === "blue" ? blueTeam : redTeam}
                     </div>
-                    <div className="text-[10px] text-gray-600 mt-0.5">{evaluationDashboard.confidenceLabel} · {evaluationDashboard.confidence}%</div>
+                    <div className="text-[10px] text-gray-600 mt-0.5">{evaluationDashboard.confidenceLabel} � {evaluationDashboard.confidence}%</div>
                   </div>
                   <div className="rounded-xl border border-white/[0.07] bg-white/[0.02] p-3">
                     <div className="text-[9px] text-gray-500 uppercase tracking-widest">Lane Coverage</div>
@@ -2658,13 +2683,13 @@ export default function DraftSimulator({
                       <div className="text-[10px]">
                         <span className="text-blue-400">Blue: </span>
                         <span className={evaluationDashboard.teamPanels.blue.missingLanes.length ? "text-amber-400" : "text-emerald-400"}>
-                          {evaluationDashboard.teamPanels.blue.missingLanes.length ? evaluationDashboard.teamPanels.blue.missingLanes.join(", ") : "Full ✓"}
+                          {evaluationDashboard.teamPanels.blue.missingLanes.length ? evaluationDashboard.teamPanels.blue.missingLanes.join(", ") : "Full ?"}
                         </span>
                       </div>
                       <div className="text-[10px]">
                         <span className="text-red-400">Red: </span>
                         <span className={evaluationDashboard.teamPanels.red.missingLanes.length ? "text-amber-400" : "text-emerald-400"}>
-                          {evaluationDashboard.teamPanels.red.missingLanes.length ? evaluationDashboard.teamPanels.red.missingLanes.join(", ") : "Full ✓"}
+                          {evaluationDashboard.teamPanels.red.missingLanes.length ? evaluationDashboard.teamPanels.red.missingLanes.join(", ") : "Full ?"}
                         </span>
                       </div>
                     </div>
@@ -2775,7 +2800,7 @@ export default function DraftSimulator({
                     {evaluationLoading ? (
                       <div className="flex items-center gap-2 text-sm text-emerald-300">
                         <Wand2 className="h-5 w-5 animate-pulse" />
-                        Running final analysis…
+                        Running final analysis�
                       </div>
                     ) : (
                       <div className="grid gap-2">
@@ -2786,7 +2811,7 @@ export default function DraftSimulator({
                           .slice(0, 5)
                           .map((line, index) => (
                             <div key={index} className="rounded-lg border border-emerald-500/10 bg-black/20 px-3 py-2 text-sm text-gray-200">
-                              • {line}
+                              � {line}
                             </div>
                           ))}
                       </div>
@@ -2811,12 +2836,50 @@ export default function DraftSimulator({
                         .slice(0, 10)
                         .map((rec: any, idx: number) => (
                           <div key={`${rec.heroName}-${idx}`} className="rounded-lg border border-white/8 bg-black/20 px-3 py-2 text-[11px]">
-                            <div className="font-bold text-white">{rec.heroName} — {rec.totalScore ?? rec.score ?? 0}</div>
+                            <div className="font-bold text-white">{rec.heroName} � {rec.totalScore ?? rec.score ?? 0}</div>
                             <div className="text-gray-400 break-all">{JSON.stringify(rec.scoreBreakdown || {})}</div>
                           </div>
                         ))}
                     </div>
                   </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* PAUSE OVERLAY */}
+          {isPaused && countdownValue === null && (
+            <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+              <div className="relative max-w-md w-full mx-4">
+                <div className="rounded-2xl border border-white/[0.08] bg-[#0c1220]/95 backdrop-blur-xl p-8 text-center shadow-2xl">
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-indigo-500/5 to-transparent pointer-events-none" />
+                  <div className="relative z-10">
+                    <div className="mx-auto mb-4 h-16 w-16 rounded-2xl bg-amber-950/40 border border-amber-500/25 flex items-center justify-center"><Pause className="h-8 w-8 text-amber-400" /></div>
+                    <h2 className="text-2xl font-black text-white uppercase tracking-widest" style={{ fontFamily: "var(--font-display)" }}>Draft Paused</h2>
+                    <p className="mt-2 text-sm text-gray-400">Timer, rekomendasi, dan aksi draft sedang dijeda.</p>
+                    <div className="mt-5 rounded-xl border border-white/[0.06] bg-white/[0.02] p-4 text-left space-y-2">
+                      <div className="flex items-center justify-between text-sm"><span className="text-gray-500">Tim</span><span className="font-bold text-cyan-300">{currentStep?.side === "BLUE" ? blueTeam : redTeam}</span></div>
+                      <div className="flex items-center justify-between text-sm"><span className="text-gray-500">Aksi</span><span className="font-bold">{currentStep?.type === "BAN" ? "Ban" : "Pick"}</span></div>
+                      <div className="flex items-center justify-between text-sm"><span className="text-gray-500">Sisa Waktu</span><span className="font-mono font-bold text-amber-300">{timerSeconds}s</span></div>
+                      <div className="flex items-center justify-between text-sm"><span className="text-gray-500">Step</span><span className="font-mono text-xs text-gray-300">{currentStepIdx + 1} / 20</span></div>
+                    </div>
+                    <button onClick={() => { savedTimerRef.current = timerSeconds; setCountdownValue(3); setIsPaused(false); setRecommendationsPaused(false); }} className="mt-6 w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 text-white font-bold uppercase tracking-wider text-sm hover:from-emerald-500 hover:to-cyan-500 transition-all shadow-lg shadow-emerald-500/20"><Play className="h-5 w-5" />Resume Draft</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* COUNTDOWN OVERLAY */}
+          {countdownValue !== null && (
+            <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm pointer-events-none">
+              <div className="text-center">
+                {countdownValue > 0 ? (
+                  <div><div className="text-[120px] font-black text-white leading-none tabular-nums" style={{ fontFamily: "var(--font-display)", textShadow: "0 0 60px rgba(34,211,238,0.4)" }}>{countdownValue}</div>
+                    <div className="mt-2 text-lg font-bold text-cyan-300 uppercase tracking-widest" style={{ fontFamily: "var(--font-display)" }}>Ready</div></div>
+                ) : (
+                  <div className="animate-pulse"><div className="text-7xl font-black text-emerald-400 leading-none" style={{ fontFamily: "var(--font-display)", textShadow: "0 0 60px rgba(74,222,128,0.5)" }}>GO</div>
+                    <div className="mt-2 text-lg font-bold text-emerald-300 uppercase tracking-widest" style={{ fontFamily: "var(--font-display)" }}>Resume!</div></div>
                 )}
               </div>
             </div>
