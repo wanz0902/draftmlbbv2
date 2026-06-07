@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from "react";
+ï»¿import { useState, useEffect, useMemo, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import { User } from "firebase/auth";
 import { saveDraft } from "../lib/firebase";
@@ -73,7 +73,7 @@ const DRAFT_SEQUENCE: DraftStep[] = [
   { idx: 19, side: "RED", type: "PICK", label: "Red Pick 5" },
 ];
 
-// Static fallback data — used if API fetch fails
+// Static fallback data ï¿½ used if API fetch fails
 const FALLBACK_MPL_TEAMS: Array<{ key: string; name: string; logo: string }> = [
   { key: "RRQ", name: "Rex Regum Qeon", logo: "" },
   { key: "EVOS", name: "EVOS Esports", logo: "" },
@@ -201,7 +201,7 @@ export default function DraftSimulator({
   const [bluePicks, setBluePicks] = useState<string[]>([]);
   const [redPicks, setRedPicks] = useState<string[]>([]);
 
-  // Undo history — snapshots taken BEFORE each lock action
+  // Undo history ï¿½ snapshots taken BEFORE each lock action
   type DraftSnapshot = {
     stepIdx: number;
     blueBans: string[];
@@ -313,7 +313,7 @@ export default function DraftSimulator({
           }
         }
       } catch (err) {
-        // Silently fail — recommendations are non-critical
+        // Silently fail ï¿½ recommendations are non-critical
         console.error("Auto-recommendation fetch failed:", err);
       } finally {
         setRecsLoading(false);
@@ -357,7 +357,7 @@ export default function DraftSimulator({
           }
         }
       } catch (err) {
-        // Silently fail — lane status is non-critical UI enhancement
+        // Silently fail ï¿½ lane status is non-critical UI enhancement
       }
     };
 
@@ -778,7 +778,7 @@ export default function DraftSimulator({
           label,
           reason: entry.reason,
           source,
-          evidence: evidenceParts.join(" · ") || entry.evidence?.source || "Local coach evidence",
+          evidence: evidenceParts.join(" ï¿½ ") || entry.evidence?.source || "Local coach evidence",
           score: (entry as any).priorityScore ?? entry.totalScore ?? 0,
           tone: getRecommendationTone(label, currentStep?.type),
           scoreBreakdown,
@@ -818,7 +818,7 @@ export default function DraftSimulator({
           label,
           reason: entry.reason,
           source: sourceLabel,
-          evidence: evidenceParts.join(" · ") || mplEntry.evidence?.source || (topFactor ? `${formatSourceLabel(topFactor[0])} ${topFactor[1]}` : `${entry.totalScore}/100`),
+          evidence: evidenceParts.join(" ï¿½ ") || mplEntry.evidence?.source || (topFactor ? `${formatSourceLabel(topFactor[0])} ${topFactor[1]}` : `${entry.totalScore}/100`),
           score: entry.totalScore ?? 0,
           tone: getRecommendationTone(label, currentStep?.type),
           scoreBreakdown,
@@ -1219,14 +1219,14 @@ export default function DraftSimulator({
       if (hasTank && hasSupport) strengths.push("Double frontline untuk perlindungan ekstra");
       if (hasAssassin && hasMage) strengths.push("Burst combo tinggi untuk pick-off");
 
-      if (!hasTank && !hasSupport) weaknesses.push("Tidak ada frontline — rentan terhadap dive");
+      if (!hasTank && !hasSupport) weaknesses.push("Tidak ada frontline ï¿½ rentan terhadap dive");
       if (!hasMarksman) weaknesses.push("Kurang sustained DPS untuk late game objective");
-      if (!hasMage) weaknesses.push("Kurang magic damage — musuh bisa build full armor");
+      if (!hasMage) weaknesses.push("Kurang magic damage ï¿½ musuh bisa build full armor");
       if (!hasAssassin && !hasMage) weaknesses.push("Kurang burst damage untuk eliminasi carry");
       if (!hasFighter) weaknesses.push("Kurang pressure di EXP lane");
 
       const uniqueRoles = new Set(roles);
-      if (uniqueRoles.size <= 2 && picks.length >= 4) weaknesses.push("Role diversity rendah — komposisi monoton");
+      if (uniqueRoles.size <= 2 && picks.length >= 4) weaknesses.push("Role diversity rendah ï¿½ komposisi monoton");
 
       // Power spike analysis
       let powerSpike = "Mid Game";
@@ -1259,11 +1259,11 @@ export default function DraftSimulator({
     md += `## Predicted Lane Assignment\n\n`;
     md += `**Tim Biru:**\n`;
     bluePicks.forEach(name => {
-      md += `- ${name} ? ${predictLane(name)} (${getHeroRole(name)})\n`;
+      md += `- ${name} \u2192 ${predictLane(name)} (${getHeroRole(name)})\n`;
     });
     md += `\n**Tim Merah:**\n`;
     redPicks.forEach(name => {
-      md += `- ${name} ? ${predictLane(name)} (${getHeroRole(name)})\n`;
+      md += `- ${name} \u2192 ${predictLane(name)} (${getHeroRole(name)})\n`;
     });
 
     md += `\n## Kekuatan Tim Biru\n`;
@@ -1336,7 +1336,7 @@ export default function DraftSimulator({
     return md;
   };
 
-  // Final Expert Evaluation — AI Provider Router (primary ? fallback ? local)
+  // Final Expert Evaluation ï¿½ AI Provider Router (primary / fallback / local)
   const evaluateDraftGame = async () => {
     setEvaluationLoading(true);
     setEvaluationResult("");
@@ -1344,7 +1344,7 @@ export default function DraftSimulator({
     let aiStatus = "";
 
     try {
-      // Try AI Provider Router (server handles tokenplan ? wafer ? local failover)
+      // Try AI Provider Router (server handles tokenplan / wafer / local failover)
       const controller = new AbortController();
       const timeoutId = window.setTimeout(() => controller.abort(), 12000);
       const aiResponse = await fetch("/api/ai/draft-analysis", {
@@ -1370,17 +1370,17 @@ export default function DraftSimulator({
           setEvaluationMeta(aiResult);
           return; // AI analysis succeeded
         }
-        // AI returned success:false — check for credit/config issues
+        // AI returned success:false ï¿½ check for credit/config issues
         const errMsg = aiResult.error || "";
         if (errMsg.includes("insufficient") || errMsg.includes("402") || errMsg.includes("credit")) {
-          aiStatus = "> ?? *AI Analyst: credit habis (insufficient credits). Menggunakan fallback.*\n\n";
+          aiStatus = "> **AI Analyst:** credit habis (insufficient credits). Menggunakan fallback.*\n\n";
         } else if (errMsg.includes("not configured") || errMsg.includes("YOUR_KEY")) {
-          aiStatus = "> ?? *AI Analyst: API key belum dikonfigurasi. Menggunakan fallback.*\n\n";
+          aiStatus = "> **AI Analyst:** API key belum dikonfigurasi. Menggunakan fallback.*\n\n";
         } else {
-          aiStatus = "> ?? *AI Analyst tidak tersedia. Menggunakan analisis alternatif.*\n\n";
+          aiStatus = "> **AI Analyst** tidak tersedia. Menggunakan analisis alternatif.*\n\n";
         }
       } else {
-        aiStatus = "> ?? *AI Analyst tidak tersedia. Menggunakan analisis alternatif.*\n\n";
+        aiStatus = "> **AI Analyst** tidak tersedia. Menggunakan analisis alternatif.*\n\n";
       }
 
       // Fallback to existing Gemini endpoint
@@ -1410,7 +1410,7 @@ export default function DraftSimulator({
       setEvaluationMeta({
         success: false,
         analysis: aiStatus + generateLocalFallbackAnalysis(),
-        dataNotes: ["Heuristic estimate — fallback lokal karena endpoint analisis tidak tersedia."],
+        dataNotes: ["Heuristic estimate ï¿½ fallback lokal karena endpoint analisis tidak tersedia."],
       });
     } finally {
       setEvaluationLoading(false);
@@ -1552,7 +1552,7 @@ export default function DraftSimulator({
         })
         .catch((err) => {
           console.error("Failed to fetch MPL teams:", err);
-          setTeamsError("Gagal memuat data tim MPL — menggunakan data lokal");
+          setTeamsError("Gagal memuat data tim MPL ï¿½ menggunakan data lokal");
           setMplTeams(FALLBACK_MPL_TEAMS);
         })
         .finally(() => setTeamsLoading(false));
@@ -1608,10 +1608,10 @@ export default function DraftSimulator({
         </div>
       )}
       {isBlue && !heroName && (
-        <div className="text-[11px] text-white/20">{isActive ? "Picking…" : `Slot ${index + 1}`}</div>
+        <div className="text-[11px] text-white/20">{isActive ? "Pickingï¿½" : `Slot ${index + 1}`}</div>
       )}
       {!isBlue && !heroName && (
-        <div className="text-[11px] text-white/20 flex-1 text-right">{isActive ? "Picking…" : `Slot ${index + 1}`}</div>
+        <div className="text-[11px] text-white/20 flex-1 text-right">{isActive ? "Pickingï¿½" : `Slot ${index + 1}`}</div>
       )}
     </div>
   );
@@ -1619,329 +1619,441 @@ export default function DraftSimulator({
   return (
     <div className="flex flex-col gap-6">
       {!draftStarted ? (
-        /* Mode Selection / Setup Screen */
-        <div className="mx-auto max-w-2xl rounded-2xl border border-gray-950 bg-gray-950 p-6 sm:p-8 shadow-2xl text-center flex flex-col items-center gap-5 my-10 relative overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-red-600 opacity-80" />
+        /* Mode Selection / Setup Screen ï¿½ Redesigned */
+        <div className="mx-auto max-w-3xl my-10 relative">
+          {/* Ambient glow */}
+          <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-pink-500/10 blur-xl pointer-events-none" />
 
-          {/* Step 1: Mode not yet selected */}
-          {draftMode === null && (
-            <>
-              <div className="h-16 w-16 rounded-full bg-indigo-900/40 border border-indigo-500/25 flex items-center justify-center text-indigo-400">
-                <Users className="h-8 w-8 text-indigo-400" />
-              </div>
+          <div className="relative rounded-3xl border border-white/[0.06] bg-[#080c18] p-6 sm:p-10 shadow-2xl text-center flex flex-col items-center gap-6 overflow-hidden">
+            {/* Decorative top bar */}
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
 
-              <div>
-                <h2 className="text-2xl font-bold text-white tracking-tight">
-                  Draft Coach Simulator
-                </h2>
-                <p className="text-sm text-gray-400 mt-2 leading-relaxed">
-                  Pilih mode draf yang ingin kamu gunakan. Sistem akan mengatur flow draft MPL resmi (3 Ban - 3 Pick - 2 Ban - 2 Pick) dan menganalisis setiap langkah.
-                </p>
-              </div>
+            {/* Background grid pattern */}
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle,#ffffff 1px,transparent 1px)", backgroundSize: "24px 24px" }} />
 
-              <div className="grid w-full gap-2 rounded-xl border border-gray-800 bg-gray-900/40 p-4 text-left">
-                <div className="flex items-center gap-2 text-sm text-indigo-300">
-                  <Clock className="h-4 w-4 shrink-0" />
-                  <span className="font-semibold">Info Timer Draft</span>
+            {/* Step 1: Mode not yet selected */}
+            {draftMode === null && (
+              <>
+                {/* Hero icon with animated ring */}
+                <div className="relative">
+                  <div className="absolute -inset-2 rounded-full bg-indigo-500/10 animate-pulse" />
+                  <div className="relative h-20 w-20 rounded-2xl bg-gradient-to-br from-indigo-600/30 to-purple-600/20 border border-indigo-500/30 flex items-center justify-center shadow-lg shadow-indigo-500/10">
+                    <Users className="h-9 w-9 text-indigo-300" />
+                  </div>
                 </div>
-                <div className="text-xs text-gray-400 leading-relaxed">
-                  <div><span className="text-indigo-300 font-semibold">MPL Mode:</span> semua giliran pick atau ban memakai timer 50 detik.</div>
-                  <div><span className="text-amber-300 font-semibold">Ranked / Casual Mode:</span> semua giliran pick atau ban memakai timer 30 detik.</div>
-                </div>
-              </div>
 
-              {/* Mode Selection Cards */}
-              <div className="grid w-full gap-4 mt-4 md:grid-cols-3">
-                {/* MPL Mode Card */}
+                <div>
+                  <h2 className="text-3xl font-black text-white tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
+                    DRAFT COACH
+                  </h2>
+                  <p className="text-sm text-gray-400 mt-2 leading-relaxed max-w-md mx-auto">
+                    Simulasi draft profesional dengan analisis AI. Pilih mode untuk memulai.
+                  </p>
+                </div>
+
+                {/* Timer info */}
+                <div className="w-full max-w-md grid grid-cols-2 gap-3">
+                  <div className="rounded-xl border border-indigo-500/15 bg-indigo-950/20 p-3 text-left">
+                    <div className="flex items-center gap-1.5 text-[10px] text-indigo-400 font-bold uppercase tracking-widest mb-1">
+                      <Clock className="h-3 w-3" />
+                      MPL Standard
+                    </div>
+                    <div className="text-lg font-black text-white" style={{ fontFamily: "var(--font-display)" }}>50<span className="text-xs text-gray-500 ml-1">detik</span></div>
+                  </div>
+                  <div className="rounded-xl border border-amber-500/15 bg-amber-950/20 p-3 text-left">
+                    <div className="flex items-center gap-1.5 text-[10px] text-amber-400 font-bold uppercase tracking-widest mb-1">
+                      <Clock className="h-3 w-3" />
+                      Ranked / Custom
+                    </div>
+                    <div className="text-lg font-black text-white" style={{ fontFamily: "var(--font-display)" }}>30<span className="text-xs text-gray-500 ml-1">detik</span></div>
+                  </div>
+                </div>
+
+                {/* Mode Selection Cards */}
+                <div className="grid w-full gap-4 mt-2 md:grid-cols-3">
+                  {/* MPL Mode Card */}
+                  <button
+                    onClick={() => setDraftMode("mpl")}
+                    className="flex-1 flex flex-col items-center gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 hover:border-indigo-500/40 hover:bg-indigo-950/20 transition-all cursor-pointer group"
+                  >
+                    <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-indigo-600/25 to-purple-600/15 border border-indigo-500/20 flex items-center justify-center group-hover:scale-110 group-hover:border-indigo-400/40 transition-all">
+                      <Users className="h-7 w-7 text-indigo-400" />
+                    </div>
+                    <div className="text-center">
+                      <h3 className="text-base font-bold text-white group-hover:text-indigo-300 transition" style={{ fontFamily: "var(--font-display)" }}>MPL Mode</h3>
+                      <p className="text-[11px] text-gray-500 mt-1 leading-relaxed">
+                        Simulasi draf dengan tim MPL. Pilih tim dari daftar resmi.
+                      </p>
+                    </div>
+                    <div className="mt-auto px-3 py-1 rounded-full border border-indigo-500/20 bg-indigo-500/10 text-[10px] text-indigo-300 font-bold uppercase tracking-wider">
+                      50 detik / giliran
+                    </div>
+                  </button>
+
+                  {/* Ranked Mode Card */}
+                  <button
+                    onClick={() => {
+                      setDraftMode("ranked");
+                      setBlueTeam("Blue Team");
+                      setRedTeam("Red Team");
+                    }}
+                    className="flex-1 flex flex-col items-center gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 hover:border-amber-500/40 hover:bg-amber-950/20 transition-all cursor-pointer group"
+                  >
+                    <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-amber-600/25 to-orange-600/15 border border-amber-500/20 flex items-center justify-center group-hover:scale-110 group-hover:border-amber-400/40 transition-all">
+                      <Trophy className="h-7 w-7 text-amber-400" />
+                    </div>
+                    <div className="text-center">
+                      <h3 className="text-base font-bold text-white group-hover:text-amber-300 transition" style={{ fontFamily: "var(--font-display)" }}>Ranked Mode</h3>
+                      <p className="text-[11px] text-gray-500 mt-1 leading-relaxed">
+                        Simulasi draf ranked dengan timer kompetitif.
+                      </p>
+                    </div>
+                    <div className="mt-auto px-3 py-1 rounded-full border border-amber-500/20 bg-amber-500/10 text-[10px] text-amber-300 font-bold uppercase tracking-wider">
+                      30 detik / giliran
+                    </div>
+                  </button>
+
+                  {/* Custom Mode Card */}
+                  <button
+                    onClick={() => {
+                      setDraftMode("custom");
+                      setBlueTeam("Blue Team");
+                      setRedTeam("Red Team");
+                    }}
+                    className="flex-1 flex flex-col items-center gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 hover:border-cyan-500/40 hover:bg-cyan-950/20 transition-all cursor-pointer group"
+                  >
+                    <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-cyan-600/25 to-teal-600/15 border border-cyan-500/20 flex items-center justify-center group-hover:scale-110 group-hover:border-cyan-400/40 transition-all">
+                      <Sparkle className="h-7 w-7 text-cyan-300" />
+                    </div>
+                    <div className="text-center">
+                      <h3 className="text-base font-bold text-white group-hover:text-cyan-200 transition" style={{ fontFamily: "var(--font-display)" }}>Custom Mode</h3>
+                      <p className="text-[11px] text-gray-500 mt-1 leading-relaxed">
+                        Draft bebas untuk eksperimen dan latihan.
+                      </p>
+                    </div>
+                    <div className="mt-auto px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-[10px] text-cyan-300 font-bold uppercase tracking-wider">
+                      Bebas
+                    </div>
+                  </button>
+                </div>
+              </>
+            )}
+
+            {/* Step 2: MPL Mode ï¿½ Team Selection */}
+            {draftMode === "mpl" && (
+              <>
                 <button
-                  onClick={() => setDraftMode("mpl")}
-                  className="flex-1 flex flex-col items-center gap-3 rounded-2xl border border-gray-800 bg-gray-900/50 p-6 hover:border-indigo-500/50 hover:bg-indigo-950/10 transition cursor-pointer group"
+                  onClick={() => setDraftMode(null)}
+                  className="absolute top-5 left-5 flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-300 transition"
                 >
-                  <div className="h-14 w-14 rounded-full bg-indigo-900/40 border border-indigo-500/25 flex items-center justify-center group-hover:border-indigo-400/50 transition">
-                    <Users className="h-7 w-7 text-indigo-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-indigo-300 transition">MPL Mode</h3>
-                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-                      Simulasi draf dengan tim MPL. Pilih tim yang bertanding dari daftar resmi.
-                    </p>
-                  </div>
+                  <ArrowLeft className="h-3.5 w-3.5" />
+                  Kembali
                 </button>
 
-                {/* Ranked Mode Card */}
-                <button
-                  onClick={() => {
-                    setDraftMode("ranked");
-                    setBlueTeam("Blue Team");
-                    setRedTeam("Red Team");
-                  }}
-                  className="flex-1 flex flex-col items-center gap-3 rounded-2xl border border-gray-800 bg-gray-900/50 p-6 hover:border-amber-500/50 hover:bg-amber-950/10 transition cursor-pointer group"
-                >
-                  <div className="h-14 w-14 rounded-full bg-amber-900/40 border border-amber-500/25 flex items-center justify-center group-hover:border-amber-400/50 transition">
-                    <Trophy className="h-7 w-7 text-amber-400" />
+                <div className="relative">
+                  <div className="absolute -inset-2 rounded-full bg-indigo-500/10 animate-pulse" />
+                  <div className="relative h-20 w-20 rounded-2xl bg-gradient-to-br from-indigo-600/30 to-purple-600/20 border border-indigo-500/30 flex items-center justify-center shadow-lg shadow-indigo-500/10">
+                    <Users className="h-9 w-9 text-indigo-300" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-amber-300 transition">Ranked Mode</h3>
-                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-                      Simulasi draf ranked. Semua giliran pick/ban memakai timer 30 detik.
-                    </p>
-                  </div>
-                </button>
-
-                <button
-                  onClick={() => {
-                    setDraftMode("custom");
-                    setBlueTeam("Blue Team");
-                    setRedTeam("Red Team");
-                  }}
-                  className="flex-1 flex flex-col items-center gap-3 rounded-2xl border border-gray-800 bg-gray-900/50 p-6 hover:border-cyan-500/50 hover:bg-cyan-950/10 transition cursor-pointer group"
-                >
-                  <div className="h-14 w-14 rounded-full bg-cyan-900/30 border border-cyan-500/20 flex items-center justify-center group-hover:border-cyan-400/50 transition">
-                    <Sparkle className="h-7 w-7 text-cyan-300" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-200 transition">Custom Mode</h3>
-                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-                      Draft bebas untuk latihan lane swap, eksperimen, dan evaluasi komposisi tanpa konteks tim esports.
-                    </p>
-                  </div>
-                </button>
-              </div>
-            </>
-          )}
-
-          {/* Step 2: MPL Mode — Team Selection */}
-          {draftMode === "mpl" && (
-            <>
-              <button
-                onClick={() => setDraftMode(null)}
-                className="absolute top-5 left-5 flex items-center gap-1 text-xs text-gray-500 hover:text-gray-300 transition"
-              >
-                <ArrowLeft className="h-3.5 w-3.5" />
-                Kembali
-              </button>
-
-              <div className="h-14 w-14 rounded-full bg-indigo-900/40 border border-indigo-500/25 flex items-center justify-center text-indigo-400">
-                <Users className="h-7 w-7 text-indigo-400" />
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold text-white tracking-tight">
-                  MPL Mode — Pilih Tim
-                </h2>
-                <p className="text-sm text-gray-400 mt-1 leading-relaxed">
-                  Pilih tim MPL untuk sisi Biru dan Merah. Rekomendasi akan disesuaikan berdasarkan profil tim.
-                </p>
-              </div>
-
-              {/* MPL Timer Info Badge */}
-              <div className="flex items-center gap-2 rounded-lg bg-indigo-950/60 border border-indigo-500/30 px-4 py-2 text-sm text-indigo-300">
-                <Clock className="h-4 w-4 shrink-0 text-indigo-400" />
-                <span>
-                  <span className="font-semibold text-indigo-200">Pick &amp; Ban Timer: 50 detik per giliran</span>
-                  <span className="text-indigo-400/80 ml-1">(MPL Standard)</span>
-                </span>
-              </div>
-
-              {teamsLoading ? (
-                <div className="flex items-center gap-2 py-6">
-                  <div className="h-5 w-5 border-t-2 border-indigo-500 rounded-full animate-spin" />
-                  <span className="text-sm text-gray-400">Memuat data tim...</span>
                 </div>
-              ) : (
-                <>
-                {teamsError && (
-                  <div className="flex items-center gap-2 py-2">
-                    <span className="text-xs text-amber-400">{teamsError}</span>
-                    <button onClick={handleRetryTeams} className="text-xs text-indigo-400 hover:text-indigo-300 underline">
-                      Coba lagi
-                    </button>
+
+                <div>
+                  <h2 className="text-3xl font-black text-white tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
+                    PILIH TIM
+                  </h2>
+                  <p className="text-sm text-gray-400 mt-2 leading-relaxed max-w-md mx-auto">
+                    Pilih tim MPL untuk sisi Biru dan Merah. Rekomendasi akan disesuaikan berdasarkan profil tim.
+                  </p>
+                </div>
+
+                {/* Timer badge */}
+                <div className="flex items-center gap-2.5 rounded-xl bg-indigo-950/40 border border-indigo-500/20 px-5 py-2.5">
+                  <Clock className="h-4 w-4 shrink-0 text-indigo-400" />
+                  <span className="text-sm">
+                    <span className="font-bold text-indigo-200" style={{ fontFamily: "var(--font-display)" }}>Pick &amp; Ban: 50 detik</span>
+                    <span className="text-indigo-400/60 ml-1.5 text-xs">per giliran (MPL Standard)</span>
+                  </span>
+                </div>
+
+                {teamsLoading ? (
+                  <div className="flex items-center gap-3 py-8">
+                    <div className="h-5 w-5 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+                    <span className="text-sm text-gray-400">Memuat data tim...</span>
                   </div>
+                ) : (
+                  <>
+                    {teamsError && (
+                      <div className="flex items-center gap-2 py-2">
+                        <span className="text-xs text-amber-400">{teamsError}</span>
+                        <button onClick={handleRetryTeams} className="text-xs text-indigo-400 hover:text-indigo-300 underline">
+                          Coba lagi
+                        </button>
+                      </div>
+                    )}
+
+                    {/* VS Battle Layout */}
+                    <div className="w-full mt-2">
+                      <div className="flex items-center gap-4 flex-col sm:flex-row">
+                        {/* Blue Team */}
+                        <div className="flex-1 w-full">
+                          <div className="rounded-2xl border border-blue-500/15 bg-blue-950/10 p-4">
+                            <div className="flex items-center gap-2 mb-3">
+                              <div className="h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_6px_rgba(96,165,250,0.6)]" />
+                              <span className="text-[10px] text-blue-400 font-bold uppercase tracking-[0.2em]" style={{ fontFamily: "var(--font-mono)" }}>Blue Side</span>
+                              <span className="text-[9px] text-blue-400/50 ml-auto" style={{ fontFamily: "var(--font-mono)" }}>FIRST PICK</span>
+                            </div>
+                            <select
+                              value={selectedBlueTeam}
+                              onChange={(e) => {
+                                setSelectedBlueTeam(e.target.value);
+                                const team = mplTeams.find((t) => t.key === e.target.value);
+                                if (team) setBlueTeam(team.name);
+                              }}
+                              className="w-full rounded-xl bg-[#0a1020] border border-blue-500/15 px-4 py-3 text-white text-sm font-semibold focus:outline-none focus:border-blue-500/40 focus:ring-1 focus:ring-blue-500/20 transition-all appearance-none cursor-pointer"
+                              style={{ fontFamily: "var(--font-display)" }}
+                            >
+                              <option value="">Pilih tim biru...</option>
+                              {mplTeams.map((team) => (
+                                <option key={team.key} value={team.key} disabled={team.key === selectedRedTeam}>
+                                  {team.name}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+                        </div>
+
+                        {/* VS Divider */}
+                        <div className="flex flex-col items-center gap-1 py-2 sm:py-0 shrink-0">
+                          <div className="hidden sm:block w-px h-8 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+                          <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-white/[0.08] flex items-center justify-center shadow-lg">
+                            <span className="text-[11px] font-black text-gray-400 uppercase tracking-wider" style={{ fontFamily: "var(--font-display)" }}>VS</span>
+                          </div>
+                          <div className="hidden sm:block w-px h-8 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+                        </div>
+
+                        {/* Red Team */}
+                        <div className="flex-1 w-full">
+                          <div className="rounded-2xl border border-red-500/15 bg-red-950/10 p-4">
+                            <div className="flex items-center gap-2 mb-3">
+                              <div className="h-2 w-2 rounded-full bg-red-400 shadow-[0_0_6px_rgba(248,113,113,0.6)]" />
+                              <span className="text-[10px] text-red-400 font-bold uppercase tracking-[0.2em]" style={{ fontFamily: "var(--font-mono)" }}>Red Side</span>
+                            </div>
+                            <select
+                              value={selectedRedTeam}
+                              onChange={(e) => {
+                                setSelectedRedTeam(e.target.value);
+                                const team = mplTeams.find((t) => t.key === e.target.value);
+                                if (team) setRedTeam(team.name);
+                              }}
+                              className="w-full rounded-xl bg-[#0a1020] border border-red-500/15 px-4 py-3 text-white text-sm font-semibold focus:outline-none focus:border-red-500/40 focus:ring-1 focus:ring-red-500/20 transition-all appearance-none cursor-pointer"
+                              style={{ fontFamily: "var(--font-display)" }}
+                            >
+                              <option value="">Pilih tim merah...</option>
+                              {mplTeams.map((team) => (
+                                <option key={team.key} value={team.key} disabled={team.key === selectedBlueTeam}>
+                                  {team.name}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </>
                 )}
-                <div className="flex gap-4 w-full mt-4 flex-col sm:flex-row items-center justify-center">
-                  <div className="w-full sm:w-1/2 flex flex-col gap-1 items-start">
-                    <label className="text-xs text-blue-400 font-bold uppercase tracking-wider">Tim Biru (First Pick)</label>
-                    <select
-                      value={selectedBlueTeam}
-                      onChange={(e) => {
-                        setSelectedBlueTeam(e.target.value);
-                        const team = mplTeams.find((t) => t.key === e.target.value);
-                        if (team) setBlueTeam(team.name);
-                      }}
-                      className="w-full rounded-lg bg-gray-900 border border-gray-800 px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 transition-colors"
-                    >
-                      <option value="">Pilih tim...</option>
-                      {mplTeams.map((team) => (
-                        <option key={team.key} value={team.key} disabled={team.key === selectedRedTeam}>
-                          {team.name}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="w-full sm:w-1/2 flex flex-col gap-1 items-start">
-                    <label className="text-xs text-red-500 font-bold uppercase tracking-wider">Tim Merah</label>
-                    <select
-                      value={selectedRedTeam}
-                      onChange={(e) => {
-                        setSelectedRedTeam(e.target.value);
-                        const team = mplTeams.find((t) => t.key === e.target.value);
-                        if (team) setRedTeam(team.name);
-                      }}
-                      className="w-full rounded-lg bg-gray-900 border border-gray-800 px-4 py-2.5 text-white focus:outline-none focus:border-red-500 transition-colors"
-                    >
-                      <option value="">Pilih tim...</option>
-                      {mplTeams.map((team) => (
-                        <option key={team.key} value={team.key} disabled={team.key === selectedBlueTeam}>
-                          {team.name}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-                </>
-              )}
 
-              {selectedBlueTeam && selectedRedTeam && selectedBlueTeam === selectedRedTeam && (
-                <p className="text-xs text-amber-400 text-center mt-1">?? Blue Team dan Red Team tidak boleh sama.</p>
-              )}
+                {selectedBlueTeam && selectedRedTeam && selectedBlueTeam === selectedRedTeam && (
+                  <p className="text-xs text-amber-400 text-center">Tim biru dan tim merah tidak boleh sama.</p>
+                )}
 
-              <div className="flex flex-col gap-2 w-full sm:flex-row sm:justify-center mt-3">
-                <button
-                  onClick={() => {
-                    handleStartDraft();
-                  }}
-                  disabled={!selectedBlueTeam || !selectedRedTeam || selectedBlueTeam === selectedRedTeam}
-                  className={`flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold text-white transition ${
-                    selectedBlueTeam && selectedRedTeam && selectedBlueTeam !== selectedRedTeam
-                      ? "bg-indigo-600 hover:bg-indigo-500 active:scale-95 cursor-pointer"
-                      : "bg-gray-800 text-gray-500 cursor-not-allowed"
-                  }`}
-                >
-                  <Play className="h-4.5 w-4.5" />
-                  Mulai Simulasi MPL
-                </button>
-              </div>
-            </>
-          )}
-
-          {/* Step 2: Ranked Mode — Free text team names */}
-          {draftMode === "ranked" && (
-            <>
-              <button
-                onClick={() => setDraftMode(null)}
-                className="absolute top-5 left-5 flex items-center gap-1 text-xs text-gray-500 hover:text-gray-300 transition"
-              >
-                <ArrowLeft className="h-3.5 w-3.5" />
-                Kembali
-              </button>
-
-              <div className="h-14 w-14 rounded-full bg-amber-900/40 border border-amber-500/25 flex items-center justify-center text-amber-400">
-                <Trophy className="h-7 w-7 text-amber-400" />
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold text-white tracking-tight">
-                  Ranked Mode
-                </h2>
-                <p className="text-sm text-gray-400 mt-1 leading-relaxed">
-                  Simulasi draf ranked. Rekomendasi berbasis meta tier dan statistik hero terkini.
-                </p>
-              </div>
-
-              <div className="flex gap-4 w-full mt-4 flex-col sm:flex-row items-center justify-center">
-                <div className="w-full sm:w-1/2 flex flex-col gap-1 items-start">
-                  <label className="text-xs text-blue-400 font-bold uppercase tracking-wider">Tim Biru (First Pick)</label>
-                  <input
-                    type="text"
-                    value={blueTeam}
-                    onChange={(e) => setBlueTeam(e.target.value)}
-                    className="w-full rounded-lg bg-gray-900 border border-gray-800 px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors"
-                    placeholder="Ketik nama tim..."
-                  />
-                </div>
-                <div className="w-full sm:w-1/2 flex flex-col gap-1 items-start">
-                  <label className="text-xs text-red-500 font-bold uppercase tracking-wider">Tim Merah</label>
-                  <input
-                    type="text"
-                    value={redTeam}
-                    onChange={(e) => setRedTeam(e.target.value)}
-                    className="w-full rounded-lg bg-gray-900 border border-gray-800 px-4 py-2 text-white focus:outline-none focus:border-red-500 transition-colors"
-                    placeholder="Ketik nama tim..."
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-2 w-full sm:flex-row sm:justify-center mt-3">
-                <button
-                  onClick={() => {
-                    handleStartDraft();
-                  }}
-                  className="flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-500 active:scale-95 transition"
-                >
-                  <Play className="h-4.5 w-4.5" />
-                  Mulai Simulasi Draf
-                </button>
-              </div>
-            </>
-          )}
-
-          {draftMode === "custom" && (
-            <>
-              <button
-                onClick={() => setDraftMode(null)}
-                className="absolute top-5 left-5 flex items-center gap-1 text-xs text-gray-500 hover:text-gray-300 transition"
-              >
-                <ArrowLeft className="h-3.5 w-3.5" />
-                Kembali
-              </button>
-
-              <div className="h-14 w-14 rounded-full bg-cyan-900/30 border border-cyan-500/20 flex items-center justify-center text-cyan-300">
-                <Sparkle className="h-7 w-7 text-cyan-300" />
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold text-white tracking-tight">
-                  Custom Mode
-                </h2>
-                <p className="text-sm text-gray-400 mt-1 leading-relaxed">
-                  Draft manual untuk eksperimen komposisi, lane swap, dan analyst review tanpa wajib memakai konteks MPL.
-                </p>
-              </div>
-
-              <div className="flex gap-4 w-full mt-4 flex-col sm:flex-row items-center justify-center">
-                <div className="w-full sm:w-1/2 flex flex-col gap-1 items-start">
-                  <label className="text-xs text-blue-400 font-bold uppercase tracking-wider">Blue Side</label>
-                  <input
-                    type="text"
-                    value={blueTeam}
-                    onChange={(e) => setBlueTeam(e.target.value)}
-                    className="w-full rounded-lg bg-gray-900 border border-gray-800 px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors"
-                    placeholder="Nama sisi biru..."
-                  />
-                </div>
-                <div className="w-full sm:w-1/2 flex flex-col gap-1 items-start">
-                  <label className="text-xs text-red-500 font-bold uppercase tracking-wider">Red Side</label>
-                  <input
-                    type="text"
-                    value={redTeam}
-                    onChange={(e) => setRedTeam(e.target.value)}
-                    className="w-full rounded-lg bg-gray-900 border border-gray-800 px-4 py-2 text-white focus:outline-none focus:border-red-500 transition-colors"
-                    placeholder="Nama sisi merah..."
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-2 w-full sm:flex-row sm:justify-center mt-3">
+                {/* Start Button */}
                 <button
                   onClick={handleStartDraft}
-                  className="flex items-center justify-center gap-2 rounded-xl bg-cyan-600 px-6 py-3 font-semibold text-white hover:bg-cyan-500 active:scale-95 transition"
+                  disabled={!selectedBlueTeam || !selectedRedTeam || selectedBlueTeam === selectedRedTeam}
+                  className={`relative mt-2 flex items-center justify-center gap-2.5 rounded-xl px-8 py-3.5 font-bold text-sm uppercase tracking-widest transition-all ${
+                    selectedBlueTeam && selectedRedTeam && selectedBlueTeam !== selectedRedTeam
+                      ? "bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 active:scale-[0.97] cursor-pointer"
+                      : "bg-white/[0.04] text-gray-600 cursor-not-allowed border border-white/[0.06]"
+                  }`}
+                  style={{ fontFamily: "var(--font-display)" }}
                 >
-                  <Play className="h-4.5 w-4.5" />
+                  <Play className="h-4 w-4" />
+                  Mulai Simulasi MPL
+                </button>
+              </>
+            )}
+
+            {/* Step 2: Ranked Mode ï¿½ Free text team names */}
+            {draftMode === "ranked" && (
+              <>
+                <button
+                  onClick={() => setDraftMode(null)}
+                  className="absolute top-5 left-5 flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-300 transition"
+                >
+                  <ArrowLeft className="h-3.5 w-3.5" />
+                  Kembali
+                </button>
+
+                <div className="relative">
+                  <div className="absolute -inset-2 rounded-full bg-amber-500/10 animate-pulse" />
+                  <div className="relative h-20 w-20 rounded-2xl bg-gradient-to-br from-amber-600/30 to-orange-600/20 border border-amber-500/30 flex items-center justify-center shadow-lg shadow-amber-500/10">
+                    <Trophy className="h-9 w-9 text-amber-300" />
+                  </div>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-black text-white tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
+                    RANKED MODE
+                  </h2>
+                  <p className="text-sm text-gray-400 mt-2 leading-relaxed max-w-md mx-auto">
+                    Simulasi draf ranked. Rekomendasi berbasis meta tier dan statistik hero terkini.
+                  </p>
+                </div>
+
+                {/* VS Battle Layout */}
+                <div className="w-full mt-2">
+                  <div className="flex items-center gap-4 flex-col sm:flex-row">
+                    <div className="flex-1 w-full">
+                      <div className="rounded-2xl border border-blue-500/15 bg-blue-950/10 p-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_6px_rgba(96,165,250,0.6)]" />
+                          <span className="text-[10px] text-blue-400 font-bold uppercase tracking-[0.2em]" style={{ fontFamily: "var(--font-mono)" }}>Blue Side</span>
+                          <span className="text-[9px] text-blue-400/50 ml-auto" style={{ fontFamily: "var(--font-mono)" }}>FIRST PICK</span>
+                        </div>
+                        <input
+                          type="text"
+                          value={blueTeam}
+                          onChange={(e) => setBlueTeam(e.target.value)}
+                          className="w-full rounded-xl bg-[#0a1020] border border-blue-500/15 px-4 py-3 text-white text-sm font-semibold focus:outline-none focus:border-blue-500/40 focus:ring-1 focus:ring-blue-500/20 transition-all"
+                          placeholder="Ketik nama tim..."
+                          style={{ fontFamily: "var(--font-display)" }}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-center gap-1 py-2 sm:py-0 shrink-0">
+                      <div className="hidden sm:block w-px h-8 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+                      <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-white/[0.08] flex items-center justify-center shadow-lg">
+                        <span className="text-[11px] font-black text-gray-400 uppercase tracking-wider" style={{ fontFamily: "var(--font-display)" }}>VS</span>
+                      </div>
+                      <div className="hidden sm:block w-px h-8 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+                    </div>
+
+                    <div className="flex-1 w-full">
+                      <div className="rounded-2xl border border-red-500/15 bg-red-950/10 p-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="h-2 w-2 rounded-full bg-red-400 shadow-[0_0_6px_rgba(248,113,113,0.6)]" />
+                          <span className="text-[10px] text-red-400 font-bold uppercase tracking-[0.2em]" style={{ fontFamily: "var(--font-mono)" }}>Red Side</span>
+                        </div>
+                        <input
+                          type="text"
+                          value={redTeam}
+                          onChange={(e) => setRedTeam(e.target.value)}
+                          className="w-full rounded-xl bg-[#0a1020] border border-red-500/15 px-4 py-3 text-white text-sm font-semibold focus:outline-none focus:border-red-500/40 focus:ring-1 focus:ring-red-500/20 transition-all"
+                          placeholder="Ketik nama tim..."
+                          style={{ fontFamily: "var(--font-display)" }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  onClick={handleStartDraft}
+                  className="mt-2 flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 px-8 py-3.5 font-bold text-sm uppercase tracking-widest text-white hover:from-amber-500 hover:to-orange-500 active:scale-[0.97] transition-all shadow-lg shadow-amber-500/20 cursor-pointer"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  <Play className="h-4 w-4" />
+                  Mulai Simulasi Draf
+                </button>
+              </>
+            )}
+
+            {draftMode === "custom" && (
+              <>
+                <button
+                  onClick={() => setDraftMode(null)}
+                  className="absolute top-5 left-5 flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-300 transition"
+                >
+                  <ArrowLeft className="h-3.5 w-3.5" />
+                  Kembali
+                </button>
+
+                <div className="relative">
+                  <div className="absolute -inset-2 rounded-full bg-cyan-500/10 animate-pulse" />
+                  <div className="relative h-20 w-20 rounded-2xl bg-gradient-to-br from-cyan-600/30 to-teal-600/20 border border-cyan-500/30 flex items-center justify-center shadow-lg shadow-cyan-500/10">
+                    <Sparkle className="h-9 w-9 text-cyan-300" />
+                  </div>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-black text-white tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
+                    CUSTOM MODE
+                  </h2>
+                  <p className="text-sm text-gray-400 mt-2 leading-relaxed max-w-md mx-auto">
+                    Draft manual untuk eksperimen komposisi, lane swap, dan analyst review.
+                  </p>
+                </div>
+
+                {/* VS Battle Layout */}
+                <div className="w-full mt-2">
+                  <div className="flex items-center gap-4 flex-col sm:flex-row">
+                    <div className="flex-1 w-full">
+                      <div className="rounded-2xl border border-blue-500/15 bg-blue-950/10 p-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_6px_rgba(96,165,250,0.6)]" />
+                          <span className="text-[10px] text-blue-400 font-bold uppercase tracking-[0.2em]" style={{ fontFamily: "var(--font-mono)" }}>Blue Side</span>
+                          <span className="text-[9px] text-blue-400/50 ml-auto" style={{ fontFamily: "var(--font-mono)" }}>FIRST PICK</span>
+                        </div>
+                        <input
+                          type="text"
+                          value={blueTeam}
+                          onChange={(e) => setBlueTeam(e.target.value)}
+                          className="w-full rounded-xl bg-[#0a1020] border border-blue-500/15 px-4 py-3 text-white text-sm font-semibold focus:outline-none focus:border-blue-500/40 focus:ring-1 focus:ring-blue-500/20 transition-all"
+                          placeholder="Nama sisi biru..."
+                          style={{ fontFamily: "var(--font-display)" }}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-center gap-1 py-2 sm:py-0 shrink-0">
+                      <div className="hidden sm:block w-px h-8 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+                      <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-white/[0.08] flex items-center justify-center shadow-lg">
+                        <span className="text-[11px] font-black text-gray-400 uppercase tracking-wider" style={{ fontFamily: "var(--font-display)" }}>VS</span>
+                      </div>
+                      <div className="hidden sm:block w-px h-8 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+                    </div>
+
+                    <div className="flex-1 w-full">
+                      <div className="rounded-2xl border border-red-500/15 bg-red-950/10 p-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="h-2 w-2 rounded-full bg-red-400 shadow-[0_0_6px_rgba(248,113,113,0.6)]" />
+                          <span className="text-[10px] text-red-400 font-bold uppercase tracking-[0.2em]" style={{ fontFamily: "var(--font-mono)" }}>Red Side</span>
+                        </div>
+                        <input
+                          type="text"
+                          value={redTeam}
+                          onChange={(e) => setRedTeam(e.target.value)}
+                          className="w-full rounded-xl bg-[#0a1020] border border-red-500/15 px-4 py-3 text-white text-sm font-semibold focus:outline-none focus:border-red-500/40 focus:ring-1 focus:ring-red-500/20 transition-all"
+                          placeholder="Nama sisi merah..."
+                          style={{ fontFamily: "var(--font-display)" }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  onClick={handleStartDraft}
+                  className="mt-2 flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-cyan-600 to-teal-600 px-8 py-3.5 font-bold text-sm uppercase tracking-widest text-white hover:from-cyan-500 hover:to-teal-500 active:scale-[0.97] transition-all shadow-lg shadow-cyan-500/20 cursor-pointer"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  <Play className="h-4 w-4" />
                   Mulai Simulasi Custom
                 </button>
-              </div>
-            </>
-          )}
+              </>
+            )}
+          </div>
         </div>
       ) : (
         /* -- MLBB-STYLE DRAFT BOARD ------------------------------------------- */
@@ -2071,7 +2183,7 @@ export default function DraftSimulator({
             {/* LEFT: Blue team pick slots (xl+) */}
             <div className="hidden xl:flex w-[210px] shrink-0 flex-col border-r border-blue-900/20 bg-blue-950/5">
               <div className="px-3 pt-3 pb-1">
-                <div className="text-[9px] text-blue-400/60 uppercase tracking-widest font-bold">Blue · First Pick</div>
+                <div className="text-[9px] text-blue-400/60 uppercase tracking-widest font-bold">Blue ï¿½ First Pick</div>
                 <div className="text-sm font-bold text-blue-200 truncate">{blueTeam}</div>
               </div>
               <div className="flex-1 flex flex-col gap-1.5 px-2 pb-2 overflow-y-auto">
@@ -2092,7 +2204,7 @@ export default function DraftSimulator({
                   <span className={evaluationDashboard.teamPanels.blue.missingLanes.length ? "text-amber-400" : "text-emerald-400"}>
                     {evaluationDashboard.teamPanels.blue.missingLanes.length
                       ? `Missing: ${evaluationDashboard.teamPanels.blue.missingLanes.join(", ")}`
-                      : "Lanes covered ?"}
+                      : "Lanes covered \u2713"}
                   </span>
                 </div>
                 {evaluationDashboard.teamPanels.blue.roleWarnings[0] && (
@@ -2132,7 +2244,7 @@ export default function DraftSimulator({
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search…"
+                    placeholder="Searchï¿½"
                     className="w-full pl-6 pr-2 py-1 text-xs bg-white/[0.04] border border-white/[0.06] rounded-lg text-white placeholder:text-gray-600 outline-none focus:border-cyan-500/40"
                   />
                 </div>
@@ -2153,7 +2265,7 @@ export default function DraftSimulator({
               {!isCompleted && (
                 <div className={`px-3 py-1.5 text-xs font-semibold flex items-center gap-2 ${currentStep?.side === "BLUE" ? "bg-blue-950/20 text-blue-300" : "bg-red-950/15 text-red-300"}`}>
                   <div className={`h-1.5 w-1.5 rounded-full animate-pulse ${currentStep?.side === "BLUE" ? "bg-blue-400" : "bg-red-400"}`} />
-                  {currentStep?.side === "BLUE" ? blueTeam : redTeam} · {currentStep?.type === "BAN" ? "Ban a hero" : "Pick a hero"}
+                  {currentStep?.side === "BLUE" ? blueTeam : redTeam} ï¿½ {currentStep?.type === "BAN" ? "Ban a hero" : "Pick a hero"}
                   <span className="ml-auto text-[10px] opacity-60">Lane: {laneNeeds.length ? laneNeeds.join(", ") : "all covered"}</span>
                 </div>
               )}
@@ -2164,7 +2276,7 @@ export default function DraftSimulator({
                   <div className="flex items-center gap-2 mb-2">
                     <Sparkles className="h-3.5 w-3.5 text-amber-400" />
                     <span className="text-[11px] font-bold text-amber-300 uppercase tracking-wider">AI Recommendations</span>
-                    {recsLoading && <span className="text-[10px] text-cyan-400 animate-pulse">Analyzing…</span>}
+                    {recsLoading && <span className="text-[10px] text-cyan-400 animate-pulse">Analyzingï¿½</span>}
                   </div>
                   <div className="flex gap-2 overflow-x-auto scrollbar-none pb-1">
                     {displayedCoachRecommendations.map((rec, i) => {
@@ -2331,7 +2443,7 @@ export default function DraftSimulator({
                   </button>
                   <button onClick={fetchAICoach} disabled={aiLoading || isPaused} className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 rounded-lg hover:bg-indigo-900/60 transition-colors disabled:opacity-50 shrink-0">
                     <Sparkles className="h-3.5 w-3.5" />
-                    {aiLoading ? "…" : "AI"}
+                    {aiLoading ? "ï¿½" : "AI"}
                   </button>
                   <button
                     onClick={() => handleLockHero(selectedHeroName)}
@@ -2346,12 +2458,12 @@ export default function DraftSimulator({
                 <div className="border-t border-white/[0.05] bg-black/40 px-3 py-2 flex items-center gap-2 shrink-0 flex-wrap">
                   <button onClick={() => { evaluateDraftGame(); setShowAnalysis(true); }} disabled={evaluationLoading} className="flex items-center gap-2 px-4 py-2 text-xs bg-emerald-700/40 border border-emerald-500/40 text-emerald-300 rounded-xl font-bold uppercase hover:bg-emerald-700/60 transition-colors disabled:opacity-50">
                     <BarChart3 className="h-4 w-4" />
-                    {evaluationLoading ? "Analyzing…" : "Run Final Analysis"}
+                    {evaluationLoading ? "Analyzingï¿½" : "Run Final Analysis"}
                   </button>
                   {user && (
                     <button onClick={handleSaveDraft} disabled={isSaving || saveSuccess} className="flex items-center gap-2 px-4 py-2 text-xs bg-blue-700/40 border border-blue-500/40 text-blue-300 rounded-xl font-bold uppercase hover:bg-blue-700/60 transition-colors disabled:opacity-50">
                       <Save className="h-4 w-4" />
-                      {saveSuccess ? "Saved" : isSaving ? "Saving…" : "Save Draft"}
+                      {saveSuccess ? "Saved" : isSaving ? "Savingï¿½" : "Save Draft"}
                     </button>
                   )}
                 </div>
@@ -2361,7 +2473,7 @@ export default function DraftSimulator({
             {/* RIGHT: Red team pick slots (xl+) */}
             <div className="hidden xl:flex w-[210px] shrink-0 flex-col border-l border-red-900/20 bg-red-950/5">
               <div className="px-3 pt-3 pb-1 text-right">
-                <div className="text-[9px] text-red-400/60 uppercase tracking-widest font-bold">Second Pick · Red</div>
+                <div className="text-[9px] text-red-400/60 uppercase tracking-widest font-bold">Second Pick ï¿½ Red</div>
                 <div className="text-sm font-bold text-red-200 truncate">{redTeam}</div>
               </div>
               <div className="flex-1 flex flex-col gap-1.5 px-2 pb-2 overflow-y-auto">
@@ -2382,7 +2494,7 @@ export default function DraftSimulator({
                   <span className={evaluationDashboard.teamPanels.red.missingLanes.length ? "text-amber-400" : "text-emerald-400"}>
                     {evaluationDashboard.teamPanels.red.missingLanes.length
                       ? `Missing: ${evaluationDashboard.teamPanels.red.missingLanes.join(", ")}`
-                      : "Lanes covered ?"}
+                      : "Lanes covered \u2713"}
                   </span>
                 </div>
               </div>
@@ -2401,7 +2513,7 @@ export default function DraftSimulator({
                       <div className="h-8 w-8 aspect-square rounded-lg border border-blue-900/30 overflow-hidden bg-slate-900/40 shrink-0">
                         {h ? <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[6px]" /> : <div className="h-full w-full" />}
                       </div>
-                      <span className="text-[10px] text-gray-400 truncate">{h || "—"}</span>
+                      <span className="text-[10px] text-gray-400 truncate">{h || "ï¿½"}</span>
                     </div>
                   );
                 })}
@@ -2414,7 +2526,7 @@ export default function DraftSimulator({
                   const h = redPicks[i] || "";
                   return (
                     <div key={i} className="flex items-center gap-1.5 h-8 justify-end">
-                      <span className="text-[10px] text-gray-400 truncate">{h || "—"}</span>
+                      <span className="text-[10px] text-gray-400 truncate">{h || "ï¿½"}</span>
                       <div className="h-8 w-8 aspect-square rounded-lg border border-red-900/30 overflow-hidden bg-slate-900/40 shrink-0">
                         {h ? <FallbackImage src={getHeroImgUrl(h)} fallbackText={h} alt={h} className="block h-full w-full object-cover object-center" containerClassName="h-full w-full text-[6px]" /> : <div className="h-full w-full" />}
                       </div>
@@ -2442,9 +2554,9 @@ export default function DraftSimulator({
                 </button>
               ))}
               {isPaused ? (
-                <span className="ml-auto text-[10px] text-amber-300/80 pr-3">Paused · cache only</span>
+                <span className="ml-auto text-[10px] text-amber-300/80 pr-3">Paused ï¿½ cache only</span>
               ) : recsLoading ? (
-                <span className="ml-auto text-[10px] text-cyan-300/80 animate-pulse pr-3">Analyzing…</span>
+                <span className="ml-auto text-[10px] text-cyan-300/80 animate-pulse pr-3">Analyzingï¿½</span>
               ) : null}
             </div>
             <div className="p-3 min-h-[150px]">
@@ -2475,10 +2587,10 @@ export default function DraftSimulator({
               )}
               {analysisTab === "intel" && (
                 <div className="flex gap-2 overflow-x-auto scrollbar-none pb-1">
-                  {/* Local data — always shown immediately */}
+                  {/* Local data ï¿½ always shown immediately */}
                   {draftMode === "mpl" && (selectedBlueTeam || selectedRedTeam) ? (
                     <>
-                      {/* Blue team comfort heroes — local or AI enriched */}
+                      {/* Blue team comfort heroes ï¿½ local or AI enriched */}
                       <div className="shrink-0 w-[180px] p-2.5 rounded-xl border border-blue-500/20 bg-blue-950/10">
                         <div className="text-[8px] text-blue-400/70 uppercase tracking-wider mb-1.5">{blueTeam} Comfort</div>
                         {blueComfortHeroes.length > 0 ? (
@@ -2488,7 +2600,7 @@ export default function DraftSimulator({
                             ))}
                           </div>
                         ) : (
-                          <div className="text-[9px] text-gray-600 italic">{aiLoading ? "Loading…" : "Click AI to load"}</div>
+                          <div className="text-[9px] text-gray-600 italic">{aiLoading ? "Loadingï¿½" : "Click AI to load"}</div>
                         )}
                       </div>
                       {/* Red team comfort heroes */}
@@ -2501,12 +2613,12 @@ export default function DraftSimulator({
                             ))}
                           </div>
                         ) : (
-                          <div className="text-[9px] text-gray-600 italic">{aiLoading ? "Loading…" : "Click AI to load"}</div>
+                          <div className="text-[9px] text-gray-600 italic">{aiLoading ? "Loadingï¿½" : "Click AI to load"}</div>
                         )}
                       </div>
                     </>
                   ) : null}
-                  {/* Global meta context — always available instantly */}
+                  {/* Global meta context ï¿½ always available instantly */}
                   <div className="shrink-0 w-[180px] p-2.5 rounded-xl border border-white/[0.07] bg-white/[0.02]">
                     <div className="text-[8px] text-gray-500 uppercase tracking-wider mb-1.5">Meta Top Picks</div>
                     <div className="flex flex-wrap gap-1">
@@ -2609,7 +2721,7 @@ export default function DraftSimulator({
                   Back to Draft
                 </button>
                 <div className="flex-1 text-center text-sm font-bold text-white">Draft Analysis</div>
-                <div className="text-[10px] text-gray-600 w-20 text-right">{evaluationLoading ? "Analyzing…" : "Complete"}</div>
+                <div className="text-[10px] text-gray-600 w-20 text-right">{evaluationLoading ? "Analyzingï¿½" : "Complete"}</div>
               </div>
               {/* Analysis cards */}
               <div className="p-4 space-y-4">
@@ -2636,7 +2748,7 @@ export default function DraftSimulator({
                     <div className={`text-sm font-black mt-1 ${evaluationDashboard.predictedWinner === "blue" ? "text-blue-300" : evaluationDashboard.predictedWinner === "red" ? "text-red-300" : "text-gray-300"}`}>
                       {evaluationDashboard.predictedWinner === "even" ? "Even Draft" : evaluationDashboard.predictedWinner === "blue" ? blueTeam : redTeam}
                     </div>
-                    <div className="text-[10px] text-gray-600 mt-0.5">{evaluationDashboard.confidenceLabel} · {evaluationDashboard.confidence}%</div>
+                    <div className="text-[10px] text-gray-600 mt-0.5">{evaluationDashboard.confidenceLabel} ï¿½ {evaluationDashboard.confidence}%</div>
                   </div>
                   <div className="rounded-xl border border-white/[0.07] bg-white/[0.02] p-3">
                     <div className="text-[9px] text-gray-500 uppercase tracking-widest">Lane Coverage</div>
@@ -2644,13 +2756,13 @@ export default function DraftSimulator({
                       <div className="text-[10px]">
                         <span className="text-blue-400">Blue: </span>
                         <span className={evaluationDashboard.teamPanels.blue.missingLanes.length ? "text-amber-400" : "text-emerald-400"}>
-                          {evaluationDashboard.teamPanels.blue.missingLanes.length ? evaluationDashboard.teamPanels.blue.missingLanes.join(", ") : "Full ?"}
+                          {evaluationDashboard.teamPanels.blue.missingLanes.length ? evaluationDashboard.teamPanels.blue.missingLanes.join(", ") : "Full"}
                         </span>
                       </div>
                       <div className="text-[10px]">
                         <span className="text-red-400">Red: </span>
                         <span className={evaluationDashboard.teamPanels.red.missingLanes.length ? "text-amber-400" : "text-emerald-400"}>
-                          {evaluationDashboard.teamPanels.red.missingLanes.length ? evaluationDashboard.teamPanels.red.missingLanes.join(", ") : "Full ?"}
+                          {evaluationDashboard.teamPanels.red.missingLanes.length ? evaluationDashboard.teamPanels.red.missingLanes.join(", ") : "Full"}
                         </span>
                       </div>
                     </div>
@@ -2761,7 +2873,7 @@ export default function DraftSimulator({
                     {evaluationLoading ? (
                       <div className="flex items-center gap-2 text-sm text-emerald-300">
                         <Wand2 className="h-5 w-5 animate-pulse" />
-                        Running final analysis…
+                        Running final analysisï¿½
                       </div>
                     ) : (
                       <div className="grid gap-2">
@@ -2772,7 +2884,7 @@ export default function DraftSimulator({
                           .slice(0, 5)
                           .map((line, index) => (
                             <div key={index} className="rounded-lg border border-emerald-500/10 bg-black/20 px-3 py-2 text-sm text-gray-200">
-                              • {line}
+                              ï¿½ {line}
                             </div>
                           ))}
                       </div>
@@ -2797,7 +2909,7 @@ export default function DraftSimulator({
                         .slice(0, 10)
                         .map((rec: any, idx: number) => (
                           <div key={`${rec.heroName}-${idx}`} className="rounded-lg border border-white/8 bg-black/20 px-3 py-2 text-[11px]">
-                            <div className="font-bold text-white">{rec.heroName} — {rec.totalScore ?? rec.score ?? 0}</div>
+                            <div className="font-bold text-white">{rec.heroName} ï¿½ {rec.totalScore ?? rec.score ?? 0}</div>
                             <div className="text-gray-400 break-all">{JSON.stringify(rec.scoreBreakdown || {})}</div>
                           </div>
                         ))}
