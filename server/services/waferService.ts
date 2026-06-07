@@ -128,17 +128,35 @@ export interface WaferResponse {
   error?: string;
 }
 
+// ─── Multi-key rotation ───────────────────────────────────────────────────────
+let _waferKeyIndex = 0;
+
+function getWaferApiKey(): string | undefined {
+  const key1 = process.env.WAFER_API_KEY_1;
+  const key2 = process.env.WAFER_API_KEY_2;
+  const legacyKey = process.env.WAFER_API_KEY;
+
+  const keys = [key1, key2, legacyKey].filter(
+    (k): k is string => !!k && k !== 'YOUR_WAFER_API_KEY' && k !== 'YOUR_KEY' && k !== 'YOUR_WAFER_API_KEY_1' && k !== 'YOUR_WAFER_API_KEY_2'
+  );
+
+  if (keys.length === 0) return undefined;
+  const key = keys[_waferKeyIndex % keys.length];
+  _waferKeyIndex = (_waferKeyIndex + 1) % keys.length;
+  return key;
+}
+
 async function callWafer(
   tier: WaferTier,
   messages: WaferChatMessage[],
   useCache: boolean = true,
   metadata: WaferCallMetadata = {}
 ): Promise<WaferResponse> {
-  const apiKey = process.env.WAFER_API_KEY;
+  const apiKey = getWaferApiKey();
   const model = getModelForTier(tier);
   const maxTokens = getMaxTokensForTier(tier);
 
-  if (!apiKey || apiKey === 'YOUR_KEY') {
+  if (!apiKey) {
     return { success: false, response: '', model, latencyMs: 0, tier, cached: false, error: 'WAFER_API_KEY is not configured.' };
   }
 

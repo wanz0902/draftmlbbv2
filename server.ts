@@ -1856,7 +1856,7 @@ app.get("/api/ai/providers/benchmark", async (req, res) => {
     const wfRealtimeStart = Date.now();
     const wfRealtime = await fetch('https://pass.wafer.ai/v1/chat/completions', {
       method: 'POST',
-      headers: { 'Authorization': 'Bearer ' + process.env.WAFER_API_KEY, 'Content-Type': 'application/json' },
+      headers: { 'Authorization': 'Bearer ' + (process.env.WAFER_API_KEY_1 || process.env.WAFER_API_KEY), 'Content-Type': 'application/json' },
       body: JSON.stringify({ model: process.env.WAFER_REALTIME_MODEL || 'deepseek-v4-flash', messages: testMsg, max_tokens: 50 }),
     }).catch(() => null);
     const wfRealtimeMs = Date.now() - wfRealtimeStart;
@@ -1878,7 +1878,7 @@ app.get("/api/ai/providers/benchmark", async (req, res) => {
     const wfAnalysisStart = Date.now();
     const wfAnalysis = await fetch('https://pass.wafer.ai/v1/chat/completions', {
       method: 'POST',
-      headers: { 'Authorization': 'Bearer ' + process.env.WAFER_API_KEY, 'Content-Type': 'application/json' },
+      headers: { 'Authorization': 'Bearer ' + (process.env.WAFER_API_KEY_1 || process.env.WAFER_API_KEY), 'Content-Type': 'application/json' },
       body: JSON.stringify({ model: process.env.WAFER_ANALYSIS_MODEL || 'Qwen3.6-35B-A3B', messages: testMsg, max_tokens: 100 }),
     }).catch(() => null);
     const wfAnalysisMs = Date.now() - wfAnalysisStart;
