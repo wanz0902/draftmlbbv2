@@ -2,8 +2,11 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import {
   Ban,
   BookOpen,
+  ChevronDown,
+  ChevronRight,
   Compass,
   Copy,
+  FileText,
   Layers,
   Plus,
   Save,
@@ -11,7 +14,6 @@ import {
   Target,
   Trash2,
   X,
-  ChevronDown,
 } from "lucide-react";
 import FallbackImage from "./FallbackImage";
 import { getHeroImageUrl } from "../lib/heroUtils";
@@ -126,8 +128,7 @@ export default function TeamDraftPlanner({
   const [selectedDraftId, setSelectedDraftId] = useState<string | null>(null);
   const [pickerSlot, setPickerSlot] = useState<PickerTarget | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
-  const [tourDropdownOpen, setTourDropdownOpen] = useState(false);
-  const [draftDropdownOpen, setDraftDropdownOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   useEffect(() => {
     const d = loadData();
@@ -137,11 +138,7 @@ export default function TeamDraftPlanner({
   }, []);
 
   const persist = useCallback(
-    (
-      tours: Tournament[],
-      tourId: string | null,
-      draftId: string | null
-    ) => {
+    (tours: Tournament[], tourId: string | null, draftId: string | null) => {
       saveData(tours, tourId, draftId);
     },
     []
@@ -184,7 +181,6 @@ export default function TeamDraftPlanner({
     });
     setSelectedTourId(t.id);
     setSelectedDraftId(t.drafts[0].id);
-    setTourDropdownOpen(false);
   };
 
   const createDraft = () => {
@@ -198,7 +194,6 @@ export default function TeamDraftPlanner({
       return next;
     });
     setSelectedDraftId(d.id);
-    setDraftDropdownOpen(false);
   };
 
   const duplicateDraft = () => {
@@ -246,13 +241,11 @@ export default function TeamDraftPlanner({
     setTournaments((prev) => {
       const next = prev.filter((t) => t.id !== tourId);
       const newTour = next[0] || null;
-      setSelectedTourId(newTour?.id || null);
-      setSelectedDraftId(newTour?.drafts[0]?.id || null);
-      persist(
-        next,
-        newTour?.id || null,
-        newTour?.drafts[0]?.id || null
-      );
+      const newTourId = newTour?.id || null;
+      const newDraftId = newTour?.drafts[0]?.id || null;
+      setSelectedTourId(newTourId);
+      setSelectedDraftId(newDraftId);
+      persist(next, newTourId, newDraftId);
       return next;
     });
   };
@@ -356,265 +349,286 @@ export default function TeamDraftPlanner({
   };
 
   return (
-    <div className="flex h-[calc(100vh-80px)] flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-[#060b16]">
-      {/* ═══ TOP TOOLBAR ═══ */}
-      <div className="flex items-center gap-2 border-b border-white/[0.06] bg-[#080e1a]/80 px-4 py-2.5 backdrop-blur-sm">
-        {/* Tournament Selector */}
-        <div className="relative">
-          <button
-            onClick={() => {
-              setTourDropdownOpen((v) => !v);
-              setDraftDropdownOpen(false);
-            }}
-            className="flex items-center gap-1.5 rounded-lg border border-white/[0.08] bg-white/[0.03] px-2.5 py-1.5 text-xs font-medium text-slate-300 transition hover:border-cyan-500/20 hover:text-white cursor-pointer"
-          >
-            <Layers className="h-3 w-3 text-cyan-400/70" />
-            <span className="max-w-[120px] truncate">
-              {selectedTour?.name || "Tournament"}
-            </span>
-            <ChevronDown className="h-3 w-3 text-slate-500" />
-          </button>
-          {tourDropdownOpen && (
-            <div className="absolute left-0 top-full z-50 mt-1 w-56 overflow-hidden rounded-xl border border-white/10 bg-[#0a1020] shadow-2xl">
-              <div className="max-h-48 overflow-y-auto p-1">
-                {tournaments.map((t) => (
-                  <div key={t.id} className="group">
-                    <div className="flex items-center gap-2 px-2 py-1">
-                      <span
-                        className={`flex-1 truncate text-xs ${
-                          t.id === selectedTourId
-                            ? "font-bold text-cyan-300"
-                            : "text-slate-400"
-                        }`}
-                      >
-                        {t.name}
-                      </span>
-                      <button
-                        onClick={() => deleteTournament(t.id)}
-                        className="p-0.5 text-slate-600 opacity-0 group-hover:opacity-100 hover:text-rose-400 transition cursor-pointer"
-                      >
-                        <Trash2 className="h-3 w-3" />
-                      </button>
-                    </div>
-                  </div>
-                ))}
+    <div className="flex h-[calc(100vh-56px)] overflow-hidden bg-[#060b16]">
+      {/* ═══ LEFT SIDEBAR ═══ */}
+      <aside
+        className={`${
+          sidebarCollapsed ? "w-[52px]" : "w-[260px]"
+        } shrink-0 flex flex-col border-r border-white/[0.06] bg-[#070c18] transition-all duration-300 overflow-hidden`}
+      >
+        {sidebarCollapsed ? (
+          <div className="flex flex-col items-center py-3 gap-3">
+            <button
+              onClick={() => setSidebarCollapsed(false)}
+              className="p-2 text-slate-500 hover:text-cyan-400 transition cursor-pointer"
+              title="Expand sidebar"
+            >
+              <Layers className="h-4 w-4" />
+            </button>
+          </div>
+        ) : (
+          <>
+            <div className="flex items-center justify-between border-b border-white/[0.06] px-4 py-3">
+              <div className="flex items-center gap-2">
+                <Target className="h-4 w-4 text-cyan-400" />
+                <span className="font-display text-xs font-bold uppercase tracking-wider text-white">
+                  Team Draft Planner
+                </span>
               </div>
-              <div className="border-t border-white/[0.06] p-1">
-                <button
-                  onClick={createTournament}
-                  className="flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-xs text-slate-400 hover:bg-white/[0.05] hover:text-cyan-300 transition cursor-pointer"
-                >
-                  <Plus className="h-3 w-3" /> New Tournament
-                </button>
-              </div>
+              <button
+                onClick={() => setSidebarCollapsed(true)}
+                className="p-1 text-slate-600 hover:text-slate-300 transition cursor-pointer"
+              >
+                <X className="h-3.5 w-3.5" />
+              </button>
             </div>
-          )}
-        </div>
 
-        {/* Draft Selector */}
-        <div className="relative">
-          <button
-            onClick={() => {
-              setDraftDropdownOpen((v) => !v);
-              setTourDropdownOpen(false);
-            }}
-            className="flex items-center gap-1.5 rounded-lg border border-white/[0.08] bg-white/[0.03] px-2.5 py-1.5 text-xs font-medium text-slate-300 transition hover:border-cyan-500/20 hover:text-white cursor-pointer"
-          >
-            <span className="max-w-[100px] truncate">
-              {selectedDraft?.name || "Draft"}
-            </span>
-            <ChevronDown className="h-3 w-3 text-slate-500" />
-          </button>
-          {draftDropdownOpen && (
-            <div className="absolute left-0 top-full z-50 mt-1 w-52 overflow-hidden rounded-xl border border-white/10 bg-[#0a1020] shadow-2xl">
-              <div className="max-h-48 overflow-y-auto p-1">
-                {selectedTour?.drafts.map((d) => (
-                  <div key={d.id} className="group flex items-center gap-1">
-                    <button
-                      onClick={() => {
-                        setSelectedDraftId(d.id);
-                        setDraftDropdownOpen(false);
-                      }}
-                      className={`flex flex-1 items-center gap-2 rounded-lg px-2 py-1.5 text-left text-xs transition cursor-pointer ${
-                        d.id === selectedDraftId
-                          ? "bg-cyan-500/10 font-bold text-cyan-300"
-                          : "text-slate-400 hover:bg-white/[0.05]"
+            <div className="flex-1 overflow-y-auto p-2 space-y-1">
+              <div className="flex items-center gap-1.5 px-2 py-1.5">
+                <span className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-slate-600">
+                  Tournaments
+                </span>
+              </div>
+
+              {tournaments.map((t) => (
+                <div key={t.id} className="group">
+                  <div className="flex items-center gap-1.5 rounded-lg px-2 py-1.5 hover:bg-white/[0.03] transition">
+                    <Layers className="h-3 w-3 text-slate-600 shrink-0" />
+                    <span
+                      className={`flex-1 truncate text-xs ${
+                        t.id === selectedTourId
+                          ? "font-bold text-cyan-300"
+                          : "text-slate-400"
                       }`}
                     >
-                      <span className="truncate">{d.name}</span>
-                    </button>
+                      {t.name}
+                    </span>
                     <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        deleteDraft(selectedTourId!, d.id);
-                      }}
-                      className="p-0.5 text-slate-600 opacity-0 group-hover:opacity-100 hover:text-rose-400 transition cursor-pointer"
+                      onClick={() => deleteTournament(t.id)}
+                      className="p-0.5 text-slate-700 opacity-0 group-hover:opacity-100 hover:text-rose-400 transition cursor-pointer"
                     >
-                      <X className="h-3 w-3" />
+                      <Trash2 className="h-3 w-3" />
                     </button>
                   </div>
+
+                  {t.drafts.map((d) => (
+                    <button
+                      key={d.id}
+                      onClick={() => {
+                        setSelectedTourId(t.id);
+                        setSelectedDraftId(d.id);
+                      }}
+                      className={`ml-4 flex w-[calc(100%-16px)] items-center gap-2 rounded-lg px-2.5 py-1.5 text-left transition cursor-pointer ${
+                        d.id === selectedDraftId
+                          ? "bg-cyan-500/10 text-cyan-300 border border-cyan-500/20"
+                          : "text-slate-500 hover:bg-white/[0.03] hover:text-slate-300 border border-transparent"
+                      }`}
+                    >
+                      <FileText className="h-3 w-3 shrink-0" />
+                      <span className="flex-1 truncate text-[11px]">{d.name}</span>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          deleteDraft(t.id, d.id);
+                        }}
+                        className="p-0.5 text-slate-700 opacity-0 group-hover:opacity-100 hover:text-rose-400 transition cursor-pointer"
+                      >
+                        <X className="h-2.5 w-2.5" />
+                      </button>
+                    </button>
+                  ))}
+                </div>
+              ))}
+
+              {tournaments.length === 0 && (
+                <div className="py-8 text-center">
+                  <Compass className="mx-auto h-8 w-8 text-slate-800 mb-2" />
+                  <div className="text-[10px] text-slate-600">No tournaments yet</div>
+                </div>
+              )}
+            </div>
+
+            <div className="border-t border-white/[0.06] p-2 space-y-1">
+              <button
+                onClick={createTournament}
+                className="flex w-full items-center gap-2 rounded-lg border border-dashed border-white/[0.08] px-3 py-2 text-[10px] font-bold text-slate-500 hover:text-cyan-400 hover:border-cyan-500/30 transition cursor-pointer"
+              >
+                <Plus className="h-3 w-3" /> New Tournament
+              </button>
+              <button
+                onClick={createDraft}
+                disabled={!selectedTourId}
+                className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-[10px] font-bold text-slate-600 hover:text-cyan-400 transition cursor-pointer disabled:opacity-30"
+              >
+                <Plus className="h-3 w-3" /> Add Draft
+              </button>
+            </div>
+          </>
+        )}
+      </aside>
+
+      {/* ═══ MAIN WORKSPACE ═══ */}
+      <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
+        {/* ─── HEADER ─── */}
+        <header className="flex items-center gap-4 border-b border-white/[0.06] bg-[#080e1a]/80 px-5 py-3 backdrop-blur-sm shrink-0">
+          {sidebarCollapsed && (
+            <button
+              onClick={() => setSidebarCollapsed(false)}
+              className="p-1.5 text-slate-500 hover:text-cyan-400 transition cursor-pointer"
+              title="Expand sidebar"
+            >
+              <Layers className="h-4 w-4" />
+            </button>
+          )}
+
+          {selectedDraft ? (
+            <>
+              <div className="flex items-center gap-1.5 text-[10px] text-slate-600">
+                <span>{selectedTour?.name}</span>
+                <ChevronRight className="h-3 w-3" />
+              </div>
+              <input
+                value={selectedDraft.name}
+                onChange={(e) =>
+                  updateDraft((d) => ({ ...d, name: e.target.value }))
+                }
+                className="bg-transparent text-sm font-bold text-white outline-none border-b border-transparent focus:border-cyan-500/30 transition min-w-0 max-w-[200px]"
+              />
+
+              <div className="flex-1" />
+
+              <div className="flex items-center gap-1 rounded-lg border border-white/[0.06] bg-white/[0.02] p-0.5">
+                {(["BLUE", "RED"] as const).map((s) => (
+                  <button
+                    key={s}
+                    onClick={() => updateDraft((d) => ({ ...d, side: s }))}
+                    className={`px-3 py-1.5 rounded-md text-[10px] font-bold uppercase tracking-wider transition cursor-pointer ${
+                      selectedDraft.side === s
+                        ? s === "BLUE"
+                          ? "bg-blue-500/20 text-blue-300 shadow-[0_0_8px_rgba(96,165,250,0.15)]"
+                          : "bg-rose-500/20 text-rose-300 shadow-[0_0_8px_rgba(248,113,113,0.15)]"
+                        : "text-slate-600 hover:text-slate-400"
+                    }`}
+                  >
+                    {s === "BLUE" ? "Blue" : "Red"}
+                  </button>
                 ))}
               </div>
-              <div className="border-t border-white/[0.06] p-1">
-                <button
-                  onClick={createDraft}
-                  disabled={!selectedTourId}
-                  className="flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-xs text-slate-400 hover:bg-white/[0.05] hover:text-cyan-300 transition cursor-pointer disabled:opacity-30"
-                >
-                  <Plus className="h-3 w-3" /> New Draft
-                </button>
+
+              <div className="flex items-center gap-4 text-[11px] font-mono text-slate-500">
+                <span>
+                  Bans{" "}
+                  <span className="text-white font-bold">{progress.bans}</span>
+                  /10
+                </span>
+                <span>
+                  Picks{" "}
+                  <span className="text-white font-bold">{progress.picks}</span>
+                  /10
+                </span>
+                <span>
+                  Complete{" "}
+                  <span className={`font-bold ${progress.pct === 100 ? "text-emerald-400" : "text-cyan-400"}`}>
+                    {progress.pct}%
+                  </span>
+                </span>
               </div>
+
+              <button
+                onClick={duplicateDraft}
+                className="p-1.5 text-slate-500 hover:text-cyan-400 transition cursor-pointer"
+                title="Duplicate Draft"
+              >
+                <Copy className="h-4 w-4" />
+              </button>
+              <button
+                onClick={() => {}}
+                className="flex items-center gap-1.5 rounded-lg bg-amber-500/15 border border-amber-500/25 px-4 py-1.5 text-[11px] font-bold text-amber-300 hover:bg-amber-500/25 transition cursor-pointer"
+              >
+                <Save className="h-3.5 w-3.5" /> Save
+              </button>
+            </>
+          ) : (
+            <div className="flex items-center gap-3 text-slate-600">
+              <Compass className="h-4 w-4" />
+              <span className="text-xs">
+                Select a draft from the sidebar or create a new one
+              </span>
             </div>
           )}
-        </div>
+        </header>
 
-        {/* Draft Name */}
-        {selectedDraft && (
-          <input
-            value={selectedDraft.name}
-            onChange={(e) =>
-              updateDraft((d) => ({ ...d, name: e.target.value }))
-            }
-            className="bg-transparent text-sm font-bold text-white outline-none border-b border-transparent focus:border-cyan-500/30 transition min-w-0 max-w-[140px]"
-          />
-        )}
+        {/* ─── BOARD AREA ─── */}
+        {selectedDraft ? (
+          <div className="flex-1 overflow-y-auto">
+            <div className="flex flex-col gap-0 min-h-full">
+              {/* Blue/Red Panels */}
+              <div className="grid grid-cols-2 gap-0 flex-1 min-h-0">
+                <BoardPanel
+                  side="BLUE"
+                  draft={selectedDraft}
+                  heroAssets={heroAssets}
+                  setSlot={setSlot}
+                  clearSlot={clearSlot}
+                  openPicker={openPicker}
+                  isOurSide={selectedDraft.side === "BLUE"}
+                />
+                <BoardPanel
+                  side="RED"
+                  draft={selectedDraft}
+                  heroAssets={heroAssets}
+                  setSlot={setSlot}
+                  clearSlot={clearSlot}
+                  openPicker={openPicker}
+                  isOurSide={selectedDraft.side === "RED"}
+                />
+              </div>
 
-        {/* Spacer */}
-        <div className="flex-1" />
-
-        {/* Side Toggle */}
-        {selectedDraft && (
-          <div className="flex items-center gap-1 rounded-lg border border-white/[0.06] bg-white/[0.02] p-0.5">
-            {(["BLUE", "RED"] as const).map((s) => (
-              <button
-                key={s}
-                onClick={() => updateDraft((d) => ({ ...d, side: s }))}
-                className={`px-2.5 py-1 rounded-md text-[9px] font-bold uppercase tracking-wider transition cursor-pointer ${
-                  selectedDraft.side === s
-                    ? s === "BLUE"
-                      ? "bg-blue-500/20 text-blue-300"
-                      : "bg-rose-500/20 text-rose-300"
-                    : "text-slate-600 hover:text-slate-400"
-                }`}
-              >
-                {s === "BLUE" ? "Blue" : "Red"}
-              </button>
-            ))}
+              {/* Coach Notes */}
+              <div className="border-t border-white/[0.06] bg-[#070c18]/80 px-5 py-3">
+                <div className="flex items-center gap-2 mb-2">
+                  <BookOpen className="h-3.5 w-3.5 text-slate-500" />
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
+                    Coach Notes
+                  </span>
+                </div>
+                <textarea
+                  value={selectedDraft.notes}
+                  onChange={(e) =>
+                    updateDraft((d) => ({ ...d, notes: e.target.value }))
+                  }
+                  className="w-full h-20 bg-white/[0.02] rounded-lg border border-white/[0.06] px-4 py-2.5 text-sm text-white outline-none focus:border-cyan-500/30 transition resize-none placeholder:text-slate-700"
+                  placeholder="Strategy notes — ban priorities, win condition, key matchups, rotations..."
+                />
+              </div>
+            </div>
           </div>
-        )}
-
-        {/* Progress */}
-        {selectedDraft && (
-          <div className="flex items-center gap-3 text-[10px] font-mono text-slate-500">
-            <span>
-              Bans{" "}
-              <span className="text-white font-bold">{progress.bans}</span>/10
-            </span>
-            <span>
-              Picks{" "}
-              <span className="text-white font-bold">{progress.picks}</span>/10
-            </span>
-            <span className="text-cyan-400 font-bold">{progress.pct}%</span>
-          </div>
-        )}
-
-        {/* Actions */}
-        {selectedDraft && (
-          <div className="flex items-center gap-1">
-            <button
-              onClick={duplicateDraft}
-              className="p-1.5 text-slate-500 hover:text-cyan-400 transition cursor-pointer"
-              title="Duplicate Draft"
-            >
-              <Copy className="h-3.5 w-3.5" />
-            </button>
-            <button
-              onClick={() => {}}
-              className="flex items-center gap-1.5 rounded-lg bg-cyan-500/15 border border-cyan-500/25 px-3 py-1.5 text-[10px] font-bold text-cyan-300 hover:bg-cyan-500/25 transition cursor-pointer"
-            >
-              <Save className="h-3 w-3" /> Save
-            </button>
+        ) : (
+          <div className="flex-1 flex items-center justify-center">
+            <div className="text-center">
+              <Compass className="mx-auto h-12 w-12 text-slate-800 mb-3" />
+              <div className="text-sm font-bold text-slate-600">
+                No draft selected
+              </div>
+              <p className="mt-1 text-xs text-slate-700">
+                Create a tournament and draft from the sidebar
+              </p>
+            </div>
           </div>
         )}
       </div>
 
-      {/* ═══ BOARD WORKSPACE ═══ */}
-      {selectedDraft ? (
-        <div className="flex-1 overflow-y-auto p-3">
-          <div className="grid h-full gap-3 lg:grid-cols-2">
-            {/* BLUE SIDE */}
-            <BoardColumn
-              side="BLUE"
-              draft={selectedDraft}
-              heroAssets={heroAssets}
-              usedHeroes={usedHeroes}
-              heroes={heroes}
-              setSlot={setSlot}
-              clearSlot={clearSlot}
-              openPicker={openPicker}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              filteredHeroes={filteredHeroes}
-            />
-            {/* RED SIDE */}
-            <BoardColumn
-              side="RED"
-              draft={selectedDraft}
-              heroAssets={heroAssets}
-              usedHeroes={usedHeroes}
-              heroes={heroes}
-              setSlot={setSlot}
-              clearSlot={clearSlot}
-              openPicker={openPicker}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              filteredHeroes={filteredHeroes}
-            />
-          </div>
-
-          {/* Coach Notes */}
-          <div className="mt-3 rounded-xl border border-white/[0.06] bg-[#080e1a]/90 p-3">
-            <div className="flex items-center gap-2 mb-2">
-              <BookOpen className="h-3.5 w-3.5 text-slate-400" />
-              <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                Coach Notes
-              </span>
-            </div>
-            <textarea
-              value={selectedDraft.notes}
-              onChange={(e) =>
-                updateDraft((d) => ({ ...d, notes: e.target.value }))
-              }
-              className="w-full h-20 bg-white/[0.03] rounded-lg border border-white/[0.06] px-3 py-2 text-sm text-white outline-none focus:border-cyan-500/30 transition resize-none"
-              placeholder="Strategy notes — ban priorities, win condition, key matchups, rotations..."
-            />
-          </div>
-        </div>
-      ) : (
-        <div className="flex-1 flex items-center justify-center">
-          <div className="text-center">
-            <Compass className="mx-auto h-10 w-10 text-slate-700 mb-3" />
-            <div className="text-sm font-bold text-slate-500">
-              Select or create a draft plan
-            </div>
-            <p className="mt-1 text-xs text-slate-600">
-              Use the dropdowns above to get started
-            </p>
-          </div>
-        </div>
-      )}
-
       {/* ═══ HERO PICKER MODAL ═══ */}
       {pickerSlot && selectedDraft && (
         <div
-          className="fixed inset-0 z-[9999] flex items-start justify-center pt-[8vh] bg-black/70 backdrop-blur-sm"
+          className="fixed inset-0 z-[9999] flex items-start justify-center pt-[10vh] bg-black/70 backdrop-blur-sm"
           onClick={() => setPickerSlot(null)}
         >
           <div
-            className="w-full max-w-md rounded-2xl border border-white/10 bg-[#0a1020] shadow-2xl overflow-hidden"
+            className="w-full max-w-lg rounded-2xl border border-white/10 bg-[#0a1020] shadow-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center gap-2 border-b border-white/[0.06] px-4 py-3">
+            <div className="flex items-center gap-3 border-b border-white/[0.06] px-4 py-3">
               <Swords className="h-4 w-4 text-slate-500 shrink-0" />
               <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
                 {pickerSlot.type === "ban"
@@ -684,25 +698,19 @@ export default function TeamDraftPlanner({
   );
 }
 
-/* ═══ BOARD COLUMN ═══ */
-function BoardColumn({
+/* ═══ BOARD PANEL ═══ */
+function BoardPanel({
   side,
   draft,
   heroAssets,
-  usedHeroes,
-  heroes,
   setSlot,
   clearSlot,
   openPicker,
-  searchQuery,
-  setSearchQuery,
-  filteredHeroes,
+  isOurSide,
 }: {
   side: "BLUE" | "RED";
   draft: DraftPlan;
   heroAssets: Record<string, string>;
-  usedHeroes: Set<string>;
-  heroes: HeroStats[];
   setSlot: (
     type: "ban" | "pick" | "role",
     side: "BLUE" | "RED",
@@ -719,119 +727,120 @@ function BoardColumn({
     field?: "main" | "backup"
   ) => void;
   openPicker: (target: PickerTarget) => void;
-  searchQuery: string;
-  setSearchQuery: (q: string) => void;
-  filteredHeroes: HeroStats[];
+  isOurSide: boolean;
 }) {
   const isBlue = side === "BLUE";
   const bans = isBlue ? draft.blueBans : draft.redBans;
   const picks = isBlue ? draft.bluePicks : draft.redPicks;
   const roles = isBlue ? draft.blueRoles : draft.redRoles;
 
-  const accentBorder = isBlue
-    ? "border-blue-500/15"
-    : "border-rose-500/15";
-  const accentBg = isBlue ? "bg-blue-950/15" : "bg-rose-950/15";
+  const borderColor = isBlue ? "border-blue-500/10" : "border-rose-500/10";
+  const headerBg = isBlue ? "bg-blue-950/30" : "bg-rose-950/30";
   const accentText = isBlue ? "text-blue-300" : "text-rose-300";
   const accentDot = isBlue ? "bg-blue-400" : "bg-rose-400";
-  const slotBorder = isBlue
-    ? "border-blue-500/12 hover:border-blue-500/30"
-    : "border-rose-500/12 hover:border-rose-500/30";
+  const slotRing = isBlue
+    ? "border-blue-500/20 hover:border-blue-400/50 hover:shadow-[0_0_12px_rgba(96,165,250,0.15)]"
+    : "border-rose-500/20 hover:border-rose-400/50 hover:shadow-[0_0_12px_rgba(248,113,113,0.15)]";
 
   return (
     <div
-      className={`flex flex-col rounded-xl border ${accentBorder} ${accentBg} overflow-hidden`}
+      className={`flex flex-col border-r ${
+        borderColor
+      } overflow-hidden`}
     >
-      {/* Column Header */}
-      <div className="flex items-center gap-2 border-b border-white/[0.04] px-4 py-2.5">
-        <div
-          className={`h-2 w-2 rounded-full ${accentDot}`}
-        />
+      {/* Panel Header */}
+      <div
+        className={`flex items-center gap-3 px-5 py-3 border-b border-white/[0.04] ${headerBg}`}
+      >
+        <div className={`h-2.5 w-2.5 rounded-full ${accentDot} shadow-[0_0_8px_${isBlue ? "rgba(96,165,250,0.5)" : "rgba(248,113,113,0.5)"}]`} />
         <span
-          className={`font-mono text-[10px] font-bold uppercase tracking-[0.2em] ${accentText}`}
+          className={`font-mono text-[11px] font-bold uppercase tracking-[0.2em] ${accentText}`}
         >
           {side === "BLUE" ? "Blue Side" : "Red Side"}
         </span>
+        {isOurSide && (
+          <span className={`rounded px-1.5 py-0.5 text-[8px] font-black uppercase tracking-wider ${isBlue ? "bg-blue-500/20 text-blue-300" : "bg-rose-500/20 text-rose-300"}`}>
+            OURS
+          </span>
+        )}
       </div>
 
-      <div className="flex-1 overflow-y-auto p-3 space-y-3">
-        {/* Bans Row */}
+      <div className="flex-1 overflow-y-auto px-5 py-4 space-y-5">
+        {/* BANS */}
         <div>
-          <div className="flex items-center gap-1.5 mb-2">
-            <Ban className="h-3 w-3 text-rose-400/60" />
-            <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">
+          <div className="flex items-center gap-1.5 mb-3">
+            <Ban className="h-3.5 w-3.5 text-rose-400/50" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
               Bans
             </span>
           </div>
-          <div className="grid grid-cols-5 gap-1.5">
+          <div className="flex gap-2.5">
             {bans.map((h, i) => (
-              <BoardSlot
+              <CircleSlot
                 key={i}
                 hero={h}
                 heroAssets={heroAssets}
-                accent={slotBorder}
-                onClick={() =>
-                  openPicker({ type: "ban", side, index: i })
-                }
+                ring={slotRing}
+                size="normal"
+                onClick={() => openPicker({ type: "ban", side, index: i })}
                 onClear={() => clearSlot("ban", side, i)}
               />
             ))}
           </div>
         </div>
 
-        {/* Picks Row */}
+        {/* PICKS */}
         <div>
-          <div className="flex items-center gap-1.5 mb-2">
-            <Swords className="h-3 w-3 text-cyan-400/60" />
-            <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">
+          <div className="flex items-center gap-1.5 mb-3">
+            <Swords className="h-3.5 w-3.5 text-cyan-400/50" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
               Picks
             </span>
           </div>
-          <div className="grid grid-cols-5 gap-1.5">
+          <div className="flex gap-2.5">
             {picks.map((h, i) => (
-              <BoardSlot
+              <CircleSlot
                 key={i}
                 hero={h}
                 heroAssets={heroAssets}
-                accent={slotBorder}
-                onClick={() =>
-                  openPicker({ type: "pick", side, index: i })
-                }
+                ring={slotRing}
+                size="normal"
+                onClick={() => openPicker({ type: "pick", side, index: i })}
                 onClear={() => clearSlot("pick", side, i)}
               />
             ))}
           </div>
         </div>
 
-        {/* Role Lanes */}
+        {/* ROLE LANES */}
         <div>
-          <div className="flex items-center gap-1.5 mb-2">
-            <Target className="h-3 w-3 text-amber-400/60" />
-            <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">
+          <div className="flex items-center gap-1.5 mb-3">
+            <Target className="h-3.5 w-3.5 text-amber-400/50" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
               Role Lanes
             </span>
           </div>
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             {LANES.map((lane) => {
               const main = roles[lane].main;
               const backup = roles[lane].backup;
               return (
                 <div
                   key={lane}
-                  className="grid grid-cols-[48px_1fr_1fr] gap-1.5 items-center"
+                  className="flex items-center gap-3"
                 >
-                  <span className="text-[9px] font-bold text-slate-500 uppercase text-right pr-1">
+                  <span className="w-12 text-[10px] font-bold text-slate-500 uppercase text-right shrink-0">
                     {lane}
                   </span>
                   <button
                     onClick={() =>
                       openPicker({ type: "role", side, lane, field: "main" })
                     }
-                    className={`flex items-center gap-1.5 rounded-lg border ${slotBorder} bg-white/[0.02] px-2 py-1.5 text-left transition cursor-pointer min-h-[30px]`}
+                    className={`flex items-center gap-2 rounded-lg border ${slotRing} bg-white/[0.02] px-2.5 py-2 text-left transition cursor-pointer min-h-[40px] min-w-[140px] hover:bg-white/[0.04]`}
                   >
                     {main ? (
                       <>
-                        <div className="h-5 w-5 overflow-hidden rounded border border-white/10 bg-[#060d1a]">
+                        <div className="h-7 w-7 overflow-hidden rounded-md border border-white/10 bg-[#060d1a] shrink-0">
                           <FallbackImage
                             src={getHeroImageUrl(main, heroAssets)}
                             fallbackText={main}
@@ -840,7 +849,7 @@ function BoardColumn({
                             containerClassName="h-full w-full text-[4px]"
                           />
                         </div>
-                        <span className="text-[10px] font-bold text-white truncate">
+                        <span className="text-[11px] font-bold text-white truncate">
                           {main}
                         </span>
                         <button
@@ -854,23 +863,18 @@ function BoardColumn({
                         </button>
                       </>
                     ) : (
-                      <span className="text-[9px] text-slate-600">+ main</span>
+                      <span className="text-[10px] text-slate-600">+ Main Hero</span>
                     )}
                   </button>
                   <button
                     onClick={() =>
-                      openPicker({
-                        type: "role",
-                        side,
-                        lane,
-                        field: "backup",
-                      })
+                      openPicker({ type: "role", side, lane, field: "backup" })
                     }
-                    className="flex items-center gap-1.5 rounded-lg border border-white/[0.04] bg-white/[0.01] px-2 py-1.5 text-left transition cursor-pointer min-h-[30px] hover:border-white/[0.1]"
+                    className="flex items-center gap-2 rounded-lg border border-white/[0.04] bg-white/[0.01] px-2.5 py-2 text-left transition cursor-pointer min-h-[40px] min-w-[140px] hover:border-white/[0.1] hover:bg-white/[0.03]"
                   >
                     {backup ? (
                       <>
-                        <div className="h-5 w-5 overflow-hidden rounded border border-white/10 bg-[#060d1a]">
+                        <div className="h-7 w-7 overflow-hidden rounded-md border border-white/10 bg-[#060d1a] shrink-0">
                           <FallbackImage
                             src={getHeroImageUrl(backup, heroAssets)}
                             fallbackText={backup}
@@ -879,19 +883,13 @@ function BoardColumn({
                             containerClassName="h-full w-full text-[4px]"
                           />
                         </div>
-                        <span className="text-[10px] font-bold text-slate-400 truncate">
+                        <span className="text-[11px] font-bold text-slate-400 truncate">
                           {backup}
                         </span>
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
-                            clearSlot(
-                              "role",
-                              side,
-                              undefined,
-                              lane,
-                              "backup"
-                            );
+                            clearSlot("role", side, undefined, lane, "backup");
                           }}
                           className="ml-auto p-0.5 text-slate-600 hover:text-rose-400 cursor-pointer"
                         >
@@ -899,7 +897,7 @@ function BoardColumn({
                         </button>
                       </>
                     ) : (
-                      <span className="text-[9px] text-slate-600">+ alt</span>
+                      <span className="text-[10px] text-slate-700">+ Alt Hero</span>
                     )}
                   </button>
                 </div>
@@ -912,33 +910,38 @@ function BoardColumn({
   );
 }
 
-/* ═══ BOARD SLOT ═══ */
-function BoardSlot({
+/* ═══ CIRCLE SLOT ═══ */
+function CircleSlot({
   hero,
   heroAssets,
-  accent,
+  ring,
+  size,
   onClick,
   onClear,
 }: {
   hero: string;
   heroAssets: Record<string, string>;
-  accent: string;
+  ring: string;
+  size: "normal" | "small";
   onClick: () => void;
   onClear: () => void;
 }) {
   const empty = !hero;
+  const dim = size === "small" ? "h-11 w-11" : "h-14 w-14";
+  const imgDim = size === "small" ? "h-7 w-7" : "h-10 w-10";
+
   return (
     <button
       onClick={onClick}
-      className={`relative flex flex-col items-center justify-center rounded-lg border ${
+      className={`relative ${dim} rounded-full border-2 ${
         empty
-          ? "border-dashed border-white/[0.06] bg-white/[0.01]"
-          : accent + " bg-white/[0.03]"
-      } p-1.5 transition cursor-pointer min-h-[50px]`}
+          ? "border-dashed border-white/[0.08] bg-white/[0.015]"
+          : `${ring} bg-white/[0.03]`
+      } flex items-center justify-center transition cursor-pointer hover:scale-105`}
     >
       {hero ? (
         <>
-          <div className="h-8 w-8 overflow-hidden rounded-md border border-white/10 bg-[#060d1a]">
+          <div className={`${imgDim} overflow-hidden rounded-full border border-white/10 bg-[#060d1a]`}>
             <FallbackImage
               src={getHeroImageUrl(hero, heroAssets)}
               fallbackText={hero}
@@ -947,21 +950,18 @@ function BoardSlot({
               containerClassName="h-full w-full text-[5px]"
             />
           </div>
-          <span className="mt-0.5 text-[8px] text-slate-400 truncate w-full text-center">
-            {hero}
-          </span>
           <button
             onClick={(e) => {
               e.stopPropagation();
               onClear();
             }}
-            className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-500 hover:text-rose-400 hover:border-rose-500/30 transition cursor-pointer"
+            className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-500 hover:text-rose-400 hover:border-rose-500/30 transition cursor-pointer"
           >
             <X className="h-2.5 w-2.5" />
           </button>
         </>
       ) : (
-        <span className="text-[16px] text-slate-700">+</span>
+        <span className="text-lg text-slate-700">+</span>
       )}
     </button>
   );
