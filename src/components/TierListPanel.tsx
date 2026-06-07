@@ -216,12 +216,12 @@ export default function TierListPanel({ heroes, heroAssets }: TierListPanelProps
 
   const getTierDesc = (tier: string) => {
     switch (tier) {
-      case "S+": return "Priority / Must Ban-Pick Meta";
-      case "S":  return "Strong Meta Pick";
-      case "A":  return "Situational Strong Pick";
-      case "B":  return "Playable / Comfort Pick";
-      case "C":  return "Off Meta / Low Priority";
-      default:   return "Ignored / No Data";
+      case "S+": return "Meta Priority — Hero prioritas tinggi. Layak first pick, contest pick, atau ban karena impact-nya besar di meta.";
+      case "S":  return "Strong Pick — Hero kuat dan stabil. Cocok jadi pilihan utama jika S+ sudah di-ban atau tidak cocok dengan draft.";
+      case "A":  return "Situational Pick — Hero bagus dalam kondisi tertentu. Kuat jika draft, role, dan matchup mendukung.";
+      case "B":  return "Playable Pick — Masih bisa dipakai, terutama sebagai comfort pick atau counter situasional, tapi bukan prioritas utama meta.";
+      case "C":  return "Off Meta — Jarang jadi prioritas. Butuh setup khusus, pilot kuat, atau kondisi draft tertentu agar efektif.";
+      default:   return "Low Priority / No Data — Prioritas rendah atau minim data performa. Tidak otomatis buruk, tapi belum terbukti kuat di data saat ini.";
     }
   };
 
@@ -384,7 +384,7 @@ export default function TierListPanel({ heroes, heroAssets }: TierListPanelProps
                     </div>
                     <div className="hidden md:block">
                       <div className="font-sans text-[10px] text-gray-500 font-bold uppercase tracking-widest leading-tight">
-                        Priority Tier
+                        Tier
                       </div>
                     </div>
                   </div>
