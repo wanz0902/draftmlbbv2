@@ -80,10 +80,11 @@ export interface Item {
   name: string;
   category: string;
   image: string;
-  gold?: number;
-  stats?: string[];
-  passive?: string;
-  description?: string;
+  gold: number | null;
+  stats: string[] | null;
+  passive: string | null;
+  description: string | null;
+  isEnriched: boolean;
 }
 
 export interface DraftState {

@@ -4,7 +4,6 @@ import {
   Search,
   ShoppingBag,
   Coins,
-  ShieldCheck,
   Flame,
   Star,
 } from "lucide-react";
@@ -47,9 +46,6 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
       setSelectedItem(filteredItems[0]);
     }
   }, [filteredItems, selectedItem]);
-
-  const fallbackItem =
-    "/raw-assets/aset_item/attack/Item_Berserker's_Fury_ML.png";
 
   const getCategoryColor = (cat: string) => {
     const c = String(cat || "").toLowerCase();
@@ -154,9 +150,15 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
                     className="h-11 w-11 rounded-lg bg-gray-950 p-1 border border-gray-800 object-contain group-hover:scale-105 transition duration-155"
                     containerClassName="h-11 w-11 rounded-lg text-[8px] bg-gray-950 border border-gray-800"
                   />
-                  <span className="font-mono text-[9px] text-yellow-500 font-bold flex items-center gap-0.5">
-                    <Coins className="h-3 w-3 inline text-yellow-500" />
-                    {item.gold || 2000}
+                  <span className="font-mono text-[9px] font-bold flex items-center gap-0.5">
+                    {item.gold != null ? (
+                      <span className="text-yellow-500 flex items-center gap-0.5">
+                        <Coins className="h-3 w-3 inline text-yellow-500" />
+                        {item.gold}
+                      </span>
+                    ) : (
+                      <span className="text-gray-500">—</span>
+                    )}
                   </span>
                 </div>
 
@@ -180,6 +182,13 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
       <div className="flex flex-col gap-5 rounded-xl border border-gray-900 bg-gray-950 p-5 shadow-xl">
         {selectedItem ? (
           <>
+            {/* Not enriched warning badge */}
+            {!selectedItem.isEnriched && (
+              <div className="rounded-lg bg-amber-950/30 border border-amber-500/20 px-3 py-1.5 text-[11px] text-amber-400 font-medium">
+                ⚠ Data belum lengkap
+              </div>
+            )}
+
             {/* Header */}
             <div className="flex items-center gap-4 border-b border-gray-900 pb-4">
               <FallbackImage
@@ -198,9 +207,15 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
                 <h3 className="font-sans text-lg font-bold tracking-tight text-white line-clamp-1">
                   {selectedItem.name}
                 </h3>
-                <div className="font-mono text-[10px] text-yellow-500 font-bold flex items-center gap-1.5 mt-0.5">
-                  <Coins className="h-3.5 w-3.5" />
-                  Cost: {selectedItem.gold || 2000} Gold
+                <div className="font-mono text-[10px] font-bold flex items-center gap-1.5 mt-0.5">
+                  {selectedItem.gold != null ? (
+                    <span className="text-yellow-500 flex items-center gap-1.5">
+                      <Coins className="h-3.5 w-3.5" />
+                      Cost: {selectedItem.gold} Gold
+                    </span>
+                  ) : (
+                    <span className="text-gray-500 italic">Harga belum tersedia</span>
+                  )}
                 </div>
               </div>
             </div>
@@ -211,15 +226,19 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
                 Atribut Dasar (Stats)
               </h4>
               <div className="flex flex-col gap-2">
-                {selectedItem.stats?.map((stat, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-2 rounded bg-gray-900/40 p-2 border border-gray-950 text-xs font-mono font-medium text-indigo-400"
-                  >
-                    <Flame className="h-3.5 w-3.5 text-orange-500 shrink-0" />
-                    {stat}
-                  </div>
-                ))}
+                {selectedItem.stats != null ? (
+                  selectedItem.stats.map((stat, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-2 rounded bg-gray-900/40 p-2 border border-gray-950 text-xs font-mono font-medium text-indigo-400"
+                    >
+                      <Flame className="h-3.5 w-3.5 text-orange-500 shrink-0" />
+                      {stat}
+                    </div>
+                  ))
+                ) : (
+                  <p className="text-xs text-gray-500 italic">Stats belum tersedia</p>
+                )}
               </div>
             </div>
 
@@ -230,12 +249,22 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
                 Pasif Unik (Passive)
               </h4>
               <div className="rounded-lg bg-gray-900/30 p-3 border border-gray-900">
-                <div className="text-xs font-bold text-white mb-1">
-                  {selectedItem.passive || "No Unique Passive"}
-                </div>
-                <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                  {selectedItem.description}
-                </p>
+                {selectedItem.passive != null ? (
+                  <div className="text-xs font-bold text-white mb-1">
+                    {selectedItem.passive}
+                  </div>
+                ) : (
+                  <p className="text-xs text-gray-500 italic mb-1">Passive belum tersedia</p>
+                )}
+                {selectedItem.description != null ? (
+                  <p className="text-xs text-gray-400 leading-relaxed font-sans">
+                    {selectedItem.description}
+                  </p>
+                ) : (
+                  <p className="text-xs text-gray-500 italic leading-relaxed font-sans">
+                    Detail item belum disinkronkan
+                  </p>
+                )}
               </div>
             </div>
 

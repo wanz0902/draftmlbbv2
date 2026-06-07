@@ -266,7 +266,7 @@ function validateItemImages(): void {
         addWarning(
           'data/items.json',
           'enrichment',
-          `Only ${enrichCount} item(s) have enrichment data, but ${itemImageTotal} item images exist. Items without enrichment get default descriptions.`,
+          `Only ${enrichCount} item(s) have enrichment data, but ${itemImageTotal} item images exist. Items without enrichment show placeholder UI.`,
         );
       }
     } catch {

@@ -348,14 +348,16 @@ function getItemsList() {
       const enriched = enrichmentData.find(
         (item: any) => normalizeName(item.name) === normalizeName(name),
       );
+      const isEnriched = !!enriched;
       return {
         name,
         category: category.charAt(0).toUpperCase() + category.slice(1),
         image: assetUrl(file),
-        gold: enriched?.gold || 2000,
-        stats: enriched?.stats || ["+ Physical / Magic stats"],
-        passive: enriched?.passive || "Unique Passive",
-        description: enriched?.description || "A solid battlefield gear item.",
+        gold: isEnriched ? (enriched.gold ?? null) : null,
+        stats: isEnriched ? (enriched.stats ?? null) : null,
+        passive: isEnriched ? (enriched.passive ?? null) : null,
+        description: isEnriched ? (enriched.description ?? null) : null,
+        isEnriched,
       };
     })
     .sort(
