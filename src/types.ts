@@ -84,6 +84,9 @@ export interface Item {
   stats: string[] | null;
   passive: string | null;
   description: string | null;
+  abilities: Array<{ type: string; name: string; description: string }> | null;
+  buildFrom: string[] | null;
+  buildsInto: string[] | null;
   isEnriched: boolean;
 }
 

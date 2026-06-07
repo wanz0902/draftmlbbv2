@@ -349,14 +349,24 @@ function getItemsList() {
         (item: any) => normalizeName(item.name) === normalizeName(name),
       );
       const isEnriched = !!enriched;
+
+      // Extract passive from abilities[] array OR old flat fields
+      const abilities = enriched?.abilities || [];
+      const passiveAbility = abilities.find((a: any) => a.type === 'passive' || a.type === 'active');
+      const passive = enriched?.passive || (passiveAbility?.name) || null;
+      const description = enriched?.description || (passiveAbility?.description) || null;
+
       return {
         name,
         category: category.charAt(0).toUpperCase() + category.slice(1),
         image: assetUrl(file),
         gold: isEnriched ? (enriched.gold ?? null) : null,
         stats: isEnriched ? (enriched.stats ?? null) : null,
-        passive: isEnriched ? (enriched.passive ?? null) : null,
-        description: isEnriched ? (enriched.description ?? null) : null,
+        passive: isEnriched ? passive : null,
+        description: isEnriched ? description : null,
+        abilities: isEnriched ? (enriched.abilities ?? null) : null,
+        buildFrom: isEnriched ? (enriched.buildFrom ?? null) : null,
+        buildsInto: isEnriched ? (enriched.buildsInto ?? null) : null,
         isEnriched,
       };
     })

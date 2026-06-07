@@ -6,7 +6,7 @@ import DraftSimulator from "./components/DraftSimulator";
 import HeroIntelligenceDashboard from "./components/HeroIntelligenceDashboard";
 import StatsDashboard from "./components/StatsDashboard";
 import TeamAnalytics from "./components/TeamAnalytics";
-import ItemsCatalog from "./components/ItemsCatalog";
+import DataCatalog from "./components/DataCatalog";
 import AdminTools from "./components/AdminTools";
 import TierListPanel from "./components/TierListPanel";
 // Counter Matrix hidden temporarily — data coverage too low (3/132 heroes).
@@ -42,7 +42,7 @@ export default function App() {
     tier: "Tier List",
     heroes: "Hero Stats",
     teams: "Team Analytics",
-    items: "Items Catalog",
+    items: "Data Catalog",
     admin: "Admin Tools",
   };
 
@@ -202,7 +202,7 @@ export default function App() {
               />
             )}
 
-            {currentTab === "items" && <ItemsCatalog items={items} />}
+            {currentTab === "items" && <DataCatalog items={items} />}
 
             {currentTab === "admin" && <AdminTools />}
           </div>

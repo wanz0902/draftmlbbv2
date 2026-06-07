@@ -242,31 +242,63 @@ export default function ItemsCatalog({ items }: ItemsCatalogProps) {
               </div>
             </div>
 
-            {/* Passive details */}
+            {/* Passive / Abilities details */}
             <div className="border-t border-gray-900 pt-3">
               <h4 className="font-sans text-xs font-bold text-gray-400 mb-2 uppercase tracking-wide flex items-center gap-1.5">
                 <Star className="h-3.5 w-3.5 text-yellow-500" />
                 Pasif Unik (Passive)
               </h4>
-              <div className="rounded-lg bg-gray-900/30 p-3 border border-gray-900">
-                {selectedItem.passive != null ? (
-                  <div className="text-xs font-bold text-white mb-1">
-                    {selectedItem.passive}
-                  </div>
-                ) : (
-                  <p className="text-xs text-gray-500 italic mb-1">Passive belum tersedia</p>
-                )}
-                {selectedItem.description != null ? (
-                  <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                    {selectedItem.description}
-                  </p>
-                ) : (
-                  <p className="text-xs text-gray-500 italic leading-relaxed font-sans">
-                    Detail item belum disinkronkan
-                  </p>
-                )}
-              </div>
+              {selectedItem.abilities && selectedItem.abilities.length > 0 ? (
+                <div className="flex flex-col gap-2">
+                  {selectedItem.abilities.map((ability, i) => (
+                    <div key={i} className="rounded-lg bg-gray-900/30 p-3 border border-gray-900">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded ${ability.type === 'passive' ? 'text-yellow-400 bg-yellow-950/40' : 'text-cyan-400 bg-cyan-950/40'}`}>
+                          {ability.type.toUpperCase()}
+                        </span>
+                        <span className="text-xs font-bold text-white">{ability.name}</span>
+                      </div>
+                      <p className="text-xs text-gray-400 leading-relaxed font-sans">{ability.description}</p>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="rounded-lg bg-gray-900/30 p-3 border border-gray-900">
+                  {selectedItem.passive != null ? (
+                    <div className="text-xs font-bold text-white mb-1">
+                      {selectedItem.passive}
+                    </div>
+                  ) : (
+                    <p className="text-xs text-gray-500 italic mb-1">Passive belum tersedia</p>
+                  )}
+                  {selectedItem.description != null ? (
+                    <p className="text-xs text-gray-400 leading-relaxed font-sans">
+                      {selectedItem.description}
+                    </p>
+                  ) : (
+                    <p className="text-xs text-gray-500 italic leading-relaxed font-sans">
+                      Detail item belum disinkronkan
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
+
+            {/* Build Recipe */}
+            {selectedItem.buildFrom && selectedItem.buildFrom.length > 0 && (
+              <div className="border-t border-gray-900 pt-3">
+                <h4 className="font-sans text-xs font-bold text-gray-400 mb-2 uppercase tracking-wide">
+                  Recipe
+                </h4>
+                <div className="flex flex-wrap gap-1.5">
+                  {selectedItem.buildFrom.map((comp, i) => (
+                    <span key={i} className="rounded-md bg-gray-900/60 border border-gray-800 px-2 py-1 text-[11px] text-gray-300 font-medium">
+                      {comp}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Strategy tip */}
             <div className="rounded-lg bg-indigo-950/20 border border-indigo-500/10 p-3 text-[11px] text-gray-400 mt-auto leading-relaxed">
