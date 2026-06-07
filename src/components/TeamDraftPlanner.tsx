@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import {
   Ban,
   BookOpen,
-  ChevronDown,
   ChevronRight,
   Compass,
   Copy,
@@ -22,6 +21,32 @@ import { HeroStats } from "../types";
 const LANES = ["EXP", "Jungle", "Mid", "Gold", "Roam"] as const;
 type Lane = (typeof LANES)[number];
 
+const LANE_ORDER_BLUE: Lane[] = ["EXP", "Jungle", "Mid", "Gold", "Roam"];
+const LANE_ORDER_RED: Lane[] = ["Roam", "Gold", "Mid", "Jungle", "EXP"];
+
+const LANE_LABEL: Record<Lane, string> = {
+  EXP: "EXP",
+  Jungle: "JGL",
+  Mid: "MID",
+  Gold: "GOLD",
+  Roam: "ROAM",
+};
+
+const LANE_COLORS: Record<Lane, { bg: string; text: string; border: string }> = {
+  EXP: { bg: "bg-rose-500/20", text: "text-rose-300", border: "border-rose-500/30" },
+  Jungle: { bg: "bg-blue-500/20", text: "text-blue-300", border: "border-blue-500/30" },
+  Mid: { bg: "bg-slate-400/15", text: "text-slate-300", border: "border-slate-400/30" },
+  Gold: { bg: "bg-yellow-500/20", text: "text-yellow-300", border: "border-yellow-500/30" },
+  Roam: { bg: "bg-emerald-500/20", text: "text-emerald-300", border: "border-emerald-500/30" },
+};
+
+const BACKUP_COUNT = 6;
+
+interface LanePlan {
+  main: string;
+  backups: string[];
+}
+
 interface DraftPlan {
   id: string;
   name: string;
@@ -30,16 +55,18 @@ interface DraftPlan {
   updatedAt: number;
   blueBans: string[];
   redBans: string[];
-  bluePicks: string[];
-  redPicks: string[];
-  blueRoles: Record<Lane, { main: string; backup: string }>;
-  redRoles: Record<Lane, { main: string; backup: string }>;
+  blueLanes: Record<Lane, LanePlan>;
+  redLanes: Record<Lane, LanePlan>;
   notes: string;
 }
 
-function emptyRoles(): Record<Lane, { main: string; backup: string }> {
+function emptyLanePlan(): LanePlan {
+  return { main: "", backups: Array(BACKUP_COUNT).fill("") };
+}
+
+function emptyLanes(): Record<Lane, LanePlan> {
   const r: any = {};
-  for (const lane of LANES) r[lane] = { main: "", backup: "" };
+  for (const lane of LANES) r[lane] = emptyLanePlan();
   return r;
 }
 
@@ -52,10 +79,8 @@ function emptyPlan(name?: string): DraftPlan {
     updatedAt: Date.now(),
     blueBans: Array(5).fill(""),
     redBans: Array(5).fill(""),
-    bluePicks: Array(5).fill(""),
-    redPicks: Array(5).fill(""),
-    blueRoles: emptyRoles(),
-    redRoles: emptyRoles(),
+    blueLanes: emptyLanes(),
+    redLanes: emptyLanes(),
     notes: "",
   };
 }
@@ -74,7 +99,49 @@ function emptyTournament(name?: string): Tournament {
   };
 }
 
-const STORAGE_KEY = "mlbb_tdp_v2";
+const STORAGE_KEY = "mlbb_tdp_v3";
+
+function migrateOldDraft(d: any): DraftPlan {
+  if (d.blueLanes && d.redLanes) return d as DraftPlan;
+  const blueLanes = emptyLanes();
+  const redLanes = emptyLanes();
+  if (d.blueRoles) {
+    for (const lane of LANES) {
+      const old = d.blueRoles[lane];
+      if (old) {
+        blueLanes[lane] = {
+          main: old.main || d.bluePicks?.[LANES.indexOf(lane)] || "",
+          backups: [
+            old.backup || "",
+            ...Array(BACKUP_COUNT - 1).fill(""),
+          ],
+        };
+      }
+    }
+  }
+  if (d.redRoles) {
+    for (const lane of LANES) {
+      const old = d.redRoles[lane];
+      if (old) {
+        redLanes[lane] = {
+          main: old.main || d.redPicks?.[LANES.indexOf(lane)] || "",
+          backups: [
+            old.backup || "",
+            ...Array(BACKUP_COUNT - 1).fill(""),
+          ],
+        };
+      }
+    }
+  }
+  return {
+    ...d,
+    blueLanes,
+    redLanes,
+    blueBans: d.blueBans || Array(5).fill(""),
+    redBans: d.redBans || Array(5).fill(""),
+    notes: d.notes || "",
+  };
+}
 
 function loadData(): {
   tournaments: Tournament[];
@@ -83,7 +150,14 @@ function loadData(): {
 } {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) return JSON.parse(raw);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      parsed.tournaments = parsed.tournaments.map((t: Tournament) => ({
+        ...t,
+        drafts: t.drafts.map(migrateOldDraft),
+      }));
+      return parsed;
+    }
   } catch {}
   const t = emptyTournament();
   return {
@@ -111,13 +185,10 @@ interface TeamDraftPlannerProps {
   heroAssets: Record<string, string>;
 }
 
-type PickerTarget = {
-  type: "ban" | "pick" | "role";
-  side: "BLUE" | "RED";
-  index?: number;
-  lane?: Lane;
-  field?: "main" | "backup";
-};
+type PickerTarget =
+  | { type: "ban"; side: "BLUE" | "RED"; index: number }
+  | { type: "pick"; side: "BLUE" | "RED"; lane: Lane }
+  | { type: "backup"; side: "BLUE" | "RED"; lane: Lane; backupIndex: number };
 
 export default function TeamDraftPlanner({
   heroes,
@@ -198,12 +269,14 @@ export default function TeamDraftPlanner({
 
   const duplicateDraft = () => {
     if (!selectedTourId || !selectedDraft) return;
-    const copy = {
+    const copy: DraftPlan = {
       ...selectedDraft,
       id: `draft_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
       name: `${selectedDraft.name} (copy)`,
       createdAt: Date.now(),
       updatedAt: Date.now(),
+      blueLanes: JSON.parse(JSON.stringify(selectedDraft.blueLanes)),
+      redLanes: JSON.parse(JSON.stringify(selectedDraft.redLanes)),
     };
     setTournaments((prev) => {
       const next = prev.map((t) =>
@@ -250,43 +323,66 @@ export default function TeamDraftPlanner({
     });
   };
 
-  const setSlot = (
-    type: "ban" | "pick" | "role",
-    side: "BLUE" | "RED",
-    value: string,
-    index?: number,
-    lane?: Lane,
-    field?: "main" | "backup"
-  ) => {
+  const setBan = (side: "BLUE" | "RED", index: number, value: string) => {
     updateDraft((d) => {
-      const nd = { ...d };
-      if (type === "ban" && index !== undefined) {
-        const key = side === "BLUE" ? "blueBans" : "redBans";
-        nd[key] = [...(nd as any)[key]];
-        (nd as any)[key][index] = value;
-      } else if (type === "pick" && index !== undefined) {
-        const key = side === "BLUE" ? "bluePicks" : "redPicks";
-        nd[key] = [...(nd as any)[key]];
-        (nd as any)[key][index] = value;
-      } else if (type === "role" && lane && field) {
-        const key = side === "BLUE" ? "blueRoles" : "redRoles";
-        nd[key] = {
-          ...nd[key],
-          [lane]: { ...nd[key][lane], [field]: value },
-        };
-      }
-      return nd;
+      const key = side === "BLUE" ? "blueBans" : "redBans";
+      const arr = [...d[key]];
+      arr[index] = value;
+      return { ...d, [key]: arr };
     });
   };
 
-  const clearSlot = (
-    type: "ban" | "pick" | "role",
+  const setLaneMain = (side: "BLUE" | "RED", lane: Lane, value: string) => {
+    updateDraft((d) => {
+      const key = side === "BLUE" ? "blueLanes" : "redLanes";
+      return {
+        ...d,
+        [key]: {
+          ...d[key],
+          [lane]: { ...d[key][lane], main: value },
+        },
+      };
+    });
+  };
+
+  const setLaneBackup = (
     side: "BLUE" | "RED",
-    index?: number,
-    lane?: Lane,
-    field?: "main" | "backup"
+    lane: Lane,
+    backupIndex: number,
+    value: string
   ) => {
-    setSlot(type, side, "", index, lane, field);
+    updateDraft((d) => {
+      const key = side === "BLUE" ? "blueLanes" : "redLanes";
+      const backups = [...d[key][lane].backups];
+      backups[backupIndex] = value;
+      return {
+        ...d,
+        [key]: {
+          ...d[key],
+          [lane]: { ...d[key][lane], backups },
+        },
+      };
+    });
+  };
+
+  const clearSlot = (target: PickerTarget) => {
+    if (target.type === "ban") {
+      setBan(target.side, target.index, "");
+    } else if (target.type === "pick") {
+      setLaneMain(target.side, target.lane, "");
+    } else {
+      setLaneBackup(target.side, target.lane, target.backupIndex, "");
+    }
+  };
+
+  const applyPick = (target: PickerTarget, heroName: string) => {
+    if (target.type === "ban") {
+      setBan(target.side, target.index, heroName);
+    } else if (target.type === "pick") {
+      setLaneMain(target.side, target.lane, heroName);
+    } else {
+      setLaneBackup(target.side, target.lane, target.backupIndex, heroName);
+    }
   };
 
   const usedHeroes = useMemo(() => {
@@ -295,15 +391,15 @@ export default function TeamDraftPlanner({
     [
       ...selectedDraft.blueBans,
       ...selectedDraft.redBans,
-      ...selectedDraft.bluePicks,
-      ...selectedDraft.redPicks,
     ].forEach((h) => {
       if (h) s.add(h);
     });
-    for (const roles of [selectedDraft.blueRoles, selectedDraft.redRoles]) {
+    for (const lanes of [selectedDraft.blueLanes, selectedDraft.redLanes]) {
       for (const lane of LANES) {
-        if (roles[lane].main) s.add(roles[lane].main);
-        if (roles[lane].backup) s.add(roles[lane].backup);
+        if (lanes[lane].main) s.add(lanes[lane].main);
+        for (const b of lanes[lane].backups) {
+          if (b) s.add(b);
+        }
       }
     }
     return s;
@@ -321,24 +417,19 @@ export default function TeamDraftPlanner({
   }, [heroes, searchQuery, usedHeroes]);
 
   const progress = useMemo(() => {
-    if (!selectedDraft) return { bans: 0, picks: 0, roles: 0, pct: 0 };
+    if (!selectedDraft) return { bans: 0, picks: 0, pct: 0 };
     const allBans = [
       ...selectedDraft.blueBans,
       ...selectedDraft.redBans,
     ].filter(Boolean);
-    const allPicks = [
-      ...selectedDraft.bluePicks,
-      ...selectedDraft.redPicks,
-    ].filter(Boolean);
-    const allRoles = [selectedDraft.blueRoles, selectedDraft.redRoles].flatMap(
-      (r) => LANES.flatMap((l) => [r[l].main, r[l].backup])
+    const allMains = [selectedDraft.blueLanes, selectedDraft.redLanes].flatMap(
+      (l) => LANES.map((lane) => l[lane].main)
     ).filter(Boolean);
-    const total = 30;
-    const filled = allBans.length + allPicks.length + allRoles.length;
+    const total = 20;
+    const filled = allBans.length + allMains.length;
     return {
       bans: allBans.length,
-      picks: allPicks.length,
-      roles: allRoles.length,
+      picks: allMains.length,
       pct: Math.round((filled / total) * 100),
     };
   }, [selectedDraft]);
@@ -517,14 +608,10 @@ export default function TeamDraftPlanner({
 
               <div className="flex items-center gap-4 text-[11px] font-mono text-slate-500">
                 <span>
-                  Bans{" "}
-                  <span className="text-white font-bold">{progress.bans}</span>
-                  /10
+                  Bans <span className="text-white font-bold">{progress.bans}</span>/10
                 </span>
                 <span>
-                  Picks{" "}
-                  <span className="text-white font-bold">{progress.picks}</span>
-                  /10
+                  Picks <span className="text-white font-bold">{progress.picks}</span>/10
                 </span>
                 <span>
                   Complete{" "}
@@ -551,9 +638,7 @@ export default function TeamDraftPlanner({
           ) : (
             <div className="flex items-center gap-3 text-slate-600">
               <Compass className="h-4 w-4" />
-              <span className="text-xs">
-                Select a draft from the sidebar or create a new one
-              </span>
+              <span className="text-xs">Select a draft from the sidebar or create a new one</span>
             </div>
           )}
         </header>
@@ -561,30 +646,26 @@ export default function TeamDraftPlanner({
         {/* ─── BOARD AREA ─── */}
         {selectedDraft ? (
           <div className="flex-1 overflow-y-auto">
-            <div className="flex flex-col gap-0 min-h-full">
-              {/* Blue/Red Panels */}
-              <div className="grid grid-cols-2 gap-0 flex-1 min-h-0">
+            <div className="flex flex-col min-h-full">
+              <div className="grid grid-cols-2 flex-1 min-h-0">
                 <BoardPanel
                   side="BLUE"
                   draft={selectedDraft}
                   heroAssets={heroAssets}
-                  setSlot={setSlot}
-                  clearSlot={clearSlot}
                   openPicker={openPicker}
+                  clearSlot={clearSlot}
                   isOurSide={selectedDraft.side === "BLUE"}
                 />
                 <BoardPanel
                   side="RED"
                   draft={selectedDraft}
                   heroAssets={heroAssets}
-                  setSlot={setSlot}
-                  clearSlot={clearSlot}
                   openPicker={openPicker}
+                  clearSlot={clearSlot}
                   isOurSide={selectedDraft.side === "RED"}
                 />
               </div>
 
-              {/* Coach Notes */}
               <div className="border-t border-white/[0.06] bg-[#070c18]/80 px-5 py-3">
                 <div className="flex items-center gap-2 mb-2">
                   <BookOpen className="h-3.5 w-3.5 text-slate-500" />
@@ -607,12 +688,8 @@ export default function TeamDraftPlanner({
           <div className="flex-1 flex items-center justify-center">
             <div className="text-center">
               <Compass className="mx-auto h-12 w-12 text-slate-800 mb-3" />
-              <div className="text-sm font-bold text-slate-600">
-                No draft selected
-              </div>
-              <p className="mt-1 text-xs text-slate-700">
-                Create a tournament and draft from the sidebar
-              </p>
+              <div className="text-sm font-bold text-slate-600">No draft selected</div>
+              <p className="mt-1 text-xs text-slate-700">Create a tournament and draft from the sidebar</p>
             </div>
           </div>
         )}
@@ -632,12 +709,10 @@ export default function TeamDraftPlanner({
               <Swords className="h-4 w-4 text-slate-500 shrink-0" />
               <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
                 {pickerSlot.type === "ban"
-                  ? "Ban"
+                  ? `Ban — ${pickerSlot.side === "BLUE" ? "Blue" : "Red"}`
                   : pickerSlot.type === "pick"
-                    ? "Pick"
-                    : `${pickerSlot.lane} ${pickerSlot.field}`}
-                {" — "}
-                {pickerSlot.side === "BLUE" ? "Blue" : "Red"}
+                    ? `${pickerSlot.lane} Main — ${pickerSlot.side === "BLUE" ? "Blue" : "Red"}`
+                    : `${pickerSlot.lane} Alt #${pickerSlot.backupIndex + 1} — ${pickerSlot.side === "BLUE" ? "Blue" : "Red"}`}
               </span>
               <input
                 value={searchQuery}
@@ -658,14 +733,7 @@ export default function TeamDraftPlanner({
                 <button
                   key={h.hero_name}
                   onClick={() => {
-                    setSlot(
-                      pickerSlot.type,
-                      pickerSlot.side,
-                      h.hero_name,
-                      pickerSlot.index,
-                      pickerSlot.lane,
-                      pickerSlot.field
-                    );
+                    applyPick(pickerSlot, h.hero_name);
                     setPickerSlot(null);
                     setSearchQuery("");
                   }}
@@ -686,9 +754,7 @@ export default function TeamDraftPlanner({
                 </button>
               ))}
               {filteredHeroes.length === 0 && (
-                <div className="col-span-full py-6 text-center text-xs text-slate-500">
-                  No heroes found.
-                </div>
+                <div className="col-span-full py-6 text-center text-xs text-slate-500">No heroes found.</div>
               )}
             </div>
           </div>
@@ -703,203 +769,133 @@ function BoardPanel({
   side,
   draft,
   heroAssets,
-  setSlot,
-  clearSlot,
   openPicker,
+  clearSlot,
   isOurSide,
 }: {
   side: "BLUE" | "RED";
   draft: DraftPlan;
   heroAssets: Record<string, string>;
-  setSlot: (
-    type: "ban" | "pick" | "role",
-    side: "BLUE" | "RED",
-    value: string,
-    index?: number,
-    lane?: Lane,
-    field?: "main" | "backup"
-  ) => void;
-  clearSlot: (
-    type: "ban" | "pick" | "role",
-    side: "BLUE" | "RED",
-    index?: number,
-    lane?: Lane,
-    field?: "main" | "backup"
-  ) => void;
-  openPicker: (target: PickerTarget) => void;
+  openPicker: (t: PickerTarget) => void;
+  clearSlot: (t: PickerTarget) => void;
   isOurSide: boolean;
 }) {
   const isBlue = side === "BLUE";
   const bans = isBlue ? draft.blueBans : draft.redBans;
-  const picks = isBlue ? draft.bluePicks : draft.redPicks;
-  const roles = isBlue ? draft.blueRoles : draft.redRoles;
+  const lanes = isBlue ? draft.blueLanes : draft.redLanes;
+  const laneOrder = isBlue ? LANE_ORDER_BLUE : LANE_ORDER_RED;
+  const banLabels = isBlue
+    ? ["B1", "B2", "B3", "B4", "B5"]
+    : ["B5", "B4", "B3", "B2", "B1"];
+  const pickLabels = isBlue
+    ? ["P1", "P2", "P3", "P4", "P5"]
+    : ["P5", "P4", "P3", "P2", "P1"];
 
   const borderColor = isBlue ? "border-blue-500/10" : "border-rose-500/10";
   const headerBg = isBlue ? "bg-blue-950/30" : "bg-rose-950/30";
   const accentText = isBlue ? "text-blue-300" : "text-rose-300";
   const accentDot = isBlue ? "bg-blue-400" : "bg-rose-400";
-  const slotRing = isBlue
-    ? "border-blue-500/20 hover:border-blue-400/50 hover:shadow-[0_0_12px_rgba(96,165,250,0.15)]"
-    : "border-rose-500/20 hover:border-rose-400/50 hover:shadow-[0_0_12px_rgba(248,113,113,0.15)]";
+  const ringColor = isBlue
+    ? "border-blue-500/25"
+    : "border-rose-500/25";
 
   return (
-    <div
-      className={`flex flex-col border-r ${
-        borderColor
-      } overflow-hidden`}
-    >
+    <div className={`flex flex-col border-r ${borderColor} overflow-hidden`}>
       {/* Panel Header */}
-      <div
-        className={`flex items-center gap-3 px-5 py-3 border-b border-white/[0.04] ${headerBg}`}
-      >
-        <div className={`h-2.5 w-2.5 rounded-full ${accentDot} shadow-[0_0_8px_${isBlue ? "rgba(96,165,250,0.5)" : "rgba(248,113,113,0.5)"}]`} />
-        <span
-          className={`font-mono text-[11px] font-bold uppercase tracking-[0.2em] ${accentText}`}
-        >
-          {side === "BLUE" ? "Blue Side" : "Red Side"}
-        </span>
-        {isOurSide && (
-          <span className={`rounded px-1.5 py-0.5 text-[8px] font-black uppercase tracking-wider ${isBlue ? "bg-blue-500/20 text-blue-300" : "bg-rose-500/20 text-rose-300"}`}>
-            OURS
+      <div className={`flex items-center justify-between px-5 py-2.5 border-b border-white/[0.04] ${headerBg}`}>
+        <div className="flex items-center gap-2.5">
+          <div className={`h-2 w-2 rounded-full ${accentDot}`} />
+          <span className={`font-mono text-[10px] font-bold uppercase tracking-[0.2em] ${accentText}`}>
+            {side === "BLUE" ? "Blue Side" : "Red Side"}
           </span>
-        )}
+          {isOurSide && (
+            <span className={`rounded px-1.5 py-0.5 text-[8px] font-black uppercase tracking-wider ${isBlue ? "bg-blue-500/20 text-blue-300" : "bg-rose-500/20 text-rose-300"}`}>
+              OURS
+            </span>
+          )}
+        </div>
+        <span className="text-[10px] font-mono text-slate-500">
+          {banLabels.filter((_, i) => bans[i]).length +
+            laneOrder.filter((l) => lanes[l].main).length}
+          /10
+        </span>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-5 py-4 space-y-5">
-        {/* BANS */}
+      <div className="flex-1 overflow-y-auto px-4 py-3 space-y-4">
+        {/* ═══ BANS ROW ═══ */}
         <div>
-          <div className="flex items-center gap-1.5 mb-3">
-            <Ban className="h-3.5 w-3.5 text-rose-400/50" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
-              Bans
-            </span>
+          <div className="flex items-center gap-1.5 mb-2.5">
+            <Ban className="h-3 w-3 text-rose-400/40" />
+            <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-500">Bans</span>
           </div>
-          <div className="flex gap-2.5">
+          <div className="flex justify-between gap-1">
             {bans.map((h, i) => (
-              <CircleSlot
-                key={i}
-                hero={h}
-                heroAssets={heroAssets}
-                ring={slotRing}
-                size="normal"
-                onClick={() => openPicker({ type: "ban", side, index: i })}
-                onClear={() => clearSlot("ban", side, i)}
-              />
+              <div key={i} className="flex flex-col items-center gap-1.5">
+                <CircleSlot
+                  hero={h}
+                  heroAssets={heroAssets}
+                  ring={ringColor}
+                  onClick={() => openPicker({ type: "ban", side, index: i })}
+                  onClear={() => clearSlot({ type: "ban", side, index: i })}
+                />
+                <span className="text-[8px] font-mono font-bold text-slate-600 uppercase">{banLabels[i]}</span>
+              </div>
             ))}
           </div>
         </div>
 
-        {/* PICKS */}
+        {/* ═══ PICKS + LANE COLUMNS ═══ */}
         <div>
-          <div className="flex items-center gap-1.5 mb-3">
-            <Swords className="h-3.5 w-3.5 text-cyan-400/50" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
-              Picks
-            </span>
+          <div className="flex items-center gap-1.5 mb-2.5">
+            <Swords className="h-3 w-3 text-cyan-400/40" />
+            <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-500">Picks</span>
           </div>
-          <div className="flex gap-2.5">
-            {picks.map((h, i) => (
-              <CircleSlot
-                key={i}
-                hero={h}
-                heroAssets={heroAssets}
-                ring={slotRing}
-                size="normal"
-                onClick={() => openPicker({ type: "pick", side, index: i })}
-                onClear={() => clearSlot("pick", side, i)}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* ROLE LANES */}
-        <div>
-          <div className="flex items-center gap-1.5 mb-3">
-            <Target className="h-3.5 w-3.5 text-amber-400/50" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
-              Role Lanes
-            </span>
-          </div>
-          <div className="space-y-2">
-            {LANES.map((lane) => {
-              const main = roles[lane].main;
-              const backup = roles[lane].backup;
+          <div className="flex justify-between gap-1">
+            {laneOrder.map((lane, idx) => {
+              const plan = lanes[lane];
+              const lc = LANE_COLORS[lane];
               return (
-                <div
-                  key={lane}
-                  className="flex items-center gap-3"
-                >
-                  <span className="w-12 text-[10px] font-bold text-slate-500 uppercase text-right shrink-0">
-                    {lane}
-                  </span>
+                <div key={lane} className="flex flex-col items-center gap-1.5 flex-1">
+                  {/* Main Pick Circle */}
+                  <CircleSlot
+                    hero={plan.main}
+                    heroAssets={heroAssets}
+                    ring={ringColor}
+                    onClick={() => openPicker({ type: "pick", side, lane })}
+                    onClear={() => clearSlot({ type: "pick", side, lane })}
+                  />
+
+                  {/* Lane Pill */}
                   <button
-                    onClick={() =>
-                      openPicker({ type: "role", side, lane, field: "main" })
-                    }
-                    className={`flex items-center gap-2 rounded-lg border ${slotRing} bg-white/[0.02] px-2.5 py-2 text-left transition cursor-pointer min-h-[40px] min-w-[140px] hover:bg-white/[0.04]`}
+                    onClick={() => openPicker({ type: "pick", side, lane })}
+                    className={`inline-flex items-center gap-1 rounded-full border ${lc.border} ${lc.bg} px-2 py-0.5 cursor-pointer transition hover:opacity-80`}
                   >
-                    {main ? (
-                      <>
-                        <div className="h-7 w-7 overflow-hidden rounded-md border border-white/10 bg-[#060d1a] shrink-0">
-                          <FallbackImage
-                            src={getHeroImageUrl(main, heroAssets)}
-                            fallbackText={main}
-                            alt={main}
-                            className="h-full w-full object-cover"
-                            containerClassName="h-full w-full text-[4px]"
-                          />
-                        </div>
-                        <span className="text-[11px] font-bold text-white truncate">
-                          {main}
-                        </span>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            clearSlot("role", side, undefined, lane, "main");
-                          }}
-                          className="ml-auto p-0.5 text-slate-600 hover:text-rose-400 cursor-pointer"
-                        >
-                          <X className="h-2.5 w-2.5" />
-                        </button>
-                      </>
-                    ) : (
-                      <span className="text-[10px] text-slate-600">+ Main Hero</span>
-                    )}
+                    <span className={`text-[8px] font-black uppercase tracking-wider ${lc.text}`}>
+                      {LANE_LABEL[lane]}
+                    </span>
                   </button>
-                  <button
-                    onClick={() =>
-                      openPicker({ type: "role", side, lane, field: "backup" })
-                    }
-                    className="flex items-center gap-2 rounded-lg border border-white/[0.04] bg-white/[0.01] px-2.5 py-2 text-left transition cursor-pointer min-h-[40px] min-w-[140px] hover:border-white/[0.1] hover:bg-white/[0.03]"
-                  >
-                    {backup ? (
-                      <>
-                        <div className="h-7 w-7 overflow-hidden rounded-md border border-white/10 bg-[#060d1a] shrink-0">
-                          <FallbackImage
-                            src={getHeroImageUrl(backup, heroAssets)}
-                            fallbackText={backup}
-                            alt={backup}
-                            className="h-full w-full object-cover"
-                            containerClassName="h-full w-full text-[4px]"
-                          />
-                        </div>
-                        <span className="text-[11px] font-bold text-slate-400 truncate">
-                          {backup}
-                        </span>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            clearSlot("role", side, undefined, lane, "backup");
-                          }}
-                          className="ml-auto p-0.5 text-slate-600 hover:text-rose-400 cursor-pointer"
-                        >
-                          <X className="h-2.5 w-2.5" />
-                        </button>
-                      </>
-                    ) : (
-                      <span className="text-[10px] text-slate-700">+ Alt Hero</span>
-                    )}
-                  </button>
+
+                  {/* 6 Backup Slots — 3x2 Grid */}
+                  <div className="grid grid-cols-3 gap-1 mt-0.5">
+                    {plan.backups.map((b, bi) => (
+                      <MiniSlot
+                        key={bi}
+                        hero={b}
+                        heroAssets={heroAssets}
+                        ring={ringColor}
+                        onClick={() =>
+                          openPicker({ type: "backup", side, lane, backupIndex: bi })
+                        }
+                        onClear={() =>
+                          clearSlot({ type: "backup", side, lane, backupIndex: bi })
+                        }
+                      />
+                    ))}
+                  </div>
+
+                  {/* Labels */}
+                  <span className="text-[8px] font-mono font-bold text-cyan-500/60 uppercase mt-0.5">Alt</span>
+                  <span className="text-[8px] font-mono font-bold text-slate-600 uppercase">{pickLabels[idx]}</span>
                 </div>
               );
             })}
@@ -910,38 +906,33 @@ function BoardPanel({
   );
 }
 
-/* ═══ CIRCLE SLOT ═══ */
+/* ═══ CIRCLE SLOT (Ban/Pick — large) ═══ */
 function CircleSlot({
   hero,
   heroAssets,
   ring,
-  size,
   onClick,
   onClear,
 }: {
   hero: string;
   heroAssets: Record<string, string>;
   ring: string;
-  size: "normal" | "small";
   onClick: () => void;
   onClear: () => void;
 }) {
   const empty = !hero;
-  const dim = size === "small" ? "h-11 w-11" : "h-14 w-14";
-  const imgDim = size === "small" ? "h-7 w-7" : "h-10 w-10";
-
   return (
     <button
       onClick={onClick}
-      className={`relative ${dim} rounded-full border-2 ${
+      className={`relative h-14 w-14 rounded-full border-2 ${
         empty
-          ? "border-dashed border-white/[0.08] bg-white/[0.015]"
+          ? "border-dashed border-white/[0.08] bg-white/[0.01]"
           : `${ring} bg-white/[0.03]`
       } flex items-center justify-center transition cursor-pointer hover:scale-105`}
     >
       {hero ? (
         <>
-          <div className={`${imgDim} overflow-hidden rounded-full border border-white/10 bg-[#060d1a]`}>
+          <div className="h-10 w-10 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
             <FallbackImage
               src={getHeroImageUrl(hero, heroAssets)}
               fallbackText={hero}
@@ -962,6 +953,58 @@ function CircleSlot({
         </>
       ) : (
         <span className="text-lg text-slate-700">+</span>
+      )}
+    </button>
+  );
+}
+
+/* ═══ MINI SLOT (Backup — small) ═══ */
+function MiniSlot({
+  hero,
+  heroAssets,
+  ring,
+  onClick,
+  onClear,
+}: {
+  hero: string;
+  heroAssets: Record<string, string>;
+  ring: string;
+  onClick: () => void;
+  onClear: () => void;
+}) {
+  const empty = !hero;
+  return (
+    <button
+      onClick={onClick}
+      className={`relative h-8 w-8 rounded-full border ${
+        empty
+          ? "border-dashed border-white/[0.06] bg-white/[0.01]"
+          : `${ring} bg-white/[0.03]`
+      } flex items-center justify-center transition cursor-pointer hover:scale-110`}
+    >
+      {hero ? (
+        <>
+          <div className="h-6 w-6 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
+            <FallbackImage
+              src={getHeroImageUrl(hero, heroAssets)}
+              fallbackText={hero}
+              alt={hero}
+              className="h-full w-full object-cover"
+              containerClassName="h-full w-full text-[3px]"
+            />
+          </div>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onClear();
+            }}
+            className="absolute -top-0.5 -right-0.5 h-3 w-3 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-600 hover:text-rose-400 transition cursor-pointer"
+          >
+            <X className="h-2 w-2" />
+          </button>
+        </>
+      ) : (
+        <span className="text-[10px] text-slate-700">+</span>
       )}
     </button>
   );
