@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { User, signInWithPopup, signOut, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../lib/firebase";
+import VisitorStatsBadge from "./VisitorStatsBadge";
 
 interface NavbarProps {
   currentTab: string;
@@ -178,6 +179,10 @@ export default function Navbar({
             </div>
           </div>
         </button>
+
+        <div className="hidden items-center gap-2 lg:flex">
+          <VisitorStatsBadge />
+        </div>
 
         <div
           ref={dropdownRef}

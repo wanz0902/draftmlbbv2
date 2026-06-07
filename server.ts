@@ -16,7 +16,7 @@ const getOpenAIClient = () => {
   return new OpenAI({ apiKey });
 };
 
-import { getDb, getDbHealth, seedHeroesIfEmpty, needsRescrape, logAIRequest } from './lib/db/database.js';
+import { getDb, getDbHealth, seedHeroesIfEmpty, needsRescrape, logAIRequest, recordVisitor, getVisitorStats } from './lib/db/database.js';
 import { batchScrapeHeroes, scrapeAndSaveHero } from './lib/scraper/hero-scraper.js';
 import { getGatewayQueueStatus } from './lib/scraper/liquipedia-gateway.js';
 import { scrapeTournamentStats, scrapeTournament } from './lib/scraper/tournament-scraper.js';
@@ -2598,6 +2598,53 @@ app.get("/api/global-rank-stats", (req, res) => {
     return res.json({ ...data, available: true });
   } catch {
     return res.json({ heroes: [], available: false });
+  }
+});
+
+// ====================================================================
+// VISITOR ANALYTICS — Anonymous heartbeat + total unique visitors
+// No personal data / no IP storage / online = heartbeat within 60s
+// ====================================================================
+const onlineSessions = new Map<string, number>();
+const VISITOR_ONLINE_TIMEOUT_MS = 60_000;
+
+function cleanExpiredSessions(): void {
+  const now = Date.now();
+  for (const [id, lastSeen] of onlineSessions) {
+    if (now - lastSeen > VISITOR_ONLINE_TIMEOUT_MS) {
+      onlineSessions.delete(id);
+    }
+  }
+}
+
+setInterval(cleanExpiredSessions, 30_000).unref();
+
+app.post("/api/analytics/heartbeat", (req, res) => {
+  try {
+    const visitorId = String(req.body?.visitorId || "").trim();
+    if (!visitorId || visitorId.length > 128) {
+      return res.status(400).json({ error: "Invalid visitorId" });
+    }
+    const db = getDb();
+    recordVisitor(db, visitorId);
+    onlineSessions.set(visitorId, Date.now());
+    cleanExpiredSessions();
+    const stats = getVisitorStats(db);
+    return res.json({ online: onlineSessions.size, totalUsers: stats.totalUsers });
+  } catch (err) {
+    console.error("[Analytics] Heartbeat error:", err);
+    return res.json({ online: 0, totalUsers: 0 });
+  }
+});
+
+app.get("/api/analytics/visitors", (_req, res) => {
+  try {
+    const db = getDb();
+    cleanExpiredSessions();
+    const stats = getVisitorStats(db);
+    return res.json({ online: onlineSessions.size, totalUsers: stats.totalUsers });
+  } catch {
+    return res.json({ online: 0, totalUsers: 0 });
   }
 });
 

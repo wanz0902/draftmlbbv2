@@ -215,6 +215,14 @@ function initSchema(db: Database.Database): void {
     );
     CREATE INDEX IF NOT EXISTS idx_ai_logs_created_at ON ai_request_logs(created_at);
     CREATE INDEX IF NOT EXISTS idx_ai_logs_provider ON ai_request_logs(provider_used);
+
+    CREATE TABLE IF NOT EXISTS visitors (
+      visitor_id  TEXT PRIMARY KEY,
+      first_seen  INTEGER DEFAULT (unixepoch()),
+      last_seen   INTEGER DEFAULT (unixepoch()),
+      visit_count INTEGER DEFAULT 1
+    );
+    CREATE INDEX IF NOT EXISTS idx_visitors_last_seen ON visitors(last_seen);
   `);
 }
 
@@ -334,6 +342,30 @@ export function getDbHealth(db: Database.Database): Record<string, number> {
   } catch {}
 
   return result;
+}
+
+export function recordVisitor(db: Database.Database, visitorId: string): void {
+  try {
+    db.prepare(`
+      INSERT INTO visitors (visitor_id, first_seen, last_seen, visit_count)
+      VALUES (?, unixepoch(), unixepoch(), 1)
+      ON CONFLICT(visitor_id) DO UPDATE SET
+        last_seen = unixepoch(),
+        visit_count = visit_count + 1
+    `).run(visitorId);
+  } catch (err) {
+    console.error('[DB] Failed to record visitor:', err);
+  }
+}
+
+export function getVisitorStats(db: Database.Database): { online: number; totalUsers: number } {
+  try {
+    const totalRow = db.prepare('SELECT COUNT(*) as c FROM visitors').get() as { c: number } | undefined;
+    const totalUsers = totalRow?.c || 0;
+    return { online: 0, totalUsers };
+  } catch {
+    return { online: 0, totalUsers: 0 };
+  }
 }
 
 export function logAIRequest(data: {
