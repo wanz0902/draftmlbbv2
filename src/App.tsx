@@ -180,7 +180,7 @@ export default function App() {
             )}
 
             {currentTab === "tdp" && (
-              <TeamDraftPlanner heroes={heroes} heroAssets={heroAssets} onOpenHeroIntelligence={handleOpenHeroIntelligence} />
+              <TeamDraftPlanner heroes={heroes} heroAssets={heroAssets} />
             )}
 
             {currentTab === "tier" && (
