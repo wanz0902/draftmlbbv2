@@ -6,7 +6,6 @@ import {
   Home,
   LogOut,
   Menu,
-  ShieldCheck,
   Sparkles,
   Trophy,
   User as UserIcon,
@@ -38,7 +37,6 @@ const groupedLinks = [
     items: [
       { id: "intelligence", label: "Hero Intelligence" },
       { id: "heroes", label: "Hero Stats" },
-      { id: "counter", label: "Counter Matrix" },
       { id: "tier", label: "Tier List" },
     ],
   },
@@ -59,7 +57,6 @@ const mobileSections = [
     items: [
       { id: "intelligence", label: "Hero Intelligence", icon: Sparkles },
       { id: "heroes", label: "Hero Stats", icon: BarChart3 },
-      { id: "counter", label: "Counter Matrix", icon: ShieldCheck },
       { id: "tier", label: "Tier List", icon: Trophy },
     ],
   },

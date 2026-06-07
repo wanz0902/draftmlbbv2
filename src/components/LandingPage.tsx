@@ -92,9 +92,9 @@ const previewCards = [
 
 const featureHighlights = [
   {
-    id: "counter",
+    id: "heroes",
     icon: Swords,
-    title: "Counter Matrix",
+    title: "Hero Matchups",
     text: "Lihat pressure point lineup lawan sebelum mereka menutup draft.",
     badge: "Matchup Read",
     glow: "shadow-[0_24px_60px_-30px_rgba(34,211,238,0.55)]",

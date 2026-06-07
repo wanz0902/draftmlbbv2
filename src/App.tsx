@@ -9,7 +9,9 @@ import TeamAnalytics from "./components/TeamAnalytics";
 import ItemsCatalog from "./components/ItemsCatalog";
 import AdminTools from "./components/AdminTools";
 import TierListPanel from "./components/TierListPanel";
-import CounterMatrixPanel from "./components/CounterMatrixPanel";
+// Counter Matrix hidden temporarily — data coverage too low (3/132 heroes).
+// Component preserved at src/components/CounterMatrixPanel.tsx for future rebuild.
+// import CounterMatrixPanel from "./components/CounterMatrixPanel";
 import LandingPage from "./components/LandingPage";
 import { HeroStats, Item, TeamStats } from "./types";
 import { ArrowLeft, CloudLightning, ShieldCheck } from "lucide-react";
@@ -38,7 +40,6 @@ export default function App() {
     draft: "Draft Simulator",
     intelligence: "Hero Intelligence",
     tier: "Tier List",
-    counter: "Counter Matrix",
     heroes: "Hero Stats",
     teams: "Team Analytics",
     items: "Items Catalog",
@@ -187,10 +188,6 @@ export default function App() {
 
             {currentTab === "tier" && (
               <TierListPanel heroes={heroes} heroAssets={heroAssets} />
-            )}
-
-            {currentTab === "counter" && (
-              <CounterMatrixPanel heroes={heroes} heroAssets={heroAssets} />
             )}
 
             {currentTab === "heroes" && (
