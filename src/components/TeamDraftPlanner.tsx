@@ -8,6 +8,7 @@ import {
   Copy,
   Download,
   FileText,
+  HelpCircle,
   Layers,
   Plus,
   Save,
@@ -20,6 +21,7 @@ import { toPng } from "html-to-image";
 import FallbackImage from "./FallbackImage";
 import { getHeroImageUrl } from "../lib/heroUtils";
 import { HeroStats } from "../types";
+import TdpOnboarding, { isTdpTutorialCompleted } from "./TdpOnboarding";
 
 const LANES = ["EXP", "Jungle", "Mid", "Gold", "Roam"] as const;
 type Lane = (typeof LANES)[number];
@@ -178,6 +180,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [expandedTours, setExpandedTours] = useState<Set<string>>(new Set());
   const [exporting, setExporting] = useState(false);
+  const [showTutorial, setShowTutorial] = useState(() => !isTdpTutorialCompleted());
   const boardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -396,10 +399,12 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
   };
 
   return (
-    <div className="flex h-[calc(100vh-56px)] overflow-hidden bg-[#060b16]">
+    <>
+    {showTutorial && <TdpOnboarding onComplete={() => setShowTutorial(false)} />}
+    <div className="flex h-[calc(100vh-56px)] overflow-hidden bg-[#0a0f1c]">
       {/* ═══ LEFT SIDEBAR ═══ */}
       <aside
-        className={`${sidebarCollapsed ? "w-[52px]" : "w-[260px]"} shrink-0 flex flex-col border-r border-white/[0.06] bg-[#070c18] transition-all duration-300 overflow-hidden`}
+        className={`${sidebarCollapsed ? "w-[52px]" : "w-[260px]"} shrink-0 flex flex-col border-r border-white/[0.08] bg-[#0c1222] transition-all duration-300 overflow-hidden`}
       >
         {sidebarCollapsed ? (
           <div className="flex flex-col items-center py-3 gap-3">
@@ -504,7 +509,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
       {/* ═══ MAIN WORKSPACE ═══ */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* ─── HEADER ─── */}
-        <header className="border-b border-white/[0.06] bg-[#080e1a]/80 backdrop-blur-sm shrink-0">
+        <header className="border-b border-white/[0.08] bg-[#0e1525]/90 backdrop-blur-sm shrink-0">
           <div className="flex items-center gap-4 px-5 py-3">
             {sidebarCollapsed && (
               <button onClick={() => setSidebarCollapsed(false)} className="p-1.5 text-slate-500 hover:text-cyan-400 transition cursor-pointer" title="Expand sidebar">
@@ -545,6 +550,14 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
                       </button>
                     ))}
                   </div>
+
+                  <button
+                    onClick={() => setShowTutorial(true)}
+                    className="p-1.5 text-slate-500 hover:text-cyan-400 transition cursor-pointer"
+                    title="Buka Tutorial"
+                  >
+                    <HelpCircle className="h-4 w-4" />
+                  </button>
 
                   <button
                     onClick={handleExportPng}
@@ -588,7 +601,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
                 <BoardPanel side="RED" draft={selectedDraft} heroAssets={heroAssets} openPicker={openPicker} clearSlot={clearSlot} isOurSide={selectedDraft.side === "RED"} />
               </div>
 
-              <div className="border-t border-white/[0.06] bg-[#070c18]/80 px-5 py-3">
+              <div className="border-t border-white/[0.08] bg-[#0c1222]/90 px-5 py-3">
                 <div className="flex items-center gap-2 mb-2">
                   <BookOpen className="h-3.5 w-3.5 text-slate-500" />
                   <span className="font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">Coach Notes</span>
@@ -596,7 +609,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
                 <textarea
                   value={selectedDraft.notes}
                   onChange={(e) => updateDraft((d) => ({ ...d, notes: e.target.value }))}
-                  className="w-full h-20 bg-white/[0.02] rounded-lg border border-white/[0.06] px-4 py-2.5 text-sm text-white outline-none focus:border-cyan-500/30 transition resize-none placeholder:text-slate-700"
+                  className="w-full h-20 bg-white/[0.04] rounded-lg border border-white/[0.08] px-4 py-2.5 text-sm text-white outline-none focus:border-cyan-500/30 transition resize-none placeholder:text-slate-600"
                   placeholder="Strategy notes — ban priorities, win condition, key matchups, rotations..."
                 />
               </div>
@@ -651,6 +664,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
         </div>
       )}
     </div>
+    </>
   );
 }
 
@@ -670,14 +684,14 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
   const banLabels = isBlue ? ["B1", "B2", "B3", "B4", "B5"] : ["B5", "B4", "B3", "B2", "B1"];
   const pickLabels = isBlue ? ["P1", "P2", "P3", "P4", "P5"] : ["P5", "P4", "P3", "P2", "P1"];
 
-  const borderColor = isBlue ? "border-blue-500/10" : "border-rose-500/10";
-  const headerBg = isBlue ? "bg-blue-950/30" : "bg-rose-950/30";
+  const borderColor = isBlue ? "border-blue-500/15" : "border-rose-500/15";
+  const headerBg = isBlue ? "bg-blue-950/40" : "bg-rose-950/40";
   const accentText = isBlue ? "text-blue-300" : "text-rose-300";
   const accentDot = isBlue ? "bg-blue-400" : "bg-rose-400";
-  const ringColor = isBlue ? "border-blue-500/25" : "border-rose-500/25";
+  const ringColor = isBlue ? "border-blue-500/30" : "border-rose-500/30";
 
   return (
-    <div className={`flex flex-col border-r ${borderColor} overflow-hidden`}>
+    <div className={`flex flex-col border-r ${borderColor} overflow-hidden bg-[#0e1525]/60`}>
       <div className={`flex items-center justify-between px-5 py-2.5 border-b border-white/[0.04] ${headerBg}`}>
         <div className="flex items-center gap-2.5">
           <div className={`h-2 w-2 rounded-full ${accentDot}`} />
@@ -697,7 +711,7 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
         <div>
           <div className="flex items-center gap-1.5 mb-2.5">
             <Ban className="h-3 w-3 text-rose-400/40" />
-            <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-500">Bans</span>
+            <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">Bans</span>
           </div>
           <div className="flex justify-between gap-1">
             {bans.map((h, i) => (
@@ -712,7 +726,7 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
         <div>
           <div className="flex items-center gap-1.5 mb-2.5">
             <Swords className="h-3 w-3 text-cyan-400/40" />
-            <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-500">Picks</span>
+            <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">Picks</span>
           </div>
           <div className="flex justify-between gap-1">
             {laneOrder.map((lane, idx) => {
@@ -747,7 +761,7 @@ function CircleSlot({ hero, heroAssets, ring, onClick, onClear }: {
 }) {
   const empty = !hero;
   return (
-    <button onClick={onClick} className={`relative h-[72px] w-[72px] rounded-full border-2 ${empty ? "border-dashed border-white/[0.08] bg-white/[0.01]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-105`}>
+    <button onClick={onClick} className={`relative h-[72px] w-[72px] rounded-full border-2 ${empty ? "border-dashed border-white/[0.12] bg-white/[0.02]" : `${ring} bg-white/[0.04]`} flex items-center justify-center transition cursor-pointer hover:scale-105`}>
       {hero ? (
         <>
           <div className="h-14 w-14 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
@@ -768,7 +782,7 @@ function MiniSlot({ hero, heroAssets, ring, onClick, onClear }: {
 }) {
   const empty = !hero;
   return (
-    <button onClick={onClick} className={`relative h-10 w-10 rounded-full border ${empty ? "border-dashed border-white/[0.06] bg-white/[0.01]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-110`}>
+    <button onClick={onClick} className={`relative h-10 w-10 rounded-full border ${empty ? "border-dashed border-white/[0.10] bg-white/[0.02]" : `${ring} bg-white/[0.03]`} flex items-center justify-center transition cursor-pointer hover:scale-110`}>
       {hero ? (
         <>
           <div className="h-8 w-8 overflow-hidden rounded-full border border-white/10 bg-[#060d1a]">
