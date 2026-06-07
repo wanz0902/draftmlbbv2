@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ShieldCheck, RefreshCw, CheckCircle, AlertTriangle, XCircle, ArrowLeft, Lock, Info } from "lucide-react";
+import { ShieldCheck, RefreshCw, CheckCircle, AlertTriangle, XCircle, ArrowLeft, Lock, Info, Upload } from "lucide-react";
 
 type Status = "idle" | "loading" | "success" | "error-auth" | "error-network" | "error-validation";
 
@@ -8,6 +8,8 @@ export default function AdminTools() {
   const [status, setStatus] = useState<Status>("idle");
   const [result, setResult] = useState<any>(null);
   const [errorMsg, setErrorMsg] = useState("");
+  const [applyLoading, setApplyLoading] = useState(false);
+  const [applyResult, setApplyResult] = useState<any>(null);
 
   const checkUpdates = async () => {
     if (!token.trim()) {
@@ -244,16 +246,58 @@ export default function AdminTools() {
             </div>
           )}
 
-          {/* Apply — Disabled */}
-          <div className="rounded-xl border border-dashed border-gray-700 bg-gray-950/30 p-5 text-center">
-            <button disabled className="opacity-30 cursor-not-allowed text-sm text-gray-500 font-bold uppercase tracking-wider mb-1">
-              Apply Updates to Local Data
-            </button>
-            <p className="text-[10px] text-gray-600">Disabled — staged apply flow is planned for a future update.</p>
+          {/* Apply */}
+          <div className={`rounded-xl border p-5 ${result.validation?.safeToApply ? "border-emerald-900/30 bg-emerald-950/10" : "border-dashed border-gray-700 bg-gray-950/30"}`}>
+            {applyResult?.success ? (
+              <div className="text-center">
+                <CheckCircle className="h-6 w-6 text-emerald-400 mx-auto mb-2" />
+                <p className="text-sm font-bold text-emerald-300 mb-1">Applied Successfully</p>
+                <p className="text-xs text-gray-400">Count: {applyResult.count} heroes | Backup: {applyResult.backupPath}</p>
+              </div>
+            ) : applyResult && !applyResult.success ? (
+              <div className="text-center">
+                <XCircle className="h-6 w-6 text-red-400 mx-auto mb-2" />
+                <p className="text-sm font-bold text-red-300 mb-1">Apply Failed</p>
+                <p className="text-xs text-red-300/80">{applyResult.error}</p>
+                {applyResult.postWriteErrors && <p className="text-[10px] text-gray-500 mt-1">Rolled back to backup.</p>}
+              </div>
+            ) : (
+              <div className="text-center">
+                <button
+                  onClick={async () => {
+                    if (!result.validation?.safeToApply) return;
+                    if (!confirm("Apply Liquipedia hero stats to local data? A backup will be created first.")) return;
+                    setApplyLoading(true); setApplyResult(null);
+                    try {
+                      const res = await fetch("/api/admin/liquipedia/apply-updates", {
+                        method: "POST",
+                        headers: { "x-admin-tools-token": token.trim() },
+                      });
+                      const data = await res.json();
+                      setApplyResult(data);
+                    } catch (err: any) {
+                      setApplyResult({ success: false, error: err.message || "Network error" });
+                    } finally {
+                      setApplyLoading(false);
+                    }
+                  }}
+                  disabled={!result.validation?.safeToApply || applyLoading}
+                  className={`flex items-center gap-2 mx-auto px-5 py-2.5 rounded-lg text-sm font-bold transition-colors ${result.validation?.safeToApply ? "bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-600/30 cursor-pointer" : "opacity-30 cursor-not-allowed text-gray-500 border border-gray-700"}`}
+                >
+                  <Upload className={`h-4 w-4 ${applyLoading ? "animate-bounce" : ""}`} />
+                  {applyLoading ? "Applying..." : "Apply Approved Update"}
+                </button>
+                <p className="text-[10px] text-gray-500 mt-2">
+                  {result.validation?.safeToApply
+                    ? "Creates backup, re-fetches Liquipedia, validates, then writes to local Hero Stats."
+                    : "Cannot apply — preview validation has errors."}
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Safety note */}
-          <p className="text-[10px] text-gray-500 text-center border-t border-gray-800/50 pt-3">{result.note || "No public data was modified."}</p>
+          <p className="text-[10px] text-gray-500 text-center border-t border-gray-800/50 pt-3">{applyResult?.success ? "Public Hero Stats source has been updated." : (result.note || "No public data was modified.")}</p>
         </div>
       )}
 

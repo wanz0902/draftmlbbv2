@@ -45,6 +45,9 @@ data/*.db-shm
 data/*.db-wal
 data/*.db-journal
 
+# Admin tool backups (generated at runtime, never commit)
+data/backups/
+
 # Kiro workspace
 .kiro/
 .verdent_*

@@ -2386,6 +2386,148 @@ app.post("/api/admin/liquipedia/check-updates", async (req, res): Promise<any> =
   }
 });
 
+// API ROUTE: ADMIN-ONLY APPLY APPROVED LIQUIPEDIA UPDATE
+app.post("/api/admin/liquipedia/apply-updates", async (req, res): Promise<any> => {
+  // Admin gate
+  const adminEnabled = process.env.ADMIN_TOOLS_ENABLED === 'true';
+  if (!adminEnabled) {
+    return res.status(403).json({ success: false, error: 'Admin tools are disabled.' });
+  }
+  const expectedToken = process.env.ADMIN_TOOLS_ACCESS_TOKEN;
+  if (expectedToken) {
+    const providedToken = req.headers['x-admin-tools-token'] as string;
+    if (providedToken !== expectedToken) {
+      return res.status(403).json({ success: false, error: 'Invalid or missing admin access token.' });
+    }
+  }
+
+  try {
+    // Re-fetch and re-parse from Liquipedia (do NOT trust frontend payload)
+    const apiEndpoint = "https://liquipedia.net/mobilelegends/api.php";
+    const params = new URLSearchParams({ action: "parse", page: "MPL/Indonesia/Season_17/Statistics", prop: "text", format: "json" });
+    const headers = { "User-Agent": "MLBB-Draft-Simulator-Builder/1.0 (dev@aistudio.build)" };
+
+    const fetchResponse = await fetch(`${apiEndpoint}?${params.toString()}`, { headers });
+    if (!fetchResponse.ok) {
+      if (fetchResponse.status === 429) return res.status(429).json({ success: false, error: "Liquipedia rate limit. Try again later." });
+      throw new Error(`Liquipedia HTTP ${fetchResponse.status}`);
+    }
+
+    const data: any = await fetchResponse.json();
+    if (!data?.parse?.text?.["*"]) throw new Error("Invalid Liquipedia response format");
+
+    const htmlContent = data.parse.text["*"];
+    const $ = cheerio.load(htmlContent);
+    const tables = $("table.wikitable");
+    if (tables.length === 0) throw new Error("Stats wikitable not found");
+
+    const firstTable = tables.first();
+    const rows = firstTable.find("tr");
+    const scrapedHeroes: any[] = [];
+
+    const masterPath = path.join(process.cwd(), "src", "data", "heroes_master.json");
+    let masterData: any[] = [];
+    if (fs.existsSync(masterPath)) masterData = JSON.parse(fs.readFileSync(masterPath, "utf8"));
+    const norm = (s: string) => String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+
+    rows.each((index, tr) => {
+      const cells = $(tr).find("td");
+      if (cells.length < 10) return;
+      let rawHeroName = ""; let offset = 0;
+      const c0 = cleanText($(cells[0]).text()); const c1 = cleanText($(cells[1]).text());
+      if (!isNaN(parseInt(c0)) && c1.length > 1) { rawHeroName = c1; offset = 0; }
+      else if (c0.length > 2 && isNaN(parseInt(c0))) { rawHeroName = c0; offset = -1; }
+      if (!rawHeroName) return;
+
+      let heroName = rawHeroName;
+      if (masterData.length > 0) {
+        let mapped = norm(rawHeroName);
+        if (mapped === "yisun-shin" || mapped.includes("yss") || mapped === "yisunshin") mapped = "yisunshin";
+        if (mapped === "xborg") mapped = "xborg";
+        const found = masterData.find((h: any) => norm(h.hero_name) === mapped || h.slug === mapped);
+        if (found) heroName = found.hero_name;
+      }
+
+      const extract = (idx: number) => { const t = idx + offset; return (t < 0 || t >= cells.length) ? "0" : cleanText($(cells[t]).text()); };
+      const hData = {
+        hero_name: heroName, picks_total: extract(2), picks_win: extract(3), picks_loss: extract(4),
+        winrate: extract(5), tournament_presence: extract(6),
+        blue_side_picks: extract(7), blue_side_win: extract(8), blue_side_loss: extract(9), blue_side_wr: extract(10),
+        red_side_picks: extract(11), red_side_win: extract(12), red_side_loss: extract(13), red_side_wr: extract(14),
+        bans_total: extract(15), bans_presence: extract(16), picks_bans_total: extract(17), picks_bans_presence: extract(18) || extract(17),
+      };
+      const pTotal = parseInt(hData.picks_total); const pWin = parseInt(hData.picks_win); const bTotal = parseInt(hData.bans_total);
+      if (isNaN(pTotal) || isNaN(pWin) || isNaN(bTotal)) return;
+      if (pWin > pTotal) return;
+      scrapedHeroes.push(hData);
+    });
+
+    // Validation before write
+    const errors: string[] = [];
+    if (scrapedHeroes.length !== 82) errors.push(`Expected 82 heroes, got ${scrapedHeroes.length}.`);
+    const seenNorm = new Set<string>();
+    scrapedHeroes.forEach(h => {
+      const n = norm(h.hero_name);
+      if (!n) errors.push(`Empty hero name detected.`);
+      if (seenNorm.has(n)) errors.push(`Duplicate: ${h.hero_name}`);
+      seenNorm.add(n);
+    });
+    if (!seenNorm.has("mathilda")) errors.push("Mathilda missing.");
+    if (!seenNorm.has("yisunshin")) errors.push("Yi Sun-shin missing.");
+    if (!seenNorm.has("valentina")) errors.push("Valentina missing.");
+    if (!seenNorm.has("luoyi")) errors.push("Luo Yi missing.");
+
+    if (errors.length > 0) {
+      return res.json({ success: false, error: "Validation failed. No data written.", validationErrors: errors });
+    }
+
+    // Create backup
+    const backupDir = path.join(process.cwd(), "data", "backups");
+    fs.mkdirSync(backupDir, { recursive: true });
+    const timestamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
+    const backupPath = path.join(backupDir, `heroes_stats_${timestamp}.json`);
+    if (fs.existsSync(HERO_STATS_FILE)) {
+      fs.copyFileSync(HERO_STATS_FILE, backupPath);
+    }
+
+    // Write to temp file first, then replace (atomic-ish)
+    const tmpPath = HERO_STATS_FILE + ".tmp";
+    const newContent = JSON.stringify(scrapedHeroes, null, 2);
+    fs.writeFileSync(tmpPath, newContent, "utf8");
+    fs.renameSync(tmpPath, HERO_STATS_FILE);
+
+    // Post-write validation
+    const written = JSON.parse(fs.readFileSync(HERO_STATS_FILE, "utf8"));
+    const postWriteErrors: string[] = [];
+    if (!Array.isArray(written) || written.length !== 82) postWriteErrors.push(`Post-write count: ${written?.length}`);
+    const postSeen = new Set<string>();
+    (written || []).forEach((h: any) => { const n = norm(h.hero_name); if (postSeen.has(n)) postWriteErrors.push(`Post-write dupe: ${h.hero_name}`); postSeen.add(n); });
+    if (!postSeen.has("mathilda")) postWriteErrors.push("Post-write: Mathilda missing");
+    if (!postSeen.has("yisunshin")) postWriteErrors.push("Post-write: Yi Sun-shin missing");
+    if (!postSeen.has("valentina")) postWriteErrors.push("Post-write: Valentina missing");
+
+    if (postWriteErrors.length > 0) {
+      // Rollback
+      if (fs.existsSync(backupPath)) {
+        fs.copyFileSync(backupPath, HERO_STATS_FILE);
+      }
+      return res.json({ success: false, error: "Post-write validation failed. Rolled back to backup.", postWriteErrors, backupPath: path.relative(process.cwd(), backupPath) });
+    }
+
+    console.log(`[Admin] Applied Liquipedia hero stats update. Backup: ${path.relative(process.cwd(), backupPath)}`);
+    res.json({
+      success: true,
+      message: "Hero Stats updated successfully from Liquipedia.",
+      count: scrapedHeroes.length,
+      backupPath: path.relative(process.cwd(), backupPath),
+      writtenPath: path.relative(process.cwd(), HERO_STATS_FILE),
+    });
+  } catch (error: any) {
+    console.error("Admin apply failed:", error.message);
+    res.status(500).json({ success: false, error: error.message, note: "Apply failed. Local data may be unchanged or rolled back." });
+  }
+});
+
 // API ROUTE: LIVE INTERNET SCAN & SCRAPING (OPTIMIZED LOGIC) — ADMIN ONLY
 app.post("/api/scrape/liquipedia", async (req, res): Promise<any> => {
   // Admin gate: require ADMIN_TOOLS_ENABLED=true and valid access token
