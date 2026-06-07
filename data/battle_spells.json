@@ -2,6 +2,7 @@
   {
     "name": "Flicker",
     "slug": "flicker",
+    "iconUrl": "/raw-assets/aset_spell/flicker.png",
     "cooldown": 120,
     "effect": "Teleport a short distance in a designated direction. Gains 5 (+1 per level) Physical and Magic Defense for 1s after teleporting.",
     "unlockLevel": 1,
@@ -13,6 +14,7 @@
   {
     "name": "Retribution",
     "slug": "retribution",
+    "iconUrl": "/raw-assets/aset_spell/retribution.png",
     "cooldown": 35,
     "effect": "Deals 480-1260 True Damage to the targeted jungle monster or minion. Grants Jungling equipment effects.",
     "unlockLevel": 1,
@@ -24,6 +26,7 @@
   {
     "name": "Execute",
     "slug": "execute",
+    "iconUrl": "/raw-assets/aset_spell/execute.png",
     "cooldown": 90,
     "effect": "Deals 200-520 (+25% lost HP) True Damage to target enemy hero. Damage scales with enemy missing HP.",
     "unlockLevel": 1,
@@ -35,6 +38,7 @@
   {
     "name": "Inspire",
     "slug": "inspire",
+    "iconUrl": "/raw-assets/aset_spell/inspire.png",
     "cooldown": 75,
     "effect": "Gain 55% Attack Speed for 5s. Basic Attacks ignore 8 Physical Defense of the target during the duration.",
     "unlockLevel": 1,
@@ -46,6 +50,7 @@
   {
     "name": "Sprint",
     "slug": "sprint",
+    "iconUrl": "/raw-assets/aset_spell/sprint.png",
     "cooldown": 100,
     "effect": "Increases Movement Speed by 42% for 6s. Slowly decays over the duration. Immune to slow effects for 2s.",
     "unlockLevel": 1,
@@ -57,6 +62,7 @@
   {
     "name": "Flameshot",
     "slug": "flameshot",
+    "iconUrl": "/raw-assets/aset_spell/flameshot.png",
     "cooldown": 55,
     "effect": "Fires a flaming shot in designated direction, dealing 160-640 Magic Damage and knocking enemies back. Damage increases with distance.",
     "unlockLevel": 1,
@@ -68,6 +74,7 @@
   {
     "name": "Aegis",
     "slug": "aegis",
+    "iconUrl": "/raw-assets/aset_spell/aegis.png",
     "cooldown": 75,
     "effect": "Generates a shield that absorbs 750-1500 damage for 3s. Nearby allies receive 50% of the shield.",
     "unlockLevel": 1,
@@ -79,6 +86,7 @@
   {
     "name": "Petrify",
     "slug": "petrify",
+    "iconUrl": "/raw-assets/aset_spell/petrify.png",
     "cooldown": 75,
     "effect": "Deals 100-250 Magic Damage to surrounding enemies and petrifies them for 0.8s.",
     "unlockLevel": 1,
@@ -90,6 +98,7 @@
   {
     "name": "Purify",
     "slug": "purify",
+    "iconUrl": "/raw-assets/aset_spell/purify.png",
     "cooldown": 90,
     "effect": "Immediately removes all negative effects and gains Control Immunity and 15% Movement Speed for 1.2s.",
     "unlockLevel": 1,
@@ -101,6 +110,7 @@
   {
     "name": "Revitalize",
     "slug": "revitalize",
+    "iconUrl": "/raw-assets/aset_spell/revitalize.png",
     "cooldown": 75,
     "effect": "Creates a Healing Spring around you for 4s. Allies in the area continuously recover HP (total 400-800 HP) and gain 25% increased healing.",
     "unlockLevel": 1,
@@ -112,6 +122,7 @@
   {
     "name": "Vengeance",
     "slug": "vengeance",
+    "iconUrl": "/raw-assets/aset_spell/vengeance.png",
     "cooldown": 75,
     "effect": "Gain 25% Damage Reduction for 3s. Deals 40-120 + 20% Magic Damage back to attackers.",
     "unlockLevel": 1,
@@ -123,6 +134,7 @@
   {
     "name": "Arrival",
     "slug": "arrival",
+    "iconUrl": "/raw-assets/aset_spell/arrival.png",
     "cooldown": 75,
     "effect": "Channels for 3s then teleports to allied turret or minion. Gains 60% extra Movement Speed for 3s upon arrival. Can be interrupted.",
     "unlockLevel": 1,

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ShoppingBag, Shield, Zap } from "lucide-react";
 import ItemsCatalog from "./ItemsCatalog";
+import FallbackImage from "./FallbackImage";
 import { Item } from "../types";
 
 interface DataCatalogProps {
@@ -149,21 +150,22 @@ function EmblemsPanel({ emblems }: { emblems: any[] }) {
         const monogramClass = getEmblemMonogramColor(e.name);
         const roleBadgeClass = getEmblemRoleBadgeClass(e.name);
         const talents = e.talents || [];
-        const firstLetter = (e.name || "E").charAt(0).toUpperCase();
 
         return (
           <div
             key={e.slug}
             className="rounded-xl border border-gray-800 bg-[#0a1120] p-6 shadow-lg"
           >
-            {/* Header: Monogram + Name + Role badges */}
+            {/* Header: Icon + Name + Role badges */}
             <div className="flex items-start gap-4 mb-5">
-              {/* Monogram circle */}
-              <div
-                className={`w-12 h-12 rounded-full border flex items-center justify-center text-lg font-black shrink-0 ${monogramClass}`}
-              >
-                {firstLetter}
-              </div>
+              {/* Emblem icon */}
+              <FallbackImage
+                src={e.iconUrl}
+                alt={e.name}
+                fallbackText={e.name}
+                className="w-12 h-12 rounded-full object-cover shrink-0 border border-gray-700/50"
+                containerClassName={`w-12 h-12 rounded-full shrink-0 ${monogramClass}`}
+              />
 
               <div className="flex-1 min-w-0">
                 <h3 className="text-lg font-black uppercase tracking-tight text-white leading-tight mb-2">
@@ -259,7 +261,6 @@ function SpellsPanel({ spells }: { spells: any[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       {spells.map((s) => {
-        const firstLetter = (s.name || "S").charAt(0).toUpperCase();
         const monogramClass = getSpellMonogramColor(s.name);
 
         return (
@@ -267,14 +268,16 @@ function SpellsPanel({ spells }: { spells: any[] }) {
             key={s.slug}
             className="rounded-xl border border-gray-800 bg-[#0a1120] p-6 shadow-lg"
           >
-            {/* Header: Monogram + Name + Cooldown */}
+            {/* Header: Icon + Name + Cooldown */}
             <div className="flex items-start gap-4 mb-4">
-              {/* Monogram circle */}
-              <div
-                className={`w-11 h-11 rounded-full border flex items-center justify-center text-base font-black shrink-0 ${monogramClass}`}
-              >
-                {firstLetter}
-              </div>
+              {/* Spell icon */}
+              <FallbackImage
+                src={s.iconUrl}
+                alt={s.name}
+                fallbackText={s.name}
+                className="w-11 h-11 rounded-full object-cover shrink-0 border border-gray-700/50"
+                containerClassName={`w-11 h-11 rounded-full shrink-0 ${monogramClass}`}
+              />
 
               <div className="flex-1 min-w-0">
                 <h3 className="text-lg font-bold text-white leading-tight mb-2">

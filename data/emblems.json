@@ -2,6 +2,7 @@
   {
     "name": "Assassin Emblem",
     "slug": "assassin-emblem",
+    "iconUrl": "/raw-assets/aset_emblem/assassin_emblem.png",
     "talents": [
       {
         "name": "Rupture",
@@ -42,6 +43,7 @@
   {
     "name": "Fighter Emblem",
     "slug": "fighter-emblem",
+    "iconUrl": "/raw-assets/aset_emblem/fighter_emblem.png",
     "talents": [
       {
         "name": "Firmness",
@@ -82,6 +84,7 @@
   {
     "name": "Mage Emblem",
     "slug": "mage-emblem",
+    "iconUrl": "/raw-assets/aset_emblem/mage_emblem.png",
     "talents": [
       {
         "name": "Inspire",
@@ -122,6 +125,7 @@
   {
     "name": "Marksman Emblem",
     "slug": "marksman-emblem",
+    "iconUrl": "/raw-assets/aset_emblem/marksman_emblem.png",
     "talents": [
       {
         "name": "Swift",
@@ -162,6 +166,7 @@
   {
     "name": "Tank Emblem",
     "slug": "tank-emblem",
+    "iconUrl": "/raw-assets/aset_emblem/tank_emblem.png",
     "talents": [
       {
         "name": "Vitality",
@@ -202,6 +207,7 @@
   {
     "name": "Support Emblem",
     "slug": "support-emblem",
+    "iconUrl": "/raw-assets/aset_emblem/support_emblem.png",
     "talents": [
       {
         "name": "Agility",
