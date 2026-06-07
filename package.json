@@ -11,7 +11,11 @@
     "lint": "tsc --noEmit",
     "validate:data": "tsx scripts/validate-data.ts",
     "validate:assets": "tsx scripts/validate-assets.ts",
-    "sync:global-rank": "tsx scripts/sync-global-rank.ts"
+    "sync:global-rank": "tsx scripts/sync-global-rank.ts",
+    "sync:items": "tsx scripts/sync-items.ts",
+    "sync:emblems": "tsx scripts/sync-emblems.ts",
+    "sync:battle-spells": "tsx scripts/sync-battle-spells.ts",
+    "sync:mlbb-data": "npm run sync:items && npm run sync:emblems && npm run sync:battle-spells"
   },
   "keywords": [
     "mlbb",

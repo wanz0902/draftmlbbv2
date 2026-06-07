@@ -930,6 +930,18 @@ app.get("/api/items", (req, res) => {
   res.json(getItemsList());
 });
 
+// API ROUTE: EMBLEMS
+app.get("/api/emblems", (req, res) => {
+  const emblemsPath = path.join(DATA_DIR, "emblems.json");
+  res.json(safeJson(emblemsPath, []));
+});
+
+// API ROUTE: BATTLE SPELLS
+app.get("/api/battle-spells", (req, res) => {
+  const spellsPath = path.join(DATA_DIR, "battle_spells.json");
+  res.json(safeJson(spellsPath, []));
+});
+
 // API ROUTE: ASSET MAPS
 app.get("/api/assets", (req, res) => {
   res.json({
