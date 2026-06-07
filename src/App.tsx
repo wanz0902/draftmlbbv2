@@ -7,6 +7,7 @@ import HeroIntelligenceDashboard from "./components/HeroIntelligenceDashboard";
 import StatsDashboard from "./components/StatsDashboard";
 import TeamAnalytics from "./components/TeamAnalytics";
 import ItemsCatalog from "./components/ItemsCatalog";
+import AdminTools from "./components/AdminTools";
 import TierListPanel from "./components/TierListPanel";
 import CounterMatrixPanel from "./components/CounterMatrixPanel";
 import LandingPage from "./components/LandingPage";
@@ -41,6 +42,7 @@ export default function App() {
     heroes: "Hero Stats",
     teams: "Team Analytics",
     items: "Items Catalog",
+    admin: "Admin Tools",
   };
 
   // Fetch initial analytical data
@@ -88,7 +90,16 @@ export default function App() {
       setUser(currentUser);
     });
 
-    return () => unsubscribe();
+    // Hidden admin access via URL hash #admin-tools
+    if (window.location.hash === '#admin-tools') {
+      setCurrentTab('admin');
+    }
+    const hashHandler = () => {
+      if (window.location.hash === '#admin-tools') setCurrentTab('admin');
+    };
+    window.addEventListener('hashchange', hashHandler);
+
+    return () => { unsubscribe(); window.removeEventListener('hashchange', hashHandler); };
   }, []);
 
   const handleTabChange = (newTab: string) => {
@@ -195,6 +206,8 @@ export default function App() {
             )}
 
             {currentTab === "items" && <ItemsCatalog items={items} />}
+
+            {currentTab === "admin" && <AdminTools />}
           </div>
         )}
       </main>

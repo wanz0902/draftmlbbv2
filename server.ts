@@ -2257,6 +2257,135 @@ app.post("/api/ai/recommendation-explain", async (req, res) => {
   }
 });
 
+// API ROUTE: ADMIN-ONLY LIQUIPEDIA UPDATE PREVIEW (NO WRITE)
+app.post("/api/admin/liquipedia/check-updates", async (req, res): Promise<any> => {
+  // Admin gate
+  const adminEnabled = process.env.ADMIN_TOOLS_ENABLED === 'true';
+  if (!adminEnabled) {
+    return res.status(403).json({ success: false, error: 'Admin tools are disabled.' });
+  }
+  const expectedToken = process.env.ADMIN_TOOLS_ACCESS_TOKEN;
+  if (expectedToken) {
+    const providedToken = req.headers['x-admin-tools-token'] as string;
+    if (providedToken !== expectedToken) {
+      return res.status(403).json({ success: false, error: 'Invalid or missing admin access token.' });
+    }
+  }
+
+  try {
+    const apiEndpoint = "https://liquipedia.net/mobilelegends/api.php";
+    const params = new URLSearchParams({ action: "parse", page: "MPL/Indonesia/Season_17/Statistics", prop: "text", format: "json" });
+    const headers = { "User-Agent": "MLBB-Draft-Simulator-Builder/1.0 (dev@aistudio.build)" };
+
+    const fetchResponse = await fetch(`${apiEndpoint}?${params.toString()}`, { headers });
+    if (!fetchResponse.ok) {
+      if (fetchResponse.status === 429) return res.status(429).json({ success: false, error: "Liquipedia 429 Too Many Requests" });
+      throw new Error(`Liquipedia response status error: ${fetchResponse.status}`);
+    }
+
+    const data: any = await fetchResponse.json();
+    if (!data?.parse?.text?.["*"]) throw new Error("Invalid response format from Liquipedia MediaWiki API");
+
+    const htmlContent = data.parse.text["*"];
+    const $ = cheerio.load(htmlContent);
+    const tables = $("table.wikitable");
+    if (tables.length === 0) throw new Error("Stats wikitable not found in parsed HTML");
+
+    const firstTable = tables.first();
+    const rows = firstTable.find("tr");
+    const scrapedHeroes: any[] = [];
+    const parseErrors: string[] = [];
+
+    const masterPath = path.join(process.cwd(), "src", "data", "heroes_master.json");
+    let masterData: any[] = [];
+    if (fs.existsSync(masterPath)) masterData = JSON.parse(fs.readFileSync(masterPath, "utf8"));
+    const norm = (s: string) => String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+
+    rows.each((index, tr) => {
+      const cells = $(tr).find("td");
+      if (cells.length < 10) return;
+      let rawHeroName = ""; let offset = 0;
+      const c0 = cleanText($(cells[0]).text()); const c1 = cleanText($(cells[1]).text());
+      if (!isNaN(parseInt(c0)) && c1.length > 1) { rawHeroName = c1; offset = 0; }
+      else if (c0.length > 2 && isNaN(parseInt(c0))) { rawHeroName = c0; offset = -1; }
+      if (!rawHeroName) { parseErrors.push(`Row ${index}: Could not determine hero name.`); return; }
+
+      let heroName = rawHeroName;
+      if (masterData.length > 0) {
+        let mapped = norm(rawHeroName);
+        if (mapped === "yisun-shin" || mapped.includes("yss") || mapped === "yisunshin") mapped = "yisunshin";
+        if (mapped === "xborg") mapped = "xborg";
+        const found = masterData.find((h: any) => norm(h.hero_name) === mapped || h.slug === mapped);
+        if (found) heroName = found.hero_name;
+        else parseErrors.push(`Row ${index}: Unknown hero "${rawHeroName}".`);
+      }
+
+      const extract = (idx: number) => { const t = idx + offset; return (t < 0 || t >= cells.length) ? "0" : cleanText($(cells[t]).text()); };
+      const hData = { hero_name: heroName, picks_total: extract(2), picks_win: extract(3), picks_loss: extract(4), winrate: extract(5), tournament_presence: extract(6), bans_total: extract(15), picks_bans_total: extract(17) };
+      const pTotal = parseInt(hData.picks_total); const pWin = parseInt(hData.picks_win); const bTotal = parseInt(hData.bans_total);
+      if (isNaN(pTotal) || isNaN(pWin) || isNaN(bTotal)) { parseErrors.push(`Row ${index} (${heroName}): Invalid numeric stats.`); return; }
+      if (pWin > pTotal) { parseErrors.push(`Row ${index} (${heroName}): Wins > Total.`); return; }
+      scrapedHeroes.push(hData);
+    });
+
+    // Load current local data for comparison
+    const localHeroes: any[] = safeJson(HERO_STATS_FILE, []);
+    const localMap = new Map<string, any>();
+    localHeroes.forEach((h: any) => localMap.set(norm(h.hero_name), h));
+    const scrapedMap = new Map<string, any>();
+    scrapedHeroes.forEach((h: any) => scrapedMap.set(norm(h.hero_name), h));
+
+    // Compute diff
+    const added: string[] = []; const removed: string[] = []; const changed: string[] = [];
+    scrapedMap.forEach((h, key) => { if (!localMap.has(key)) added.push(h.hero_name); });
+    localMap.forEach((h, key) => { if (!scrapedMap.has(key)) removed.push(h.hero_name); });
+    scrapedMap.forEach((h, key) => {
+      const local = localMap.get(key);
+      if (local && (local.picks_total !== h.picks_total || local.bans_total !== h.bans_total || local.winrate !== h.winrate)) {
+        changed.push(h.hero_name);
+      }
+    });
+
+    // Duplicate detection
+    const scrapedDupes: string[] = []; const seenScraped = new Set<string>();
+    scrapedHeroes.forEach((h: any) => { const n = norm(h.hero_name); if (seenScraped.has(n)) scrapedDupes.push(h.hero_name); seenScraped.add(n); });
+    const localDupes: string[] = []; const seenLocal = new Set<string>();
+    localHeroes.forEach((h: any) => { const n = norm(h.hero_name); if (seenLocal.has(n)) localDupes.push(h.hero_name); seenLocal.add(n); });
+
+    // Identity checks
+    const identityChecks = {
+      mathilda: scrapedMap.has("mathilda") && !scrapedDupes.includes("Hilda"),
+      yiSunShin: scrapedMap.has("yisunshin"),
+      valentina: scrapedMap.has("valentina"),
+      luoYiSeparate: scrapedMap.has("luoyi") && scrapedMap.has("yisunshin") && norm("Luo Yi") !== norm("Yi Sun-shin"),
+    };
+
+    const warnings: string[] = [...parseErrors];
+    const errors: string[] = [];
+    if (scrapedHeroes.length !== 82) warnings.push(`Expected 82 heroes, scraped ${scrapedHeroes.length}.`);
+    if (scrapedDupes.length > 0) errors.push(`Duplicate names in scraped data: ${scrapedDupes.join(', ')}`);
+    if (!identityChecks.mathilda) errors.push("Mathilda missing or merged into Hilda in scraped data.");
+    if (!identityChecks.yiSunShin) errors.push("Yi Sun-shin missing in scraped data.");
+    if (!identityChecks.valentina) errors.push("Valentina missing in scraped data.");
+
+    const safeToApply = errors.length === 0 && scrapedHeroes.length >= 80;
+
+    res.json({
+      success: true,
+      mode: "preview",
+      note: "No public data was modified. This is a read-only preview.",
+      local: { count: localHeroes.length, duplicates: localDupes },
+      scraped: { count: scrapedHeroes.length, duplicates: scrapedDupes },
+      diff: { added, removed, changed: changed.length, changedHeroes: changed.slice(0, 20) },
+      identityChecks,
+      validation: { safeToApply, warnings, errors },
+    });
+  } catch (error: any) {
+    console.error("Admin preview scrape failed:", error.message);
+    res.status(500).json({ success: false, error: error.message, note: "No public data was modified." });
+  }
+});
+
 // API ROUTE: LIVE INTERNET SCAN & SCRAPING (OPTIMIZED LOGIC) — ADMIN ONLY
 app.post("/api/scrape/liquipedia", async (req, res): Promise<any> => {
   // Admin gate: require ADMIN_TOOLS_ENABLED=true and valid access token
