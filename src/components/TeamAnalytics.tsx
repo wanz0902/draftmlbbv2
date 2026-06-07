@@ -432,8 +432,8 @@ export default function TeamAnalytics({
                 <tr className="bg-gray-900/60 border-b border-gray-800/80 font-mono text-[9px] text-gray-500 uppercase tracking-wider">
                   <th className="py-2.5 px-3 w-8 text-center">#</th>
                   <th className="py-2.5 px-2">Franchise</th>
-                  <th className="py-2.5 px-1 text-center w-12">Total Win</th>
-                  <th className="py-2.5 px-1 text-center w-12">Total Lose</th>
+                  <th className="py-2.5 px-1 text-center w-12">Series W</th>
+                  <th className="py-2.5 px-1 text-center w-12">Series L</th>
                   <th className="py-2.5 px-2 text-center w-14">Win Rate</th>
                 </tr>
               </thead>
@@ -528,13 +528,17 @@ export default function TeamAnalytics({
           </div>
           
           {/* Legend / Tiebreakers */}
-          <div className="flex items-center justify-between px-1 mt-1 text-[9px] font-mono text-gray-500">
-            <div className="flex gap-3">
-              <span className="flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50"></div> Upper</span>
-              <span className="flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-indigo-500/40"></div> Playoff</span>
-              <span className="flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-rose-900/40"></div> Elim</span>
+          <div className="flex flex-col gap-1.5 px-1 mt-2">
+            <div className="flex items-center justify-between text-[9px] font-mono text-gray-500">
+              <div className="flex gap-3">
+                <span className="flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50"></div> Upper Bracket (#1-2)</span>
+                <span className="flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-indigo-500/40"></div> Playoff (#3-6)</span>
+                <span className="flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-rose-900/40"></div> Eliminasi (#7-9)</span>
+              </div>
             </div>
-            <span>Tie: Match &#8594; Diff &#8594; H2H</span>
+            <div className="text-[8px] font-mono text-gray-600 leading-relaxed">
+              Tiebreak: Series Record → Game Diff → Head-to-Head
+            </div>
           </div>
 
           {/* Top Contested overall widget */}
@@ -902,7 +906,7 @@ export default function TeamAnalytics({
                         {f === "all" ? "Semua" : f === "win" ? "Menang" : "Kalah"}
                       </button>
                     ))}
-                    <div className="flex items-center gap-1 rounded-lg border border-gray-800 bg-gray-900/50 p-1">
+                    <div className="flex items-center gap-1 rounded-lg border border-gray-800 bg-gray-900/50 p-1 flex-wrap">
                       <CalendarDays className="ml-1 h-3.5 w-3.5 text-indigo-400" />
                       {Array.from({ length: 9 }, (_, index) => index + 1).map((week) => (
                         <button
@@ -914,7 +918,7 @@ export default function TeamAnalytics({
                               : "text-gray-500 hover:bg-gray-800 hover:text-gray-200"
                           }`}
                         >
-                          W{week}
+                          {week}
                         </button>
                       ))}
                     </div>
@@ -988,29 +992,88 @@ export default function TeamAnalytics({
                   )}
 
                   {matchCenterData && (
-                    <details className="rounded-xl border border-gray-900 bg-black/20 p-3 text-xs text-gray-400">
-                      <summary className="cursor-pointer font-bold text-gray-300 hover:text-white">
-                        Week View W1-W9
+                    <details className="rounded-xl border border-gray-900 bg-black/20 p-4 text-xs text-gray-400">
+                      <summary className="cursor-pointer font-bold text-gray-300 hover:text-white flex items-center gap-2">
+                        <CalendarDays className="h-4 w-4 text-indigo-400" />
+                        <span>Match Center — Jadwal Week 1 sampai Week 9</span>
+                        <span className="ml-auto text-[9px] font-mono text-gray-600">
+                          {matchCenterData.totalSeries} series • {matchCenterData.totalGames} games
+                        </span>
                       </summary>
-                      <div className="mt-3 space-y-4">
+                      <div className="mt-4 space-y-5">
                         {visibleWeekGroups.map((week) => (
-                          <div key={week.week} className="rounded-lg border border-gray-900 bg-gray-950/50 p-3">
-                            <h4 className="mb-2 font-mono text-xs font-black text-indigo-300">Week {week.week}</h4>
-                            <div className="space-y-3">
+                          <div key={week.week} className="rounded-xl border border-gray-800/60 bg-gray-950/60 p-4">
+                            <h4 className="mb-3 font-sans text-sm font-bold text-indigo-300 flex items-center gap-2">
+                              <span className="rounded bg-indigo-950/50 px-2 py-0.5 text-[10px] font-mono border border-indigo-500/20">
+                                WEEK {week.week}
+                              </span>
+                              <span className="text-[10px] font-mono text-gray-600">
+                                {week.days.reduce((sum, d) => sum + d.series.length, 0)} series
+                              </span>
+                            </h4>
+                            <div className="space-y-4">
                               {week.days.map((day) => (
                                 <div key={`${week.week}-${day.day}`}>
-                                  <div className="mb-1 font-mono text-[10px] font-bold uppercase text-gray-500">
-                                    Day {day.day}
+                                  <div className="mb-2 flex items-center gap-2 border-b border-gray-900/60 pb-1.5">
+                                    <span className="font-mono text-[10px] font-bold uppercase text-gray-400">
+                                      Day {day.day}
+                                    </span>
+                                    {day.series[0]?.date && (
+                                      <span className="text-[9px] font-mono text-gray-600">
+                                        — {day.series[0].date}
+                                      </span>
+                                    )}
                                   </div>
-                                  <div className="grid gap-1">
-                                    {day.series.map((seriesItem) => (
-                                      <div key={seriesItem.seriesId} className="flex items-center justify-between rounded bg-gray-900/40 px-2 py-1">
-                                        <span>
-                                          {seriesItem.teamA} {seriesItem.teamAScore}-{seriesItem.teamBScore} {seriesItem.teamB}
-                                        </span>
-                                        <span className="text-gray-500">{seriesItem.date}</span>
-                                      </div>
-                                    ))}
+                                  <div className="grid gap-2">
+                                    {day.series.map((seriesItem) => {
+                                      const isSelectedTeamA = selectedTeam && seriesItem.teamA === selectedTeam.key;
+                                      const isSelectedTeamB = selectedTeam && seriesItem.teamB === selectedTeam.key;
+                                      const isInvolved = isSelectedTeamA || isSelectedTeamB;
+                                      const selectedWon = isInvolved && (
+                                        (isSelectedTeamA && seriesItem.teamAScore > seriesItem.teamBScore) ||
+                                        (isSelectedTeamB && seriesItem.teamBScore > seriesItem.teamAScore)
+                                      );
+                                      return (
+                                        <div
+                                          key={seriesItem.seriesId}
+                                          className={`flex items-center gap-3 rounded-lg px-3 py-2 transition ${
+                                            isInvolved
+                                              ? selectedWon
+                                                ? "bg-emerald-950/20 border border-emerald-500/15"
+                                                : "bg-rose-950/20 border border-rose-500/15"
+                                              : "bg-gray-900/30 border border-gray-900/40"
+                                          }`}
+                                        >
+                                          <div className="flex items-center gap-2 flex-1 min-w-0">
+                                            <img
+                                              src={getTeamLogoImg(seriesItem.teamA)}
+                                              alt={seriesItem.teamA}
+                                              className="h-5 w-5 object-contain"
+                                            />
+                                            <span className={`text-[11px] font-bold truncate ${
+                                              seriesItem.teamAScore > seriesItem.teamBScore ? "text-white" : "text-gray-500"
+                                            }`}>
+                                              {seriesItem.teamA}
+                                            </span>
+                                          </div>
+                                          <div className="rounded bg-black/40 border border-gray-800 px-2.5 py-0.5 font-mono text-xs font-black text-white shrink-0">
+                                            {seriesItem.teamAScore} - {seriesItem.teamBScore}
+                                          </div>
+                                          <div className="flex items-center gap-2 flex-1 min-w-0 justify-end">
+                                            <span className={`text-[11px] font-bold truncate text-right ${
+                                              seriesItem.teamBScore > seriesItem.teamAScore ? "text-white" : "text-gray-500"
+                                            }`}>
+                                              {seriesItem.teamB}
+                                            </span>
+                                            <img
+                                              src={getTeamLogoImg(seriesItem.teamB)}
+                                              alt={seriesItem.teamB}
+                                              className="h-5 w-5 object-contain"
+                                            />
+                                          </div>
+                                        </div>
+                                      );
+                                    })}
                                   </div>
                                 </div>
                               ))}

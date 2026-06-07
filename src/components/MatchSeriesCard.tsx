@@ -169,7 +169,7 @@ export default function MatchSeriesCard({
               {isWin ? "W" : "L"}
             </span>
             <span className="rounded bg-indigo-950/60 px-2 py-1 font-mono text-[10px] font-bold text-indigo-200">
-              W{series.week}D{series.day}
+              Week {series.week} · Day {series.day}
             </span>
             <span className="text-xs text-gray-500">{series.date}</span>
             <span className="rounded bg-gray-900 px-2 py-1 text-[10px] font-bold text-gray-300">
