@@ -22,6 +22,7 @@ import FallbackImage from "./FallbackImage";
 import { getHeroImageUrl } from "../lib/heroUtils";
 import { HeroStats } from "../types";
 import TdpOnboarding, { isTdpTutorialCompleted } from "./TdpOnboarding";
+import TdpGuidedTour, { isGuidedTourCompleted, markGuidedTourCompleted } from "./TdpGuidedTour";
 
 const LANES = ["EXP", "Jungle", "Mid", "Gold", "Roam"] as const;
 type Lane = (typeof LANES)[number];
@@ -181,6 +182,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
   const [expandedTours, setExpandedTours] = useState<Set<string>>(new Set());
   const [exporting, setExporting] = useState(false);
   const [showTutorial, setShowTutorial] = useState(() => !isTdpTutorialCompleted());
+  const [showGuidedTour, setShowGuidedTour] = useState(false);
   const [showReplayConfirm, setShowReplayConfirm] = useState(false);
   const [showReminder, setShowReminder] = useState(() => isTdpTutorialCompleted());
   const boardRef = useRef<HTMLDivElement>(null);
@@ -402,10 +404,12 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
 
   return (
     <>
-    {showTutorial && <TdpOnboarding onComplete={() => { setShowTutorial(false); setShowReminder(true); }} />}
+    {showTutorial && <TdpOnboarding onComplete={() => { setShowTutorial(false); setShowReminder(true); }} onStartTour={() => { setShowTutorial(false); setTimeout(() => setShowGuidedTour(true), 300); }} heroAssets={heroAssets} />}
+    {showGuidedTour && <TdpGuidedTour onComplete={() => { setShowGuidedTour(false); setShowReminder(true); }} onSkip={() => setShowGuidedTour(false)} />}
     <div className="flex h-[calc(100vh-56px)] overflow-hidden bg-[#0a0f1c]">
       {/* ═══ LEFT SIDEBAR ═══ */}
       <aside
+        data-tour-target="tour-sidebar"
         className={`${sidebarCollapsed ? "w-[52px]" : "w-[260px]"} shrink-0 flex flex-col border-r border-white/[0.08] bg-[#0c1222] transition-all duration-300 overflow-hidden`}
       >
         {sidebarCollapsed ? (
@@ -428,7 +432,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
             <div className="flex-1 overflow-y-auto p-2 space-y-0.5">
               <div className="flex items-center justify-between px-2 py-1.5">
                 <span className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-slate-600">Tournaments</span>
-                <button onClick={createTournament} className="rounded bg-amber-500/15 border border-amber-500/25 px-1.5 py-0.5 text-[8px] font-bold text-amber-400 hover:bg-amber-500/25 transition cursor-pointer">
+                <button data-tour-target="tour-new-tournament" onClick={createTournament} className="rounded bg-amber-500/15 border border-amber-500/25 px-1.5 py-0.5 text-[8px] font-bold text-amber-400 hover:bg-amber-500/25 transition cursor-pointer">
                   + NEW
                 </button>
               </div>
@@ -487,6 +491,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
                         })}
                         <button
                           onClick={createDraft}
+                          data-tour-target="tour-add-draft"
                           className="w-full flex items-center gap-2 rounded-lg border border-dashed border-white/[0.06] px-2.5 py-1.5 text-[10px] font-bold text-slate-600 hover:text-cyan-400 hover:border-cyan-500/20 transition cursor-pointer"
                         >
                           <Plus className="h-2.5 w-2.5" /> ADD DRAFT
@@ -511,7 +516,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
       {/* ═══ MAIN WORKSPACE ═══ */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* ─── HEADER ─── */}
-        <header className="border-b border-white/[0.08] bg-[#0e1525]/90 backdrop-blur-sm shrink-0">
+        <header data-tour-target="tour-draft-header" className="border-b border-white/[0.08] bg-[#0e1525]/90 backdrop-blur-sm shrink-0">
           <div className="flex items-center gap-4 px-5 py-3">
             {sidebarCollapsed && (
               <button onClick={() => setSidebarCollapsed(false)} className="p-1.5 text-slate-500 hover:text-cyan-400 transition cursor-pointer" title="Expand sidebar">
@@ -535,7 +540,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-1 rounded-lg border border-white/[0.06] bg-white/[0.02] p-0.5">
+                  <div data-tour-target="tour-side-toggle" className="flex items-center gap-1 rounded-lg border border-white/[0.06] bg-white/[0.02] p-0.5">
                     {(["BLUE", "RED"] as const).map((s) => (
                       <button
                         key={s}
@@ -562,6 +567,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
                   </button>
 
                   <button
+                    data-tour-target="tour-save-btn"
                     onClick={handleExportPng}
                     disabled={exporting}
                     className="flex items-center gap-1.5 rounded-lg bg-amber-500/15 border border-amber-500/30 px-4 py-1.5 text-[11px] font-bold text-amber-300 hover:bg-amber-500/25 transition cursor-pointer disabled:opacity-50"
@@ -596,9 +602,13 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
 
         {/* Reminder banner */}
         {showReminder && selectedDraft && (
-          <div className="flex items-center justify-center gap-2 bg-cyan-500/[0.06] border-b border-cyan-500/10 px-4 py-1.5">
-            <span className="text-[10px] text-cyan-400/70">Butuh panduan? Buka ulang tutorial TDP kapan saja.</span>
-            <button onClick={() => setShowReminder(false)} className="text-[10px] text-slate-600 hover:text-slate-400 cursor-pointer ml-1">✕</button>
+          <div className="flex items-center justify-center gap-3 bg-cyan-500/[0.06] border-b border-cyan-500/10 px-4 py-2">
+            <span className="text-[10px] text-cyan-400/70">Butuh bantuan lengkap? Klik Tutorial untuk panduan cara membuat tournament, menambah draft, mengisi ban/pick, backup hero, notes, dan export gambar.</span>
+            <button onClick={() => { setShowReminder(false); setShowReplayConfirm(true); }} className="flex items-center gap-1 shrink-0 rounded-lg border border-cyan-500/20 bg-cyan-500/10 px-2 py-1 text-[9px] font-bold text-cyan-300 hover:bg-cyan-500/20 transition cursor-pointer">
+              <BookOpen className="h-3 w-3" />
+              Buka Tutorial
+            </button>
+            <button onClick={() => setShowReminder(false)} className="text-[10px] text-slate-600 hover:text-slate-400 cursor-pointer shrink-0">✕</button>
           </div>
         )}
 
@@ -611,7 +621,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
                 <BoardPanel side="RED" draft={selectedDraft} heroAssets={heroAssets} openPicker={openPicker} clearSlot={clearSlot} isOurSide={selectedDraft.side === "RED"} />
               </div>
 
-              <div className="border-t border-white/[0.08] bg-[#0c1222]/90 px-5 py-3">
+              <div data-tour-target="tour-coach-notes" className="border-t border-white/[0.08] bg-[#0c1222]/90 px-5 py-3">
                 <div className="flex items-center gap-2 mb-2">
                   <BookOpen className="h-3.5 w-3.5 text-slate-500" />
                   <span className="font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">Coach Notes</span>
@@ -678,22 +688,28 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
       {showReplayConfirm && (
         <div className="fixed inset-0 z-[10001] flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowReplayConfirm(false)}>
           <div className="w-full max-w-sm mx-4 rounded-2xl border border-white/10 bg-[#0e1525] shadow-2xl p-6" onClick={(e) => e.stopPropagation()}>
-            <h3 className="text-base font-black text-white font-display mb-2">Ulangi Tutorial TDP?</h3>
+            <h3 className="text-base font-black text-white font-display mb-2">Buka Tutorial TDP?</h3>
             <p className="text-xs text-slate-400 leading-relaxed mb-5">
-              Tutorial akan dimulai dari awal dan menjelaskan ulang Ban, Pick, Role Lane, Backup Hero, Coach Notes, dan Export.
+              Pilih jenis panduan yang mau kamu ulang.
             </p>
-            <div className="flex gap-2">
-              <button
-                onClick={() => setShowReplayConfirm(false)}
-                className="flex-1 px-4 py-2.5 rounded-lg border border-white/10 text-xs font-bold text-slate-400 hover:text-white hover:border-white/20 transition cursor-pointer"
-              >
-                Batal
-              </button>
+            <div className="flex flex-col gap-2">
               <button
                 onClick={() => { setShowReplayConfirm(false); setShowTutorial(true); }}
-                className="flex-1 px-4 py-2.5 rounded-lg bg-cyan-500/20 border border-cyan-500/30 text-xs font-bold text-cyan-300 hover:bg-cyan-500/30 transition cursor-pointer"
+                className="w-full px-4 py-2.5 rounded-lg bg-cyan-500/20 border border-cyan-500/30 text-xs font-bold text-cyan-300 hover:bg-cyan-500/30 transition cursor-pointer"
               >
-                Ya, mulai dari awal
+                Ulangi Intro
+              </button>
+              <button
+                onClick={() => { setShowReplayConfirm(false); setShowGuidedTour(true); }}
+                className="w-full px-4 py-2.5 rounded-lg bg-emerald-500/15 border border-emerald-500/25 text-xs font-bold text-emerald-300 hover:bg-emerald-500/25 transition cursor-pointer"
+              >
+                Tur Interface
+              </button>
+              <button
+                onClick={() => setShowReplayConfirm(false)}
+                className="w-full px-4 py-2.5 rounded-lg border border-white/10 text-xs font-bold text-slate-400 hover:text-white hover:border-white/20 transition cursor-pointer"
+              >
+                Batal
               </button>
             </div>
           </div>
@@ -744,7 +760,7 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
       </div>
 
       <div className="flex-1 overflow-y-auto px-4 py-3 space-y-4">
-        <div>
+        <div data-tour-target={isBlue ? "tour-ban-slots" : undefined}>
           <div className="flex items-center gap-1.5 mb-2.5">
             <Ban className="h-3 w-3 text-rose-400/40" />
             <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">Bans</span>
@@ -759,7 +775,7 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
           </div>
         </div>
 
-        <div>
+        <div data-tour-target={isBlue ? "tour-pick-slots" : undefined}>
           <div className="flex items-center gap-1.5 mb-2.5">
             <Swords className="h-3 w-3 text-cyan-400/40" />
             <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">Picks</span>
@@ -769,12 +785,12 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
               const plan = lanes[lane];
               const lc = LANE_COLORS[lane];
               return (
-                <div key={lane} className="flex flex-col items-center gap-1.5 flex-1">
+                <div key={lane} data-tour-target={isBlue && idx === 0 ? "tour-role-lane" : undefined} className="flex flex-col items-center gap-1.5 flex-1">
                   <CircleSlot hero={plan.main} heroAssets={heroAssets} ring={ringColor} onClick={() => openPicker({ type: "pick", side, lane })} onClear={() => clearSlot({ type: "pick", side, lane })} />
                   <button onClick={() => openPicker({ type: "pick", side, lane })} className={`inline-flex items-center gap-1 rounded-full border ${lc.border} ${lc.bg} px-2 py-0.5 cursor-pointer transition hover:opacity-80`}>
                     <span className={`text-[8px] font-black uppercase tracking-wider ${lc.text}`}>{LANE_LABEL[lane]}</span>
                   </button>
-                  <div className="grid grid-cols-3 gap-1 mt-0.5">
+                  <div data-tour-target={isBlue && idx === 0 ? "tour-backup-slots" : undefined} className="grid grid-cols-3 gap-1 mt-0.5">
                     {plan.backups.map((b, bi) => (
                       <MiniSlot key={bi} hero={b} heroAssets={heroAssets} ring={ringColor} onClick={() => openPicker({ type: "backup", side, lane, backupIndex: bi })} onClear={() => clearSlot({ type: "backup", side, lane, backupIndex: bi })} />
                     ))}

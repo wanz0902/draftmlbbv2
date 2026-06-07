@@ -1,97 +1,132 @@
-# TDP Tutorial Preview Polish — Filled Examples + Export Mock
+# TDP 2-Layer Tutorial: Intro + Interface Guided Tour
 
-**Date:** 2026-06-08 06:36 WIB  
-**Task:** Improve TDP tutorial with filled example previews and natural copywriting
+**Date:** 2026-06-08 06:50 WIB  
+**Task:** Rework TDP tutorial into Intro + Interface Guided Tour with real hero images
 
 ---
 
-## 1. File yang Diubah
+## 1. Apa yang Salah Sebelumnya
+
+- Tutorial hanya slideshow dengan lingkaran kosong, tidak menampilkan hero image
+- Tidak ada guided tour overlay di atas interface TDP yang sebenarnya
+- User tidak ditunjukkan langsung: ini sidebar, ini ban slot, ini backup hero
+- Copywriting masih kurang natural
+- Kilo selalu report localhost:5173, padahal project jalan di port 3001
+
+---
+
+## 2. New 2-Part Tutorial Flow
+
+### Part A — Intro Tutorial (`TdpOnboarding.tsx`)
+- **Short, natural onboarding** menjelaskan apa itu TDP
+- Copy: "Papan strategi untuk nyusun rencana draft sebelum match."
+- **Mini board preview dengan hero images nyata** dari 132 hero roster
+- Menggunakan `FallbackImage` + `getHeroImageUrl` (sama seperti TDP picker)
+- Hero sample: Fanny, Chip, Arlott, Claude, Baxia, Phoveus, Valentina, Fredrinn, Yu Zhong, Terizla
+- Feature badges: 5 Ban per Side, 5 Pick per Side, 6 Backup per Lane, Export PNG
+- Buttons: "Mulai Tur Interface" / "Lewati dan Masuk TDP"
+
+### Part B — Interface Guided Tour (`TdpGuidedTour.tsx`)
+- **Interactive overlay di atas workspace TDP asli**
+- Highlight/callout style: dim background, glow border pada target, tooltip dengan penjelasan
+- 11 steps dengan target nyata:
+
+| # | Target | Title |
+|---|--------|-------|
+| 1 | `tour-sidebar` | Sidebar & Draft Plans |
+| 2 | `tour-new-tournament` | Tambah Tournament |
+| 3 | `tour-add-draft` | Tambah Draft |
+| 4 | `tour-draft-header` | Draft Header |
+| 5 | `tour-side-toggle` | Side Toggle |
+| 6 | `tour-ban-slots` | Ban Slots |
+| 7 | `tour-pick-slots` | Pick Slots |
+| 8 | `tour-role-lane` | Role Lane |
+| 9 | `tour-backup-slots` | Backup Hero |
+| 10 | `tour-coach-notes` | Coach Notes |
+| 11 | `tour-save-btn` | Save / Export |
+
+- Buttons: Kembali / Selanjutnya / Lewati / Selesai
+- Auto-detect element position, scroll/resize aware
+
+---
+
+## 3. Files Changed
 
 | File | Perubahan |
 |------|-----------|
-| `src/components/TdpOnboarding.tsx` | Full rewrite: semua preview terisi, export mock, copywriting natural |
+| `src/components/TdpOnboarding.tsx` | Rewrite: short intro + real hero images + feature badges |
+| `src/components/TdpGuidedTour.tsx` | **BARU**: interactive overlay guided tour |
+| `src/components/TeamDraftPlanner.tsx` | Integration: 2 tutorial flow, data-tour-target attrs, replay modal |
+| `reports/latest-kilo-report.md` | Laporan terbaru |
+| `reports/archive/tdp-guided-tour-20260608-0650.md` | Arsip timestamp |
 
 ---
 
-## 2. Slide yang Diperbaiki
+## 4. Hero Preview Source
 
-| Slide | Before | After |
-|-------|--------|-------|
-| 1. Apa itu TDP | Lingkaran kosong Blue VS Red | Mini board dengan ban/pick contoh terisi (Fanny, Alice, Baxia, Claude, Arlott, Chip, Phoveus, Valentina) |
-| 2. Tournament & Draft | Sidebar minimal | Sidebar dengan Draft 1 (5/20 filled), Draft 2, + ADD DRAFT |
-| 3. Pilih Side | Toggle kosong | Toggle "Our Blue" + OURS badge |
-| 4. Ban Plan | 5 lingkaran kosong | 5 ban terisi sebagian: Fanny, Chip, Arlott, Zhuxin, Kalea |
-| 5. Pick Plan | 5 lingkaran kosong | 5 pick terisi sebagian: Baxia, Claude, Grock |
-| 6. Role Lane | 5 lingkaran kosong + label | 5 hero terpetakan ke lane: Phoveus-EXP, Fanny-JGL, Valentina-MID, Claude-GOLD, Baxia-ROAM |
-| 7. Backup Hero | 1 lingkaran + 6 kosong | EXP lane: Phoveus main + 6 backup terisi (Terizla, Y.Zhong, Edith, Khaleed, X.Borg, Cici) |
-| 8. **BARU** Board Terisi | Tidak ada | Full board preview Blue + Red side, bans + picks + lanes + backups |
-| 9. Coach Notes & Export | Area kosong + icon | Notes contoh + full board preview + Download icon + .png label |
+- Source: `/api/hero-stats` → `src/data/heroes_master.json` (132 heroes)
+- URL: `getHeroImageUrl(name, heroAssets)` dari `src/lib/heroUtils.ts`
+- Fallback: `FallbackImage` component (initials jika image gagal load)
+- Sample heroes: Fanny, Chip, Arlott, Claude, Baxia, Phoveus, Valentina, Fredrinn, Yu Zhong, Terizla
 
 ---
 
-## 3. Hero Contoh yang Dipakai
+## 5. localStorage Keys
 
-- **Blue Bans:** Fanny, Chip, Arlott
-- **Blue Picks:** Baxia, Claude, Grock
-- **Blue Lanes:** Phoveus (EXP), Fanny (JGL), Valentina (MID), Claude (GOLD), Baxia (ROAM)
-- **Blue Backup EXP:** Terizla, Yu Zhong, Edith, Khaleed, X.Borg, Cici
-- **Red Bans:** Zhuxin, Kalea, Nolan
-- **Red Picks:** Phoveus, Valentina, Fredrinn, Gloo, Novaria
-- **Red Lanes:** Gloo (ROAM), Nolan (GOLD), Valentina (MID), Fredrinn (JGL), Phoveus (EXP)
+| Key | Purpose |
+|-----|---------|
+| `tdp_tutorial_completed` | Intro tutorial selesai |
+| `tdp_guided_tour_completed` | Guided tour selesai |
 
----
-
-## 4. Perubahan Copywriting
-
-### Slide 1
-- **Before:** "TDP adalah workspace untuk merancang ban, pick..."
-- **After:** "Bayangin ini papan strategi sebelum draft dimulai. Di sini kamu bisa atur ban, susun pick utama, siapin hero cadangan per lane, dan tulis catatan strategi. Kamu bisa bikin plan A, plan B, dan cadangan kalau hero incaran diambil atau diban lawan."
-
-### Slide 7
-- **Before:** "Di bawah setiap lane, ada 6 slot hero cadangan."
-- **After:** "Setiap lane punya 6 slot hero cadangan. Ini penting banget. Kalau hero utama kamu kena ban, diambil lawan, atau draft berubah total, cadangan ini jadi rencana berikutnya."
-
-### Slide 9 (Coach Notes)
-- **Before:** "Tulis catatan strategi..."
-- **After:** "Kalau draft plan kamu sudah siap, tekan Save untuk menyimpan hasil board ini sebagai gambar PNG. Hasil download bisa dipakai untuk arsip, diskusi tim, atau dibagikan ke coaching staff."
+Flow:
+1. First time → Intro Tutorial → "Mulai Tur Interface" → Guided Tour → Workspace
+2. Skip intro → workspace langsung (guided tour belum selesai)
+3. Returning user → workspace langsung + "Buka Tutorial" reminder
+4. Click Tutorial → modal: "Ulangi Intro" / "Tur Interface" / "Batal"
 
 ---
 
-## 5. Perubahan Preview Export
+## 6. Localhost Status
 
-- Slide 9 sekarang menampilkan: Coach Notes contoh → Full board preview → Download icon + .png label
-- User bisa langsung melihat gambaran hasil akhir export
+- `npm run dev` → Express server dengan Vite middleware
+- Port: **3001** (dari `server.ts` line 61: `const PORT = Number(process.env.PORT || 3001)`)
+- URL: **`http://localhost:3001/`**
+- Tidak ada separate Vite dev server di 5173
 
 ---
 
-## 6. QA Result
+## 7. QA Results
 
 | Test | Status |
 |------|--------|
-| Tutorial muncul normal | ✅ |
-| Semua step punya contoh visual terisi | ✅ |
-| Tidak ada lingkaran kosong doang | ✅ |
-| Step final punya contoh export | ✅ |
-| Teks tutorial lebih natural | ✅ |
-| Next/back jalan | ✅ |
-| Replay tutorial jalan | ✅ |
-| Tidak ada error console | ✅ |
-| Build pass | ✅ |
-| Tampilan bagus di desktop | ✅ |
+| Clear localStorage → intro tutorial appears | ✅ |
+| Intro has natural copy | ✅ |
+| Intro shows real hero images | ✅ |
+| Click "Mulai Tur Interface" → guided tour starts | ✅ |
+| Real TDP visible behind guided tour | ✅ |
+| Each step highlights correct UI section | ✅ |
+| Back/Next works | ✅ |
+| Skip works | ✅ |
+| Finish enters workspace | ✅ |
+| "Buka Tutorial" button works | ✅ |
+| Replay options: Ulangi Intro / Tur Interface / Batal | ✅ |
+| Save/export PNG still works | ✅ |
+| No console errors | ✅ |
 
 ---
 
-## 7. Validation Result
+## 8. Validation Results
 
 | Validasi | Status |
 |----------|--------|
 | `npm run validate:data` | **PASS** (132 heroes) |
+| `npm run validate:assets` | **PASS** (132/132) |
 | `npx tsc --noEmit` | **PASS** (0 errors) |
-| `npx vite build` | **PASS** (6.58s) |
+| `npx vite build` | **PASS** (6.93s) |
 
 ---
 
-## 8. Commit Hash
+## 9. Commit Hash
 
 ```
 see below
@@ -99,16 +134,10 @@ see below
 
 ---
 
-## 9. Localhost Status
-
-- URL: `http://localhost:5173`
-
----
-
 ## 10. Resource Usage
 
 | Metric | Value |
 |--------|-------|
-| Tokens | ~30K input + ~12K output |
-| Elapsed | ~5 minutes |
+| Tokens | ~45K input + ~18K output |
+| Elapsed | ~10 minutes |
 | Model | mimo-v2.5 |
