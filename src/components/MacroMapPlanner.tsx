@@ -40,7 +40,28 @@ function defaultPlan(): MacroPlan {
   };
 }
 function loadPlan(): MacroPlan {
-  try { const raw = localStorage.getItem(STORAGE_KEY); if (raw) { const p = JSON.parse(raw); if (p.version === 1) return p; } } catch {} return defaultPlan();
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const p = JSON.parse(raw);
+      if (p.version === 1) {
+        if (!p.settings) p.settings = {};
+        if (!p.settings.layers) p.settings.layers = { brokenWalls: false, dangerousGrass: false, flyingCloud: false, objectives: false };
+        if (p.settings.showHpBar !== undefined) delete p.settings.showHpBar;
+        if (p.phases) {
+          for (const ph of PHASES) {
+            if (p.phases[ph] && !p.phases[ph].drawings) p.phases[ph].drawings = [];
+            if (p.phases[ph] && !p.phases[ph].arrows) p.phases[ph].arrows = [];
+            if (p.phases[ph] && !p.phases[ph].zones) p.phases[ph].zones = [];
+            if (p.phases[ph] && p.phases[ph].markers) delete p.phases[ph].markers;
+            if (p.phases[ph] && p.phases[ph].notes === undefined) p.phases[ph].notes = "";
+          }
+        }
+        return p as MacroPlan;
+      }
+    }
+  } catch {}
+  return defaultPlan();
 }
 function savePlan(plan: MacroPlan) { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(plan)); } catch {} }
 
