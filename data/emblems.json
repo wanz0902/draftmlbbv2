@@ -335,10 +335,29 @@
         "hp": "+275",
         "adaptiveAttack": "+22"
       },
-      "recommendedTalents": ["Thrill", "Swift", "Wilderness Blessing", "Seasoned Hunter", "Impure Rage", "Quantum Charge", "War Cry", "Temporal Reign"],
+      "recommendedTalents": [
+        "Thrill",
+        "Swift",
+        "Wilderness Blessing",
+        "Seasoned Hunter",
+        "Impure Rage",
+        "Quantum Charge",
+        "War Cry",
+        "Temporal Reign"
+      ],
       "talentBreakdown": {
-        "standard": ["Thrill", "Swift", "Wilderness Blessing", "Seasoned Hunter"],
-        "core": ["Impure Rage", "Quantum Charge", "War Cry", "Temporal Reign"]
+        "standard": [
+          "Thrill",
+          "Swift",
+          "Wilderness Blessing",
+          "Seasoned Hunter"
+        ],
+        "core": [
+          "Impure Rage",
+          "Quantum Charge",
+          "War Cry",
+          "Temporal Reign"
+        ]
       },
       "source": "MLBBHub (https://mlbbhub.com/emblems/common)",
       "sourceUrl": "https://mlbbhub.com/emblems/common",
@@ -357,7 +376,11 @@
         "hybridDefense": "+10",
         "hpRegen": "+4"
       },
-      "recommendedTalents": ["Vitality", "Tenacity", "Concussive Blast"],
+      "recommendedTalents": [
+        "Vitality",
+        "Tenacity",
+        "Concussive Blast"
+      ],
       "source": "MLBB Fandom Wiki + MLBBHub",
       "sourceUrl": "https://mlbbhub.com/emblems/tank",
       "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
@@ -374,7 +397,11 @@
         "adaptiveAttack": "+10",
         "movementSpeed": "+3%"
       },
-      "recommendedTalents": ["Rupture", "Master Assassin", "Killing Spree"],
+      "recommendedTalents": [
+        "Rupture",
+        "Master Assassin",
+        "Killing Spree"
+      ],
       "source": "MLBB Fandom Wiki + MLBBHub",
       "sourceUrl": "https://mlbbhub.com/emblems/assassin",
       "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
@@ -391,7 +418,11 @@
         "cooldownReduction": "+5%",
         "magicPenetration": "+8"
       },
-      "recommendedTalents": ["Inspire", "Bargain Hunter", "Lethal Ignition"],
+      "recommendedTalents": [
+        "Inspire",
+        "Bargain Hunter",
+        "Lethal Ignition"
+      ],
       "source": "MLBB Fandom Wiki + MLBBHub",
       "sourceUrl": "https://mlbbhub.com/emblems/mage",
       "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
@@ -408,7 +439,11 @@
         "adaptiveAttack": "+16",
         "hybridDefense": "+8"
       },
-      "recommendedTalents": ["Firmness", "Festival of Blood", "Brave Smite"],
+      "recommendedTalents": [
+        "Firmness",
+        "Festival of Blood",
+        "Brave Smite"
+      ],
       "source": "MLBB Fandom Wiki + MLBBHub",
       "sourceUrl": "https://mlbbhub.com/emblems/fighter",
       "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
@@ -425,7 +460,11 @@
         "cooldownReduction": "+10%",
         "movementSpeed": "+6%"
       },
-      "recommendedTalents": ["Agility", "Pull Yourself Together", "Focusing Mark"],
+      "recommendedTalents": [
+        "Agility",
+        "Pull Yourself Together",
+        "Focusing Mark"
+      ],
       "source": "MLBB Fandom Wiki + MLBBHub",
       "sourceUrl": "https://mlbbhub.com/emblems/support",
       "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",
@@ -442,7 +481,11 @@
         "adaptiveAttack": "+16",
         "adaptivePenetration": "+10%"
       },
-      "recommendedTalents": ["Fatal", "Weapon Master", "Weakness Finder"],
+      "recommendedTalents": [
+        "Fatal",
+        "Weapon Master",
+        "Weakness Finder"
+      ],
       "source": "MLBB Fandom Wiki + MLBBHub",
       "sourceUrl": "https://mlbbhub.com/emblems/marksman",
       "sourceUpdatedAt": "2026-06-07T00:00:00.000Z",

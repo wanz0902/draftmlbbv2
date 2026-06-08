@@ -10,7 +10,16 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Battle_Spells",
     "sourceUpdatedAt": "2026-06-07T03:26:00.304Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "recommendedRoles": [
+      "Fighter",
+      "Assassin",
+      "Mage",
+      "Marksman",
+      "Support",
+      "Tank"
+    ]
   },
   {
     "name": "Retribution",
@@ -23,7 +32,8 @@
     "sourceUrl": "https://liquipedia.net/mobilelegends/Battle_Spells",
     "sourceUpdatedAt": "2026-06-07T03:26:00.304Z",
     "dataQuality": "complete",
-    "unlockNote": "Available from the start"
+    "unlockNote": "Available from the start",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Execute",
@@ -36,7 +46,15 @@
     "sourceUrl": "https://liquipedia.net/mobilelegends/Battle_Spells",
     "sourceUpdatedAt": "2026-06-07T03:26:00.304Z",
     "dataQuality": "complete",
-    "unlockNote": "Available from the start"
+    "unlockNote": "Available from the start",
+    "mlbhubSource": "mlbbhub.com",
+    "recommendedRoles": [
+      "Fighter",
+      "Assassin",
+      "Mage",
+      "Marksman",
+      "Support"
+    ]
   },
   {
     "name": "Inspire",
@@ -49,7 +67,15 @@
     "sourceUrl": "https://liquipedia.net/mobilelegends/Battle_Spells",
     "sourceUpdatedAt": "2026-06-07T03:26:00.304Z",
     "dataQuality": "complete",
-    "unlockNote": "Unlocks at Account Level 5"
+    "unlockNote": "Unlocks at Account Level 5",
+    "mlbhubSource": "mlbbhub.com",
+    "recommendedRoles": [
+      "Fighter",
+      "Mage",
+      "Marksman",
+      "Support",
+      "Tank"
+    ]
   },
   {
     "name": "Sprint",
@@ -62,7 +88,14 @@
     "sourceUrl": "https://liquipedia.net/mobilelegends/Battle_Spells",
     "sourceUpdatedAt": "2026-06-07T03:26:00.305Z",
     "dataQuality": "complete",
-    "unlockNote": "Available from the start"
+    "unlockNote": "Available from the start",
+    "mlbhubSource": "mlbbhub.com",
+    "recommendedRoles": [
+      "Mage",
+      "Marksman",
+      "Support",
+      "Tank"
+    ]
   },
   {
     "name": "Flameshot",
@@ -75,7 +108,16 @@
     "sourceUrl": "https://liquipedia.net/mobilelegends/Battle_Spells",
     "sourceUpdatedAt": "2026-06-07T03:26:00.305Z",
     "dataQuality": "complete",
-    "unlockNote": "Unlocks at Account Level 10"
+    "unlockNote": "Unlocks at Account Level 10",
+    "mlbhubSource": "mlbbhub.com",
+    "recommendedRoles": [
+      "Fighter",
+      "Assassin",
+      "Mage",
+      "Marksman",
+      "Support",
+      "Tank"
+    ]
   },
   {
     "name": "Aegis",
@@ -88,7 +130,15 @@
     "sourceUrl": "https://liquipedia.net/mobilelegends/Battle_Spells",
     "sourceUpdatedAt": "2026-06-07T03:26:00.305Z",
     "dataQuality": "complete",
-    "unlockNote": "Unlocks at Account Level 10"
+    "unlockNote": "Unlocks at Account Level 10",
+    "mlbhubSource": "mlbbhub.com",
+    "recommendedRoles": [
+      "Fighter",
+      "Mage",
+      "Marksman",
+      "Support",
+      "Tank"
+    ]
   },
   {
     "name": "Petrify",
@@ -101,7 +151,15 @@
     "sourceUrl": "https://liquipedia.net/mobilelegends/Battle_Spells",
     "sourceUpdatedAt": "2026-06-07T03:26:00.305Z",
     "dataQuality": "complete",
-    "unlockNote": "Unlocks at Account Level 15"
+    "unlockNote": "Unlocks at Account Level 15",
+    "mlbhubSource": "mlbbhub.com",
+    "recommendedRoles": [
+      "Fighter",
+      "Mage",
+      "Marksman",
+      "Support",
+      "Tank"
+    ]
   },
   {
     "name": "Purify",
@@ -114,7 +172,16 @@
     "sourceUrl": "https://liquipedia.net/mobilelegends/Battle_Spells",
     "sourceUpdatedAt": "2026-06-07T03:26:00.305Z",
     "dataQuality": "complete",
-    "unlockNote": "Unlocks at Account Level 15"
+    "unlockNote": "Unlocks at Account Level 15",
+    "mlbhubSource": "mlbbhub.com",
+    "recommendedRoles": [
+      "Fighter",
+      "Assassin",
+      "Mage",
+      "Marksman",
+      "Support",
+      "Tank"
+    ]
   },
   {
     "name": "Revitalize",
@@ -127,7 +194,14 @@
     "sourceUrl": "https://liquipedia.net/mobilelegends/Battle_Spells",
     "sourceUpdatedAt": "2026-06-07T03:26:00.305Z",
     "dataQuality": "complete",
-    "unlockNote": "Unlocks at Account Level 20"
+    "unlockNote": "Unlocks at Account Level 20",
+    "mlbhubSource": "mlbbhub.com",
+    "recommendedRoles": [
+      "Fighter",
+      "Mage",
+      "Support",
+      "Tank"
+    ]
   },
   {
     "name": "Vengeance",
@@ -140,7 +214,12 @@
     "sourceUrl": "https://liquipedia.net/mobilelegends/Battle_Spells",
     "sourceUpdatedAt": "2026-06-07T03:26:00.305Z",
     "dataQuality": "complete",
-    "unlockNote": "Unlocks at Account Level 20"
+    "unlockNote": "Unlocks at Account Level 20",
+    "mlbhubSource": "mlbbhub.com",
+    "recommendedRoles": [
+      "Fighter",
+      "Tank"
+    ]
   },
   {
     "name": "Arrival",
@@ -153,6 +232,11 @@
     "sourceUrl": "https://liquipedia.net/mobilelegends/Battle_Spells",
     "sourceUpdatedAt": "2026-06-07T03:26:00.305Z",
     "dataQuality": "complete",
-    "unlockNote": "Unlocks at Account Level 25"
+    "unlockNote": "Unlocks at Account Level 25",
+    "mlbhubSource": "mlbbhub.com",
+    "recommendedRoles": [
+      "Fighter",
+      "Tank"
+    ]
   }
 ]

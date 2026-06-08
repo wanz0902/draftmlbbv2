@@ -26,7 +26,36 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Berserker's_Fury",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "alucard",
+      "argus",
+      "aulus",
+      "badang",
+      "balmond",
+      "brody",
+      "bruno",
+      "claude",
+      "clint",
+      "dyrroth",
+      "hanabi",
+      "irithel",
+      "karrie",
+      "kimmy",
+      "layla",
+      "lesley",
+      "ling",
+      "lolita",
+      "melissa",
+      "minotaur",
+      "minsitthar",
+      "miya",
+      "moskov",
+      "sun",
+      "yi-sun-shin",
+      "zilong"
+    ]
   },
   {
     "name": "Blade of Despair",
@@ -52,7 +81,69 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Blade_of_Despair",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aldous",
+      "alpha",
+      "alucard",
+      "argus",
+      "arlott",
+      "aulus",
+      "badang",
+      "balmond",
+      "bane",
+      "beatrix",
+      "benedetta",
+      "brody",
+      "bruno",
+      "chou",
+      "claude",
+      "clint",
+      "dyrroth",
+      "fanny",
+      "freya",
+      "granger",
+      "grock",
+      "hanabi",
+      "hanzo",
+      "hayabusa",
+      "helcurt",
+      "irithel",
+      "jawhead",
+      "karrie",
+      "khaleed",
+      "khufra",
+      "kimmy",
+      "lancelot",
+      "lapu-lapu",
+      "layla",
+      "leomord",
+      "lesley",
+      "ling",
+      "lolita",
+      "martis",
+      "masha",
+      "minotaur",
+      "minsitthar",
+      "miya",
+      "moskov",
+      "natalia",
+      "nolan",
+      "paquito",
+      "phoveus",
+      "popol-and-kupa",
+      "roger",
+      "saber",
+      "sun",
+      "suyou",
+      "terizla",
+      "x-borg",
+      "yi-sun-shin",
+      "yin",
+      "yu-zhong",
+      "zilong"
+    ]
   },
   {
     "name": "Blade of the Heptaseas",
@@ -77,7 +168,32 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Blade_of_the_Heptaseas",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aldous",
+      "arlott",
+      "bane",
+      "benedetta",
+      "chou",
+      "dyrroth",
+      "fanny",
+      "franco",
+      "freya",
+      "grock",
+      "hanzo",
+      "helcurt",
+      "jawhead",
+      "khaleed",
+      "lancelot",
+      "lapu-lapu",
+      "lolita",
+      "minotaur",
+      "natalia",
+      "nolan",
+      "saber",
+      "suyou"
+    ]
   },
   {
     "name": "Corrosion Scythe",
@@ -104,7 +220,29 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Corrosion_Scythe",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "argus",
+      "beatrix",
+      "claude",
+      "franco",
+      "hanabi",
+      "hanzo",
+      "ixia",
+      "johnson",
+      "karrie",
+      "kimmy",
+      "masha",
+      "minsitthar",
+      "miya",
+      "moskov",
+      "natan",
+      "sun",
+      "thamuz",
+      "wanwan",
+      "zilong"
+    ]
   },
   {
     "name": "Demon Hunter Sword",
@@ -135,7 +273,34 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Demon_Hunter_Sword",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "argus",
+      "badang",
+      "beatrix",
+      "bruno",
+      "claude",
+      "clint",
+      "dyrroth",
+      "hanabi",
+      "hanzo",
+      "helcurt",
+      "ixia",
+      "karrie",
+      "kimmy",
+      "lesley",
+      "martis",
+      "masha",
+      "melissa",
+      "miya",
+      "moskov",
+      "natan",
+      "popol-and-kupa",
+      "sun",
+      "wanwan",
+      "zilong"
+    ]
   },
   {
     "name": "Endless Battle",
@@ -164,7 +329,36 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Endless_Battle",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aldous",
+      "alucard",
+      "argus",
+      "arlott",
+      "aulus",
+      "benedetta",
+      "brody",
+      "chou",
+      "clint",
+      "freya",
+      "granger",
+      "hanzo",
+      "leomord",
+      "lesley",
+      "ling",
+      "minsitthar",
+      "natalia",
+      "nolan",
+      "popol-and-kupa",
+      "roger",
+      "ruby",
+      "saber",
+      "suyou",
+      "yi-sun-shin",
+      "yu-zhong",
+      "zilong"
+    ]
   },
   {
     "name": "Golden Staff",
@@ -190,7 +384,21 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Golden_Staff",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "argus",
+      "badang",
+      "beatrix",
+      "claude",
+      "hanabi",
+      "hanzo",
+      "karrie",
+      "miya",
+      "moskov",
+      "natan",
+      "sun"
+    ]
   },
   {
     "name": "Great Dragon Spear",
@@ -217,7 +425,24 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Great_Dragon_Spear",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "argus",
+      "aulus",
+      "brody",
+      "bruno",
+      "claude",
+      "dyrroth",
+      "hanabi",
+      "irithel",
+      "karrie",
+      "layla",
+      "lesley",
+      "melissa",
+      "sun",
+      "zilong"
+    ]
   },
   {
     "name": "Haas's Claws",
@@ -243,7 +468,30 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Haas's_Claws",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "alucard",
+      "badang",
+      "balmond",
+      "beatrix",
+      "brody",
+      "bruno",
+      "claude",
+      "dyrroth",
+      "freya",
+      "hanabi",
+      "irithel",
+      "ixia",
+      "karrie",
+      "layla",
+      "ling",
+      "miya",
+      "moskov",
+      "ruby",
+      "sun",
+      "wanwan"
+    ]
   },
   {
     "name": "Hunter Strike",
@@ -269,7 +517,37 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Hunter_Strike",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "alucard",
+      "argus",
+      "arlott",
+      "badang",
+      "bane",
+      "beatrix",
+      "benedetta",
+      "claude",
+      "clint",
+      "dyrroth",
+      "granger",
+      "hanzo",
+      "hayabusa",
+      "helcurt",
+      "karrie",
+      "khaleed",
+      "kimmy",
+      "lancelot",
+      "lapu-lapu",
+      "minsitthar",
+      "natalia",
+      "nolan",
+      "phoveus",
+      "saber",
+      "suyou",
+      "terizla",
+      "yin"
+    ]
   },
   {
     "name": "Malefic Roar",
@@ -300,7 +578,46 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Malefic_Roar",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aldous",
+      "alpha",
+      "alucard",
+      "argus",
+      "arlott",
+      "aulus",
+      "badang",
+      "balmond",
+      "bane",
+      "brody",
+      "bruno",
+      "chou",
+      "clint",
+      "dyrroth",
+      "fanny",
+      "granger",
+      "hayabusa",
+      "helcurt",
+      "irithel",
+      "ixia",
+      "jawhead",
+      "karrie",
+      "lancelot",
+      "layla",
+      "leomord",
+      "lesley",
+      "ling",
+      "melissa",
+      "minotaur",
+      "minsitthar",
+      "miya",
+      "phoveus",
+      "suyou",
+      "yi-sun-shin",
+      "yin",
+      "yu-zhong"
+    ]
   },
   {
     "name": "Rose Gold Meteor",
@@ -327,7 +644,25 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Rose_Gold_Meteor",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "beatrix",
+      "brody",
+      "bruno",
+      "clint",
+      "fanny",
+      "hanabi",
+      "hayabusa",
+      "helcurt",
+      "khufra",
+      "lancelot",
+      "layla",
+      "lesley",
+      "masha",
+      "miya",
+      "zilong"
+    ]
   },
   {
     "name": "Sea Halberd",
@@ -353,7 +688,12 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Sea_Halberd",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "beatrix",
+      "sun"
+    ]
   },
   {
     "name": "Sky Piercer",
@@ -380,7 +720,13 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Sky_Piercer",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aamon",
+      "fanny",
+      "lancelot"
+    ]
   },
   {
     "name": "War Axe",
@@ -407,7 +753,43 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/War_Axe",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aldous",
+      "alpha",
+      "arlott",
+      "aulus",
+      "balmond",
+      "bane",
+      "barats",
+      "benedetta",
+      "dyrroth",
+      "fredrinn",
+      "freya",
+      "granger",
+      "grock",
+      "hayabusa",
+      "hilda",
+      "jawhead",
+      "khaleed",
+      "kimmy",
+      "lancelot",
+      "lapu-lapu",
+      "leomord",
+      "martis",
+      "minsitthar",
+      "paquito",
+      "phoveus",
+      "roger",
+      "ruby",
+      "suyou",
+      "terizla",
+      "thamuz",
+      "x-borg",
+      "yin",
+      "yu-zhong"
+    ]
   },
   {
     "name": "Wind of Nature",
@@ -434,7 +816,14 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Wind_of_Nature",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "irithel",
+      "layla",
+      "miya",
+      "moskov"
+    ]
   },
   {
     "name": "Windtalker",
@@ -461,7 +850,29 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Windtalker",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "bruno",
+      "claude",
+      "clint",
+      "hanabi",
+      "hanzo",
+      "irithel",
+      "ixia",
+      "karrie",
+      "kimmy",
+      "layla",
+      "lesley",
+      "miya",
+      "moskov",
+      "natalia",
+      "natan",
+      "popol-and-kupa",
+      "roger",
+      "sun",
+      "wanwan"
+    ]
   },
   {
     "name": "Dagger",
@@ -479,7 +890,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Dagger",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Expert Gloves",
@@ -498,7 +910,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Expert_Gloves",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Fury Hammer",
@@ -517,7 +930,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Fury_Hammer",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Iron Hunting Bow",
@@ -539,7 +953,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Iron_Hunting_Bow",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Javelin",
@@ -558,7 +973,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Javelin",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Knife",
@@ -577,7 +993,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Knife",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Legion Sword",
@@ -601,7 +1018,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Legion_Sword",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Magic Blade",
@@ -620,7 +1038,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Magic_Blade",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Malefic Gun",
@@ -639,7 +1058,13 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Malefic_Gun",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "beatrix",
+      "brody",
+      "natan"
+    ]
   },
   {
     "name": "Ogre Tomahawk",
@@ -659,7 +1084,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Ogre_Tomahawk",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Power Potion",
@@ -679,7 +1105,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Power_Potion",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Regular Spear",
@@ -700,7 +1127,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Regular_Spear",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Rogue Meteor",
@@ -719,7 +1147,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Rogue_Meteor",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Swift Crossbow",
@@ -737,7 +1166,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Swift_Crossbow",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Vampire Mallet",
@@ -759,7 +1189,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Vampire_Mallet",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Winter Crown",
@@ -783,7 +1214,16 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Winter_Crown",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "guinevere",
+      "gusion",
+      "kagura",
+      "karina",
+      "phoveus",
+      "valentina"
+    ]
   },
   {
     "name": "Antique Cuirass",
@@ -810,7 +1250,33 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Antique_Cuirass",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "balmond",
+      "baxia",
+      "belerick",
+      "chip",
+      "diggie",
+      "edith",
+      "estes",
+      "floryn",
+      "franco",
+      "gatotkaca",
+      "gloo",
+      "grock",
+      "hilda",
+      "hylos",
+      "jawhead",
+      "johnson",
+      "khufra",
+      "lolita",
+      "minotaur",
+      "phoveus",
+      "rafaela",
+      "tigreal",
+      "zhask"
+    ]
   },
   {
     "name": "Athena's Shield",
@@ -837,7 +1303,38 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Athena's_Shield",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "akai",
+      "atlas",
+      "barats",
+      "baxia",
+      "benedetta",
+      "carmilla",
+      "cecilion",
+      "chip",
+      "edith",
+      "estes",
+      "floryn",
+      "franco",
+      "gloo",
+      "grock",
+      "hilda",
+      "hylos",
+      "jawhead",
+      "kaja",
+      "khufra",
+      "lolita",
+      "masha",
+      "nana",
+      "silvanna",
+      "suyou",
+      "terizla",
+      "tigreal",
+      "uranus",
+      "zhask"
+    ]
   },
   {
     "name": "Black Ice Shield",
@@ -864,7 +1361,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Black_Ice_Shield",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Blade Armor",
@@ -889,7 +1387,25 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Blade_Armor",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "atlas",
+      "baxia",
+      "belerick",
+      "chip",
+      "edith",
+      "franco",
+      "gatotkaca",
+      "gloo",
+      "hylos",
+      "johnson",
+      "khufra",
+      "lolita",
+      "minsitthar",
+      "tigreal",
+      "uranus"
+    ]
   },
   {
     "name": "Brute Force Breastplate",
@@ -915,7 +1431,38 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Brute_Force_Breastplate",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aldous",
+      "alpha",
+      "aulus",
+      "bane",
+      "barats",
+      "belerick",
+      "brody",
+      "chou",
+      "edith",
+      "fanny",
+      "franco",
+      "freya",
+      "granger",
+      "grock",
+      "julian",
+      "khaleed",
+      "leomord",
+      "martis",
+      "paquito",
+      "phoveus",
+      "roger",
+      "ruby",
+      "silvanna",
+      "suyou",
+      "tigreal",
+      "valir",
+      "yin",
+      "zilong"
+    ]
   },
   {
     "name": "Chastise Pauldron",
@@ -941,7 +1488,20 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Chastise_Pauldron",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "balmond",
+      "barats",
+      "belerick",
+      "chip",
+      "edith",
+      "gatotkaca",
+      "hilda",
+      "khufra",
+      "lolita",
+      "suyou"
+    ]
   },
   {
     "name": "Cursed Helmet",
@@ -967,7 +1527,33 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Cursed_Helmet",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "atlas",
+      "aulus",
+      "balmond",
+      "barats",
+      "baxia",
+      "belerick",
+      "carmilla",
+      "chip",
+      "chou",
+      "edith",
+      "franco",
+      "fredrinn",
+      "freya",
+      "gatotkaca",
+      "gloo",
+      "grock",
+      "hilda",
+      "hylos",
+      "johnson",
+      "minotaur",
+      "thamuz",
+      "tigreal",
+      "uranus"
+    ]
   },
   {
     "name": "Dominance Ice",
@@ -994,7 +1580,36 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Dominance_Ice",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "akai",
+      "alice",
+      "angela",
+      "atlas",
+      "barats",
+      "baxia",
+      "belerick",
+      "carmilla",
+      "chip",
+      "diggie",
+      "edith",
+      "franco",
+      "gatotkaca",
+      "gloo",
+      "grock",
+      "hylos",
+      "jawhead",
+      "kaja",
+      "khufra",
+      "lapu-lapu",
+      "phoveus",
+      "terizla",
+      "tigreal",
+      "uranus",
+      "zhask",
+      "zilong"
+    ]
   },
   {
     "name": "Guardian Helmet",
@@ -1020,7 +1635,32 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Guardian_Helmet",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "akai",
+      "balmond",
+      "barats",
+      "baxia",
+      "belerick",
+      "carmilla",
+      "chip",
+      "edith",
+      "estes",
+      "floryn",
+      "franco",
+      "fredrinn",
+      "gatotkaca",
+      "gloo",
+      "hylos",
+      "johnson",
+      "khufra",
+      "lolita",
+      "minotaur",
+      "minsitthar",
+      "rafaela",
+      "tigreal"
+    ]
   },
   {
     "name": "Immortality",
@@ -1046,7 +1686,94 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Immortality",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "akai",
+      "aldous",
+      "alpha",
+      "alucard",
+      "argus",
+      "arlott",
+      "atlas",
+      "aulus",
+      "aurora",
+      "badang",
+      "balmond",
+      "bane",
+      "barats",
+      "baxia",
+      "beatrix",
+      "belerick",
+      "benedetta",
+      "brody",
+      "bruno",
+      "carmilla",
+      "chip",
+      "chou",
+      "claude",
+      "clint",
+      "cyclops",
+      "diggie",
+      "edith",
+      "estes",
+      "eudora",
+      "fanny",
+      "faramis",
+      "floryn",
+      "freya",
+      "gatotkaca",
+      "gloo",
+      "gord",
+      "granger",
+      "grock",
+      "guinevere",
+      "gusion",
+      "hanabi",
+      "hanzo",
+      "harith",
+      "hayabusa",
+      "hilda",
+      "hylos",
+      "irithel",
+      "jawhead",
+      "kaja",
+      "karrie",
+      "khaleed",
+      "kimmy",
+      "lancelot",
+      "lapu-lapu",
+      "leomord",
+      "lesley",
+      "lolita",
+      "martis",
+      "mathilda",
+      "melissa",
+      "minotaur",
+      "minsitthar",
+      "miya",
+      "nana",
+      "paquito",
+      "phoveus",
+      "popol-and-kupa",
+      "rafaela",
+      "saber",
+      "selena",
+      "silvanna",
+      "terizla",
+      "thamuz",
+      "tigreal",
+      "uranus",
+      "vale",
+      "valentina",
+      "valir",
+      "vexana",
+      "wanwan",
+      "x-borg",
+      "yi-sun-shin",
+      "yin",
+      "yu-zhong"
+    ]
   },
   {
     "name": "Oracle",
@@ -1073,7 +1800,50 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Oracle",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "akai",
+      "alice",
+      "angela",
+      "arlott",
+      "aurora",
+      "bane",
+      "barats",
+      "baxia",
+      "belerick",
+      "chou",
+      "cyclops",
+      "edith",
+      "estes",
+      "faramis",
+      "floryn",
+      "franco",
+      "fredrinn",
+      "gatotkaca",
+      "gloo",
+      "gord",
+      "grock",
+      "hilda",
+      "hylos",
+      "jawhead",
+      "johnson",
+      "julian",
+      "khaleed",
+      "khufra",
+      "lolita",
+      "mathilda",
+      "minotaur",
+      "minsitthar",
+      "phoveus",
+      "rafaela",
+      "ruby",
+      "silvanna",
+      "thamuz",
+      "uranus",
+      "x-borg",
+      "yu-zhong"
+    ]
   },
   {
     "name": "Queen's Wings",
@@ -1099,7 +1869,33 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Queen's_Wings",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "alpha",
+      "alucard",
+      "arlott",
+      "benedetta",
+      "franco",
+      "granger",
+      "guinevere",
+      "hylos",
+      "jawhead",
+      "khaleed",
+      "khufra",
+      "lapu-lapu",
+      "masha",
+      "minsitthar",
+      "nolan",
+      "paquito",
+      "phoveus",
+      "silvanna",
+      "suyou",
+      "terizla",
+      "yin",
+      "yu-zhong",
+      "zilong"
+    ]
   },
   {
     "name": "Radiant Armor",
@@ -1126,7 +1922,13 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Radiant_Armor",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "chip",
+      "phoveus",
+      "terizla"
+    ]
   },
   {
     "name": "Thunder Belt",
@@ -1154,7 +1956,30 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Thunder_Belt",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "arlott",
+      "aulus",
+      "badang",
+      "bane",
+      "barats",
+      "baxia",
+      "belerick",
+      "chip",
+      "edith",
+      "fredrinn",
+      "freya",
+      "gloo",
+      "grock",
+      "hylos",
+      "khufra",
+      "lolita",
+      "phoveus",
+      "terizla",
+      "tigreal",
+      "zhask"
+    ]
   },
   {
     "name": "Ares Belt",
@@ -1175,7 +2000,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Ares_Belt",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Dreadnaught Armor",
@@ -1196,7 +2022,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Dreadnaught_Armor",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Healing Necklace",
@@ -1217,7 +2044,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Healing_Necklace",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Hero's Ring",
@@ -1234,7 +2062,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Hero's_Ring",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Leather Jerkin",
@@ -1255,7 +2084,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Leather_Jerkin",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Magic Resist Cloak",
@@ -1277,7 +2107,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Magic_Resist_Cloak",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Molten Essence",
@@ -1293,7 +2124,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Molten_Essence",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Rock Potion",
@@ -1313,7 +2145,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Rock_Potion",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Silence Robe",
@@ -1333,7 +2166,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Silence_Robe",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Steel Legplates",
@@ -1350,7 +2184,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Steel_Legplates",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Vitality Crystal",
@@ -1373,7 +2208,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Vitality_Crystal",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Blood Wings",
@@ -1399,7 +2235,47 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Blood_Wings",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aamon",
+      "aurora",
+      "bane",
+      "cecilion",
+      "change",
+      "cici",
+      "cyclops",
+      "esmeralda",
+      "eudora",
+      "faramis",
+      "gord",
+      "guinevere",
+      "harith",
+      "harley",
+      "johnson",
+      "joy",
+      "kadita",
+      "kagura",
+      "kaja",
+      "karina",
+      "kimmy",
+      "lunox",
+      "luo-yi",
+      "lylia",
+      "nana",
+      "natan",
+      "novaria",
+      "odette",
+      "pharsa",
+      "selena",
+      "silvanna",
+      "vale",
+      "valentina",
+      "valir",
+      "vexana",
+      "yve",
+      "zhask"
+    ]
   },
   {
     "name": "Clock of Destiny",
@@ -1426,7 +2302,33 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Clock_of_Destiny",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "alice",
+      "cecilion",
+      "cici",
+      "esmeralda",
+      "estes",
+      "eudora",
+      "julian",
+      "kadita",
+      "kagura",
+      "kaja",
+      "lunox",
+      "luo-yi",
+      "lylia",
+      "novaria",
+      "odette",
+      "pharsa",
+      "selena",
+      "silvanna",
+      "uranus",
+      "vale",
+      "valentina",
+      "vexana",
+      "zhask"
+    ]
   },
   {
     "name": "Concentrated Energy",
@@ -1452,7 +2354,29 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Concentrated_Energy",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aamon",
+      "aurora",
+      "bane",
+      "cecilion",
+      "cici",
+      "cyclops",
+      "faramis",
+      "gatotkaca",
+      "gord",
+      "guinevere",
+      "gusion",
+      "johnson",
+      "karina",
+      "kimmy",
+      "lunox",
+      "luo-yi",
+      "natan",
+      "silvanna",
+      "valentina"
+    ]
   },
   {
     "name": "Divine Glaive",
@@ -1478,7 +2402,39 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Divine_Glaive",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aamon",
+      "aurora",
+      "change",
+      "cyclops",
+      "esmeralda",
+      "eudora",
+      "faramis",
+      "gatotkaca",
+      "gord",
+      "guinevere",
+      "harith",
+      "harley",
+      "johnson",
+      "kagura",
+      "karina",
+      "kimmy",
+      "lunox",
+      "lylia",
+      "mathilda",
+      "natan",
+      "novaria",
+      "odette",
+      "pharsa",
+      "selena",
+      "vale",
+      "valentina",
+      "valir",
+      "vexana",
+      "xavier"
+    ]
   },
   {
     "name": "Enchanted Talisman",
@@ -1505,7 +2461,31 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Enchanted_Talisman",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aurora",
+      "cecilion",
+      "change",
+      "cici",
+      "cyclops",
+      "diggie",
+      "esmeralda",
+      "estes",
+      "faramis",
+      "gord",
+      "kagura",
+      "lunox",
+      "luo-yi",
+      "lylia",
+      "mathilda",
+      "nana",
+      "rafaela",
+      "vale",
+      "valentina",
+      "xavier",
+      "zhask"
+    ]
   },
   {
     "name": "Feather of Heaven",
@@ -1531,7 +2511,18 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Feather_of_Heaven",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aamon",
+      "esmeralda",
+      "harith",
+      "harley",
+      "kimmy",
+      "natan",
+      "silvanna",
+      "zhask"
+    ]
   },
   {
     "name": "Flask of the Oasis",
@@ -1558,7 +2549,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Flask_of_the_Oasis",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Fleeting Time",
@@ -1585,7 +2577,27 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Fleeting_Time",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "angela",
+      "aurora",
+      "chip",
+      "diggie",
+      "estes",
+      "eudora",
+      "floryn",
+      "gord",
+      "johnson",
+      "joy",
+      "kadita",
+      "kaja",
+      "nana",
+      "uranus",
+      "vale",
+      "valentina",
+      "xavier"
+    ]
   },
   {
     "name": "Genius Wand",
@@ -1611,7 +2623,31 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Genius_Wand",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aamon",
+      "cecilion",
+      "change",
+      "cyclops",
+      "gord",
+      "gusion",
+      "harley",
+      "joy",
+      "julian",
+      "kagura",
+      "karina",
+      "lunox",
+      "lylia",
+      "mathilda",
+      "nana",
+      "novaria",
+      "odette",
+      "valir",
+      "vexana",
+      "yve",
+      "zhask"
+    ]
   },
   {
     "name": "Glowing Wand",
@@ -1638,7 +2674,39 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Glowing_Wand",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aamon",
+      "alice",
+      "angela",
+      "bane",
+      "baxia",
+      "change",
+      "eudora",
+      "faramis",
+      "floryn",
+      "gatotkaca",
+      "gloo",
+      "gord",
+      "gusion",
+      "hylos",
+      "kagura",
+      "kaja",
+      "kimmy",
+      "luo-yi",
+      "lylia",
+      "mathilda",
+      "nana",
+      "odette",
+      "rafaela",
+      "valentina",
+      "valir",
+      "vexana",
+      "xavier",
+      "yve",
+      "zhask"
+    ]
   },
   {
     "name": "Holy Crystal",
@@ -1663,7 +2731,48 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Holy_Crystal",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aamon",
+      "aurora",
+      "bane",
+      "cecilion",
+      "change",
+      "cici",
+      "cyclops",
+      "esmeralda",
+      "eudora",
+      "gatotkaca",
+      "gord",
+      "guinevere",
+      "gusion",
+      "harith",
+      "harley",
+      "johnson",
+      "joy",
+      "kadita",
+      "kagura",
+      "kaja",
+      "karina",
+      "lunox",
+      "luo-yi",
+      "lylia",
+      "mathilda",
+      "nana",
+      "natan",
+      "odette",
+      "pharsa",
+      "selena",
+      "silvanna",
+      "vale",
+      "valentina",
+      "valir",
+      "vexana",
+      "xavier",
+      "yve",
+      "zhask"
+    ]
   },
   {
     "name": "Ice Queen Wand",
@@ -1691,7 +2800,31 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Ice_Queen_Wand",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "alice",
+      "angela",
+      "aurora",
+      "bane",
+      "cecilion",
+      "change",
+      "cyclops",
+      "eudora",
+      "faramis",
+      "floryn",
+      "gord",
+      "joy",
+      "luo-yi",
+      "lylia",
+      "nana",
+      "uranus",
+      "vale",
+      "valentina",
+      "valir",
+      "vexana",
+      "yve"
+    ]
   },
   {
     "name": "Lightning Truncheon",
@@ -1718,7 +2851,30 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Lightning_Truncheon",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aurora",
+      "cecilion",
+      "esmeralda",
+      "eudora",
+      "gusion",
+      "harith",
+      "harley",
+      "kadita",
+      "kagura",
+      "lunox",
+      "luo-yi",
+      "lylia",
+      "nana",
+      "novaria",
+      "odette",
+      "pharsa",
+      "selena",
+      "vale",
+      "valentina",
+      "vexana"
+    ]
   },
   {
     "name": "Starlium Scythe",
@@ -1745,7 +2901,23 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Starlium_Scythe",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aamon",
+      "bane",
+      "esmeralda",
+      "guinevere",
+      "gusion",
+      "harith",
+      "harley",
+      "julian",
+      "kaja",
+      "karina",
+      "mathilda",
+      "natan",
+      "selena"
+    ]
   },
   {
     "name": "Azure Blade",
@@ -1764,7 +2936,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Azure_Blade",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Book of Sages",
@@ -1782,7 +2955,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Book_of_Sages",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Elegant Gem",
@@ -1810,7 +2984,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Elegant_Gem",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Flower of Hope",
@@ -1827,7 +3002,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Flower_of_Hope",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Lantern of Hope",
@@ -1843,7 +3019,11 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Lantern_of_Hope",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "floryn"
+    ]
   },
   {
     "name": "Magic Necklace",
@@ -1862,7 +3042,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Magic_Necklace",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Magic Potion",
@@ -1882,7 +3063,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Magic_Potion",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Magic Wand",
@@ -1904,7 +3086,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Magic_Wand",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Mystery Codex",
@@ -1923,7 +3106,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Mystery_Codex",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Mystic Container",
@@ -1943,7 +3127,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Mystic_Container",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Power Crystal",
@@ -1959,7 +3144,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Power_Crystal",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Tome of Evil",
@@ -1975,7 +3161,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Tome_of_Evil",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Exotic Veil",
@@ -2002,7 +3189,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Exotic_Veil",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Wishing Lantern",
@@ -2028,7 +3216,11 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Wishing_Lantern",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "guinevere"
+    ]
   },
   {
     "name": "Arcane Boots",
@@ -2047,7 +3239,34 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Arcane_Boots",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aamon",
+      "aurora",
+      "change",
+      "cyclops",
+      "esmeralda",
+      "eudora",
+      "faramis",
+      "gord",
+      "guinevere",
+      "gusion",
+      "harley",
+      "johnson",
+      "joy",
+      "kaja",
+      "karina",
+      "kimmy",
+      "luo-yi",
+      "mathilda",
+      "natan",
+      "novaria",
+      "odette",
+      "pharsa",
+      "vale",
+      "xavier"
+    ]
   },
   {
     "name": "Demon Shoes",
@@ -2115,7 +3334,15 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Rapid_Boots",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "balmond",
+      "franco",
+      "hilda",
+      "kaja",
+      "natalia"
+    ]
   },
   {
     "name": "Swift Boots",
@@ -2134,7 +3361,41 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Swift_Boots",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "alucard",
+      "argus",
+      "badang",
+      "balmond",
+      "beatrix",
+      "brody",
+      "bruno",
+      "claude",
+      "clint",
+      "dyrroth",
+      "granger",
+      "hanabi",
+      "hanzo",
+      "helcurt",
+      "hylos",
+      "irithel",
+      "ixia",
+      "karrie",
+      "kimmy",
+      "layla",
+      "lesley",
+      "masha",
+      "melissa",
+      "miya",
+      "moskov",
+      "natan",
+      "popol-and-kupa",
+      "roger",
+      "sun",
+      "wanwan",
+      "zilong"
+    ]
   },
   {
     "name": "Tough Boots",
@@ -2159,7 +3420,33 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Tough_Boots",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "aldous",
+      "arlott",
+      "baxia",
+      "belerick",
+      "brody",
+      "carmilla",
+      "edith",
+      "franco",
+      "gatotkaca",
+      "gloo",
+      "hilda",
+      "hylos",
+      "jawhead",
+      "khufra",
+      "lancelot",
+      "ling",
+      "lolita",
+      "masha",
+      "minsitthar",
+      "phoveus",
+      "suyou",
+      "terizla",
+      "zhask"
+    ]
   },
   {
     "name": "Warrior Boots",
@@ -2184,7 +3471,45 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Warrior_Boots",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com",
+    "heroesWhoCore": [
+      "akai",
+      "alpha",
+      "alucard",
+      "arlott",
+      "atlas",
+      "aulus",
+      "badang",
+      "balmond",
+      "barats",
+      "chip",
+      "chou",
+      "edith",
+      "fanny",
+      "fredrinn",
+      "freya",
+      "grock",
+      "hilda",
+      "johnson",
+      "karrie",
+      "khaleed",
+      "lapu-lapu",
+      "leomord",
+      "martis",
+      "masha",
+      "minotaur",
+      "minsitthar",
+      "paquito",
+      "phoveus",
+      "suyou",
+      "terizla",
+      "thamuz",
+      "tigreal",
+      "x-borg",
+      "yin",
+      "zilong"
+    ]
   },
   {
     "name": "Boots",
@@ -2208,7 +3533,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Boots",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Bloody Retribution",
@@ -2228,7 +3554,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Bloody_Retribution",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Flame Retribution",
@@ -2248,7 +3575,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Flame_Retribution",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Ice Retribution",
@@ -2268,7 +3596,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Ice_Retribution",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Conceal",
@@ -2288,7 +3617,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Conceal",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Dire Hit",
@@ -2308,7 +3638,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Dire_Hit",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Encourage",
@@ -2328,7 +3659,8 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Encourage",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
   },
   {
     "name": "Favor",
@@ -2348,6 +3680,145 @@
     "source": "liquipedia",
     "sourceUrl": "https://liquipedia.net/mobilelegends/Favor",
     "sourceUpdatedAt": "2026-06-07T03:40:55.229Z",
-    "dataQuality": "complete"
+    "dataQuality": "complete",
+    "mlbhubSource": "mlbbhub.com"
+  },
+  {
+    "name": "Allow Throw",
+    "category": "Unknown",
+    "gold": 0,
+    "stats": [],
+    "uniqueAttributes": [],
+    "abilities": [],
+    "buildFrom": [],
+    "buildsInto": [],
+    "slug": "allow-throw",
+    "source": "mlbbhub",
+    "sourceUrl": "https://mlbbhub.com/items/allow-throw",
+    "sourceUpdatedAt": "2026-06-08T09:42:23.678Z",
+    "dataQuality": "complete",
+    "heroesWhoCore": [],
+    "mlbhubSource": "mlbbhub.com"
+  },
+  {
+    "name": "Broken Heart",
+    "category": "Unknown",
+    "gold": 0,
+    "stats": [],
+    "uniqueAttributes": [],
+    "abilities": [],
+    "buildFrom": [],
+    "buildsInto": [],
+    "slug": "broken-heart",
+    "source": "mlbbhub",
+    "sourceUrl": "https://mlbbhub.com/items/broken-heart",
+    "sourceUpdatedAt": "2026-06-08T09:43:02.353Z",
+    "dataQuality": "complete",
+    "heroesWhoCore": [],
+    "mlbhubSource": "mlbbhub.com"
+  },
+  {
+    "name": "Demon Boots",
+    "category": "Unknown",
+    "gold": 0,
+    "stats": [],
+    "uniqueAttributes": [],
+    "abilities": [],
+    "buildFrom": [],
+    "buildsInto": [],
+    "slug": "demon-boots",
+    "source": "mlbbhub",
+    "sourceUrl": "https://mlbbhub.com/items/demon-boots",
+    "sourceUpdatedAt": "2026-06-08T09:43:25.159Z",
+    "dataQuality": "complete",
+    "heroesWhoCore": [
+      "alice",
+      "angela",
+      "aurora",
+      "cecilion",
+      "floryn",
+      "kadita",
+      "kagura",
+      "lunox",
+      "luo-yi",
+      "nana",
+      "rafaela",
+      "selena",
+      "uranus",
+      "valentina",
+      "valir",
+      "vexana",
+      "yve"
+    ],
+    "mlbhubSource": "mlbbhub.com"
+  },
+  {
+    "name": "Magic Boots",
+    "category": "Unknown",
+    "gold": 0,
+    "stats": [],
+    "uniqueAttributes": [],
+    "abilities": [],
+    "buildFrom": [],
+    "buildsInto": [],
+    "slug": "magic-boots",
+    "source": "mlbbhub",
+    "sourceUrl": "https://mlbbhub.com/items/magic-boots",
+    "sourceUpdatedAt": "2026-06-08T09:45:09.487Z",
+    "dataQuality": "complete",
+    "heroesWhoCore": [
+      "aulus",
+      "aurora",
+      "bane",
+      "benedetta",
+      "change",
+      "cici",
+      "cyclops",
+      "diggie",
+      "dyrroth",
+      "esmeralda",
+      "estes",
+      "faramis",
+      "franco",
+      "freya",
+      "gord",
+      "granger",
+      "harith",
+      "hayabusa",
+      "julian",
+      "lancelot",
+      "lesley",
+      "lolita",
+      "lylia",
+      "minotaur",
+      "nana",
+      "nolan",
+      "ruby",
+      "saber",
+      "silvanna",
+      "vale",
+      "valentina",
+      "yi-sun-shin",
+      "yu-zhong",
+      "zhask"
+    ],
+    "mlbhubSource": "mlbbhub.com"
+  },
+  {
+    "name": "Throw Forbidden",
+    "category": "Unknown",
+    "gold": 0,
+    "stats": [],
+    "uniqueAttributes": [],
+    "abilities": [],
+    "buildFrom": [],
+    "buildsInto": [],
+    "slug": "throw-forbidden",
+    "source": "mlbbhub",
+    "sourceUrl": "https://mlbbhub.com/items/throw-forbidden",
+    "sourceUpdatedAt": "2026-06-08T09:46:25.568Z",
+    "dataQuality": "complete",
+    "heroesWhoCore": [],
+    "mlbhubSource": "mlbbhub.com"
   }
 ]
