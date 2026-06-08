@@ -125,7 +125,7 @@ export default function LiquipediaScraper({
         <div className="rounded-xl border border-gray-900 bg-gray-950 p-5 shadow-lg flex items-center justify-between">
           <div>
             <span className="font-mono text-[9px] text-indigo-400 uppercase tracking-widest block mb-1">
-              Hero Stats Scraped
+               Hero Stats Tracked
             </span>
             <span className="font-sans text-3xl font-bold text-white tracking-tight">
               {heroesCount}

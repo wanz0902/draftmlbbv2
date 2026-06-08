@@ -7,6 +7,7 @@ import {
   LogOut,
   Map,
   Menu,
+  Shield,
   Sparkles,
   Target,
   Trophy,
@@ -28,6 +29,7 @@ const directLinks = [
   { id: "home", label: "Home", icon: Home },
   { id: "draft", label: "Draft", icon: CloudLightning },
   { id: "tdp", label: "Draft Planner", icon: Target },
+  { id: "counter", label: "Counters", icon: Shield },
   { id: "macro", label: "Macro", icon: Map },
   { id: "teams", label: "Teams", icon: Users },
   { id: "tier", label: "Meta", icon: Trophy },
@@ -41,7 +43,6 @@ const groupedLinks = [
     items: [
       { id: "intelligence", label: "Hero Intelligence" },
       { id: "heroes", label: "Hero Stats" },
-      { id: "tier", label: "Tier List" },
     ],
   },
   {
@@ -61,7 +62,6 @@ const mobileSections = [
     items: [
       { id: "intelligence", label: "Hero Intelligence", icon: Sparkles },
       { id: "heroes", label: "Hero Stats", icon: BarChart3 },
-      { id: "tier", label: "Tier List", icon: Trophy },
     ],
   },
   {

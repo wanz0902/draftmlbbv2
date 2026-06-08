@@ -9,9 +9,7 @@ import TeamAnalytics from "./components/TeamAnalytics";
 import DataCatalog from "./components/DataCatalog";
 import AdminTools from "./components/AdminTools";
 import TierListPanel from "./components/TierListPanel";
-// Counter Matrix hidden temporarily — data coverage too low (3/132 heroes).
-// Component preserved at src/components/CounterMatrixPanel.tsx for future rebuild.
-// import CounterMatrixPanel from "./components/CounterMatrixPanel";
+import CounterMatrixPanel from "./components/CounterMatrixPanel";
 import LandingPage from "./components/LandingPage";
 import TeamDraftPlanner from "./components/TeamDraftPlanner";
 import MacroMapPlanner from "./components/MacroMapPlanner";
@@ -40,6 +38,7 @@ export default function App() {
     draft: "Draft Simulator",
     tdp: "Team Draft Planner",
     macro: "Macro Map Planner",
+    counter: "Counter Matrix",
     intelligence: "Hero Intelligence",
     tier: "Tier List",
     heroes: "Hero Stats",
@@ -188,6 +187,10 @@ export default function App() {
 
             {currentTab === "macro" && (
               <MacroMapPlanner />
+            )}
+
+            {currentTab === "counter" && (
+              <CounterMatrixPanel heroes={heroes} heroAssets={heroAssets} />
             )}
 
             {currentTab === "tier" && (
