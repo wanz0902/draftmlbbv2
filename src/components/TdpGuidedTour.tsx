@@ -14,67 +14,67 @@ export const TOUR_STEPS: TourStep[] = [
   {
     target: "tour-sidebar",
     title: "Sidebar & Draft Plans",
-    text: "Di sini kamu mengatur folder draft. Tournament berfungsi seperti folder besar, sedangkan Draft adalah satu rencana draft di dalamnya.",
+    text: "Di sini kamu mengatur folder draft. Tournament = folder besar, Draft = satu rencana draft.",
     placement: "right",
   },
   {
     target: "tour-new-tournament",
     title: "Tambah Tournament",
-    text: "Klik ini kalau kamu mau bikin folder baru, misalnya untuk scrim, turnamen, atau latihan tertentu.",
+    text: "Klik ini untuk bikin folder baru, misalnya untuk scrim atau turnamen.",
     placement: "right",
   },
   {
     target: "tour-add-draft",
     title: "Tambah Draft",
-    text: "Setelah punya tournament, tambahkan draft plan baru di sini. Satu tournament bisa punya banyak draft plan.",
+    text: "Tambahkan draft plan baru di sini. Satu tournament bisa punya banyak draft.",
     placement: "right",
   },
   {
     target: "tour-draft-header",
     title: "Draft Header",
-    text: "Bagian ini menunjukkan draft yang sedang kamu buka. Pastikan nama tournament dan draft sudah sesuai sebelum mulai isi plan.",
+    text: "Draft yang sedang dibuka. Pastikan nama sudah sesuai sebelum isi plan.",
     placement: "bottom",
   },
   {
     target: "tour-side-toggle",
     title: "Side Toggle",
-    text: "Pilih sisi tim kamu di sini. Kalau kamu pilih Our Blue, badge OURS akan pindah ke Blue Side. Kalau Our Red, badge pindah ke Red Side.",
+    text: "Pilih sisi tim kamu. Badge OURS akan pindah ke Blue atau Red.",
     placement: "bottom",
   },
   {
     target: "tour-ban-slots",
     title: "Ban Slots",
-    text: "Isi 5 slot ban untuk menyusun target ban. Kamu bisa pakai ini untuk hero power pick, hero comfort lawan, atau hero yang mengganggu komposisi.",
+    text: "Isi 5 slot ban untuk target hero lawan.",
     placement: "bottom",
   },
   {
     target: "tour-pick-slots",
     title: "Pick Slots",
-    text: "Isi 5 slot pick untuk rencana hero utama. Ini jadi inti draft yang ingin kamu bangun.",
+    text: "Isi 5 slot pick untuk hero utama draft.",
     placement: "bottom",
   },
   {
     target: "tour-role-lane",
     title: "Role Lane",
-    text: "Role lane membantu kamu melihat pembagian posisi. Blue Side urut dari EXP sampai Roam, Red Side dibuat mirror supaya mudah dibaca.",
+    text: "Blue urut EXP sampai Roam, Red dibuat mirror. Lihat posisi tiap hero.",
     placement: "bottom",
   },
   {
     target: "tour-backup-slots",
     title: "Backup Hero",
-    text: "Setiap lane punya 6 hero cadangan. Kalau hero utama diban, diambil lawan, atau draft berubah, kamu sudah punya plan pengganti.",
+    text: "Setiap lane punya 6 cadangan kalau hero utama diban atau diambil lawan.",
     placement: "bottom",
   },
   {
     target: "tour-coach-notes",
     title: "Coach Notes",
-    text: "Gunakan catatan ini untuk menulis win condition, target ban, power spike, matchup penting, atau rotasi awal.",
+    text: "Tulis catatan strategi: win condition, target ban, rotasi awal.",
     placement: "top",
   },
   {
     target: "tour-save-btn",
     title: "Save / Export",
-    text: "Kalau draft plan sudah siap, klik Save untuk download gambar hasil draft. File PNG ini bisa dibagikan ke tim atau disimpan sebagai arsip.",
+    text: "Klik Save untuk download gambar draft.",
     placement: "left",
   },
 ];
@@ -85,38 +85,52 @@ interface TdpGuidedTourProps {
   initialStep?: number;
 }
 
+function findTarget(target: string): HTMLElement | null {
+  return document.querySelector(`[data-tour-target="${target}"]`) as HTMLElement | null;
+}
+
 function getRect(target: string): DOMRect | null {
-  const el = document.querySelector(`[data-tour-target="${target}"]`);
+  const el = findTarget(target);
   if (!el) return null;
   return el.getBoundingClientRect();
 }
 
-function getPlacement(targetRect: DOMRect, placement: string, viewportW: number, viewportH: number) {
-  const pad = 12;
-  const boxW = Math.min(320, viewportW - 40);
-  let top = 0, left = 0;
+function calcTooltip(
+  targetRect: DOMRect,
+  placement: string,
+  vpW: number,
+  vpH: number,
+  tooltipH: number,
+  tooltipW: number
+): { top: number; left: number } {
+  const gap = 12;
+  const edgePad = 16;
+  let top = 0;
+  let left = 0;
 
   switch (placement) {
     case "bottom":
-      top = targetRect.bottom + pad;
-      left = Math.max(16, Math.min(targetRect.left + targetRect.width / 2 - boxW / 2, viewportW - boxW - 16));
+      top = targetRect.bottom + gap;
+      left = targetRect.left + targetRect.width / 2 - tooltipW / 2;
       break;
     case "top":
-      top = targetRect.top - pad;
-      left = Math.max(16, Math.min(targetRect.left + targetRect.width / 2 - boxW / 2, viewportW - boxW - 16));
-      top -= 120;
+      top = targetRect.top - gap - tooltipH;
+      left = targetRect.left + targetRect.width / 2 - tooltipW / 2;
       break;
     case "right":
-      top = Math.max(16, Math.min(targetRect.top + targetRect.height / 2 - 60, viewportH - 140));
-      left = targetRect.right + pad;
+      top = targetRect.top + targetRect.height / 2 - tooltipH / 2;
+      left = targetRect.right + gap;
       break;
     case "left":
-      top = Math.max(16, Math.min(targetRect.top + targetRect.height / 2 - 60, viewportH - 140));
-      left = targetRect.left - boxW - pad;
+      top = targetRect.top + targetRect.height / 2 - tooltipH / 2;
+      left = targetRect.left - gap - tooltipW;
       break;
   }
 
-  return { top: Math.max(8, top), left: Math.max(8, left), boxW };
+  left = Math.max(edgePad, Math.min(left, vpW - tooltipW - edgePad));
+  top = Math.max(edgePad, Math.min(top, vpH - tooltipH - edgePad));
+
+  return { top, left };
 }
 
 export function isGuidedTourCompleted(): boolean {
@@ -131,37 +145,78 @@ export function markGuidedTourCompleted() {
 
 export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: TdpGuidedTourProps) {
   const [step, setStep] = useState(initialStep);
-  const [highlight, setHighlight] = useState<{ top: number; left: number; width: number; height: number } | null>(null);
-  const [tooltip, setTooltip] = useState<{ top: number; left: number; boxW: number; placement: string } | null>(null);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [hl, setHl] = useState<{ top: number; left: number; w: number; h: number } | null>(null);
+  const [tip, setTip] = useState<{ top: number; left: number; w: number } | null>(null);
+  const [ready, setReady] = useState(false);
+  const rafRef = useRef<number>(0);
+  const measuringRef = useRef(false);
 
   const currentStep = TOUR_STEPS[step];
   const isLast = step === TOUR_STEPS.length - 1;
 
   const measure = useCallback(() => {
-    if (!currentStep) return;
-    const rect = getRect(currentStep.target);
-    if (!rect) {
-      setHighlight(null);
-      setTooltip(null);
-      return;
-    }
-    setHighlight({ top: rect.top, left: rect.left, width: rect.width, height: rect.height });
-    const vpW = window.innerWidth;
-    const vpH = window.innerHeight;
-    const pos = getPlacement(rect, currentStep.placement || "bottom", vpW, vpH);
-    setTooltip({ top: pos.top, left: pos.left, boxW: pos.boxW, placement: currentStep.placement || "bottom" });
+    if (measuringRef.current) return;
+    measuringRef.current = true;
+
+    const doMeasure = () => {
+      if (!currentStep) { measuringRef.current = false; return; }
+      const el = findTarget(currentStep.target);
+      if (!el) {
+        setHl(null);
+        setTip(null);
+        setReady(true);
+        measuringRef.current = false;
+        return;
+      }
+
+      el.scrollIntoView({ block: "center", inline: "center", behavior: "instant" });
+
+      rafRef.current = requestAnimationFrame(() => {
+        const rect = el.getBoundingClientRect();
+        const vpW = window.innerWidth;
+        const vpH = window.innerHeight;
+        const pad = 10;
+
+        setHl({
+          top: rect.top - pad,
+          left: rect.left - pad,
+          w: rect.width + pad * 2,
+          h: rect.height + pad * 2,
+        });
+
+        const tipW = Math.min(300, vpW - 40);
+        const tipH = 140;
+        const pos = calcTooltip(rect, currentStep.placement || "bottom", vpW, vpH, tipH, tipW);
+
+        setTip({ top: pos.top, left: pos.left, w: tipW });
+        setReady(true);
+        measuringRef.current = false;
+      });
+    };
+
+    doMeasure();
   }, [currentStep]);
 
   useEffect(() => {
-    clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(measure, 150);
-    window.addEventListener("resize", measure);
-    window.addEventListener("scroll", measure, true);
+    setReady(false);
+    setHl(null);
+    setTip(null);
+
+    const raf = requestAnimationFrame(() => {
+      measure();
+    });
+
+    const onResize = () => measure();
+    const onScroll = () => measure();
+
+    window.addEventListener("resize", onResize);
+    window.addEventListener("scroll", onScroll, true);
+
     return () => {
-      clearTimeout(timerRef.current);
-      window.removeEventListener("resize", measure);
-      window.removeEventListener("scroll", measure, true);
+      cancelAnimationFrame(raf);
+      cancelAnimationFrame(rafRef.current);
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("scroll", onScroll);
     };
   }, [measure]);
 
@@ -181,26 +236,26 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
   return (
     <div className="fixed inset-0 z-[10000]" style={{ pointerEvents: "auto" }}>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50" onClick={onSkip} />
+      <div className="absolute inset-0 bg-black/40" onClick={onSkip} />
 
       {/* Highlight cutout */}
-      {highlight && (
+      {hl && (
         <div
-          className="absolute rounded-xl border-2 border-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all duration-300"
+          className="absolute rounded-lg border-[2px] border-cyan-400/80 shadow-[0_0_16px_rgba(34,211,238,0.25)] transition-all duration-200 ease-out pointer-events-none"
           style={{
-            top: highlight.top - 4,
-            left: highlight.left - 4,
-            width: highlight.width + 8,
-            height: highlight.height + 8,
+            top: hl.top,
+            left: hl.left,
+            width: hl.w,
+            height: hl.h,
           }}
         />
       )}
 
       {/* Tooltip */}
-      {tooltip && currentStep && (
+      {tip && ready && currentStep && (
         <div
-          className="absolute z-[10001] animate-in fade-in"
-          style={{ top: tooltip.top, left: tooltip.left, width: tooltip.boxW }}
+          className="absolute z-[10001]"
+          style={{ top: tip.top, left: tip.left, width: tip.w }}
         >
           <div className="rounded-xl border border-white/15 bg-[#0e1525] shadow-2xl overflow-hidden">
             <div className="px-4 pt-3 pb-2">
@@ -212,10 +267,10 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
                   <X className="h-3.5 w-3.5" />
                 </button>
               </div>
-              <h3 className="text-sm font-black text-white font-display mb-1">{currentStep.title}</h3>
-              <p className="text-[12px] text-slate-400 leading-relaxed">{currentStep.text}</p>
+              <h3 className="text-[13px] font-black text-white font-display mb-0.5">{currentStep.title}</h3>
+              <p className="text-[11px] text-slate-400 leading-relaxed">{currentStep.text}</p>
             </div>
-            <div className="flex items-center justify-between border-t border-white/[0.06] px-4 py-2.5">
+            <div className="flex items-center justify-between border-t border-white/[0.06] px-4 py-2">
               <button
                 onClick={prev}
                 disabled={step === 0}
@@ -243,14 +298,11 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
         </div>
       )}
 
-      {/* No target found fallback */}
-      {!highlight && (
-        <div className="absolute inset-0 z-[10001] flex items-center justify-center">
-          <div className="rounded-xl border border-white/10 bg-[#0e1525] shadow-2xl p-6 text-center max-w-sm">
-            <p className="text-sm text-slate-400 mb-3">Mencari elemen interface...</p>
-            <button onClick={next} className="px-4 py-2 rounded-lg bg-cyan-500/20 border border-cyan-500/30 text-xs font-bold text-cyan-300 cursor-pointer">
-              Lanjut
-            </button>
+      {/* No target found */}
+      {!ready && (
+        <div className="absolute inset-0 z-[10001] flex items-center justify-center pointer-events-none">
+          <div className="rounded-xl border border-white/10 bg-[#0e1525] shadow-2xl p-4 text-center pointer-events-auto">
+            <p className="text-xs text-slate-400">Memuat...</p>
           </div>
         </div>
       )}

@@ -1,34 +1,47 @@
-# TDP Tutorial CTA — Book Icon + Improved Banner
+# TDP Guided Tour — Positioning & Scroll Fix
 
-**Date:** 2026-06-08 07:21 WIB
+**Date:** 2026-06-08 07:31 WIB
 
 ---
 
-## Changes
+## Root Cause
 
-1. **Header button:** HelpCircle icon → BookOpen icon + "Buka Tutorial" text
-   - Styled as cyan pill button (border + bg), clearly clickable
-   - Replaces tiny question mark icon
+- `scrollIntoView` tidak dipanggil sebelum `getBoundingClientRect`
+- Highlight hanya diukur 1x saat step berubah (150ms setTimeout), tidak re-measure saat scroll/resize
+- Tooltip positioning menggunakan `fixed` container dengan `absolute` children — bekerja, tapi timing tidak akurat
+- Overlay `bg-black/50` terlalu gelap dan `absolute inset-0` overlay menutupi interaksi
 
-2. **Reminder banner:** Improved 2-line copy
-   - Line 1: "Butuh bantuan lengkap?" (bold)
-   - Line 2: "Klik tombol Buka Tutorial untuk panduan membuat tournament, menambah draft, mengisi ban/pick, backup hero, notes, dan export gambar."
-   - Button uses BookOpen icon + "Buka Tutorial" text
+## Fixes Applied
 
-## Files Changed
+1. **`scrollIntoView({ block: "center", behavior: "instant" })` sebelum measure** — memastikan target selalu visible
+2. **`requestAnimationFrame` setelah scrollIntoView** — menunggu layout selesai sebelum `getBoundingClientRect`
+3. **Re-measure on scroll AND resize** — highlight selalu mengikuti target
+4. **Highlight padding 10px** — lebih rapi, tidak mepet target
+5. **Tooltip placement logic** — clamps ke viewport edges dengan `edgePad = 16px`
+6. **Copywriting disederhanakan** — lebih pendek dan jelas
 
-| File | Change |
-|------|--------|
-| `src/components/TeamDraftPlanner.tsx` | Replaced HelpCircle with BookOpen, updated banner copy |
-| `reports/latest-kilo-report.md` | Updated |
-| `reports/archive/tdp-help-cta-book-icon-20260608-0721.md` | New |
+## Guided Steps (11)
+
+| # | Target | Title | Placement |
+|---|--------|-------|-----------|
+| 1 | tour-sidebar | Sidebar & Draft Plans | right |
+| 2 | tour-new-tournament | Tambah Tournament | right |
+| 3 | tour-add-draft | Tambah Draft | right |
+| 4 | tour-draft-header | Draft Header | bottom |
+| 5 | tour-side-toggle | Side Toggle | bottom |
+| 6 | tour-ban-slots | Ban Slots | bottom |
+| 7 | tour-pick-slots | Pick Slots | bottom |
+| 8 | tour-role-lane | Role Lane | bottom |
+| 9 | tour-backup-slots | Backup Hero | bottom |
+| 10 | tour-coach-notes | Coach Notes | top |
+| 11 | tour-save-btn | Save / Export | left |
 
 ## Validation
 
 | Check | Status |
 |-------|--------|
 | tsc | PASS |
-| build | PASS (7.70s) |
+| build | PASS (7.61s) |
 
 ## Localhost
 
