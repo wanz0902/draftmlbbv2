@@ -144,15 +144,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lolita",
+        "Cyclops",
+        "Masha",
+        "Khufra",
+        "Popol and Kupa"
+      ],
+      "weakAgainst": [
+        "Yve",
+        "Ixia",
+        "Beatrix",
+        "Kimmy",
+        "Luo Yi"
+      ],
+      "synergyWith": [
+        "Saber",
+        "Natalia",
+        "Chou"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 2.8
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 2.5
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.4
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.3
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 2.7
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2.5
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 2.3
+      },
+      {
+        "name": "Kimmy",
+        "advantage": 2.1
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 1.9
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Saber",
+        "synergy": 5
+      },
+      {
+        "name": "Natalia",
+        "synergy": 5
+      },
+      {
+        "name": "Chou",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -191,5 +262,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 52.6,
+  "pickRate": 0.4,
+  "banRate": 5.6,
+  "heroAttributes": {
+    "durability": 100,
+    "offense": 10,
+    "abilityEffects": 80,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 64,
+    "late": 56,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "IM•ilank",
+      "games": 1495,
+      "items": [
+        "Oracle",
+        "Favor Magic Shoes",
+        "Flask of the Oasis",
+        "Dominance Ice",
+        "Antique Cuirass",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "Galzy x F4N’T",
+      "games": 1424,
+      "items": [
+        "Flask of the Oasis",
+        "Oracle",
+        "Favor Magic Shoes",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Guardian Helmet"
+      ]
+    },
+    {
+      "player": "Tung Tung Sahur",
+      "games": 1128,
+      "items": [
+        "Favor Tough Boots",
+        "Flask of the Oasis",
+        "Oracle",
+        "Chastise Pauldron",
+        "Guardian Helmet"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

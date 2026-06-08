@@ -269,15 +269,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Gloo",
+        "Chip",
+        "Sun",
+        "Wanwan",
+        "Karina"
+      ],
+      "weakAgainst": [
+        "Estes",
+        "Angela",
+        "Yve",
+        "Barats",
+        "Floryn"
+      ],
+      "synergyWith": [
+        "Chip",
+        "Ruby",
+        "Moskov"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 6
+      },
+      {
+        "name": "Chip",
+        "advantage": 4.3
+      },
+      {
+        "name": "Sun",
+        "advantage": 3.9
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.9
+      },
+      {
+        "name": "Karina",
+        "advantage": 2.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 4.2
+      },
+      {
+        "name": "Angela",
+        "advantage": 3.4
+      },
+      {
+        "name": "Yve",
+        "advantage": 3.3
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.1
+      },
+      {
+        "name": "Floryn",
+        "advantage": 3.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Chip",
+        "synergy": 5
+      },
+      {
+        "name": "Ruby",
+        "synergy": 5
+      },
+      {
+        "name": "Moskov",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -315,5 +386,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.7,
+  "pickRate": 0.1,
+  "banRate": 0.7,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 60,
+    "abilityEffects": 10,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 39,
+    "mid": 63,
+    "late": 59,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Rem all alone",
+      "games": 505,
+      "items": [
+        "Encourage Arcane Boots",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Sky Piercer",
+        "Blood Wings",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "XELLL.",
+      "games": 871,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Holy Crystal",
+        "Lightning Truncheon",
+        "Blood Wings",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "Miko x Rinspedia",
+      "games": 859,
+      "items": [
+        "Encourage Arcane Boots",
+        "Glowing Wand",
+        "Holy Crystal",
+        "Blood Wings",
+        "Lightning Truncheon"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

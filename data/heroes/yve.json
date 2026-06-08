@@ -254,15 +254,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lolita",
+        "Balmond",
+        "Alpha",
+        "Barats",
+        "Faramis"
+      ],
+      "weakAgainst": [
+        "Fanny",
+        "Freya",
+        "Harith",
+        "Nolan",
+        "Moskov"
+      ],
+      "synergyWith": [
+        "Valentina",
+        "Zhuxin",
+        "Granger"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 7
+      },
+      {
+        "name": "Balmond",
+        "advantage": 4
+      },
+      {
+        "name": "Alpha",
+        "advantage": 3.6
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.6
+      },
+      {
+        "name": "Faramis",
+        "advantage": 3.3
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Fanny",
+        "advantage": 3.9
+      },
+      {
+        "name": "Freya",
+        "advantage": 3.5
+      },
+      {
+        "name": "Harith",
+        "advantage": 2.9
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.8
+      },
+      {
+        "name": "Moskov",
+        "advantage": 2.8
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Valentina",
+        "synergy": 5
+      },
+      {
+        "name": "Zhuxin",
+        "synergy": 5
+      },
+      {
+        "name": "Granger",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -295,5 +366,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.3,
+  "pickRate": 0.1,
+  "banRate": 0.2,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 80,
+    "abilityEffects": 40,
+    "difficulty": 70
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 67,
+    "late": 58,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Zulmineir x FAN'T",
+      "games": 785,
+      "items": [
+        "Rapid Boots",
+        "Glowing Wand",
+        "Ice Queen Wand",
+        "Divine Glaive",
+        "Blood Wings",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "XDPROWIN",
+      "games": 499,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "Takaaa",
+      "games": 1484,
+      "items": [
+        "Tough Boots",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Blood Wings",
+        "Divine Glaive",
+        "Starlium Scythe"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

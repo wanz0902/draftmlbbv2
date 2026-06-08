@@ -129,15 +129,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Estes",
+        "Zilong",
+        "Eudora",
+        "Alucard",
+        "Layla"
+      ],
+      "weakAgainst": [
+        "Alice",
+        "Diggie",
+        "Valir",
+        "Faramis",
+        "Zetian"
+      ],
+      "synergyWith": [
+        "Aldous",
+        "Alucard",
+        "Natalia"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 2.6
+      },
+      {
+        "name": "Zilong",
+        "advantage": 2.3
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.2
+      },
+      {
+        "name": "Alucard",
+        "advantage": 1.9
+      },
+      {
+        "name": "Layla",
+        "advantage": 1.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Alice",
+        "advantage": 3.8
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.6
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.6
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.3
+      },
+      {
+        "name": "Zetian",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Aldous",
+        "synergy": 5
+      },
+      {
+        "name": "Alucard",
+        "synergy": 5
+      },
+      {
+        "name": "Natalia",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -174,5 +245,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.6,
+  "pickRate": 2,
+  "banRate": 7.3,
+  "heroAttributes": {
+    "durability": 80,
+    "offense": 10,
+    "abilityEffects": 100,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 41,
+    "mid": 58,
+    "late": 48,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Hissi",
+      "games": 818,
+      "items": [
+        "Encourage Tough Boots",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Athena's Shield",
+        "Blade Armor",
+        "Radiant Armor"
+      ]
+    },
+    {
+      "player": "Ƥhil",
+      "games": 1130,
+      "items": [
+        "Encourage Rapid Boots",
+        "Fleeting Time",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Chastise Pauldron",
+        "Guardian Helmet"
+      ]
+    },
+    {
+      "player": "ROAMER X EXTRA",
+      "games": 1131,
+      "items": [
+        "Encourage Tough Boots",
+        "Chastise Pauldron",
+        "Fleeting Time",
+        "Athena's Shield",
+        "Antique Cuirass"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

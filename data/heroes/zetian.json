@@ -260,15 +260,66 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lolita",
+        "Natalia",
+        "Tigreal",
+        "Helcurt",
+        "Popol and Kupa"
+      ],
+      "weakAgainst": [
+        "Valentina"
+      ],
+      "synergyWith": [
+        "Valentina",
+        "Harley",
+        "Natalia"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.6
+      },
+      {
+        "name": "Natalia",
+        "advantage": 3
+      },
+      {
+        "name": "Tigreal",
+        "advantage": 2.1
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 1.8
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 1.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Valentina",
+        "advantage": 2.7
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Valentina",
+        "synergy": 5
+      },
+      {
+        "name": "Harley",
+        "synergy": 5
+      },
+      {
+        "name": "Natalia",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -301,5 +352,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.5,
+  "pickRate": 2,
+  "banRate": 24.7,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 70,
+    "abilityEffects": 50,
+    "difficulty": 20
+  },
+  "powerCurve": {
+    "early": 45,
+    "mid": 63,
+    "late": 60,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Queen x EXTRA",
+      "games": 1218,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Necklace of Durance"
+      ]
+    },
+    {
+      "player": "koko Pink",
+      "games": 967,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Blood Wings"
+      ]
+    },
+    {
+      "player": "QUARESMAAA",
+      "games": 526,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Genius Wand",
+        "Glowing Wand",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

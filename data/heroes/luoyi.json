@@ -246,15 +246,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Estes",
+        "Popol and Kupa",
+        "Edith",
+        "Balmond",
+        "Baxia"
+      ],
+      "weakAgainst": [
+        "Lolita",
+        "Joy",
+        "Novaria",
+        "Nolan",
+        "Beatrix"
+      ],
+      "synergyWith": [
+        "Rafaela",
+        "Lolita",
+        "Harley"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 2.9
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.3
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.3
+      },
+      {
+        "name": "Balmond",
+        "advantage": 2.1
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.1
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.4
+      },
+      {
+        "name": "Novaria",
+        "advantage": 2.3
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.2
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 2.2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Rafaela",
+        "synergy": 5
+      },
+      {
+        "name": "Lolita",
+        "synergy": 5
+      },
+      {
+        "name": "Harley",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -287,5 +358,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 46.7,
+  "pickRate": 0.2,
+  "banRate": 0.2,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 100,
+    "abilityEffects": 40,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 48,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "peiskie :p",
+      "games": 828,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "MARLEN",
+      "games": 708,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Sky Piercer",
+        "Glowing Wand",
+        "Starlium Scythe",
+        "Blood Wings"
+      ]
+    },
+    {
+      "player": "gяεүαяяσω",
+      "games": 755,
+      "items": [
+        "Arcane Boots",
+        "Sky Piercer",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

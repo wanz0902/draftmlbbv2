@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Thamuz",
+        "Balmond",
+        "Alice",
+        "Gloo",
+        "Akai"
+      ],
+      "weakAgainst": [
+        "Sun",
+        "Estes",
+        "Aamon",
+        "Masha",
+        "Diggie"
+      ],
+      "synergyWith": [
+        "Sun",
+        "X.Borg",
+        "Hanzo"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Thamuz",
+        "advantage": 4.1
+      },
+      {
+        "name": "Balmond",
+        "advantage": 3.4
+      },
+      {
+        "name": "Alice",
+        "advantage": 3
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.3
+      },
+      {
+        "name": "Akai",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 4
+      },
+      {
+        "name": "Estes",
+        "advantage": 3.5
+      },
+      {
+        "name": "Aamon",
+        "advantage": 3.3
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.8
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.5
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Sun",
+        "synergy": 5
+      },
+      {
+        "name": "X.Borg",
+        "synergy": 5
+      },
+      {
+        "name": "Hanzo",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -217,5 +288,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.9,
+  "pickRate": 0.3,
+  "banRate": 1.5,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 60,
+    "abilityEffects": 30,
+    "difficulty": 20
+  },
+  "powerCurve": {
+    "early": 53,
+    "mid": 61,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Friddd.",
+      "games": 596,
+      "items": [
+        "Rapid Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Hunter Strike",
+        "Oracle",
+        "Malefic Roar"
+      ]
+    },
+    {
+      "player": "－Zҽᴠ",
+      "games": 553,
+      "items": [
+        "Tough Boots",
+        "War Axe",
+        "Dominance Ice",
+        "Hunter Strike",
+        "Oracle",
+        "Brute Force Breastplate"
+      ]
+    },
+    {
+      "player": "antoniouiui",
+      "games": 545,
+      "items": [
+        "Tough Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Hunter Strike",
+        "Queen's Wings",
+        "Sea Halberd"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

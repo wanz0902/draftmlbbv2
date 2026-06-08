@@ -177,15 +177,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Nolan",
+        "Granger",
+        "Irithel",
+        "Helcurt",
+        "Novaria"
+      ],
+      "weakAgainst": [
+        "Aamon",
+        "Karrie",
+        "Kimmy",
+        "Carmilla",
+        "Kalea"
+      ],
+      "synergyWith": [
+        "Hanzo",
+        "Saber",
+        "Silvanna"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Nolan",
+        "advantage": 3.3
+      },
+      {
+        "name": "Granger",
+        "advantage": 2.8
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.4
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 2.4
+      },
+      {
+        "name": "Novaria",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Aamon",
+        "advantage": 2.7
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.3
+      },
+      {
+        "name": "Kimmy",
+        "advantage": 2.1
+      },
+      {
+        "name": "Carmilla",
+        "advantage": 1.9
+      },
+      {
+        "name": "Kalea",
+        "advantage": 1.2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Hanzo",
+        "synergy": 5
+      },
+      {
+        "name": "Saber",
+        "synergy": 5
+      },
+      {
+        "name": "Silvanna",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -226,5 +297,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 52.6,
+  "pickRate": 1,
+  "banRate": 19.9,
+  "heroAttributes": {
+    "durability": 90,
+    "offense": 40,
+    "abilityEffects": 40,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 66,
+    "mid": 56,
+    "late": 41,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "[ X E C U T İ O N ]",
+      "games": 767,
+      "items": [
+        "Encourage Tough Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Oracle",
+        "Antique Cuirass",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "MEGADOPE",
+      "games": 913,
+      "items": [
+        "Encourage Rapid Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Oracle",
+        "Radiant Armor",
+        "Chastise Pauldron"
+      ]
+    },
+    {
+      "player": "꧁ᵏᵉⁿ|Kaneki",
+      "games": 1021,
+      "items": [
+        "Encourage Tough Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Antique Cuirass",
+        "Oracle"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

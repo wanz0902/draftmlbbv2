@@ -247,15 +247,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Natalia",
+        "Kimmy",
+        "Helcurt",
+        "Aldous",
+        "Wanwan"
+      ],
+      "weakAgainst": [
+        "Granger",
+        "Brody",
+        "Lunox",
+        "Clint",
+        "Gloo"
+      ],
+      "synergyWith": [
+        "Barats",
+        "Benedetta",
+        "Chip"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 3.4
+      },
+      {
+        "name": "Kimmy",
+        "advantage": 3.3
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 2.9
+      },
+      {
+        "name": "Aldous",
+        "advantage": 2.6
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Granger",
+        "advantage": 4.1
+      },
+      {
+        "name": "Brody",
+        "advantage": 3.8
+      },
+      {
+        "name": "Lunox",
+        "advantage": 3.1
+      },
+      {
+        "name": "Clint",
+        "advantage": 2.9
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.7
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Barats",
+        "synergy": 5
+      },
+      {
+        "name": "Benedetta",
+        "synergy": 5
+      },
+      {
+        "name": "Chip",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -290,5 +361,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 46.3,
+  "pickRate": 0.5,
+  "banRate": 2.1,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 70,
+    "abilityEffects": 10,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 51,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Grace x WRATH",
+      "games": 779,
+      "items": [
+        "Sky Piercer",
+        "Ice Tough Boots",
+        "Starlium Scythe",
+        "Holy Crystal",
+        "Queen's Wings",
+        "Concentrated Energy"
+      ]
+    },
+    {
+      "player": "KATINTO",
+      "games": 756,
+      "items": [
+        "Flame Arcane Boots",
+        "Starlium Scythe",
+        "Concentrated Energy",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Blood Wings"
+      ]
+    },
+    {
+      "player": "Jess.",
+      "games": 757,
+      "items": [
+        "Flame Arcane Boots",
+        "Starlium Scythe",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Blood Wings"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

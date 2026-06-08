@@ -249,15 +249,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Natalia",
+        "Nolan",
+        "Hayabusa",
+        "Ling",
+        "Marcel"
+      ],
+      "weakAgainst": [
+        "Barats",
+        "Sun",
+        "Argus",
+        "Masha",
+        "Balmond"
+      ],
+      "synergyWith": [
+        "Lolita",
+        "Marcel",
+        "Belerick"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 4
+      },
+      {
+        "name": "Nolan",
+        "advantage": 3.5
+      },
+      {
+        "name": "Hayabusa",
+        "advantage": 3.3
+      },
+      {
+        "name": "Ling",
+        "advantage": 3.2
+      },
+      {
+        "name": "Marcel",
+        "advantage": 2.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 3.8
+      },
+      {
+        "name": "Sun",
+        "advantage": 3.2
+      },
+      {
+        "name": "Argus",
+        "advantage": 3.2
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.9
+      },
+      {
+        "name": "Balmond",
+        "advantage": 2.9
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Lolita",
+        "synergy": 5
+      },
+      {
+        "name": "Marcel",
+        "synergy": 5
+      },
+      {
+        "name": "Belerick",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -292,5 +363,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.7,
+  "pickRate": 1,
+  "banRate": 23.1,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 60,
+    "abilityEffects": 60,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 59,
+    "mid": 55,
+    "late": 35,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Raventix",
+      "games": 876,
+      "items": [
+        "Flame Magic Shoes",
+        "Hunter Strike",
+        "War Axe",
+        "Endless Battle",
+        "Malefic Roar",
+        "Blade of Despair"
+      ]
+    },
+    {
+      "player": "Sii_Masin",
+      "games": 914,
+      "items": [
+        "Flame Tough Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Endless Battle",
+        "Queen's Wings",
+        "Malefic Roar"
+      ]
+    },
+    {
+      "player": "神┋Hyper Saber",
+      "games": 382,
+      "items": [
+        "Ice Tough Boots",
+        "Hunter Strike",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Winter Crown"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

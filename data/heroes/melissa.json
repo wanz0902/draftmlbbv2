@@ -137,15 +137,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lolita",
+        "Leomord",
+        "Joy",
+        "Harith",
+        "Chip"
+      ],
+      "weakAgainst": [
+        "Marcel",
+        "Belerick",
+        "Layla",
+        "Vale",
+        "Harley"
+      ],
+      "synergyWith": [
+        "Harith",
+        "Lolita",
+        "Lunox"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.5
+      },
+      {
+        "name": "Leomord",
+        "advantage": 3.2
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.9
+      },
+      {
+        "name": "Harith",
+        "advantage": 2.8
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 6.4
+      },
+      {
+        "name": "Belerick",
+        "advantage": 2.2
+      },
+      {
+        "name": "Layla",
+        "advantage": 2.1
+      },
+      {
+        "name": "Vale",
+        "advantage": 2
+      },
+      {
+        "name": "Harley",
+        "advantage": 2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harith",
+        "synergy": 5
+      },
+      {
+        "name": "Lolita",
+        "synergy": 5
+      },
+      {
+        "name": "Lunox",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -179,5 +250,66 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.7,
+  "banRate": 1.1,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 90,
+    "abilityEffects": 40,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 39,
+    "mid": 55,
+    "late": 66,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Sophia",
+      "games": 1382,
+      "items": [
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Sky Piercer",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "Bren.",
+      "games": 700,
+      "items": [
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Sky Piercer",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "M.fadhlan kamil",
+      "games": 680,
+      "items": [
+        "Corrosion Scythe",
+        "Windtalker",
+        "Haas' Claws",
+        "Berserker's Fury",
+        "Malefic Gun",
+        "Wind of Nature"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -174,15 +174,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Popol and Kupa",
+        "Layla",
+        "Estes",
+        "Eudora",
+        "Lolita"
+      ],
+      "weakAgainst": [
+        "Marcel",
+        "Wanwan",
+        "Alice",
+        "Valentina",
+        "Benedetta"
+      ],
+      "synergyWith": [
+        "Mathilda",
+        "Aulus",
+        "Bane"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Popol and Kupa",
+        "advantage": 4.2
+      },
+      {
+        "name": "Layla",
+        "advantage": 3.9
+      },
+      {
+        "name": "Estes",
+        "advantage": 3.7
+      },
+      {
+        "name": "Eudora",
+        "advantage": 3.3
+      },
+      {
+        "name": "Lolita",
+        "advantage": 3.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 6.4
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 3.8
+      },
+      {
+        "name": "Alice",
+        "advantage": 3.6
+      },
+      {
+        "name": "Valentina",
+        "advantage": 3.4
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 3.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Mathilda",
+        "synergy": 5
+      },
+      {
+        "name": "Aulus",
+        "synergy": 5
+      },
+      {
+        "name": "Bane",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -221,5 +292,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.4,
+  "pickRate": 0.6,
+  "banRate": 5.6,
+  "heroAttributes": {
+    "durability": 80,
+    "offense": 10,
+    "abilityEffects": 90,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 35,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "always win",
+      "games": 683,
+      "items": [
+        "Conceal Rapid Boots",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Antique Cuirass",
+        "Athena's Shield",
+        "Guardian Helmet"
+      ]
+    },
+    {
+      "player": "moskov. Tik Tok",
+      "games": 1255,
+      "items": [
+        "Conceal Rapid Boots",
+        "Fleeting Time",
+        "Athena's Shield",
+        "Dominance Ice",
+        "Antique Cuirass",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "EL_BARUBAL",
+      "games": 577,
+      "items": [
+        "Conceal Warrior Boots",
+        "Fleeting Time",
+        "Antique Cuirass",
+        "Athena's Shield",
+        "Dominance Ice"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

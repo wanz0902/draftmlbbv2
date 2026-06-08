@@ -253,15 +253,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Diggie",
+        "Luo Yi",
+        "Valir",
+        "Yve",
+        "Faramis"
+      ],
+      "weakAgainst": [
+        "Natalia",
+        "Ling",
+        "Moskov",
+        "Masha",
+        "Harith"
+      ],
+      "synergyWith": [
+        "Zhask",
+        "Valentina",
+        "Barats"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 2.6
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 2.3
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.2
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.2
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 3.4
+      },
+      {
+        "name": "Ling",
+        "advantage": 3
+      },
+      {
+        "name": "Moskov",
+        "advantage": 2.9
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.8
+      },
+      {
+        "name": "Harith",
+        "advantage": 2.5
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Zhask",
+        "synergy": 5
+      },
+      {
+        "name": "Valentina",
+        "synergy": 5
+      },
+      {
+        "name": "Barats",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -294,5 +365,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.2,
+  "pickRate": 0.8,
+  "banRate": 1.5,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 90,
+    "abilityEffects": 30,
+    "difficulty": 60
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 59,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "LALLAPALLOOZA",
+      "games": 476,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Blood Wings",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "İcardi44",
+      "games": 1522,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Blood Wings",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "g0d88",
+      "games": 489,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Blood Wings",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

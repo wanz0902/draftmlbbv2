@@ -249,15 +249,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "X.Borg",
+        "Diggie",
+        "Joy",
+        "Moskov",
+        "Karrie"
+      ],
+      "weakAgainst": [
+        "Eudora",
+        "Popol and Kupa",
+        "Karina",
+        "Johnson",
+        "Tigreal"
+      ],
+      "synergyWith": [
+        "Gloo",
+        "Belerick",
+        "Baxia"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "X.Borg",
+        "advantage": 2.8
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.8
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.4
+      },
+      {
+        "name": "Moskov",
+        "advantage": 2.4
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Eudora",
+        "advantage": 2.5
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.4
+      },
+      {
+        "name": "Karina",
+        "advantage": 2.4
+      },
+      {
+        "name": "Johnson",
+        "advantage": 2.4
+      },
+      {
+        "name": "Tigreal",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Gloo",
+        "synergy": 5
+      },
+      {
+        "name": "Belerick",
+        "synergy": 5
+      },
+      {
+        "name": "Baxia",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -296,5 +367,67 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.3,
+  "pickRate": 0.9,
+  "banRate": 0.7,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 50,
+    "abilityEffects": 60,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 35,
+    "mid": 47,
+    "late": 63,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Veng Leng",
+      "games": 519,
+      "items": [
+        "Sky Piercer",
+        "Rapid Boots",
+        "Windtalker",
+        "Corrosion Scythe",
+        "Great Dragon Spear",
+        "Berserker's Fury"
+      ]
+    },
+    {
+      "player": "Ƈɦɑŕdtɑrɖy",
+      "games": 1173,
+      "items": [
+        "Warrior Boots",
+        "Windtalker",
+        "Haas' Claws",
+        "Berserker's Fury",
+        "Great Dragon Spear",
+        "Blade of Despair"
+      ]
+    },
+    {
+      "player": "NENAWI",
+      "games": 775,
+      "items": [
+        "Windtalker",
+        "Haas' Claws",
+        "Berserker's Fury",
+        "Great Dragon Spear",
+        "Rose Gold Meteor",
+        "Blade of Despair"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

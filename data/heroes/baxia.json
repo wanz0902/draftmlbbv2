@@ -174,15 +174,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lukas",
+        "Obsidia",
+        "Claude",
+        "Minsitthar",
+        "Barats"
+      ],
+      "weakAgainst": [
+        "X.Borg",
+        "Beatrix",
+        "Marcel",
+        "Fanny",
+        "Masha"
+      ],
+      "synergyWith": [
+        "Diggie",
+        "Granger",
+        "Ixia"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lukas",
+        "advantage": 3.8
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 3.4
+      },
+      {
+        "name": "Claude",
+        "advantage": 3
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 2.8
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "X.Borg",
+        "advantage": 5.6
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 3.6
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.4
+      },
+      {
+        "name": "Fanny",
+        "advantage": 3.1
+      },
+      {
+        "name": "Masha",
+        "advantage": 3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Diggie",
+        "synergy": 5
+      },
+      {
+        "name": "Granger",
+        "synergy": 5
+      },
+      {
+        "name": "Ixia",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -221,5 +292,67 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.2,
+  "pickRate": 0.2,
+  "banRate": 0.6,
+  "heroAttributes": {
+    "durability": 100,
+    "offense": 30,
+    "abilityEffects": 60,
+    "difficulty": 20
+  },
+  "powerCurve": {
+    "early": 51,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Unknown",
+      "games": 1951,
+      "items": [
+        "Arcane Boots",
+        "Sky Piercer",
+        "Blood Wings",
+        "Concentrated Energy",
+        "Divine Glaive",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "Tathamet Vexmore",
+      "games": 810,
+      "items": [
+        "Feather of Heaven",
+        "Rapid Boots",
+        "Sky Piercer",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Malefic Gun"
+      ]
+    },
+    {
+      "player": "Alfan dimsum mentai",
+      "games": 1130,
+      "items": [
+        "Feather of Heaven",
+        "Arcane Boots",
+        "Sky Piercer",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Malefic Gun"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Alucard",
+        "Silvanna",
+        "Yin",
+        "Saber",
+        "Beatrix"
+      ],
+      "weakAgainst": [
+        "Zhuxin",
+        "Marcel",
+        "Alice",
+        "Barats",
+        "Diggie"
+      ],
+      "synergyWith": [
+        "Mathilda",
+        "Natalia",
+        "Saber"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Alucard",
+        "advantage": 3.1
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 2.8
+      },
+      {
+        "name": "Yin",
+        "advantage": 2.6
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.6
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 2.5
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Zhuxin",
+        "advantage": 3.5
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.4
+      },
+      {
+        "name": "Alice",
+        "advantage": 3.4
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.1
+      },
+      {
+        "name": "Diggie",
+        "advantage": 3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Mathilda",
+        "synergy": 5
+      },
+      {
+        "name": "Natalia",
+        "synergy": 5
+      },
+      {
+        "name": "Saber",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -215,5 +286,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 53.6,
+  "pickRate": 0.3,
+  "banRate": 3.1,
+  "heroAttributes": {
+    "durability": 90,
+    "offense": 20,
+    "abilityEffects": 100,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 51,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Co̶d̶e̶ ꀤceBox",
+      "games": 878,
+      "items": [
+        "Encourage Rapid Boots",
+        "Dominance Ice",
+        "Thunder Belt",
+        "Cursed Helmet",
+        "Antique Cuirass",
+        "Athena's Shield"
+      ]
+    },
+    {
+      "player": "GenZai",
+      "games": 1024,
+      "items": [
+        "Encourage Rapid Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Guardian Helmet",
+        "Cursed Helmet"
+      ]
+    },
+    {
+      "player": "신 ᴋʜᴜꜰꜱ",
+      "games": 964,
+      "items": [
+        "Encourage Rapid Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Cursed Helmet",
+        "Antique Cuirass"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

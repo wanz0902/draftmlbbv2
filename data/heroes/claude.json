@@ -173,15 +173,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Balmond",
+        "Lolita",
+        "Chang'e",
+        "Ixia",
+        "Ling"
+      ],
+      "weakAgainst": [
+        "Lesley",
+        "Aamon",
+        "Baxia",
+        "Bruno",
+        "Edith"
+      ],
+      "synergyWith": [
+        "Harith",
+        "Popol and Kupa",
+        "Angela"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Balmond",
+        "advantage": 2.9
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.9
+      },
+      {
+        "name": "Chang'e",
+        "advantage": 2.4
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2.3
+      },
+      {
+        "name": "Ling",
+        "advantage": 1.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lesley",
+        "advantage": 4.3
+      },
+      {
+        "name": "Aamon",
+        "advantage": 3
+      },
+      {
+        "name": "Baxia",
+        "advantage": 3
+      },
+      {
+        "name": "Bruno",
+        "advantage": 2.6
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harith",
+        "synergy": 5
+      },
+      {
+        "name": "Popol and Kupa",
+        "synergy": 5
+      },
+      {
+        "name": "Angela",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -216,5 +287,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.4,
+  "pickRate": 1.1,
+  "banRate": 0.7,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 60,
+    "abilityEffects": 10,
+    "difficulty": 60
+  },
+  "powerCurve": {
+    "early": 35,
+    "mid": 59,
+    "late": 66,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "ELN1KAツ",
+      "games": 2406,
+      "items": [
+        "Tough Boots",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Corrosion Scythe",
+        "Malefic Gun",
+        "Wind of Nature"
+      ]
+    },
+    {
+      "player": "S I W A ツ",
+      "games": 1760,
+      "items": [
+        "Warrior Boots",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Corrosion Scythe",
+        "Winter Crown",
+        "Malefic Gun"
+      ]
+    },
+    {
+      "player": "iBHz7ACooRd",
+      "games": 989,
+      "items": [
+        "Warrior Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Wind of Nature",
+        "Malefic Roar"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

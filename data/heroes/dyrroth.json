@@ -226,15 +226,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Uranus",
+        "Esmeralda",
+        "Lukas",
+        "Aulus",
+        "Valentina"
+      ],
+      "weakAgainst": [
+        "Lylia",
+        "Bane",
+        "Luo Yi",
+        "Chang'e",
+        "Nana"
+      ],
+      "synergyWith": [
+        "Harith",
+        "Sun",
+        "Bruno"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Uranus",
+        "advantage": 2.9
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.5
+      },
+      {
+        "name": "Lukas",
+        "advantage": 2.4
+      },
+      {
+        "name": "Aulus",
+        "advantage": 2.4
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.3
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lylia",
+        "advantage": 1.9
+      },
+      {
+        "name": "Bane",
+        "advantage": 1.7
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 1.7
+      },
+      {
+        "name": "Chang'e",
+        "advantage": 1.6
+      },
+      {
+        "name": "Nana",
+        "advantage": 1.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harith",
+        "synergy": 5
+      },
+      {
+        "name": "Sun",
+        "synergy": 5
+      },
+      {
+        "name": "Bruno",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -273,5 +344,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48,
+  "pickRate": 1.3,
+  "banRate": 1.1,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 50,
+    "abilityEffects": 20,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 63,
+    "mid": 55,
+    "late": 39,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "YanzメDyrroth.",
+      "games": 381,
+      "items": [
+        "Ice Tough Boots",
+        "Hunter Strike",
+        "Sea Halberd",
+        "Malefic Roar",
+        "Brute Force Breastplate",
+        "Queen's Wings"
+      ]
+    },
+    {
+      "player": "Kingdom Clover",
+      "games": 673,
+      "items": [
+        "Tough Boots",
+        "War Axe",
+        "Antique Cuirass",
+        "Radiant Armor",
+        "Oracle",
+        "Queen's Wings"
+      ]
+    },
+    {
+      "player": "NarakaTzy 火",
+      "games": 878,
+      "items": [
+        "Ice Tough Boots",
+        "Hunter Strike",
+        "War Axe",
+        "Dominance Ice",
+        "Antique Cuirass"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

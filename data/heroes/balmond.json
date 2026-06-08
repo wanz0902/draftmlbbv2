@@ -232,15 +232,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Saber",
+        "Lukas",
+        "Chip",
+        "Barats",
+        "Martis"
+      ],
+      "weakAgainst": [
+        "Yve",
+        "X.Borg",
+        "Estes",
+        "Cici",
+        "Ling"
+      ],
+      "synergyWith": [
+        "Argus",
+        "Aldous",
+        "Sun"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Saber",
+        "advantage": 2.9
+      },
+      {
+        "name": "Lukas",
+        "advantage": 2.8
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.5
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.5
+      },
+      {
+        "name": "Martis",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 4
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3.8
+      },
+      {
+        "name": "Estes",
+        "advantage": 3.4
+      },
+      {
+        "name": "Cici",
+        "advantage": 3.4
+      },
+      {
+        "name": "Ling",
+        "advantage": 3.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Argus",
+        "synergy": 5
+      },
+      {
+        "name": "Aldous",
+        "synergy": 5
+      },
+      {
+        "name": "Sun",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -279,5 +350,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 43.3,
+  "pickRate": 0.3,
+  "banRate": 0.3,
+  "heroAttributes": {
+    "durability": 80,
+    "offense": 30,
+    "abilityEffects": 20,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 58,
+    "mid": 56,
+    "late": 44,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "-SM-17-",
+      "games": 595,
+      "items": [
+        "Beast Tough Boots",
+        "Cursed Helmet",
+        "War Axe",
+        "Queen's Wings",
+        "Guardian Helmet",
+        "Dominance Ice"
+      ]
+    },
+    {
+      "player": "AZIZ",
+      "games": 747,
+      "items": [
+        "Ice Tough Boots",
+        "Cursed Helmet",
+        "Queen's Wings",
+        "Dominance Ice",
+        "Blade Armor",
+        "Brute Force Breastplate"
+      ]
+    },
+    {
+      "player": "*Aura_Banten1701",
+      "games": 802,
+      "items": [
+        "Tough Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Oracle",
+        "Guardian Helmet"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

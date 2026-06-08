@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Barats",
+        "Baxia",
+        "Terizla",
+        "Phoveus",
+        "Ruby"
+      ],
+      "weakAgainst": [
+        "Benedetta",
+        "Marcel",
+        "Ling",
+        "Valentina",
+        "Helcurt"
+      ],
+      "synergyWith": [
+        "Sun",
+        "Aldous",
+        "Cici"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 7.1
+      },
+      {
+        "name": "Baxia",
+        "advantage": 5.6
+      },
+      {
+        "name": "Terizla",
+        "advantage": 4.9
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 4.1
+      },
+      {
+        "name": "Ruby",
+        "advantage": 3.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Benedetta",
+        "advantage": 3.6
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.6
+      },
+      {
+        "name": "Ling",
+        "advantage": 3.6
+      },
+      {
+        "name": "Valentina",
+        "advantage": 3.3
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 3.2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Sun",
+        "synergy": 5
+      },
+      {
+        "name": "Aldous",
+        "synergy": 5
+      },
+      {
+        "name": "Cici",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -215,5 +286,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.6,
+  "pickRate": 0.6,
+  "banRate": 4.3,
+  "heroAttributes": {
+    "durability": 80,
+    "offense": 30,
+    "abilityEffects": 10,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 55,
+    "mid": 66,
+    "late": 51,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Hαmm 1/2 S.Pd",
+      "games": 1171,
+      "items": [
+        "War Axe",
+        "Warrior Boots",
+        "Sky Piercer",
+        "Brute Force Breastplate",
+        "Immortality",
+        "Ice Queen Wand"
+      ]
+    },
+    {
+      "player": "putaran dewa api",
+      "games": 1040,
+      "items": [
+        "Ice Tough Boots",
+        "War Axe",
+        "Sky Piercer",
+        "Immortality",
+        "Brute Force Breastplate",
+        "Oracle"
+      ]
+    },
+    {
+      "player": "『T¢』• crazy",
+      "games": 821,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Dominance Ice",
+        "Ice Queen Wand",
+        "Immortality"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

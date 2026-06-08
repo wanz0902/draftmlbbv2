@@ -148,15 +148,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Popol and Kupa",
+        "Chip",
+        "Johnson",
+        "Gloo",
+        "Silvanna"
+      ],
+      "weakAgainst": [
+        "Valentina",
+        "Diggie",
+        "Faramis",
+        "Fanny",
+        "Benedetta"
+      ],
+      "synergyWith": [
+        "Floryn",
+        "Diggie",
+        "Chip"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Popol and Kupa",
+        "advantage": 4
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.6
+      },
+      {
+        "name": "Johnson",
+        "advantage": 2.6
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.3
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 2.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Valentina",
+        "advantage": 4.1
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.6
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.6
+      },
+      {
+        "name": "Fanny",
+        "advantage": 2.5
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Floryn",
+        "synergy": 5
+      },
+      {
+        "name": "Diggie",
+        "synergy": 5
+      },
+      {
+        "name": "Chip",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -197,5 +268,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.3,
+  "pickRate": 0.6,
+  "banRate": 1.4,
+  "heroAttributes": {
+    "durability": 90,
+    "offense": 20,
+    "abilityEffects": 80,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 63,
+    "late": 53,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "KalDanilo x J1KENNN",
+      "games": 2162,
+      "items": [
+        "Encourage Rapid Boots",
+        "Cursed Helmet",
+        "Dominance Ice",
+        "Antique Cuirass",
+        "Immortality",
+        "Radiant Armor"
+      ]
+    },
+    {
+      "player": "星川清隆",
+      "games": 930,
+      "items": [
+        "Smite Magic Shoes",
+        "Oracle",
+        "Clock of Destiny",
+        "Brute Force Breastplate",
+        "Glowing Wand",
+        "Chastise Pauldron"
+      ]
+    },
+    {
+      "player": "ᴛᴇᴛᴏ",
+      "games": 1341,
+      "items": [
+        "Encourage Rapid Boots",
+        "Dominance Ice",
+        "Antique Cuirass",
+        "Radiant Armor",
+        "Chastise Pauldron"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

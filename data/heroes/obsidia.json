@@ -208,15 +208,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Benedetta",
+        "Helcurt",
+        "Natalia",
+        "Hanzo",
+        "Novaria"
+      ],
+      "weakAgainst": [
+        "Baxia",
+        "Miya",
+        "Belerick",
+        "Uranus",
+        "Chip"
+      ],
+      "synergyWith": [
+        "Harith",
+        "Popol and Kupa",
+        "Baxia"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Benedetta",
+        "advantage": 3.4
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 2.8
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.6
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.3
+      },
+      {
+        "name": "Novaria",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 3.4
+      },
+      {
+        "name": "Miya",
+        "advantage": 2.6
+      },
+      {
+        "name": "Belerick",
+        "advantage": 2.6
+      },
+      {
+        "name": "Uranus",
+        "advantage": 2.3
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harith",
+        "synergy": 5
+      },
+      {
+        "name": "Popol and Kupa",
+        "synergy": 5
+      },
+      {
+        "name": "Baxia",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -257,5 +328,67 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.9,
+  "pickRate": 0.8,
+  "banRate": 2.3,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 80,
+    "abilityEffects": 10,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 39,
+    "mid": 55,
+    "late": 66,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Yuki 暁",
+      "games": 1660,
+      "items": [
+        "Warrior Boots",
+        "Windtalker",
+        "Haas' Claws",
+        "Sea Halberd",
+        "Berserker's Fury",
+        "Malefic Gun"
+      ]
+    },
+    {
+      "player": "Kii x F4N'T",
+      "games": 862,
+      "items": [
+        "Warrior Boots",
+        "Windtalker",
+        "Haas' Claws",
+        "Sky Piercer",
+        "Berserker's Fury",
+        "Malefic Gun"
+      ]
+    },
+    {
+      "player": "Leonelle x AMS",
+      "games": 1112,
+      "items": [
+        "Warrior Boots",
+        "Windtalker",
+        "Haas' Claws",
+        "Sky Piercer",
+        "Berserker's Fury",
+        "Malefic Gun"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

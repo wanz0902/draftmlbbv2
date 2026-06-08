@@ -144,15 +144,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Alice",
+        "Zhuxin",
+        "Khufra",
+        "Balmond",
+        "Atlas"
+      ],
+      "weakAgainst": [
+        "Zhask",
+        "Sun",
+        "Hanzo",
+        "Estes",
+        "Franco"
+      ],
+      "synergyWith": [
+        "Baxia",
+        "Ixia",
+        "Carmilla"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Alice",
+        "advantage": 3.4
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 3.4
+      },
+      {
+        "name": "Khufra",
+        "advantage": 3
+      },
+      {
+        "name": "Balmond",
+        "advantage": 2.7
+      },
+      {
+        "name": "Atlas",
+        "advantage": 2.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Zhask",
+        "advantage": 4
+      },
+      {
+        "name": "Sun",
+        "advantage": 3.6
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 3.5
+      },
+      {
+        "name": "Estes",
+        "advantage": 3.5
+      },
+      {
+        "name": "Franco",
+        "advantage": 3.4
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Baxia",
+        "synergy": 5
+      },
+      {
+        "name": "Ixia",
+        "synergy": 5
+      },
+      {
+        "name": "Carmilla",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -189,5 +260,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 54.1,
+  "pickRate": 0.2,
+  "banRate": 16.4,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 40,
+    "abilityEffects": 20,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 66,
+    "late": 59,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "соне4к@150kg",
+      "games": 510,
+      "items": [
+        "Encourage Demon Shoes",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Guardian Helmet",
+        "Antique Cuirass",
+        "Radiant Armor"
+      ]
+    },
+    {
+      "player": "Kim Seong.",
+      "games": 677,
+      "items": [
+        "Encourage Demon Shoes",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Guardian Helmet",
+        "Antique Cuirass",
+        "Radiant Armor"
+      ]
+    },
+    {
+      "player": "『STAR』`Sun™~¤",
+      "games": 697,
+      "items": [
+        "Encourage Demon Shoes",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Guardian Helmet",
+        "Glowing Wand"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

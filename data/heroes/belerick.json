@@ -174,15 +174,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Miya",
+        "Obsidia",
+        "Zhask",
+        "Johnson",
+        "Melissa"
+      ],
+      "weakAgainst": [
+        "Marcel",
+        "Lesley",
+        "Yve",
+        "Brody",
+        "Leomord"
+      ],
+      "synergyWith": [
+        "Saber",
+        "Natalia",
+        "Zilong"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Miya",
+        "advantage": 3.3
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.6
+      },
+      {
+        "name": "Zhask",
+        "advantage": 2.6
+      },
+      {
+        "name": "Johnson",
+        "advantage": 2.5
+      },
+      {
+        "name": "Melissa",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 3.2
+      },
+      {
+        "name": "Lesley",
+        "advantage": 2.9
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.8
+      },
+      {
+        "name": "Brody",
+        "advantage": 2.7
+      },
+      {
+        "name": "Leomord",
+        "advantage": 2.4
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Saber",
+        "synergy": 5
+      },
+      {
+        "name": "Natalia",
+        "synergy": 5
+      },
+      {
+        "name": "Zilong",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -221,5 +292,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 52.9,
+  "pickRate": 1.6,
+  "banRate": 10.6,
+  "heroAttributes": {
+    "durability": 90,
+    "offense": 40,
+    "abilityEffects": 100,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 59,
+    "late": 63,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Odeo",
+      "games": 862,
+      "items": [
+        "Beast Tough Boots",
+        "Cursed Helmet",
+        "Brute Force Breastplate",
+        "Blade Armor",
+        "Winter Crown",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "DIKA DIKI JAKI nox",
+      "games": 792,
+      "items": [
+        "Encourage Rapid Boots",
+        "Dominance Ice",
+        "Athena's Shield",
+        "Antique Cuirass",
+        "Guardian Helmet",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "@Uno.",
+      "games": 616,
+      "items": [
+        "Encourage Tough Boots",
+        "Dominance Ice",
+        "Cursed Helmet",
+        "Guardian Helmet",
+        "Chastise Pauldron"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

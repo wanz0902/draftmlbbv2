@@ -239,15 +239,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Atlas",
+        "Alpha",
+        "X.Borg",
+        "Baxia",
+        "Lolita"
+      ],
+      "weakAgainst": [
+        "Angela",
+        "Floryn",
+        "Mathilda",
+        "Faramis",
+        "Alucard"
+      ],
+      "synergyWith": [
+        "Angela",
+        "Zilong",
+        "Dyrroth"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Atlas",
+        "advantage": 3
+      },
+      {
+        "name": "Alpha",
+        "advantage": 2.7
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.2
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Angela",
+        "advantage": 2.8
+      },
+      {
+        "name": "Floryn",
+        "advantage": 2.5
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.4
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.4
+      },
+      {
+        "name": "Alucard",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Angela",
+        "synergy": 5
+      },
+      {
+        "name": "Zilong",
+        "synergy": 5
+      },
+      {
+        "name": "Dyrroth",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -282,5 +353,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 43.2,
+  "pickRate": 0.7,
+  "banRate": 1.1,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 50,
+    "abilityEffects": 10,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 56,
+    "mid": 63,
+    "late": 45,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Villain",
+      "games": 688,
+      "items": [
+        "War Axe",
+        "Beast Tough Boots",
+        "Endless Battle",
+        "Brute Force Breastplate",
+        "Malefic Roar",
+        "Queen's Wings"
+      ]
+    },
+    {
+      "player": "❀ғʟᴏʀᴀ࿐",
+      "games": 689,
+      "items": [
+        "Beast Tough Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Endless Battle",
+        "Queen's Wings",
+        "Malefic Roar"
+      ]
+    },
+    {
+      "player": "TT : Dtyaeka_23",
+      "games": 1197,
+      "items": [
+        "War Axe",
+        "Beast Tough Boots",
+        "Brute Force Breastplate",
+        "Endless Battle",
+        "Queen's Wings"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Masha",
+        "Alice",
+        "Lukas",
+        "Odette",
+        "Alucard"
+      ],
+      "weakAgainst": [
+        "Cici",
+        "Wanwan",
+        "Valir",
+        "Benedetta",
+        "Luo Yi"
+      ],
+      "synergyWith": [
+        "Selena",
+        "Luo Yi",
+        "Atlas"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 2.7
+      },
+      {
+        "name": "Alice",
+        "advantage": 2.5
+      },
+      {
+        "name": "Lukas",
+        "advantage": 2.4
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.4
+      },
+      {
+        "name": "Alucard",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Cici",
+        "advantage": 4.1
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 3.1
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.9
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 2.5
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Selena",
+        "synergy": 5
+      },
+      {
+        "name": "Luo Yi",
+        "synergy": 5
+      },
+      {
+        "name": "Atlas",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -215,5 +286,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50,
+  "pickRate": 1.1,
+  "banRate": 4.4,
+  "heroAttributes": {
+    "durability": 70,
+    "offense": 40,
+    "abilityEffects": 20,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 56,
+    "mid": 63,
+    "late": 52,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Palautot move",
+      "games": 833,
+      "items": [
+        "Ice Tough Boots",
+        "Corrosion Scythe",
+        "War Axe",
+        "Oracle",
+        "Queen's Wings",
+        "Guardian Helmet"
+      ]
+    },
+    {
+      "player": "😈СТРАХ😈",
+      "games": 660,
+      "items": [
+        "Ice Tough Boots",
+        "Corrosion Scythe",
+        "War Axe",
+        "Oracle",
+        "Queen's Wings",
+        "Chastise Pauldron"
+      ]
+    },
+    {
+      "player": "複 ᗪᴇvɪʟ",
+      "games": 979,
+      "items": [
+        "Ice Tough Boots",
+        "Corrosion Scythe",
+        "War Axe",
+        "Queen's Wings",
+        "Oracle"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

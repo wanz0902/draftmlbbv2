@@ -213,15 +213,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Gloo",
+        "Tigreal",
+        "Atlas",
+        "Barats",
+        "Popol and Kupa"
+      ],
+      "weakAgainst": [
+        "Angela",
+        "Karrie",
+        "Floryn",
+        "Estes",
+        "Diggie"
+      ],
+      "synergyWith": [
+        "Valentina",
+        "Angela",
+        "Faramis"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 4.6
+      },
+      {
+        "name": "Tigreal",
+        "advantage": 3.8
+      },
+      {
+        "name": "Atlas",
+        "advantage": 3.6
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.5
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 3.5
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Angela",
+        "advantage": 4.6
+      },
+      {
+        "name": "Karrie",
+        "advantage": 4.3
+      },
+      {
+        "name": "Floryn",
+        "advantage": 3.9
+      },
+      {
+        "name": "Estes",
+        "advantage": 3.5
+      },
+      {
+        "name": "Diggie",
+        "advantage": 3.4
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Valentina",
+        "synergy": 5
+      },
+      {
+        "name": "Angela",
+        "synergy": 5
+      },
+      {
+        "name": "Faramis",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -258,5 +329,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.9,
+  "pickRate": 0.8,
+  "banRate": 9,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 50,
+    "abilityEffects": 70,
+    "difficulty": 70
+  },
+  "powerCurve": {
+    "early": 38,
+    "mid": 56,
+    "late": 64,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "DAPA",
+      "games": 1352,
+      "items": [
+        "Ice Tough Boots",
+        "Brute Force Breastplate",
+        "Oracle",
+        "Guardian Helmet",
+        "Chastise Pauldron",
+        "Blade Armor"
+      ]
+    },
+    {
+      "player": "PritongMenudo",
+      "games": 1023,
+      "items": [
+        "Magic Shoes",
+        "Brute Force Breastplate",
+        "Queen's Wings",
+        "Oracle",
+        "Dominance Ice",
+        "Blade Armor"
+      ]
+    },
+    {
+      "player": "apip x Zétsu",
+      "games": 1555,
+      "items": [
+        "Brute Force Breastplate",
+        "Beast Magic Shoes",
+        "Oracle",
+        "Queen's Wings",
+        "Glowing Wand"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

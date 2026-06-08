@@ -239,15 +239,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Barats",
+        "Lolita",
+        "Phoveus",
+        "Ruby",
+        "Terizla"
+      ],
+      "weakAgainst": [
+        "Natalia",
+        "Ling",
+        "Hanzo",
+        "Helcurt",
+        "Benedetta"
+      ],
+      "synergyWith": [
+        "Valentina",
+        "Karrie",
+        "Fredrinn"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 4.7
+      },
+      {
+        "name": "Lolita",
+        "advantage": 4.2
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 3.2
+      },
+      {
+        "name": "Ruby",
+        "advantage": 3
+      },
+      {
+        "name": "Terizla",
+        "advantage": 2.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 3.8
+      },
+      {
+        "name": "Ling",
+        "advantage": 3
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.8
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 2.6
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 2.5
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Valentina",
+        "synergy": 5
+      },
+      {
+        "name": "Karrie",
+        "synergy": 5
+      },
+      {
+        "name": "Fredrinn",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -280,5 +351,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 55.5,
+  "pickRate": 1.5,
+  "banRate": 3.1,
+  "heroAttributes": {
+    "durability": 10,
+    "offense": 70,
+    "abilityEffects": 80,
+    "difficulty": 20
+  },
+  "powerCurve": {
+    "early": 35,
+    "mid": 55,
+    "late": 59,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Ubbiicza",
+      "games": 851,
+      "items": [
+        "Sky Piercer",
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Ice Queen Wand",
+        "Divine Glaive",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "Gord APOSENTADO",
+      "games": 721,
+      "items": [
+        "Sky Piercer",
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Glowing Wand",
+        "Ice Queen Wand",
+        "Blood Wings"
+      ]
+    },
+    {
+      "player": "Jᴇʀᴡɪɴ.",
+      "games": 1279,
+      "items": [
+        "Rapid Boots",
+        "Sky Piercer",
+        "Glowing Wand",
+        "Starlium Scythe",
+        "Divine Glaive"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

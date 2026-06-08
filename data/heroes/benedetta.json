@@ -257,15 +257,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Alpha",
+        "X.Borg",
+        "Atlas",
+        "Silvanna",
+        "Baxia"
+      ],
+      "weakAgainst": [
+        "Phoveus",
+        "Obsidia",
+        "Irithel",
+        "Bruno",
+        "Masha"
+      ],
+      "synergyWith": [
+        "Fredrinn",
+        "Aulus",
+        "Baxia"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Alpha",
+        "advantage": 4.4
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3.6
+      },
+      {
+        "name": "Atlas",
+        "advantage": 3.3
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 3.1
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Phoveus",
+        "advantage": 3.5
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 3.4
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.9
+      },
+      {
+        "name": "Bruno",
+        "advantage": 2.9
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.8
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Fredrinn",
+        "synergy": 5
+      },
+      {
+        "name": "Aulus",
+        "synergy": 5
+      },
+      {
+        "name": "Baxia",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -304,5 +375,67 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.9,
+  "pickRate": 0.5,
+  "banRate": 0.9,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 50,
+    "abilityEffects": 20,
+    "difficulty": 70
+  },
+  "powerCurve": {
+    "early": 59,
+    "mid": 63,
+    "late": 51,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "❖ᴛʜᴇᴀ.",
+      "games": 1014,
+      "items": [
+        "Blade of the Heptaseas",
+        "Rose Gold Meteor",
+        "Hunter Strike",
+        "Queen's Wings",
+        "Malefic Roar",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "ma chérie, keith",
+      "games": 1222,
+      "items": [
+        "Blade of the Heptaseas",
+        "Hunter Strike",
+        "Sea Halberd",
+        "Blade of Despair",
+        "Malefic Roar",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "Fang Yuan x EXTRA",
+      "games": 835,
+      "items": [
+        "Blade of the Heptaseas",
+        "Sea Halberd",
+        "Rose Gold Meteor",
+        "Endless Battle",
+        "Malefic Roar",
+        "Blade of Despair"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

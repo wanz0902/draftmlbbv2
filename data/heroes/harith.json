@@ -245,15 +245,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lolita",
+        "Yve",
+        "Joy",
+        "Kagura",
+        "Lapu-Lapu"
+      ],
+      "weakAgainst": [
+        "Phoveus",
+        "Edith",
+        "Barats",
+        "Melissa",
+        "Cyclops"
+      ],
+      "synergyWith": [
+        "Wanwan",
+        "Ixia",
+        "Bruno"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.3
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.9
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.7
+      },
+      {
+        "name": "Kagura",
+        "advantage": 2.7
+      },
+      {
+        "name": "Lapu-Lapu",
+        "advantage": 2.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Phoveus",
+        "advantage": 3.7
+      },
+      {
+        "name": "Edith",
+        "advantage": 3.2
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.9
+      },
+      {
+        "name": "Melissa",
+        "advantage": 2.8
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 2.7
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Wanwan",
+        "synergy": 5
+      },
+      {
+        "name": "Ixia",
+        "synergy": 5
+      },
+      {
+        "name": "Bruno",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -287,5 +358,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.8,
+  "pickRate": 0.6,
+  "banRate": 3.1,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 50,
+    "abilityEffects": 10,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 63,
+    "late": 59,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "fw sey",
+      "games": 954,
+      "items": [
+        "Magic Shoes",
+        "Starlium Scythe",
+        "Feather of Heaven",
+        "Holy Crystal",
+        "Blood Wings",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "SKIBIDI DAHEE 67/69",
+      "games": 1191,
+      "items": [
+        "Magic Shoes",
+        "Starlium Scythe",
+        "Feather of Heaven",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Necklace of Durance"
+      ]
+    },
+    {
+      "player": "Réimen",
+      "games": 462,
+      "items": [
+        "Magic Shoes",
+        "Starlium Scythe",
+        "Feather of Heaven",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

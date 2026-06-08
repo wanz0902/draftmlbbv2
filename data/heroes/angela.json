@@ -144,15 +144,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Marcel",
+        "Alice",
+        "Faramis",
+        "Balmond",
+        "X.Borg"
+      ],
+      "weakAgainst": [
+        "Franco",
+        "Silvanna",
+        "Yin",
+        "Zilong",
+        "Nolan"
+      ],
+      "synergyWith": [
+        "Uranus",
+        "Fredrinn",
+        "Chip"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 5
+      },
+      {
+        "name": "Alice",
+        "advantage": 4.6
+      },
+      {
+        "name": "Faramis",
+        "advantage": 3.4
+      },
+      {
+        "name": "Balmond",
+        "advantage": 3.1
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Franco",
+        "advantage": 2.8
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 2.4
+      },
+      {
+        "name": "Yin",
+        "advantage": 2.3
+      },
+      {
+        "name": "Zilong",
+        "advantage": 2.3
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Uranus",
+        "synergy": 5
+      },
+      {
+        "name": "Fredrinn",
+        "synergy": 5
+      },
+      {
+        "name": "Chip",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -190,5 +261,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49,
+  "pickRate": 1.6,
+  "banRate": 8.5,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 20,
+    "abilityEffects": 50,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 48,
+    "mid": 63,
+    "late": 58,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "ღ.•Cimeyyy•ღ",
+      "games": 840,
+      "items": [
+        "Favor Demon Shoes",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Glowing Wand",
+        "Holy Crystal",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "Fυωα-Fυωα",
+      "games": 916,
+      "items": [
+        "Favor Demon Shoes",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Glowing Wand",
+        "Chastise Pauldron",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "Sarahᥫ᭡",
+      "games": 716,
+      "items": [
+        "Favor Demon Shoes",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Glowing Wand",
+        "Ice Queen Wand"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

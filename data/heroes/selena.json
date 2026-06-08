@@ -395,15 +395,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Ixia",
+        "Beatrix",
+        "X.Borg",
+        "Marcel",
+        "Benedetta"
+      ],
+      "weakAgainst": [
+        "Chip",
+        "Masha",
+        "Popol and Kupa",
+        "Khufra",
+        "Lukas"
+      ],
+      "synergyWith": [
+        "Zhask",
+        "Thamuz",
+        "Cyclops"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Ixia",
+        "advantage": 1.8
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 1.8
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 1.8
+      },
+      {
+        "name": "Marcel",
+        "advantage": 1.7
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 1.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Chip",
+        "advantage": 2.7
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.7
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.7
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.4
+      },
+      {
+        "name": "Lukas",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Zhask",
+        "synergy": 5
+      },
+      {
+        "name": "Thamuz",
+        "synergy": 5
+      },
+      {
+        "name": "Cyclops",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -443,5 +514,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.8,
+  "pickRate": 1.2,
+  "banRate": 3.9,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 70,
+    "abilityEffects": 100,
+    "difficulty": 70
+  },
+  "powerCurve": {
+    "early": 66,
+    "mid": 55,
+    "late": 31,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "ㅤㅤ",
+      "games": 930,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Genius Wand",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "Zhao Miao Miao",
+      "games": 1419,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Genius Wand",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "Dehan impala",
+      "games": 929,
+      "items": [
+        "Smite Magic Shoes",
+        "Necklace of Durance",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

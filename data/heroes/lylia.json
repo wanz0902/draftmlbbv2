@@ -242,15 +242,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Johnson",
+        "Alpha",
+        "Barats",
+        "Hanabi",
+        "Aulus"
+      ],
+      "weakAgainst": [
+        "Joy",
+        "Kaja",
+        "Mathilda",
+        "Novaria",
+        "Khaleed"
+      ],
+      "synergyWith": [
+        "Harley",
+        "Valentina",
+        "Zhask"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Johnson",
+        "advantage": 2.6
+      },
+      {
+        "name": "Alpha",
+        "advantage": 2.6
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.5
+      },
+      {
+        "name": "Hanabi",
+        "advantage": 2.1
+      },
+      {
+        "name": "Aulus",
+        "advantage": 2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Joy",
+        "advantage": 2.4
+      },
+      {
+        "name": "Kaja",
+        "advantage": 2.3
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.2
+      },
+      {
+        "name": "Novaria",
+        "advantage": 1.8
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 1.7
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harley",
+        "synergy": 5
+      },
+      {
+        "name": "Valentina",
+        "synergy": 5
+      },
+      {
+        "name": "Zhask",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -283,5 +354,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.7,
+  "pickRate": 0.7,
+  "banRate": 1,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 100,
+    "abilityEffects": 20,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 64,
+    "mid": 61,
+    "late": 45,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "valentina",
+      "games": 579,
+      "items": [
+        "Necklace of Durance",
+        "Magic Shoes",
+        "Holy Crystal",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "Paeonia.",
+      "games": 711,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Starlium Scythe",
+        "Ice Queen Wand"
+      ]
+    },
+    {
+      "player": "MISERY",
+      "games": 929,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Glowing Wand",
+        "Starlium Scythe",
+        "Ice Queen Wand"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

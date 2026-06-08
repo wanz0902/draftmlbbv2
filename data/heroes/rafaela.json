@@ -141,15 +141,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Marcel",
+        "Natalia",
+        "Valir",
+        "Alice",
+        "Faramis"
+      ],
+      "weakAgainst": [
+        "Ixia",
+        "Eudora",
+        "Odette",
+        "Vale",
+        "Nolan"
+      ],
+      "synergyWith": [
+        "Akai",
+        "Barats",
+        "Jawhead"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 3.4
+      },
+      {
+        "name": "Natalia",
+        "advantage": 3.3
+      },
+      {
+        "name": "Valir",
+        "advantage": 3.2
+      },
+      {
+        "name": "Alice",
+        "advantage": 2.7
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Ixia",
+        "advantage": 3
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.6
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.5
+      },
+      {
+        "name": "Vale",
+        "advantage": 2.3
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Akai",
+        "synergy": 5
+      },
+      {
+        "name": "Barats",
+        "synergy": 5
+      },
+      {
+        "name": "Jawhead",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -185,5 +256,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.6,
+  "pickRate": 0.3,
+  "banRate": 2.6,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 20,
+    "abilityEffects": 70,
+    "difficulty": 20
+  },
+  "powerCurve": {
+    "early": 52,
+    "mid": 58,
+    "late": 48,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Eleanor Уυтαα.",
+      "games": 869,
+      "items": [
+        "Rapid Boots",
+        "Necklace of Durance",
+        "Flask of the Oasis",
+        "Glowing Wand",
+        "Oracle",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "Can you be mine ???",
+      "games": 585,
+      "items": [
+        "Favor Rapid Boots",
+        "Flask of the Oasis",
+        "Necklace of Durance",
+        "Glowing Wand",
+        "Holy Crystal",
+        "Athena's Shield"
+      ]
+    },
+    {
+      "player": "peel",
+      "games": 444,
+      "items": [
+        "Favor Rapid Boots",
+        "Flask of the Oasis",
+        "Necklace of Durance",
+        "Holy Crystal",
+        "Oracle"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Gloo",
+        "Sun",
+        "Argus",
+        "Masha",
+        "Karina"
+      ],
+      "weakAgainst": [
+        "X.Borg",
+        "Phoveus",
+        "Gord",
+        "Sora",
+        "Arlott"
+      ],
+      "synergyWith": [
+        "Faramis",
+        "Marcel",
+        "Masha"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 4.6
+      },
+      {
+        "name": "Sun",
+        "advantage": 4.4
+      },
+      {
+        "name": "Argus",
+        "advantage": 3.4
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.7
+      },
+      {
+        "name": "Karina",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "X.Borg",
+        "advantage": 3.8
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 3.4
+      },
+      {
+        "name": "Gord",
+        "advantage": 3
+      },
+      {
+        "name": "Sora",
+        "advantage": 2.3
+      },
+      {
+        "name": "Arlott",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Faramis",
+        "synergy": 5
+      },
+      {
+        "name": "Marcel",
+        "synergy": 5
+      },
+      {
+        "name": "Masha",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -215,5 +286,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.8,
+  "pickRate": 0.4,
+  "banRate": 0.5,
+  "heroAttributes": {
+    "durability": 90,
+    "offense": 20,
+    "abilityEffects": 90,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "ILoveLeagueOfLegends",
+      "games": 678,
+      "items": [
+        "War Axe",
+        "Tough Boots",
+        "Endless Battle",
+        "Queen's Wings",
+        "Hunter Strike",
+        "Oracle"
+      ]
+    },
+    {
+      "player": "Nozuyaaa",
+      "games": 1293,
+      "items": [
+        "War Axe",
+        "Tough Boots",
+        "Endless Battle",
+        "Queen's Wings",
+        "Sea Halberd",
+        "Oracle"
+      ]
+    },
+    {
+      "player": "Tensionacho.",
+      "games": 984,
+      "items": [
+        "War Axe",
+        "Tough Boots",
+        "Queen's Wings",
+        "Endless Battle",
+        "Sea Halberd",
+        "Oracle"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

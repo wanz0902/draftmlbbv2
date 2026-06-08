@@ -176,15 +176,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Khufra",
+        "Cici",
+        "X.Borg",
+        "Esmeralda",
+        "Zhuxin"
+      ],
+      "weakAgainst": [
+        "Masha",
+        "Lukas",
+        "Zhask",
+        "Argus",
+        "Layla"
+      ],
+      "synergyWith": [
+        "Chip",
+        "Mathilda",
+        "Lukas"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Khufra",
+        "advantage": 2.5
+      },
+      {
+        "name": "Cici",
+        "advantage": 2.4
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.4
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.3
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 2.9
+      },
+      {
+        "name": "Lukas",
+        "advantage": 2.4
+      },
+      {
+        "name": "Zhask",
+        "advantage": 2.4
+      },
+      {
+        "name": "Argus",
+        "advantage": 2.1
+      },
+      {
+        "name": "Layla",
+        "advantage": 2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Chip",
+        "synergy": 5
+      },
+      {
+        "name": "Mathilda",
+        "synergy": 5
+      },
+      {
+        "name": "Lukas",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -224,5 +295,67 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.5,
+  "pickRate": 0.4,
+  "banRate": 0.6,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 60,
+    "abilityEffects": 50,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 56,
+    "mid": 64,
+    "late": 50,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Arlzest",
+      "games": 1491,
+      "items": [
+        "Sea Halberd",
+        "Rapid Boots",
+        "Sky Piercer",
+        "Malefic Roar",
+        "Blade of the Heptaseas",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "F Yorii.",
+      "games": 662,
+      "items": [
+        "Sea Halberd",
+        "Blade of Despair",
+        "Sky Piercer",
+        "Malefic Roar",
+        "Hunter Strike",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "Xyren.",
+      "games": 1167,
+      "items": [
+        "Sea Halberd",
+        "Rapid Boots",
+        "Sky Piercer",
+        "Malefic Roar",
+        "Blade of the Heptaseas",
+        "Immortality"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

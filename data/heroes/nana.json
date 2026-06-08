@@ -239,15 +239,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Odette",
+        "Lolita",
+        "Estes",
+        "Melissa",
+        "Saber"
+      ],
+      "weakAgainst": [
+        "Hylos",
+        "Akai",
+        "Khaleed",
+        "Yi Sun-shin",
+        "Selena"
+      ],
+      "synergyWith": [
+        "Harley",
+        "Roger",
+        "Dyrroth"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Odette",
+        "advantage": 2.8
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2
+      },
+      {
+        "name": "Estes",
+        "advantage": 1.7
+      },
+      {
+        "name": "Melissa",
+        "advantage": 1.7
+      },
+      {
+        "name": "Saber",
+        "advantage": 1.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Hylos",
+        "advantage": 2
+      },
+      {
+        "name": "Akai",
+        "advantage": 1.8
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 1.6
+      },
+      {
+        "name": "Yi Sun-shin",
+        "advantage": 1.6
+      },
+      {
+        "name": "Selena",
+        "advantage": 1.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harley",
+        "synergy": 5
+      },
+      {
+        "name": "Roger",
+        "synergy": 5
+      },
+      {
+        "name": "Dyrroth",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -280,5 +351,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.2,
+  "pickRate": 1.6,
+  "banRate": 4.9,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 60,
+    "abilityEffects": 100,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "kaslana kokoa愛",
+      "games": 505,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Starlium Scythe",
+        "Holy Crystal",
+        "Lightning Truncheon"
+      ]
+    },
+    {
+      "player": "YT: Unknown King ML",
+      "games": 461,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Sky Piercer",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "RemoveMyBaNanaNexon",
+      "games": 443,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Sky Piercer",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Starlium Scythe"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

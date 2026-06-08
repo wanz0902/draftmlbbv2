@@ -200,15 +200,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Sun",
+        "X.Borg",
+        "Yve",
+        "Beatrix",
+        "Gloo"
+      ],
+      "weakAgainst": [
+        "Moskov",
+        "Cyclops",
+        "Eudora",
+        "Chip",
+        "Marcel"
+      ],
+      "synergyWith": [
+        "Masha",
+        "Barats",
+        "Chip"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 4.2
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.7
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 2.5
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.5
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Moskov",
+        "advantage": 4.3
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 3.9
+      },
+      {
+        "name": "Eudora",
+        "advantage": 3.6
+      },
+      {
+        "name": "Chip",
+        "advantage": 3.2
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Masha",
+        "synergy": 5
+      },
+      {
+        "name": "Barats",
+        "synergy": 5
+      },
+      {
+        "name": "Chip",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -243,5 +314,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.2,
+  "pickRate": 0.2,
+  "banRate": 0.6,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 70,
+    "abilityEffects": 10,
+    "difficulty": 90
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 64,
+    "late": 52,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "ＳＨＥＷＹ",
+      "games": 814,
+      "items": [
+        "Flame Arcane Boots",
+        "Concentrated Energy",
+        "Holy Crystal",
+        "Glowing Wand",
+        "Winter Crown",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "Mei Ne' Okiharu.",
+      "games": 664,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Holy Crystal",
+        "Concentrated Energy",
+        "Divine Glaive",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "Zencrix x Brilliance",
+      "games": 1052,
+      "items": [
+        "Flame Arcane Boots",
+        "Genius Wand",
+        "Concentrated Energy",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

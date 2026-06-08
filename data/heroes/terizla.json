@@ -177,15 +177,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Popol and Kupa",
+        "Argus",
+        "Phoveus",
+        "Khufra",
+        "Chip"
+      ],
+      "weakAgainst": [
+        "X.Borg",
+        "Gord",
+        "Yve",
+        "Mathilda",
+        "Alpha"
+      ],
+      "synergyWith": [
+        "Angela",
+        "Aulus",
+        "Diggie"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.8
+      },
+      {
+        "name": "Argus",
+        "advantage": 2.8
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 2.7
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.5
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "X.Borg",
+        "advantage": 4.9
+      },
+      {
+        "name": "Gord",
+        "advantage": 2.7
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.6
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.5
+      },
+      {
+        "name": "Alpha",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Angela",
+        "synergy": 5
+      },
+      {
+        "name": "Aulus",
+        "synergy": 5
+      },
+      {
+        "name": "Diggie",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -226,5 +297,67 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 52.5,
+  "pickRate": 0.6,
+  "banRate": 0.7,
+  "heroAttributes": {
+    "durability": 90,
+    "offense": 30,
+    "abilityEffects": 40,
+    "difficulty": 20
+  },
+  "powerCurve": {
+    "early": 59,
+    "mid": 61,
+    "late": 45,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "THE KING TERIZLA",
+      "games": 1138,
+      "items": [
+        "Rapid Boots",
+        "War Axe",
+        "Oracle",
+        "Queen's Wings",
+        "Dominance Ice",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "juaco",
+      "games": 870,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Dominance Ice",
+        "Queen's Wings",
+        "Radiant Armor",
+        "Oracle"
+      ]
+    },
+    {
+      "player": "Ꭺquᴀ | 激怒",
+      "games": 549,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Dominance Ice",
+        "Queen's Wings",
+        "Radiant Armor",
+        "Oracle"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

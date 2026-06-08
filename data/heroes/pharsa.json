@@ -261,15 +261,59 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
+      "strongAgainst": [
+        "Lolita",
+        "Valir",
+        "Hanabi",
+        "Melissa",
+        "Luo Yi"
+      ],
       "weakAgainst": [],
-      "synergyWith": []
+      "synergyWith": [
+        "Valentina",
+        "Ling",
+        "Harley"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.7
+      },
+      {
+        "name": "Valir",
+        "advantage": 1.6
+      },
+      {
+        "name": "Hanabi",
+        "advantage": 1.6
+      },
+      {
+        "name": "Melissa",
+        "advantage": 1.3
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 1.2
+      }
+    ],
     "weakAgainst": [],
-    "synergyHeroes": [],
+    "synergyHeroes": [
+      {
+        "name": "Valentina",
+        "synergy": 5
+      },
+      {
+        "name": "Ling",
+        "synergy": 5
+      },
+      {
+        "name": "Harley",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -302,5 +346,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.4,
+  "pickRate": 0.6,
+  "banRate": 0.5,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 90,
+    "abilityEffects": 50,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 64,
+    "late": 56,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "\"GOOD RILL!!",
+      "games": 1103,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "Computer 01",
+      "games": 670,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Blood Wings",
+        "Divine Glaive",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "b’",
+      "games": 947,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Blood Wings"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

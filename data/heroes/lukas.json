@@ -380,15 +380,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Ling",
+        "Arlott",
+        "Fanny",
+        "Kagura",
+        "Natalia"
+      ],
+      "weakAgainst": [
+        "Baxia",
+        "Balmond",
+        "Dyrroth",
+        "Thamuz",
+        "Alpha"
+      ],
+      "synergyWith": [
+        "Chip",
+        "Masha",
+        "Floryn"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Ling",
+        "advantage": 3
+      },
+      {
+        "name": "Arlott",
+        "advantage": 2.4
+      },
+      {
+        "name": "Fanny",
+        "advantage": 2.3
+      },
+      {
+        "name": "Kagura",
+        "advantage": 2.2
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 3.8
+      },
+      {
+        "name": "Balmond",
+        "advantage": 2.8
+      },
+      {
+        "name": "Dyrroth",
+        "advantage": 2.4
+      },
+      {
+        "name": "Thamuz",
+        "advantage": 2.4
+      },
+      {
+        "name": "Alpha",
+        "advantage": 2.4
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Chip",
+        "synergy": 5
+      },
+      {
+        "name": "Masha",
+        "synergy": 5
+      },
+      {
+        "name": "Floryn",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -425,5 +496,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.2,
+  "pickRate": 0.4,
+  "banRate": 0.8,
+  "heroAttributes": {
+    "durability": 70,
+    "offense": 50,
+    "abilityEffects": 60,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 53,
+    "mid": 64,
+    "late": 56,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "a beautiful blur",
+      "games": 1131,
+      "items": [
+        "Flame Magic Shoes",
+        "War Axe",
+        "Hunter Strike",
+        "Malefic Roar",
+        "Queen's Wings",
+        "Brute Force Breastplate"
+      ]
+    },
+    {
+      "player": "Call me ʟᴜᴄᴀs",
+      "games": 613,
+      "items": [
+        "Flame Tough Boots",
+        "Malefic Roar",
+        "Hunter Strike",
+        "Queen's Wings",
+        "War Axe",
+        "Blade of Despair"
+      ]
+    },
+    {
+      "player": "athaa x F4N'T",
+      "games": 1289,
+      "items": [
+        "Hunter Strike",
+        "War Axe",
+        "Tough Boots",
+        "Blade of Despair",
+        "Queen's Wings"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

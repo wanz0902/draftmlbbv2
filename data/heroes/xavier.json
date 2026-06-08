@@ -240,15 +240,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Belerick",
+        "Carmilla",
+        "Atlas",
+        "Balmond",
+        "Terizla"
+      ],
+      "weakAgainst": [
+        "Natalia",
+        "Marcel",
+        "Helcurt",
+        "Alucard",
+        "Aldous"
+      ],
+      "synergyWith": [
+        "Valentina",
+        "Marcel",
+        "Masha"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Belerick",
+        "advantage": 2.2
+      },
+      {
+        "name": "Carmilla",
+        "advantage": 1.8
+      },
+      {
+        "name": "Atlas",
+        "advantage": 1.8
+      },
+      {
+        "name": "Balmond",
+        "advantage": 1.8
+      },
+      {
+        "name": "Terizla",
+        "advantage": 1.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 3.4
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.2
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 2.4
+      },
+      {
+        "name": "Alucard",
+        "advantage": 2.1
+      },
+      {
+        "name": "Aldous",
+        "advantage": 2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Valentina",
+        "synergy": 5
+      },
+      {
+        "name": "Marcel",
+        "synergy": 5
+      },
+      {
+        "name": "Masha",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -281,5 +352,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.9,
+  "pickRate": 0.5,
+  "banRate": 0.2,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 100,
+    "abilityEffects": 80,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 35,
+    "mid": 59,
+    "late": 66,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Cipά Psycho.",
+      "games": 1003,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "Digih",
+      "games": 703,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "Satoru",
+      "games": 783,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Julian",
+        "Karrie",
+        "Aulus",
+        "Thamuz",
+        "Lunox"
+      ],
+      "weakAgainst": [
+        "Masha",
+        "Wanwan",
+        "Chip",
+        "Diggie",
+        "Joy"
+      ],
+      "synergyWith": [
+        "Marcel",
+        "Yu Zhong",
+        "Freya"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Julian",
+        "advantage": 2.1
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.1
+      },
+      {
+        "name": "Aulus",
+        "advantage": 1.9
+      },
+      {
+        "name": "Thamuz",
+        "advantage": 1.9
+      },
+      {
+        "name": "Lunox",
+        "advantage": 1.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 3.4
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 3.1
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.6
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.6
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.4
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Marcel",
+        "synergy": 5
+      },
+      {
+        "name": "Yu Zhong",
+        "synergy": 5
+      },
+      {
+        "name": "Freya",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -215,5 +286,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.7,
+  "pickRate": 1.2,
+  "banRate": 32.9,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 50,
+    "abilityEffects": 70,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 48,
+    "mid": 61,
+    "late": 52,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": ". eunwoo",
+      "games": 459,
+      "items": [
+        "Flame Magic Shoes",
+        "Starlium Scythe",
+        "Concentrated Energy",
+        "Holy Crystal",
+        "Queen's Wings",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "LRS.",
+      "games": 942,
+      "items": [
+        "Encourage Tough Boots",
+        "Dominance Ice",
+        "Winter Crown",
+        "Brute Force Breastplate",
+        "Immortality",
+        "Queen's Wings"
+      ]
+    },
+    {
+      "player": "GlaBaInii!",
+      "games": 762,
+      "items": [
+        "Magic Shoes",
+        "Concentrated Energy",
+        "Queen's Wings",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -198,15 +198,71 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Fanny",
+        "Helcurt",
+        "Silvanna",
+        "Nolan",
+        "Lolita"
+      ],
+      "weakAgainst": [
+        "Hanabi",
+        "Bane"
+      ],
+      "synergyWith": [
+        "Karrie",
+        "Saber",
+        "Faramis"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Fanny",
+        "advantage": 1.8
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 1.7
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 1.5
+      },
+      {
+        "name": "Nolan",
+        "advantage": 1.4
+      },
+      {
+        "name": "Lolita",
+        "advantage": 1.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Hanabi",
+        "advantage": 2.1
+      },
+      {
+        "name": "Bane",
+        "advantage": 1.8
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Karrie",
+        "synergy": 5
+      },
+      {
+        "name": "Saber",
+        "synergy": 5
+      },
+      {
+        "name": "Faramis",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -245,5 +301,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 46.2,
+  "pickRate": 0.3,
+  "banRate": 1.5,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 20,
+    "abilityEffects": 90,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 55,
+    "mid": 63,
+    "late": 47,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Ɗeep.",
+      "games": 598,
+      "items": [
+        "Encourage Tough Boots",
+        "Fleeting Time",
+        "Dominance Ice",
+        "Antique Cuirass",
+        "Oracle",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "ILLUSIONIST",
+      "games": 1359,
+      "items": [
+        "Favor Tough Boots",
+        "Oracle",
+        "Dominance Ice",
+        "Fleeting Time",
+        "Athena's Shield",
+        "Guardian Helmet"
+      ]
+    },
+    {
+      "player": "자우, Gōnju",
+      "games": 617,
+      "items": [
+        "Encourage Tough Boots",
+        "Dominance Ice",
+        "Fleeting Time",
+        "Chastise Pauldron",
+        "Athena's Shield"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

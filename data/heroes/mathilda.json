@@ -173,15 +173,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "X.Borg",
+        "Alpha",
+        "Ling",
+        "Natalia",
+        "Balmond"
+      ],
+      "weakAgainst": [
+        "Odette",
+        "Esmeralda",
+        "Edith",
+        "Bruno",
+        "Melissa"
+      ],
+      "synergyWith": [
+        "Lolita",
+        "Marcel",
+        "Khufra"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "X.Borg",
+        "advantage": 3.1
+      },
+      {
+        "name": "Alpha",
+        "advantage": 2.9
+      },
+      {
+        "name": "Ling",
+        "advantage": 2.8
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.7
+      },
+      {
+        "name": "Balmond",
+        "advantage": 2.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Odette",
+        "advantage": 3.2
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.8
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.6
+      },
+      {
+        "name": "Bruno",
+        "advantage": 2.6
+      },
+      {
+        "name": "Melissa",
+        "advantage": 2.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Lolita",
+        "synergy": 5
+      },
+      {
+        "name": "Marcel",
+        "synergy": 5
+      },
+      {
+        "name": "Khufra",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -219,5 +290,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 43.3,
+  "pickRate": 0.1,
+  "banRate": 0.6,
+  "heroAttributes": {
+    "durability": 80,
+    "offense": 20,
+    "abilityEffects": 40,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 55,
+    "mid": 59,
+    "late": 47,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "LIGHT ⁰⁹",
+      "games": 996,
+      "items": [
+        "Favor Tough Boots",
+        "Flask of the Oasis",
+        "Necklace of Durance",
+        "Oracle",
+        "Blood Wings",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "Top global Yearner",
+      "games": 1023,
+      "items": [
+        "Favor Tough Boots",
+        "Flask of the Oasis",
+        "Necklace of Durance",
+        "Dominance Ice",
+        "Blood Wings",
+        "Antique Cuirass"
+      ]
+    },
+    {
+      "player": "mathildayusir123",
+      "games": 411,
+      "items": [
+        "Favor Rapid Boots",
+        "Flask of the Oasis",
+        "Necklace of Durance",
+        "Blood Wings",
+        "Oracle"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

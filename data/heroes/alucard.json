@@ -237,15 +237,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Sun",
+        "Natalia",
+        "Saber",
+        "Yve",
+        "Xavier"
+      ],
+      "weakAgainst": [
+        "Barats",
+        "Khufra",
+        "Fredrinn",
+        "Minsitthar",
+        "Melissa"
+      ],
+      "synergyWith": [
+        "Tigreal",
+        "Lolita",
+        "Barats"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 3.9
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.3
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.3
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.1
+      },
+      {
+        "name": "Xavier",
+        "advantage": 2.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 3.4
+      },
+      {
+        "name": "Khufra",
+        "advantage": 3.1
+      },
+      {
+        "name": "Fredrinn",
+        "advantage": 2.8
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 2.5
+      },
+      {
+        "name": "Melissa",
+        "advantage": 2.4
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Tigreal",
+        "synergy": 5
+      },
+      {
+        "name": "Lolita",
+        "synergy": 5
+      },
+      {
+        "name": "Barats",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -284,5 +355,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.9,
+  "pickRate": 0.6,
+  "banRate": 0.7,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 50,
+    "abilityEffects": 10,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 59,
+    "late": 48,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "inam.AMAGAMI",
+      "games": 1480,
+      "items": [
+        "War Axe",
+        "Flame Tough Boots",
+        "Endless Battle",
+        "Blade of Despair",
+        "Queen's Wings",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "T A Q I E E N ✧",
+      "games": 1051,
+      "items": [
+        "War Axe",
+        "Flame Tough Boots",
+        "Queen's Wings",
+        "Endless Battle",
+        "Blade of Despair",
+        "Berserker's Fury"
+      ]
+    },
+    {
+      "player": "Aemeath",
+      "games": 748,
+      "items": [
+        "Hunter Strike",
+        "Flame Tough Boots",
+        "Endless Battle",
+        "Blade of Despair",
+        "Malefic Roar"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

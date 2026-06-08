@@ -177,15 +177,71 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Balmond",
+        "Wanwan",
+        "Thamuz",
+        "Aulus",
+        "Yin"
+      ],
+      "weakAgainst": [
+        "Marcel",
+        "Uranus"
+      ],
+      "synergyWith": [
+        "Floryn",
+        "Lesley",
+        "Odette"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Balmond",
+        "advantage": 2
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 1.9
+      },
+      {
+        "name": "Thamuz",
+        "advantage": 1.9
+      },
+      {
+        "name": "Aulus",
+        "advantage": 1.8
+      },
+      {
+        "name": "Yin",
+        "advantage": 1.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 3.6
+      },
+      {
+        "name": "Uranus",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Floryn",
+        "synergy": 5
+      },
+      {
+        "name": "Lesley",
+        "synergy": 5
+      },
+      {
+        "name": "Odette",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -224,5 +280,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.2,
+  "pickRate": 1.5,
+  "banRate": 12.3,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 90,
+    "abilityEffects": 40,
+    "difficulty": 70
+  },
+  "powerCurve": {
+    "early": 51,
+    "mid": 63,
+    "late": 63,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "PHI_VINCI",
+      "games": 696,
+      "items": [
+        "Flame Magic Shoes",
+        "Hunter Strike",
+        "Sky Piercer",
+        "Endless Battle",
+        "Blade of Despair",
+        "Malefic Roar"
+      ]
+    },
+    {
+      "player": "SAVERAAA",
+      "games": 1234,
+      "items": [
+        "Hunter Strike",
+        "Flame Magic Shoes",
+        "War Axe",
+        "Endless Battle",
+        "Blade of Despair",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "pemes!&lt;3",
+      "games": 1019,
+      "items": [
+        "Flame Magic Shoes",
+        "War Axe",
+        "Endless Battle",
+        "Malefic Roar",
+        "Blade of Despair"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -278,15 +278,66 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lolita",
+        "Barats",
+        "Faramis",
+        "Edith",
+        "Diggie"
+      ],
+      "weakAgainst": [
+        "Hayabusa"
+      ],
+      "synergyWith": [
+        "Harley",
+        "Carmilla",
+        "Valentina"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.3
+      },
+      {
+        "name": "Barats",
+        "advantage": 1.7
+      },
+      {
+        "name": "Faramis",
+        "advantage": 1.4
+      },
+      {
+        "name": "Edith",
+        "advantage": 1.4
+      },
+      {
+        "name": "Diggie",
+        "advantage": 1.3
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Hayabusa",
+        "advantage": 1.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harley",
+        "synergy": 5
+      },
+      {
+        "name": "Carmilla",
+        "synergy": 5
+      },
+      {
+        "name": "Valentina",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -321,5 +372,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.3,
+  "pickRate": 0.6,
+  "banRate": 0.2,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 100,
+    "abilityEffects": 50,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 27,
+    "mid": 51,
+    "late": 70,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Wanh Cranél",
+      "games": 971,
+      "items": [
+        "Lightning Truncheon",
+        "Demon Shoes",
+        "Glowing Wand",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Blood Wings"
+      ]
+    },
+    {
+      "player": "More x Brilliance",
+      "games": 1286,
+      "items": [
+        "Demon Shoes",
+        "Clock of Destiny",
+        "Starlium Scythe",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Blood Wings"
+      ]
+    },
+    {
+      "player": "only solo queue",
+      "games": 1142,
+      "items": [
+        "Holy Crystal",
+        "Clock of Destiny",
+        "Glowing Wand",
+        "Blood Wings",
+        "Rose Gold Meteor",
+        "Queen's Wings"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

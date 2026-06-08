@@ -348,15 +348,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Diggie",
+        "Ixia",
+        "Balmond",
+        "Barats",
+        "Lolita"
+      ],
+      "weakAgainst": [
+        "Natalia",
+        "Ling",
+        "Sun",
+        "Marcel",
+        "Helcurt"
+      ],
+      "synergyWith": [
+        "Hilda",
+        "Gloo",
+        "Martis"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 3.5
+      },
+      {
+        "name": "Ixia",
+        "advantage": 3.3
+      },
+      {
+        "name": "Balmond",
+        "advantage": 2.9
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.8
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 6.9
+      },
+      {
+        "name": "Ling",
+        "advantage": 4
+      },
+      {
+        "name": "Sun",
+        "advantage": 3.8
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.6
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 3.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Hilda",
+        "synergy": 5
+      },
+      {
+        "name": "Gloo",
+        "synergy": 5
+      },
+      {
+        "name": "Martis",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -393,5 +464,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.7,
+  "pickRate": 0.3,
+  "banRate": 2.8,
+  "heroAttributes": {
+    "durability": 70,
+    "offense": 80,
+    "abilityEffects": 20,
+    "difficulty": 70
+  },
+  "powerCurve": {
+    "early": 50,
+    "mid": 59,
+    "late": 41,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "\"Sebuah nama: Amsar\"",
+      "games": 990,
+      "items": [
+        "Ice Rapid Boots",
+        "Golden Staff",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Malefic Roar",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "DAISIES",
+      "games": 1618,
+      "items": [
+        "Flame Rapid Boots",
+        "Golden Staff",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Malefic Roar",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "java uzb",
+      "games": 1151,
+      "items": [
+        "Corrosion Scythe",
+        "Golden Staff",
+        "Ice Magic Shoes",
+        "Demon Hunter Sword",
+        "Sea Halberd"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

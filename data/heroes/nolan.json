@@ -201,15 +201,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Estes",
+        "Yve",
+        "Aulus",
+        "Floryn",
+        "Lolita"
+      ],
+      "weakAgainst": [
+        "Saber",
+        "Natalia",
+        "Hilda",
+        "Marcel",
+        "Chip"
+      ],
+      "synergyWith": [
+        "Ling",
+        "Freya",
+        "Harith"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 4.5
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.8
+      },
+      {
+        "name": "Aulus",
+        "advantage": 2.8
+      },
+      {
+        "name": "Floryn",
+        "advantage": 2.8
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Saber",
+        "advantage": 3.5
+      },
+      {
+        "name": "Natalia",
+        "advantage": 3.4
+      },
+      {
+        "name": "Hilda",
+        "advantage": 3.3
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.2
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.4
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Ling",
+        "synergy": 5
+      },
+      {
+        "name": "Freya",
+        "synergy": 5
+      },
+      {
+        "name": "Harith",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -244,5 +315,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.4,
+  "pickRate": 0.3,
+  "banRate": 0.4,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 60,
+    "abilityEffects": 20,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 66,
+    "mid": 59,
+    "late": 43,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "kinyocoffe.",
+      "games": 1217,
+      "items": [
+        "Blade of the Heptaseas",
+        "Ice Tough Boots",
+        "Malefic Gun",
+        "Hunter Strike",
+        "Sea Halberd",
+        "Blade of Despair"
+      ]
+    },
+    {
+      "player": "@taishiasianboy",
+      "games": 1080,
+      "items": [
+        "Blade of the Heptaseas",
+        "Ice Magic Shoes",
+        "Malefic Gun",
+        "Hunter Strike",
+        "Blade of Despair",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "Beabadobeee",
+      "games": 1129,
+      "items": [
+        "Blade of the Heptaseas",
+        "Ice Tough Boots",
+        "Hunter Strike",
+        "Malefic Roar",
+        "Blade of Despair"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

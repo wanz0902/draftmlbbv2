@@ -177,15 +177,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Natalia",
+        "X.Borg",
+        "Karina",
+        "Nolan",
+        "Estes"
+      ],
+      "weakAgainst": [
+        "Marcel",
+        "Chip",
+        "Khufra",
+        "Melissa",
+        "Jawhead"
+      ],
+      "synergyWith": [
+        "Marcel",
+        "Aulus",
+        "Baxia"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 3.3
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3
+      },
+      {
+        "name": "Karina",
+        "advantage": 2.5
+      },
+      {
+        "name": "Nolan",
+        "advantage": 1.7
+      },
+      {
+        "name": "Estes",
+        "advantage": 1.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 3.3
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.7
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.4
+      },
+      {
+        "name": "Melissa",
+        "advantage": 2.4
+      },
+      {
+        "name": "Jawhead",
+        "advantage": 1.5
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Marcel",
+        "synergy": 5
+      },
+      {
+        "name": "Aulus",
+        "synergy": 5
+      },
+      {
+        "name": "Baxia",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -225,5 +296,67 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.8,
+  "pickRate": 1.5,
+  "banRate": 16.8,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 50,
+    "abilityEffects": 40,
+    "difficulty": 80
+  },
+  "powerCurve": {
+    "early": 63,
+    "mid": 59,
+    "late": 43,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "NEL.",
+      "games": 902,
+      "items": [
+        "Rapid Boots",
+        "Hunter Strike",
+        "Sky Piercer",
+        "Malefic Roar",
+        "Blade of the Heptaseas",
+        "Blade of Despair"
+      ]
+    },
+    {
+      "player": "Xeno Broly",
+      "games": 855,
+      "items": [
+        "Tough Boots",
+        "Hunter Strike",
+        "War Axe",
+        "Dominance Ice",
+        "Oracle",
+        "Brute Force Breastplate"
+      ]
+    },
+    {
+      "player": "MechaMan.",
+      "games": 795,
+      "items": [
+        "Rapid Boots",
+        "Hunter Strike",
+        "Sky Piercer",
+        "Malefic Roar",
+        "Blade of the Heptaseas",
+        "Blade of Despair"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

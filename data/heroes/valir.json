@@ -260,15 +260,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Fredrinn",
+        "Barats",
+        "Thamuz",
+        "Alice",
+        "Balmond"
+      ],
+      "weakAgainst": [
+        "Rafaela",
+        "Masha",
+        "Ling",
+        "Helcurt",
+        "Benedetta"
+      ],
+      "synergyWith": [
+        "Valentina",
+        "Harley",
+        "Hanzo"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Fredrinn",
+        "advantage": 3.5
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.4
+      },
+      {
+        "name": "Thamuz",
+        "advantage": 2.9
+      },
+      {
+        "name": "Alice",
+        "advantage": 2.9
+      },
+      {
+        "name": "Balmond",
+        "advantage": 2.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Rafaela",
+        "advantage": 3.2
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.9
+      },
+      {
+        "name": "Ling",
+        "advantage": 2.9
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 2.8
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Valentina",
+        "synergy": 5
+      },
+      {
+        "name": "Harley",
+        "synergy": 5
+      },
+      {
+        "name": "Hanzo",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -301,5 +372,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 53,
+  "pickRate": 1,
+  "banRate": 2.7,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 70,
+    "abilityEffects": 70,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 56,
+    "mid": 65,
+    "late": 52,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Shivamsk007",
+      "games": 747,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Ice Queen Wand",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "yanlay",
+      "games": 1000,
+      "items": [
+        "Magic Shoes",
+        "Glowing Wand",
+        "Ice Queen Wand",
+        "Necklace of Durance",
+        "Immortality",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "el psy congroo",
+      "games": 311,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Ice Queen Wand",
+        "Glowing Wand",
+        "Lightning Truncheon"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

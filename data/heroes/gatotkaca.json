@@ -177,15 +177,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Miya",
+        "Odette",
+        "Zilong",
+        "Saber",
+        "Argus"
+      ],
+      "weakAgainst": [
+        "Lesley",
+        "Mathilda",
+        "Baxia",
+        "Uranus",
+        "Kimmy"
+      ],
+      "synergyWith": [
+        "Angela",
+        "Aldous",
+        "Alpha"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Miya",
+        "advantage": 2.9
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.8
+      },
+      {
+        "name": "Zilong",
+        "advantage": 2.2
+      },
+      {
+        "name": "Saber",
+        "advantage": 1.8
+      },
+      {
+        "name": "Argus",
+        "advantage": 1.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lesley",
+        "advantage": 3
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.4
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.4
+      },
+      {
+        "name": "Uranus",
+        "advantage": 2.3
+      },
+      {
+        "name": "Kimmy",
+        "advantage": 2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Angela",
+        "synergy": 5
+      },
+      {
+        "name": "Aldous",
+        "synergy": 5
+      },
+      {
+        "name": "Alpha",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -226,5 +297,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47,
+  "pickRate": 0.7,
+  "banRate": 0.6,
+  "heroAttributes": {
+    "durability": 90,
+    "offense": 30,
+    "abilityEffects": 90,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 61,
+    "late": 56,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "KING BLIZZHADE",
+      "games": 1355,
+      "items": [
+        "Encourage Tough Boots",
+        "Radiant Armor",
+        "Antique Cuirass",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "INVINCIBLE",
+      "games": 614,
+      "items": [
+        "Encourage Tough Boots",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Antique Cuirass",
+        "Immortality",
+        "Guardian Helmet"
+      ]
+    },
+    {
+      "player": "FersaNoCure",
+      "games": 415,
+      "items": [
+        "Encourage Tough Boots",
+        "Radiant Armor",
+        "Antique Cuirass",
+        "Dominance Ice",
+        "Chastise Pauldron"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Vale",
+        "Nolan",
+        "Roger",
+        "Ling",
+        "Yin"
+      ],
+      "weakAgainst": [
+        "Phoveus",
+        "Chip",
+        "Valentina",
+        "Fredrinn",
+        "Harith"
+      ],
+      "synergyWith": [
+        "Saber",
+        "Miya",
+        "Faramis"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Vale",
+        "advantage": 2.4
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.2
+      },
+      {
+        "name": "Roger",
+        "advantage": 2.1
+      },
+      {
+        "name": "Ling",
+        "advantage": 2
+      },
+      {
+        "name": "Yin",
+        "advantage": 2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Phoveus",
+        "advantage": 3.7
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.5
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.5
+      },
+      {
+        "name": "Fredrinn",
+        "advantage": 2.3
+      },
+      {
+        "name": "Harith",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Saber",
+        "synergy": 5
+      },
+      {
+        "name": "Miya",
+        "synergy": 5
+      },
+      {
+        "name": "Faramis",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -215,5 +286,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 52.7,
+  "pickRate": 0.4,
+  "banRate": 0.9,
+  "heroAttributes": {
+    "durability": 80,
+    "offense": 50,
+    "abilityEffects": 50,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 63,
+    "mid": 55,
+    "late": 43,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "O'Malley",
+      "games": 1070,
+      "items": [
+        "Encourage Rapid Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Radiant Armor",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "rom028",
+      "games": 992,
+      "items": [
+        "Encourage Tough Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Blade Armor",
+        "Radiant Armor",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "AshueX",
+      "games": 1004,
+      "items": [
+        "Encourage Rapid Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Radiant Armor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

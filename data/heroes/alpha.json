@@ -145,15 +145,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Phoveus",
+        "Barats",
+        "Odette",
+        "Saber",
+        "Lukas"
+      ],
+      "weakAgainst": [
+        "Benedetta",
+        "Yve",
+        "Ling",
+        "Mathilda",
+        "Lancelot"
+      ],
+      "synergyWith": [
+        "Johnson",
+        "Gatotkaca",
+        "Tigreal"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Phoveus",
+        "advantage": 3
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.9
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.8
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.4
+      },
+      {
+        "name": "Lukas",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Benedetta",
+        "advantage": 4.4
+      },
+      {
+        "name": "Yve",
+        "advantage": 3.6
+      },
+      {
+        "name": "Ling",
+        "advantage": 3
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.9
+      },
+      {
+        "name": "Lancelot",
+        "advantage": 2.7
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Johnson",
+        "synergy": 5
+      },
+      {
+        "name": "Gatotkaca",
+        "synergy": 5
+      },
+      {
+        "name": "Tigreal",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -192,5 +263,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.2,
+  "pickRate": 1.1,
+  "banRate": 0.8,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 40,
+    "abilityEffects": 70,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 53,
+    "mid": 61,
+    "late": 52,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Neko",
+      "games": 585,
+      "items": [
+        "Tough Boots",
+        "War Axe",
+        "Sky Piercer",
+        "Queen's Wings",
+        "Blade of Despair",
+        "Oracle"
+      ]
+    },
+    {
+      "player": "She4Me`",
+      "games": 789,
+      "items": [
+        "Tough Boots",
+        "Sky Piercer",
+        "War Axe",
+        "Queen's Wings",
+        "Blade of Despair",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "gema (jago kayanya)",
+      "games": 549,
+      "items": [
+        "Beast Tough Boots",
+        "War Axe",
+        "Corrosion Scythe",
+        "Queen's Wings",
+        "Blade of Despair",
+        "Oracle"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

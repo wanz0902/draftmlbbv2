@@ -242,15 +242,76 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Sun",
+        "Balmond",
+        "Hanzo",
+        "Argus",
+        "Uranus"
+      ],
+      "weakAgainst": [
+        "Lolita",
+        "Karina",
+        "Arlott"
+      ],
+      "synergyWith": [
+        "Estes",
+        "Ixia",
+        "Marcel"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 2.7
+      },
+      {
+        "name": "Balmond",
+        "advantage": 2.6
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.2
+      },
+      {
+        "name": "Argus",
+        "advantage": 2.2
+      },
+      {
+        "name": "Uranus",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.8
+      },
+      {
+        "name": "Karina",
+        "advantage": 3.3
+      },
+      {
+        "name": "Arlott",
+        "advantage": 1.9
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Estes",
+        "synergy": 5
+      },
+      {
+        "name": "Ixia",
+        "synergy": 5
+      },
+      {
+        "name": "Marcel",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -287,5 +348,66 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.3,
+  "pickRate": 0.7,
+  "banRate": 0.7,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 80,
+    "abilityEffects": 50,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 48,
+    "mid": 61,
+    "late": 53,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "\"Sebuah nama: Amsar\"",
+      "games": 990,
+      "items": [
+        "Ice Rapid Boots",
+        "Golden Staff",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Malefic Roar",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "DAISIES",
+      "games": 1618,
+      "items": [
+        "Flame Rapid Boots",
+        "Golden Staff",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Malefic Roar",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "java uzb",
+      "games": 1151,
+      "items": [
+        "Corrosion Scythe",
+        "Golden Staff",
+        "Ice Magic Shoes",
+        "Demon Hunter Sword",
+        "Sea Halberd"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

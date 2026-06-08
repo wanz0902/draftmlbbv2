@@ -137,15 +137,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Estes",
+        "Floryn",
+        "Rafaela",
+        "Hanabi",
+        "Lolita"
+      ],
+      "weakAgainst": [
+        "Wanwan",
+        "Hanzo",
+        "Kadita",
+        "Ling",
+        "Claude"
+      ],
+      "synergyWith": [
+        "Diggie",
+        "Harith",
+        "Baxia"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 5.8
+      },
+      {
+        "name": "Floryn",
+        "advantage": 3.3
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 3
+      },
+      {
+        "name": "Hanabi",
+        "advantage": 2.9
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Wanwan",
+        "advantage": 3.9
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 3.3
+      },
+      {
+        "name": "Kadita",
+        "advantage": 2.9
+      },
+      {
+        "name": "Ling",
+        "advantage": 2.9
+      },
+      {
+        "name": "Claude",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Diggie",
+        "synergy": 5
+      },
+      {
+        "name": "Harith",
+        "synergy": 5
+      },
+      {
+        "name": "Baxia",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -179,5 +250,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.2,
+  "pickRate": 0.8,
+  "banRate": 1.8,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 70,
+    "abilityEffects": 50,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 39,
+    "mid": 55,
+    "late": 64,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Chells X DokterAlice",
+      "games": 745,
+      "items": [
+        "Sea Halberd",
+        "Corrosion Scythe",
+        "Tough Boots",
+        "Sky Piercer",
+        "Malefic Gun",
+        "Demon Hunter Sword"
+      ]
+    },
+    {
+      "player": "Ryx.",
+      "games": 1091,
+      "items": [
+        "Corrosion Scythe",
+        "Sea Halberd",
+        "Sky Piercer",
+        "Malefic Gun",
+        "Rose Gold Meteor",
+        "Blade of Despair"
+      ]
+    },
+    {
+      "player": "JUNNE x F4N'T",
+      "games": 545,
+      "items": [
+        "Corrosion Scythe",
+        "Tough Boots",
+        "Sky Piercer",
+        "Sea Halberd",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

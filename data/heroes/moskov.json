@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Gloo",
+        "Joy",
+        "Fanny",
+        "Novaria",
+        "Hanzo"
+      ],
+      "weakAgainst": [
+        "Alpha",
+        "Zilong",
+        "Eudora",
+        "Karina",
+        "Miya"
+      ],
+      "synergyWith": [
+        "Harith",
+        "Faramis",
+        "Marcel"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 5.5
+      },
+      {
+        "name": "Joy",
+        "advantage": 4.3
+      },
+      {
+        "name": "Fanny",
+        "advantage": 3.2
+      },
+      {
+        "name": "Novaria",
+        "advantage": 2.9
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Alpha",
+        "advantage": 2.4
+      },
+      {
+        "name": "Zilong",
+        "advantage": 2.4
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.4
+      },
+      {
+        "name": "Karina",
+        "advantage": 2.3
+      },
+      {
+        "name": "Miya",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harith",
+        "synergy": 5
+      },
+      {
+        "name": "Faramis",
+        "synergy": 5
+      },
+      {
+        "name": "Marcel",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -212,5 +283,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.9,
+  "pickRate": 1,
+  "banRate": 0.4,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 60,
+    "abilityEffects": 60,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 39,
+    "mid": 55,
+    "late": 67,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Amit",
+      "games": 819,
+      "items": [
+        "Corrosion Scythe",
+        "Warrior Boots",
+        "Golden Staff",
+        "Demon Hunter Sword",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "Hex Dignitaries",
+      "games": 821,
+      "items": [
+        "Corrosion Scythe",
+        "Warrior Boots",
+        "Golden Staff",
+        "Demon Hunter Sword",
+        "Wind of Nature",
+        "Malefic Gun"
+      ]
+    },
+    {
+      "player": "Sessizer",
+      "games": 1295,
+      "items": [
+        "Tough Boots",
+        "Corrosion Scythe",
+        "Golden Staff",
+        "Demon Hunter Sword",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

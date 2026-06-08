@@ -200,19 +200,23 @@
     ],
     "counterSystem": {
       "strongAgainst": [
-        "Pharsa",
+        "Gloo",
         "Yve",
-        "Hanabi"
+        "Granger",
+        "Atlas",
+        "Baxia"
       ],
       "weakAgainst": [
-        "Khufra",
-        "Minsitthar",
-        "Chou",
-        "Saber"
+        "Marcel",
+        "Bruno",
+        "Moskov",
+        "Franco",
+        "Masha"
       ],
       "synergyWith": [
-        "Angela",
-        "Tigreal"
+        "Faramis",
+        "Natan",
+        "Masha"
       ],
       "draftPairings": [
         "Angela + Fanny"
@@ -258,5 +262,126 @@
   "powerSpikeTags": [
     "Level 2 (Blue Buff)",
     "Level 4"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 42.8,
+  "pickRate": 0.6,
+  "banRate": 3.3,
+  "matchupSystem": {
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 4.3
+      },
+      {
+        "name": "Yve",
+        "advantage": 3.9
+      },
+      {
+        "name": "Granger",
+        "advantage": 3.9
+      },
+      {
+        "name": "Atlas",
+        "advantage": 3.2
+      },
+      {
+        "name": "Baxia",
+        "advantage": 3.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 4
+      },
+      {
+        "name": "Bruno",
+        "advantage": 3.4
+      },
+      {
+        "name": "Moskov",
+        "advantage": 3.2
+      },
+      {
+        "name": "Franco",
+        "advantage": 2.9
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.8
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Faramis",
+        "synergy": 5
+      },
+      {
+        "name": "Natan",
+        "synergy": 5
+      },
+      {
+        "name": "Masha",
+        "synergy": 5
+      }
+    ]
+  },
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 70,
+    "abilityEffects": 10,
+    "difficulty": 100
+  },
+  "powerCurve": {
+    "early": 66,
+    "mid": 59,
+    "late": 43,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Wingsecure",
+      "games": 1032,
+      "items": [
+        "Flame Tough Boots",
+        "Blade of the Heptaseas",
+        "Hunter Strike",
+        "Malefic Gun",
+        "Sea Halberd",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "sphynx",
+      "games": 1138,
+      "items": [
+        "Beast Tough Boots",
+        "Malefic Roar",
+        "War Axe",
+        "Queen's Wings",
+        "Oracle",
+        "Chastise Pauldron"
+      ]
+    },
+    {
+      "player": "@hotshotplayer",
+      "games": 974,
+      "items": [
+        "Blade of the Heptaseas",
+        "Malefic Roar",
+        "Sea Halberd",
+        "Blade of Despair",
+        "Rose Gold Meteor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

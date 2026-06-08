@@ -144,15 +144,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Estes",
+        "Diggie",
+        "Floryn",
+        "Joy",
+        "Faramis"
+      ],
+      "weakAgainst": [
+        "Wanwan",
+        "Khufra",
+        "Johnson",
+        "Lesley",
+        "Zhask"
+      ],
+      "synergyWith": [
+        "Gloo",
+        "Natan",
+        "Sun"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 4.3
+      },
+      {
+        "name": "Diggie",
+        "advantage": 3.4
+      },
+      {
+        "name": "Floryn",
+        "advantage": 2.7
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.4
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Wanwan",
+        "advantage": 3.2
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.6
+      },
+      {
+        "name": "Johnson",
+        "advantage": 2.2
+      },
+      {
+        "name": "Lesley",
+        "advantage": 2.1
+      },
+      {
+        "name": "Zhask",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Gloo",
+        "synergy": 5
+      },
+      {
+        "name": "Natan",
+        "synergy": 5
+      },
+      {
+        "name": "Sun",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -191,5 +262,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.2,
+  "pickRate": 0.6,
+  "banRate": 3.1,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 60,
+    "abilityEffects": 80,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 48,
+    "mid": 61,
+    "late": 43,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Jay 969",
+      "games": 1778,
+      "items": [
+        "Flame Tough Boots",
+        "Sea Halberd",
+        "Hunter Strike",
+        "Malefic Roar",
+        "Rose Gold Meteor",
+        "War Axe"
+      ]
+    },
+    {
+      "player": "999th",
+      "games": 1409,
+      "items": [
+        "Ice Magic Shoes",
+        "Sea Halberd",
+        "Hunter Strike",
+        "War Axe",
+        "Malefic Roar",
+        "Blade of Despair"
+      ]
+    },
+    {
+      "player": "bhaa",
+      "games": 537,
+      "items": [
+        "Sea Halberd",
+        "Rapid Boots",
+        "Malefic Roar",
+        "Hunter Strike",
+        "Blade of Despair"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -271,15 +271,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Joy",
+        "Natalia",
+        "Rafaela",
+        "Floryn",
+        "Irithel"
+      ],
+      "weakAgainst": [
+        "Barats",
+        "Atlas",
+        "Leomord",
+        "Johnson",
+        "Baxia"
+      ],
+      "synergyWith": [
+        "Mathilda",
+        "Rafaela",
+        "Harley"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Joy",
+        "advantage": 3.6
+      },
+      {
+        "name": "Natalia",
+        "advantage": 3.2
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 2.6
+      },
+      {
+        "name": "Floryn",
+        "advantage": 2.6
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 5
+      },
+      {
+        "name": "Atlas",
+        "advantage": 3.3
+      },
+      {
+        "name": "Leomord",
+        "advantage": 2.8
+      },
+      {
+        "name": "Johnson",
+        "advantage": 2.5
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.5
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Mathilda",
+        "synergy": 5
+      },
+      {
+        "name": "Rafaela",
+        "synergy": 5
+      },
+      {
+        "name": "Harley",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -314,5 +385,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.9,
+  "pickRate": 0.8,
+  "banRate": 2.5,
+  "heroAttributes": {
+    "durability": 10,
+    "offense": 80,
+    "abilityEffects": 80,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 51,
+    "mid": 63,
+    "late": 47,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "ϯ℮rpຣ༏chঌra",
+      "games": 524,
+      "items": [
+        "Magic Shoes",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "Garu",
+      "games": 653,
+      "items": [
+        "Rapid Boots",
+        "Sky Piercer",
+        "Blood Wings",
+        "Starlium Scythe",
+        "Divine Glaive",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "ဘာလဲဟ",
+      "games": 814,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Immortality"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

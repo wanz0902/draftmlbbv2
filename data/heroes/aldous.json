@@ -145,15 +145,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Sun",
+        "Hanzo",
+        "Helcurt",
+        "Diggie",
+        "Xavier"
+      ],
+      "weakAgainst": [
+        "Esmeralda",
+        "Karina",
+        "Melissa",
+        "Chip",
+        "Cici"
+      ],
+      "synergyWith": [
+        "Gloo",
+        "Barats",
+        "Tigreal"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 4.4
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.4
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 2.4
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.1
+      },
+      {
+        "name": "Xavier",
+        "advantage": 2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Esmeralda",
+        "advantage": 3.1
+      },
+      {
+        "name": "Karina",
+        "advantage": 2.6
+      },
+      {
+        "name": "Melissa",
+        "advantage": 2.6
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.3
+      },
+      {
+        "name": "Cici",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Gloo",
+        "synergy": 5
+      },
+      {
+        "name": "Barats",
+        "synergy": 5
+      },
+      {
+        "name": "Tigreal",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -192,5 +263,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.9,
+  "pickRate": 0.4,
+  "banRate": 0.5,
+  "heroAttributes": {
+    "durability": 70,
+    "offense": 30,
+    "abilityEffects": 50,
+    "difficulty": 60
+  },
+  "powerCurve": {
+    "early": 25,
+    "mid": 45,
+    "late": 70,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Call me ᴀʟᴅᴏs",
+      "games": 979,
+      "items": [
+        "Rapid Boots",
+        "Hunter Strike",
+        "Blade of the Heptaseas",
+        "Endless Battle",
+        "Malefic Roar",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "FahmiメAldous",
+      "games": 440,
+      "items": [
+        "Rapid Boots",
+        "Thunder Belt",
+        "Endless Battle",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Malefic Roar"
+      ]
+    },
+    {
+      "player": "FANTZY 969",
+      "games": 1295,
+      "items": [
+        "Rapid Boots",
+        "Blade of the Heptaseas",
+        "Endless Battle",
+        "Malefic Roar",
+        "Hunter Strike",
+        "Rose Gold Meteor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

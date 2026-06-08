@@ -144,15 +144,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Alice",
+        "Marcel",
+        "Faramis",
+        "X.Borg",
+        "Ling"
+      ],
+      "weakAgainst": [
+        "Lolita",
+        "Ixia",
+        "Nolan",
+        "Yin",
+        "Eudora"
+      ],
+      "synergyWith": [
+        "Carmilla",
+        "Chip",
+        "Granger"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Alice",
+        "advantage": 3.9
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.4
+      },
+      {
+        "name": "Faramis",
+        "advantage": 3.1
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3
+      },
+      {
+        "name": "Ling",
+        "advantage": 2.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.7
+      },
+      {
+        "name": "Ixia",
+        "advantage": 3.3
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.8
+      },
+      {
+        "name": "Yin",
+        "advantage": 2.7
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Carmilla",
+        "synergy": 5
+      },
+      {
+        "name": "Chip",
+        "synergy": 5
+      },
+      {
+        "name": "Granger",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -189,5 +260,64 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 53.3,
+  "pickRate": 1.1,
+  "banRate": 25.9,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 10,
+    "abilityEffects": 70,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 59,
+    "late": 59,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "CINDY",
+      "games": 1464,
+      "items": [
+        "Favor Demon Shoes",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Holy Crystal",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "Karyyyn",
+      "games": 1241,
+      "items": [
+        "Favor Demon Shoes",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Holy Crystal",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "ʚ TUANPUTRI F4NT ɞ",
+      "games": 1184,
+      "items": [
+        "Favor Demon Shoes",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Holy Crystal",
+        "Blood Wings"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

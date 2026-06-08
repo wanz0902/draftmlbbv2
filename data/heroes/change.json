@@ -143,15 +143,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Diggie",
+        "Masha",
+        "Barats",
+        "Balmond",
+        "Dyrroth"
+      ],
+      "weakAgainst": [
+        "Lolita",
+        "Gloo",
+        "Claude",
+        "Popol and Kupa",
+        "Baxia"
+      ],
+      "synergyWith": [
+        "Harley",
+        "Gloo",
+        "Dyrroth"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 3.2
+      },
+      {
+        "name": "Masha",
+        "advantage": 1.9
+      },
+      {
+        "name": "Barats",
+        "advantage": 1.8
+      },
+      {
+        "name": "Balmond",
+        "advantage": 1.7
+      },
+      {
+        "name": "Dyrroth",
+        "advantage": 1.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 5.5
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.9
+      },
+      {
+        "name": "Claude",
+        "advantage": 2.4
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.3
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harley",
+        "synergy": 5
+      },
+      {
+        "name": "Gloo",
+        "synergy": 5
+      },
+      {
+        "name": "Dyrroth",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -185,5 +256,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.8,
+  "pickRate": 0.8,
+  "banRate": 0.6,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 80,
+    "abilityEffects": 20,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 51,
+    "mid": 63,
+    "late": 56,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "❀ eimie chan ❀",
+      "games": 611,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Lightning Truncheon",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "JUNN SNOWY",
+      "games": 618,
+      "items": [
+        "Lightning Truncheon",
+        "Arcane Boots",
+        "Genius Wand",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "Ryyam yoenju",
+      "games": 454,
+      "items": [
+        "Arcane Boots",
+        "Sky Piercer",
+        "Necklace of Durance",
+        "Holy Crystal",
+        "Lightning Truncheon",
+        "Blood Wings"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

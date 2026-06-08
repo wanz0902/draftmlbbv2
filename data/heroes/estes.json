@@ -144,15 +144,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Faramis",
+        "Cyclops",
+        "Masha",
+        "Uranus",
+        "Cici"
+      ],
+      "weakAgainst": [
+        "Ixia",
+        "Beatrix",
+        "Nolan",
+        "Yin",
+        "Atlas"
+      ],
+      "synergyWith": [
+        "Kimmy",
+        "Baxia",
+        "Barats"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 4.2
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 4
+      },
+      {
+        "name": "Masha",
+        "advantage": 3.8
+      },
+      {
+        "name": "Uranus",
+        "advantage": 3.5
+      },
+      {
+        "name": "Cici",
+        "advantage": 3.5
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Ixia",
+        "advantage": 5.8
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 4.6
+      },
+      {
+        "name": "Nolan",
+        "advantage": 4.5
+      },
+      {
+        "name": "Yin",
+        "advantage": 4.3
+      },
+      {
+        "name": "Atlas",
+        "advantage": 3.7
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Kimmy",
+        "synergy": 5
+      },
+      {
+        "name": "Baxia",
+        "synergy": 5
+      },
+      {
+        "name": "Barats",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -189,5 +260,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 52.3,
+  "pickRate": 0.6,
+  "banRate": 48.7,
+  "heroAttributes": {
+    "durability": 70,
+    "offense": 10,
+    "abilityEffects": 20,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 35,
+    "mid": 55,
+    "late": 66,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Villarosse",
+      "games": 1898,
+      "items": [
+        "Rapid Boots",
+        "Flask of the Oasis",
+        "Necklace of Durance",
+        "Fleeting Time",
+        "Holy Crystal",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "A B U N",
+      "games": 1554,
+      "items": [
+        "Favor Rapid Boots",
+        "Flask of the Oasis",
+        "Necklace of Durance",
+        "Fleeting Time",
+        "Athena's Shield",
+        "Antique Cuirass"
+      ]
+    },
+    {
+      "player": "Violetta Az-Zahra.",
+      "games": 1227,
+      "items": [
+        "Flask of the Oasis",
+        "Favor Tough Boots",
+        "Necklace of Durance",
+        "Holy Crystal",
+        "Oracle"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

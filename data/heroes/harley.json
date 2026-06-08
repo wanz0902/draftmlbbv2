@@ -244,15 +244,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Hanzo",
+        "Joy",
+        "Yve",
+        "Angela",
+        "Gord"
+      ],
+      "weakAgainst": [
+        "Lolita",
+        "Chip",
+        "Saber",
+        "Eudora",
+        "Brody"
+      ],
+      "synergyWith": [
+        "Valentina",
+        "Lylia",
+        "Zhask"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Hanzo",
+        "advantage": 2.7
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.3
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.2
+      },
+      {
+        "name": "Angela",
+        "advantage": 2
+      },
+      {
+        "name": "Gord",
+        "advantage": 2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.1
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.7
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.4
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.4
+      },
+      {
+        "name": "Brody",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Valentina",
+        "synergy": 5
+      },
+      {
+        "name": "Lylia",
+        "synergy": 5
+      },
+      {
+        "name": "Zhask",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -289,5 +360,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.2,
+  "pickRate": 1.2,
+  "banRate": 70.3,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 90,
+    "abilityEffects": 10,
+    "difficulty": 60
+  },
+  "powerCurve": {
+    "early": 59,
+    "mid": 63,
+    "late": 43,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Tiktok : Yuwan 1990",
+      "games": 984,
+      "items": [
+        "Arcane Boots",
+        "Sky Piercer",
+        "Glowing Wand",
+        "Genius Wand",
+        "Feather of Heaven",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "TT: Flyyy X T4RN0.",
+      "games": 692,
+      "items": [
+        "Ice Arcane Boots",
+        "Genius Wand",
+        "Feather of Heaven",
+        "Divine Glaive",
+        "Lightning Truncheon",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "㊝ ᴢᴇʀᴏ",
+      "games": 1105,
+      "items": [
+        "Beast Arcane Boots",
+        "Genius Wand",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Feather of Heaven"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

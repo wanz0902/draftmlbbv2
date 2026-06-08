@@ -179,15 +179,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lolita",
+        "Argus",
+        "Aldous",
+        "Lapu-Lapu",
+        "Phoveus"
+      ],
+      "weakAgainst": [
+        "Marcel",
+        "Karrie",
+        "Lunox",
+        "Dyrroth",
+        "Natan"
+      ],
+      "synergyWith": [
+        "Natalia",
+        "Helcurt",
+        "Aulus"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.6
+      },
+      {
+        "name": "Argus",
+        "advantage": 3.7
+      },
+      {
+        "name": "Aldous",
+        "advantage": 3.1
+      },
+      {
+        "name": "Lapu-Lapu",
+        "advantage": 3
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 2.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 3.1
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.9
+      },
+      {
+        "name": "Lunox",
+        "advantage": 2.8
+      },
+      {
+        "name": "Dyrroth",
+        "advantage": 2.5
+      },
+      {
+        "name": "Natan",
+        "advantage": 2.5
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Natalia",
+        "synergy": 5
+      },
+      {
+        "name": "Helcurt",
+        "synergy": 5
+      },
+      {
+        "name": "Aulus",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -227,5 +298,67 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 43.5,
+  "pickRate": 0.4,
+  "banRate": 0.7,
+  "heroAttributes": {
+    "durability": 90,
+    "offense": 30,
+    "abilityEffects": 60,
+    "difficulty": 60
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 59,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "shpuntikmimi owner",
+      "games": 599,
+      "items": [
+        "Tough Boots",
+        "Necklace of Durance",
+        "Oracle",
+        "Dominance Ice",
+        "Blade Armor",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "Sanex",
+      "games": 546,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Oracle",
+        "Brute Force Breastplate",
+        "Dominance Ice",
+        "Blade Armor"
+      ]
+    },
+    {
+      "player": "L U T H F I M A N",
+      "games": 660,
+      "items": [
+        "Warrior Boots",
+        "Necklace of Durance",
+        "Oracle",
+        "Dominance Ice",
+        "Brute Force Breastplate",
+        "Athena's Shield"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

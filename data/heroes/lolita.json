@@ -144,15 +144,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Cyclops",
+        "Chang'e",
+        "Edith",
+        "Bane",
+        "Bruno"
+      ],
+      "weakAgainst": [
+        "Yve",
+        "Zhuxin",
+        "Kadita",
+        "Esmeralda",
+        "Aurora"
+      ],
+      "synergyWith": [
+        "Mathilda",
+        "Saber",
+        "Floryn"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Cyclops",
+        "advantage": 9.4
+      },
+      {
+        "name": "Chang'e",
+        "advantage": 5.5
+      },
+      {
+        "name": "Edith",
+        "advantage": 5
+      },
+      {
+        "name": "Bane",
+        "advantage": 4.5
+      },
+      {
+        "name": "Bruno",
+        "advantage": 4.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 7
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 6.6
+      },
+      {
+        "name": "Kadita",
+        "advantage": 4.9
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 4.6
+      },
+      {
+        "name": "Aurora",
+        "advantage": 4.2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Mathilda",
+        "synergy": 5
+      },
+      {
+        "name": "Saber",
+        "synergy": 5
+      },
+      {
+        "name": "Floryn",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -191,5 +262,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 54.8,
+  "pickRate": 0.1,
+  "banRate": 1.7,
+  "heroAttributes": {
+    "durability": 100,
+    "offense": 10,
+    "abilityEffects": 90,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 61,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "TT : Vanny14 X Loli.",
+      "games": 1103,
+      "items": [
+        "Favor Tough Boots",
+        "Flask of the Oasis",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Oracle",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "KalDanilo x J1KENNN",
+      "games": 1318,
+      "items": [
+        "Flask of the Oasis",
+        "Favor Tough Boots",
+        "Chastise Pauldron",
+        "Oracle",
+        "Dominance Ice",
+        "Guardian Helmet"
+      ]
+    },
+    {
+      "player": "Samet'",
+      "games": 1129,
+      "items": [
+        "Favor Tough Boots",
+        "Flask of the Oasis",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Chastise Pauldron"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

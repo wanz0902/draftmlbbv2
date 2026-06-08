@@ -226,15 +226,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Melissa",
+        "Atlas",
+        "Fanny",
+        "Barats",
+        "Silvanna"
+      ],
+      "weakAgainst": [
+        "Angela",
+        "Cyclops",
+        "Aamon",
+        "Odette",
+        "Lesley"
+      ],
+      "synergyWith": [
+        "Ixia",
+        "Fredrinn",
+        "Valentina"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Melissa",
+        "advantage": 6.4
+      },
+      {
+        "name": "Atlas",
+        "advantage": 6.4
+      },
+      {
+        "name": "Fanny",
+        "advantage": 4
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.9
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 3.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Angela",
+        "advantage": 5
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 4.7
+      },
+      {
+        "name": "Aamon",
+        "advantage": 4.1
+      },
+      {
+        "name": "Odette",
+        "advantage": 4.1
+      },
+      {
+        "name": "Lesley",
+        "advantage": 3.8
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Ixia",
+        "synergy": 5
+      },
+      {
+        "name": "Fredrinn",
+        "synergy": 5
+      },
+      {
+        "name": "Valentina",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -271,5 +342,22 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 55.2,
+  "pickRate": 0.3,
+  "banRate": 122.1,
+  "heroAttributes": {
+    "durability": 70,
+    "offense": 30,
+    "abilityEffects": 100,
+    "difficulty": 30
+  },
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

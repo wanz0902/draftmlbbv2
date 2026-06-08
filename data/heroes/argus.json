@@ -145,15 +145,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Masha",
+        "Saber",
+        "Karrie",
+        "Minsitthar",
+        "Diggie"
+      ],
+      "weakAgainst": [
+        "Esmeralda",
+        "Ruby",
+        "Uranus",
+        "Barats",
+        "Fredrinn"
+      ],
+      "synergyWith": [
+        "Gloo",
+        "Balmond",
+        "Johnson"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 5.7
+      },
+      {
+        "name": "Saber",
+        "advantage": 3.2
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.8
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 2.5
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.3
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Esmeralda",
+        "advantage": 3.7
+      },
+      {
+        "name": "Ruby",
+        "advantage": 3.4
+      },
+      {
+        "name": "Uranus",
+        "advantage": 3.1
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.1
+      },
+      {
+        "name": "Fredrinn",
+        "advantage": 3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Gloo",
+        "synergy": 5
+      },
+      {
+        "name": "Balmond",
+        "synergy": 5
+      },
+      {
+        "name": "Johnson",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -192,5 +263,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 52.5,
+  "pickRate": 0.4,
+  "banRate": 1.4,
+  "heroAttributes": {
+    "durability": 70,
+    "offense": 50,
+    "abilityEffects": 50,
+    "difficulty": 60
+  },
+  "powerCurve": {
+    "early": 38,
+    "mid": 52,
+    "late": 64,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "malaikat jatuh",
+      "games": 838,
+      "items": [
+        "Corrosion Scythe",
+        "Windtalker",
+        "Berserker's Fury",
+        "Haas' Claws",
+        "Blade of Despair",
+        "Great Dragon Spear"
+      ]
+    },
+    {
+      "player": "Wrath",
+      "games": 865,
+      "items": [
+        "Corrosion Scythe",
+        "Swift Boots",
+        "Windtalker",
+        "Haas' Claws",
+        "Sea Halberd",
+        "Great Dragon Spear"
+      ]
+    },
+    {
+      "player": "~愛AshleyBlaireswip",
+      "games": 844,
+      "items": [
+        "Windtalker",
+        "Sea Halberd",
+        "Berserker's Fury",
+        "Malefic Roar",
+        "Blood Wings",
+        "Winter Crown"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

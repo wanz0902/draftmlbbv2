@@ -170,15 +170,81 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Gloo",
+        "Esmeralda",
+        "Minsitthar",
+        "Atlas",
+        "Hylos"
+      ],
+      "weakAgainst": [
+        "Masha",
+        "Wanwan",
+        "Sora",
+        "Paquito"
+      ],
+      "synergyWith": [
+        "Bane",
+        "Sun",
+        "Guinevere"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 2.9
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 1.9
+      },
+      {
+        "name": "Atlas",
+        "advantage": 1.8
+      },
+      {
+        "name": "Hylos",
+        "advantage": 1.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 3.9
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.5
+      },
+      {
+        "name": "Sora",
+        "advantage": 1.8
+      },
+      {
+        "name": "Paquito",
+        "advantage": 1.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Bane",
+        "synergy": 5
+      },
+      {
+        "name": "Sun",
+        "synergy": 5
+      },
+      {
+        "name": "Guinevere",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -216,5 +282,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.8,
+  "pickRate": 1.2,
+  "banRate": 2.9,
+  "heroAttributes": {
+    "durability": 70,
+    "offense": 40,
+    "abilityEffects": 70,
+    "difficulty": 70
+  },
+  "powerCurve": {
+    "early": 56,
+    "mid": 64,
+    "late": 53,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Call me ʏᴢᴏɴɢ",
+      "games": 788,
+      "items": [
+        "War Axe",
+        "Tough Boots",
+        "Queen's Wings",
+        "Oracle",
+        "Hunter Strike",
+        "Brute Force Breastplate"
+      ]
+    },
+    {
+      "player": "Hisap Sampe Kering.",
+      "games": 948,
+      "items": [
+        "Tough Boots",
+        "Hunter Strike",
+        "War Axe",
+        "Queen's Wings",
+        "Oracle",
+        "Malefic Roar"
+      ]
+    },
+    {
+      "player": "VG",
+      "games": 992,
+      "items": [
+        "Tough Boots",
+        "War Axe",
+        "Dominance Ice",
+        "Queen's Wings",
+        "Oracle",
+        "Brute Force Breastplate"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

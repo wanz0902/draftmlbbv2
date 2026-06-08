@@ -385,15 +385,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Gloo",
+        "Natalia",
+        "Karina",
+        "Hanzo",
+        "Wanwan"
+      ],
+      "weakAgainst": [
+        "Barats",
+        "Edith",
+        "Fredrinn",
+        "Ruby",
+        "Bane"
+      ],
+      "synergyWith": [
+        "Chip",
+        "Ixia",
+        "Harley"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 3.6
+      },
+      {
+        "name": "Natalia",
+        "advantage": 3.2
+      },
+      {
+        "name": "Karina",
+        "advantage": 3.1
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 3
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 3.2
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.4
+      },
+      {
+        "name": "Fredrinn",
+        "advantage": 2.3
+      },
+      {
+        "name": "Ruby",
+        "advantage": 2.1
+      },
+      {
+        "name": "Bane",
+        "advantage": 1.8
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Chip",
+        "synergy": 5
+      },
+      {
+        "name": "Ixia",
+        "synergy": 5
+      },
+      {
+        "name": "Harley",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -428,5 +499,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.1,
+  "pickRate": 0.3,
+  "banRate": 0.4,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 90,
+    "abilityEffects": 20,
+    "difficulty": 90
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 61,
+    "late": 63,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Prince Levii Qian",
+      "games": 1494,
+      "items": [
+        "Tough Boots",
+        "Sky Piercer",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Blood Wings"
+      ]
+    },
+    {
+      "player": "周仙仙耶",
+      "games": 1029,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Starlium Scythe",
+        "Glowing Wand"
+      ]
+    },
+    {
+      "player": "ㅤ ㅤㅤSolen",
+      "games": 1073,
+      "items": [
+        "Encourage Arcane Boots",
+        "Genius Wand",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Lightning Truncheon",
+        "Starlium Scythe"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

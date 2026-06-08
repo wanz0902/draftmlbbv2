@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Wanwan",
+        "Benedetta",
+        "Beatrix",
+        "Sun",
+        "Marcel"
+      ],
+      "weakAgainst": [
+        "Uranus",
+        "Saber",
+        "Brody",
+        "Eudora",
+        "Hilda"
+      ],
+      "synergyWith": [
+        "Harith",
+        "Angela",
+        "Popol and Kupa"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Wanwan",
+        "advantage": 3.5
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 2.9
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 2.2
+      },
+      {
+        "name": "Sun",
+        "advantage": 2.2
+      },
+      {
+        "name": "Marcel",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Uranus",
+        "advantage": 2.7
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.7
+      },
+      {
+        "name": "Brody",
+        "advantage": 2.7
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.6
+      },
+      {
+        "name": "Hilda",
+        "advantage": 2.4
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harith",
+        "synergy": 5
+      },
+      {
+        "name": "Angela",
+        "synergy": 5
+      },
+      {
+        "name": "Popol and Kupa",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -212,5 +283,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.5,
+  "pickRate": 0.5,
+  "banRate": 0.3,
+  "heroAttributes": {
+    "durability": 10,
+    "offense": 80,
+    "abilityEffects": 10,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 33,
+    "mid": 50,
+    "late": 67,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Wayne.",
+      "games": 841,
+      "items": [
+        "Windtalker",
+        "Haas' Claws",
+        "Berserker's Fury",
+        "Malefic Gun",
+        "Great Dragon Spear",
+        "Corrosion Scythe"
+      ]
+    },
+    {
+      "player": "Ping no counter",
+      "games": 1100,
+      "items": [
+        "Tough Boots",
+        "Windtalker",
+        "Haas' Claws",
+        "Berserker's Fury",
+        "Malefic Gun",
+        "Great Dragon Spear"
+      ]
+    },
+    {
+      "player": "Ray1",
+      "games": 1417,
+      "items": [
+        "Warrior Boots",
+        "Windtalker",
+        "Haas' Claws",
+        "Berserker's Fury",
+        "Malefic Gun",
+        "Great Dragon Spear"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -167,15 +167,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Argus",
+        "Irithel",
+        "Layla",
+        "Obsidia",
+        "Gatotkaca"
+      ],
+      "weakAgainst": [
+        "Estes",
+        "Dyrroth",
+        "Angela",
+        "Karrie",
+        "Natan"
+      ],
+      "synergyWith": [
+        "Angela",
+        "Marcel",
+        "Diggie"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Argus",
+        "advantage": 3.1
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.7
+      },
+      {
+        "name": "Layla",
+        "advantage": 2.5
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.3
+      },
+      {
+        "name": "Gatotkaca",
+        "advantage": 2.3
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 3.5
+      },
+      {
+        "name": "Dyrroth",
+        "advantage": 2.9
+      },
+      {
+        "name": "Angela",
+        "advantage": 2.9
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.5
+      },
+      {
+        "name": "Natan",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Angela",
+        "synergy": 5
+      },
+      {
+        "name": "Marcel",
+        "synergy": 5
+      },
+      {
+        "name": "Diggie",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -211,5 +282,67 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.4,
+  "pickRate": 0.5,
+  "banRate": 0.9,
+  "heroAttributes": {
+    "durability": 100,
+    "offense": 20,
+    "abilityEffects": 20,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 53,
+    "mid": 59,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Kyaw Zaw",
+      "games": 1067,
+      "items": [
+        "Tough Boots",
+        "Thunder Belt",
+        "Blade Armor",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Cursed Helmet"
+      ]
+    },
+    {
+      "player": "King ler X eunsoo",
+      "games": 886,
+      "items": [
+        "Tough Boots",
+        "Dominance Ice",
+        "Oracle",
+        "Brute Force Breastplate",
+        "Antique Cuirass",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "ㄥ卂爪乇几ㄒ",
+      "games": 999,
+      "items": [
+        "Demon Shoes",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Chastise Pauldron",
+        "Oracle"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

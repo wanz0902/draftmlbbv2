@@ -166,15 +166,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Wanwan",
+        "Freya",
+        "Harith",
+        "Khaleed",
+        "Benedetta"
+      ],
+      "weakAgainst": [
+        "X.Borg",
+        "Gord",
+        "Minsitthar",
+        "Bane",
+        "Alpha"
+      ],
+      "synergyWith": [
+        "Lukas",
+        "Diggie",
+        "Valentina"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Wanwan",
+        "advantage": 6
+      },
+      {
+        "name": "Freya",
+        "advantage": 4.5
+      },
+      {
+        "name": "Harith",
+        "advantage": 3.7
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 3.7
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 3.5
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "X.Borg",
+        "advantage": 4.1
+      },
+      {
+        "name": "Gord",
+        "advantage": 3.2
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 3.1
+      },
+      {
+        "name": "Bane",
+        "advantage": 3
+      },
+      {
+        "name": "Alpha",
+        "advantage": 3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Lukas",
+        "synergy": 5
+      },
+      {
+        "name": "Diggie",
+        "synergy": 5
+      },
+      {
+        "name": "Valentina",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -212,5 +283,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.1,
+  "pickRate": 0.7,
+  "banRate": 3.2,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 80,
+    "abilityEffects": 50,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 45,
+    "mid": 61,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Lecrec 乂 N'mare",
+      "games": 1246,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Oracle",
+        "Athena's Shield",
+        "Antique Cuirass"
+      ]
+    },
+    {
+      "player": "ᴊᴀᴜꜱᴀɴXPV",
+      "games": 1160,
+      "items": [
+        "Tough Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Oracle",
+        "Antique Cuirass",
+        "Guardian Helmet"
+      ]
+    },
+    {
+      "player": "тнєgσ∂тιєя",
+      "games": 853,
+      "items": [
+        "Tough Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Dominance Ice",
+        "Antique Cuirass",
+        "Athena's Shield"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

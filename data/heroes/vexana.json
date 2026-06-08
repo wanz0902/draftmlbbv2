@@ -282,15 +282,59 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
+      "strongAgainst": [
+        "Gloo",
+        "Chip",
+        "Zhask",
+        "Phoveus",
+        "Odette"
+      ],
       "weakAgainst": [],
-      "synergyWith": []
+      "synergyWith": [
+        "Harley",
+        "Aldous",
+        "Sun"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 2.5
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.1
+      },
+      {
+        "name": "Zhask",
+        "advantage": 1.7
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 1.7
+      },
+      {
+        "name": "Odette",
+        "advantage": 1.6
+      }
+    ],
     "weakAgainst": [],
-    "synergyHeroes": [],
+    "synergyHeroes": [
+      {
+        "name": "Harley",
+        "synergy": 5
+      },
+      {
+        "name": "Aldous",
+        "synergy": 5
+      },
+      {
+        "name": "Sun",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -323,5 +367,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.8,
+  "pickRate": 1.9,
+  "banRate": 1.8,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 90,
+    "abilityEffects": 50,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 38,
+    "mid": 58,
+    "late": 62,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Lord Sem a Vexana",
+      "games": 949,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Blood Wings",
+        "Divine Glaive",
+        "Lightning Truncheon",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "Uccy",
+      "games": 807,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Sky Piercer",
+        "Blood Wings",
+        "Genius Wand",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "jerukk",
+      "games": 1341,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Glowing Wand",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Blood Wings"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

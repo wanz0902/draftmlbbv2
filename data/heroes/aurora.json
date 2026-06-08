@@ -279,15 +279,81 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lolita",
+        "Odette",
+        "Eudora",
+        "Chip",
+        "Masha"
+      ],
+      "weakAgainst": [
+        "Lancelot",
+        "Gatotkaca",
+        "Selena",
+        "Pharsa"
+      ],
+      "synergyWith": [
+        "Harley",
+        "Aulus",
+        "Zhask"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.2
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.3
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.1
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.1
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lancelot",
+        "advantage": 1.9
+      },
+      {
+        "name": "Gatotkaca",
+        "advantage": 1.6
+      },
+      {
+        "name": "Selena",
+        "advantage": 1.5
+      },
+      {
+        "name": "Pharsa",
+        "advantage": 1.2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harley",
+        "synergy": 5
+      },
+      {
+        "name": "Aulus",
+        "synergy": 5
+      },
+      {
+        "name": "Zhask",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -322,5 +388,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.8,
+  "pickRate": 0.4,
+  "banRate": 0.3,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 70,
+    "abilityEffects": 100,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 58,
+    "late": 61,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Versåce",
+      "games": 896,
+      "items": [
+        "Rapid Boots",
+        "Sky Piercer",
+        "Glowing Wand",
+        "Ice Queen Wand",
+        "Blood Wings",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "Chira 乂 N'mare",
+      "games": 587,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Sky Piercer",
+        "Starlium Scythe",
+        "Divine Glaive",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "Pyke",
+      "games": 216,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Holy Crystal",
+        "Blood Wings",
+        "Starlium Scythe",
+        "Divine Glaive"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

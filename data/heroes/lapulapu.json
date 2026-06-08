@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Popol and Kupa",
+        "Argus",
+        "Atlas",
+        "Silvanna",
+        "Vale"
+      ],
+      "weakAgainst": [
+        "Esmeralda",
+        "Harith",
+        "Kaja",
+        "Karrie",
+        "Claude"
+      ],
+      "synergyWith": [
+        "Marcel",
+        "Aulus",
+        "Bane"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.7
+      },
+      {
+        "name": "Argus",
+        "advantage": 2.7
+      },
+      {
+        "name": "Atlas",
+        "advantage": 2.3
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 2.2
+      },
+      {
+        "name": "Vale",
+        "advantage": 2.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Esmeralda",
+        "advantage": 3
+      },
+      {
+        "name": "Harith",
+        "advantage": 2.6
+      },
+      {
+        "name": "Kaja",
+        "advantage": 2.4
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.3
+      },
+      {
+        "name": "Claude",
+        "advantage": 1.9
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Marcel",
+        "synergy": 5
+      },
+      {
+        "name": "Aulus",
+        "synergy": 5
+      },
+      {
+        "name": "Bane",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -215,5 +286,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.3,
+  "pickRate": 0.5,
+  "banRate": 1,
+  "heroAttributes": {
+    "durability": 80,
+    "offense": 40,
+    "abilityEffects": 40,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 44,
+    "mid": 59,
+    "late": 52,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "P A I N ?",
+      "games": 1357,
+      "items": [
+        "Tough Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Oracle",
+        "Dominance Ice",
+        "Brute Force Breastplate"
+      ]
+    },
+    {
+      "player": "Maktanchik.",
+      "games": 1175,
+      "items": [
+        "War Axe",
+        "Tough Boots",
+        "Brute Force Breastplate",
+        "Oracle",
+        "Queen's Wings",
+        "Hunter Strike"
+      ]
+    },
+    {
+      "player": "n54f18ba0a",
+      "games": 564,
+      "items": [
+        "Thunder Belt",
+        "Warrior Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Oracle",
+        "Immortality"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

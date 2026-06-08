@@ -265,15 +265,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Phoveus",
+        "Chip",
+        "Faramis",
+        "Baxia",
+        "Khufra"
+      ],
+      "weakAgainst": [
+        "Lolita",
+        "Yve",
+        "Nolan",
+        "Novaria",
+        "Vale"
+      ],
+      "synergyWith": [
+        "Sora",
+        "Arlott",
+        "Atlas"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Phoveus",
+        "advantage": 3
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.4
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.3
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2
+      },
+      {
+        "name": "Khufra",
+        "advantage": 1.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.5
+      },
+      {
+        "name": "Yve",
+        "advantage": 3.2
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.2
+      },
+      {
+        "name": "Novaria",
+        "advantage": 2
+      },
+      {
+        "name": "Vale",
+        "advantage": 1.5
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Sora",
+        "synergy": 5
+      },
+      {
+        "name": "Arlott",
+        "synergy": 5
+      },
+      {
+        "name": "Atlas",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -314,5 +385,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.5,
+  "pickRate": 0.3,
+  "banRate": 0.2,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 60,
+    "abilityEffects": 40,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 41,
+    "mid": 58,
+    "late": 60,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "пронзаечка",
+      "games": 1439,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Sky Piercer",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "Jeann.",
+      "games": 1019,
+      "items": [
+        "Magic Shoes",
+        "Hunter Strike",
+        "Endless Battle",
+        "Blade of Despair",
+        "Malefic Roar",
+        "War Axe"
+      ]
+    },
+    {
+      "player": "Worgam.",
+      "games": 1131,
+      "items": [
+        "Sky Piercer",
+        "Ice Rapid Boots",
+        "War Axe",
+        "Hunter Strike",
+        "Endless Battle",
+        "Malefic Roar"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

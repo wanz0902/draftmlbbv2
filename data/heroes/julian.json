@@ -146,15 +146,66 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Faramis",
+        "Diggie",
+        "Sun",
+        "Esmeralda",
+        "Uranus"
+      ],
+      "weakAgainst": [
+        "Guinevere"
+      ],
+      "synergyWith": [
+        "Atlas",
+        "Johnson",
+        "Tigreal"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 2.4
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.2
+      },
+      {
+        "name": "Sun",
+        "advantage": 2.1
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.1
+      },
+      {
+        "name": "Uranus",
+        "advantage": 1.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Guinevere",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Atlas",
+        "synergy": 5
+      },
+      {
+        "name": "Johnson",
+        "synergy": 5
+      },
+      {
+        "name": "Tigreal",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -194,5 +245,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50,
+  "pickRate": 1.2,
+  "banRate": 3.9,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 60,
+    "abilityEffects": 70,
+    "difficulty": 20
+  },
+  "powerCurve": {
+    "early": 63,
+    "mid": 59,
+    "late": 47,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Part of Julian",
+      "games": 1171,
+      "items": [
+        "Flame Arcane Boots",
+        "Feather of Heaven",
+        "Concentrated Energy",
+        "Windtalker",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "Dikkwxyz",
+      "games": 1768,
+      "items": [
+        "Flame Arcane Boots",
+        "Feather of Heaven",
+        "Concentrated Energy",
+        "Windtalker",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "Lana deI prhoo.",
+      "games": 850,
+      "items": [
+        "Flame Magic Shoes",
+        "Feather of Heaven",
+        "Concentrated Energy",
+        "Windtalker",
+        "Holy Crystal"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

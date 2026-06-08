@@ -281,15 +281,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Barats",
+        "Eudora",
+        "Layla",
+        "Argus",
+        "Khufra"
+      ],
+      "weakAgainst": [
+        "Yve",
+        "Valir",
+        "Karrie",
+        "Zhuxin",
+        "Rafaela"
+      ],
+      "synergyWith": [
+        "Natalia",
+        "Saber",
+        "Mathilda"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 2.5
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.4
+      },
+      {
+        "name": "Layla",
+        "advantage": 2.3
+      },
+      {
+        "name": "Argus",
+        "advantage": 2.1
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 3.3
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.7
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.5
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.4
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Natalia",
+        "synergy": 5
+      },
+      {
+        "name": "Saber",
+        "synergy": 5
+      },
+      {
+        "name": "Mathilda",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -328,5 +399,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.5,
+  "pickRate": 0.4,
+  "banRate": 1,
+  "heroAttributes": {
+    "durability": 100,
+    "offense": 20,
+    "abilityEffects": 80,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 61,
+    "late": 53,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Norikita Dignitaries",
+      "games": 1094,
+      "items": [
+        "Encourage Tough Boots",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Guardian Helmet",
+        "Radiant Armor",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "アンディ",
+      "games": 687,
+      "items": [
+        "Encourage Tough Boots",
+        "Radiant Armor",
+        "Dominance Ice",
+        "Immortality",
+        "Antique Cuirass",
+        "Chastise Pauldron"
+      ]
+    },
+    {
+      "player": "ιgи.",
+      "games": 1083,
+      "items": [
+        "Encourage Tough Boots",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Guardian Helmet",
+        "Radiant Armor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

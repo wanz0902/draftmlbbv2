@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Karina",
+        "Baxia",
+        "Beatrix",
+        "Natan",
+        "Ixia"
+      ],
+      "weakAgainst": [
+        "Fanny",
+        "Hilda",
+        "Mathilda",
+        "Uranus",
+        "Obsidia"
+      ],
+      "synergyWith": [
+        "Baxia",
+        "Floryn",
+        "Harith"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Karina",
+        "advantage": 4.1
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.8
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 2.5
+      },
+      {
+        "name": "Natan",
+        "advantage": 2
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Fanny",
+        "advantage": 3.9
+      },
+      {
+        "name": "Hilda",
+        "advantage": 2.8
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.3
+      },
+      {
+        "name": "Uranus",
+        "advantage": 2.2
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Baxia",
+        "synergy": 5
+      },
+      {
+        "name": "Floryn",
+        "synergy": 5
+      },
+      {
+        "name": "Harith",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -212,5 +283,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 42.6,
+  "pickRate": 1.4,
+  "banRate": 3.3,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 70,
+    "abilityEffects": 10,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 56,
+    "mid": 59,
+    "late": 48,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Na—Soo",
+      "games": 1381,
+      "items": [
+        "Sky Piercer",
+        "Hunter Strike",
+        "Tough Boots",
+        "Malefic Roar",
+        "Blade of Despair",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "EXTRA",
+      "games": 1854,
+      "items": [
+        "Hunter Strike",
+        "Sky Piercer",
+        "Rapid Boots",
+        "Blade of the Heptaseas",
+        "Malefic Roar",
+        "Blade of Despair"
+      ]
+    },
+    {
+      "player": "Jejee x EXTRA",
+      "games": 1552,
+      "items": [
+        "Sky Piercer",
+        "Hunter Strike",
+        "Magic Shoes",
+        "Malefic Roar",
+        "Blade of the Heptaseas",
+        "Blade of Despair"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

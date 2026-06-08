@@ -137,15 +137,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Sun",
+        "Gloo",
+        "Zhask",
+        "Esmeralda",
+        "Uranus"
+      ],
+      "weakAgainst": [
+        "Sora",
+        "Karina",
+        "Nolan",
+        "Granger",
+        "Arlott"
+      ],
+      "synergyWith": [
+        "Diggie",
+        "Chip",
+        "Lolita"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 4.8
+      },
+      {
+        "name": "Gloo",
+        "advantage": 4
+      },
+      {
+        "name": "Zhask",
+        "advantage": 3.4
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.5
+      },
+      {
+        "name": "Uranus",
+        "advantage": 2.3
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Sora",
+        "advantage": 3.5
+      },
+      {
+        "name": "Karina",
+        "advantage": 2.4
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.2
+      },
+      {
+        "name": "Granger",
+        "advantage": 2
+      },
+      {
+        "name": "Arlott",
+        "advantage": 2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Diggie",
+        "synergy": 5
+      },
+      {
+        "name": "Chip",
+        "synergy": 5
+      },
+      {
+        "name": "Lolita",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -179,5 +250,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.7,
+  "pickRate": 0.4,
+  "banRate": 0.3,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 60,
+    "abilityEffects": 20,
+    "difficulty": 20
+  },
+  "powerCurve": {
+    "early": 39,
+    "mid": 55,
+    "late": 66,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "TT: Yben.",
+      "games": 1395,
+      "items": [
+        "Arcane Boots",
+        "Feather of Heaven",
+        "Concentrated Energy",
+        "Windtalker",
+        "Divine Glaive",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "Dimm Bαckburner.",
+      "games": 1006,
+      "items": [
+        "Arcane Boots",
+        "Feather of Heaven",
+        "Windtalker",
+        "Concentrated Energy",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "ZonTzy x F4N'T",
+      "games": 843,
+      "items": [
+        "Feather of Heaven",
+        "Arcane Boots",
+        "Starlium Scythe",
+        "Windtalker",
+        "Divine Glaive",
+        "Holy Crystal"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -145,15 +145,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Gloo",
+        "Phoveus",
+        "Faramis",
+        "Lolita",
+        "Saber"
+      ],
+      "weakAgainst": [
+        "Yve",
+        "Hanzo",
+        "Nolan",
+        "Kaja",
+        "Atlas"
+      ],
+      "synergyWith": [
+        "Gloo",
+        "Atlas",
+        "Arlott"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 3.3
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 2.9
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.6
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.4
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 2.8
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.8
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.8
+      },
+      {
+        "name": "Kaja",
+        "advantage": 2.6
+      },
+      {
+        "name": "Atlas",
+        "advantage": 2.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Gloo",
+        "synergy": 5
+      },
+      {
+        "name": "Atlas",
+        "synergy": 5
+      },
+      {
+        "name": "Arlott",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -192,5 +263,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.9,
+  "pickRate": 0.2,
+  "banRate": 1.9,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 60,
+    "abilityEffects": 10,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 30,
+    "mid": 48,
+    "late": 67,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Xauluss x F4N'T",
+      "games": 675,
+      "items": [
+        "Ice Tough Boots",
+        "Corrosion Scythe",
+        "Malefic Roar",
+        "Golden Staff",
+        "Demon Hunter Sword",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "—'Heaven knows",
+      "games": 948,
+      "items": [
+        "Ice Tough Boots",
+        "Corrosion Scythe",
+        "Golden Staff",
+        "Malefic Gun",
+        "Sea Halberd",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "Aulus Player",
+      "games": 1254,
+      "items": [
+        "Favor Tough Boots",
+        "Corrosion Scythe",
+        "Golden Staff",
+        "Demon Hunter Sword",
+        "Rose Gold Meteor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

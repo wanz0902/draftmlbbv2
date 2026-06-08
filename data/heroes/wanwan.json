@@ -141,15 +141,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Ixia",
+        "Atlas",
+        "Yin",
+        "Gloo",
+        "Guinevere"
+      ],
+      "weakAgainst": [
+        "Phoveus",
+        "Bruno",
+        "Cyclops",
+        "Irithel",
+        "Faramis"
+      ],
+      "synergyWith": [
+        "Angela",
+        "Popol and Kupa",
+        "Harith"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Ixia",
+        "advantage": 3.9
+      },
+      {
+        "name": "Atlas",
+        "advantage": 3.8
+      },
+      {
+        "name": "Yin",
+        "advantage": 3.2
+      },
+      {
+        "name": "Gloo",
+        "advantage": 3.1
+      },
+      {
+        "name": "Guinevere",
+        "advantage": 3.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Phoveus",
+        "advantage": 6
+      },
+      {
+        "name": "Bruno",
+        "advantage": 3.8
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 3.5
+      },
+      {
+        "name": "Irithel",
+        "advantage": 3.5
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.9
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Angela",
+        "synergy": 5
+      },
+      {
+        "name": "Popol and Kupa",
+        "synergy": 5
+      },
+      {
+        "name": "Harith",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -183,5 +254,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.4,
+  "pickRate": 0.2,
+  "banRate": 0.3,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 60,
+    "abilityEffects": 30,
+    "difficulty": 60
+  },
+  "powerCurve": {
+    "early": 31,
+    "mid": 55,
+    "late": 70,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "KERO",
+      "games": 1404,
+      "items": [
+        "Corrosion Scythe",
+        "Windtalker",
+        "Demon Hunter Sword",
+        "Malefic Gun",
+        "Berserker's Fury",
+        "Wind of Nature"
+      ]
+    },
+    {
+      "player": "Iboyy",
+      "games": 622,
+      "items": [
+        "Corrosion Scythe",
+        "Windtalker",
+        "Haas' Claws",
+        "Demon Hunter Sword",
+        "Malefic Gun",
+        "Berserker's Fury"
+      ]
+    },
+    {
+      "player": "legend of chang'e",
+      "games": 916,
+      "items": [
+        "Corrosion Scythe",
+        "Windtalker",
+        "Haas' Claws",
+        "Sky Piercer",
+        "Malefic Gun",
+        "Berserker's Fury"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

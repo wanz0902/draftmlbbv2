@@ -416,15 +416,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lolita",
+        "Hanzo",
+        "Belerick",
+        "Yin",
+        "Sun"
+      ],
+      "weakAgainst": [
+        "Chip",
+        "Harith",
+        "Lukas",
+        "Freya",
+        "Kaja"
+      ],
+      "synergyWith": [
+        "Zhuxin",
+        "Valentina",
+        "Cyclops"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.8
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2
+      },
+      {
+        "name": "Belerick",
+        "advantage": 1.9
+      },
+      {
+        "name": "Yin",
+        "advantage": 1.7
+      },
+      {
+        "name": "Sun",
+        "advantage": 1.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Chip",
+        "advantage": 2.9
+      },
+      {
+        "name": "Harith",
+        "advantage": 2.7
+      },
+      {
+        "name": "Lukas",
+        "advantage": 2.2
+      },
+      {
+        "name": "Freya",
+        "advantage": 2.2
+      },
+      {
+        "name": "Kaja",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Zhuxin",
+        "synergy": 5
+      },
+      {
+        "name": "Valentina",
+        "synergy": 5
+      },
+      {
+        "name": "Cyclops",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -459,5 +530,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.2,
+  "pickRate": 0.6,
+  "banRate": 1.2,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 90,
+    "abilityEffects": 40,
+    "difficulty": 80
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 59,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Odessà.",
+      "games": 1856,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Holy Crystal",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Blood Wings"
+      ]
+    },
+    {
+      "player": "Izanagi.",
+      "games": 2161,
+      "items": [
+        "Arcane Boots",
+        "Sky Piercer",
+        "Genius Wand",
+        "Holy Crystal",
+        "Lightning Truncheon",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "Kyroxx.",
+      "games": 992,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Blood Wings",
+        "Glowing Wand"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

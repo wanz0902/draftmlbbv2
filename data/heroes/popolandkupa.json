@@ -141,15 +141,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Masha",
+        "Selena",
+        "Aamon",
+        "Jawhead",
+        "Zilong"
+      ],
+      "weakAgainst": [
+        "Atlas",
+        "Carmilla",
+        "Sun",
+        "Alice",
+        "Marcel"
+      ],
+      "synergyWith": [
+        "Lesley",
+        "Granger",
+        "Clint"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 3.2
+      },
+      {
+        "name": "Selena",
+        "advantage": 2.7
+      },
+      {
+        "name": "Aamon",
+        "advantage": 2.5
+      },
+      {
+        "name": "Jawhead",
+        "advantage": 2.4
+      },
+      {
+        "name": "Zilong",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Atlas",
+        "advantage": 4.2
+      },
+      {
+        "name": "Carmilla",
+        "advantage": 4
+      },
+      {
+        "name": "Sun",
+        "advantage": 3.7
+      },
+      {
+        "name": "Alice",
+        "advantage": 3.5
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.4
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Lesley",
+        "synergy": 5
+      },
+      {
+        "name": "Granger",
+        "synergy": 5
+      },
+      {
+        "name": "Clint",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -183,5 +254,66 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 52.9,
+  "pickRate": 0.3,
+  "banRate": 0.4,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 70,
+    "abilityEffects": 70,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 55,
+    "mid": 59,
+    "late": 53,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "cʟaɪʀe",
+      "games": 1337,
+      "items": [
+        "Ice Tough Boots",
+        "Sea Halberd",
+        "Windtalker",
+        "Blade of Despair",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "TT : RainnDS",
+      "games": 810,
+      "items": [
+        "Flame Warrior Boots",
+        "Sea Halberd",
+        "Rose Gold Meteor",
+        "Windtalker",
+        "Great Dragon Spear",
+        "Wind of Nature"
+      ]
+    },
+    {
+      "player": "KUPA YT",
+      "games": 1356,
+      "items": [
+        "Tough Boots",
+        "Sea Halberd",
+        "Windtalker",
+        "Blade of Despair",
+        "Wind of Nature"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

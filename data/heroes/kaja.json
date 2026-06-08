@@ -177,15 +177,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Aulus",
+        "Wanwan",
+        "Lapu-Lapu",
+        "Baxia",
+        "Balmond"
+      ],
+      "weakAgainst": [
+        "Lesley",
+        "Chip",
+        "Odette",
+        "Rafaela",
+        "Layla"
+      ],
+      "synergyWith": [
+        "Karrie",
+        "Odette",
+        "Faramis"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Aulus",
+        "advantage": 2.6
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.6
+      },
+      {
+        "name": "Lapu-Lapu",
+        "advantage": 2.4
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.4
+      },
+      {
+        "name": "Balmond",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lesley",
+        "advantage": 2.8
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.7
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.5
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 2.4
+      },
+      {
+        "name": "Layla",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Karrie",
+        "synergy": 5
+      },
+      {
+        "name": "Odette",
+        "synergy": 5
+      },
+      {
+        "name": "Faramis",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -226,5 +297,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 53.8,
+  "pickRate": 0.3,
+  "banRate": 10.2,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 20,
+    "abilityEffects": 60,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 63,
+    "late": 47,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Natan Yeager",
+      "games": 1444,
+      "items": [
+        "Encourage Rapid Boots",
+        "Thunder Belt",
+        "Fleeting Time",
+        "Dominance Ice",
+        "Immortality",
+        "Brute Force Breastplate"
+      ]
+    },
+    {
+      "player": "ᴿᵘˢʰᵉʳ✰",
+      "games": 929,
+      "items": [
+        "Encourage Rapid Boots",
+        "Thunder Belt",
+        "Fleeting Time",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "Feyy x Madd",
+      "games": 614,
+      "items": [
+        "Encourage Rapid Boots",
+        "Fleeting Time",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Antique Cuirass"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

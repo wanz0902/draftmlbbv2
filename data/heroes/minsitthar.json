@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Freya",
+        "Phoveus",
+        "Martis",
+        "Alucard",
+        "Valentina"
+      ],
+      "weakAgainst": [
+        "Natalia",
+        "Baxia",
+        "Argus",
+        "Irithel",
+        "Obsidia"
+      ],
+      "synergyWith": [
+        "Estes",
+        "Rafaela",
+        "Hilda"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Freya",
+        "advantage": 3.9
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 3.1
+      },
+      {
+        "name": "Martis",
+        "advantage": 2.9
+      },
+      {
+        "name": "Alucard",
+        "advantage": 2.5
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 3.3
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.8
+      },
+      {
+        "name": "Argus",
+        "advantage": 2.5
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.1
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Estes",
+        "synergy": 5
+      },
+      {
+        "name": "Rafaela",
+        "synergy": 5
+      },
+      {
+        "name": "Hilda",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -216,5 +287,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.9,
+  "pickRate": 0.9,
+  "banRate": 23.8,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 40,
+    "abilityEffects": 80,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 45,
+    "mid": 61,
+    "late": 48,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Mattsing.",
+      "games": 557,
+      "items": [
+        "Encourage Swift Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Rose Gold Meteor",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "SixyNoir.",
+      "games": 487,
+      "items": [
+        "Tough Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Sea Halberd",
+        "Malefic Roar"
+      ]
+    },
+    {
+      "player": "عبد المجيد",
+      "games": 444,
+      "items": [
+        "Rapid Boots",
+        "Corrosion Scythe",
+        "Rose Gold Meteor",
+        "Demon Hunter Sword",
+        "Golden Staff"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

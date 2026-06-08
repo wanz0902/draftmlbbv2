@@ -148,15 +148,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Argus",
+        "Harith",
+        "Nana",
+        "Alucard",
+        "Ixia"
+      ],
+      "weakAgainst": [
+        "Marcel",
+        "Alice",
+        "Hanabi",
+        "Cici",
+        "Chip"
+      ],
+      "synergyWith": [
+        "Angela",
+        "Rafaela",
+        "Natalia"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Argus",
+        "advantage": 2.1
+      },
+      {
+        "name": "Harith",
+        "advantage": 1.9
+      },
+      {
+        "name": "Nana",
+        "advantage": 1.8
+      },
+      {
+        "name": "Alucard",
+        "advantage": 1.6
+      },
+      {
+        "name": "Ixia",
+        "advantage": 1.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 3.8
+      },
+      {
+        "name": "Alice",
+        "advantage": 3
+      },
+      {
+        "name": "Hanabi",
+        "advantage": 2.3
+      },
+      {
+        "name": "Cici",
+        "advantage": 2.2
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Angela",
+        "synergy": 5
+      },
+      {
+        "name": "Rafaela",
+        "synergy": 5
+      },
+      {
+        "name": "Natalia",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -196,5 +267,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.4,
+  "pickRate": 0.5,
+  "banRate": 2.9,
+  "heroAttributes": {
+    "durability": 90,
+    "offense": 30,
+    "abilityEffects": 90,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 61,
+    "late": 52,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Youtube ixirpanda",
+      "games": 1428,
+      "items": [
+        "Encourage Rapid Boots",
+        "Fleeting Time",
+        "Guardian Helmet",
+        "Dominance Ice",
+        "Immortality",
+        "Antique Cuirass"
+      ]
+    },
+    {
+      "player": "Namensシ",
+      "games": 682,
+      "items": [
+        "Smite Rapid Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Cursed Helmet",
+        "Guardian Helmet",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "roupp",
+      "games": 1143,
+      "items": [
+        "Encourage Rapid Boots",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Radiant Armor",
+        "Blade Armor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

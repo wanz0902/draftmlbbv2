@@ -241,15 +241,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Odette",
+        "Rafaela",
+        "Estes",
+        "Melissa",
+        "Marcel"
+      ],
+      "weakAgainst": [
+        "Gloo",
+        "Khaleed",
+        "Lapu-Lapu",
+        "Hylos",
+        "Terizla"
+      ],
+      "synergyWith": [
+        "Argus",
+        "Popol and Kupa",
+        "Harley"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Odette",
+        "advantage": 2.5
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 2.3
+      },
+      {
+        "name": "Estes",
+        "advantage": 2.2
+      },
+      {
+        "name": "Melissa",
+        "advantage": 2
+      },
+      {
+        "name": "Marcel",
+        "advantage": 1.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 2.9
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 2.4
+      },
+      {
+        "name": "Lapu-Lapu",
+        "advantage": 2.1
+      },
+      {
+        "name": "Hylos",
+        "advantage": 2
+      },
+      {
+        "name": "Terizla",
+        "advantage": 1.9
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Argus",
+        "synergy": 5
+      },
+      {
+        "name": "Popol and Kupa",
+        "synergy": 5
+      },
+      {
+        "name": "Harley",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -282,5 +353,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.7,
+  "pickRate": 0.6,
+  "banRate": 0.4,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 100,
+    "abilityEffects": 70,
+    "difficulty": 20
+  },
+  "powerCurve": {
+    "early": 35,
+    "mid": 61,
+    "late": 56,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "LALLAPALLOOZA",
+      "games": 476,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Blood Wings",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "İcardi44",
+      "games": 1522,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Blood Wings",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "g0d88",
+      "games": 489,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Blood Wings",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

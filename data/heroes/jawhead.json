@@ -141,15 +141,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Valentina",
+        "Zilong",
+        "Arlott",
+        "Helcurt",
+        "Karina"
+      ],
+      "weakAgainst": [
+        "Sun",
+        "Gloo",
+        "Esmeralda",
+        "Popol and Kupa",
+        "Chip"
+      ],
+      "synergyWith": [
+        "Rafaela",
+        "Estes",
+        "Lolita"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Valentina",
+        "advantage": 2.2
+      },
+      {
+        "name": "Zilong",
+        "advantage": 1.9
+      },
+      {
+        "name": "Arlott",
+        "advantage": 1.9
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 1.7
+      },
+      {
+        "name": "Karina",
+        "advantage": 1.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 4.1
+      },
+      {
+        "name": "Gloo",
+        "advantage": 3.3
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.8
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.4
+      },
+      {
+        "name": "Chip",
+        "advantage": 2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Rafaela",
+        "synergy": 5
+      },
+      {
+        "name": "Estes",
+        "synergy": 5
+      },
+      {
+        "name": "Lolita",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -186,5 +257,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.8,
+  "pickRate": 0.4,
+  "banRate": 0.4,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 30,
+    "abilityEffects": 60,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 61,
+    "mid": 56,
+    "late": 41,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "神┋Hyper Jawhead",
+      "games": 581,
+      "items": [
+        "Rapid Boots",
+        "Hunter Strike",
+        "Blade of the Heptaseas",
+        "Malefic Roar",
+        "Dominance Ice",
+        "Brute Force Breastplate"
+      ]
+    },
+    {
+      "player": "Suga x Brilliance",
+      "games": 593,
+      "items": [
+        "Encourage Rapid Boots",
+        "Dominance Ice",
+        "Guardian Helmet",
+        "Radiant Armor",
+        "Antique Cuirass",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "BorutoBeanie",
+      "games": 656,
+      "items": [
+        "Encourage Rapid Boots",
+        "Dominance Ice",
+        "Guardian Helmet",
+        "Radiant Armor",
+        "Antique Cuirass"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

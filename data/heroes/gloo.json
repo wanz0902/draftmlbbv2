@@ -166,15 +166,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Aamon",
+        "Johnson",
+        "Jawhead",
+        "Lesley",
+        "Chang'e"
+      ],
+      "weakAgainst": [
+        "Faramis",
+        "Moskov",
+        "Ruby",
+        "Alice",
+        "Fanny"
+      ],
+      "synergyWith": [
+        "Argus",
+        "Aldous",
+        "Aulus"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Aamon",
+        "advantage": 4.4
+      },
+      {
+        "name": "Johnson",
+        "advantage": 3.7
+      },
+      {
+        "name": "Jawhead",
+        "advantage": 3.3
+      },
+      {
+        "name": "Lesley",
+        "advantage": 3
+      },
+      {
+        "name": "Chang'e",
+        "advantage": 2.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 6
+      },
+      {
+        "name": "Moskov",
+        "advantage": 5.5
+      },
+      {
+        "name": "Ruby",
+        "advantage": 4.6
+      },
+      {
+        "name": "Alice",
+        "advantage": 4.6
+      },
+      {
+        "name": "Fanny",
+        "advantage": 4.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Argus",
+        "synergy": 5
+      },
+      {
+        "name": "Aldous",
+        "synergy": 5
+      },
+      {
+        "name": "Aulus",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -212,5 +283,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 55.4,
+  "pickRate": 0.6,
+  "banRate": 70.7,
+  "heroAttributes": {
+    "durability": 100,
+    "offense": 30,
+    "abilityEffects": 100,
+    "difficulty": 70
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 61,
+    "late": 53,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Onyx M4ling Besi",
+      "games": 419,
+      "items": [
+        "Rapid Boots",
+        "Cursed Helmet",
+        "Glowing Wand",
+        "Oracle",
+        "Guardian Helmet",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "BANGPELL",
+      "games": 642,
+      "items": [
+        "Encourage Rapid Boots",
+        "Cursed Helmet",
+        "Glowing Wand",
+        "Oracle",
+        "Guardian Helmet",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "Priaidaman939IH",
+      "games": 544,
+      "items": [
+        "Encourage Rapid Boots",
+        "Cursed Helmet",
+        "Glowing Wand",
+        "Oracle",
+        "Chastise Pauldron"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

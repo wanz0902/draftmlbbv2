@@ -239,15 +239,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Karina",
+        "Natalia",
+        "Belerick",
+        "Irithel",
+        "Helcurt"
+      ],
+      "weakAgainst": [
+        "Barats",
+        "Masha",
+        "Diggie",
+        "Khufra",
+        "Zhask"
+      ],
+      "synergyWith": [
+        "Harith",
+        "Popol and Kupa",
+        "Floryn"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Karina",
+        "advantage": 3.8
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.9
+      },
+      {
+        "name": "Belerick",
+        "advantage": 2.7
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.7
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 3.3
+      },
+      {
+        "name": "Masha",
+        "advantage": 3
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.6
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.4
+      },
+      {
+        "name": "Zhask",
+        "advantage": 2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harith",
+        "synergy": 5
+      },
+      {
+        "name": "Popol and Kupa",
+        "synergy": 5
+      },
+      {
+        "name": "Floryn",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -281,5 +352,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.7,
+  "pickRate": 0.5,
+  "banRate": 0.6,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 70,
+    "abilityEffects": 50,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 56,
+    "mid": 61,
+    "late": 53,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Ragee Hoam",
+      "games": 1315,
+      "items": [
+        "Blade of the Heptaseas",
+        "Tough Boots",
+        "Sky Piercer",
+        "Malefic Gun",
+        "Rose Gold Meteor",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "Incognito",
+      "games": 1237,
+      "items": [
+        "Rapid Boots",
+        "Blade of the Heptaseas",
+        "Malefic Gun",
+        "Rose Gold Meteor",
+        "Sea Halberd",
+        "Wind of Nature"
+      ]
+    },
+    {
+      "player": "panzi insomnia lagi.",
+      "games": 933,
+      "items": [
+        "Blade of the Heptaseas",
+        "Tough Boots",
+        "Sky Piercer",
+        "Malefic Gun",
+        "Rose Gold Meteor",
+        "Sea Halberd"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -173,15 +173,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Joy",
+        "Lolita",
+        "Kagura",
+        "Khufra",
+        "Selena"
+      ],
+      "weakAgainst": [
+        "Faramis",
+        "Barats",
+        "Alice",
+        "Marcel",
+        "Edith"
+      ],
+      "synergyWith": [
+        "Masha",
+        "Lukas",
+        "Arlott"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Joy",
+        "advantage": 3.2
+      },
+      {
+        "name": "Lolita",
+        "advantage": 3
+      },
+      {
+        "name": "Kagura",
+        "advantage": 2.9
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.8
+      },
+      {
+        "name": "Selena",
+        "advantage": 2.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 4.3
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.4
+      },
+      {
+        "name": "Alice",
+        "advantage": 3.3
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.1
+      },
+      {
+        "name": "Edith",
+        "advantage": 3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Masha",
+        "synergy": 5
+      },
+      {
+        "name": "Lukas",
+        "synergy": 5
+      },
+      {
+        "name": "Arlott",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -223,5 +294,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.8,
+  "pickRate": 0.1,
+  "banRate": 3,
+  "heroAttributes": {
+    "durability": 80,
+    "offense": 20,
+    "abilityEffects": 60,
+    "difficulty": 60
+  },
+  "powerCurve": {
+    "early": 48,
+    "mid": 64,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "ᴠᴏɪᴅ",
+      "games": 718,
+      "items": [
+        "Encourage Tough Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Athena's Shield",
+        "Blade Armor",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "Ethel x F4N'T",
+      "games": 1263,
+      "items": [
+        "Fleeting Time",
+        "Encourage Magic Shoes",
+        "Athena's Shield",
+        "Dominance Ice",
+        "Antique Cuirass",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "Sxyzee",
+      "games": 676,
+      "items": [
+        "Encourage Rapid Boots",
+        "Fleeting Time",
+        "Chastise Pauldron",
+        "Antique Cuirass",
+        "Radiant Armor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -262,15 +262,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Marcel",
+        "Cici",
+        "Claude",
+        "Masha",
+        "Hilda"
+      ],
+      "weakAgainst": [
+        "Gloo",
+        "Hayabusa",
+        "Silvanna",
+        "Atlas",
+        "Odette"
+      ],
+      "synergyWith": [
+        "Zetian",
+        "Esmeralda",
+        "Lolita"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 4.1
+      },
+      {
+        "name": "Cici",
+        "advantage": 3.3
+      },
+      {
+        "name": "Claude",
+        "advantage": 3
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.7
+      },
+      {
+        "name": "Hilda",
+        "advantage": 2.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 4.4
+      },
+      {
+        "name": "Hayabusa",
+        "advantage": 2.7
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 2.7
+      },
+      {
+        "name": "Atlas",
+        "advantage": 2.7
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.5
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Zetian",
+        "synergy": 5
+      },
+      {
+        "name": "Esmeralda",
+        "synergy": 5
+      },
+      {
+        "name": "Lolita",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -306,5 +377,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.2,
+  "pickRate": 0.8,
+  "banRate": 7.7,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 70,
+    "abilityEffects": 10,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 59,
+    "mid": 61,
+    "late": 48,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Hadi X EGL",
+      "games": 1678,
+      "items": [
+        "Flame Arcane Boots",
+        "Genius Wand",
+        "Glowing Wand",
+        "Feather of Heaven",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "TheCountryMouseNobu.",
+      "games": 1524,
+      "items": [
+        "Flame Arcane Boots",
+        "Genius Wand",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Feather of Heaven",
+        "Blood Wings"
+      ]
+    },
+    {
+      "player": "Tann X Ikαnn",
+      "games": 958,
+      "items": [
+        "Flame Arcane Boots",
+        "Sky Piercer",
+        "Genius Wand",
+        "Windtalker",
+        "Holy Crystal"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

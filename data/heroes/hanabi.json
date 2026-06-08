@@ -141,15 +141,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Popol and Kupa",
+        "Chip",
+        "Akai",
+        "Khufra",
+        "Moskov"
+      ],
+      "weakAgainst": [
+        "Beatrix",
+        "Ixia",
+        "Hanzo",
+        "Joy",
+        "Layla"
+      ],
+      "synergyWith": [
+        "Franco",
+        "Balmond",
+        "Roger"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Popol and Kupa",
+        "advantage": 3.1
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.7
+      },
+      {
+        "name": "Akai",
+        "advantage": 2.3
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.2
+      },
+      {
+        "name": "Moskov",
+        "advantage": 2.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Beatrix",
+        "advantage": 3.4
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2.9
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.6
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.2
+      },
+      {
+        "name": "Layla",
+        "advantage": 2.2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Franco",
+        "synergy": 5
+      },
+      {
+        "name": "Balmond",
+        "synergy": 5
+      },
+      {
+        "name": "Roger",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -183,5 +254,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 54.6,
+  "pickRate": 3.3,
+  "banRate": 11.7,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 70,
+    "abilityEffects": 80,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 28,
+    "mid": 44,
+    "late": 66,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "DERON1C",
+      "games": 1255,
+      "items": [
+        "Swift Boots",
+        "Corrosion Scythe",
+        "Golden Staff",
+        "Demon Hunter Sword",
+        "Malefic Gun",
+        "Wind of Nature"
+      ]
+    },
+    {
+      "player": "I'm King Bruno!",
+      "games": 600,
+      "items": [
+        "Swift Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "— Entanglement.",
+      "games": 1073,
+      "items": [
+        "Corrosion Scythe",
+        "Golden Staff",
+        "Rapid Boots",
+        "Demon Hunter Sword",
+        "Malefic Gun",
+        "Wind of Nature"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

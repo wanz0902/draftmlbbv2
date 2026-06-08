@@ -221,15 +221,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Natalia",
+        "Marcel",
+        "Joy",
+        "Wanwan",
+        "Ling"
+      ],
+      "weakAgainst": [
+        "Lolita",
+        "Estes",
+        "Atlas",
+        "Yve",
+        "Ixia"
+      ],
+      "synergyWith": [
+        "Harley",
+        "Vale",
+        "Kagura"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 5
+      },
+      {
+        "name": "Marcel",
+        "advantage": 4.7
+      },
+      {
+        "name": "Joy",
+        "advantage": 3.9
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 3.5
+      },
+      {
+        "name": "Ling",
+        "advantage": 2.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 9.4
+      },
+      {
+        "name": "Estes",
+        "advantage": 4
+      },
+      {
+        "name": "Atlas",
+        "advantage": 3
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.8
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harley",
+        "synergy": 5
+      },
+      {
+        "name": "Vale",
+        "synergy": 5
+      },
+      {
+        "name": "Kagura",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -264,5 +335,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.4,
+  "pickRate": 0.8,
+  "banRate": 0.4,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 100,
+    "abilityEffects": 70,
+    "difficulty": 60
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 61,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Ronny Diaz",
+      "games": 971,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Clock of Destiny",
+        "Concentrated Energy",
+        "Glowing Wand",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "ㅤ",
+      "games": 671,
+      "items": [
+        "Beast Magic Shoes",
+        "Queen's Wings",
+        "Necklace of Durance",
+        "Concentrated Energy",
+        "Divine Glaive",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "ねずみ Nezumi",
+      "games": 768,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Starlium Scythe",
+        "Concentrated Energy",
+        "Divine Glaive"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

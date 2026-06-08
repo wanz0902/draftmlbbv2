@@ -170,15 +170,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Alice",
+        "Esmeralda",
+        "Leomord",
+        "Balmond",
+        "Uranus"
+      ],
+      "weakAgainst": [
+        "Sun",
+        "Argus",
+        "Saber",
+        "Diggie",
+        "Masha"
+      ],
+      "synergyWith": [
+        "Harith",
+        "Kaja",
+        "Gord"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Alice",
+        "advantage": 4.3
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.9
+      },
+      {
+        "name": "Leomord",
+        "advantage": 2.7
+      },
+      {
+        "name": "Balmond",
+        "advantage": 2.6
+      },
+      {
+        "name": "Uranus",
+        "advantage": 2.5
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 3.6
+      },
+      {
+        "name": "Argus",
+        "advantage": 2.8
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.7
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.6
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harith",
+        "synergy": 5
+      },
+      {
+        "name": "Kaja",
+        "synergy": 5
+      },
+      {
+        "name": "Gord",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -212,5 +283,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.2,
+  "pickRate": 0.9,
+  "banRate": 3.6,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 80,
+    "abilityEffects": 10,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 39,
+    "mid": 55,
+    "late": 66,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "TITENG BALUKTOT",
+      "games": 1032,
+      "items": [
+        "Corrosion Scythe",
+        "Golden Staff",
+        "Sky Piercer",
+        "Demon Hunter Sword",
+        "Malefic Gun",
+        "Rapid Boots"
+      ]
+    },
+    {
+      "player": "mm lover",
+      "games": 599,
+      "items": [
+        "Tough Boots",
+        "Corrosion Scythe",
+        "Golden Staff",
+        "Demon Hunter Sword",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "Warrenaru",
+      "games": 634,
+      "items": [
+        "Rapid Boots",
+        "Fleeting Time",
+        "Brute Force Breastplate",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Clock of Destiny"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

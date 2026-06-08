@@ -238,15 +238,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Aamon",
+        "Zhuxin",
+        "Nolan",
+        "Novaria",
+        "X.Borg"
+      ],
+      "weakAgainst": [
+        "Saber",
+        "Eudora",
+        "Obsidia",
+        "Zhask",
+        "Popol and Kupa"
+      ],
+      "synergyWith": [
+        "Edith",
+        "Gloo",
+        "Joy"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Aamon",
+        "advantage": 2.7
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.7
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.2
+      },
+      {
+        "name": "Novaria",
+        "advantage": 2.2
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Saber",
+        "advantage": 3.3
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.5
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.1
+      },
+      {
+        "name": "Zhask",
+        "advantage": 2.1
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Edith",
+        "synergy": 5
+      },
+      {
+        "name": "Gloo",
+        "synergy": 5
+      },
+      {
+        "name": "Joy",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -281,5 +352,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.1,
+  "pickRate": 0.9,
+  "banRate": 4.9,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 50,
+    "abilityEffects": 10,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "KEMZETT",
+      "games": 1043,
+      "items": [
+        "Flame Magic Shoes",
+        "Hunter Strike",
+        "Sky Piercer",
+        "Malefic Roar",
+        "War Axe",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "Stennn Skywalker",
+      "games": 849,
+      "items": [
+        "Flame Magic Shoes",
+        "Hunter Strike",
+        "Sky Piercer",
+        "War Axe",
+        "Malefic Roar",
+        "Blade of Despair"
+      ]
+    },
+    {
+      "player": "GONDWANA",
+      "games": 984,
+      "items": [
+        "Flame Magic Shoes",
+        "Hunter Strike",
+        "Sky Piercer",
+        "Sea Halberd",
+        "Malefic Roar"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

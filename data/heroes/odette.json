@@ -261,15 +261,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Marcel",
+        "Mathilda",
+        "Valentina",
+        "Natalia",
+        "Harith"
+      ],
+      "weakAgainst": [
+        "Barats",
+        "Gloo",
+        "Nana",
+        "Alpha",
+        "Gatotkaca"
+      ],
+      "synergyWith": [
+        "Chip",
+        "Zhuxin",
+        "Mathilda"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 4.1
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 3.2
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.7
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.7
+      },
+      {
+        "name": "Harith",
+        "advantage": 2.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 3.3
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.9
+      },
+      {
+        "name": "Nana",
+        "advantage": 2.8
+      },
+      {
+        "name": "Alpha",
+        "advantage": 2.8
+      },
+      {
+        "name": "Gatotkaca",
+        "advantage": 2.8
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Chip",
+        "synergy": 5
+      },
+      {
+        "name": "Zhuxin",
+        "synergy": 5
+      },
+      {
+        "name": "Mathilda",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -302,5 +373,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.9,
+  "pickRate": 0.7,
+  "banRate": 0.6,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 100,
+    "abilityEffects": 70,
+    "difficulty": 20
+  },
+  "powerCurve": {
+    "early": 39,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "MADE KACZYNSKI",
+      "games": 1300,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Sky Piercer",
+        "Holy Crystal",
+        "Glowing Wand",
+        "Divine Glaive"
+      ]
+    },
+    {
+      "player": "ㅤ ㅤㅤClairo",
+      "games": 1157,
+      "items": [
+        "Demon Shoes",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Winter Crown",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "ànymolinn but diff.",
+      "games": 766,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Glowing Wand",
+        "Winter Crown",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

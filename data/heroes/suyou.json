@@ -284,15 +284,81 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Sun",
+        "Hanzo",
+        "Balmond",
+        "Gloo",
+        "Lancelot"
+      ],
+      "weakAgainst": [
+        "Harith",
+        "Silvanna",
+        "Gusion",
+        "Harley"
+      ],
+      "synergyWith": [
+        "Yu Zhong",
+        "Sora",
+        "Harith"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 2.4
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 1.9
+      },
+      {
+        "name": "Balmond",
+        "advantage": 1.8
+      },
+      {
+        "name": "Gloo",
+        "advantage": 1.8
+      },
+      {
+        "name": "Lancelot",
+        "advantage": 1.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Harith",
+        "advantage": 2.6
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 2.2
+      },
+      {
+        "name": "Gusion",
+        "advantage": 2.2
+      },
+      {
+        "name": "Harley",
+        "advantage": 2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Yu Zhong",
+        "synergy": 5
+      },
+      {
+        "name": "Sora",
+        "synergy": 5
+      },
+      {
+        "name": "Harith",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -331,5 +397,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.3,
+  "pickRate": 1.9,
+  "banRate": 35.3,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 60,
+    "abilityEffects": 50,
+    "difficulty": 70
+  },
+  "powerCurve": {
+    "early": 63,
+    "mid": 59,
+    "late": 45,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": ".SOYU",
+      "games": 1403,
+      "items": [
+        "Flame Magic Shoes",
+        "Hunter Strike",
+        "Queen's Wings",
+        "Blade of the Heptaseas",
+        "Malefic Roar",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "PENJOKI SANNSTORE.",
+      "games": 1127,
+      "items": [
+        "Magic Shoes",
+        "Hunter Strike",
+        "War Axe",
+        "Blade of Despair",
+        "Malefic Roar",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "MARRRFM x F4N'T",
+      "games": 933,
+      "items": [
+        "Ice Magic Shoes",
+        "Hunter Strike",
+        "War Axe",
+        "Blade of Despair",
+        "Queen's Wings"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

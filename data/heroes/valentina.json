@@ -214,15 +214,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Carmilla",
+        "Atlas",
+        "X.Borg",
+        "Lolita",
+        "Ling"
+      ],
+      "weakAgainst": [
+        "Marcel",
+        "Barats",
+        "Phoveus",
+        "Valir",
+        "Odette"
+      ],
+      "synergyWith": [
+        "Yve",
+        "Zhuxin",
+        "Gord"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Carmilla",
+        "advantage": 4.1
+      },
+      {
+        "name": "Atlas",
+        "advantage": 3.4
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3.3
+      },
+      {
+        "name": "Lolita",
+        "advantage": 3.1
+      },
+      {
+        "name": "Ling",
+        "advantage": 2.8
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 3.4
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.3
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 3.3
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.8
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.7
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Yve",
+        "synergy": 5
+      },
+      {
+        "name": "Zhuxin",
+        "synergy": 5
+      },
+      {
+        "name": "Gord",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -255,5 +326,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 43.2,
+  "pickRate": 0.2,
+  "banRate": 0.4,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 40,
+    "abilityEffects": 40,
+    "difficulty": 80
+  },
+  "powerCurve": {
+    "early": 55,
+    "mid": 63,
+    "late": 53,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "❀ eimie chan ❀",
+      "games": 611,
+      "items": [
+        "Magic Shoes",
+        "Necklace of Durance",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Lightning Truncheon",
+        "Holy Crystal"
+      ]
+    },
+    {
+      "player": "JUNN SNOWY",
+      "games": 618,
+      "items": [
+        "Lightning Truncheon",
+        "Arcane Boots",
+        "Genius Wand",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "Ryyam yoenju",
+      "games": 454,
+      "items": [
+        "Arcane Boots",
+        "Sky Piercer",
+        "Necklace of Durance",
+        "Holy Crystal",
+        "Lightning Truncheon",
+        "Blood Wings"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

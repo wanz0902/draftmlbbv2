@@ -287,15 +287,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lolita",
+        "Diggie",
+        "Wanwan",
+        "Arlott",
+        "Harith"
+      ],
+      "weakAgainst": [
+        "Natan",
+        "Sora",
+        "Alice",
+        "Belerick",
+        "Baxia"
+      ],
+      "synergyWith": [
+        "Novaria",
+        "Harley",
+        "Selena"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.1
+      },
+      {
+        "name": "Diggie",
+        "advantage": 4
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.6
+      },
+      {
+        "name": "Arlott",
+        "advantage": 2.4
+      },
+      {
+        "name": "Harith",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natan",
+        "advantage": 3.4
+      },
+      {
+        "name": "Sora",
+        "advantage": 3.3
+      },
+      {
+        "name": "Alice",
+        "advantage": 3.3
+      },
+      {
+        "name": "Belerick",
+        "advantage": 2.6
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Novaria",
+        "synergy": 5
+      },
+      {
+        "name": "Harley",
+        "synergy": 5
+      },
+      {
+        "name": "Selena",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -329,5 +400,67 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.7,
+  "pickRate": 0.3,
+  "banRate": 0.5,
+  "heroAttributes": {
+    "durability": 10,
+    "offense": 100,
+    "abilityEffects": 40,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 59,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Enllerly",
+      "games": 859,
+      "items": [
+        "Genius Wand",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Arcane Boots"
+      ]
+    },
+    {
+      "player": "BURJILA",
+      "games": 1121,
+      "items": [
+        "Arcane Boots",
+        "Sky Piercer",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Genius Wand"
+      ]
+    },
+    {
+      "player": "Fe Fe",
+      "games": 711,
+      "items": [
+        "Glowing Wand",
+        "Starlium Scythe",
+        "Divine Glaive",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Holy Crystal"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

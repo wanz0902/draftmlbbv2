@@ -473,15 +473,81 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Natan",
+        "Estes",
+        "Zhask",
+        "Zilong",
+        "Ruby"
+      ],
+      "weakAgainst": [
+        "Khufra",
+        "Lukas",
+        "Gatotkaca",
+        "Martis"
+      ],
+      "synergyWith": [
+        "Karrie",
+        "Selena",
+        "Silvanna"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Natan",
+        "advantage": 3.5
+      },
+      {
+        "name": "Estes",
+        "advantage": 3.4
+      },
+      {
+        "name": "Zhask",
+        "advantage": 3.3
+      },
+      {
+        "name": "Zilong",
+        "advantage": 2.3
+      },
+      {
+        "name": "Ruby",
+        "advantage": 2.3
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Khufra",
+        "advantage": 2.3
+      },
+      {
+        "name": "Lukas",
+        "advantage": 2.1
+      },
+      {
+        "name": "Gatotkaca",
+        "advantage": 1.7
+      },
+      {
+        "name": "Martis",
+        "advantage": 1.5
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Karrie",
+        "synergy": 5
+      },
+      {
+        "name": "Selena",
+        "synergy": 5
+      },
+      {
+        "name": "Silvanna",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -520,5 +586,67 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.5,
+  "pickRate": 0.8,
+  "banRate": 40.6,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 60,
+    "abilityEffects": 50,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 45,
+    "mid": 59,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "dreixhz",
+      "games": 510,
+      "items": [
+        "Queen's Wings",
+        "Magic Shoes",
+        "War Axe",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "Zin Shit",
+      "games": 526,
+      "items": [
+        "Tough Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Queen's Wings",
+        "Oracle",
+        "Sky Piercer"
+      ]
+    },
+    {
+      "player": "BiLamz.",
+      "games": 404,
+      "items": [
+        "Tough Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Queen's Wings",
+        "Oracle",
+        "Chastise Pauldron"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -239,15 +239,81 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lolita",
+        "Ixia",
+        "Johnson",
+        "Silvanna",
+        "Hanzo"
+      ],
+      "weakAgainst": [
+        "Marcel",
+        "Valentina",
+        "Kaja",
+        "Kagura"
+      ],
+      "synergyWith": [
+        "Angela",
+        "Floryn",
+        "Mathilda"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.9
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2.9
+      },
+      {
+        "name": "Johnson",
+        "advantage": 2.2
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 1.8
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 1.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 3.1
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.6
+      },
+      {
+        "name": "Kaja",
+        "advantage": 2.1
+      },
+      {
+        "name": "Kagura",
+        "advantage": 1.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Angela",
+        "synergy": 5
+      },
+      {
+        "name": "Floryn",
+        "synergy": 5
+      },
+      {
+        "name": "Mathilda",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -283,5 +349,67 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.3,
+  "pickRate": 1,
+  "banRate": 8.2,
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 80,
+    "abilityEffects": 80,
+    "difficulty": 60
+  },
+  "powerCurve": {
+    "early": 51,
+    "mid": 63,
+    "late": 51,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "~~ Mr X ~~™",
+      "games": 809,
+      "items": [
+        "Magic Shoes",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Blood Wings"
+      ]
+    },
+    {
+      "player": "Lloyd x HD",
+      "games": 889,
+      "items": [
+        "Arcane Boots",
+        "Holy Crystal",
+        "Lightning Truncheon",
+        "Genius Wand",
+        "Divine Glaive",
+        "Blood Wings"
+      ]
+    },
+    {
+      "player": "TT : royal canin",
+      "games": 894,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Genius Wand",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Blood Wings"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

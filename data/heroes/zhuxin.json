@@ -170,20 +170,23 @@
     ],
     "counterSystem": {
       "strongAgainst": [
-        "Tigreal",
-        "Estes",
-        "Fredrinn"
+        "Lolita",
+        "Khufra",
+        "Gloo",
+        "Johnson",
+        "Roger"
       ],
       "weakAgainst": [
-        "Ling",
-        "Fanny",
+        "Diggie",
+        "Marcel",
+        "Valir",
         "Hayabusa",
-        "Chou"
+        "Saber"
       ],
       "synergyWith": [
-        "Carmilla",
-        "Khufra",
-        "Atlas"
+        "Valentina",
+        "Kagura",
+        "Odette"
       ]
     },
     "deceptionValue": 5
@@ -219,5 +222,126 @@
   ],
   "powerSpikeTags": [
     "Level 4 & Clock of Destiny"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51,
+  "pickRate": 0.6,
+  "banRate": 23,
+  "matchupSystem": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 6.6
+      },
+      {
+        "name": "Khufra",
+        "advantage": 3.5
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.7
+      },
+      {
+        "name": "Johnson",
+        "advantage": 2.6
+      },
+      {
+        "name": "Roger",
+        "advantage": 2.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 3.4
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.7
+      },
+      {
+        "name": "Hayabusa",
+        "advantage": 2.7
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Valentina",
+        "synergy": 5
+      },
+      {
+        "name": "Kagura",
+        "synergy": 5
+      },
+      {
+        "name": "Odette",
+        "synergy": 5
+      }
+    ]
+  },
+  "heroAttributes": {
+    "durability": 40,
+    "offense": 80,
+    "abilityEffects": 80,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Chellsy美.",
+      "games": 1231,
+      "items": [
+        "Smite Tough Boots",
+        "Clock of Destiny",
+        "Glowing Wand",
+        "Ice Queen Wand",
+        "Brute Force Breastplate",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "Zια.",
+      "games": 648,
+      "items": [
+        "Tough Boots",
+        "Clock of Destiny",
+        "Sky Piercer",
+        "Glowing Wand",
+        "Brute Force Breastplate",
+        "Starlium Scythe"
+      ]
+    },
+    {
+      "player": "Dhiq x F4N'T",
+      "games": 677,
+      "items": [
+        "Tough Boots",
+        "Clock of Destiny",
+        "Sky Piercer",
+        "Glowing Wand",
+        "Brute Force Breastplate"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

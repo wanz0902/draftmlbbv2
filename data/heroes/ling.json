@@ -188,15 +188,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Hanzo",
+        "X.Borg",
+        "Gloo",
+        "Balmond",
+        "Atlas"
+      ],
+      "weakAgainst": [
+        "Natalia",
+        "Saber",
+        "Lukas",
+        "Floryn",
+        "Masha"
+      ],
+      "synergyWith": [
+        "Nolan",
+        "Barats",
+        "Dyrroth"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Hanzo",
+        "advantage": 4
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3.6
+      },
+      {
+        "name": "Gloo",
+        "advantage": 3.5
+      },
+      {
+        "name": "Balmond",
+        "advantage": 3.3
+      },
+      {
+        "name": "Atlas",
+        "advantage": 3.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 4.7
+      },
+      {
+        "name": "Saber",
+        "advantage": 3.2
+      },
+      {
+        "name": "Lukas",
+        "advantage": 3
+      },
+      {
+        "name": "Floryn",
+        "advantage": 2.9
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.8
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Nolan",
+        "synergy": 5
+      },
+      {
+        "name": "Barats",
+        "synergy": 5
+      },
+      {
+        "name": "Dyrroth",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -231,5 +302,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 45.3,
+  "pickRate": 0.2,
+  "banRate": 0.2,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 60,
+    "abilityEffects": 30,
+    "difficulty": 70
+  },
+  "powerCurve": {
+    "early": 51,
+    "mid": 63,
+    "late": 53,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Yuan`",
+      "games": 1109,
+      "items": [
+        "Ice Tough Boots",
+        "Berserker's Fury",
+        "Haas' Claws",
+        "Sea Halberd",
+        "Malefic Roar",
+        "Blade of Despair"
+      ]
+    },
+    {
+      "player": "影零神零影",
+      "games": 560,
+      "items": [
+        "Ice Tough Boots",
+        "Berserker's Fury",
+        "Haas' Claws",
+        "Endless Battle",
+        "Blade of Despair",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "Saichi x NEXXA",
+      "games": 648,
+      "items": [
+        "Haas' Claws",
+        "Berserker's Fury",
+        "Ice Tough Boots",
+        "Blade of Despair",
+        "Endless Battle"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

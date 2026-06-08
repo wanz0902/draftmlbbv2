@@ -208,15 +208,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Hanzo",
+        "X.Borg",
+        "Valir",
+        "Gord",
+        "Yve"
+      ],
+      "weakAgainst": [
+        "Karina",
+        "Obsidia",
+        "Chip",
+        "Eudora",
+        "Hilda"
+      ],
+      "synergyWith": [
+        "Akai",
+        "Barats",
+        "Gloo"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Hanzo",
+        "advantage": 3.6
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3.2
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.8
+      },
+      {
+        "name": "Gord",
+        "advantage": 2.6
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.5
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Karina",
+        "advantage": 2.9
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.8
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.6
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.4
+      },
+      {
+        "name": "Hilda",
+        "advantage": 2.4
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Akai",
+        "synergy": 5
+      },
+      {
+        "name": "Barats",
+        "synergy": 5
+      },
+      {
+        "name": "Gloo",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -251,5 +322,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.8,
+  "pickRate": 0.8,
+  "banRate": 28.9,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 50,
+    "abilityEffects": 50,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 63,
+    "mid": 59,
+    "late": 43,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "tt乂Nemokamuika",
+      "games": 1059,
+      "items": [
+        "Rapid Boots",
+        "Corrosion Scythe",
+        "Blade of the Heptaseas",
+        "Demon Hunter Sword",
+        "Malefic Roar",
+        "Hunter Strike"
+      ]
+    },
+    {
+      "player": "consciousness",
+      "games": 774,
+      "items": [
+        "Ice Rapid Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Blade of the Heptaseas",
+        "Sea Halberd",
+        "Malefic Roar"
+      ]
+    },
+    {
+      "player": "은하별",
+      "games": 718,
+      "items": [
+        "Corrosion Scythe",
+        "Flame Rapid Boots",
+        "Blade of the Heptaseas",
+        "Demon Hunter Sword",
+        "Malefic Roar"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -151,15 +151,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Eudora",
+        "Saber",
+        "Silvanna",
+        "Chip",
+        "Alucard"
+      ],
+      "weakAgainst": [
+        "X.Borg",
+        "Gord",
+        "Marcel",
+        "Yve",
+        "Alice"
+      ],
+      "synergyWith": [
+        "Estes",
+        "Natalia",
+        "Ling"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Eudora",
+        "advantage": 5
+      },
+      {
+        "name": "Saber",
+        "advantage": 3.8
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 3.7
+      },
+      {
+        "name": "Chip",
+        "advantage": 3.4
+      },
+      {
+        "name": "Alucard",
+        "advantage": 3.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "X.Borg",
+        "advantage": 7.1
+      },
+      {
+        "name": "Gord",
+        "advantage": 4.7
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.9
+      },
+      {
+        "name": "Yve",
+        "advantage": 3.6
+      },
+      {
+        "name": "Alice",
+        "advantage": 3.5
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Estes",
+        "synergy": 5
+      },
+      {
+        "name": "Natalia",
+        "synergy": 5
+      },
+      {
+        "name": "Ling",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -201,5 +272,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.7,
+  "pickRate": 0.1,
+  "banRate": 0.1,
+  "heroAttributes": {
+    "durability": 100,
+    "offense": 30,
+    "abilityEffects": 90,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 63,
+    "late": 52,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "CALLME | JIEB",
+      "games": 1479,
+      "items": [
+        "Beast Tough Boots",
+        "War Axe",
+        "Radiant Armor",
+        "Guardian Helmet",
+        "Chastise Pauldron",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "•Blackout™•",
+      "games": 1339,
+      "items": [
+        "Tough Boots",
+        "Thunder Belt",
+        "Windtalker",
+        "Endless Battle",
+        "Brute Force Breastplate",
+        "Great Dragon Spear"
+      ]
+    },
+    {
+      "player": "TT: KING MAT",
+      "games": 737,
+      "items": [
+        "Ice Tough Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Oracle",
+        "Guardian Helmet"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

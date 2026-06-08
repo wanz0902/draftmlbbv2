@@ -170,15 +170,81 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Lolita",
+        "Eudora",
+        "Popol and Kupa",
+        "Saber",
+        "Belerick"
+      ],
+      "weakAgainst": [
+        "Melissa",
+        "Karrie",
+        "Valir",
+        "Zhuxin"
+      ],
+      "synergyWith": [
+        "Diggie",
+        "Masha",
+        "Floryn"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.8
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.7
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.7
+      },
+      {
+        "name": "Belerick",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Melissa",
+        "advantage": 3.2
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.7
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.7
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.5
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Diggie",
+        "synergy": 5
+      },
+      {
+        "name": "Masha",
+        "synergy": 5
+      },
+      {
+        "name": "Floryn",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -215,5 +281,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 53.2,
+  "pickRate": 1.2,
+  "banRate": 13.2,
+  "heroAttributes": {
+    "durability": 70,
+    "offense": 50,
+    "abilityEffects": 30,
+    "difficulty": 60
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 61,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Hatıran Yeter.",
+      "games": 683,
+      "items": [
+        "Ice Tough Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Sea Halberd",
+        "Queen's Wings",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "Ryotaa",
+      "games": 843,
+      "items": [
+        "Ice Tough Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Sea Halberd",
+        "Queen's Wings",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "I am Atomic shadow.",
+      "games": 1123,
+      "items": [
+        "Ice Tough Boots",
+        "Sky Piercer",
+        "Hunter Strike",
+        "Malefic Roar",
+        "Blade of Despair"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

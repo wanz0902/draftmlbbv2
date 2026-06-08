@@ -173,15 +173,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Wanwan",
+        "Fanny",
+        "Benedetta",
+        "Harith",
+        "Mathilda"
+      ],
+      "weakAgainst": [
+        "Lolita",
+        "Barats",
+        "Lesley",
+        "Fredrinn",
+        "Layla"
+      ],
+      "synergyWith": [
+        "Brody",
+        "Floryn",
+        "Mathilda"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Wanwan",
+        "advantage": 3.8
+      },
+      {
+        "name": "Fanny",
+        "advantage": 3.4
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 2.9
+      },
+      {
+        "name": "Harith",
+        "advantage": 2.6
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.2
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.3
+      },
+      {
+        "name": "Lesley",
+        "advantage": 3
+      },
+      {
+        "name": "Fredrinn",
+        "advantage": 2.4
+      },
+      {
+        "name": "Layla",
+        "advantage": 2.2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Brody",
+        "synergy": 5
+      },
+      {
+        "name": "Floryn",
+        "synergy": 5
+      },
+      {
+        "name": "Mathilda",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -216,5 +287,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.8,
+  "pickRate": 0.2,
+  "banRate": 0.1,
+  "heroAttributes": {
+    "durability": 20,
+    "offense": 60,
+    "abilityEffects": 20,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 39,
+    "mid": 53,
+    "late": 64,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "PraySkie.",
+      "games": 554,
+      "items": [
+        "Haas' Claws",
+        "Tough Boots",
+        "Berserker's Fury",
+        "Malefic Gun",
+        "Sea Halberd",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "KING Miya",
+      "games": 855,
+      "items": [
+        "Haas' Claws",
+        "Warrior Boots",
+        "Berserker's Fury",
+        "Malefic Gun",
+        "Windtalker",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "Edy Anak Baik :3",
+      "games": 519,
+      "items": [
+        "Swift Boots",
+        "Berserker's Fury",
+        "Malefic Gun",
+        "Haas' Claws",
+        "Rose Gold Meteor",
+        "Windtalker"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

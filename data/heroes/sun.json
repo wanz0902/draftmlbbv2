@@ -137,15 +137,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Masha",
+        "Jawhead",
+        "Cici",
+        "Hanzo",
+        "Popol and Kupa"
+      ],
+      "weakAgainst": [
+        "Natan",
+        "Ruby",
+        "Aldous",
+        "Joy",
+        "Faramis"
+      ],
+      "synergyWith": [
+        "Cici",
+        "X.Borg",
+        "Gloo"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 4.5
+      },
+      {
+        "name": "Jawhead",
+        "advantage": 4.1
+      },
+      {
+        "name": "Cici",
+        "advantage": 4
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 3.8
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 3.7
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natan",
+        "advantage": 4.8
+      },
+      {
+        "name": "Ruby",
+        "advantage": 4.4
+      },
+      {
+        "name": "Aldous",
+        "advantage": 4.4
+      },
+      {
+        "name": "Joy",
+        "advantage": 4.2
+      },
+      {
+        "name": "Faramis",
+        "advantage": 3.9
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Cici",
+        "synergy": 5
+      },
+      {
+        "name": "X.Borg",
+        "synergy": 5
+      },
+      {
+        "name": "Gloo",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -182,5 +253,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 53.9,
+  "pickRate": 1.6,
+  "banRate": 39.6,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 50,
+    "abilityEffects": 10,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 35,
+    "mid": 53,
+    "late": 64,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Issac matthews.",
+      "games": 930,
+      "items": [
+        "Encourage Warrior Boots",
+        "Windtalker",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Blade of Despair",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "Tonny.",
+      "games": 615,
+      "items": [
+        "Encourage Rapid Boots",
+        "Windtalker",
+        "Corrosion Scythe",
+        "Great Dragon Spear",
+        "Endless Battle",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "~NERF SUNREX~",
+      "games": 1576,
+      "items": [
+        "Rapid Boots",
+        "Corrosion Scythe",
+        "Windtalker",
+        "Great Dragon Spear",
+        "Berserker's Fury"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

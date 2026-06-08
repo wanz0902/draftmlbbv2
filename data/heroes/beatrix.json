@@ -423,15 +423,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Estes",
+        "Baxia",
+        "Hanabi",
+        "Edith",
+        "Barats"
+      ],
+      "weakAgainst": [
+        "Moskov",
+        "Joy",
+        "Granger",
+        "Khufra",
+        "Irithel"
+      ],
+      "synergyWith": [
+        "Diggie",
+        "Harith",
+        "Baxia"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 4.6
+      },
+      {
+        "name": "Baxia",
+        "advantage": 3.6
+      },
+      {
+        "name": "Hanabi",
+        "advantage": 3.4
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.6
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.5
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Moskov",
+        "advantage": 2.6
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.5
+      },
+      {
+        "name": "Granger",
+        "advantage": 2.5
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.5
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Diggie",
+        "synergy": 5
+      },
+      {
+        "name": "Harith",
+        "synergy": 5
+      },
+      {
+        "name": "Baxia",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -466,5 +537,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.3,
+  "pickRate": 0.8,
+  "banRate": 0.9,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 80,
+    "abilityEffects": 10,
+    "difficulty": 70
+  },
+  "powerCurve": {
+    "early": 55,
+    "mid": 63,
+    "late": 59,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "KiREL",
+      "games": 1280,
+      "items": [
+        "Blade of Despair",
+        "Swift Boots",
+        "Malefic Gun",
+        "Sea Halberd",
+        "Wind of Nature",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "Revíyrᥲᥲ`",
+      "games": 913,
+      "items": [
+        "Blade of Despair",
+        "Malefic Gun",
+        "Sea Halberd",
+        "Rose Gold Meteor",
+        "Wind of Nature",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "REFALL x EXTRA",
+      "games": 706,
+      "items": [
+        "Blade of Despair",
+        "Swift Boots",
+        "Malefic Gun",
+        "Sea Halberd",
+        "Rose Gold Meteor",
+        "Wind of Nature"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

@@ -245,15 +245,76 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Suyou",
+        "Aamon",
+        "Yve",
+        "Valir",
+        "Gord"
+      ],
+      "weakAgainst": [
+        "Chip",
+        "Alucard",
+        "Roger"
+      ],
+      "synergyWith": [
+        "Zetian",
+        "Gord",
+        "Chang'e"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Suyou",
+        "advantage": 2.2
+      },
+      {
+        "name": "Aamon",
+        "advantage": 2.1
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.1
+      },
+      {
+        "name": "Valir",
+        "advantage": 2
+      },
+      {
+        "name": "Gord",
+        "advantage": 1.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Chip",
+        "advantage": 2.2
+      },
+      {
+        "name": "Alucard",
+        "advantage": 1.9
+      },
+      {
+        "name": "Roger",
+        "advantage": 1.9
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Zetian",
+        "synergy": 5
+      },
+      {
+        "name": "Gord",
+        "synergy": 5
+      },
+      {
+        "name": "Chang'e",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -288,5 +349,65 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49.2,
+  "pickRate": 1.6,
+  "banRate": 11.8,
+  "heroAttributes": {
+    "durability": 30,
+    "offense": 90,
+    "abilityEffects": 10,
+    "difficulty": 80
+  },
+  "powerCurve": {
+    "early": 53,
+    "mid": 64,
+    "late": 45,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "TyperYoutube",
+      "games": 723,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Holy Crystal",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Blood Wings"
+      ]
+    },
+    {
+      "player": "TISSU MAGIC",
+      "games": 1311,
+      "items": [
+        "Flame Tough Boots",
+        "Immortality",
+        "Winter Crown",
+        "Rose Gold Meteor",
+        "Windtalker"
+      ]
+    },
+    {
+      "player": "Kozue",
+      "games": 1460,
+      "items": [
+        "Ice Arcane Boots",
+        "Blood Wings",
+        "Genius Wand",
+        "Holy Crystal",
+        "Divine Glaive"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

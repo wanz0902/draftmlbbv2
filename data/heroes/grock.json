@@ -177,15 +177,59 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
+      "strongAgainst": [
+        "Khufra",
+        "Lolita",
+        "Johnson",
+        "Layla",
+        "Popol and Kupa"
+      ],
       "weakAgainst": [],
-      "synergyWith": []
+      "synergyWith": [
+        "Saber",
+        "Harith",
+        "Bruno"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
+    "strongAgainst": [
+      {
+        "name": "Khufra",
+        "advantage": 2.1
+      },
+      {
+        "name": "Lolita",
+        "advantage": 1.9
+      },
+      {
+        "name": "Johnson",
+        "advantage": 1.8
+      },
+      {
+        "name": "Layla",
+        "advantage": 1.7
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 1.6
+      }
+    ],
     "weakAgainst": [],
-    "synergyHeroes": [],
+    "synergyHeroes": [
+      {
+        "name": "Saber",
+        "synergy": 5
+      },
+      {
+        "name": "Harith",
+        "synergy": 5
+      },
+      {
+        "name": "Bruno",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -226,5 +270,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 47.8,
+  "pickRate": 0.6,
+  "banRate": 4.6,
+  "heroAttributes": {
+    "durability": 90,
+    "offense": 40,
+    "abilityEffects": 80,
+    "difficulty": 60
+  },
+  "powerCurve": {
+    "early": 63,
+    "mid": 58,
+    "late": 45,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "ᴬᵏᶦ",
+      "games": 1154,
+      "items": [
+        "Encourage Rapid Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Blade Armor",
+        "Guardian Helmet",
+        "Antique Cuirass"
+      ]
+    },
+    {
+      "player": "MikoTzy",
+      "games": 687,
+      "items": [
+        "Encourage Rapid Boots",
+        "Athena's Shield",
+        "Antique Cuirass",
+        "Dominance Ice",
+        "Immortality",
+        "Blade Armor"
+      ]
+    },
+    {
+      "player": "SERENDIPITY°~°",
+      "games": 423,
+      "items": [
+        "Encourage Rapid Boots",
+        "Dominance Ice",
+        "Antique Cuirass",
+        "Radiant Armor",
+        "Immortality"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

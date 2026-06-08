@@ -141,15 +141,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Diggie",
+        "Marcel",
+        "Irithel",
+        "Zhuxin",
+        "Wanwan"
+      ],
+      "weakAgainst": [
+        "Atlas",
+        "Johnson",
+        "Uranus",
+        "Khufra",
+        "Hylos"
+      ],
+      "synergyWith": [
+        "Harith",
+        "Roger",
+        "Popol and Kupa"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 3.2
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.1
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.3
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.3
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.3
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Atlas",
+        "advantage": 3.9
+      },
+      {
+        "name": "Johnson",
+        "advantage": 3.4
+      },
+      {
+        "name": "Uranus",
+        "advantage": 2.5
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.4
+      },
+      {
+        "name": "Hylos",
+        "advantage": 2.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Harith",
+        "synergy": 5
+      },
+      {
+        "name": "Roger",
+        "synergy": 5
+      },
+      {
+        "name": "Popol and Kupa",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -183,5 +254,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 48.3,
+  "pickRate": 1.1,
+  "banRate": 1.1,
+  "heroAttributes": {
+    "durability": 10,
+    "offense": 80,
+    "abilityEffects": 10,
+    "difficulty": 10
+  },
+  "powerCurve": {
+    "early": 25,
+    "mid": 44,
+    "late": 69,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "MadSkyy.",
+      "games": 1117,
+      "items": [
+        "Warrior Boots",
+        "Windtalker",
+        "Berserker's Fury",
+        "Haas' Claws",
+        "Malefic Gun",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "the king of layla",
+      "games": 1231,
+      "items": [
+        "Warrior Boots",
+        "Windtalker",
+        "Berserker's Fury",
+        "Haas' Claws",
+        "Malefic Gun",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "老挝第一深情",
+      "games": 247,
+      "items": [
+        "Warrior Boots",
+        "Windtalker",
+        "Berserker's Fury",
+        "Haas' Claws",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

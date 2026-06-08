@@ -174,15 +174,81 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Diggie",
+        "Fanny",
+        "Angela",
+        "Floryn",
+        "Estes"
+      ],
+      "weakAgainst": [
+        "Hanzo",
+        "Johnson",
+        "Tigreal",
+        "Chip"
+      ],
+      "synergyWith": [
+        "Natalia",
+        "Hanabi",
+        "Bane"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 3.4
+      },
+      {
+        "name": "Fanny",
+        "advantage": 2.9
+      },
+      {
+        "name": "Angela",
+        "advantage": 2.8
+      },
+      {
+        "name": "Floryn",
+        "advantage": 2.5
+      },
+      {
+        "name": "Estes",
+        "advantage": 2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Hanzo",
+        "advantage": 2.7
+      },
+      {
+        "name": "Johnson",
+        "advantage": 2
+      },
+      {
+        "name": "Tigreal",
+        "advantage": 1.9
+      },
+      {
+        "name": "Chip",
+        "advantage": 1.8
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Natalia",
+        "synergy": 5
+      },
+      {
+        "name": "Hanabi",
+        "synergy": 5
+      },
+      {
+        "name": "Bane",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -221,5 +287,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 44.4,
+  "pickRate": 1.2,
+  "banRate": 6.7,
+  "heroAttributes": {
+    "durability": 80,
+    "offense": 10,
+    "abilityEffects": 100,
+    "difficulty": 20
+  },
+  "powerCurve": {
+    "early": 51,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "DOPPZYY RAWR",
+      "games": 1319,
+      "items": [
+        "Encourage Rapid Boots",
+        "Winter Crown",
+        "Fleeting Time",
+        "Dominance Ice",
+        "Athena's Shield",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "IPEKA DIATAS EMPAT",
+      "games": 1024,
+      "items": [
+        "Encourage Rapid Boots",
+        "Winter Crown",
+        "Fleeting Time",
+        "Athena's Shield",
+        "Immortality",
+        "Antique Cuirass"
+      ]
+    },
+    {
+      "player": "奈洛子",
+      "games": 900,
+      "items": [
+        "Encourage Rapid Boots",
+        "Winter Crown",
+        "Fleeting Time",
+        "Dominance Ice",
+        "Radiant Armor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

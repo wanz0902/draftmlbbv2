@@ -141,15 +141,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Valentina",
+        "Aamon",
+        "Floryn",
+        "Angela",
+        "Suyou"
+      ],
+      "weakAgainst": [
+        "Marcel",
+        "Barats",
+        "Benedetta",
+        "Edith",
+        "Masha"
+      ],
+      "synergyWith": [
+        "Lolita",
+        "Estes",
+        "Hilda"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Valentina",
+        "advantage": 2.7
+      },
+      {
+        "name": "Aamon",
+        "advantage": 2.7
+      },
+      {
+        "name": "Floryn",
+        "advantage": 2.5
+      },
+      {
+        "name": "Angela",
+        "advantage": 2.4
+      },
+      {
+        "name": "Suyou",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 3.9
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.7
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 3.1
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.9
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.8
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Lolita",
+        "synergy": 5
+      },
+      {
+        "name": "Estes",
+        "synergy": 5
+      },
+      {
+        "name": "Hilda",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -186,5 +257,66 @@
   "powerSpikeTags": [
     "Mid Game",
     "Level 8"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 52.9,
+  "pickRate": 1.3,
+  "banRate": 3.1,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 40,
+    "abilityEffects": 70,
+    "difficulty": 20
+  },
+  "powerCurve": {
+    "early": 48,
+    "mid": 61,
+    "late": 47,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "爱•|Shitaシ︎",
+      "games": 816,
+      "items": [
+        "Flame Arcane Boots",
+        "Feather of Heaven",
+        "Concentrated Energy",
+        "Genius Wand",
+        "Holy Crystal",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "suphello",
+      "games": 901,
+      "items": [
+        "Encourage Arcane Boots",
+        "Genius Wand",
+        "Feather of Heaven",
+        "Winter Crown",
+        "Holy Crystal",
+        "Glowing Wand"
+      ]
+    },
+    {
+      "player": "༒☬A. C .E☬༒",
+      "games": 863,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Feather of Heaven",
+        "Winter Crown",
+        "Holy Crystal"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

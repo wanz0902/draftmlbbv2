@@ -173,15 +173,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Yu Zhong",
+        "Guinevere",
+        "Baxia",
+        "Brody",
+        "Saber"
+      ],
+      "weakAgainst": [
+        "Argus",
+        "Sun",
+        "Estes",
+        "Popol and Kupa",
+        "Miya"
+      ],
+      "synergyWith": [
+        "Chip",
+        "Lukas",
+        "Joy"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Yu Zhong",
+        "advantage": 3.9
+      },
+      {
+        "name": "Guinevere",
+        "advantage": 3.4
+      },
+      {
+        "name": "Baxia",
+        "advantage": 3
+      },
+      {
+        "name": "Brody",
+        "advantage": 3
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Argus",
+        "advantage": 5.7
+      },
+      {
+        "name": "Sun",
+        "advantage": 4.5
+      },
+      {
+        "name": "Estes",
+        "advantage": 3.8
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 3.2
+      },
+      {
+        "name": "Miya",
+        "advantage": 3.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Chip",
+        "synergy": 5
+      },
+      {
+        "name": "Lukas",
+        "synergy": 5
+      },
+      {
+        "name": "Joy",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -220,5 +291,67 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 56,
+  "pickRate": 0.1,
+  "banRate": 0.5,
+  "heroAttributes": {
+    "durability": 50,
+    "offense": 70,
+    "abilityEffects": 30,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 55,
+    "late": 59,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Loyz’s claws",
+      "games": 1034,
+      "items": [
+        "Sea Halberd",
+        "Flame Swift Boots",
+        "Malefic Roar",
+        "Sky Piercer",
+        "Rose Gold Meteor",
+        "Blade of Despair"
+      ]
+    },
+    {
+      "player": "Masha Johnson Mason",
+      "games": 925,
+      "items": [
+        "Rapid Boots",
+        "Blade of the Heptaseas",
+        "Sea Halberd",
+        "Malefic Roar",
+        "Blade of Despair",
+        "Hunter Strike"
+      ]
+    },
+    {
+      "player": "Azymus",
+      "games": 788,
+      "items": [
+        "Sea Halberd",
+        "Rapid Boots",
+        "Hunter Strike",
+        "Malefic Roar",
+        "Endless Battle",
+        "Guardian Helmet"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

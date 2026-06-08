@@ -178,15 +178,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Harith",
+        "Chip",
+        "Silvanna",
+        "Faramis",
+        "Mathilda"
+      ],
+      "weakAgainst": [
+        "Lolita",
+        "Beatrix",
+        "Luo Yi",
+        "Layla",
+        "Hylos"
+      ],
+      "synergyWith": [
+        "Natalia",
+        "Estes",
+        "Rafaela"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Harith",
+        "advantage": 3.2
+      },
+      {
+        "name": "Chip",
+        "advantage": 3
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 2.9
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.8
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 5
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 2.6
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 2.3
+      },
+      {
+        "name": "Layla",
+        "advantage": 2.2
+      },
+      {
+        "name": "Hylos",
+        "advantage": 1.8
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Natalia",
+        "synergy": 5
+      },
+      {
+        "name": "Estes",
+        "synergy": 5
+      },
+      {
+        "name": "Rafaela",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicNote": "Edith transforms into Marksman Form after using Ultimate. Marksman Form skills (Divine Retribution, Lightning Bolt) not currently available in local source.",
@@ -229,5 +300,67 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.2,
+  "pickRate": 0.2,
+  "banRate": 0.1,
+  "heroAttributes": {
+    "durability": 70,
+    "offense": 30,
+    "abilityEffects": 100,
+    "difficulty": 30
+  },
+  "powerCurve": {
+    "early": 47,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Nature's • Wrath.",
+      "games": 579,
+      "items": [
+        "Dominance Ice",
+        "Radiant Armor",
+        "Thunder Belt",
+        "Feather of Heaven",
+        "Divine Glaive",
+        "Blade Armor"
+      ]
+    },
+    {
+      "player": "Boss Xebecc.",
+      "games": 678,
+      "items": [
+        "Tough Boots",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Feather of Heaven",
+        "Queen's Wings",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "P0TAT0",
+      "games": 960,
+      "items": [
+        "Encourage Rapid Boots",
+        "Thunder Belt",
+        "Windtalker",
+        "Dominance Ice",
+        "Oracle",
+        "Feather of Heaven"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

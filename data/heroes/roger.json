@@ -153,15 +153,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Argus",
+        "Harley",
+        "Balmond",
+        "Gusion",
+        "Silvanna"
+      ],
+      "weakAgainst": [
+        "Yve",
+        "Zhuxin",
+        "Leomord",
+        "Kaja",
+        "Khaleed"
+      ],
+      "synergyWith": [
+        "Layla",
+        "Ixia",
+        "Clint"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Argus",
+        "advantage": 2.1
+      },
+      {
+        "name": "Harley",
+        "advantage": 2
+      },
+      {
+        "name": "Balmond",
+        "advantage": 2
+      },
+      {
+        "name": "Gusion",
+        "advantage": 1.9
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 1.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 2.9
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.6
+      },
+      {
+        "name": "Leomord",
+        "advantage": 2.3
+      },
+      {
+        "name": "Kaja",
+        "advantage": 2.2
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 2.1
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Layla",
+        "synergy": 5
+      },
+      {
+        "name": "Ixia",
+        "synergy": 5
+      },
+      {
+        "name": "Clint",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicNote": "Roger has additional Wolf Form abilities after transformation (Lycan Pounce, Bloodthirsty Howl). Detailed Wolf Form skill data not currently available in local source.",
@@ -205,5 +276,66 @@
   "powerSpikeTags": [
     "2 Core Items",
     "Late Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 49,
+  "pickRate": 0.3,
+  "banRate": 0.1,
+  "heroAttributes": {
+    "durability": 60,
+    "offense": 40,
+    "abilityEffects": 10,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 51,
+    "mid": 63,
+    "late": 55,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "Gobs",
+      "games": 1361,
+      "items": [
+        "Ice Tough Boots",
+        "Windtalker",
+        "Rose Gold Meteor",
+        "Endless Battle",
+        "Blade of Despair",
+        "Sea Halberd"
+      ]
+    },
+    {
+      "player": "Leandro nyabu lagi.",
+      "games": 1157,
+      "items": [
+        "Flame Tough Boots",
+        "Windtalker",
+        "Sky Piercer",
+        "Haas' Claws",
+        "Rose Gold Meteor",
+        "Berserker's Fury"
+      ]
+    },
+    {
+      "player": "Creepypasta",
+      "games": 916,
+      "items": [
+        "Flame Tough Boots",
+        "Windtalker",
+        "Sky Piercer",
+        "Haas' Claws",
+        "Rose Gold Meteor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

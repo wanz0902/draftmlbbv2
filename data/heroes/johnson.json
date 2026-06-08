@@ -142,15 +142,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Layla",
+        "Eudora",
+        "Zilong",
+        "Saber",
+        "Yin"
+      ],
+      "weakAgainst": [
+        "Gloo",
+        "Alice",
+        "Atlas",
+        "Lylia",
+        "Zhuxin"
+      ],
+      "synergyWith": [
+        "Argus",
+        "Lunox",
+        "Alpha"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Layla",
+        "advantage": 3.4
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.5
+      },
+      {
+        "name": "Zilong",
+        "advantage": 2.4
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.3
+      },
+      {
+        "name": "Yin",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 3.7
+      },
+      {
+        "name": "Alice",
+        "advantage": 3.4
+      },
+      {
+        "name": "Atlas",
+        "advantage": 2.9
+      },
+      {
+        "name": "Lylia",
+        "advantage": 2.6
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.6
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Argus",
+        "synergy": 5
+      },
+      {
+        "name": "Lunox",
+        "synergy": 5
+      },
+      {
+        "name": "Alpha",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -190,5 +261,66 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.6,
+  "pickRate": 0.8,
+  "banRate": 2.9,
+  "heroAttributes": {
+    "durability": 80,
+    "offense": 30,
+    "abilityEffects": 90,
+    "difficulty": 50
+  },
+  "powerCurve": {
+    "early": 31,
+    "mid": 58,
+    "late": 48,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "ㅤㅤ ㅤ",
+      "games": 1295,
+      "items": [
+        "Encourage Magic Shoes",
+        "Fleeting Time",
+        "Dominance Ice",
+        "Antique Cuirass",
+        "Chastise Pauldron",
+        "Blade Armor"
+      ]
+    },
+    {
+      "player": "SP1CY LA VEDA",
+      "games": 1343,
+      "items": [
+        "Encourage Magic Shoes",
+        "Dominance Ice",
+        "Blade Armor",
+        "Chastise Pauldron",
+        "Antique Cuirass",
+        "Immortality"
+      ]
+    },
+    {
+      "player": "RonSkie",
+      "games": 1631,
+      "items": [
+        "Encourage Magic Shoes",
+        "Fleeting Time",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Blade Armor"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

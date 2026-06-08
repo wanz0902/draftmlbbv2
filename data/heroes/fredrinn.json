@@ -180,15 +180,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Gloo",
+        "Argus",
+        "Alucard",
+        "Esmeralda",
+        "Irithel"
+      ],
+      "weakAgainst": [
+        "Valir",
+        "Diggie",
+        "Gord",
+        "Balmond",
+        "Thamuz"
+      ],
+      "synergyWith": [
+        "Angela",
+        "Diggie",
+        "Beatrix"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 3.6
+      },
+      {
+        "name": "Argus",
+        "advantage": 3
+      },
+      {
+        "name": "Alucard",
+        "advantage": 2.8
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.5
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Valir",
+        "advantage": 3.5
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.6
+      },
+      {
+        "name": "Gord",
+        "advantage": 2.6
+      },
+      {
+        "name": "Balmond",
+        "advantage": 2.1
+      },
+      {
+        "name": "Thamuz",
+        "advantage": 2
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Angela",
+        "synergy": 5
+      },
+      {
+        "name": "Diggie",
+        "synergy": 5
+      },
+      {
+        "name": "Beatrix",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -230,5 +301,67 @@
   "powerSpikeTags": [
     "Level 2 (Roam Item)",
     "Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 51.4,
+  "pickRate": 0.7,
+  "banRate": 6.5,
+  "heroAttributes": {
+    "durability": 80,
+    "offense": 50,
+    "abilityEffects": 60,
+    "difficulty": 40
+  },
+  "powerCurve": {
+    "early": 43,
+    "mid": 63,
+    "late": 59,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "炎 無 心",
+      "games": 785,
+      "items": [
+        "Magic Shoes",
+        "Oracle",
+        "Brute Force Breastplate",
+        "War Axe",
+        "Queen's Wings",
+        "Thunder Belt"
+      ]
+    },
+    {
+      "player": "MURID SORMAN",
+      "games": 912,
+      "items": [
+        "Ice Tough Boots",
+        "Brute Force Breastplate",
+        "Oracle",
+        "Blade Armor",
+        "Radiant Armor",
+        "Rose Gold Meteor"
+      ]
+    },
+    {
+      "player": "&lt;Rèÿ&gt;can't hyp&gt;",
+      "games": 852,
+      "items": [
+        "War Axe",
+        "Queen's Wings",
+        "Oracle",
+        "Guardian Helmet",
+        "Radiant Armor",
+        "Chastise Pauldron"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }

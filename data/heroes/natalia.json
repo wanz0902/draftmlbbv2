@@ -198,15 +198,86 @@
     "deceptionValue": 5,
     "draftPhilosophyTags": [],
     "counterSystem": {
-      "strongAgainst": [],
-      "weakAgainst": [],
-      "synergyWith": []
+      "strongAgainst": [
+        "Hanzo",
+        "Ling",
+        "Gord",
+        "Xavier",
+        "Lolita"
+      ],
+      "weakAgainst": [
+        "Cyclops",
+        "Saber",
+        "Karina",
+        "Paquito",
+        "Rafaela"
+      ],
+      "synergyWith": [
+        "Khufra",
+        "Akai",
+        "Barats"
+      ]
     }
   },
   "matchupSystem": {
-    "strongAgainst": [],
-    "weakAgainst": [],
-    "synergyHeroes": [],
+    "strongAgainst": [
+      {
+        "name": "Hanzo",
+        "advantage": 6.9
+      },
+      {
+        "name": "Ling",
+        "advantage": 4.7
+      },
+      {
+        "name": "Gord",
+        "advantage": 3.8
+      },
+      {
+        "name": "Xavier",
+        "advantage": 3.4
+      },
+      {
+        "name": "Lolita",
+        "advantage": 3.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Cyclops",
+        "advantage": 5
+      },
+      {
+        "name": "Saber",
+        "advantage": 4
+      },
+      {
+        "name": "Karina",
+        "advantage": 3.4
+      },
+      {
+        "name": "Paquito",
+        "advantage": 3.3
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 3.3
+      }
+    ],
+    "synergyHeroes": [
+      {
+        "name": "Khufra",
+        "synergy": 5
+      },
+      {
+        "name": "Akai",
+        "synergy": 5
+      },
+      {
+        "name": "Barats",
+        "synergy": 5
+      }
+    ],
     "counterHeroes": []
   },
   "mechanicCategory": [
@@ -241,5 +312,66 @@
   "powerSpikeTags": [
     "Level 4",
     "Early-Mid Game"
-  ]
+  ],
+  "metaSource": "mlbb.tools",
+  "metaUpdatedAt": "2026-06-08",
+  "winRate": 50.3,
+  "pickRate": 0.3,
+  "banRate": 2.1,
+  "heroAttributes": {
+    "durability": 10,
+    "offense": 60,
+    "abilityEffects": 60,
+    "difficulty": 90
+  },
+  "powerCurve": {
+    "early": 63,
+    "mid": 55,
+    "late": 39,
+    "spikeLevels": [],
+    "coreItems": []
+  },
+  "proBuilds": [
+    {
+      "player": "єℓ мυѕтσ .",
+      "games": 892,
+      "items": [
+        "Ice Rapid Boots",
+        "Blade of the Heptaseas",
+        "Berserker's Fury",
+        "Sea Halberd",
+        "Malefic Roar",
+        "Great Dragon Spear"
+      ]
+    },
+    {
+      "player": "Japple insomnia lagi",
+      "games": 847,
+      "items": [
+        "Blade of the Heptaseas",
+        "Flame Rapid Boots",
+        "Berserker's Fury",
+        "Malefic Roar",
+        "Sea Halberd",
+        "Winter Crown"
+      ]
+    },
+    {
+      "player": "Jiuu ˃̵ᴗ˂̵",
+      "games": 973,
+      "items": [
+        "Blade of the Heptaseas",
+        "Ice Rapid Boots",
+        "Berserker's Fury",
+        "Malefic Roar",
+        "Sea Halberd"
+      ]
+    }
+  ],
+  "skillVideos": {
+    "passive": null,
+    "skill1": null,
+    "skill2": null,
+    "ultimate": null
+  }
 }
