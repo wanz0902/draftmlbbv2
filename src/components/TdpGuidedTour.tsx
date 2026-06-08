@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const TOUR_STORAGE_KEY = "tdp_guided_tour_completed";
@@ -31,13 +32,6 @@ interface TdpGuidedTourProps {
   initialStep?: number;
 }
 
-interface HighlightRect {
-  top: number;
-  left: number;
-  width: number;
-  height: number;
-}
-
 function findTarget(target: string): HTMLElement | null {
   return document.querySelector(`[data-tour-target="${target}"]`) as HTMLElement | null;
 }
@@ -50,9 +44,104 @@ export function markGuidedTourCompleted() {
   try { localStorage.setItem(TOUR_STORAGE_KEY, "true"); } catch {}
 }
 
+function TourOverlay({ step, onNext, onPrev, onSkip, hl, tip, ready, isLast, total }: {
+  step: number;
+  onNext: () => void;
+  onPrev: () => void;
+  onSkip: () => void;
+  hl: { top: number; left: number; w: number; h: number } | null;
+  tip: { top: number; left: number; w: number } | null;
+  ready: boolean;
+  isLast: boolean;
+  total: number;
+}) {
+  const currentStep = TOUR_STEPS[step];
+
+  return createPortal(
+    <>
+      {/* Dim background */}
+      <div style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.4)", pointerEvents: "none" }} />
+
+      {/* Highlight */}
+      {hl && (
+        <div
+          style={{
+            position: "fixed",
+            top: hl.top,
+            left: hl.left,
+            width: hl.w,
+            height: hl.h,
+            borderRadius: 10,
+            border: "2px solid #22d3ee",
+            boxShadow: "0 0 24px rgba(0,220,255,0.35)",
+            zIndex: 10000,
+            pointerEvents: "none",
+            transition: "all 0.15s ease-out",
+          }}
+        />
+      )}
+
+      {/* Tooltip */}
+      {tip && ready && currentStep && (
+        <div
+          style={{
+            position: "fixed",
+            top: tip.top,
+            left: tip.left,
+            width: tip.w,
+            zIndex: 10001,
+          }}
+        >
+          <div className="rounded-xl border border-white/15 bg-[#0e1525] shadow-2xl overflow-hidden">
+            <div className="px-4 pt-3 pb-2">
+              <div className="flex items-center justify-between mb-1">
+                <div className="flex items-center gap-2">
+                  <span className="flex items-center justify-center h-5 w-5 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-[9px] font-black text-cyan-300">
+                    {step + 1}
+                  </span>
+                  <span className="text-[9px] font-mono text-cyan-400/60 uppercase tracking-wider">
+                    of {total}
+                  </span>
+                </div>
+                <button onClick={onSkip} className="text-slate-600 hover:text-white cursor-pointer">
+                  <X className="h-3.5 w-3.5" />
+                </button>
+              </div>
+              <h3 className="text-[13px] font-black text-white font-display mb-0.5">{currentStep.title}</h3>
+              <p className="text-[11px] text-slate-400 leading-relaxed">{currentStep.text}</p>
+            </div>
+            <div className="flex items-center justify-between border-t border-white/[0.06] px-4 py-2">
+              <button
+                onClick={onPrev}
+                disabled={step === 0}
+                className="flex items-center gap-1 text-[11px] font-bold text-slate-500 hover:text-white transition cursor-pointer disabled:opacity-30"
+              >
+                <ChevronLeft className="h-3.5 w-3.5" /> Kembali
+              </button>
+              <div className="flex items-center gap-2">
+                <button onClick={onSkip} className="text-[10px] font-bold text-slate-600 hover:text-slate-400 transition cursor-pointer">
+                  Lewati
+                </button>
+                <button
+                  onClick={onNext}
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-cyan-500/20 border border-cyan-500/30 text-[11px] font-bold text-cyan-300 hover:bg-cyan-500/30 transition cursor-pointer"
+                >
+                  {isLast ? "Selesai" : "Selanjutnya"}
+                  {!isLast && <ChevronRight className="h-3.5 w-3.5" />}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>,
+    document.body
+  );
+}
+
 export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: TdpGuidedTourProps) {
   const [step, setStep] = useState(initialStep);
-  const [hl, setHl] = useState<HighlightRect | null>(null);
+  const [hl, setHl] = useState<{ top: number; left: number; w: number; h: number } | null>(null);
   const [tip, setTip] = useState<{ top: number; left: number; w: number } | null>(null);
   const [ready, setReady] = useState(false);
 
@@ -70,40 +159,36 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
       setHl(null);
       setTip(null);
       setReady(true);
-      console.warn(`[TDP Tour] Target "${cfg.target}" not found`);
       return;
     }
 
     const rect = el.getBoundingClientRect();
-    const pad = cfg.padding ?? 10;
-
     if (rect.width === 0 || rect.height === 0) {
       setHl(null);
       setTip(null);
       setReady(true);
-      console.warn(`[TDP Tour] Target "${cfg.target}" has zero size`);
       return;
     }
 
+    const pad = cfg.padding ?? 8;
     setHl({
       top: rect.top - pad,
       left: rect.left - pad,
-      width: rect.width + pad * 2,
-      height: rect.height + pad * 2,
+      w: rect.width + pad * 2,
+      h: rect.height + pad * 2,
     });
 
     const vpW = window.innerWidth;
     const vpH = window.innerHeight;
     const tipW = Math.min(280, vpW - 40);
     const tipH = 120;
-    const gap = 14;
+    const gap = 12;
     const edgePad = 16;
     const placement = cfg.placement || "bottom";
-
-    let ttop = 0, tleft = 0;
     const cx = rect.left + rect.width / 2;
     const cy = rect.top + rect.height / 2;
 
+    let ttop = 0, tleft = 0;
     switch (placement) {
       case "bottom": ttop = rect.bottom + pad + gap; tleft = cx - tipW / 2; break;
       case "top": ttop = rect.top - pad - gap - tipH; tleft = cx - tipW / 2; break;
@@ -127,10 +212,10 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
 
     didScrollRef.current = true;
     el.scrollIntoView({ block: "center", inline: "center", behavior: "instant" });
-    requestAnimationFrame(() => {
+    requestAnimationFrame(() => requestAnimationFrame(() => {
       didScrollRef.current = false;
       measure();
-    });
+    }));
   }, [measure]);
 
   useEffect(() => {
@@ -153,91 +238,22 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
   }, [measure]);
 
   const next = () => {
-    if (stepRef.current >= TOUR_STEPS.length - 1) {
-      markGuidedTourCompleted();
-      onComplete();
-    } else {
-      setStep((s) => s + 1);
-    }
+    if (stepRef.current >= TOUR_STEPS.length - 1) { markGuidedTourCompleted(); onComplete(); }
+    else setStep((s) => s + 1);
   };
-
   const prev = () => { if (stepRef.current > 0) setStep((s) => s - 1); };
 
-  const currentStep = TOUR_STEPS[step];
-  const isLast = step === TOUR_STEPS.length - 1;
-
   return (
-    <div className="fixed inset-0 z-[10000]" style={{ pointerEvents: "auto" }}>
-      {/* Dim overlay */}
-      <div className="absolute inset-0 bg-black/40" onClick={onSkip} />
-
-      {/* Rectangular spotlight highlight */}
-      {hl && (
-        <div
-          className="absolute rounded-[10px] border-2 border-cyan-400 pointer-events-none"
-          style={{
-            top: hl.top,
-            left: hl.left,
-            width: hl.width,
-            height: hl.height,
-            boxShadow: "0 0 24px rgba(0, 220, 255, 0.35), inset 0 0 8px rgba(0, 220, 255, 0.1)",
-          }}
-        />
-      )}
-
-      {/* Tooltip */}
-      {tip && ready && currentStep && (
-        <div className="absolute z-[10001]" style={{ top: tip.top, left: tip.left, width: tip.w }}>
-          <div className="rounded-xl border border-white/15 bg-[#0e1525] shadow-2xl overflow-hidden">
-            <div className="px-4 pt-3 pb-2">
-              <div className="flex items-center justify-between mb-1">
-                <div className="flex items-center gap-2">
-                  <span className="flex items-center justify-center h-5 w-5 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-[9px] font-black text-cyan-300">
-                    {step + 1}
-                  </span>
-                  <span className="text-[9px] font-mono text-cyan-400/60 uppercase tracking-wider">
-                    of {TOUR_STEPS.length}
-                  </span>
-                </div>
-                <button onClick={onSkip} className="text-slate-600 hover:text-white cursor-pointer">
-                  <X className="h-3.5 w-3.5" />
-                </button>
-              </div>
-              <h3 className="text-[13px] font-black text-white font-display mb-0.5">{currentStep.title}</h3>
-              <p className="text-[11px] text-slate-400 leading-relaxed">{currentStep.text}</p>
-            </div>
-            <div className="flex items-center justify-between border-t border-white/[0.06] px-4 py-2">
-              <button
-                onClick={prev}
-                disabled={step === 0}
-                className="flex items-center gap-1 text-[11px] font-bold text-slate-500 hover:text-white transition cursor-pointer disabled:opacity-30"
-              >
-                <ChevronLeft className="h-3.5 w-3.5" /> Kembali
-              </button>
-              <div className="flex items-center gap-2">
-                <button onClick={onSkip} className="text-[10px] font-bold text-slate-600 hover:text-slate-400 transition cursor-pointer">
-                  Lewati
-                </button>
-                <button
-                  onClick={next}
-                  className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-cyan-500/20 border border-cyan-500/30 text-[11px] font-bold text-cyan-300 hover:bg-cyan-500/30 transition cursor-pointer"
-                >
-                  {isLast ? "Selesai" : "Selanjutnya"}
-                  {!isLast && <ChevronRight className="h-3.5 w-3.5" />}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {!ready && (
-        <div className="absolute inset-0 z-[10001] flex items-center justify-center pointer-events-none">
-          <div className="rounded-xl border border-white/10 bg-[#0e1525] shadow-2xl p-4 text-center pointer-events-auto">
-            <p className="text-xs text-slate-400">Memuat...</p>
-          </div>
-        </div>
-      )}
-    </div>
+    <TourOverlay
+      step={step}
+      onNext={next}
+      onPrev={prev}
+      onSkip={onSkip}
+      hl={hl}
+      tip={tip}
+      ready={ready}
+      isLast={step >= TOUR_STEPS.length - 1}
+      total={TOUR_STEPS.length}
+    />
   );
 }
