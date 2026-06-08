@@ -58,7 +58,10 @@ Hero Stats page ("Statistik Hero MPL ID") menampilkan 132 hero (full roster) ali
 
 ## H. Commit Hash
 
-Belum di-commit. Menunggu instruksi user.
+- Commit: `3952b60`
+- Message: `fix: separate MPL hero stats from full hero roster`
+- Branch: `master`
+- Files changed: 4 (server.ts, StatsDashboard.tsx, latest-kilo-report.md, archive report)
 
 ## I. Resource Summary
 
