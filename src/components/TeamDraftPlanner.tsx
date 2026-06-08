@@ -847,12 +847,11 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
       </div>
 
       <div className="flex-1 overflow-y-auto px-4 py-3 space-y-4">
-        <div data-tour-target={isBlue ? "tour-ban-slots" : undefined}>
-          <div className="flex items-center gap-1.5 mb-2.5">
+        <div className="flex items-center gap-1.5 mb-2.5">
             <Ban className="h-3 w-3 text-rose-400/40" />
             <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">Bans</span>
           </div>
-          <div className="flex justify-between gap-1">
+          <div data-tour-target={isBlue ? "tour-ban-slots" : undefined} className="flex justify-between gap-1">
             {bans.map((h, i) => (
               <div key={i} className="flex flex-col items-center gap-1.5">
                 <CircleSlot hero={h} heroAssets={heroAssets} ring={ringColor} onClick={() => openPicker({ type: "ban", side, index: i })} onClear={() => clearSlot({ type: "ban", side, index: i })} />
@@ -860,14 +859,8 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
               </div>
             ))}
           </div>
-        </div>
 
-        <div data-tour-target={isBlue ? "tour-pick-slots" : undefined}>
-          <div className="flex items-center gap-1.5 mb-2.5">
-            <Swords className="h-3 w-3 text-cyan-400/40" />
-            <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">Picks</span>
-          </div>
-          <div className="flex justify-between gap-1">
+        <div data-tour-target={isBlue ? "tour-pick-slots" : undefined} className="flex items-center gap-1">
             {laneOrder.map((lane) => {
               const plan = lanes[lane];
               return (
@@ -876,18 +869,19 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
                 </div>
               );
             })}
-          </div>
         </div>
 
-        <div data-tour-target={isBlue ? "tour-role-lanes" : undefined} className="flex justify-between gap-1">
+        <div className="flex justify-between gap-1">
             {laneOrder.map((lane, idx) => {
               const plan = lanes[lane];
               const lc = LANE_COLORS[lane];
               return (
                 <div key={lane} className="flex flex-col items-center gap-1 flex-1">
-                  <button onClick={() => openPicker({ type: "pick", side, lane })} className={`inline-flex items-center gap-1 rounded-full border ${lc.border} ${lc.bg} px-2 py-0.5 cursor-pointer transition hover:opacity-80`}>
-                    <span className={`text-[8px] font-black uppercase tracking-wider ${lc.text}`}>{LANE_LABEL[lane]}</span>
-                  </button>
+                  <div data-tour-target={isBlue && idx === 0 ? "tour-role-lanes" : undefined} className="flex flex-col items-center gap-0.5">
+                    <button onClick={() => openPicker({ type: "pick", side, lane })} className={`inline-flex items-center gap-1 rounded-full border ${lc.border} ${lc.bg} px-2 py-0.5 cursor-pointer transition hover:opacity-80`}>
+                      <span className={`text-[8px] font-black uppercase tracking-wider ${lc.text}`}>{LANE_LABEL[lane]}</span>
+                    </button>
+                  </div>
                   <div data-tour-target={isBlue && idx === 0 ? "tour-backup-slots" : undefined} className="grid grid-cols-3 gap-1 mt-0.5">
                     {plan.backups.map((b, bi) => (
                       <MiniSlot key={bi} hero={b} heroAssets={heroAssets} ring={ringColor} onClick={() => openPicker({ type: "backup", side, lane, backupIndex: bi })} onClear={() => clearSlot({ type: "backup", side, lane, backupIndex: bi })} />

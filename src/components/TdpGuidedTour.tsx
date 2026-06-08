@@ -12,17 +12,17 @@ export interface TourStep {
 }
 
 export const TOUR_STEPS: TourStep[] = [
-  { target: "tour-sidebar", title: "Sidebar", text: "Semua draft kamu ada di sini. Tournament seperti folder, Draft adalah rencana di dalamnya.", placement: "right", padding: 14 },
-  { target: "tour-new-tournament", title: "Tambah Tournament", text: "Klik ini untuk membuat folder draft baru.", placement: "right", padding: 8 },
-  { target: "tour-add-draft", title: "Tambah Draft", text: "Klik ini untuk menambah draft plan.", placement: "right", padding: 8 },
-  { target: "tour-draft-header", title: "Draft Header", text: "Di sini kamu melihat draft yang sedang dibuka.", placement: "bottom", padding: 10 },
-  { target: "tour-side-toggle", title: "Side Toggle", text: "Pilih sisi tim kamu. Badge OURS akan pindah ke Blue atau Red.", placement: "bottom", padding: 8 },
-  { target: "tour-ban-slots", title: "Ban Slots", text: "Isi 5 ban untuk target hero lawan.", placement: "bottom", padding: 12 },
-  { target: "tour-pick-slots", title: "Pick Slots", text: "Isi 5 pick untuk hero utama draft.", placement: "bottom", padding: 12 },
-  { target: "tour-role-lanes", title: "Role Lanes", text: "Role lane membantu membagi hero ke EXP, Jungle, Mid, Gold, dan Roam.", placement: "bottom", padding: 10 },
-  { target: "tour-backup-slots", title: "Backup Hero", text: "Setiap lane punya 6 cadangan kalau hero utama diban atau diambil lawan.", placement: "bottom", padding: 10 },
-  { target: "tour-coach-notes", title: "Coach Notes", text: "Tulis win condition, target ban, matchup, atau rotasi awal.", placement: "top", padding: 12 },
-  { target: "tour-save-btn", title: "Save / Export", text: "Klik Save untuk download gambar draft.", placement: "left", padding: 8 },
+  { target: "tour-sidebar", title: "Sidebar", text: "Semua draft kamu ada di sini. Tournament seperti folder, Draft adalah rencana di dalamnya.", placement: "right", padding: 8 },
+  { target: "tour-new-tournament", title: "Tambah Tournament", text: "Klik ini untuk membuat folder draft baru.", placement: "right", padding: 6 },
+  { target: "tour-add-draft", title: "Tambah Draft", text: "Klik ini untuk menambah draft plan.", placement: "right", padding: 6 },
+  { target: "tour-draft-header", title: "Draft Header", text: "Di sini kamu melihat draft yang sedang dibuka.", placement: "bottom", padding: 8 },
+  { target: "tour-side-toggle", title: "Side Toggle", text: "Pilih sisi tim kamu. Badge OURS akan pindah ke Blue atau Red.", placement: "bottom", padding: 6 },
+  { target: "tour-ban-slots", title: "Ban Slots", text: "Isi 5 ban untuk target hero lawan.", placement: "bottom", padding: 6 },
+  { target: "tour-pick-slots", title: "Pick Slots", text: "Isi 5 pick untuk hero utama draft.", placement: "bottom", padding: 6 },
+  { target: "tour-role-lanes", title: "Role Lanes", text: "Role lane membantu membagi hero ke EXP, Jungle, Mid, Gold, dan Roam.", placement: "bottom", padding: 6 },
+  { target: "tour-backup-slots", title: "Backup Hero", text: "Setiap lane punya 6 cadangan kalau hero utama diban atau diambil lawan.", placement: "bottom", padding: 6 },
+  { target: "tour-coach-notes", title: "Coach Notes", text: "Tulis win condition, target ban, matchup, atau rotasi awal.", placement: "top", padding: 8 },
+  { target: "tour-save-btn", title: "Save / Export", text: "Klik Save untuk download gambar draft.", placement: "left", padding: 6 },
 ];
 
 interface TdpGuidedTourProps {
