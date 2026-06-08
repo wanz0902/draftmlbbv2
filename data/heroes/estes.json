@@ -533,5 +533,64 @@
       "tags": [],
       "lastUpdated": "2025-10-24T07:42:06.358672+00:00"
     }
+  ],
+  "mlbhubBuilds": [
+    {
+      "source": "mlbbhub",
+      "buildName": "Set 1",
+      "items": [
+        "Demon",
+        "Boots",
+        "Flask",
+        "the",
+        "Oasis",
+        "Fleeting"
+      ],
+      "emblem": {
+        "name": "Support Emblem",
+        "talents": []
+      },
+      "spell": "Purify",
+      "cost": 10750,
+      "notes": null
+    },
+    {
+      "source": "mlbbhub",
+      "buildName": "Set 2",
+      "items": [
+        "Tough",
+        "Boots",
+        "Flask",
+        "the",
+        "Oasis",
+        "Dominance"
+      ],
+      "emblem": {
+        "name": "Support Emblem",
+        "talents": []
+      },
+      "spell": "Flicker",
+      "cost": 10410,
+      "notes": null
+    },
+    {
+      "source": "mlbbhub",
+      "buildName": "Set 3",
+      "items": [
+        "Demon",
+        "Boots",
+        "Flask",
+        "the",
+        "Oasis",
+        "Fleeting"
+      ],
+      "emblem": {
+        "name": "Support Emblem",
+        "talents": []
+      },
+      "spell": "Revitalize",
+      "cost": 10550,
+      "notes": null
+    }
   ]
 }

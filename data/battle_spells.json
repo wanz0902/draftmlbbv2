@@ -33,7 +33,12 @@
     "sourceUpdatedAt": "2026-06-07T03:26:00.304Z",
     "dataQuality": "complete",
     "unlockNote": "Available from the start",
-    "mlbhubSource": "mlbbhub.com"
+    "mlbhubSource": "mlbbhub.com",
+    "recommendedRoles": [
+      "Assassin",
+      "Fighter",
+      "Mage"
+    ]
   },
   {
     "name": "Execute",

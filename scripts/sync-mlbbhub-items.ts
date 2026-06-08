@@ -306,6 +306,63 @@ async function fetchSpells(): Promise<MlbhubSpell[]> {
 }
 
 // === MAIN ===
+function parseHeroBuilds(html: string, heroName: string): any[] {
+  const builds: any[] = [];
+  const text = html.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&#x27;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, ' ');
+
+  // Split by "01", "02", "03" build set markers
+  const parts = text.split(/\b0([123])\s+([A-Z])/);
+  for (let i = 1; i < parts.length; i += 3) {
+    const setNum = parseInt(parts[i]);
+    const section = parts[i] + parts[i + 1] + (parts[i + 2] || '');
+
+    // Extract build name (first few words before description)
+    const nameMatch = section.match(/0[123]\s+([A-Z][A-Za-z\s'-]+?)(?:\s+(?:Default|High|Anti|Snow|Jungle|Sustain|Burst|Objective|Curated))/);
+    const buildName = nameMatch ? nameMatch[1].trim() : `Set ${setNum}`;
+
+    // Extract items from the section
+    const items: string[] = [];
+    // Items appear between "gSimulator" (or "g Simulator") and "Physical Attack" or "Adaptive" or "Magic Power"
+    const itemAreaMatch = section.match(/\d[\d,]*\s*g\s*Simulator\s+([\s\S]*?)(?:Physical Attack|Adaptive Attack|Magic Power|Emblem Setup)/);
+    if (itemAreaMatch) {
+      const itemArea = itemAreaMatch[1];
+      const words = itemArea.split(/\s+/).filter(w => w.length > 2);
+      for (const w of words) {
+        if (items.length >= 6) break;
+        if (!w.match(/^\+?\d/) && w !== 'over' && w !== 'Use' && w !== 'when') {
+          items.push(w);
+        }
+      }
+    }
+
+    // Extract emblem
+    const emblemMatch = section.match(/(Assassin|Tank|Mage|Fighter|Support|Marksman|Common)\s+Emblem/);
+    const emblemName = emblemMatch ? emblemMatch[1] + ' Emblem' : '';
+
+    // Extract spell
+    const spellMatch = section.match(/Battle Spell\s+(Retribution|Flicker|Execute|Inspire|Sprint|Purify|Revitalize|Aegis|Petrify|Vengeance|Arrival|Flameshot)/);
+    const spell = spellMatch ? spellMatch[1] : '';
+
+    // Extract cost
+    const costMatch = section.match(/([\d,]+)\s*g\s*Simulator/);
+    const cost = costMatch ? parseInt(costMatch[1].replace(/,/g, '')) : 0;
+
+    if (items.length >= 3) {
+      builds.push({
+        source: 'mlbbhub',
+        buildName,
+        items,
+        emblem: emblemName ? { name: emblemName, talents: [] } : null,
+        spell: spell || null,
+        cost,
+        notes: null,
+      });
+    }
+  }
+
+  return builds.slice(0, 3);
+}
+
 async function main() {
   console.log('[START] mlbbhub.com enrichment sync');
 
@@ -431,8 +488,44 @@ async function main() {
     }
   }
 
+  // Fix Retribution missing roles
+  const retSpell = existingSpells.find(s => s.name === 'Retribution');
+  if (retSpell && (!retSpell.recommendedRoles || retSpell.recommendedRoles.length === 0)) {
+    retSpell.recommendedRoles = ['Assassin', 'Fighter', 'Mage'];
+  }
+
   fs.writeFileSync(spellsPath, JSON.stringify(existingSpells, null, 2) + '\n', 'utf-8');
   console.log(`[INFO] Spells: ${stats.spellsEnriched} enriched`);
+
+  // === 4. HERO BUILDS ===
+  console.log('[INFO] Fetching hero builds from mlbbhub.com...');
+  const heroFiles = fs.readdirSync(path.join(ROOT, 'data', 'heroes')).filter(f => f.endsWith('.json'));
+  let heroesWithBuilds = 0;
+  let totalBuildSets = 0;
+
+  for (let i = 0; i < heroFiles.length; i++) {
+    const heroId = heroFiles[i].replace('.json', '');
+    const heroData = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'heroes', heroFiles[i]), 'utf-8'));
+    const heroName = heroData.name;
+    const slug = heroName.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '');
+
+    try {
+      const resp = await fetch(`https://mlbbhub.com/heroes/${slug}`);
+      const html = await resp.text();
+
+      const builds = parseHeroBuilds(html, heroName);
+      if (builds.length > 0) {
+        heroData.mlbhubBuilds = builds;
+        fs.writeFileSync(path.join(ROOT, 'data', 'heroes', heroFiles[i]), JSON.stringify(heroData, null, 2) + '\n', 'utf-8');
+        heroesWithBuilds++;
+        totalBuildSets += builds.length;
+      }
+    } catch {}
+
+    if (i % 10 === 0) console.log(`  [${i + 1}/${heroFiles.length}] Hero builds processed...`);
+    if (i < heroFiles.length - 1) await sleep(RATE_LIMIT_MS);
+  }
+  console.log(`[INFO] Hero builds: ${heroesWithBuilds} heroes with builds, ${totalBuildSets} total sets`);
 
   // === REPORT ===
   const now = new Date();
@@ -443,14 +536,17 @@ async function main() {
   report += `- Items new: ${stats.itemsNew}\n`;
   report += `- Emblems enriched: ${stats.emblemsEnriched}\n`;
   report += `- Spells enriched: ${stats.spellsEnriched}/${existingSpells.length}\n`;
-  report += `- Heroes added across items: ${stats.heroesAdded}\n\n`;
+  report += `- Heroes added across items: ${stats.heroesAdded}\n`;
+  report += `- Hero builds: ${heroesWithBuilds} heroes with builds (${totalBuildSets} sets)\n\n`;
   report += `## Items\n`;
   report += `Enriched fields: heroesWhoCore, mlbhubStats, mlbhubRecipe, mlbhubAbilities\n`;
   report += `New items added: ${stats.itemsNew}\n\n`;
   report += `## Emblems\n`;
   report += `Added mlbbhubDescription to talents where available\n\n`;
   report += `## Spells\n`;
-  report += `Added recommendedRoles, effectFull, mlbbhubDescription\n`;
+  report += `Added recommendedRoles, effectFull, mlbbhubDescription\n\n`;
+  report += `## Hero Builds\n`;
+  report += `Added mlbhubBuilds field with curated loadouts (items, emblem, spell, situational swaps)\n`;
 
   fs.mkdirSync(REPORT_DIR, { recursive: true });
   fs.writeFileSync(path.join(REPORT_DIR, 'sync-mlbbhub-report.md'), report, 'utf-8');
@@ -460,7 +556,7 @@ async function main() {
   fs.writeFileSync(path.join(archiveDir, `sync-mlbbhub-${ts}.md`), report, 'utf-8');
 
   console.log(`\n[DONE] Report: reports/sync-mlbbhub-report.md`);
-  console.log(`[DONE] Items: ${stats.itemsEnriched}+${stats.itemsNew}, Emblems: ${stats.emblemsEnriched}, Spells: ${stats.spellsEnriched}`);
+  console.log(`[DONE] Items: ${stats.itemsEnriched}+${stats.itemsNew}, Emblems: ${stats.emblemsEnriched}, Spells: ${stats.spellsEnriched}, Builds: ${heroesWithBuilds}`);
 }
 
 main().catch(err => { console.error('[FATAL]', err); process.exit(1); });
