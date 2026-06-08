@@ -1,63 +1,52 @@
-# TDP Guided Tour — Rectangle Spotlight Fix
+# TDP Guided Tour — Portal + Fixed Position Fix
 
-**Date:** 2026-06-08 08:05 WIB
+**Date:** 2026-06-08 08:12 WIB
 
 ---
 
-## What Was Wrong Before
+## Root Cause
 
-- Previous version used circular cyan markers (48px circles with pulse animation)
-- Circle markers didn't wrap target elements, looked ugly, and didn't clearly indicate which UI element was being explained
-- Markers positioned at element center, not around the element
+The highlight rectangles were offset/wrong because the `position: fixed` overlay was rendered INSIDE the TDP component tree. Ancestor CSS properties (`overflow-hidden`, `backdrop-blur-sm`, `overflow-y-auto`) can create stacking contexts that affect how `fixed` positioning maps to viewport coordinates. The `absolute` children of the `fixed inset-0` parent were NOT getting correct viewport coordinates.
 
-## Fix Applied
+## Fix
 
-Replaced circle markers with **target-sized rectangular spotlight**:
-- Reads `getBoundingClientRect()` from actual DOM element
-- Adds per-step padding (8px for buttons, 10-12px for medium, 14px for large)
-- Renders as fixed-position rectangle with cyan border + glow
-- Rectangle wraps the exact element + padding
+### 1. React Portal to document.body
+Render the entire tour overlay via `createPortal(overlay, document.body)`. This places the overlay at the top level of the DOM, completely outside the TDP component tree. No ancestor CSS can affect its positioning.
 
-### Highlight Calculation
+### 2. All fixed positioning
+Changed from `position: fixed` parent + `position: absolute` children to **all `position: fixed`**:
+- Dim background: `position: fixed; inset: 0`
+- Highlight: `position: fixed; top/left/width/height`
+- Tooltip: `position: fixed; top/left/width`
+
+All use viewport coordinates directly from `getBoundingClientRect()`.
+
+### 3. Double requestAnimationFrame
+After `scrollIntoView`, use double `requestAnimationFrame` to ensure layout is fully settled before measuring:
 ```
-rect = element.getBoundingClientRect()
-pad = cfg.padding (8-14px depending on target)
-hl.top = rect.top - pad
-hl.left = rect.left - pad
-hl.width = rect.width + pad * 2
-hl.height = rect.height + pad * 2
+scrollIntoView → rAF → rAF → measure
 ```
 
-### Per-Step Padding
-
-| Step | Target | Padding |
-|------|--------|---------|
-| 1 | Sidebar | 14px |
-| 2 | +NEW button | 8px |
-| 3 | +ADD DRAFT | 8px |
-| 4 | Draft header | 10px |
-| 5 | Side toggle | 8px |
-| 6 | Ban row | 12px |
-| 7 | Pick row | 12px |
-| 8 | Role lanes | 10px |
-| 9 | Backup slots | 10px |
-| 10 | Coach notes | 12px |
-| 11 | Save button | 8px |
+### 4. Tighter targets
+- `tour-ban-slots`: now wraps ONLY the circles row (not label + circles)
+- `tour-pick-slots`: now wraps ONLY the circles row (not circles + lanes + backups)
+- `tour-role-lanes`: wraps only the lane badge
+- `tour-backup-slots`: wraps only the 6-circle grid
+- All padding reduced to 6-8px
 
 ## Files Changed
 
 | File | Change |
 |------|--------|
-| `src/components/TdpGuidedTour.tsx` | Replaced circle markers with rectangular spotlight, added per-step padding |
-| `reports/latest-kilo-report.md` | Updated |
-| `reports/archive/tdp-guided-tour-rectangle-spotlight-fix-20260608-0805.md` | New |
+| `src/components/TdpGuidedTour.tsx` | Portal + all fixed positioning + double rAF |
+| `src/components/TeamDraftPlanner.tsx` | Tighter target wrapping |
 
 ## Validation
 
 | Check | Status |
 |-------|--------|
 | tsc | PASS |
-| build | PASS (7.04s) |
+| build | PASS (6.78s) |
 
 ## Localhost
 
