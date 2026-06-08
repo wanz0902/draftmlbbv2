@@ -89,12 +89,6 @@ function findTarget(target: string): HTMLElement | null {
   return document.querySelector(`[data-tour-target="${target}"]`) as HTMLElement | null;
 }
 
-function getRect(target: string): DOMRect | null {
-  const el = findTarget(target);
-  if (!el) return null;
-  return el.getBoundingClientRect();
-}
-
 function calcTooltip(
   targetRect: DOMRect,
   placement: string,
@@ -134,9 +128,7 @@ function calcTooltip(
 }
 
 export function isGuidedTourCompleted(): boolean {
-  try {
-    return localStorage.getItem(TOUR_STORAGE_KEY) === "true";
-  } catch { return false; }
+  try { return localStorage.getItem(TOUR_STORAGE_KEY) === "true"; } catch { return false; }
 }
 
 export function markGuidedTourCompleted() {
@@ -148,80 +140,70 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
   const [hl, setHl] = useState<{ top: number; left: number; w: number; h: number } | null>(null);
   const [tip, setTip] = useState<{ top: number; left: number; w: number } | null>(null);
   const [ready, setReady] = useState(false);
-  const rafRef = useRef<number>(0);
-  const measuringRef = useRef(false);
 
-  const currentStep = TOUR_STEPS[step];
-  const isLast = step === TOUR_STEPS.length - 1;
+  const stepRef = useRef(step);
+  stepRef.current = step;
+  const didScrollRef = useRef(false);
 
-  const measure = useCallback(() => {
-    if (measuringRef.current) return;
-    measuringRef.current = true;
+  const measureOnly = useCallback(() => {
+    const s = stepRef.current;
+    const target = TOUR_STEPS[s];
+    if (!target) return;
+    const el = findTarget(target.target);
+    if (!el) { setHl(null); setTip(null); setReady(true); return; }
 
-    const doMeasure = () => {
-      if (!currentStep) { measuringRef.current = false; return; }
-      const el = findTarget(currentStep.target);
-      if (!el) {
-        setHl(null);
-        setTip(null);
-        setReady(true);
-        measuringRef.current = false;
-        return;
-      }
+    const rect = el.getBoundingClientRect();
+    const vpW = window.innerWidth;
+    const vpH = window.innerHeight;
+    const pad = 10;
+    setHl({ top: rect.top - pad, left: rect.left - pad, w: rect.width + pad * 2, h: rect.height + pad * 2 });
+    const tipW = Math.min(300, vpW - 40);
+    const tipH = 140;
+    const pos = calcTooltip(rect, target.placement || "bottom", vpW, vpH, tipH, tipW);
+    setTip({ top: pos.top, left: pos.left, w: tipW });
+    setReady(true);
+  }, []);
 
-      el.scrollIntoView({ block: "center", inline: "center", behavior: "instant" });
+  const scrollToAndMeasure = useCallback(() => {
+    const s = stepRef.current;
+    const target = TOUR_STEPS[s];
+    if (!target) return;
+    const el = findTarget(target.target);
+    if (!el) { setHl(null); setTip(null); setReady(true); return; }
 
-      rafRef.current = requestAnimationFrame(() => {
-        const rect = el.getBoundingClientRect();
-        const vpW = window.innerWidth;
-        const vpH = window.innerHeight;
-        const pad = 10;
-
-        setHl({
-          top: rect.top - pad,
-          left: rect.left - pad,
-          w: rect.width + pad * 2,
-          h: rect.height + pad * 2,
-        });
-
-        const tipW = Math.min(300, vpW - 40);
-        const tipH = 140;
-        const pos = calcTooltip(rect, currentStep.placement || "bottom", vpW, vpH, tipH, tipW);
-
-        setTip({ top: pos.top, left: pos.left, w: tipW });
-        setReady(true);
-        measuringRef.current = false;
-      });
-    };
-
-    doMeasure();
-  }, [currentStep]);
+    didScrollRef.current = true;
+    el.scrollIntoView({ block: "center", inline: "center", behavior: "instant" });
+    requestAnimationFrame(() => {
+      didScrollRef.current = false;
+      measureOnly();
+    });
+  }, [measureOnly]);
 
   useEffect(() => {
     setReady(false);
     setHl(null);
     setTip(null);
+    const raf = requestAnimationFrame(() => scrollToAndMeasure());
+    return () => cancelAnimationFrame(raf);
+  }, [step, scrollToAndMeasure]);
 
-    const raf = requestAnimationFrame(() => {
-      measure();
-    });
-
-    const onResize = () => measure();
-    const onScroll = () => measure();
+  useEffect(() => {
+    const onScroll = () => {
+      if (!didScrollRef.current) measureOnly();
+    };
+    const onResize = () => measureOnly();
 
     window.addEventListener("resize", onResize);
     window.addEventListener("scroll", onScroll, true);
 
     return () => {
-      cancelAnimationFrame(raf);
-      cancelAnimationFrame(rafRef.current);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("scroll", onScroll);
     };
-  }, [measure]);
+  }, [measureOnly]);
 
   const next = () => {
-    if (isLast) {
+    if (stepRef.current >= TOUR_STEPS.length - 1) {
       markGuidedTourCompleted();
       onComplete();
     } else {
@@ -230,33 +212,25 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
   };
 
   const prev = () => {
-    if (step > 0) setStep((s) => s - 1);
+    if (stepRef.current > 0) setStep((s) => s - 1);
   };
+
+  const currentStep = TOUR_STEPS[step];
+  const isLast = step === TOUR_STEPS.length - 1;
 
   return (
     <div className="fixed inset-0 z-[10000]" style={{ pointerEvents: "auto" }}>
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" onClick={onSkip} />
 
-      {/* Highlight cutout */}
       {hl && (
         <div
-          className="absolute rounded-lg border-[2px] border-cyan-400/80 shadow-[0_0_16px_rgba(34,211,238,0.25)] transition-all duration-200 ease-out pointer-events-none"
-          style={{
-            top: hl.top,
-            left: hl.left,
-            width: hl.w,
-            height: hl.h,
-          }}
+          className="absolute rounded-lg border-[2px] border-cyan-400/80 shadow-[0_0_16px_rgba(34,211,238,0.25)] pointer-events-none"
+          style={{ top: hl.top, left: hl.left, width: hl.w, height: hl.h }}
         />
       )}
 
-      {/* Tooltip */}
       {tip && ready && currentStep && (
-        <div
-          className="absolute z-[10001]"
-          style={{ top: tip.top, left: tip.left, width: tip.w }}
-        >
+        <div className="absolute z-[10001]" style={{ top: tip.top, left: tip.left, width: tip.w }}>
           <div className="rounded-xl border border-white/15 bg-[#0e1525] shadow-2xl overflow-hidden">
             <div className="px-4 pt-3 pb-2">
               <div className="flex items-center justify-between mb-1">
@@ -279,10 +253,7 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
                 <ChevronLeft className="h-3.5 w-3.5" /> Kembali
               </button>
               <div className="flex items-center gap-2">
-                <button
-                  onClick={onSkip}
-                  className="text-[10px] font-bold text-slate-600 hover:text-slate-400 transition cursor-pointer"
-                >
+                <button onClick={onSkip} className="text-[10px] font-bold text-slate-600 hover:text-slate-400 transition cursor-pointer">
                   Lewati
                 </button>
                 <button
@@ -298,7 +269,6 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
         </div>
       )}
 
-      {/* No target found */}
       {!ready && (
         <div className="absolute inset-0 z-[10001] flex items-center justify-center pointer-events-none">
           <div className="rounded-xl border border-white/10 bg-[#0e1525] shadow-2xl p-4 text-center pointer-events-auto">
