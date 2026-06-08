@@ -1,52 +1,53 @@
-# TDP Guided Tour — Scroll Reset Fix
+# TDP Guided Tour — Target Audit & Fix
 
-**Date:** 2026-06-08 07:41 WIB
+**Date:** 2026-06-08 07:50 WIB
 
 ---
 
-## Root Cause
+## Root Cause of Step 5 Wrong Target
 
-Previous version had `measure()` as a `useCallback` depending on `currentStep`, and `scrollIntoView()` was called inside `measure()`. On scroll:
+`data-tour-target="tour-draft-header"` was on the ENTIRE `<header>` element which wraps BOTH the top row (title + toggle + buttons) AND the bottom row (Bans/Picks/Complete progress bar). This meant Step 4's highlight covered the entire header area including the Bans/Picks/Complete row, making Step 5's narrower toggle highlight appear to be in the wrong position.
 
-1. Scroll event → `measure()` → `scrollIntoView()` → triggers new scroll event → `measure()` again
-2. The `measuringRef` guard could fail under rapid events
-3. More critically: the `useEffect` re-ran when `measure` changed, and the scroll→scrollIntoView→scroll chain could trigger re-renders that caused step state to be read stale or reset
+**Fix:** Moved `data-tour-target="tour-draft-header"` from `<header>` to the breadcrumb/title `<div>` only.
 
-The fundamental problem was **scrollInsideView was called on every scroll event**, creating a feedback loop.
+---
 
-## Fix Strategy
+## Full Target Audit
 
-**Separated step state from position state completely:**
+| Step | Tour Config Target | DOM data-tour-target | Element | Status |
+|------|-------------------|---------------------|---------|--------|
+| 1 | tour-sidebar | tour-sidebar | `<aside>` sidebar | ✅ Correct |
+| 2 | tour-new-tournament | tour-new-tournament | `<button>` +NEW | ✅ Correct |
+| 3 | tour-add-draft | tour-add-draft | `<button>` +ADD DRAFT | ✅ Correct |
+| 4 | tour-draft-header | tour-draft-header | `<div>` breadcrumb/title (FIXED: was entire `<header>`) | ✅ Fixed |
+| 5 | tour-side-toggle | tour-side-toggle | `<div>` OUR BLUE/RED toggle group | ✅ Correct |
+| 6 | tour-ban-slots | tour-ban-slots | `<div>` Blue side ban section | ✅ Correct |
+| 7 | tour-pick-slots | tour-pick-slots | `<div>` Blue side pick section | ✅ Correct |
+| 8 | tour-role-lane | tour-role-lane | `<div>` First EXP lane column | ✅ Correct |
+| 9 | tour-backup-slots | tour-backup-slots | `<div>` 6 backup circles under EXP | ✅ Correct |
+| 10 | tour-coach-notes | tour-coach-notes | `<div>` Coach Notes area | ✅ Correct |
+| 11 | tour-save-btn | tour-save-btn | `<button>` Save/Export button | ✅ Correct |
 
-| Concern | Handler |
-|---------|---------|
-| Step change | `useEffect([step])` → `scrollToAndMeasure()` — scrolls target into view + measures |
-| Scroll/resize | `useEffect()` with stable `measureOnly()` — reads rect WITHOUT scrollIntoView |
-| Step reading | `stepRef.current` — always fresh, never stale |
+---
 
-**Key architectural changes:**
+## Files Changed
 
-1. **`stepRef`** — ref that always holds current step index. Scroll listener reads from ref, not closure.
-2. **`scrollToAndMeasure()`** — called only when step changes. Scrolls target into view, then measures via rAF.
-3. **`measureOnly()`** — called on scroll/resize. Only reads `getBoundingClientRect()` and updates highlight/tooltip. NO scrollIntoView.
-4. **`didScrollRef`** — prevents the scroll event fired by `scrollIntoView` from triggering `measureOnly()` (avoids double-measure on step change).
-5. **Scroll listener does NOT call `scrollIntoView`** — only re-reads rect coordinates.
+| File | Change |
+|------|--------|
+| `src/components/TeamDraftPlanner.tsx` | Moved `data-tour-target="tour-draft-header"` from `<header>` to breadcrumb/title `<div>` |
+| `reports/latest-kilo-report.md` | Updated |
+| `reports/archive/tdp-guided-tour-target-audit-20260608-0750.md` | New |
 
-## What Changed
-
-| Before | After |
-|--------|-------|
-| `measure` called on scroll (with scrollInsideView) | `measureOnly` called on scroll (NO scrollInsideView) |
-| `scrollIntoView` on every scroll event | `scrollIntoView` only on step change |
-| `currentStep` from closure (could be stale) | `stepRef.current` (always fresh) |
-| `measuringRef` guard (fragile) | `didScrollRef` flag (prevents scroll-after-scrollIntoView) |
+---
 
 ## Validation
 
 | Check | Status |
 |-------|--------|
 | tsc | PASS |
-| build | PASS (6.74s) |
+| build | PASS (7.49s) |
+
+---
 
 ## Localhost
 

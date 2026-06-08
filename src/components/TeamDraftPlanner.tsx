@@ -582,7 +582,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
       {/* ═══ MAIN WORKSPACE ═══ */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* ─── HEADER ─── */}
-        <header data-tour-target="tour-draft-header" className="border-b border-white/[0.08] bg-[#0e1525]/90 backdrop-blur-sm shrink-0">
+        <header className="border-b border-white/[0.08] bg-[#0e1525]/90 backdrop-blur-sm shrink-0">
           <div className="flex items-center gap-4 px-5 py-3">
             {sidebarCollapsed && (
               <button onClick={() => setSidebarCollapsed(false)} className="p-1.5 text-slate-500 hover:text-cyan-400 transition cursor-pointer" title="Expand sidebar">
@@ -592,7 +592,7 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
 
             {selectedDraft ? (
               <>
-                <div className="flex-1 min-w-0">
+                <div data-tour-target="tour-draft-header" className="flex-1 min-w-0">
                   <div className="flex items-center gap-1.5 text-[9px] font-mono uppercase tracking-[0.15em] text-slate-600 mb-0.5">
                     <span>{selectedTour?.name}</span>
                     <ChevronRight className="h-2.5 w-2.5" />
