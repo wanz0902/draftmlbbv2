@@ -18,6 +18,7 @@ import heroesMaster from "../data/heroes_master.json";
 import FallbackImage from "./FallbackImage";
 import HeroDetailPanel from "./HeroDetailPanel";
 import { getHeroImageUrl, getHeroRole } from "../lib/heroUtils";
+import HeroCard from "./HeroCard";
 
 interface StatsDashboardProps {
   heroes: HeroStats[];
@@ -84,15 +85,29 @@ export default function StatsDashboard({
   ];
 
   const processedHeroes = useMemo(() => {
-    return heroes.map((h) => ({
-      ...h,
-      role: getHeroRole(h.hero_name),
-      // Ensure numeric conversions for sorting
-      picksNum: parseInt(h.picks_total || "0", 10),
-      bansNum: parseInt(h.bans_total || "0", 10),
-      presenceNum: parseFloat((h.tournament_presence || "0").replace("%", "")),
-      winrateNum: parseFloat((h.winrate || "0").replace("%", "")),
-    }));
+    return heroes.map((h) => {
+      const presence = parseFloat((h.tournament_presence || "0").replace("%", ""));
+      const picks = parseInt(h.picks_total || "0", 10);
+      const bans = parseInt(h.bans_total || "0", 10);
+      const totalImpact = picks + bans;
+      let tier = "C";
+      if (presence >= 55 || totalImpact >= 28) tier = "S+";
+      else if (presence >= 40 || totalImpact >= 22) tier = "S";
+      else if (presence >= 24 || totalImpact >= 14) tier = "A";
+      else if (presence >= 12 || totalImpact >= 8) tier = "B";
+      else if (presence >= 5 || totalImpact >= 3) tier = "C";
+      else tier = "D";
+
+      return {
+        ...h,
+        role: getHeroRole(h.hero_name),
+        tier,
+        picksNum: picks,
+        bansNum: bans,
+        presenceNum: presence,
+        winrateNum: parseFloat((h.winrate || "0").replace("%", "")),
+      };
+    });
   }, [heroes]);
 
   const filteredAndSorted = useMemo(() => {
@@ -247,47 +262,22 @@ export default function StatsDashboard({
           </div>
 
           {/* Hero Grid List */}
-          <div className="max-h-[500px] overflow-y-auto pr-1 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 scrollbar-thin">
+          <div className="max-h-[600px] overflow-y-auto pr-1 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 scrollbar-thin">
             {filteredAndSorted.map((hero) => {
               const isSelected = selectedHero?.hero_name === hero.hero_name;
-              const img = getHeroImageUrl(hero.hero_name, heroAssets);
               return (
-                <button
+                <HeroCard
                   key={hero.hero_name}
+                  heroName={hero.hero_name}
+                  heroAssets={heroAssets}
+                  role={hero.role}
+                  tier={(hero as any).tier}
+                  winrate={hero.winrate}
+                  picks={hero.picks_total}
+                  bans={hero.bans_total}
+                  isSelected={isSelected}
                   onClick={() => setSelectedHero(hero)}
-                  className={`group relative flex items-center gap-3 rounded-xl border p-2.5 text-left transition-all ${
-                    isSelected
-                      ? "border-indigo-500 bg-indigo-950/20 shadow-lg shadow-indigo-500/5"
-                      : "border-gray-800 bg-gray-900/40 hover:border-gray-700 hover:bg-gray-900/80"
-                  }`}
-                >
-                  <div className="relative shrink-0">
-                    <FallbackImage
-                      src={img}
-                      fallbackText={hero.hero_name}
-                      alt={hero.hero_name}
-                      className="h-10 w-10 rounded-lg object-cover bg-gray-950 p-0.5 border border-gray-800 group-hover:scale-105 transition duration-200"
-                      containerClassName="h-10 w-10 rounded-lg text-xs"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute -bottom-1 -right-1 flex h-4 items-center justify-center rounded bg-gray-950 border border-gray-800 px-1 text-[8px] font-bold text-gray-400 uppercase tracking-tight">
-                      {hero.role?.slice(0, 3)}
-                    </div>
-                  </div>
-
-                  <div className="overflow-hidden">
-                    <h4 className="truncate font-sans text-xs font-semibold text-white group-hover:text-indigo-400 transition-colors">
-                      {hero.hero_name}
-                    </h4>
-                    <div className="flex items-center gap-1.5 font-mono text-[9px] text-gray-500">
-                      <span className="text-emerald-400 font-semibold">
-                        {hero.winrate} WR
-                      </span>
-                      <span>•</span>
-                      <span>{hero.picks_total}P</span>
-                    </div>
-                  </div>
-                </button>
+                />
               );
             })}
           </div>

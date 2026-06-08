@@ -109,7 +109,7 @@ Transform the generic draft recommendation system into a team-history-driven int
     - All data derived exclusively through MatchHistoryService
     - _Requirements: 10.1–10.7_
 
-  - [~] 2.2 Create heroAvailabilityTree.ts
+  - [ ] 2.2 Create heroAvailabilityTree.ts
     - Create `src/draft/heroAvailabilityTree.ts`
     - Implement `computePivotPredictions(bannedHero, enemyIdentity, currentBans, matchHistoryService): PivotPrediction`
     - Find the role/lane the banned hero fills for enemy team
@@ -121,7 +121,7 @@ Transform the generic draft recommendation system into a team-history-driven int
     - Flag roles with <2 remaining options as "collapsed" (critical severity)
     - _Requirements: 12.1–12.7_
 
-  - [~] 2.3 Integrate pattern and tree into MPL recommendations
+  - [ ] 2.3 Integrate pattern and tree into MPL recommendations
     - Update `generateMplRecommendations()` to accept and use `DraftPatternProfile` for draftPattern scoring factor
     - Call `getSequenceAlignment()` to compute alignment score for each hero candidate
     - Add pivot prediction text ("Jika di-ban: musuh kemungkinan beralih ke...") to ban recommendations using `computePivotPredictions()`
@@ -129,7 +129,7 @@ Transform the generic draft recommendation system into a team-history-driven int
     - Update server.ts MPL route to call `buildDraftPatterns()` and pass to recommendations
     - _Requirements: 5.7, 10.5, 10.6, 12.4_
 
-  - [~] 2.4 Verify build after Phase 2
+  - [ ] 2.4 Verify build after Phase 2
     - Run `npx tsc --noEmit` and `npm run build`
     - Ensure all new modules are properly imported and exported
     - _Requirements: 9.10_
@@ -140,13 +140,13 @@ Transform the generic draft recommendation system into a team-history-driven int
   - **Validates: Requirements 10.3, 10.4**
 
 - [ ] 3. UI + Pre-Draft + Analysis
-  - [~] 3.1 Create GET /api/draft/pre-draft/:blueTeam/:redTeam endpoint in server.ts
+  - [ ] 3.1 Create GET /api/draft/pre-draft/:blueTeam/:redTeam endpoint in server.ts
     - Add new endpoint that calls `buildTeamIdentity()` for both teams and `buildMatchupProfile()`
     - Return combined JSON: each team's comfort heroes, priority bans, signature compositions, side preference, draft tendencies, recent form (last 5 series WR), head-to-head summary with full record
     - Return fallback message "Data spesifik team belum tersedia. Menggunakan fallback meta." when no team data
     - _Requirements: 4.1–4.9_
 
-  - [~] 3.2 Create PreDraftPanel.tsx component
+  - [ ] 3.2 Create PreDraftPanel.tsx component
     - Create `src/components/PreDraftPanel.tsx`
     - Accept props: blueTeamId, redTeamId, blueIdentity, redIdentity, matchupProfile, heroAssets
     - Display top 5 comfort heroes per team with pickCount and winRate
@@ -160,7 +160,7 @@ Transform the generic draft recommendation system into a team-history-driven int
     - All labels in Bahasa Indonesia
     - _Requirements: 4.1–4.9_
 
-  - [~] 3.3 Create pickSequenceIntelligence.ts
+  - [ ] 3.3 Create pickSequenceIntelligence.ts
     - Create `src/draft/pickSequenceIntelligence.ts`
     - Implement `predictLanes(teamId, currentPicks, teamIdentity, matchHistoryService): LanePrediction[] | null`
     - Return `null` if currentPicks.length < 3
@@ -170,7 +170,7 @@ Transform the generic draft recommendation system into a team-history-driven int
     - Update probability distributions when new picks added (composition constraint)
     - _Requirements: 11.1–11.7_
 
-  - [~] 3.4 Create draftAnalysisEngine.ts + POST /api/draft/analysis endpoint
+  - [ ] 3.4 Create draftAnalysisEngine.ts + POST /api/draft/analysis endpoint
     - Create `src/draft/draftAnalysisEngine.ts`
     - Implement `generateDraftAnalysis(bluePicks, redPicks, blueBans, redBans, blueIdentity, redIdentity, matchupProfile, heroDatabase, heroesMaster): DraftAnalysisResult`
     - Compute: Team Comfort Score, Draft Execution Score, Signature Pick Usage, Comfort Hero Success Rate, Head-to-Head Impact, Ban Efficiency, Draft Risk Analysis (quantified with historical WR), Power Spike Timeline, Lane Assignment, Win Condition, Evidence Source
@@ -180,7 +180,7 @@ Transform the generic draft recommendation system into a team-history-driven int
     - Fall back to local structured analysis if Gemini fails
     - _Requirements: 7.1–7.13_
 
-  - [~] 3.5 Create geminiGuard.ts
+  - [ ] 3.5 Create geminiGuard.ts
     - Create `src/draft/geminiGuard.ts`
     - Implement `validateGeminiOutput(geminiResponse, localAnalysis, unavailableHeroes): GeminiValidationResult`
     - Validate: no references to unavailable heroes, no differing statistics, no absent hero recommendations
@@ -188,13 +188,13 @@ Transform the generic draft recommendation system into a team-history-driven int
     - Only pass structured JSON to Gemini (prevent raw data access)
     - _Requirements: 8.1–8.5_
 
-  - [~] 3.6 Update DraftSimulator.tsx — integrate PreDraftPanel and structured analysis
+  - [ ] 3.6 Update DraftSimulator.tsx — integrate PreDraftPanel and structured analysis
     - Import and render PreDraftPanel after team selection, before first ban
     - When draft completes in MPL mode: call `/api/draft/analysis`, render structured dashboard
     - Display analysis sections with data tables and metrics instead of plain text
     - _Requirements: 4.1–4.9, 7.1–7.13_
 
-  - [~] 3.7 Verify build after Phase 3
+  - [ ] 3.7 Verify build after Phase 3
     - Run `npx tsc --noEmit` and `npm run build`
     - Ensure all new components and endpoints compile cleanly
     - _Requirements: 9.10_
@@ -205,7 +205,7 @@ Transform the generic draft recommendation system into a team-history-driven int
   - **Validates: Requirements 5.2, 5.3, 5.4, 6.2, 6.3**
 
 - [ ] 4. Final Verification
-  - [~] 4.1 Verify Ranked mode unchanged, hero count 132, full build passes
+  - [ ] 4.1 Verify Ranked mode unchanged, hero count 132, full build passes
     - Confirm existing `scoreHero()` and `generateRecommendations()` are untouched
     - Verify `heroes_master.json` still has 132 heroes
     - Verify no hero JSON files in `data/heroes/` are modified

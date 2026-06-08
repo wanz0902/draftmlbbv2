@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { DetailedHero } from "../types/hero";
 import HeroDetailPanel from "./HeroDetailPanel";
-import { ArrowLeft, Search, Info, Hexagon } from "lucide-react";
+import { ArrowLeft, Search, Hexagon } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 import FallbackImage from "./FallbackImage";
 import { getHeroImageUrl } from "../lib/heroUtils";
+import HeroIntelCard from "./HeroIntelCard";
 
 interface Props {
   heroAssets: Record<string, string>;
@@ -110,57 +111,17 @@ export default function HeroIntelligenceDashboard({ heroAssets, initialHeroName 
           <p className="text-gray-500 text-sm">Tidak ada hero ditemukan untuk pencarian "<span className="text-gray-300">{search}</span>"</p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4">
           {filteredHeroes.map((hero) => (
             <motion.div
               layoutId={`hero-card-${hero.id}`}
               key={hero.id}
-              onClick={() => setSelectedHero(hero)}
-              className="group cursor-pointer rounded-xl bg-gradient-to-b from-[#101827] to-[#0a1120] border border-blue-900/30 overflow-hidden hover:border-blue-500/50 transition-all shadow-lg hover:shadow-blue-500/20"
             >
-              <div className="aspect-square bg-[#060b13] relative overflow-hidden">
-                {(() => {
-                   const fallback = "/raw-assets/regular_season_files/60px-ML_icon_Zhuxin.png";
-                   const heroName = hero.hero_name || hero.name || "";
-                   const imgUrl = getHeroImageUrl(heroName, heroAssets);
-                   return (
-                     <FallbackImage
-                       src={imgUrl}
-                       fallbackText={heroName || "Unknown"}
-                       alt={heroName}
-                       className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
-                       containerClassName="w-full h-full flex items-center justify-center font-bold pb-2 text-gray-700 text-3xl pb-2 bg-[#060b13]"
-                     />
-                   );
-                })()}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1120] via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-2 left-2 flex gap-1 flex-wrap">
-                  {(Array.isArray(hero.role) ? hero.role : [hero.role])
-                    .filter(Boolean)
-                    .map((rol) => (
-                      <span
-                        key={rol}
-                        className="text-[9px] font-mono uppercase bg-blue-900/60 text-blue-300 px-1.5 py-0.5 rounded border border-blue-500/30 backdrop-blur-md"
-                      >
-                        {rol}
-                      </span>
-                    ))}
-                </div>
-              </div>
-              <div className="p-3">
-                <h3 className="font-bold text-white tracking-tight">
-                  {(hero as any).hero_name || (hero as any).name}
-                </h3>
-                <p className="text-xs text-gray-500">
-                  {Array.isArray(hero.specialty) ? hero.specialty.join(", ") : hero.specialty || ""}
-                </p>
-                <div className="mt-2 flex items-center justify-between">
-                  <div className="flex items-center gap-1 text-xs text-emerald-400">
-                    <Info className="h-3 w-3" />
-                    <span>View Intel</span>
-                  </div>
-                </div>
-              </div>
+              <HeroIntelCard
+                hero={hero}
+                heroAssets={heroAssets}
+                onClick={() => setSelectedHero(hero)}
+              />
             </motion.div>
           ))}
         </div>
