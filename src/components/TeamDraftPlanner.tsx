@@ -669,11 +669,8 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
 
         {/* Reminder banner */}
         {showReminder && selectedDraft && (
-          <div className="flex items-center justify-center gap-3 bg-cyan-500/[0.06] border-b border-cyan-500/10 px-4 py-2.5">
-            <div className="flex flex-col text-center">
-              <span className="text-[10px] font-bold text-cyan-400/80">Butuh bantuan lengkap?</span>
-              <span className="text-[9px] text-cyan-400/50">Klik tombol Buka Tutorial untuk panduan membuat tournament, menambah draft, mengisi ban/pick, backup hero, notes, dan export gambar.</span>
-            </div>
+          <div className="flex items-center justify-center gap-3 bg-cyan-500/[0.06] border-b border-cyan-500/10 px-4 py-2">
+            <span className="text-[10px] text-cyan-400/70">Butuh bantuan?</span>
             <button onClick={() => { setShowReminder(false); setShowReplayConfirm(true); }} className="flex items-center gap-1.5 shrink-0 rounded-lg border border-cyan-500/25 bg-cyan-500/15 px-3 py-1.5 text-[10px] font-bold text-cyan-300 hover:bg-cyan-500/25 transition cursor-pointer">
               <BookOpen className="h-3.5 w-3.5" />
               Buka Tutorial
