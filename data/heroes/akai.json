@@ -1,676 +1,744 @@
 {
-  "id": "akai",
-  "name": "Akai",
-  "heroName": "Akai",
-  "role": [
-    "Tank"
-  ],
-  "specialty": [
-    "Guard",
-    "Crowd Control"
-  ],
-  "lane": "Roam",
-  "lanes": [
-    "Roam",
-    "Jungle",
-    "EXP"
-  ],
-  "flex_lanes": [
-    "Jungle",
-    "EXP"
-  ],
-  "releaseYear": 2024,
-  "difficulty": 5,
-  "metaTier": "B",
-  "baseStats": {
-    "hp": 2859,
-    "hpRegen": 8.6,
-    "mana": 450,
-    "manaRegen": 3,
-    "physicalAttack": 114,
-    "physicalDefense": 27,
-    "magicPower": 0,
-    "magicDefense": 15,
-    "attackSpeed": 0.8,
-    "attackSpeedRatio": 100,
-    "movementSpeed": 250
-  },
-  "skills": {
-    "passive": {
-      "name": "Tai Chi",
-      "description": "Akai gains a 25( +5% Total HP) shield for 4s on each skill cast and marks enemy heroes and Creeps hit by his skills. Akai's Basic Attacks deal 25( +5% Total HP) extra (Physical Damage) to marked enemies.",
-      "cooldown": [],
-      "manaCost": [],
-      "damageType": "NONE",
-      "scaling": [
-        "None"
-      ],
-      "crowdControlType": [],
-      "strategicTags": [],
-      "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Tai_Chi",
-      "tips": "Getting a Shield on every skill cast makes Akai rathertanky during the early game, as well as provides a lot of opportunities foroutplays. The extra shield makes Akai a very formidable opponent in a 1v1scenario. When jungling, space out the usage of Skill 1 and Skill 2 to allow your shield to tank the damage from the jungle monsters, as Akai's passive shield has an internal cooldown.",
-      "iconUrl": "/raw-assets/skill_icons/akai/tai_chi.png",
-      "displayLabel": "Passive",
-      "skillSlot": "passive"
-    },
-    "skill1": {
-      "name": "Headbutt",
-      "description": "Akai charges in the target direction, dealing 300( +50% Total Physical Attack) (Physical Damage) to enemies along the way. If Akai hits an enemy hero during this process, he'll knock them airborne for 0.5s and be able to roll in the Joystick's direction once. Akai can cast (Headbutt) during (Heavy Spin) to quickly adjust his position.",
-      "cooldown": [
-        10
-      ],
-      "manaCost": [
-        50
-      ],
-      "damageType": "PHYSICAL",
-      "scaling": [
-        "None"
-      ],
-      "crowdControlType": [],
-      "strategicTags": [],
-      "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Headbutt",
-      "tips": "The long-ranged jump allows for a strong engage into the enemy back line, a narrow escape across walls or just a really good ambush. Remember that when enemy's are marked by Blender (with the Froggy symbol floating on their heads) jumping on them will stun them.",
-      "iconUrl": "/raw-assets/skill_icons/akai/headbutt.png",
-      "displayLabel": "Skill 1",
-      "skillSlot": "skill1"
-    },
-    "skill2": {
-      "name": "Body Slam",
-      "description": "Akai smashes the ground with his body, dealing 270( +6% Total HP) (Physical Damage) to nearby enemies and slowing them by 45% for 2s.",
-      "cooldown": [
-        10
-      ],
-      "manaCost": [
-        50
-      ],
-      "damageType": "PHYSICAL",
-      "scaling": [
-        "None"
-      ],
-      "crowdControlType": [],
-      "strategicTags": [],
-      "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Body_Slam",
-      "tips": "Blender is Akai's poking skill. The projectile explodes upon impact or at maximum range, and has a relatively wide AoE, making it very easy to mark targets. The most important part of this ability is that attacking targets marked by Blender allows Akai to deal extra 5% of Akai's Max HP as physical damage, which is A WHOLE LOT OF FREAKING DAMAGE.",
-      "iconUrl": "/raw-assets/skill_icons/akai/body_slam.png",
-      "displayLabel": "Skill 2",
-      "skillSlot": "skill2"
-    },
-    "ultimate": {
-      "name": "Heavy Spin",
-      "description": "Akai removes all debuffs on him and spins for 4s, gaining Slow Immunity while continuously dealing 200( +100% Extra Physical Attack) (Physical Damage) to nearby enemies and knocking them back. Enemy heroes knocked back will knock back other heroes they collide with during the process. Akai also gradually increases his Movement Speed by 70% over the duration. This skill can only be interrupted by Suppression and Morph effects.",
-      "cooldown": [
-        30
-      ],
-      "manaCost": [
-        100
-      ],
-      "damageType": "PHYSICAL",
-      "scaling": [
-        "None"
-      ],
-      "crowdControlType": [],
-      "strategicTags": [],
-      "comboUsage": "",
-      "strategicPurpose": "",
-      "iconName": "Heavy_Spin",
-      "tips": "Hurricane Dance is Akai's disruptive skill. Aside from the annoying knock back and wall pinning, Akai is immune to slowdown effects and has increased movement speed during the ULT duration. Akai's ULT also works as a Purify which clears all CC and Stun effects on him.",
-      "iconUrl": "/raw-assets/skill_icons/akai/heavy_spin.png",
-      "displayLabel": "Ultimate",
-      "skillSlot": "ultimate"
-    }
-  },
-  "strategicData": {
-    "draftSignals": [
-      "Intelligence profile incomplete"
-    ],
-    "hiddenGameplans": [],
-    "macroIdentity": [
-      "Frontline Engage",
-      "Crowd Control",
-      "Jungle Tempo",
-      "EXP Lane Pressure",
-      "Map Rotation"
-    ],
-    "tempoClassification": "Mid",
-    "powerSpikeTiming": [
-      "Level 2 (Roam Item)",
-      "Mid Game"
-    ],
-    "objectiveControlValue": 5,
-    "snowballPotential": 5,
-    "flexibilityRating": 5,
-    "deceptionValue": 5,
-    "draftPhilosophyTags": [],
-    "counterSystem": {
-      "strongAgainst": [
-        "Argus",
-        "Harith",
-        "Nana",
-        "Alucard",
-        "Ixia"
-      ],
-      "weakAgainst": [
-        "Marcel",
-        "Alice",
-        "Hanabi",
-        "Cici",
-        "Chip"
-      ],
-      "synergyWith": [
-        "Angela",
-        "Rafaela",
-        "Natalia",
-        "Helcurt",
-        "Mathilda"
-      ]
-    }
-  },
-  "matchupSystem": {
-    "strongAgainst": [
-      {
-        "name": "Argus",
-        "advantage": 2.1
-      },
-      {
-        "name": "Harith",
-        "advantage": 1.9
-      },
-      {
-        "name": "Nana",
-        "advantage": 1.8
-      },
-      {
-        "name": "Alucard",
-        "advantage": 1.6
-      },
-      {
-        "name": "Ixia",
-        "advantage": 1.6
-      }
-    ],
-    "weakAgainst": [
-      {
-        "name": "Marcel",
-        "advantage": 3.8
-      },
-      {
-        "name": "Alice",
-        "advantage": 3
-      },
-      {
-        "name": "Hanabi",
-        "advantage": 2.3
-      },
-      {
-        "name": "Cici",
-        "advantage": 2.2
-      },
-      {
-        "name": "Chip",
-        "advantage": 2.1
-      }
-    ],
-    "synergyHeroes": [
-      {
-        "name": "Angela",
-        "synergy": 3.8
-      },
-      {
-        "name": "Rafaela",
-        "synergy": 3.6
-      },
-      {
-        "name": "Natalia",
-        "synergy": 3.1
-      },
-      {
-        "name": "Helcurt",
-        "synergy": 2.8
-      },
-      {
-        "name": "Mathilda",
-        "synergy": 2.3
-      }
-    ],
-    "counterHeroes": [],
-    "strongAgainstReason": "Akai is strong against heroes with poor Mobility since he can easily catch and eliminate them with his Ultimate, such as Eudora and Odette.",
-    "weakAgainstReason": "Akai is countered by heroes with CC removers or transformation abilities that allow them to escape or counter Akai's Ultimate, such as Nana and Diggie.",
-    "synergyReason": "Akai works best with heroes who can deal high burst damage as they can help him take down enemies caught in his Ultimate, such as Saber and Eudora."
-  },
-  "mechanicCategory": [
-    "Standard"
-  ],
-  "mechanicNote": "Akai adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
-  "playstyleTags": [
-    "Initiate",
-    "CC Chain"
-  ],
-  "difficultyTags": [
-    "Macro",
-    "Timing"
-  ],
-  "draftTags": [
-    "Flex Pick",
-    "First Pick Priority",
-    "CC Coverage"
-  ],
-  "counterTags": [
-    "True Damage",
-    "Sustained DPS",
-    "Anti-Heal"
-  ],
-  "synergyTags": [
-    "Enables Carry",
-    "Pairs with Burst",
-    "CC Chain Partner"
-  ],
-  "macroTags": [
-    "Frontline Engage",
-    "Crowd Control",
-    "Jungle Tempo",
-    "EXP Lane Pressure",
-    "Map Rotation"
-  ],
-  "powerSpikeTags": [
-    "Level 2 (Roam Item)",
-    "Mid Game"
-  ],
-  "metaSource": "mlbb.tools",
-  "metaUpdatedAt": "2026-06-08",
-  "winRate": 50.4,
-  "pickRate": 0.5,
-  "banRate": 2.9,
-  "heroAttributes": {
-    "durability": 90,
-    "offense": 30,
-    "abilityEffects": 90,
-    "difficulty": 30
-  },
-  "powerCurve": {
-    "early": 55,
-    "mid": 78,
-    "late": 66,
-    "spikeLevels": [
-      "Lv 2",
-      "Lv 4",
-      "Lv 8"
-    ],
-    "coreItems": [
-      "Dominance Ice",
-      "Antique Cuirass",
-      "Athena's Shield"
-    ],
-    "dominantPhase": "Mid Game",
-    "description": "Akai is serviceable early with decent base tankiness and short CC, but his real impact comes once Heavy Spin is available for displacement/peel and objective fights. He stays useful late with control, though his value depends more on positioning and team follow-up than raw scaling."
-  },
-  "proBuilds": [
-    {
-      "player": "Youtube ixirpanda",
-      "games": 1428,
-      "items": [
-        "Encourage Rapid Boots",
-        "Fleeting Time",
-        "Guardian Helmet",
-        "Dominance Ice",
-        "Immortality",
-        "Antique Cuirass"
-      ]
-    },
-    {
-      "player": "Namensシ",
-      "games": 682,
-      "items": [
-        "Smite Rapid Boots",
-        "Thunder Belt",
-        "Dominance Ice",
-        "Cursed Helmet",
-        "Guardian Helmet",
-        "Winter Crown"
-      ]
-    },
-    {
-      "player": "roupp",
-      "games": 1143,
-      "items": [
-        "Encourage Rapid Boots",
-        "Dominance Ice",
-        "Chastise Pauldron",
-        "Radiant Armor",
-        "Blade Armor"
-      ]
-    }
-  ],
-  "skillVideos": {
-    "passive": null,
-    "skill1": null,
-    "skill2": null,
-    "ultimate": null
-  },
-  "combos": [
-    {
-      "name": "LANING",
-      "sequence": [
-        "Skill 1",
-        "Skill 2",
-        "Passive"
-      ],
-      "description": "In the laning phase, Akai should use his 1st Skill to knock back the enemy, and slow them down with his 2nd Skill, then spam his Basic Attack to deal damage."
-    },
-    {
-      "name": "TEAMFIGHT",
-      "sequence": [
-        "Skill 1",
-        "Skill 3",
-        "Skill 2"
-      ],
-      "description": "In teamfights, Akai should use his 1st Skill to knock back the enemy, and roll into the enemy formation. Then use his Ultimate to disrupt the enemy formation, and continue to deal damage with his 2nd Skill after his Ultimate ends."
-    }
-  ],
-  "connections": [
-    {
-      "name": "Saber",
-      "relationship": "ASSIST"
-    },
-    {
-      "name": "Eudora",
-      "relationship": "ASSIST"
-    }
-  ],
-  "difficultyLabel": "Easy",
-  "region": "Cadia Riverlands",
-  "race": "Anthropomorphic panda",
-  "bestTeammates": [
-    {
-      "name": "Chip",
-      "winrateDelta": 7.74
-    },
-    {
-      "name": "Angela",
-      "winrateDelta": 6.39
-    },
-    {
-      "name": "Rafaela",
-      "winrateDelta": 3.97
-    },
-    {
-      "name": "Natalia",
-      "winrateDelta": 2.11
-    },
-    {
-      "name": "Diggie",
-      "winrateDelta": 1.74
-    }
-  ],
-  "worstTeammates": [
-    {
-      "name": "Minotaur",
-      "winrateDelta": -4.27
-    },
-    {
-      "name": "Kaja",
-      "winrateDelta": -4
-    },
-    {
-      "name": "Hylos",
-      "winrateDelta": -3.19
-    },
-    {
-      "name": "Grock",
-      "winrateDelta": -3.19
-    },
-    {
-      "name": "Tigreal",
-      "winrateDelta": -3.18
-    }
-  ],
-  "metaScore": 16.66,
-  "metaRank": 68,
-  "mlcSource": "mlcounters.app",
-  "mlcUpdatedAt": "2026-06-08",
-  "mlcountersMatchup": {
-    "strongAgainst": [
-      {
-        "name": "Argus",
-        "advantage": 3.04
-      },
-      {
-        "name": "Harith",
-        "advantage": 2.37
-      },
-      {
-        "name": "Sora",
-        "advantage": 2.09
-      },
-      {
-        "name": "Ixia",
-        "advantage": 2
-      },
-      {
-        "name": "Atlas",
-        "advantage": 1.86
-      }
-    ],
-    "weakAgainst": [
-      {
-        "name": "Alice",
-        "advantage": 3.47
-      },
-      {
-        "name": "Cici",
-        "advantage": 3.09
-      },
-      {
-        "name": "Kaja",
-        "advantage": 2.97
-      },
-      {
-        "name": "Valentina",
-        "advantage": 2.9
-      },
-      {
-        "name": "Marcel",
-        "advantage": 2.67
-      }
-    ]
-  },
-  "communityBuilds": [
-    {
-      "source": "molebuild",
-      "buildName": "MPL PH S16 Grand Finals : AURORA.Demonkite",
-      "author": "community",
-      "votes": 4,
-      "items": [
-        "Tought Boots",
-        "Antique Cuirass",
-        "Athena's Shield",
-        "Guardian Helmet"
-      ],
-      "emblem": {
-        "name": "Tank",
-        "talents": {
-          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
-          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
-          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
-        }
-      },
-      "spell": "Ice Retribution",
-      "skillOrder": null,
-      "notes": "AURORA VS Team Liquid PH Game 4",
-      "tags": [],
-      "lastUpdated": "2025-10-28T04:50:55.691679+00:00"
-    },
-    {
-      "source": "molebuild",
-      "buildName": "nothing but good",
-      "author": "community",
-      "votes": 3,
-      "items": [
-        "Tought Boots",
-        "Thunder Belt",
-        "Cursed Helmet",
-        "Guardian Helmet",
-        "Immortality",
-        "Antique Cuirass"
-      ],
-      "emblem": {
-        "name": "Tank",
-        "talents": {
-          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
-          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
-          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
-        }
-      },
-      "spell": "Ice Retribution",
-      "skillOrder": null,
-      "notes": null,
-      "tags": [],
-      "lastUpdated": "2026-01-02T10:42:09.094434+00:00"
-    },
-    {
-      "source": "molebuild",
-      "buildName": "AKAI JUNGLERR",
-      "author": "community",
-      "votes": 2,
-      "items": [
-        "Tought Boots",
-        "Oracle",
-        "Sea Halberd",
-        "Cursed Helmet",
-        "Hunter Strike",
-        "Immortality"
-      ],
-      "emblem": {
-        "name": "Fighter",
-        "talents": {
-          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
-          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
-          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
-        }
-      },
-      "spell": "Ice Retribution",
-      "skillOrder": null,
-      "notes": null,
-      "tags": [],
-      "lastUpdated": "2025-10-26T06:46:08.036945+00:00"
-    },
-    {
-      "source": "molebuild",
-      "buildName": "Thunder ball, dominan eis, war ax, sepatu cc, oracel",
-      "author": "community",
-      "votes": 2,
-      "items": [
-        "Tought Boots",
-        "War Axe",
-        "Queen's Wings",
-        "Oracle",
-        "Brute Force Breastplate",
-        "Chastise Pauldron"
-      ],
-      "emblem": {
-        "name": "Fighter",
-        "talents": {
-          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
-          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
-          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
-        }
-      },
-      "spell": "Flicker",
-      "skillOrder": null,
-      "notes": "Memiliki rambut panjang, muka bentuk lonjong, memiliki cangkul di pundaknya, bajunya bewarna kuning ",
-      "tags": [],
-      "lastUpdated": "2025-12-05T12:40:56.888203+00:00"
-    },
-    {
-      "source": "molebuild",
-      "buildName": "Hjcvmcvm",
-      "author": "community",
-      "votes": 1,
-      "items": [
-        "Tought Boots",
-        "Guardian Helmet",
-        "Cursed Helmet",
-        "Thunder Belt",
-        "Blade Armor",
-        "Chastise Pauldron"
-      ],
-      "emblem": {
-        "name": "Tank",
-        "talents": {
-          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
-          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
-          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
-        }
-      },
-      "spell": "Ice Retribution",
-      "skillOrder": null,
-      "notes": "Vjktvxnlkc",
-      "tags": [],
-      "lastUpdated": "2025-10-27T10:35:28.021705+00:00"
-    }
-  ],
-  "mlbhubBuilds": [
-    {
-      "source": "mlbbhub",
-      "buildName": "Set 1",
-      "items": [
-        "Tough",
-        "Boots",
-        "Dominance",
-        "Ice",
-        "Thunder",
-        "Belt"
-      ],
-      "emblem": {
-        "name": "Support Emblem",
-        "talents": []
-      },
-      "spell": "Flicker",
-      "cost": 10970,
-      "notes": null
-    },
-    {
-      "source": "mlbbhub",
-      "buildName": "Set 2",
-      "items": [
-        "Warrior",
-        "Boots",
-        "Dominance",
-        "Ice",
-        "Antique",
-        "Cuirass"
-      ],
-      "emblem": {
-        "name": "Tank Emblem",
-        "talents": []
-      },
-      "spell": "Flicker",
-      "cost": 11100,
-      "notes": null
-    },
-    {
-      "source": "mlbbhub",
-      "buildName": "Set 3",
-      "items": [
-        "Tough",
-        "Boots",
-        "Cursed",
-        "Helmet",
-        "Guardian",
-        "Helmet"
-      ],
-      "emblem": {
-        "name": "Common Emblem",
-        "talents": []
-      },
-      "spell": "Retribution",
-      "cost": 11110,
-      "notes": null
-    }
-  ]
+    "id":  "akai",
+    "name":  "Akai",
+    "heroName":  "Akai",
+    "role":  [
+                 "Tank"
+             ],
+    "specialty":  [
+                      "Guard",
+                      "Crowd Control"
+                  ],
+    "lane":  "Roam",
+    "lanes":  [
+                  "Roam",
+                  "Jungle",
+                  "EXP"
+              ],
+    "flex_lanes":  [
+                       "Jungle",
+                       "EXP"
+                   ],
+    "releaseYear":  2024,
+    "difficulty":  5,
+    "metaTier":  "B",
+    "baseStats":  {
+                      "hp":  2859,
+                      "hpRegen":  8.6,
+                      "mana":  450,
+                      "manaRegen":  3,
+                      "physicalAttack":  114,
+                      "physicalDefense":  27,
+                      "magicPower":  0,
+                      "magicDefense":  15,
+                      "attackSpeed":  0.8,
+                      "attackSpeedRatio":  100,
+                      "movementSpeed":  250
+                  },
+    "skills":  {
+                   "passive":  {
+                                   "name":  "Tai Chi",
+                                   "description":  "Akai gains a 25( +5% Total HP) shield for 4s on each skill cast and marks enemy heroes and Creeps hit by his skills. Akai\u0027s Basic Attacks deal 25( +5% Total HP) extra (Physical Damage) to marked enemies.",
+                                   "cooldown":  [
+
+                                                ],
+                                   "manaCost":  [
+
+                                                ],
+                                   "damageType":  "NONE",
+                                   "scaling":  [
+                                                   "None"
+                                               ],
+                                   "crowdControlType":  [
+
+                                                        ],
+                                   "strategicTags":  [
+
+                                                     ],
+                                   "comboUsage":  "",
+                                   "strategicPurpose":  "",
+                                   "iconName":  "Tai_Chi",
+                                   "tips":  "Getting a Shield on every skill cast makes Akai rathertanky during the early game, as well as provides a lot of opportunities foroutplays. The extra shield makes Akai a very formidable opponent in a 1v1scenario. When jungling, space out the usage of Skill 1 and Skill 2 to allow your shield to tank the damage from the jungle monsters, as Akai\u0027s passive shield has an internal cooldown.",
+                                   "iconUrl":  "/raw-assets/skill_icons/akai/tai_chi.png",
+                                   "displayLabel":  "Passive",
+                                   "skillSlot":  "passive"
+                               },
+                   "skill1":  {
+                                  "name":  "Headbutt",
+                                  "description":  "Akai charges in the target direction, dealing 300( +50% Total Physical Attack) (Physical Damage) to enemies along the way. If Akai hits an enemy hero during this process, he\u0027ll knock them airborne for 0.5s and be able to roll in the Joystick\u0027s direction once. Akai can cast (Headbutt) during (Heavy Spin) to quickly adjust his position.",
+                                  "cooldown":  [
+                                                   10
+                                               ],
+                                  "manaCost":  [
+                                                   50
+                                               ],
+                                  "damageType":  "PHYSICAL",
+                                  "scaling":  [
+                                                  "None"
+                                              ],
+                                  "crowdControlType":  [
+
+                                                       ],
+                                  "strategicTags":  [
+
+                                                    ],
+                                  "comboUsage":  "",
+                                  "strategicPurpose":  "",
+                                  "iconName":  "Headbutt",
+                                  "tips":  "The long-ranged jump allows for a strong engage into the enemy back line, a narrow escape across walls or just a really good ambush. Remember that when enemy\u0027s are marked by Blender (with the Froggy symbol floating on their heads) jumping on them will stun them.",
+                                  "iconUrl":  "/raw-assets/skill_icons/akai/headbutt.png",
+                                  "displayLabel":  "Skill 1",
+                                  "skillSlot":  "skill1"
+                              },
+                   "skill2":  {
+                                  "name":  "Body Slam",
+                                  "description":  "Akai smashes the ground with his body, dealing 270( +6% Total HP) (Physical Damage) to nearby enemies and slowing them by 45% for 2s.",
+                                  "cooldown":  [
+                                                   10
+                                               ],
+                                  "manaCost":  [
+                                                   50
+                                               ],
+                                  "damageType":  "PHYSICAL",
+                                  "scaling":  [
+                                                  "None"
+                                              ],
+                                  "crowdControlType":  [
+
+                                                       ],
+                                  "strategicTags":  [
+
+                                                    ],
+                                  "comboUsage":  "",
+                                  "strategicPurpose":  "",
+                                  "iconName":  "Body_Slam",
+                                  "tips":  "Blender is Akai\u0027s poking skill. The projectile explodes upon impact or at maximum range, and has a relatively wide AoE, making it very easy to mark targets. The most important part of this ability is that attacking targets marked by Blender allows Akai to deal extra 5% of Akai\u0027s Max HP as physical damage, which is A WHOLE LOT OF FREAKING DAMAGE.",
+                                  "iconUrl":  "/raw-assets/skill_icons/akai/body_slam.png",
+                                  "displayLabel":  "Skill 2",
+                                  "skillSlot":  "skill2"
+                              },
+                   "ultimate":  {
+                                    "name":  "Heavy Spin",
+                                    "description":  "Akai removes all debuffs on him and spins for 4s, gaining Slow Immunity while continuously dealing 200( +100% Extra Physical Attack) (Physical Damage) to nearby enemies and knocking them back. Enemy heroes knocked back will knock back other heroes they collide with during the process. Akai also gradually increases his Movement Speed by 70% over the duration. This skill can only be interrupted by Suppression and Morph effects.",
+                                    "cooldown":  [
+                                                     30
+                                                 ],
+                                    "manaCost":  [
+                                                     100
+                                                 ],
+                                    "damageType":  "PHYSICAL",
+                                    "scaling":  [
+                                                    "None"
+                                                ],
+                                    "crowdControlType":  [
+
+                                                         ],
+                                    "strategicTags":  [
+
+                                                      ],
+                                    "comboUsage":  "",
+                                    "strategicPurpose":  "",
+                                    "iconName":  "Heavy_Spin",
+                                    "tips":  "Hurricane Dance is Akai\u0027s disruptive skill. Aside from the annoying knock back and wall pinning, Akai is immune to slowdown effects and has increased movement speed during the ULT duration. Akai\u0027s ULT also works as a Purify which clears all CC and Stun effects on him.",
+                                    "iconUrl":  "/raw-assets/skill_icons/akai/heavy_spin.png",
+                                    "displayLabel":  "Ultimate",
+                                    "skillSlot":  "ultimate"
+                                }
+               },
+    "strategicData":  {
+                          "draftSignals":  [
+                                               "Intelligence profile incomplete"
+                                           ],
+                          "hiddenGameplans":  [
+
+                                              ],
+                          "macroIdentity":  [
+                                                "Frontline Engage",
+                                                "Crowd Control",
+                                                "Jungle Tempo",
+                                                "EXP Lane Pressure",
+                                                "Map Rotation"
+                                            ],
+                          "tempoClassification":  "Mid",
+                          "powerSpikeTiming":  [
+                                                   "Level 2 (Roam Item)",
+                                                   "Mid Game"
+                                               ],
+                          "objectiveControlValue":  5,
+                          "snowballPotential":  5,
+                          "flexibilityRating":  5,
+                          "deceptionValue":  5,
+                          "draftPhilosophyTags":  [
+
+                                                  ],
+                          "counterSystem":  {
+                                                "strongAgainst":  [
+                                                                      "Argus",
+                                                                      "Harith",
+                                                                      "Nana",
+                                                                      "Alucard",
+                                                                      "Ixia"
+                                                                  ],
+                                                "weakAgainst":  [
+                                                                    "Marcel",
+                                                                    "Alice",
+                                                                    "Hanabi",
+                                                                    "Cici",
+                                                                    "Chip"
+                                                                ],
+                                                "synergyWith":  [
+                                                                    "Angela",
+                                                                    "Rafaela",
+                                                                    "Natalia",
+                                                                    "Helcurt",
+                                                                    "Mathilda"
+                                                                ]
+                                            }
+                      },
+    "matchupSystem":  {
+                          "strongAgainst":  [
+                                                {
+                                                    "name":  "Argus",
+                                                    "advantage":  2.1
+                                                },
+                                                {
+                                                    "name":  "Harith",
+                                                    "advantage":  1.9
+                                                },
+                                                {
+                                                    "name":  "Nana",
+                                                    "advantage":  1.8
+                                                },
+                                                {
+                                                    "name":  "Alucard",
+                                                    "advantage":  1.6
+                                                },
+                                                {
+                                                    "name":  "Ixia",
+                                                    "advantage":  1.6
+                                                }
+                                            ],
+                          "weakAgainst":  [
+                                              {
+                                                  "name":  "Marcel",
+                                                  "advantage":  3.8
+                                              },
+                                              {
+                                                  "name":  "Alice",
+                                                  "advantage":  3
+                                              },
+                                              {
+                                                  "name":  "Hanabi",
+                                                  "advantage":  2.3
+                                              },
+                                              {
+                                                  "name":  "Cici",
+                                                  "advantage":  2.2
+                                              },
+                                              {
+                                                  "name":  "Chip",
+                                                  "advantage":  2.1
+                                              }
+                                          ],
+                          "synergyHeroes":  [
+                                                {
+                                                    "name":  "Angela",
+                                                    "synergy":  3.8
+                                                },
+                                                {
+                                                    "name":  "Rafaela",
+                                                    "synergy":  3.6
+                                                },
+                                                {
+                                                    "name":  "Natalia",
+                                                    "synergy":  3.1
+                                                },
+                                                {
+                                                    "name":  "Helcurt",
+                                                    "synergy":  2.8
+                                                },
+                                                {
+                                                    "name":  "Mathilda",
+                                                    "synergy":  2.3
+                                                }
+                                            ],
+                          "counterHeroes":  [
+
+                                            ],
+                          "strongAgainstReason":  "Akai is strong against heroes with poor Mobility since he can easily catch and eliminate them with his Ultimate, such as Eudora and Odette.",
+                          "weakAgainstReason":  "Akai is countered by heroes with CC removers or transformation abilities that allow them to escape or counter Akai\u0027s Ultimate, such as Nana and Diggie.",
+                          "synergyReason":  "Akai works best with heroes who can deal high burst damage as they can help him take down enemies caught in his Ultimate, such as Saber and Eudora."
+                      },
+    "mechanicCategory":  [
+                             "Standard"
+                         ],
+    "mechanicNote":  "Akai adalah tank dengan kemampuan crowd control untuk memproteksi tim dan menginisiasi teamfight.",
+    "playstyleTags":  [
+                          "Initiate",
+                          "CC Chain"
+                      ],
+    "difficultyTags":  [
+                           "Macro",
+                           "Timing"
+                       ],
+    "draftTags":  [
+                      "Flex Pick",
+                      "First Pick Priority",
+                      "CC Coverage"
+                  ],
+    "counterTags":  [
+                        "True Damage",
+                        "Sustained DPS",
+                        "Anti-Heal"
+                    ],
+    "synergyTags":  [
+                        "Enables Carry",
+                        "Pairs with Burst",
+                        "CC Chain Partner"
+                    ],
+    "macroTags":  [
+                      "Frontline Engage",
+                      "Crowd Control",
+                      "Jungle Tempo",
+                      "EXP Lane Pressure",
+                      "Map Rotation"
+                  ],
+    "powerSpikeTags":  [
+                           "Level 2 (Roam Item)",
+                           "Mid Game"
+                       ],
+    "metaSource":  "mlbb.tools",
+    "metaUpdatedAt":  "2026-06-08",
+    "winRate":  50.4,
+    "pickRate":  0.5,
+    "banRate":  2.9,
+    "heroAttributes":  {
+                           "durability":  90,
+                           "offense":  30,
+                           "abilityEffects":  90,
+                           "difficulty":  30
+                       },
+    "powerCurve":  {
+                       "early":  55,
+                       "mid":  78,
+                       "late":  66,
+                       "spikeLevels":  [
+                                           "Lv 2",
+                                           "Lv 4",
+                                           "Lv 8"
+                                       ],
+                       "coreItems":  [
+                                         "Dominance Ice",
+                                         "Antique Cuirass",
+                                         "Athena\u0027s Shield"
+                                     ],
+                       "dominantPhase":  "Mid Game",
+                       "description":  "Akai is serviceable early with decent base tankiness and short CC, but his real impact comes once Heavy Spin is available for displacement/peel and objective fights. He stays useful late with control, though his value depends more on positioning and team follow-up than raw scaling."
+                   },
+    "proBuilds":  [
+                      {
+                          "player":  "Youtube ixirpanda",
+                          "games":  1428,
+                          "items":  [
+                                        "Encourage Rapid Boots",
+                                        "Fleeting Time",
+                                        "Guardian Helmet",
+                                        "Dominance Ice",
+                                        "Immortality",
+                                        "Antique Cuirass"
+                                    ]
+                      },
+                      {
+                          "player":  "Namensシ",
+                          "games":  682,
+                          "items":  [
+                                        "Smite Rapid Boots",
+                                        "Thunder Belt",
+                                        "Dominance Ice",
+                                        "Cursed Helmet",
+                                        "Guardian Helmet",
+                                        "Winter Crown"
+                                    ]
+                      },
+                      {
+                          "player":  "roupp",
+                          "games":  1143,
+                          "items":  [
+                                        "Encourage Rapid Boots",
+                                        "Dominance Ice",
+                                        "Chastise Pauldron",
+                                        "Radiant Armor",
+                                        "Blade Armor"
+                                    ]
+                      }
+                  ],
+    "skillVideos":  {
+                        "video-1-0":  "/videos/heroes/akai/video-1-0.mp4",
+                        "passive":  "/videos/heroes/akai/video-0-0.mp4",
+                        "ultimate":  "/videos/heroes/akai/video-3-0.mp4",
+                        "video-2-0":  "/videos/heroes/akai/video-2-0.mp4",
+                        "skill2":  "/videos/heroes/akai/video-2-0.mp4",
+                        "sources":  [
+                                        {
+                                            "fileName":  "video-0-0.mp4",
+                                            "originalUrl":  "https://cyecgjflipqwvpxartbp.supabase.co/storage/v1/object/public/skill-videos/heroes/skills/akai/video-0-0.mp4",
+                                            "localPath":  "/videos/heroes/akai/video-0-0.mp4"
+                                        },
+                                        {
+                                            "fileName":  "video-1-0.mp4",
+                                            "originalUrl":  "https://cyecgjflipqwvpxartbp.supabase.co/storage/v1/object/public/skill-videos/heroes/skills/akai/video-1-0.mp4",
+                                            "localPath":  "/videos/heroes/akai/video-1-0.mp4"
+                                        },
+                                        {
+                                            "fileName":  "video-2-0.mp4",
+                                            "originalUrl":  "https://cyecgjflipqwvpxartbp.supabase.co/storage/v1/object/public/skill-videos/heroes/skills/akai/video-2-0.mp4",
+                                            "localPath":  "/videos/heroes/akai/video-2-0.mp4"
+                                        },
+                                        {
+                                            "fileName":  "video-3-0.mp4",
+                                            "originalUrl":  "https://cyecgjflipqwvpxartbp.supabase.co/storage/v1/object/public/skill-videos/heroes/skills/akai/video-3-0.mp4",
+                                            "localPath":  "/videos/heroes/akai/video-3-0.mp4"
+                                        }
+                                    ],
+                        "skill1":  "/videos/heroes/akai/video-1-0.mp4",
+                        "video-0-0":  "/videos/heroes/akai/video-0-0.mp4",
+                        "video-3-0":  "/videos/heroes/akai/video-3-0.mp4"
+                    },
+    "combos":  [
+                   {
+                       "name":  "LANING",
+                       "sequence":  [
+                                        "Skill 1",
+                                        "Skill 2",
+                                        "Passive"
+                                    ],
+                       "description":  "In the laning phase, Akai should use his 1st Skill to knock back the enemy, and slow them down with his 2nd Skill, then spam his Basic Attack to deal damage."
+                   },
+                   {
+                       "name":  "TEAMFIGHT",
+                       "sequence":  [
+                                        "Skill 1",
+                                        "Skill 3",
+                                        "Skill 2"
+                                    ],
+                       "description":  "In teamfights, Akai should use his 1st Skill to knock back the enemy, and roll into the enemy formation. Then use his Ultimate to disrupt the enemy formation, and continue to deal damage with his 2nd Skill after his Ultimate ends."
+                   }
+               ],
+    "connections":  [
+                        {
+                            "name":  "Saber",
+                            "relationship":  "ASSIST"
+                        },
+                        {
+                            "name":  "Eudora",
+                            "relationship":  "ASSIST"
+                        }
+                    ],
+    "difficultyLabel":  "Easy",
+    "region":  "Cadia Riverlands",
+    "race":  "Anthropomorphic panda",
+    "bestTeammates":  [
+                          {
+                              "name":  "Chip",
+                              "winrateDelta":  7.74
+                          },
+                          {
+                              "name":  "Angela",
+                              "winrateDelta":  6.39
+                          },
+                          {
+                              "name":  "Rafaela",
+                              "winrateDelta":  3.97
+                          },
+                          {
+                              "name":  "Natalia",
+                              "winrateDelta":  2.11
+                          },
+                          {
+                              "name":  "Diggie",
+                              "winrateDelta":  1.74
+                          }
+                      ],
+    "worstTeammates":  [
+                           {
+                               "name":  "Minotaur",
+                               "winrateDelta":  -4.27
+                           },
+                           {
+                               "name":  "Kaja",
+                               "winrateDelta":  -4
+                           },
+                           {
+                               "name":  "Hylos",
+                               "winrateDelta":  -3.19
+                           },
+                           {
+                               "name":  "Grock",
+                               "winrateDelta":  -3.19
+                           },
+                           {
+                               "name":  "Tigreal",
+                               "winrateDelta":  -3.18
+                           }
+                       ],
+    "metaScore":  16.66,
+    "metaRank":  68,
+    "mlcSource":  "mlcounters.app",
+    "mlcUpdatedAt":  "2026-06-08",
+    "mlcountersMatchup":  {
+                              "strongAgainst":  [
+                                                    {
+                                                        "name":  "Argus",
+                                                        "advantage":  3.04
+                                                    },
+                                                    {
+                                                        "name":  "Harith",
+                                                        "advantage":  2.37
+                                                    },
+                                                    {
+                                                        "name":  "Sora",
+                                                        "advantage":  2.09
+                                                    },
+                                                    {
+                                                        "name":  "Ixia",
+                                                        "advantage":  2
+                                                    },
+                                                    {
+                                                        "name":  "Atlas",
+                                                        "advantage":  1.86
+                                                    }
+                                                ],
+                              "weakAgainst":  [
+                                                  {
+                                                      "name":  "Alice",
+                                                      "advantage":  3.47
+                                                  },
+                                                  {
+                                                      "name":  "Cici",
+                                                      "advantage":  3.09
+                                                  },
+                                                  {
+                                                      "name":  "Kaja",
+                                                      "advantage":  2.97
+                                                  },
+                                                  {
+                                                      "name":  "Valentina",
+                                                      "advantage":  2.9
+                                                  },
+                                                  {
+                                                      "name":  "Marcel",
+                                                      "advantage":  2.67
+                                                  }
+                                              ]
+                          },
+    "communityBuilds":  [
+                            {
+                                "source":  "molebuild",
+                                "buildName":  "MPL PH S16 Grand Finals : AURORA.Demonkite",
+                                "author":  "community",
+                                "votes":  4,
+                                "items":  [
+                                              "Tought Boots",
+                                              "Antique Cuirass",
+                                              "Athena\u0027s Shield",
+                                              "Guardian Helmet"
+                                          ],
+                                "emblem":  {
+                                               "name":  "Tank",
+                                               "talents":  {
+                                                               "tier1":  "96e08972-7992-41d6-942d-39059f0e23c3",
+                                                               "tier2":  "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+                                                               "tier3":  "30336e34-0929-47a6-b228-e99dbc7d9faf"
+                                                           }
+                                           },
+                                "spell":  "Ice Retribution",
+                                "skillOrder":  null,
+                                "notes":  "AURORA VS Team Liquid PH Game 4",
+                                "tags":  [
+
+                                         ],
+                                "lastUpdated":  "2025-10-28T04:50:55.691679+00:00"
+                            },
+                            {
+                                "source":  "molebuild",
+                                "buildName":  "nothing but good",
+                                "author":  "community",
+                                "votes":  3,
+                                "items":  [
+                                              "Tought Boots",
+                                              "Thunder Belt",
+                                              "Cursed Helmet",
+                                              "Guardian Helmet",
+                                              "Immortality",
+                                              "Antique Cuirass"
+                                          ],
+                                "emblem":  {
+                                               "name":  "Tank",
+                                               "talents":  {
+                                                               "tier1":  "2ed523e9-944b-40c3-86e1-aaa345617891",
+                                                               "tier2":  "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+                                                               "tier3":  "707360b7-f674-48b4-9bbc-93b2876a5da3"
+                                                           }
+                                           },
+                                "spell":  "Ice Retribution",
+                                "skillOrder":  null,
+                                "notes":  null,
+                                "tags":  [
+
+                                         ],
+                                "lastUpdated":  "2026-01-02T10:42:09.094434+00:00"
+                            },
+                            {
+                                "source":  "molebuild",
+                                "buildName":  "AKAI JUNGLERR",
+                                "author":  "community",
+                                "votes":  2,
+                                "items":  [
+                                              "Tought Boots",
+                                              "Oracle",
+                                              "Sea Halberd",
+                                              "Cursed Helmet",
+                                              "Hunter Strike",
+                                              "Immortality"
+                                          ],
+                                "emblem":  {
+                                               "name":  "Fighter",
+                                               "talents":  {
+                                                               "tier1":  "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+                                                               "tier2":  "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+                                                               "tier3":  "707360b7-f674-48b4-9bbc-93b2876a5da3"
+                                                           }
+                                           },
+                                "spell":  "Ice Retribution",
+                                "skillOrder":  null,
+                                "notes":  null,
+                                "tags":  [
+
+                                         ],
+                                "lastUpdated":  "2025-10-26T06:46:08.036945+00:00"
+                            },
+                            {
+                                "source":  "molebuild",
+                                "buildName":  "Thunder ball, dominan eis, war ax, sepatu cc, oracel",
+                                "author":  "community",
+                                "votes":  2,
+                                "items":  [
+                                              "Tought Boots",
+                                              "War Axe",
+                                              "Queen\u0027s Wings",
+                                              "Oracle",
+                                              "Brute Force Breastplate",
+                                              "Chastise Pauldron"
+                                          ],
+                                "emblem":  {
+                                               "name":  "Fighter",
+                                               "talents":  {
+                                                               "tier1":  "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+                                                               "tier2":  "45872951-faf4-4311-8557-7c1a534abbe4",
+                                                               "tier3":  "4b67327b-150f-42c3-a9b0-192a598168f5"
+                                                           }
+                                           },
+                                "spell":  "Flicker",
+                                "skillOrder":  null,
+                                "notes":  "Memiliki rambut panjang, muka bentuk lonjong, memiliki cangkul di pundaknya, bajunya bewarna kuning ",
+                                "tags":  [
+
+                                         ],
+                                "lastUpdated":  "2025-12-05T12:40:56.888203+00:00"
+                            },
+                            {
+                                "source":  "molebuild",
+                                "buildName":  "Hjcvmcvm",
+                                "author":  "community",
+                                "votes":  1,
+                                "items":  [
+                                              "Tought Boots",
+                                              "Guardian Helmet",
+                                              "Cursed Helmet",
+                                              "Thunder Belt",
+                                              "Blade Armor",
+                                              "Chastise Pauldron"
+                                          ],
+                                "emblem":  {
+                                               "name":  "Tank",
+                                               "talents":  {
+                                                               "tier1":  "2ed523e9-944b-40c3-86e1-aaa345617891",
+                                                               "tier2":  "45872951-faf4-4311-8557-7c1a534abbe4",
+                                                               "tier3":  "707360b7-f674-48b4-9bbc-93b2876a5da3"
+                                                           }
+                                           },
+                                "spell":  "Ice Retribution",
+                                "skillOrder":  null,
+                                "notes":  "Vjktvxnlkc",
+                                "tags":  [
+
+                                         ],
+                                "lastUpdated":  "2025-10-27T10:35:28.021705+00:00"
+                            }
+                        ],
+    "mlbhubBuilds":  [
+                         {
+                             "source":  "mlbbhub",
+                             "buildName":  "Set 1",
+                             "items":  [
+                                           "Tough",
+                                           "Boots",
+                                           "Dominance",
+                                           "Ice",
+                                           "Thunder",
+                                           "Belt"
+                                       ],
+                             "emblem":  {
+                                            "name":  "Support Emblem",
+                                            "talents":  [
+
+                                                        ]
+                                        },
+                             "spell":  "Flicker",
+                             "cost":  10970,
+                             "notes":  null
+                         },
+                         {
+                             "source":  "mlbbhub",
+                             "buildName":  "Set 2",
+                             "items":  [
+                                           "Warrior",
+                                           "Boots",
+                                           "Dominance",
+                                           "Ice",
+                                           "Antique",
+                                           "Cuirass"
+                                       ],
+                             "emblem":  {
+                                            "name":  "Tank Emblem",
+                                            "talents":  [
+
+                                                        ]
+                                        },
+                             "spell":  "Flicker",
+                             "cost":  11100,
+                             "notes":  null
+                         },
+                         {
+                             "source":  "mlbbhub",
+                             "buildName":  "Set 3",
+                             "items":  [
+                                           "Tough",
+                                           "Boots",
+                                           "Cursed",
+                                           "Helmet",
+                                           "Guardian",
+                                           "Helmet"
+                                       ],
+                             "emblem":  {
+                                            "name":  "Common Emblem",
+                                            "talents":  [
+
+                                                        ]
+                                        },
+                             "spell":  "Retribution",
+                             "cost":  11110,
+                             "notes":  null
+                         }
+                     ]
 }

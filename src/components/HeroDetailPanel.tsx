@@ -396,6 +396,32 @@ export default function HeroDetailPanel({ hero, onClose, heroAssets }: Props) {
           {/* SKILLS TAB */}
           {activeTab === "skills" && (
             <div className="animate-fade-in max-w-4xl mx-auto space-y-4">
+              {/* Skill Videos */}
+              {(() => {
+                const sv = (hero as any).skillVideos || (hero as any).skill_videos;
+                if (!sv) return null;
+                const videoSrc = expandedSkill ? (sv[expandedSkill] || null) : (sv.passive || sv.skill1 || null);
+                if (!videoSrc) return null;
+                return (
+                  <div className="bg-[#101827] rounded-xl border border-amber-500/10 overflow-hidden shadow-sm">
+                    <div className="flex items-center gap-2 p-3 border-b border-gray-800/50">
+                      <div className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+                      <span className="text-[9px] font-mono uppercase tracking-widest text-amber-400">Skill Video — {expandedSkill || "Passive"}</span>
+                      <span className="text-[9px] font-mono text-gray-600 ml-auto">Loop · Tap skill to switch</span>
+                    </div>
+                    <video
+                      key={videoSrc}
+                      src={videoSrc}
+                      className="w-full max-h-[320px] object-contain bg-black"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      poster={heroImage}
+                    />
+                  </div>
+                );
+              })()}
               {hero.skills &&
                 Object.entries(hero.skills)
                   .filter(([k]) => k !== "extra")

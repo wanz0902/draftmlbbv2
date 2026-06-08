@@ -1,51 +1,85 @@
-# Laporan Sinkronisasi Data Lengkap (4 Phase)
+# Laporan Redesign Hero Detail Page — 2026-06-09
 
 ## A. Ringkasan Task
-Sinkronisasi data dari 4 sumber berbeda (mlbb.tools, mlcounters.app, mlbbhub.com, molebuild.com) + perbaikan UI. Semua phase sudah selesai dan ter-commit.
+Revisi halaman Hero Detail / Hero Intelligence website MLBB dengan fokus 2 perbaikan utama:
+1. Hero Header — buat proper cinematic overview (tidak kosong/aneh)
+2. Abilities — video skill interaktif dengan skill tabs yang mengontrol video
 
 ## B. Perubahan yang Dilakukan
 
-### Phase 1: mlbb.tools (`34c6852`)
-- Scrape 132 hero pages: baseStats, combos, connections, powerCurve, skillPriority, matchup reasons, region/race, difficultyLabel, heroAttributes
-- 131/132 hero sukses penuh (Marcel missing powerCurve)
+### 1. Hero Header (HeroFullPage.tsx)
+- Tambah **short summary** dari `mechanicNote` (max 200 chars) dengan border-left accent
+- Tambah **Power Spike Tags** sebagai badge hijau (dari `powerSpikeTags`)
+- Gradient text name dari role color (bukan putih biasa)
+- Stat chips: Win Rate, Pick Rate, Ban Rate, Meta Score, Rank
+- Regional/race badges dengan icon
 
-### Phase 2: mlcounters.app (`fd35dfa`)
-- Query Supabase API: metaScore, metaRank, bestTeammates, worstTeammates, mlcountersMatchup
-- 132/132 hero sukses
+### 2. Abilities + Video (HeroFullPage.tsx)
+- Video dipindahkan ke **di dalam abilities card** (bukan section terpisah)
+- Skill tabs langsung di bawah video — visual connected
+- Label overlay: "SKILL NAME — Click tabs below to switch"
+- **Video behavior yang benar**:
+  - `autoPlay` + `onEnded=pause` (play sekali, berhenti di akhir)
+  - Tidak `loop` (berhenti setelah selesai)
+  - `muted` selalu (autoplay browser aman)
+  - `preload="auto"` untuk loading cepat
+  - `key={videoKey}` + `ref={videoRef}` untuk remount control
 
-### Phase 3: mlbbhub.com + molebuild.com (`727a3e5`, `12a21e9`, `c5c68fe`)
-- Items: 104 enriched, 54 with heroesWhoCore
-- Spells: 12/12 enriched
-- Hero builds: 131/132 heroes
-- Community builds: 130/132 heroes (531 builds)
+### 3. Video Control Logic
+- `videoRef` + `videoKey` state untuk programmatic control
+- `useEffect([selectedSkill, videoKey])` → pause + reset + load + play
+- `handleSkillChange()` → set selectedSkill + increment videoKey
+- Skill tabs onclick → `handleSkillChange(key)`
 
-### Phase 4: UI Fixes (`ec1e9b2`)
-- Hapus tier list duplikat dari navbar
-- Bersihkan label "Scraped"
-- Rebuild Counter Matrix (132 hero)
+### 4. Supporting Changes
+- **server.ts**: Tambahan 20 field ke `/api/heroes/:id` response (camelCase aliases)
+- **HeroDetailPanel.tsx**: Skill video player di modal (auto-play loop, switches per skill)
+- **HeroIntelligenceDashboard.tsx**: Hero card click → langsung buka HeroFullPage
+- **types/hero.ts**: Extended DetailedHero interface (+110 lines)
+- **App.tsx**: HeroFullPage routing via `heroDetailTarget` state
 
 ## C. File yang Diubah
-- 132 file `data/heroes/*.json`
-- `data/items.json`, `data/emblems.json`, `data/battle_spells.json`
-- `src/components/Navbar.tsx`, `src/components/CounterMatrixPanel.tsx`, `src/components/LiquipediaScraper.tsx`, `src/App.tsx`
-- 4 script scraper
+| File | Perubahan |
+|------|-----------|
+| `src/components/HeroFullPage.tsx` | **NEW** — Full page hero detail (1710 lines) |
+| `src/components/HeroDetailPanel.tsx` | +26 lines — skill video player di modal |
+| `src/components/HeroIntelligenceDashboard.tsx` | +35 lines — card click → full page |
+| `src/App.tsx` | +25 lines — routing HeroFullPage |
+| `server.ts` | +21 lines — camelCase field aliases |
+| `src/types/hero.ts` | +110 lines — extend DetailedHero type |
+| `data/heroes/akai.json` | Updated skillVideos paths |
 
-## D. Validasi
-- `validate:data` → PASS
-- `validate:assets` → PASS
-- `tsc --noEmit` → CLEAN
-- `build` → SUCCESS
+## D. Data Sources
+- Hero data: `/api/heroes/{slug}` → reads `data/heroes/{id}.json`
+- Hero portraits: `heroAssets[slug]` → `/raw-assets/aset_hero/{role}/85px-ML_icon_*.png`
+- Skill icons: `skills[key].iconUrl` → `/raw-assets/skill_icons/{hero}/{skill}.png`
+- Item icons: `/raw-assets/aset_item/Item_{Name}_ML.png`
+- Skill videos: `skillVideos[skillKey]` → `/videos/heroes/{heroId}/video-{N}-{M}.mp4`
 
-## E. Commit Hashes
-1. `db0d401` — feat: sync hero data from mlbb.tools
-2. `34c6852` — feat: complete hero data sync
-3. `fd35dfa` — feat: sync mlcounters data
-4. `727a3e5` — feat: enrich mlbbhub items/emblems/spells
-5. `12a21e9` — feat: enrich mlbbhub hero builds
-6. `c5c68fe` — feat: sync molebuild community builds
-7. `ec1e9b2` — fix: UI fixes
+## E. Fallback Rules
+- Video tidak ada → tampilkan hero portrait dengan animated glow overlay
+- Skill data tidak ada → "No description available"
+- Stats tidak ada → hide field secara rapi
+- Meta score/rank 0 → tidak tampilkan chip
 
-## F. Kekurangan
-- skillLevelPriority hanya 19/132 (section tidak tersedia di mlbb.tools)
-- difficultyLabel 63/132 (tidak semua hero punya)
-- Marcel powerCurve kosong (hero baru)
+## F. Validasi
+- `npx tsc --noEmit` → **CLEAN** (0 errors)
+- `npm run build` → **SUCCESS**
+
+## G. Behavior Skill Video (Rinci)
+1. Default: Passive video play sekali saat halaman dibuka
+2. Klik skill tab → video switch + restart dari awal + auto play
+3. Klik skill yang sama → restart dari awal + auto play
+4. Video selesai → pause (tidak loop)
+5. Browser block autoplay → handle gracefully, video tetap visible
+
+## H. Responsive
+- Desktop: 2-column layout (60% + 40%), hero header portrait 280px
+- Tablet: video adapts, skill selector tetap usable
+- Mobile: stacked layout, skill icons 48-56px touch-friendly
+
+## I. Anti-Copy Compliance
+- Hero header: full-width banner dengan gradient role-color (bukan card panel)
+- Abilities: video di dalam card + vertical selector (bukan horizontal row + accordion)
+- Warna: cyan + amber dual-accent (bukan blue/cyan seperti referensi)
+- Glass morphism cards dengan role glow

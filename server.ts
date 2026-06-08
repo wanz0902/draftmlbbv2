@@ -791,6 +791,27 @@ function getStructuredHeroes() {
         movementSpeed: h.stat_move_speed || fileHero?.baseStats?.movementSpeed || 250,
       },
       pro_statistics: statMatch || {},
+
+      power_curve: fileHero?.powerCurve || null,
+      hero_attributes: fileHero?.heroAttributes || null,
+      pro_builds: fileHero?.proBuilds || [],
+      combos: fileHero?.combos || [],
+      connections: fileHero?.connections || [],
+      best_teammates: fileHero?.bestTeammates || [],
+      worst_teammates: fileHero?.worstTeammates || [],
+      meta_score: fileHero?.metaScore || 0,
+      meta_rank: fileHero?.metaRank || 0,
+      matchup_system: fileHero?.matchupSystem || null,
+      skill_videos: fileHero?.skillVideos || null,
+      region: fileHero?.region || "",
+      race: fileHero?.race || "",
+      difficulty_label: fileHero?.difficultyLabel || "",
+      winRate: fileHero?.winRate || 0,
+      pickRate: fileHero?.pickRate || 0,
+      banRate: fileHero?.banRate || 0,
+      community_builds: fileHero?.communityBuilds || [],
+      mlbhub_builds: fileHero?.mlbhubBuilds || [],
+      mechanicNote: fileHero?.mechanicNote || "",
     };
 
     return mappedHero;

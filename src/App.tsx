@@ -4,6 +4,7 @@ import { auth } from "./lib/firebase";
 import Navbar from "./components/Navbar";
 import DraftSimulator from "./components/DraftSimulator";
 import HeroIntelligenceDashboard from "./components/HeroIntelligenceDashboard";
+import HeroFullPage from "./components/HeroFullPage";
 import StatsDashboard from "./components/StatsDashboard";
 import TeamAnalytics from "./components/TeamAnalytics";
 import DataCatalog from "./components/DataCatalog";
@@ -32,6 +33,7 @@ export default function App() {
   const [heroAssets, setHeroAssets] = useState<Record<string, string>>({});
   const [historyData, setHistoryData] = useState<any[]>([]);
   const [intelligenceTarget, setIntelligenceTarget] = useState<string | null>(null);
+  const [heroDetailTarget, setHeroDetailTarget] = useState<string | null>(null);
 
   const tabLabels: Record<string, string> = {
     home: "Home",
@@ -117,8 +119,27 @@ export default function App() {
     setCurrentTab("intelligence");
   };
 
+  const handleOpenFullPage = (heroName: string) => {
+    setHeroDetailTarget(heroName);
+  };
+
+  const handleFullPageBack = () => {
+    setHeroDetailTarget(null);
+  };
+
   return (
     <div className="min-h-screen bg-[#02050a] font-sans text-gray-100 flex flex-col">
+      {/* Hero Full Page View */}
+      {heroDetailTarget && (
+        <HeroFullPage
+          heroName={heroDetailTarget}
+          heroAssets={heroAssets}
+          onBack={handleFullPageBack}
+        />
+      )}
+
+      {!heroDetailTarget && (
+      <>
       {/* Navbar header */}
       <Navbar
         currentTab={currentTab}
@@ -178,7 +199,7 @@ export default function App() {
             )}
 
             {currentTab === "intelligence" && (
-              <HeroIntelligenceDashboard heroAssets={heroAssets} initialHeroName={intelligenceTarget} />
+              <HeroIntelligenceDashboard heroAssets={heroAssets} initialHeroName={intelligenceTarget} onOpenFullPage={handleOpenFullPage} />
             )}
 
             {currentTab === "tdp" && (
@@ -228,6 +249,8 @@ export default function App() {
           </div>
         </div>
       </footer>
+      </>
+      )}
 
       {/* Custom confirm modal for draft exit */}
       {showExitModal && (

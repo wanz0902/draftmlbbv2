@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { DetailedHero } from "../types/hero";
 import HeroDetailPanel from "./HeroDetailPanel";
-import { ArrowLeft, Search, Hexagon } from "lucide-react";
+import { ArrowLeft, Search, Hexagon, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 import FallbackImage from "./FallbackImage";
@@ -11,9 +11,10 @@ import HeroIntelCard from "./HeroIntelCard";
 interface Props {
   heroAssets: Record<string, string>;
   initialHeroName?: string | null;
+  onOpenFullPage?: (heroName: string) => void;
 }
 
-export default function HeroIntelligenceDashboard({ heroAssets, initialHeroName }: Props) {
+export default function HeroIntelligenceDashboard({ heroAssets, initialHeroName, onOpenFullPage }: Props) {
   const [heroes, setHeroes] = useState<DetailedHero[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
@@ -120,7 +121,13 @@ export default function HeroIntelligenceDashboard({ heroAssets, initialHeroName 
               <HeroIntelCard
                 hero={hero}
                 heroAssets={heroAssets}
-                onClick={() => setSelectedHero(hero)}
+                onClick={() => {
+                  if (onOpenFullPage) {
+                    onOpenFullPage(hero.hero_name || hero.name || "");
+                  } else {
+                    setSelectedHero(hero);
+                  }
+                }}
               />
             </motion.div>
           ))}
@@ -137,6 +144,28 @@ export default function HeroIntelligenceDashboard({ heroAssets, initialHeroName 
           />
         )}
       </AnimatePresence>
+
+      {/* Full Page Button (floating when a hero is selected) */}
+      {selectedHero && onOpenFullPage && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          className="fixed bottom-6 right-6 z-[10000]"
+        >
+          <button
+            onClick={() => {
+              const name = selectedHero.hero_name || selectedHero.name || "";
+              setSelectedHero(null);
+              onOpenFullPage(name);
+            }}
+            className="flex items-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold rounded-lg shadow-lg shadow-blue-900/30 transition-colors"
+          >
+            <ExternalLink className="w-4 h-4" />
+            Open Full Page
+          </button>
+        </motion.div>
+      )}
     </div>
   );
 }
