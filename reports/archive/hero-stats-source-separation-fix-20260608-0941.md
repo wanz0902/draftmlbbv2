@@ -65,7 +65,6 @@ Belum di-commit. Menunggu instruksi user.
 - Model: mimo-v2.5
 - Total tool calls: ~20
 - Waktu: ~8 menit
-- Token usage: estimation only
 
 ## J. Catatan
 

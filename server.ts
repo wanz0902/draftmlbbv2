@@ -950,40 +950,10 @@ app.get("/api/hero-stats", (req, res) => {
     }
   });
 
-  // Merge in heroes from heroes_master.json that are not in heroes_stats.json
-  const heroMasterPath = path.join(ROOT, "src", "data", "heroes_master.json");
-  const masterHeroes = safeJson(heroMasterPath, []) as any[];
-  masterHeroes.forEach((m: any) => {
-    const normalName = String(m.hero_name || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-    if (!normalName || uniqueHeroesMap.has(normalName)) return;
-    const dbMatch = dbHeroes.find(d => cleanText(d.hero_name).toLowerCase().replace(/[^a-z0-9]/g, "") === normalName);
-    let counters = [], countered_by = [], synergies = [], roles = undefined;
-    try {
-      if (dbMatch?.counters) counters = JSON.parse(dbMatch.counters);
-      if (dbMatch?.countered_by) countered_by = JSON.parse(dbMatch.countered_by);
-      if (dbMatch?.synergies) synergies = JSON.parse(dbMatch.synergies);
-      if (dbMatch?.roles) roles = JSON.parse(dbMatch.roles);
-    } catch(e) {}
-    const tier = dbMatch?.tier_rating || "B";
-    uniqueHeroesMap.set(normalName, {
-      hero_name: m.hero_name,
-      hero_id: m.hero_id,
-      slug: m.slug,
-      role: roles || m.role || [],
-      lanes: m.lanes || [],
-      tier,
-      counters,
-      countered_by,
-      synergies,
-      picks_total: "0",
-      bans_total: "0",
-      win_rate: 50,
-      pick_rate: 0,
-      ban_rate: 0,
-      id: normalName
-    });
-  });
-
+  // Return only MPL tournament stats — do NOT merge heroes_master.json here.
+  // Full 132-hero roster is served by /api/heroes (getStructuredHeroes).
+  // Components that need the full roster (TDP, DraftSimulator, HeroIntelligence)
+  // already import heroes_master.json directly or use /api/heroes.
   res.json(Array.from(uniqueHeroesMap.values()));
 });
 

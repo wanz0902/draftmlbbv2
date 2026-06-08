@@ -30,6 +30,13 @@ export default function StatsDashboard({
   heroAssets,
   onOpenHeroIntelligence,
 }: StatsDashboardProps) {
+  if (import.meta.env.DEV && heroes.length > 100) {
+    console.warn(
+      `[StatsDashboard] Expected MPL hero stats (~82 heroes), got ${heroes.length}. ` +
+      `This component should receive data from /api/hero-stats only, not the full hero roster. ` +
+      `Check that /api/hero-stats does not merge heroes_master.json.`
+    );
+  }
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRole, setSelectedRole] = useState("ALL");
   const [sortBy, setSortBy] = useState<
@@ -190,7 +197,7 @@ export default function StatsDashboard({
             </div>
 
             <div className="font-mono text-[10px] rounded px-2.5 py-1 bg-indigo-900/20 text-indigo-400 font-semibold border border-indigo-500/10">
-              TOTAL HERO: {filteredAndSorted.length}
+              HERO TERDATA MPL: {filteredAndSorted.length}
             </div>
           </div>
 
