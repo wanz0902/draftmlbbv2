@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { toPng } from "html-to-image";
 import {
   ArrowUpRight, Download, Eye, EyeOff, Layers, Map, Pencil,
@@ -29,7 +29,6 @@ const STORAGE_KEY = "macro_map_planner_v1";
 const COLORS = { ally: "#38bdf8", enemy: "#f43f5e" };
 const PHASES: Phase[] = ["early", "mid", "late"];
 const PHASE_LABELS: Record<Phase, string> = { early: "Early Game", mid: "Mid Game", late: "Late Game" };
-const PHASE_ACCENT: Record<Phase, string> = { early: "emerald", mid: "amber", late: "rose" };
 const ROLE_ROWS = ["Roam", "Mid", "Jungle", "Exp", "Gold"] as const;
 
 function defaultPhaseData(): PhaseData { return { drawings: [], arrows: [], zones: [], notes: "" }; }
@@ -216,7 +215,7 @@ export default function MacroMapPlanner() {
           <div className="flex gap-1 bg-white/[0.03] rounded-lg p-0.5">
             {PHASES.map((p) => (
               <button key={p} onClick={() => setPlan((prev) => ({ ...prev, activePhase: p }))}
-                className={`px-3 py-1.5 rounded-md text-[10px] font-bold uppercase tracking-wider transition cursor-pointer ${phase === p ? `bg-${PHASE_ACCENT[p]}-500/20 text-${PHASE_ACCENT[p]}-300` : "text-slate-500 hover:text-slate-300"}`}
+                className={`px-3 py-1.5 rounded-md text-[10px] font-bold uppercase tracking-wider transition cursor-pointer ${phase === p ? (p === "early" ? "bg-emerald-500/20 text-emerald-300" : p === "mid" ? "bg-amber-500/20 text-amber-300" : "bg-rose-500/20 text-rose-300") : "text-slate-500 hover:text-slate-300"}`}
               >{PHASE_LABELS[p]}</button>
             ))}
           </div>

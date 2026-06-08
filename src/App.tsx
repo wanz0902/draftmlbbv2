@@ -16,6 +16,7 @@ import LandingPage from "./components/LandingPage";
 import TeamDraftPlanner from "./components/TeamDraftPlanner";
 import MacroMapPlanner from "./components/MacroMapPlanner";
 import { HeroStats, Item, TeamStats } from "./types";
+import heroesMaster from "./data/heroes_master.json";
 import { ArrowLeft, CloudLightning, ShieldCheck } from "lucide-react";
 
 export default function App() {
@@ -127,7 +128,7 @@ export default function App() {
       />
 
       {/* Main Container */}
-      <main className={`flex-1 w-full ${currentTab === "home" || currentTab === "tdp" ? "" : "mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:py-8"}`}>
+      <main className={`flex-1 w-full ${currentTab === "home" || currentTab === "tdp" || currentTab === "macro" ? "" : "mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:py-8"}`}>
         {loading ? (
           /* High-end loading template */
           <div className="flex h-[60vh] flex-col items-center justify-center text-center gap-4 animate-pulse">
@@ -164,7 +165,7 @@ export default function App() {
               </div>
             )}
             {currentTab === "home" && (
-              <LandingPage onChangeTab={handleTabChange} heroesCount={heroes.length} />
+              <LandingPage onChangeTab={handleTabChange} heroesCount={heroesMaster.length} />
             )}
 
             {currentTab === "draft" && (
