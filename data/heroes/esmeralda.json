@@ -513,5 +513,142 @@
         "advantage": 2.82
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Shield nya tebel",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "Enchanted Talisman",
+        "Oracle",
+        "Radiant Armor",
+        "Blade Armor",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T07:39:52.003862+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID WEEK 9 DAY 1: ONIC SKYLAR ESME GOLDNER",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Warrior Boots",
+        "Enchanted Talisman",
+        "Oracle",
+        "Brute Force Breastplate",
+        "Dominance Ice",
+        "Ice Queen Wand"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-18T22:29:06.839665+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "esme ilmu kebal",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Tought Boots",
+        "Enchanted Talisman",
+        "Oracle",
+        "Brute Force Breastplate",
+        "Guardian Helmet",
+        "Cursed Helmet"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "penyerang bertahan ",
+      "tags": [],
+      "lastUpdated": "2025-11-09T07:24:49.908212+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "build esme \"SRG KRAMM\"",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Warrior Boots",
+        "Enchanted Talisman",
+        "Oracle",
+        "Antique Cuirass",
+        "Thunder Belt",
+        "Dominance Ice"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "dapat buku terus no counter",
+      "tags": [],
+      "lastUpdated": "2025-10-30T08:38:14.555504+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build sehat walafiat ",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Enchanted Talisman",
+        "Oracle",
+        "Dominance Ice",
+        "Flask of the Oasis",
+        "Guardian Helmet"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "dbd4d98a-7e58-4571-9cc6-98abbb230732"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "build buat sustain, bisa buat jadi paling depan, dan jadi healer ketika revitalis sudah bisa digunakan ",
+      "tags": [],
+      "lastUpdated": "2026-05-10T14:27:17.202265+00:00"
+    }
+  ]
 }

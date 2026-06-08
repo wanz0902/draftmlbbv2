@@ -540,5 +540,142 @@
         "advantage": 2.41
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Fanny main kabel",
+      "author": "community",
+      "votes": 31,
+      "items": [
+        "Tought Boots",
+        "Sky Piercer",
+        "War Axe",
+        "Malefic Roar",
+        "Blade of Despair",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "Cobain deh",
+      "tags": [],
+      "lastUpdated": "2025-10-19T03:30:53.697113+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Fanny Low Cost Energy",
+      "author": "community",
+      "votes": 12,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Sea Halberd",
+        "Queen's Wings",
+        "Antique Cuirass",
+        "Radiant Armor"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "harus jago menggunakan kabel",
+      "tags": [],
+      "lastUpdated": "2026-01-26T12:33:53.379726+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Burst Damage & Armor Penetration ",
+      "author": "community",
+      "votes": 10,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Sky Piercer",
+        "Malefic Roar",
+        "Hunter Strike",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "Build ini di peruntukkan untuk burst hero musuh dengan 1 combo attack (Marksman, Mage, Exp) yang cenderung punya HP yang tipis dan Defense yang tipis\n\nItem Kondisional: Kalian bisa ganti item “Hunter Strike” dengan “Sea Halberd” apabila kalian melawan hero yang cukup tebal dan mempunyai HP yang lebih tinggi dari kalian ataupun regen HP/Shield yang cukup deras.",
+      "tags": [],
+      "lastUpdated": "2025-09-13T17:19:28.323168+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Fanny By qeva",
+      "author": "community",
+      "votes": 8,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Thunder Belt",
+        "Queen's Wings",
+        "Malefic Roar",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming) Jangan dibuang sampai 3-4 item penting lain jadi",
+      "tags": [],
+      "lastUpdated": "2025-09-15T11:13:34.8689+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Fanny Anomali",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Malefic Roar",
+        "Lightning Truncheon",
+        "Brute Force Breastplate",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "coba baca passive lightning truncheon biar tau.",
+      "tags": [],
+      "lastUpdated": "2026-01-26T13:12:13.79188+00:00"
+    }
+  ]
 }

@@ -567,5 +567,141 @@
         "advantage": 1.78
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 WEEK 1 DAY 2 ONIC.Kairi",
+      "author": "community",
+      "votes": 208,
+      "items": [
+        "Tought Boots",
+        "Endless Battle",
+        "War Axe",
+        "Hunter Strike",
+        "Brute Force Breastplate"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "( BTR VS ONIC GAME 1 ) MVP OF THE GAME MPL INDONESIA SEASON 16 WEEK 1 DAY 2",
+      "tags": [],
+      "lastUpdated": "2025-08-23T11:15:30.384833+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Full Damage",
+      "author": "community",
+      "votes": 21,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Endless Battle",
+        "Malefic Roar",
+        "Hunter Strike",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "Digunakan jika musuh minim cc dan memiliki hp tipis. Dalam keadaan snowball, posisi Blade of despair bisa di prioritaskan setelah war axe, dan dilanjut dengan item selanjutnya",
+      "tags": [],
+      "lastUpdated": "2025-10-22T22:36:52.225783+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Lancelot Pasming",
+      "author": "community",
+      "votes": 13,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Sky Piercer",
+        "Endless Battle",
+        "Blade of Despair",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "Ketika snowball, pake build ini biar enak sang sing",
+      "tags": [],
+      "lastUpdated": "2025-10-13T10:21:51.324706+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Semi-Tank",
+      "author": "community",
+      "votes": 10,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Endless Battle",
+        "Queen's Wings",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "Digunakan jika musuh memiliki hp tebal, memiliki banyak cc, dan strong untuk kontes turtle dan lord. Lance semi tank juga bisa melakukan diving untuk membuang resources skill musuh. Jika musuh memiliki defense tinggi, posisi endless battle dan malefic roar bisa ditukar",
+      "tags": [],
+      "lastUpdated": "2025-10-22T22:44:02.011597+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "LANCELOT By qeva",
+      "author": "community",
+      "votes": 8,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Malefic Roar",
+        "Endless Battle",
+        "Thunder Belt",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming)\nJangan dibuang sampai 3-4 item penting lain jadi dan sesuaikan ama kondisi",
+      "tags": [],
+      "lastUpdated": "2025-09-14T08:55:24.377313+00:00"
+    }
+  ]
 }

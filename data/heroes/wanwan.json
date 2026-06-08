@@ -478,5 +478,61 @@
         "advantage": 4.18
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "My fav BUILD",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Corrosion Scythe",
+        "Windtalker",
+        "Haas Claws",
+        "Sky Piercer",
+        "Sea Halberd",
+        "Malefic Gun"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-11T10:50:49.635706+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "AUTO SEVEGE JIR",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Corrosion Scythe",
+        "Haas Claws",
+        "Windtalker",
+        "Sky Piercer",
+        "Rose Gold Meteor",
+        "Malefic Gun"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "lawan all mm bisa menang asal ga di gb roam musuh sama early wajib main berani jangan ngandang",
+      "tags": [],
+      "lastUpdated": "2025-10-16T16:26:25.684025+00:00"
+    }
+  ]
 }

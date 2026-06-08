@@ -473,5 +473,61 @@
         "advantage": 4.91
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Paket komplit roamer (Tank + Healer) ",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Flask of the Oasis",
+        "Oracle",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "Build ini mengandalkan cooldown untuk skill Lolita terutama skill 2 nya untuk memantulkan proyektil dari musuh. Target dari CD reduction dengan build ini adalah 35%. Jangan takut untuk TB paling depan atau harras musuh karena walaupun tipis, pasif Lolita bisa membuat darah nya full lagi ketika sekarat. Kunci nya hit & run musuh sampai mereka jengkel, kemudian jangan terlalu lama di depan saat early game karena Lolita sangat tipis di early, jika Flask of the Oasis sudah jadi, boleh pede gangguin musuh dan yang paling depan. Domi opsional dan bisa diganti dengan Blood Wings apabila musuh adalah hero dengan regen yang rendah",
+      "tags": [],
+      "lastUpdated": "2025-10-24T09:00:24.406072+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Lolita for real",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Tought Boots",
+        "Radiant Armor",
+        "Antique Cuirass",
+        "Athena's Shield",
+        "Immortality",
+        "Blade Armor"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-25T03:09:06.074763+00:00"
+    }
+  ]
 }

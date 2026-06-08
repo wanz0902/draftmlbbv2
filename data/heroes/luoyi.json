@@ -568,5 +568,61 @@
         "advantage": 2.45
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "sekali combo ilang tanpa sky fucek🙄",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Holy Crystal",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-31T09:49:25.383534+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Sekali tembak musuh sekarat",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Arcane Boots",
+        "Enchanted Talisman",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-05T00:29:50.924254+00:00"
+    }
+  ]
 }

@@ -604,5 +604,142 @@
         "advantage": 2.1
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Bane Asam Lambung",
+      "author": "community",
+      "votes": 21,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Holy Crystal",
+        "Holy Crystal",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Skill 2 ",
+      "tags": [],
+      "lastUpdated": "2025-10-01T08:42:35.804263+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Magic burst",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Magic Boots",
+        "Holy Crystal",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Blood Wings",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Burst damage, trap, scaling",
+      "tags": [],
+      "lastUpdated": "2025-10-22T22:28:31.346808+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Bane Dahak Paparan COVID-19 ",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Aaaa tolong...",
+      "tags": [],
+      "lastUpdated": "2025-10-16T17:46:14.300193+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Huek Cuih",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Arcane Boots",
+        "Sky Piercer",
+        "Holy Crystal",
+        "Holy Crystal",
+        "Holy Crystal",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Asam lambung ",
+      "tags": [],
+      "lastUpdated": "2025-10-16T10:19:37.06329+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Di ludahin udh wafat",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Sky Piercer",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T03:46:39.172968+00:00"
+    }
+  ]
 }

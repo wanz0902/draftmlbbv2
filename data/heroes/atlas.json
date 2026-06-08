@@ -501,5 +501,34 @@
         "advantage": 3.52
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Bertahan dan montage",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Rapid Boots",
+        "Fleeting Time",
+        "Dominance Ice",
+        "Antique Cuirass",
+        "Blade Armor",
+        "Radiant Armor"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T03:28:07.596552+00:00"
+    }
+  ]
 }

@@ -542,5 +542,142 @@
         "advantage": 3.36
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID WEEK 9 DAY 1: DEWA QINN",
+      "author": "community",
+      "votes": 21,
+      "items": [
+        "Tought Boots",
+        "Oracle",
+        "Concentrated Energy",
+        "Brute Force Breastplate",
+        "Queen's Wings",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-18T22:14:01.199152+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Alice jungle tebel+damage",
+      "author": "community",
+      "votes": 11,
+      "items": [
+        "Tought Boots",
+        "Cursed Helmet",
+        "Oracle",
+        "Queen's Wings",
+        "Brute Force Breastplate",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "Semi damage+tank",
+      "tags": [],
+      "lastUpdated": "2025-10-24T01:55:21.077007+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Exp Tebal+Darah Deres ",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Tought Boots",
+        "Oracle",
+        "Radiant Armor",
+        "Blade Armor",
+        "Antique Cuirass",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "ini build hampir bisa di pake ke semua hero, bisa juga di ganti bbrpa item sesuai hero musuh. kalo kalian ketemu musuh dengan efek slow, kalian bisa ganti sepatunya menjadi rapit boots, dan jika kalian menang level+gold bisa ganti salah satu item def menjadi item glowing wand atau ice queen",
+      "tags": [],
+      "lastUpdated": "2025-10-24T08:40:35.043237+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "CD + Deff",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Magic Boots",
+        "Cursed Helmet",
+        "Brute Force Breastplate",
+        "Oracle",
+        "Queen's Wings",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Kuat dalam teamfight, maks cdr, bisa zoning backline dan damage dealer musuh. Di late mage cursed helmet bisa diganti sesuai kondisi",
+      "tags": [],
+      "lastUpdated": "2025-10-22T23:07:47.415078+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "War win",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Cursed Helmet",
+        "Oracle",
+        "Queen's Wings",
+        "Brute Force Breastplate",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Kekebalan ",
+      "tags": [],
+      "lastUpdated": "2025-10-15T08:16:58.685302+00:00"
+    }
+  ]
 }

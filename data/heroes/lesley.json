@@ -480,5 +480,142 @@
         "advantage": 1.98
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "2 hit",
+      "author": "community",
+      "votes": 16,
+      "items": [
+        "Berserker Fury",
+        "Sky Piercer",
+        "Malefic Gun",
+        "Blade of Despair",
+        "Blade of Despair",
+        "Blade of the Heptaseas"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-23T08:10:01.448402+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Cepet jadi",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Rapid Boots",
+        "Berserker Fury",
+        "Malefic Gun",
+        "Sea Halberd",
+        "Endless Battle",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-22T13:20:24.759395+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Early damage to late game damage from PH 🇵🇭",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Berserker Fury",
+        "Sea Halberd",
+        "Rapid Boots",
+        "Sky Piercer",
+        "Malefic Gun",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Poke",
+      "tags": [],
+      "lastUpdated": "2026-03-18T15:11:31.085193+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Damage",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Rapid Boots",
+        "Berserker Fury",
+        "Endless Battle",
+        "Blade of the Heptaseas",
+        "Blade of Despair",
+        "Malefic Gun"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-26T13:10:04.455128+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Duar modar",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Rapid Boots",
+        "Berserker Fury",
+        "Malefic Gun",
+        "Blade of Despair",
+        "Sea Halberd",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-04T22:58:36.32172+00:00"
+    }
+  ]
 }

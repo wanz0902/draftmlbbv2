@@ -500,5 +500,142 @@
         "advantage": 2.56
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "sustain",
+      "author": "community",
+      "votes": 23,
+      "items": [
+        "Tought Boots",
+        "Thunder Belt",
+        "War Axe",
+        "Antique Cuirass",
+        "Radiant Armor",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-22T12:20:28.602956+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "phoveus tank",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Tought Boots",
+        "Antique Cuirass",
+        "Radiant Armor",
+        "Blade Armor",
+        "Dominance Ice",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-18T03:22:09.47019+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build anti mati",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Antique Cuirass",
+        "Queen's Wings",
+        "Oracle",
+        "Dominance Ice"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Sustain dan regen deres",
+      "tags": [],
+      "lastUpdated": "2026-01-13T15:09:31.547665+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "paling mantep buat menangin lane + zoning musuh",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Queen's Wings",
+        "War Axe",
+        "Antique Cuirass",
+        "Oracle",
+        "Brute Force Breastplate"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "early game beli mentahan defense tergantung lawan di exp, terus langsung jadiin sepatu, lalu beli queens wings, jika udah menang dari early langsung aja beli war axe(opsional) atau mau ke item defense lagi boleh kaya antique cuiras atau athena tergantung banyak nya physical atau magic musuh, lalu beli oracle buat sustain di lord pertama(opsional). sisa slot lainnya bebas mau beli apa tergantung situasi, bisa beli brute force kalau musuh banyak cc/slow",
+      "tags": [],
+      "lastUpdated": "2025-10-25T17:17:44.304245+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S17 WEEK 6 DAY 3 TLPH.Sanford",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Antique Cuirass",
+        "Radiant Armor",
+        "Dominance Ice",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( TLPH VS APBR GAME 2 ) MPL PHILIPPINES SEASON 17 WEEK 6 DAY 3 3 MEI 2026",
+      "tags": [],
+      "lastUpdated": "2026-05-03T13:14:21.858123+00:00"
+    }
+  ]
 }

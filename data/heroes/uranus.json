@@ -493,5 +493,141 @@
         "advantage": 2.61
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Build Tank + Damage + Sustain ",
+      "author": "community",
+      "votes": 12,
+      "items": [
+        "Thunder Belt",
+        "Tought Boots",
+        "Athena's Shield",
+        "Oracle",
+        "Blade Armor",
+        "Guardian Helmet"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "Hero Uranus sangat Conditional,lemah terhadap true Damage,dan magic penetration tinggi seperti lunox",
+      "tags": [],
+      "lastUpdated": "2025-10-19T00:02:02.327374+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Uranus Flawless Thanking",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Thunder Belt",
+        "Rapid Boots",
+        "Oracle",
+        "Brute Force Breastplate",
+        "Guardian Helmet",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "*Untuk Exp lane",
+      "tags": [],
+      "lastUpdated": "2025-10-26T05:36:15.535991+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 Grand Finals : ONIC.Lutpiii",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Antique Cuirass",
+        "Tought Boots",
+        "Dominance Ice",
+        "Oracle",
+        "Radiant Armor"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "ONIC ID VS Alter Ego Game 1",
+      "tags": [],
+      "lastUpdated": "2025-11-03T11:36:54.055155+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Uranus mm,counter para mm",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Clock of Destiny",
+        "Chastise Pauldron",
+        "Blade Armor",
+        "Oracle",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-07T01:16:26.23079+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build tahan badang  (TB)",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Oracle",
+        "Blade Armor",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Radiant Armor",
+        "Antique Cuirass"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Agar tahan badang tim ",
+      "tags": [],
+      "lastUpdated": "2026-02-22T22:32:20.153676+00:00"
+    }
+  ]
 }

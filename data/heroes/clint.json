@@ -482,5 +482,142 @@
         "advantage": 1.57
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Fix win",
+      "author": "community",
+      "votes": 19,
+      "items": [
+        "Tought Boots",
+        "Sky Piercer",
+        "Endless Battle",
+        "Malefic Gun",
+        "Blade of the Heptaseas",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "If you want to win ? use this.",
+      "tags": [],
+      "lastUpdated": "2025-08-24T12:58:07.68857+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Sabar bikin item dulu",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Blade of the Heptaseas",
+        "Endless Battle",
+        "Tought Boots",
+        "Sky Piercer",
+        "Blade of Despair",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Sky piercer jadi baru ikut teamfight",
+      "tags": [],
+      "lastUpdated": "2025-10-25T08:18:12.585577+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Durabilitas Laning",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Endless Battle",
+        "Tought Boots",
+        "Sea Halberd",
+        "Malefic Roar",
+        "Hunter Strike",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Aegis",
+      "skillOrder": null,
+      "notes": "Asal ngga di gank/gb mulu MM musuhnya, rate menang laning tinggi.\n*harus dibarengi mikro hero yang bagus juga",
+      "tags": [],
+      "lastUpdated": "2025-10-23T04:40:54.190054+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Kena tembak langsung setengah",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Endless Battle",
+        "Sky Piercer",
+        "Great Dragon Spear",
+        "Rose Gold Meteor",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T07:24:58.571834+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S17 WEEK 8 DAY 2 RORA.Domengkite",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Sky Piercer",
+        "Endless Battle",
+        "Malefic Gun",
+        "Blade of Despair",
+        "Wind of Nature"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( RORA VS OMG GAME 2 ) MPL PHILIPPINES SEASON 17 WEEK 8 DAY 2 16 MEI 2026",
+      "tags": [],
+      "lastUpdated": "2026-05-16T13:54:55.478206+00:00"
+    }
+  ]
 }

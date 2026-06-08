@@ -543,5 +543,142 @@
         "advantage": 2.39
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Build Cyclop fleetiing time dari YouTube favorit gua",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Magic Boots",
+        "Enchanted Talisman",
+        "Fleeting Time",
+        "Concentrated Energy",
+        "Glowing Wand",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "CYCLOP EMBLEM YG WAJIB bagina hanter mengurangi hara aitem dan juga vestival oflot \nYg merah itu nah yg akan memberikan demek besar itu impuren nyawa nya Cyclop aitem 5 6 bebas kalian bisal Hero tebel wising kalau Hero ada hiler geres glowing busih tebel lagi dimengelef kalu bettel spell bisa fliker, purify, aku sprint, kalau di saranin flemeshot gak wajib Cyclop buatuh mobilitas tinggi \nYg kalian harus iya Jagan kegeng \nYg tadi ya Cyclop dari lemon sekarang editan build gua aitem ketiga tadi itu kan fleetiing time kan bisa juga gak usah bebass kalian kok tapi jangan yg aneh aneh tolong \nNah ini kata atau terakhir gua \nJagan Gampang kegeng \nDi mid Len atau pun gold Len ok",
+      "tags": [],
+      "lastUpdated": "2025-10-25T01:08:40.387753+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build Cyclops Jungler (Hyper Carry) - Spam Skill & Burst Damage",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Magic Boots",
+        "Enchanted Talisman",
+        "Concentrated Energy",
+        "Sky Piercer",
+        "Genius Wand",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "dbd4d98a-7e58-4571-9cc6-98abbb230732"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "​Fokus build ini adalah memaksimalkan Cooldown Reduction (CD) dan Magic Penetration agar Cyclops bisa terus menerus melancarkan skill dan menghancurkan lawan.",
+      "tags": [],
+      "lastUpdated": "2025-10-25T23:18:30.148108+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "semi tank",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Arcane Boots",
+        "Enchanted Talisman",
+        "Glowing Wand",
+        "Queen's Wings",
+        "Concentrated Energy",
+        "Brute Force Breastplate"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "combo Hero apa aja enak + no CD",
+      "tags": [],
+      "lastUpdated": "2025-10-22T11:39:15.801605+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Cyclops Sakit ",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Enchanted Talisman",
+        "Sky Piercer",
+        "Blood Wings",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Buat Cyclops lebih berdemeg",
+      "tags": [],
+      "lastUpdated": "2026-01-02T11:18:30.674526+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "SUSAH MATI",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Magic Boots",
+        "Enchanted Talisman",
+        "Concentrated Energy",
+        "Queen's Wings",
+        "Brute Force Breastplate",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "untuk ngespam skil dan membuat cyclops gesit dan payah ditang kap plus sakit",
+      "tags": [],
+      "lastUpdated": "2026-01-31T16:01:43.245599+00:00"
+    }
+  ]
 }

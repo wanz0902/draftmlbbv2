@@ -511,5 +511,87 @@
         "advantage": 5
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 D1 W5 : GEEK.Baloyskie",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Dreadnaught Armor",
+        "Athena's Shield",
+        "Fleeting Time",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "(GEEK VS NAVI) Game 1",
+      "tags": [],
+      "lastUpdated": "2025-09-23T07:33:16.567522+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Mau nyulik bawa masalah",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Warrior Boots",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Antique Cuirass",
+        "Guardian Helmet",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T06:17:21.408148+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Brutal team fight",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Fleeting Time",
+        "Dominance Ice",
+        "Blade Armor",
+        "Radiant Armor",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "dbd4d98a-7e58-4571-9cc6-98abbb230732"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "can be used for roam/exp role (squad 5 recommended)",
+      "tags": [],
+      "lastUpdated": "2025-10-03T18:15:22.611682+00:00"
+    }
+  ]
 }

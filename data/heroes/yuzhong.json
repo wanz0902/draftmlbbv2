@@ -505,5 +505,140 @@
         "advantage": 1.35
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 D2 W7 : ONIC.Lutpiii",
+      "author": "community",
+      "votes": 11,
+      "items": [
+        "Hunter Strike",
+        "Warrior Boots",
+        "Oracle",
+        "Brute Force Breastplate"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "(ONIC VS NAVI) Game 2",
+      "tags": [],
+      "lastUpdated": "2025-10-04T18:03:49.901369+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 Grand Finals : AE.Nino",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Queen's Wings",
+        "Hunter Strike",
+        "Tought Boots",
+        "Oracle",
+        "Chastise Pauldron",
+        "Brute Force Breastplate"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "ONIC ID VS Alter Ego Game 1",
+      "tags": [],
+      "lastUpdated": "2025-11-03T12:00:25.394162+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "YT : Gameplay Proplayer",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Warrior Boots",
+        "Sky Piercer",
+        "War Axe",
+        "Hunter Strike",
+        "Dominance Ice",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-12-05T03:50:21.516768+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Yz Penyerapan tubuh",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Thunder Belt",
+        "Oracle",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "Tebal dan Penyerapan",
+      "tags": [],
+      "lastUpdated": "2025-08-20T04:05:00.221459+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Team fight+ Cari Backline",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Hunter Strike",
+        "War Axe",
+        "Oracle",
+        "Queen's Wings",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "Build ini  bagus untuk tim fight tetapi jika berada di kondisi kalah bisa banget cari musuh yg tipis seperti gold lane dan mid lane musuh",
+      "tags": [],
+      "lastUpdated": "2025-09-27T20:20:50.289101+00:00"
+    }
+  ]
 }

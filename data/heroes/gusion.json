@@ -569,5 +569,142 @@
         "advantage": 1.53
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "burst",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Blood Wings",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "dibuat dengan nge hbd hero hero seperti mage, mm, dan hero lembek lainnya ",
+      "tags": [],
+      "lastUpdated": "2025-10-22T13:12:19.025511+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Burst damage",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Genius Wand",
+        "Arcane Boots",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "Burst",
+      "tags": [],
+      "lastUpdated": "2025-11-14T10:42:57.968214+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Mid laner burst.",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Arcane Boots",
+        "Azure Blade",
+        "Genius Wand",
+        "Glowing Wand",
+        "Starlium Scythe",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "If you want to play mid. This build is oke for you. Azure blade second item its good for cooldown for gusion.\n\nThis build is oke for fast killing squishy enemy.\nCMIIW.",
+      "tags": [],
+      "lastUpdated": "2025-10-22T15:34:29.77999+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Burst Demage ",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Holy Crystal",
+        "Wishing Lantern"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Last item opsional dan first item setelah sepatu bisa ganti divine glaive jika sudah menyentuh late game atau lawan memiliki def magic tinggi. Tambahan mengapa menggunaka 2 holy, agar memaksimalkan/menambah pasif item lightning truncheon sebanyak 700+ jika mengikuti buildnya, jika last item di ganti dan first item di ganti maka menjadi sekitar 600+",
+      "tags": [],
+      "lastUpdated": "2026-03-01T19:10:37.392632+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "instant kill",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Sky Piercer",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Starlium Scythe"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "intinya skill 1 on point",
+      "tags": [],
+      "lastUpdated": "2025-10-23T00:54:15.905368+00:00"
+    }
+  ]
 }

@@ -583,5 +583,114 @@
         "advantage": 1.36
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "cecill",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Demon Shoes",
+        "Glowing Wand",
+        "Elegant Gem",
+        "Wishing Lantern",
+        "Divine Glaive",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "intinya enak lah",
+      "tags": [],
+      "lastUpdated": "2025-09-13T22:26:49.577294+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Bawa late game udh rasain aja",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Demon Shoes",
+        "Clock of Destiny",
+        "Glowing Wand",
+        "Wishing Lantern",
+        "Divine Glaive",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T05:30:52.348212+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S16 Grand Finals : AURORA.Yue",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Demon Shoes",
+        "Clock of Destiny",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "AURORA VS Team Liquid PH Game 2",
+      "tags": [],
+      "lastUpdated": "2025-10-28T04:15:42.930437+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build glory perbatasan ",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Glowing Wand",
+        "Demon Shoes",
+        "Clock of Destiny",
+        "Wishing Lantern",
+        "Blood Wings",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Purify",
+      "skillOrder": null,
+      "notes": "Build untuk bermain aman",
+      "tags": [],
+      "lastUpdated": "2025-09-14T11:37:31.375977+00:00"
+    }
+  ]
 }

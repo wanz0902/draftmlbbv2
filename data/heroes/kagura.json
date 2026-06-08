@@ -753,5 +753,140 @@
         "advantage": 2.03
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "ONIC.SANZ MPL ID S16",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Blood Wings",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "1st Time Sanz play Kagura in MPL ID S16",
+      "tags": [],
+      "lastUpdated": "2025-09-12T18:22:59.230828+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "build kagura sanz",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Glowing Wand",
+        "Arcane Boots",
+        "Divine Glaive",
+        "Wishing Lantern",
+        "Blood Wings",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "item inti Kagura ada 3 ,glowing wand, divine glave, blood wings\nkalo sepatu pake sepatu magic",
+      "tags": [],
+      "lastUpdated": "2025-10-23T13:03:19.071541+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "one combo, one kill",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Glowing Wand",
+        "Arcane Boots",
+        "Sky Piercer",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flameshot",
+      "skillOrder": null,
+      "notes": "If you use Kagura's basic combo, you can kill the enemy with just 1 combo.",
+      "tags": [],
+      "lastUpdated": "2025-10-22T15:07:10.279593+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "mm mage tumbang",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Holy Crystal",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flameshot",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2026-04-02T09:56:04.687067+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "1 combo cepat rotasi",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Glowing Wand",
+        "Holy Crystal",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flameshot",
+      "skillOrder": null,
+      "notes": "rotasi cepat+1 combo buat hero tipis",
+      "tags": [],
+      "lastUpdated": "2025-12-27T12:58:09.093968+00:00"
+    }
+  ]
 }

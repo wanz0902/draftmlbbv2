@@ -516,5 +516,142 @@
         "advantage": 1.52
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Bisa bantai, 1 vs 5 kalo jadi",
+      "author": "community",
+      "votes": 24,
+      "items": [
+        "Tought Boots",
+        "Sky Piercer",
+        "Blade of Despair",
+        "Endless Battle",
+        "Hunter Strike",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "Tips: Erly rusuh musuh sama fokus nyari item dulu, kalo war liat skill cc musuh masih ada apa cd, pokoknya join akhir.enak di kombo sama tank montag 5 kalo ga angela",
+      "tags": [],
+      "lastUpdated": "2025-10-25T01:11:53.580223+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "critical ",
+      "author": "community",
+      "votes": 8,
+      "items": [
+        "Blade of Despair",
+        "Tought Boots",
+        "Berserker Fury",
+        "Great Dragon Spear",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "Untuk menghilangkan back laner musuh secara singkat ",
+      "tags": [],
+      "lastUpdated": "2025-10-22T12:35:05.58893+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build Freya Revamp (Sustain)",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Tought Boots",
+        "Golden Staff",
+        "War Axe",
+        "Oracle",
+        "Queen's Wings",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "sustain, bisa open war, usahakan hindari atau ban Hero kaya Franco kaja kalea, bisa paling depan di war asalkan punya ulti. oh ya, spell bisa fliker atau vegeance bebas, item terakhir bebas, bisa brute force, bisa immortal, queen wings opsional ya, itu gw pake buat nambahin damage kalo darah berkurang.",
+      "tags": [],
+      "lastUpdated": "2025-11-09T09:05:05.474157+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Freya gw 2648 match 74%",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Sky Piercer",
+        "Blade of Despair",
+        "Endless Battle",
+        "Malefic Roar",
+        "Berserker Fury"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "jungler kalo dirusuh gebukin aja pd aja jangan main kalem barbar aja pd damage kecuali musuhlu tebel kalo early, atau counter kek minshi, khufra, franco, nunggu mereka keluat skill ngeselinnya, gausah takut lawan esme kalo bod sama sea halberd jadi, freya > all assasin jung gausah takut by1 lawan fanny ling lance haya apalagi kalian retri merah, jangan ragu ragu ngeluarin retri merah kecuali mau lord menit 18.  gitu aja lainnya kalian pelajarin sendiri nb: first item gw emang skypiercer bgt habis skypiercer lgsg aja sepatu trs bod.",
+      "tags": [],
+      "lastUpdated": "2025-10-25T06:41:26.648818+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S17 WEEK 2 DAY 3 EVOS.Erlan",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Warrior Boots",
+        "Endless Battle",
+        "War Axe",
+        "Corrosion Scythe",
+        "Malefic Roar",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "( BTR VS EVOS GAME 1 ) MPL INDONESIA SEASON 17 WEEK 2 DAY 3 5 APRIL 2026",
+      "tags": [],
+      "lastUpdated": "2026-04-05T15:10:57.809887+00:00"
+    }
+  ]
 }

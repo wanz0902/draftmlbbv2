@@ -494,5 +494,142 @@
         "advantage": 2.32
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Build Jungler + Emblem Tank = Tahan BANTING",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Tought Boots",
+        "Cursed Helmet",
+        "War Axe",
+        "Sea Halberd",
+        "Endless Battle",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-06T13:24:49.088958+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Leomord gragas",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Sea Halberd",
+        "Queen's Wings",
+        "Endless Battle"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2026-04-25T17:25:18.181879+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build Leomord  terbaik",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Hunter Strike",
+        "War Axe",
+        "Berserker Fury",
+        "Great Dragon Spear",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-07T11:19:00.358088+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Trinity sustain",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Endless Battle",
+        "Queen's Wings",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "Trinity\n",
+      "tags": [],
+      "lastUpdated": "2026-04-11T08:55:50.926875+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "dmg dan sustain",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "War Axe",
+        "Tought Boots",
+        "Queen's Wings",
+        "Brute Force Breastplate",
+        "Rose Gold Meteor",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "sakit tapi tebel",
+      "tags": [],
+      "lastUpdated": "2026-02-22T23:46:38.81349+00:00"
+    }
+  ]
 }

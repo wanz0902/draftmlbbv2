@@ -508,5 +508,61 @@
         "advantage": 3.13
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Tank",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Warrior Boots",
+        "Thunder Belt",
+        "Antique Cuirass",
+        "Athena's Shield",
+        "Queen's Wings",
+        "Brute Force Breastplate"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Selalu nahan damage",
+      "tags": [],
+      "lastUpdated": "2025-11-19T01:41:32.561602+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Support and tank",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Rapid Boots",
+        "Fleeting Time",
+        "Thunder Belt",
+        "Oracle",
+        "Immortality",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "f710e5d1-0c78-418a-a47f-4b74e31e0235"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Membuat ULTI lebih cepat\n",
+      "tags": [],
+      "lastUpdated": "2025-10-29T08:51:11.425802+00:00"
+    }
+  ]
 }

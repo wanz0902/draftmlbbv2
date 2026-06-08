@@ -578,5 +578,142 @@
         "advantage": 1.25
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Vexana By qeva",
+      "author": "community",
+      "votes": 17,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Enchanted Talisman",
+        "Guardian Helmet",
+        "Cursed Helmet",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": "Vexana mage terlalu rugi,mending tank karena buat late game sangat bisa membantu team dengan defense dari ulti vexana \nAwal game buy regen mana 2(biar tdk boros mana)\nJangan dibuang sampai 3-4 item penting lain jadi dan sesuaikan ama kondisi",
+      "tags": [],
+      "lastUpdated": "2025-09-14T09:16:15.758962+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "1 hit",
+      "author": "community",
+      "votes": 10,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Genius Wand",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Auto meningsoy",
+      "tags": [],
+      "lastUpdated": "2025-10-23T09:40:25.845747+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Auto winstreak",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Arcane Boots",
+        "Enchanted Talisman",
+        "Wishing Lantern",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Ini untuk mempoking  hero musuh dan backup diantara damage hero musuh",
+      "tags": [],
+      "lastUpdated": "2025-10-22T08:28:38.885138+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "DAMAGE UP",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Blood Wings",
+        "Divine Glaive",
+        "Wishing Lantern",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-22T13:05:32.07379+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Vexana Ga Gampang Ke Gank",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "Glowing Wand",
+        "Molten Essence",
+        "Blood Wings",
+        "Guardian Helmet",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Buat lu user mage yang ga mau gampang mati ada di sini",
+      "tags": [],
+      "lastUpdated": "2025-10-16T11:58:48.86886+00:00"
+    }
+  ]
 }

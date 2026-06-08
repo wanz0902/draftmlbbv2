@@ -498,5 +498,61 @@
         "advantage": 1.68
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Minsi Colok Colok Kyahh~",
+      "author": "community",
+      "votes": 8,
+      "items": [
+        "Warrior Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Great Dragon Spear",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Kecepatan menusuk di akui Ambatukam🥵",
+      "tags": [],
+      "lastUpdated": "2025-10-16T17:50:37.192981+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Attack speed",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Sea Halberd",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Menciduk dan membuat musuh kaget dengan damage nya",
+      "tags": [],
+      "lastUpdated": "2025-10-23T01:20:27.247922+00:00"
+    }
+  ]
 }

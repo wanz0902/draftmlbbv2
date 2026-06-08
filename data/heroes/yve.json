@@ -585,5 +585,142 @@
         "advantage": 3.1
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S16 Grand Finals : TLPH.Sanji",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "Immortality",
+        "Glowing Wand",
+        "Wishing Lantern",
+        "Divine Glaive",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "AURORA VS Team Liquid PH Game 1",
+      "tags": [],
+      "lastUpdated": "2025-10-28T04:00:56.651903+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "ga gampang ke gank",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Demon Shoes",
+        "Glowing Wand",
+        "Clock of Destiny",
+        "Oracle",
+        "Blood Wings",
+        "Ice Queen Wand"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "CD cepat dan susah di gank cocok buat jugler ass",
+      "tags": [],
+      "lastUpdated": "2025-10-16T15:57:32.209901+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "bisa dapet savage, user yve 400+ match, 57% wr",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Demon Shoes",
+        "Sky Piercer",
+        "Glowing Wand",
+        "Wishing Lantern",
+        "Holy Crystal",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "buat aja dulu sepatu mana, jadiin skypiercer nya, lalu tergantung musuh nya kalau musuh nya banyak heal pakai glowing, kalau enggak beli genius wand\nlalu beli wishing lantern, lalu kalau roam musuh masih belum pake magic deff utamakan holly cristal \nbaru terakhir divine glaive, (ingat main yve itu main jaga jarak), main poking jangan asal maju harus selalu liat map dan sekitar apa lagi hero core musuh!!!\nkarna yve selalu di incer!!!\nJADI GUA KASIH SARAN, TIAP LU SKILL 1 LU LANGSUNG MUNDUR CEPET, SKILL 1 MUNDUR LAGI CEPET, KARNA SKILL 1,2 YVE ITU BISA NGEHASIL KAN SHIELD MESKIPUN GA GEDE DAN TAHAN LAMA tapi skill nya harus kena hero musuh selain itu ga bisa muncul shield nya, lalu main yve itu enak banget ngumpulin stack dari skypiercer nya \nGUA 400+ MATCH, 57% WR gak percaya mampir aja (  SKY-  ) itu nick name gua",
+      "tags": [],
+      "lastUpdated": "2026-01-17T20:49:23.692715+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Sustain+poke skill 1",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Demon Shoes",
+        "Glowing Wand",
+        "Clock of Destiny",
+        "Ice Queen Wand",
+        "Oracle",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Ambil skill 1 dahulu cicil musuh di mid kalo bisa ambil buff biru musuh\nTips andalin speed dari skill 1 jadi harus banyak gerak apalagi embelem support\n\nBattle spell bole diganti mau Flicker atau Purify",
+      "tags": [],
+      "lastUpdated": "2025-10-16T10:38:58.877353+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Poking Musuh+Armor Breaker",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "Glowing Wand",
+        "Ice Queen Wand",
+        "Wishing Lantern",
+        "Divine Glaive",
+        "Brute Force Breastplate"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Movement Slow dan Anti Heal + Penetration ",
+      "tags": [],
+      "lastUpdated": "2025-10-26T03:13:16.062056+00:00"
+    }
+  ]
 }

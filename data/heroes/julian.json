@@ -469,5 +469,142 @@
         "advantage": 1.52
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "kekebalan tubuh ",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Feather of Heaven",
+        "Concentrated Energy",
+        "Windtalker",
+        "Haas Claws",
+        "Berserker Fury",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "kalo mau main julian kekebalan tubuh pastikan musuh pick hero yang farming nya agak susah, julian kekebalan tubuh ini biasanya gw mainin di exp.. langkah\" main julian kekebalan tubuh \n-di early buka skil 1/3 buat farming/ poke poke lawan pake inspire \n-kalo udah level dua, jagan up dulu skil duanya.. tetep fokus farming biar item pertamanya jadi\n-misal mentahan item pertamanya belum jadi jangan maksa war (belum ada damage)\n-mentahan item pertama udah jadi, bisa cicil cicil musuh atau rotasi ke turtle.. gunakan insprire kalo mau lock mid/mm nya.. soalnya kalo lu lock exp sama roamnya, nanti malah mati sendiri \njulian ini lemah kalo sama hero yang durabilitas nya tinggi \n",
+      "tags": [],
+      "lastUpdated": "2025-10-22T13:25:27.783633+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Brust Damage ",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Arcane Boots",
+        "Feather of Heaven",
+        "Concentrated Energy",
+        "Windtalker",
+        "Holy Crystal",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "Julian tipe jungle Brust Damage",
+      "tags": [],
+      "lastUpdated": "2025-09-14T08:59:15.814378+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "No cooldown + spellvamp deres (From Patch 2.1.42)",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Magic Boots",
+        "Feather of Heaven",
+        "Windtalker",
+        "Concentrated Energy",
+        "Clock of Destiny",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2026-03-12T07:07:08.521+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Julian damage",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Arcane Boots",
+        "Feather of Heaven",
+        "Sky Piercer",
+        "Concentrated Energy",
+        "Divine Glaive",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-22T22:23:56.864104+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Meta CiKi Only",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Arcane Boots",
+        "Sky Piercer",
+        "Holy Crystal",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Build Julian for Meta Ciki",
+      "tags": [],
+      "lastUpdated": "2025-10-25T10:52:12.449133+00:00"
+    }
+  ]
 }

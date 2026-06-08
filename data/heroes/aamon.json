@@ -594,5 +594,142 @@
         "advantage": 1.86
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Amon By qeva",
+      "author": "community",
+      "votes": 19,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Feather of Heaven",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming)\nJangan dibuang sampai 3-4 item penting lain jadi dan sesuaikan ama kondisi",
+      "tags": [],
+      "lastUpdated": "2025-09-14T08:59:27.508422+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Tuyul Cari mangsa",
+      "author": "community",
+      "votes": 12,
+      "items": [
+        "Rapid Boots",
+        "Genius Wand",
+        "Sky Piercer",
+        "Windtalker",
+        "Holy Crystal",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "Perbanyakan Kamuflase dan sembuyi dengan menggunakan skill saat War mau pun di hero dan creep",
+      "tags": [],
+      "lastUpdated": "2025-10-23T00:05:09.195773+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "damage instal kill ",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Arcane Boots",
+        "Feather of Heaven",
+        "Genius Wand",
+        "Sky Piercer",
+        "Holy Crystal",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "sebisa mungkin farming aja gpp gak dapet tartel dan kalo genius feather jadi cari musuh sama jgn kena kill awal awal",
+      "tags": [],
+      "lastUpdated": "2025-10-16T11:24:55.058871+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build damage dan Farming cepat ",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Arcane Boots",
+        "Sky Piercer",
+        "Feather of Heaven",
+        "Windtalker",
+        "Holy Crystal",
+        "Glowing Wand"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "Untuk mendapatkan stack ultimate Aamon dengan cepat dan untuk mendapatkan farming yang lebih cepat dan efektif tanpa takut di rusuh",
+      "tags": [],
+      "lastUpdated": "2025-11-15T04:07:24.720023+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Aamon pasming",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Feather of Heaven",
+        "Sky Piercer",
+        "Windtalker",
+        "Divine Glaive",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "Manfaatin pasif nya biar cepet keisi stack nya",
+      "tags": [],
+      "lastUpdated": "2025-10-23T09:36:31.936815+00:00"
+    }
+  ]
 }

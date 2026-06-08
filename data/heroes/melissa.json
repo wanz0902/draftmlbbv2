@@ -482,5 +482,142 @@
         "advantage": 1.9
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Penghancur tank",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Haas Claws",
+        "Windtalker",
+        "Berserker Fury",
+        "Malefic Gun",
+        "Sea Halberd",
+        "Demon Hunter Sword"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "Tank mana yg ga jebol sama ni build jir wkwk. \nKalau mau pake build ni minimal roam tank ",
+      "tags": [],
+      "lastUpdated": "2025-10-22T11:57:54.854629+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Attack Speed & DPS",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Sea Halberd",
+        "Windtalker",
+        "Malefic Gun"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "Build ini berfokus secara ekstrim pada Attack Speed dan kemampuan untuk memberikan damage yang stabil serta efektif melawan Tank (Durability/HP tinggi) maupun Squishy (HP tipis), sambil memanfaatkan sinergi antara Basic Attack Melissa dan boneka Muddles-nya",
+      "tags": [],
+      "lastUpdated": "2025-10-24T05:11:16.823831+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Critical attack speed by natanz ",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Swift Boots",
+        "Berserker Fury",
+        "Corrosion Scythe",
+        "Blade of Despair",
+        "Haas Claws",
+        "Windtalker"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "Critical attack speed ",
+      "tags": [],
+      "lastUpdated": "2025-11-16T22:47:38.985348+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Untuk menaikan rank",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Haas Claws",
+        "Berserker Fury",
+        "Windtalker",
+        "Berserker Fury",
+        "Sea Halberd",
+        "Wind of Nature"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "Biar bisa menang terus melawan Hero susah",
+      "tags": [],
+      "lastUpdated": "2025-10-15T08:07:59.361916+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Mpl build",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Tought Boots",
+        "Haas Claws",
+        "Malefic Roar",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "Build melisa  dari mpl ph",
+      "tags": [],
+      "lastUpdated": "2025-10-28T09:50:55.796687+00:00"
+    }
+  ]
 }

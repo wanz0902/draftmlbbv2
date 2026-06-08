@@ -500,5 +500,141 @@
         "advantage": 2.45
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 D2 W7 : RRQ.Rezzz",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "Dreadnaught Armor",
+        "War Axe",
+        "Queen's Wings",
+        "Athena's Shield"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "EVOS VS RRQ Game 1",
+      "tags": [],
+      "lastUpdated": "2025-10-04T18:51:35.300812+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "damage",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Fury Hammer",
+        "Tought Boots",
+        "War Axe",
+        "Sea Halberd",
+        "Oracle",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "bisa dipakai pas di tim roam Ama jungnya tebel/Jung tebel roam healer, tujuannya buat nge lock high round musuh",
+      "tags": [],
+      "lastUpdated": "2025-10-22T11:46:12.786577+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Agresif exp lane",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Queen's Wings",
+        "Rose Gold Meteor",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "buat agresif guys, ini build yang gua pake kalau mau agresif dari early, item brute force bisa diganti domi atau hunter strike, rose gold situasional kalo mau diganti boleh terakhir malefic, kenapa malefic? biar damage nya sakit tembus item defense situasional sih boleh diganti imo. SEMOGA MEMBANTU",
+      "tags": [],
+      "lastUpdated": "2025-11-09T12:40:26.468468+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "lapu lapu sustain dan damage",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Hunter Strike",
+        "War Axe",
+        "Sea Halberd",
+        "Queen's Wings",
+        "Oracle"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "sustain parah buat war",
+      "tags": [],
+      "lastUpdated": "2025-10-22T12:49:39.826492+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 KNOCKOUT STAGE DAY 3 TL.Sanford",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Oracle",
+        "Queen's Wings",
+        "Athena's Shield",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( ONIC VS TL GAME 2 ) MVP OF THE GAME M7 WORLD CHAMPIONSHIP KNOCKOUT STAGE 22 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-22T12:44:51.473637+00:00"
+    }
+  ]
 }

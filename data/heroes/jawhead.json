@@ -469,5 +469,34 @@
         "advantage": 1.99
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Jawhead Exp R7",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Rapid Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Rose Gold Meteor",
+        "Oracle",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-12-26T03:16:32.568991+00:00"
+    }
+  ]
 }

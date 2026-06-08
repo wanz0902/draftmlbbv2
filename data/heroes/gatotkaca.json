@@ -508,5 +508,142 @@
         "advantage": 2.05
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Kekebalan tubuh",
+      "author": "community",
+      "votes": 10,
+      "items": [
+        "Tought Boots",
+        "Antique Cuirass",
+        "Immortality",
+        "Radiant Armor",
+        "Dominance Ice",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "Pastikan mid kalian beli item glowing di awal agar kalian bisa langsung beli item immortal di slot ke-3",
+      "tags": [],
+      "lastUpdated": "2025-09-13T20:54:08.752701+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Exp keras Dan sakit",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Thunder Belt",
+        "Glowing Wand",
+        "Clock of Destiny",
+        "Queen's Wings",
+        "Concentrated Energy",
+        "Oracle"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Lu susah mau mati Dan lu sakit kek dosa ketimpa",
+      "tags": [],
+      "lastUpdated": "2025-10-24T06:17:37.667634+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Tahan lama saat war ",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Dominance Ice",
+        "Thunder Belt",
+        "Guardian Helmet",
+        "Queen's Wings",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "Bagus banget buat TB",
+      "tags": [],
+      "lastUpdated": "2025-10-25T23:19:36.696523+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "OPEN WAR ( GATOT EXP LANE )",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Feather of Heaven",
+        "Brute Force Breastplate",
+        "Queen's Wings",
+        "Oracle",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Build ini sangat cocok untuk Gatot karena memiliki daya tahan yang sangat stabil, dari segi damage dan kekebalan tubuh yang di dapatkan dari SPELL VAMP yang tinggi dan juga dari Pasif pukulan dari gatot. Untuk pergantian Item, ( Holy Crystal ) bisa di ganti dengan ( Blade Armor ) Jika Musuh menggunakan Item Critical damage.",
+      "tags": [],
+      "lastUpdated": "2025-10-31T18:42:18.790737+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Spam pasif dan tebal",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Rapid Boots",
+        "Thunder Belt",
+        "Queen's Wings",
+        "Concentrated Energy",
+        "Guardian Helmet",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Bisa untuk montage",
+      "tags": [],
+      "lastUpdated": "2025-10-27T07:18:36.009649+00:00"
+    }
+  ]
 }

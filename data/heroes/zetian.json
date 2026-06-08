@@ -565,5 +565,142 @@
         "advantage": 1.77
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Ultimate Support",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Fleeting Time",
+        "Wishing Lantern",
+        "Blood Wings",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Focus on Ultimate CD and Poke Effect",
+      "tags": [],
+      "lastUpdated": "2025-09-23T16:49:21.750407+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "trinity mage",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Arcane Boots",
+        "Lightning Truncheon",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Glowing Wand",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "cocok buat yang pengen ngeburst",
+      "tags": [],
+      "lastUpdated": "2026-03-01T05:08:41.45834+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Sustain Support",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Concentrated Energy",
+        "Genius Wand",
+        "Wishing Lantern",
+        "Ice Queen Wand"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Build ini cocok untuk kalian yang suka heronya bisa tahan lama di war dan memberikan damage poke yang lumayan besar, Build ini juga memfokuskan ke cooldown reduction dan ketahanan tingggi\n\nInfo tambahan, Item terakhir kalian bebas untuk mengganti sesuai dengan sikon karena ite akhir itu sebenernya untuk memberikan damage penet ketika musuh nya tebal dan keras, kalian bisa ganti ke immo atau blood wing jika musuhnya banyak yang lincah dan susah di tangkap",
+      "tags": [],
+      "lastUpdated": "2025-10-23T06:56:23.182539+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Zetian tank (From Patch 2.1.18)",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Enchanted Talisman",
+        "Fleeting Time",
+        "Concentrated Energy",
+        "Glowing Wand",
+        "Antique Cuirass",
+        "Radiant Armor"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-11T06:59:45.347+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Ulti Support",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Arcane Boots",
+        "Fleeting Time",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Wishing Lantern",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Build yang sering gw pake untuk my pacar zetian, first item langsung fleeting biar di level rendah bisa spam ulti dan kasih assist buat ngurangin cd dan bantu random gemblung yang gak tau diri",
+      "tags": [],
+      "lastUpdated": "2025-10-25T02:53:43.672098+00:00"
+    }
+  ]
 }

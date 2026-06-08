@@ -473,5 +473,61 @@
         "advantage": 2.29
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Minotaur demage",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Fleeting Time",
+        "Blade of the Heptaseas",
+        "Hunter Strike",
+        "Malefic Roar",
+        "Sea Halberd",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Skill 1 + fliker,\nUltimate,\nSkill 1,\nBasick attack",
+      "tags": [],
+      "lastUpdated": "2025-09-26T11:28:14.594621+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Open War",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Flask of the Oasis",
+        "Oracle",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Antique Cuirass"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "dbd4d98a-7e58-4571-9cc6-98abbb230732"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "gunakan skil 1 & 2 terlebih dahulu sebelum open war, karna setelah kalian open war dengan ultimate, coldown skil 1 & 2 langsung reset dan jadi sangat singkat, kalian tap-tap skil 1 & 2 agar musuh terkena CC dan Bisa Heal Tim kalian terus-terusan. \nusahakan berada di tengah-tengah area war agar kamu bisa TB Tim dan efek skill 2 nya kena ke semua Rekan Tim. ",
+      "tags": [],
+      "lastUpdated": "2025-11-03T21:04:29.891813+00:00"
+    }
+  ]
 }

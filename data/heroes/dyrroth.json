@@ -564,5 +564,142 @@
         "advantage": 1.05
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Nambah deres darah",
+      "author": "community",
+      "votes": 15,
+      "items": [
+        "War Axe",
+        "Queen's Wings",
+        "Brute Force Breastplate",
+        "Oracle",
+        "Hunter Strike",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Deres bertambah darah nya",
+      "tags": [],
+      "lastUpdated": "2025-10-15T04:34:06.490621+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Full Damage",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Hunter Strike",
+        "Malefic Roar",
+        "Sea Halberd",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "Ini item dyyroth damage,dan ini digunakan tergantung kondisi,tapi kalo kalian ingin tetap memakainya silahkan saja, item dan emblem ini biasanya saya gunakan buat nyulik damage dealer musuh atau ga adu damage di early game sama exp musuh,kalian harus bermain aman jika menggunakan karena ini tidak terlalu kuat untuk menahan damage musuh (petrify bisa diganti ke flicker)",
+      "tags": [],
+      "lastUpdated": "2025-10-21T11:22:05.508383+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Dyroth attack speed",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "War Axe",
+        "Haas Claws",
+        "Sea Halberd",
+        "Blade Armor",
+        "Antique Cuirass",
+        "Athena's Shield"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-11T06:55:42.693174+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Coba aja nanti ketagihan pakek ni build (Dyrroth EXP) ",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Sea Halberd",
+        "Sky Piercer",
+        "Malefic Roar",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-23T08:44:43.694112+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "build open war ",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Oracle",
+        "Dominance Ice",
+        "Athena's Shield"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "sesuai untuk early game and mid game sahaja, tidak disarankan sampai late game.",
+      "tags": [],
+      "lastUpdated": "2025-10-30T06:43:06.294857+00:00"
+    }
+  ]
 }

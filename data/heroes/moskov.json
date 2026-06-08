@@ -499,5 +499,142 @@
         "advantage": 1.48
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Moskov By qeva",
+      "author": "community",
+      "votes": 13,
+      "items": [
+        "Warrior Boots",
+        "Golden Staff",
+        "Demon Hunter Sword",
+        "Corrosion Scythe",
+        "Malefic Gun",
+        "Wind of Nature"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming) Jangan dibuang sampai 3-4 item penting lain jadi",
+      "tags": [],
+      "lastUpdated": "2025-09-14T10:45:18.143313+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 D2 W1 : GEEK.KennzyySkie",
+      "author": "community",
+      "votes": 11,
+      "items": [
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Malefic Gun",
+        "Rose Gold Meteor",
+        "Wind of Nature"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Player of the Game (GEEK VS TLID) Game 1",
+      "tags": [],
+      "lastUpdated": "2025-08-23T09:45:47.186538+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build tersakit",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Corrosion Scythe",
+        "Warrior Boots",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "Kasih saya build moskov yang lagi op di sistem 38",
+      "tags": [],
+      "lastUpdated": "2025-10-22T17:32:01.21156+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 KNOCKOUT STAGE DAY 1 ONIC.Skylar",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Malefic Gun",
+        "Rose Gold Meteor",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Purify",
+      "skillOrder": null,
+      "notes": "( ONIC VS AE GAME 2 ) M7 WORLD CHAMPIONSHIP KNOCKOUT STAGE 18 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-18T15:01:26.362372+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "dijamin cepat ke mitik",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Swift Boots",
+        "Corrosion Scythe",
+        "Golden Staff",
+        "Demon Hunter Sword",
+        "Malefic Gun",
+        "Wind of Nature"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "cocok untuk ke mitik",
+      "tags": [],
+      "lastUpdated": "2025-10-23T07:10:21.901417+00:00"
+    }
+  ]
 }

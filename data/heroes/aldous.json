@@ -478,5 +478,142 @@
         "advantage": 2.43
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Bawa late game wes kena tinju 1 hit",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Warrior Boots",
+        "Thunder Belt",
+        "Blade of the Heptaseas",
+        "Endless Battle",
+        "Malefic Roar",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T03:00:22.66497+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build 1 Hit",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Rapid Boots",
+        "Blade of the Heptaseas",
+        "Endless Battle",
+        "Malefic Roar",
+        "Hunter Strike",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-09-13T18:03:01.935785+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "build Aldous 1 hit",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Rapid Boots",
+        "Blade of the Heptaseas",
+        "Endless Battle",
+        "Blade of Despair",
+        "Malefic Roar",
+        "War Axe"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-28T10:46:16.274052+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "build lifesteal ",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Endless Battle",
+        "Rapid Boots",
+        "Blade of the Heptaseas",
+        "Haas Claws",
+        "Rose Gold Meteor",
+        "Oracle"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "hit and run",
+      "tags": [],
+      "lastUpdated": "2026-05-10T17:15:53.571865+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build 1 hit dijamin mati",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Endless Battle",
+        "Malefic Roar",
+        "Sky Piercer",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Full stack atau diatas 500 stack ",
+      "tags": [],
+      "lastUpdated": "2026-03-07T14:30:21.234773+00:00"
+    }
+  ]
 }

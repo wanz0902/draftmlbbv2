@@ -466,5 +466,34 @@
         "advantage": 2.01
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "strong and durable in long wars ",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Flask of the Oasis",
+        "Enchanted Talisman",
+        "Dominance Ice",
+        "Oracle",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "f710e5d1-0c78-418a-a47f-4b74e31e0235"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "Heal, poke, and stun ",
+      "tags": [],
+      "lastUpdated": "2025-10-03T18:38:50.575645+00:00"
+    }
+  ]
 }

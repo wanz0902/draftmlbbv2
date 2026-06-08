@@ -496,5 +496,34 @@
         "advantage": 4.48
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "khufra top 1 purwakarta",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Warrior Boots",
+        "Antique Cuirass",
+        "Athena's Shield",
+        "Dominance Ice",
+        "Blade Armor",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "f710e5d1-0c78-418a-a47f-4b74e31e0235"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "masih basic emblem masih bisa di ganti ke support",
+      "tags": [],
+      "lastUpdated": "2025-10-17T04:51:00.73192+00:00"
+    }
+  ]
 }

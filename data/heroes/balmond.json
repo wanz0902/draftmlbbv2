@@ -562,5 +562,115 @@
         "advantage": 2.91
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Ulti langsung ngilang",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Oracle",
+        "Blade Armor",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T03:42:59.26989+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build balmond exp",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Cursed Helmet",
+        "Dominance Ice",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-28T10:28:35.797922+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "damage+defenese",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Guardian Helmet",
+        "Athena's Shield",
+        "Antique Cuirass",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "damage dan tebal",
+      "tags": [],
+      "lastUpdated": "2025-10-14T13:05:03.768984+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S17 WEEK 1 DAY 1 RORA.Demonkite",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Radiant Armor",
+        "Brute Force Breastplate",
+        "Chastise Pauldron",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "( TLPH VS RORA GAME 1 ) MPL PHILIPPINES SEASON 17 WEEK 1 DAY 1 20 MARET 2026",
+      "tags": [],
+      "lastUpdated": "2026-03-23T08:46:23.598352+00:00"
+    }
+  ]
 }

@@ -473,5 +473,142 @@
         "advantage": 3.09
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "ini build sund tapi ada cara main nya supaya lebih ampuh",
+      "author": "community",
+      "votes": 17,
+      "items": [
+        "Rapid Boots",
+        "Corrosion Scythe",
+        "Windtalker",
+        "Berserker Fury",
+        "Demon Hunter Sword",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "kalian sering kan main sun? kalau iya biar ku tebak, pasti corrison item pertama kalian bukan? kalau iya ini adalah build yang cocok buat kalian",
+      "tags": [],
+      "lastUpdated": "2025-10-24T02:08:57.408396+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MASTER OF SHADOW",
+      "author": "community",
+      "votes": 8,
+      "items": [
+        "Windtalker",
+        "Haas Claws",
+        "Corrosion Scythe",
+        "Blade of Despair",
+        "Berserker Fury",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "CRITICAL + PENETRATION",
+      "tags": [],
+      "lastUpdated": "2026-03-16T02:13:53.962316+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "penghancur tank dan turet langsung jebol",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Corrosion Scythe",
+        "Rapid Boots",
+        "Windtalker",
+        "Demon Hunter Sword",
+        "Sea Halberd",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "sangat sakit",
+      "tags": [],
+      "lastUpdated": "2025-11-01T14:40:56.698085+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Sun Gold Lane by  GEEK.KennzyySkie",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Windtalker",
+        "Rapid Boots",
+        "Corrosion Scythe",
+        "Malefic Roar",
+        "Sea Halberd",
+        "Great Dragon Spear"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "(GEEK VS RRQ) Game 2\nMPL ID S16 D3 W1",
+      "tags": [],
+      "lastUpdated": "2025-08-24T17:56:26.408632+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Sun jungler 1 hit",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Magic Boots",
+        "Corrosion Scythe",
+        "Windtalker",
+        "Sky Piercer",
+        "Blade of Despair",
+        "Great Dragon Spear"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "Tarik ulur lock mage/mm",
+      "tags": [],
+      "lastUpdated": "2025-10-24T04:36:01.97343+00:00"
+    }
+  ]
 }

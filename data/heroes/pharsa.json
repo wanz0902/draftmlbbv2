@@ -560,5 +560,141 @@
         "advantage": 1.62
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "FULL DAMAGE - harus pinter cari posisi",
+      "author": "community",
+      "votes": 13,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Blood Wings",
+        "Divine Glaive",
+        "Lightning Truncheon",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Purify",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-22T13:00:45.707113+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 Grand Finals : ONIC.Sanz",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Divine Glaive",
+        "Warrior Boots",
+        "Blood Wings",
+        "Glowing Wand",
+        "Wishing Lantern"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "ONIC ID VS Alter Ego Game 1",
+      "tags": [],
+      "lastUpdated": "2025-11-03T11:34:37.649459+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "buat lawan tank jungler+ support ",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Wishing Lantern",
+        "Divine Glaive",
+        "Lightning Truncheon",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-09-13T15:54:04.392754+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "BUIOD PHARSA 2X TETES MOKAD",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Magic Boots",
+        "Lightning Truncheon",
+        "Glowing Wand",
+        "Blood Wings",
+        "Divine Glaive",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Build top global pharsa",
+      "tags": [],
+      "lastUpdated": "2025-09-13T23:14:41.12779+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Burst Damage buat gendong",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Blood Wings",
+        "Divine Glaive",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Cocok Buat Yang suka gendong gendong team pake hero mage",
+      "tags": [],
+      "lastUpdated": "2025-09-14T07:35:53.153528+00:00"
+    }
+  ]
 }

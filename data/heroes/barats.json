@@ -483,5 +483,142 @@
         "advantage": 3.93
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "kuat dan damage besar",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Rapid Boots",
+        "War Axe",
+        "Sky Piercer",
+        "Brute Force Breastplate",
+        "Oracle",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "cocok bermain dengan roamer support seperti Angela, Estes, Floryn dan Mathilda.",
+      "tags": [],
+      "lastUpdated": "2025-10-25T10:36:06.257685+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "barats jungle",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Rapid Boots",
+        "War Axe",
+        "Endless Battle",
+        "Guardian Helmet",
+        "Brute Force Breastplate",
+        "Antique Cuirass"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2026-02-23T02:16:12.431246+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Jungler tebel",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "War Axe",
+        "Guardian Helmet",
+        "Queen's Wings",
+        "Dominance Ice",
+        "Antique Cuirass"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "Awal2 demeg akhirannya tebel opsional (tergantung musuh)",
+      "tags": [],
+      "lastUpdated": "2025-10-24T02:50:36.120641+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Barats exp ",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Thunder Belt",
+        "Antique Cuirass",
+        "War Axe",
+        "Radiant Armor",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "Ambil skill 1 bantu jungle team buat ambil stuck barats 2 lanjut ke lane exp usahain jgn adu dlu kumpulkan stuck sampai 10 baru pedein 1vs1 udh pasti menang kalo menang,cut lane exp rusuh jungle musuh merah/biru karna barats udah kuat kalo menang level apalagi stuck nya 10 ditahan ",
+      "tags": [],
+      "lastUpdated": "2025-10-16T11:28:48.158879+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Dimakan udh hidup di base",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Dominance Ice",
+        "Guardian Helmet",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T03:55:58.953239+00:00"
+    }
+  ]
 }

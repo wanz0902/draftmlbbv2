@@ -504,5 +504,140 @@
         "advantage": 2.49
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Karrie By  qeva(mm/jung)",
+      "author": "community",
+      "votes": 14,
+      "items": [
+        "Tought Boots",
+        "Windtalker",
+        "Golden Staff",
+        "Demon Hunter Sword",
+        "Haas Claws",
+        "Corrosion Scythe"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming) Jangan dibuang sampai 3-4 item penting lain jadi\nMm=sprint/fliker\nJung=hyper",
+      "tags": [],
+      "lastUpdated": "2025-09-14T10:38:17.407603+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Karrie Burst + Sustain + Licin",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Swift Boots",
+        "Golden Staff",
+        "Hunter Strike",
+        "Corrosion Scythe",
+        "Great Dragon Spear",
+        "Malefic Gun"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Aegis",
+      "skillOrder": null,
+      "notes": "• Ketahanan di awal game, dengan kelemahan di movement speed untuk early-mid. Namun lifesteal dan spellvamp kuat diawal dari emblem fighter yang di revamp. \n\n• Kombinasi cooldown reduction dan penetrasi seimbang yang meningkatkan agresifitas nya di mid-late game. \nNote: \n- Spatu ganti windtalker kalo udah lategame, \n- GDS ganti pistol kalo tank musuhny armor def 200++, MG ganti WON\n- Susah clearlane? Langsung windtalker first item, baru golden staff\n**Bang kenapa ga pake DHS?** Jawab: Pasif nya karrie udah ada DHS bawaan jadi ga perlu ganda.. \nSemoga membantu, hasil research 3 bulan saya.. Selamat mencoba",
+      "tags": [],
+      "lastUpdated": "2025-12-02T22:19:38.962218+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 SWISS STAGE DAY 7 ONIC.Skylar",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Windtalker"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( FLCN VS ONIC GAME 2 ) M7 WORLD CHAMPIONSHIP SWISS STAGE 17 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-17T14:18:11.746774+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build OP",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Corrosion Scythe",
+        "Malefic Roar",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Ini mungkin bisa jadi salah satu build yang oke tapi di tangan yang tepat ",
+      "tags": [],
+      "lastUpdated": "2026-02-22T19:59:49.7892+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Sekarang",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Golden Staff",
+        "Warrior Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Wind of Nature",
+        "Malefic Gun"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-16T23:29:45.653738+00:00"
+    }
+  ]
 }

@@ -465,5 +465,142 @@
         "advantage": 1.8
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Natan By qeva (JUNGLE)",
+      "author": "community",
+      "votes": 11,
+      "items": [
+        "Rapid Boots",
+        "Feather of Heaven",
+        "Windtalker",
+        "Concentrated Energy",
+        "Holy Crystal",
+        "Thunder Belt"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming) Jangan dibuang sampai 3-4 item penting lain jadi",
+      "tags": [],
+      "lastUpdated": "2025-09-15T09:48:24.723388+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Default Build",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Warrior Boots",
+        "Feather of Heaven",
+        "Starlium Scythe",
+        "Holy Crystal",
+        "Blood Wings",
+        "Windtalker"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Aegis",
+      "skillOrder": null,
+      "notes": "Urutan Build seperti yang tertera, untuk item terakhir bebas, sesuaikan dengan kondisi. Spell bisa aegis, purify, ataupun flicker (tergantung kenyamanan, saya lebih nyaman menggunakan aegis dibanding yang lain)\nNote:\n• Skill 2 Natan bisa berkemungkinan membuat flicker, skill dash menjadi tidak berguna (terbuang sia-sia).\n• Cooldown ultimate Natan baru direset setelah ultimatenya berakhir, jadi fleeting time sangat amat tidak direkomendasikan, dan ultimatenya cukup singkat\n• Kalau hero lawan lebih kuat di early, respect saja dengan beli mentahan tought boots/ warrior boots.",
+      "tags": [],
+      "lastUpdated": "2025-09-14T04:25:41.920723+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "YT : Gameplay Proplayer",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Arcane Boots",
+        "Feather of Heaven",
+        "Windtalker",
+        "Concentrated Energy",
+        "Holy Crystal",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-12-05T13:58:35.100627+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build [KATA MENGANDUNG KATA-KATA KASAR]",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Warrior Boots",
+        "Feather of Heaven",
+        "Windtalker",
+        "Holy Crystal",
+        "Concentrated Energy",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Aegis",
+      "skillOrder": null,
+      "notes": "Urutan Build seperti yang tertera, untuk item terakhir bebas, sesuaikan dengan kondisi, dan sepatu jual saja kalau sudah late game. Spell bisa aegis, purify, ataupun flicker (tergantung kenyamanan, saya lebih nyaman menggunakan aegis dibanding yang lain)\nNote:\n• Skill 2 Natan bisa berkemungkinan membuat flicker, skill dash menjadi tidak berguna (terbuang sia-sia).\n• Cooldown ultimate Natan baru direset setelah ultimatenya berakhir, jadi fleeting time sangat amat tidak direkomendasikan, dan ultimatenya cukup singkat.\n• Kalau hero lawan lebih kuat di early, respect saja dengan beli mentahan tought boots/ warrior boots.",
+      "tags": [],
+      "lastUpdated": "2025-09-14T04:35:33.036322+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "best build natan jumpshoot",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Warrior Boots",
+        "Feather of Heaven",
+        "Starlium Scythe",
+        "Holy Crystal",
+        "Blood Wings",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Item terbaik buat natan",
+      "tags": [],
+      "lastUpdated": "2025-10-16T19:12:14.784944+00:00"
+    }
+  ]
 }

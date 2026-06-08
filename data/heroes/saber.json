@@ -574,5 +574,88 @@
         "advantage": 2.64
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Saber damage buat ulti",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Sea Halberd",
+        "Sky Piercer",
+        "Malefic Roar",
+        "Blade of Despair",
+        "Great Dragon Spear"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Execute",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-26T06:54:52.378451+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build khusus gendong dari wmokk",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "Sky Piercer",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Rose Gold Meteor",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "Cd 40%, rotasi Jungle kenceng, fokus win, hindari late game, jangan ragu pick off dan gunakan retri merahnya ketika pick off, jangan cuman pick off, ini bisa ikut war dan hit and run fokus ke core musuh seperti main assasin lain. Cek gameplay di yt nya wmokk aja",
+      "tags": [],
+      "lastUpdated": "2026-04-02T13:07:59.454541+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Saber Demage",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Rapid Boots",
+        "Sky Piercer",
+        "Endless Battle",
+        "Blade of the Heptaseas",
+        "Malefic Roar",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Execute",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-09-26T11:57:13.879881+00:00"
+    }
+  ]
 }

@@ -498,5 +498,141 @@
         "advantage": 2.46
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 D1 W5 : ONIC.Sanz",
+      "author": "community",
+      "votes": 19,
+      "items": [
+        "Tought Boots",
+        "Elegant Gem",
+        "Glowing Wand",
+        "Sky Piercer",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "(EVOS VS ONIC) Game 3",
+      "tags": [],
+      "lastUpdated": "2025-09-23T07:53:41.541324+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "zhuxin jago (copy top 1 global)",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Rapid Boots",
+        "Clock of Destiny",
+        "Sky Piercer",
+        "Glowing Wand",
+        "Antique Cuirass",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Purify",
+      "skillOrder": null,
+      "notes": "buatan king kaiden",
+      "tags": [],
+      "lastUpdated": "2026-04-10T05:45:34.171955+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Mana Unlimited",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Clock of Destiny",
+        "Tought Boots",
+        "Glowing Wand",
+        "Wishing Lantern",
+        "Blood Wings",
+        "Lightning Truncheon"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Buat solo Player bisa Banget di coba di jamin win streak",
+      "tags": [],
+      "lastUpdated": "2025-10-14T20:46:58.066509+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "tahan lama and bisa win",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Glowing Wand",
+        "Arcane Boots",
+        "Blood Wings",
+        "Wishing Lantern",
+        "Divine Glaive",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "kenapa ga ada skyp?karn dsini hrus nahan lama bukn kill sekian terima kasih",
+      "tags": [],
+      "lastUpdated": "2025-09-13T18:07:06.293894+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "tahan badan, backuper, sustain.",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Clock of Destiny",
+        "Demon Shoes",
+        "Glowing Wand",
+        "Enchanted Talisman",
+        "Guardian Helmet",
+        "Radiant Armor"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "bagus untuk tim yang kekurangan hero yang tebal dan di saat kondisi 2-5 hero tim lawan adalah hero jalan kaki\nuntuk glowing wand bisa diganti Antique Cuirass jika musuh minim hero yang punya lifesteal, heal, dan regen",
+      "tags": [],
+      "lastUpdated": "2025-11-27T06:57:25.320356+00:00"
+    }
+  ]
 }

@@ -510,5 +510,142 @@
         "advantage": 1.8
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Full damage",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Hunter Strike",
+        "Rapid Boots",
+        "Malefic Roar",
+        "Blade of the Heptaseas",
+        "Sky Piercer",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Pick off hero lawan satu satu",
+      "tags": [],
+      "lastUpdated": "2025-09-14T05:54:08.056269+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Sekali babat sung SIKATT",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Hunter Strike",
+        "Malefic Roar",
+        "Rose Gold Meteor",
+        "Blade of Despair",
+        "Sky Piercer"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2026-03-24T10:52:33.762484+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Very high damage and may run fast",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Rapid Boots",
+        "Hunter Strike",
+        "Sky Piercer",
+        "Malefic Roar",
+        "Blade of Despair",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Early game :\n1.Rapid Boots\n2.Hunter Strike (buy the fury hammer first)\n3.Sky Piercer (you can buy after fury hammer)\n\nMid game :\n4.Malefic Roar/Sea Halberd (pick one)\n5.Blade of Despair\n\nLate game :\n6.Malefic Roar/Sea Halberd (pick one)\nOR\n-War Axe (if the wars are long)\n-Blade of Despair (again if you wanna more burst on low HP enemy?",
+      "tags": [],
+      "lastUpdated": "2025-10-23T19:42:53.586965+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "dmg +++ ketahanan -",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Rapid Boots",
+        "Hunter Strike",
+        "Sky Piercer",
+        "Blade of the Heptaseas",
+        "Blade of Despair",
+        "Brute Force Breastplate"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "dipakai hanya buat nge burst lawan dan jalanin lane jauh saat late game",
+      "tags": [],
+      "lastUpdated": "2025-12-06T05:20:03.899053+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Tonjok bocor + cooldown cepet",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Hunter Strike",
+        "Magic Boots",
+        "Sky Piercer",
+        "Sea Halberd",
+        "Blade of Despair",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "yg tipis hati-hati",
+      "tags": [],
+      "lastUpdated": "2025-10-24T06:15:07.602282+00:00"
+    }
+  ]
 }

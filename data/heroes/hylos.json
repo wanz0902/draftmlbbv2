@@ -611,5 +611,61 @@
         "advantage": 2.38
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Roam/Exp",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Elegant Gem",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Athena's Shield",
+        "Oracle"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "lebih sustain,lebih gacor",
+      "tags": [],
+      "lastUpdated": "2025-09-14T02:24:58.745686+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "BUILD HYLOS by black1ack.",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Clock of Destiny",
+        "Dominance Ice",
+        "Antique Cuirass",
+        "Radiant Armor",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "INI BUILD YANG SAYA REKOMENDASI💬",
+      "tags": [],
+      "lastUpdated": "2026-01-07T10:49:42.878782+00:00"
+    }
+  ]
 }

@@ -758,5 +758,140 @@
         "advantage": 2.73
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 D2 W7 : ONIC.Skylar",
+      "author": "community",
+      "votes": 26,
+      "items": [
+        "Blade of Despair",
+        "Malefic Gun",
+        "Swift Boots",
+        "Hunter Strike"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "(ONIC VS NAVI) Game 2",
+      "tags": [],
+      "lastUpdated": "2025-10-04T18:11:17.709386+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "BUILD BEATRIX SNIPER ",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Blade of Despair",
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Malefic Gun",
+        "Haas Claws",
+        "Hunter Strike"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "SNIPER& PISTOL ",
+      "tags": [],
+      "lastUpdated": "2025-10-25T09:21:57.73876+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S17 WEEK 5 DAY 3 ONIC.Kelra",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Swift Boots",
+        "Hunter Strike",
+        "Blade of Despair",
+        "Malefic Gun",
+        "Rose Gold Meteor",
+        "Demon Hunter Sword"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( ONIC VS GEEK GAME 3 ) MPL INDONESIA SEASON 17 WEEK 5 DAY 3 26 APRIL 2026",
+      "tags": [],
+      "lastUpdated": "2026-04-26T13:46:17.819804+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Shotgun 2 hit BA",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Swift Boots",
+        "Blade of the Heptaseas",
+        "Blade of Despair",
+        "Malefic Gun",
+        "Sea Halberd",
+        "Wind of Nature"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Cocok buat ciduk asassin, mm dan mage",
+      "tags": [],
+      "lastUpdated": "2025-10-30T00:46:31.860698+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Damage bocor ",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Blade of Despair",
+        "Swift Boots",
+        "Sky Piercer",
+        "Hunter Strike",
+        "Sea Halberd",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Damage sakit ",
+      "tags": [],
+      "lastUpdated": "2025-11-24T10:15:47.530957+00:00"
+    }
+  ]
 }

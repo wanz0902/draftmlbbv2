@@ -478,5 +478,142 @@
         "advantage": 2.15
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Martis By qeva",
+      "author": "community",
+      "votes": 11,
+      "items": [
+        "Tought Boots",
+        "Thunder Belt",
+        "War Axe",
+        "Sea Halberd",
+        "Guardian Helmet",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming)\nJangan dibuang sampai 3-4 item penting lain jadi dan sesuaikan ama kondisi",
+      "tags": [],
+      "lastUpdated": "2025-09-14T09:02:04.651197+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Jungler Snowball",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Tought Boots",
+        "Sky Piercer",
+        "Brute Force Breastplate",
+        "Sea Halberd",
+        "Rose Gold Meteor",
+        "Guardian Helmet"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "kalo bisa jangan sampe mati mulu, karna mengurangi stak sky piercer. baca penjelasan di \"detail\"",
+      "tags": [],
+      "lastUpdated": "2025-10-23T21:20:16.469743+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Martis attack speeeddddd",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Swift Boots",
+        "Sky Piercer",
+        "Corrosion Scythe",
+        "Windtalker",
+        "Golden Staff",
+        "Wind of Nature"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-26T07:09:43.393365+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Martis exp lane",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Warrior Boots",
+        "Hunter Strike",
+        "Sea Halberd",
+        "Blade of Despair",
+        "Brute Force Breastplate",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Exp lane",
+      "tags": [],
+      "lastUpdated": "2025-10-23T05:33:42.73196+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "martis hyper mode obok-obok",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Sea Halberd",
+        "Guardian Helmet",
+        "Hunter Strike",
+        "Rose Gold Meteor",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "3000 dunia tidak ada satu lawan yang pantas",
+      "tags": [],
+      "lastUpdated": "2025-11-07T01:28:28.142802+00:00"
+    }
+  ]
 }

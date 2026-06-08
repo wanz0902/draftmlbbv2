@@ -537,5 +537,142 @@
         "advantage": 2.17
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Player of the game : GEEK.Baloyskie",
+      "author": "community",
+      "votes": 11,
+      "items": [
+        "Rapid Boots",
+        "Blade of the Heptaseas",
+        "Demon Hunter Sword",
+        "Malefic Roar",
+        "Sea Halberd",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "(GEEK VS RRQ) Game 2\nMPL ID S16 D3 W1",
+      "tags": [],
+      "lastUpdated": "2025-08-29T09:18:26.168+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "One hit",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Rapid Boots",
+        "Blade of the Heptaseas",
+        "Demon Hunter Sword",
+        "Blade of Despair",
+        "Endless Battle",
+        "Hunter Strike"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-22T15:37:55.801806+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Hc roam main culik ",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Corrosion Scythe",
+        "Rapid Boots",
+        "Sky Piercer",
+        "Blade of the Heptaseas",
+        "Blade of Despair",
+        "Berserker Fury"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "Main culik mm/mage",
+      "tags": [],
+      "lastUpdated": "2025-11-26T08:21:55.902952+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 KNOCKOUT STAGE DAY 1 ONIC.Kiboy",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Rapid Boots",
+        "Blade of the Heptaseas",
+        "Hunter Strike",
+        "Demon Hunter Sword",
+        "Blade of Despair",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( ONIC VS AE GAME 2 ) M7 WORLD CHAMPIONSHIP KNOCKOUT STAGE 18 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-18T15:00:35.465585+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "burst damage (1kali hit)",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Sky Piercer",
+        "Demon Hunter Sword",
+        "Malefic Roar",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "Dengan menggunakan build ini anda akan selalu mendapatkan instan kill/solo kill di karenakan dengan menggunakan skil 1 lalu skil 2 musuh akan langsung mati",
+      "tags": [],
+      "lastUpdated": "2025-12-20T09:42:05.72457+00:00"
+    }
+  ]
 }

@@ -562,5 +562,34 @@
         "advantage": 2.21
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Gord demage (From Patch 2.1.18)",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Demon Shoes",
+        "Concentrated Energy",
+        "Glowing Wand",
+        "Wishing Lantern",
+        "Divine Glaive",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-11T07:00:20.911+00:00"
+    }
+  ]
 }

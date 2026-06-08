@@ -477,5 +477,61 @@
         "advantage": 3.77
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Ulti 10 detik berkedok deres",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Demon Shoes",
+        "Oracle",
+        "Enchanted Talisman",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Guardian Helmet"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "f710e5d1-0c78-418a-a47f-4b74e31e0235"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "Saran main di roam dan mid",
+      "tags": [],
+      "lastUpdated": "2025-12-30T03:49:09.111457+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Auto deres healing",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Tought Boots",
+        "Flask of the Oasis",
+        "Oracle",
+        "Antique Cuirass",
+        "Athena's Shield",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f710e5d1-0c78-418a-a47f-4b74e31e0235"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T07:42:06.358672+00:00"
+    }
+  ]
 }

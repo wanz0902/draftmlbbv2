@@ -509,5 +509,115 @@
         "advantage": 4.06
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Mobility cepat + heal deras",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Flask of the Oasis",
+        "Glowing Wand",
+        "Holy Crystal",
+        "Blood Wings",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Pastikan draft kalian memiliki setidaknya satu hero untuk nahan badan, holy bisa dibeli misalkan kondisi menang, kalau kondisi kalah boleh beli oracle",
+      "tags": [],
+      "lastUpdated": "2025-09-13T21:06:39.463746+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Heal Heal Heal",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Enchanted Talisman",
+        "Flask of the Oasis",
+        "Blood Wings",
+        "Oracle",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Full Heal",
+      "tags": [],
+      "lastUpdated": "2025-09-14T15:12:58.171266+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "No Cooldown",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Flask of the Oasis",
+        "Blood Wings",
+        "Oracle",
+        "Thunder Belt",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-09-14T15:10:16.7192+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Support awet",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Tought Boots",
+        "Flask of the Oasis",
+        "Enchanted Talisman",
+        "Blood Wings",
+        "Oracle",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-05T06:25:39.060148+00:00"
+    }
+  ]
 }

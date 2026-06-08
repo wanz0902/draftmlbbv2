@@ -474,5 +474,88 @@
         "advantage": 2.86
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Popol End 5 Menit",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Rapid Boots",
+        "Rose Gold Meteor",
+        "Malefic Gun",
+        "Blade of Despair",
+        "Haas Claws",
+        "Corrosion Scythe"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": "Push only",
+      "tags": [],
+      "lastUpdated": "2025-09-06T16:08:44.584925+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Attack speed(suruhan subscriber) ",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Swift Boots",
+        "Corrosion Scythe",
+        "Golden Staff",
+        "Windtalker",
+        "Haas Claws",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-26T08:09:11.781736+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "top 1 PH",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Sea Halberd",
+        "Warrior Boots",
+        "Malefic Gun",
+        "Blade of Despair",
+        "Great Dragon Spear",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-16T05:15:48.851843+00:00"
+    }
+  ]
 }

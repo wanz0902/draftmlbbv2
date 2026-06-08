@@ -554,5 +554,142 @@
         "advantage": 1.58
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "combo miya+franco auto snowboll, dari global 1 miya(miya KY)",
+      "author": "community",
+      "votes": 10,
+      "items": [
+        "Sky Piercer",
+        "Windtalker",
+        "Blade of the Heptaseas",
+        "Malefic Gun",
+        "Sea Halberd",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "cara combo:\nmiya up skill2, Franco auto gb miya(usahain jan show di map)\nskill miya harus kena musuh\nfranco tarik flick sampe turret (opsional)\nmiya tinggal eksekusi pake inspire 95% mati \n",
+      "tags": [],
+      "lastUpdated": "2025-10-16T04:49:45.55234+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "atack speed",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Swift Boots",
+        "Corrosion Scythe",
+        "Windtalker",
+        "Berserker Fury",
+        "Demon Hunter Sword",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2026-01-21T01:32:43.073339+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Gacor parah damagenya",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Swift Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Blade of Despair",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-05T06:50:21.842227+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Miya sakit ",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Swift Boots",
+        "Windtalker",
+        "Berserker Fury",
+        "Golden Staff",
+        "Malefic Gun",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "build miya tersakit \n\n",
+      "tags": [],
+      "lastUpdated": "2026-04-05T08:36:44.561809+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Top global ",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Haas Claws",
+        "Swift Boots",
+        "Berserker Fury",
+        "Windtalker",
+        "Malefic Gun",
+        "Sky Piercer"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "Miya",
+      "tags": [],
+      "lastUpdated": "2025-10-20T18:13:49.925193+00:00"
+    }
+  ]
 }

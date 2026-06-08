@@ -559,5 +559,142 @@
         "advantage": 1.91
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Build Kimmy hama ",
+      "author": "community",
+      "votes": 14,
+      "items": [
+        "Tought Boots",
+        "Glowing Wand",
+        "Concentrated Energy",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Build Kimmy midlane gacor alasan pake war cry entah kenapa ngerasa cocok aja 😹 karena di tim fight pasti spam basic attack maupun skill otomatis bakal ke trigger pasifnya yaitu menambah % damage sekitar 5 atau 8 lupa Gweh 😹",
+      "tags": [],
+      "lastUpdated": "2025-10-14T13:17:17.045592+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 Grand Finals : AE.Hijumee",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "Divine Glaive",
+        "Blood Wings",
+        "Glowing Wand",
+        "Holy Crystal",
+        "Concentrated Energy"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "ONIC ID VS Alter Ego Game 1",
+      "tags": [],
+      "lastUpdated": "2025-11-03T11:55:54.211701+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build Kimmy \"SRG STORMIE\"",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Blood Wings",
+        "Holy Crystal",
+        "Glowing Wand",
+        "Concentrated Energy",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "no caption",
+      "tags": [],
+      "lastUpdated": "2025-10-31T12:58:08.226121+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "build sakit parah",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Arcane Boots",
+        "Concentrated Energy",
+        "Feather of Heaven",
+        "Blood Wings",
+        "Holy Crystal",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "main digold supaya ceat jadi item",
+      "tags": [],
+      "lastUpdated": "2025-11-15T06:16:36.087468+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "musuh tebel",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Arcane Boots",
+        "Glowing Wand",
+        "Divine Glaive",
+        "Wishing Lantern",
+        "Holy Crystal",
+        "Feather of Heaven"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "minimal 2 musuh tebel ( item imo bila perlu) ",
+      "tags": [],
+      "lastUpdated": "2025-10-29T15:31:43.182517+00:00"
+    }
+  ]
 }

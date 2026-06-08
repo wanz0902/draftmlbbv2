@@ -574,5 +574,142 @@
         "advantage": 2.55
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "BRODY MUAH MUAH GOT KILL",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "Malefic Gun",
+        "Sky Piercer",
+        "Blade of the Heptaseas",
+        "Rose Gold Meteor",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "First item malefic, item kedua kalau snowball langsung skypiercer, kalo engga skip skypiercer langsung build heptaseas.\nSelamat mencoba.",
+      "tags": [],
+      "lastUpdated": "2025-09-13T09:33:29.998264+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Dari early udah full itemm",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Blade of the Heptaseas",
+        "Sky Piercer",
+        "Blade of Despair",
+        "Sea Halberd",
+        "Rose Gold Meteor",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Awwwwwww",
+      "tags": [],
+      "lastUpdated": "2026-01-17T09:14:04.79525+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "anti kalh lane/mm mandiri",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Sky Piercer",
+        "Sea Halberd",
+        "Malefic Gun",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "flicker skil 2>1>3",
+      "tags": [],
+      "lastUpdated": "2026-01-11T18:43:41.629391+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Brody Tank",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Thunder Belt",
+        "Endless Battle",
+        "Rose Gold Meteor",
+        "Brute Force Breastplate",
+        "Athena's Shield"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Brody tank",
+      "tags": [],
+      "lastUpdated": "2025-11-01T14:33:17.32749+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Full Damage",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Sky Piercer",
+        "Malefic Gun",
+        "Hunter Strike",
+        "Sea Halberd",
+        "Blade of Despair",
+        "Blade of the Heptaseas"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Why build tank item on brody when you can one shot the enemy first.",
+      "tags": [],
+      "lastUpdated": "2025-10-24T06:44:44.046445+00:00"
+    }
+  ]
 }

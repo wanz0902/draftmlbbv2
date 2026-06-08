@@ -498,5 +498,142 @@
         "advantage": 2.46
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Spell vamp deres enak war ramai 1 vs 5 sanggup ",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Sea Halberd",
+        "Oracle",
+        "Brute Force Breastplate"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-23T17:26:26.763245+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "gacorrr jir kebal",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Magic Boots",
+        "War Axe",
+        "Oracle",
+        "Brute Force Breastplate",
+        "Dominance Ice",
+        "Athena's Shield"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "kalo mau coba aja",
+      "tags": [],
+      "lastUpdated": "2025-09-13T18:18:28.728485+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Exp TB",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Queen's Wings",
+        "Oracle",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Buat jafi exp pasang badan dan colldown cepet",
+      "tags": [],
+      "lastUpdated": "2025-10-16T11:07:34.757809+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build Ruby GoldLane \"SRG INNOCENT\"",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Hunter Strike",
+        "Sea Halberd",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "NO CAPTION",
+      "tags": [],
+      "lastUpdated": "2025-10-31T12:50:17.707098+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 FINAL LOWER BRACKET DAY 5 AE.Nino",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Radiant Armor",
+        "Oracle",
+        "Queen's Wings",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( AE VS SRG GAME 4 ) M7 WORLD CHAMPIONSHIP FINAL LOWER BRACKET 24 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-25T13:10:18.012545+00:00"
+    }
+  ]
 }

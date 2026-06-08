@@ -572,5 +572,87 @@
         "advantage": 2.1
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Harley By qeva",
+      "author": "community",
+      "votes": 13,
+      "items": [
+        "Arcane Boots",
+        "Genius Wand",
+        "Feather of Heaven",
+        "Glowing Wand",
+        "Holy Crystal",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming)\nJangan dibuang sampai 3-4 item penting lain jadi dan sesuaikan ama kondisi",
+      "tags": [],
+      "lastUpdated": "2025-09-14T09:10:40.421365+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S17 WEEK 6 DAY 3 ONIC.Kairi",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Magic Boots",
+        "Genius Wand",
+        "Lightning Truncheon",
+        "Divine Glaive",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "( RRQ VS ONIC GAME 1 ) MVP OF THE GAME MPL INDONESIA SEASON 17 WEEK 6 DAY 3 3 MEI 2026",
+      "tags": [],
+      "lastUpdated": "2026-05-03T12:27:59.155872+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Auto trauma",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "Genius Wand",
+        "Sky Piercer",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Lightning Truncheon"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "Iseng aja, siapa tau terkenal",
+      "tags": [],
+      "lastUpdated": "2026-04-14T13:13:41.142839+00:00"
+    }
+  ]
 }

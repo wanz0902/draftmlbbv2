@@ -625,5 +625,88 @@
         "advantage": 2.14
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Zoning Master",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Arcane Boots",
+        "Enchanted Talisman",
+        "Fleeting Time",
+        "Holy Crystal",
+        "Glowing Wand",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Generic CD build tbh, abuse your ult to zone enemy from objective like lord, turtle or tower.\nDamage scale pretty good at late game since you buy a holy crystal but the swarm became a really squishy creature at late game.",
+      "tags": [],
+      "lastUpdated": "2025-10-23T04:09:12.100125+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Zhask One Hit",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Arcane Boots",
+        "Sky Piercer",
+        "Glowing Wand",
+        "Lightning Truncheon",
+        "Genius Wand",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Cara mendapatkan instan kill menggunakan hero zhask",
+      "tags": [],
+      "lastUpdated": "2025-10-22T13:12:44.485271+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Poke Slow Buff Team",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Wishing Lantern",
+        "Tought Boots",
+        "Thunder Belt",
+        "Glowing Wand",
+        "Demon Hunter Sword",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "f710e5d1-0c78-418a-a47f-4b74e31e0235"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Susah di Pick Off dan mampu memberikan Slow sampai 75 %, True Damage, dan Buff Tim per 4 detik dari skill 1 yang mempermudah pergerakan Hyper Assassin tipe berjalan dan Hyper Fighter.",
+      "tags": [],
+      "lastUpdated": "2025-10-24T17:56:10.651363+00:00"
+    }
+  ]
 }

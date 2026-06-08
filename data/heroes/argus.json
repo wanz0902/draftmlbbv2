@@ -478,5 +478,142 @@
         "advantage": 3.11
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "argus penghancur tank",
+      "author": "community",
+      "votes": 26,
+      "items": [
+        "Corrosion Scythe",
+        "Windtalker",
+        "Demon Hunter Sword",
+        "Berserker Fury",
+        "Great Dragon Spear",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-25T03:18:04.040557+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "𝘼𝙧𝙜𝙪𝙨 𝘼𝙜𝙚 𝘼𝙜𝙚",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Corrosion Scythe",
+        "Windtalker",
+        "Berserker Fury",
+        "Haas Claws",
+        "Blade of Despair",
+        "Great Dragon Spear"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "𝙇𝙚𝙢𝙖𝙝 𝙙𝙞 𝙚𝙖𝙧𝙡𝙮 𝙜𝙖𝙢𝙚 𝙩𝙖𝙥𝙞 𝙠𝙪𝙖𝙩 𝙙𝙞 𝙡𝙖𝙩𝙚 𝙜𝙖𝙢𝙚",
+      "tags": [],
+      "lastUpdated": "2026-01-04T07:41:06.144803+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Critical ",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Corrosion Scythe",
+        "Sea Halberd",
+        "Windtalker",
+        "Berserker Fury",
+        "Haas Claws",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "Damage sakit semua darah tebal maupun darah tipis\n\nTips untuk Argus exp lane :\n1.beli Swift crossbow(paling penting)\n2.beli sea halberd(paling penting untuk lawan fighter musuh)\n3.beli corrosion \n4.beli windtalker\n5.beli berserker fury\n6.haas clash\n7.melefic Roar\nKalau GK ada tank tebal,melefic Roar ganti dengan fleeting time",
+      "tags": [],
+      "lastUpdated": "2025-12-12T07:35:37.688145+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Passive Spam+Full Damage",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Windtalker",
+        "Haas Claws",
+        "Berserker Fury",
+        "Great Dragon Spear",
+        "Blade of Despair",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "90% CRIT chance let you spam your passive most of the time unless you are very unlucky.\nConsider buying malefic roar instead of sea halberd when you think the enemy is too tanky for Argus passive to handle.",
+      "tags": [],
+      "lastUpdated": "2025-10-23T03:54:38.703315+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Damage",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Corrosion Scythe",
+        "Berserker Fury",
+        "Demon Hunter Sword",
+        "Windtalker",
+        "Haas Claws",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "Untuk hero tipis",
+      "tags": [],
+      "lastUpdated": "2026-03-21T12:45:05.833259+00:00"
+    }
+  ]
 }

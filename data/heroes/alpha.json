@@ -480,5 +480,142 @@
         "advantage": 1.96
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Alpha By qeva",
+      "author": "community",
+      "votes": 19,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Cursed Helmet",
+        "Thunder Belt",
+        "Queen's Wings",
+        "Guardian Helmet"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming) Jangan dibuang sampai 3-4 item penting lain jadi",
+      "tags": [],
+      "lastUpdated": "2025-09-14T10:41:12.595093+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Alpha build tank enak buat solo",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Guardian Helmet",
+        "Immortality",
+        "Athena's Shield"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Lumayan sakit bisa nge counter Hero tebel kayak uranus ,mainnya di exp ya",
+      "tags": [],
+      "lastUpdated": "2026-02-06T09:00:52.710381+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "YT : Gameplay Proplayer",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "Sky Piercer",
+        "War Axe",
+        "Blade of Despair",
+        "Queen's Wings",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-12-05T03:58:09.853645+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build Alpha 1 Hit Buat Solo Player",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Sky Piercer",
+        "Blade of the Heptaseas",
+        "Great Dragon Spear",
+        "Blade of Despair",
+        "Berserker Fury"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Dijamin Savage",
+      "tags": [],
+      "lastUpdated": "2025-10-15T06:11:35.672094+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Cara kita",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Sky Piercer",
+        "Oracle",
+        "Queen's Wings",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2026-01-15T07:32:29.269438+00:00"
+    }
+  ]
 }

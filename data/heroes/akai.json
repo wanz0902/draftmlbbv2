@@ -478,5 +478,140 @@
         "advantage": 2.67
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S16 Grand Finals : AURORA.Demonkite",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Antique Cuirass",
+        "Athena's Shield",
+        "Guardian Helmet"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "AURORA VS Team Liquid PH Game 4",
+      "tags": [],
+      "lastUpdated": "2025-10-28T04:50:55.691679+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "nothing but good",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Thunder Belt",
+        "Cursed Helmet",
+        "Guardian Helmet",
+        "Immortality",
+        "Antique Cuirass"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2026-01-02T10:42:09.094434+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "AKAI JUNGLERR",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Oracle",
+        "Sea Halberd",
+        "Cursed Helmet",
+        "Hunter Strike",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-26T06:46:08.036945+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Thunder ball, dominan eis, war ax, sepatu cc, oracel",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Oracle",
+        "Brute Force Breastplate",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Memiliki rambut panjang, muka bentuk lonjong, memiliki cangkul di pundaknya, bajunya bewarna kuning ",
+      "tags": [],
+      "lastUpdated": "2025-12-05T12:40:56.888203+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Hjcvmcvm",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Tought Boots",
+        "Guardian Helmet",
+        "Cursed Helmet",
+        "Thunder Belt",
+        "Blade Armor",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "Vjktvxnlkc",
+      "tags": [],
+      "lastUpdated": "2025-10-27T10:35:28.021705+00:00"
+    }
+  ]
 }

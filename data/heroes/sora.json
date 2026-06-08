@@ -809,5 +809,142 @@
         "advantage": 0
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Adaptive Sora",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Magic Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Brute Force Breastplate",
+        "Dominance Ice",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Suitable for Tanking or Damaging.\nSesuai untuk Pertahanan atau Serangan.",
+      "tags": [],
+      "lastUpdated": "2025-12-11T12:45:14.669017+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 SWISS STAGE DAY 4 SRG.Innocent",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Oracle",
+        "Brute Force Breastplate",
+        "Queen's Wings",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "dbd4d98a-7e58-4571-9cc6-98abbb230732"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( SRG VS TL GAME 1 ) M7 WORLD CHAMPIONSHIP SWISS STAGE 13 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-13T12:19:38.921158+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "tebal + sakit",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Oracle",
+        "Radiant Armor",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "inisiator ",
+      "tags": [],
+      "lastUpdated": "2026-04-25T09:26:26.498598+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "petir mantep dikit",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Queen's Wings",
+        "Tought Boots",
+        "Oracle",
+        "Radiant Armor",
+        "Chastise Pauldron",
+        "Guardian Helmet"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "pake item ini kalo musuh tipis",
+      "tags": [],
+      "lastUpdated": "2026-05-10T13:55:56.770041+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "sora tebal",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Rapid Boots",
+        "Queen's Wings",
+        "Brute Force Breastplate",
+        "Guardian Helmet",
+        "Immortality",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "*tebal bukan damage*",
+      "tags": [],
+      "lastUpdated": "2026-04-11T11:47:27.308973+00:00"
+    }
+  ]
 }

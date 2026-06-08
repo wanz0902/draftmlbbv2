@@ -469,5 +469,34 @@
         "advantage": 3.53
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Udh ngeselin tambahan",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Demon Shoes",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Guardian Helmet",
+        "Athena's Shield",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "f710e5d1-0c78-418a-a47f-4b74e31e0235"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T07:30:32.725791+00:00"
+    }
+  ]
 }

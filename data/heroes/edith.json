@@ -515,5 +515,88 @@
         "advantage": 2.32
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Exp TB, main lama",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Guardian Helmet",
+        "Oracle",
+        "Blade Armor"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Edith Exp TB, cocok untuk strategi kalau pengen roam support agar power edith maksimal. ",
+      "tags": [],
+      "lastUpdated": "2025-09-13T17:21:13.013898+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Sekali ulti tambah sakit",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Tought Boots",
+        "Thunder Belt",
+        "Antique Cuirass",
+        "Radiant Armor",
+        "Dominance Ice",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T07:36:41.097348+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Pemaksimalan true damage",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Warrior Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Clock of Destiny",
+        "Sky Piercer",
+        "Starlium Scythe"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Inspire",
+      "skillOrder": null,
+      "notes": "Manfaatkan hybrid def untuk konversi ke magic damage dan gunakan item Offensif sebagai bantuan\nNote*\nUbah sepatu untuk slot holy crystal (jika perlu)\nUbah sky piercer sesuai kondisi",
+      "tags": [],
+      "lastUpdated": "2025-10-24T02:43:05.376271+00:00"
+    }
+  ]
 }

@@ -496,5 +496,141 @@
         "advantage": 2.22
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Player of the game : BTR.Emann",
+      "author": "community",
+      "votes": 105,
+      "items": [
+        "Tought Boots",
+        "Sky Piercer",
+        "Hunter Strike",
+        "Malefic Roar",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Purify",
+      "skillOrder": null,
+      "notes": "(LIQUID VS BTR) Game 1 MPL ID S16 D2 W4",
+      "tags": [],
+      "lastUpdated": "2025-09-13T08:43:38.545509+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S16 Grand Finals : TLPH.Oheb",
+      "author": "community",
+      "votes": 12,
+      "items": [
+        "Hunter Strike",
+        "War Axe",
+        "Sky Piercer",
+        "Malefic Roar",
+        "Sea Halberd",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "AURORA VS Team Liquid PH Game 2",
+      "tags": [],
+      "lastUpdated": "2025-10-28T04:30:19.39594+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Grangger By qeva",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Tought Boots",
+        "Hunter Strike",
+        "War Axe",
+        "Blade of Despair",
+        "Malefic Roar",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming) Jangan dibuang sampai 3-4 item penting lain jadi",
+      "tags": [],
+      "lastUpdated": "2025-09-15T10:46:40.722574+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Granger snowball",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "Hunter Strike",
+        "Sky Piercer",
+        "Malefic Roar",
+        "Sea Halberd",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Build grangger snowball tergacor menurut gweh 😹 alasan pake rupture karena rata rata di tier atas expnya atau roamernya hero sustain udh gitu mereka pasti bikin armor nah solusi mantapnya pake rupture ini karena menambah sekitar 5% penetrasi jadi tebusin hero tebelnya makin gacor rek 🗿",
+      "tags": [],
+      "lastUpdated": "2025-10-14T13:33:28.811072+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build yang sangat op bahkan skyler pun ketar ketir😈😈",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Hunter Strike",
+        "Sky Piercer",
+        "Tought Boots",
+        "Malefic Roar",
+        "Blade of Despair",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Stack 500+ langsung agresif😈😈",
+      "tags": [],
+      "lastUpdated": "2025-11-06T08:56:39.714405+00:00"
+    }
+  ]
 }

@@ -479,5 +479,115 @@
         "advantage": 2.4
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Johnson demage + attack speed",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Swift Boots",
+        "Concentrated Energy",
+        "Glowing Wand",
+        "Ice Queen Wand",
+        "Feather of Heaven",
+        "Corrosion Scythe"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-09-26T12:05:15.040781+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "tebel lumayan sakit",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Rapid Boots",
+        "Dominance Ice",
+        "Oracle",
+        "Athena's Shield",
+        "Antique Cuirass",
+        "Guardian Helmet"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-12-04T10:18:34.760874+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Johnson Beton Tebel",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Warrior Boots",
+        "Blade Armor",
+        "Dominance Ice",
+        "Chastise Pauldron",
+        "Radiant Armor",
+        "Antique Cuirass"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": "Build untuk Hero Johnson yang sangat saya rekomendasikan untuk bermain Tahan Badan (TB), Defense, atau membantu rekan tim yang sedang War ataupun sedang mengambil objektif Turtle, Lord, dan Push Turret.",
+      "tags": [],
+      "lastUpdated": "2026-03-22T13:14:05.943011+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Damage,tank",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Arcane Boots",
+        "Blade Armor",
+        "Fleeting Time",
+        "Blade Armor",
+        "Antique Cuirass",
+        "Athena's Shield"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "Dll",
+      "tags": [],
+      "lastUpdated": "2026-01-30T12:58:47.263429+00:00"
+    }
+  ]
 }

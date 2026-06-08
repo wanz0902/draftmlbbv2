@@ -502,5 +502,142 @@
         "advantage": 3.64
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Cocok banget buat kalian mau ke global gloo",
+      "author": "community",
+      "votes": 12,
+      "items": [
+        "Rapid Boots",
+        "Glowing Wand",
+        "Cursed Helmet",
+        "Brute Force Breastplate",
+        "Ice Queen Wand",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flameshot",
+      "skillOrder": null,
+      "notes": "Main aman dan nunggu item glowing sudah jadi kalau item glowing wand nya sudah jadi kalian adu mekanik sama Hero yang kalian lawan di exp di jamin kalian bakal menang kecuali lawan kalian dyroth dikarenakan dyroth kalau nyerang kalian pake skill 2 gloo kalian otomatis pasif nya dyroth bikin darah nya makin penuh/full jadi kalian jangan adu mekanik sama dyroth adu mekanik sama Hero lain",
+      "tags": [],
+      "lastUpdated": "2025-10-26T02:53:46.169077+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Damage For Solo Player. ",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Clock of Destiny",
+        "Glowing Wand",
+        "Antique Cuirass",
+        "Radiant Armor",
+        "Oracle"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flameshot",
+      "skillOrder": null,
+      "notes": "Dengan build ini, saya jamin Gloo anda akan mendominasi di laning phase melawan hero-hero meta maupun non meta, dan build ini juga cocok buat anda yang Solo Player. Karena Build ini bisa solo kill Core lawan. ",
+      "tags": [],
+      "lastUpdated": "2025-09-13T18:03:03.990868+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "roam sustain(roam merah)",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Molten Essence",
+        "Dominance Ice",
+        "Oracle",
+        "Radiant Armor",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "Cara penggunaan ealy pastikan clear cepat dengan mid dan cicil hero lawan jika terlalu depan, setelah itu bantu jungle setelah itu bantu ambil pokemon air lalu kembali lagi ke mid lalu ambil crab xp atau bantu clear lane xp(pastikan level 4 saat turtle menit (2).jika sudah menit 15 ganti molten/cused helmet dangan imortal.",
+      "tags": [],
+      "lastUpdated": "2025-10-22T22:39:53.260339+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "palembang",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Cursed Helmet",
+        "Glowing Wand",
+        "War Axe",
+        "Antique Cuirass",
+        "Blade Armor"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flameshot",
+      "skillOrder": null,
+      "notes": "mainnya harus  agresif di awal (kalo bisa level 4 sebelum turtle) suruh exp nya buat backup kalo kita maju untuk nyerang",
+      "tags": [],
+      "lastUpdated": "2025-10-26T15:43:47.014983+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "gloo magig",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Rapid Boots",
+        "Cursed Helmet",
+        "Glowing Wand",
+        "Oracle",
+        "Genius Wand",
+        "Dominance Ice"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flameshot",
+      "skillOrder": null,
+      "notes": "gloo pemburu core",
+      "tags": [],
+      "lastUpdated": "2025-12-10T12:34:40.019084+00:00"
+    }
+  ]
 }

@@ -570,5 +570,142 @@
         "advantage": 2.02
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Alucard Damage+lifesteal",
+      "author": "community",
+      "votes": 34,
+      "items": [
+        "War Axe",
+        "Tought Boots",
+        "Endless Battle",
+        "Rose Gold Meteor",
+        "Queen's Wings",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "dbd4d98a-7e58-4571-9cc6-98abbb230732"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "Alucard sustain Jika musuh tebal² atau yg lama dibunuh, sekali skill darah langsung penuh",
+      "tags": [],
+      "lastUpdated": "2025-10-16T05:39:14.564388+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Alucard By qeva",
+      "author": "community",
+      "votes": 11,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Endless Battle",
+        "Blade of Despair",
+        "Queen's Wings",
+        "Thunder Belt"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming) Jangan dibuang sampai 3-4 item penting lain jadi",
+      "tags": [],
+      "lastUpdated": "2025-09-14T10:47:30.158847+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Kompe.",
+      "author": "community",
+      "votes": 11,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Hunter Strike",
+        "Rose Gold Meteor",
+        "Endless Battle",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "dbd4d98a-7e58-4571-9cc6-98abbb230732"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "TERGANTUNG PILOT ",
+      "tags": [],
+      "lastUpdated": "2025-10-22T13:50:21.02529+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Alu Exp/Gold",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Endless Battle",
+        "Queen's Wings",
+        "Malefic Roar",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "dbd4d98a-7e58-4571-9cc6-98abbb230732"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Build untuk Alucard Exp/Gold",
+      "tags": [],
+      "lastUpdated": "2025-09-13T09:46:22.304514+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Alucard WhatsApp ",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Warrior Boots",
+        "Blade of Despair",
+        "Corrosion Scythe",
+        "Holy Crystal",
+        "Oracle",
+        "Guardian Helmet"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "f710e5d1-0c78-418a-a47f-4b74e31e0235"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "Ayo hijaukan dunia",
+      "tags": [],
+      "lastUpdated": "2025-10-16T05:50:59.657882+00:00"
+    }
+  ]
 }

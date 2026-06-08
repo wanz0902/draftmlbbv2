@@ -475,5 +475,142 @@
         "advantage": 2.07
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Auto savage",
+      "author": "community",
+      "votes": 8,
+      "items": [
+        "Swift Boots",
+        "Windtalker",
+        "Sky Piercer",
+        "Berserker Fury",
+        "Haas Claws",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Build di rancang bagi yang mau panen savage",
+      "tags": [],
+      "lastUpdated": "2025-10-28T05:24:39.859877+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Late game dijamin sakit",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Swift Boots",
+        "Windtalker",
+        "Berserker Fury",
+        "Haas Claws",
+        "Malefic Gun",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-04T22:53:21.872105+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Late game nya gacor bangetttt",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Windtalker",
+        "Swift Boots",
+        "Berserker Fury",
+        "Malefic Gun",
+        "Blade of Despair",
+        "Haas Claws"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Gacor kangg",
+      "tags": [],
+      "lastUpdated": "2025-11-14T06:04:51.374329+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "late game nya gacor prah (desk nya liat aja)",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Berserker Fury",
+        "Swift Boots",
+        "Haas Claws",
+        "Windtalker",
+        "Malefic Gun",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "klo udh late game sepatu bisa dijual ke dhs klo pengen tank bocor klo lgi super snowball di late ganti sepatu pke bod",
+      "tags": [],
+      "lastUpdated": "2026-04-01T11:29:18.349476+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "layla build for burst tank",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Warrior Boots",
+        "Windtalker",
+        "Berserker Fury",
+        "Haas Claws",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-09-14T12:31:18.463541+00:00"
+    }
+  ]
 }

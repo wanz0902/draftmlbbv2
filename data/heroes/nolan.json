@@ -533,5 +533,142 @@
         "advantage": 2.89
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Sakit aja sih",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Hunter Strike",
+        "Malefic Roar",
+        "Rose Gold Meteor",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "Incer Hero backline musuh kyk mage atau mm",
+      "tags": [],
+      "lastUpdated": "2025-10-22T14:41:04.190171+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Damage sakit + bisa kabur",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "Blade of the Heptaseas",
+        "Hunter Strike",
+        "Sky Piercer",
+        "Malefic Roar",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2026-03-26T08:27:50.875357+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 SWISS STAGE DAY 3 AE.Yazukee",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Sea Halberd",
+        "Blade of Despair",
+        "Malefic Roar",
+        "Azure Blade"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "( AE VS YG GAME 2 ) M7 WORLD CHAMPIONSHIP SWISS STAGE 12 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-12T13:11:04.536547+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Hero tipis menangis 😭",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Blade of the Heptaseas",
+        "Tought Boots",
+        "Sky Piercer",
+        "Hunter Strike",
+        "Blade of Despair",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "Damage burst",
+      "tags": [],
+      "lastUpdated": "2025-11-15T05:13:42.998176+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "kasih know know",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Sky Piercer",
+        "Hunter Strike",
+        "Blade of Despair",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "misal nya menang di elry, saran gua fokus farm sampe kebeli furry hammer terus, incer mm atau mage nya yayaya",
+      "tags": [],
+      "lastUpdated": "2025-09-13T14:25:04.551186+00:00"
+    }
+  ]
 }

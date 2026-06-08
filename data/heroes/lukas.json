@@ -716,5 +716,88 @@
         "advantage": 2
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Build Exp Sustain tanpa build item defense/mengandalkan spell vamp kenceng",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Queen's Wings",
+        "Brute Force Breastplate",
+        "Oracle",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Andalkan kebal CC dari skill 1 Lukas dan strategi maksimal dari Dr.[Redacted] mantan Exp Jawa Tengah Lukas pure",
+      "tags": [],
+      "lastUpdated": "2025-10-22T18:53:21.724576+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Kekebalan tubuh ",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Thunder Belt",
+        "Oracle",
+        "Dominance Ice",
+        "Athena's Shield"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-09-27T16:43:51.598055+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Jungle +  dijamin bisa buat timfight",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Warrior Boots",
+        "Cursed Helmet",
+        "War Axe",
+        "Thunder Belt",
+        "Oracle",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-05T13:51:13.016583+00:00"
+    }
+  ]
 }

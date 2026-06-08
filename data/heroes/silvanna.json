@@ -471,5 +471,61 @@
         "advantage": 2.54
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Damage",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Arcane Boots",
+        "Concentrated Energy",
+        "Feather of Heaven",
+        "Starlium Scythe",
+        "Genius Wand",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Exp",
+      "tags": [],
+      "lastUpdated": "2025-10-23T03:59:13.360556+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Attack and defense",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Arcane Boots",
+        "Feather of Heaven",
+        "Concentrated Energy",
+        "Genius Wand",
+        "Starlium Scythe",
+        "Glowing Wand"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-22T22:37:40.361784+00:00"
+    }
+  ]
 }

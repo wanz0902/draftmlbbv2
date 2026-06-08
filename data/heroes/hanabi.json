@@ -477,5 +477,142 @@
         "advantage": 2.42
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 D2 W3 AE.Arfy",
+      "author": "community",
+      "votes": 12,
+      "items": [
+        "Warrior Boots",
+        "Corrosion Scythe",
+        "Windtalker",
+        "Haas Claws",
+        "Wind of Nature",
+        "Fury Hammer"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Aegis",
+      "skillOrder": null,
+      "notes": "Game 1 BTR VS AE",
+      "tags": [],
+      "lastUpdated": "2025-09-06T17:50:33.051297+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S17 WEEK 1 DAY 2 OMG.Netskie",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Malefic Gun",
+        "Immortality",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Aegis",
+      "skillOrder": null,
+      "notes": "( APBR VS OMG GAME 1 ) MPL PHILIPPINES SEASON 17 WEEK 1 DAY 2 21 MARET 2026",
+      "tags": [],
+      "lastUpdated": "2026-03-23T12:12:33.91993+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Item attack speed",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Swift Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Windtalker",
+        "Malefic Gun"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Kumpul gold sebanyak mungkin sampai semua item terkumpul semua",
+      "tags": [],
+      "lastUpdated": "2025-12-11T11:51:50.341376+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build andalan ",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Swift Boots",
+        "Haas Claws",
+        "Windtalker",
+        "Berserker Fury",
+        "Malefic Gun",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Coba aja ",
+      "tags": [],
+      "lastUpdated": "2025-10-23T20:44:59.076031+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "critical",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Rapid Boots",
+        "Windtalker",
+        "Haas Claws",
+        "Berserker Fury",
+        "Malefic Gun",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Aegis",
+      "skillOrder": null,
+      "notes": "Kalau musuh tipis ",
+      "tags": [],
+      "lastUpdated": "2025-10-22T16:24:30.142018+00:00"
+    }
+  ]
 }

@@ -495,5 +495,88 @@
         "advantage": 3.19
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Build mythic ke atas",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Immortality",
+        "Ice Queen Wand",
+        "Oracle",
+        "Brute Force Breastplate"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Damage besar, spellvam deres dan tahan lama. Enak untuk bakar Hero depan musuh dan tidak mudah di pick off",
+      "tags": [],
+      "lastUpdated": "2025-10-22T22:06:08.071312+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "build abang2 imo",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Warrior Boots",
+        "War Axe",
+        "Immortality",
+        "Brute Force Breastplate",
+        "Ice Queen Wand",
+        "Radiant Armor"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "sustain tb",
+      "tags": [],
+      "lastUpdated": "2025-09-17T23:24:07.994837+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Buat cicil musuh",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Sky Piercer",
+        "Ice Queen Wand",
+        "Brute Force Breastplate",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "Sky piercer tergantung kondisi",
+      "tags": [],
+      "lastUpdated": "2025-10-22T14:45:22.626123+00:00"
+    }
+  ]
 }

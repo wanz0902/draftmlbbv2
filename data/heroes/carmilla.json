@@ -477,5 +477,115 @@
         "advantage": 2.31
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Defense & Damage",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "Cursed Helmet",
+        "Thunder Belt",
+        "Antique Cuirass",
+        "Glowing Wand",
+        "Guardian Helmet"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2026-04-26T08:55:57.598058+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Heal+High Max Hp",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Antique Cuirass",
+        "Radiant Armor",
+        "Chastise Pauldron",
+        "Dominance Ice",
+        "Guardian Helmet"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "Cocok khusus melawan draft musuh dengan hero2 true damage Seperti Lelsey dan X-borg",
+      "tags": [],
+      "lastUpdated": "2025-10-22T11:42:30.159126+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Kena ulti udh teman backup siap aja",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Tought Boots",
+        "Fleeting Time",
+        "Dominance Ice",
+        "Radiant Armor",
+        "Antique Cuirass",
+        "Blade Armor"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "f710e5d1-0c78-418a-a47f-4b74e31e0235"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T05:28:15.756194+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Carmila hyper by no 8 Indonesia s28",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Tought Boots",
+        "Cursed Helmet",
+        "Brute Force Breastplate",
+        "Athena's Shield",
+        "Glowing Wand",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "Build buat carmila hyper kalo lu kurang badan",
+      "tags": [],
+      "lastUpdated": "2025-10-24T00:58:18.035605+00:00"
+    }
+  ]
 }

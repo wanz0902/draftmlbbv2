@@ -476,5 +476,142 @@
         "advantage": 1.8
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Badang By qeva",
+      "author": "community",
+      "votes": 16,
+      "items": [
+        "Warrior Boots",
+        "Thunder Belt",
+        "Guardian Helmet",
+        "Cursed Helmet",
+        "Brute Force Breastplate",
+        "Dominance Ice"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Buat tank or tank semi demeg bagus\nAwal game buy knife 2(biar cpt farming) Jangan dibuang sampai 3-4 item penting lain jadi",
+      "tags": [],
+      "lastUpdated": "2025-09-15T05:11:35.861515+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID : ONIC KIBOY",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Tought Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Oracle",
+        "Brute Force Breastplate",
+        "Blade Armor"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-18T22:19:35.894197+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "rotasi+culik",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Antique Cuirass",
+        "Rapid Boots",
+        "Athena's Shield",
+        "Dominance Ice",
+        "Blade Armor",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-09-13T14:49:43.582232+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build roam full cd",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Thunder Belt",
+        "Magic Boots",
+        "Oracle",
+        "Dominance Ice",
+        "Immortality",
+        "Radiant Armor"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Karena build ini memprioritaskan cd jadi, usahakan exp kalian harus pick yang tebel",
+      "tags": [],
+      "lastUpdated": "2025-09-13T20:58:39.642556+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Badang exp tebel dan sakit",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Thunder Belt",
+        "Rapid Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Cursed Helmet",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Build by natanz ",
+      "tags": [],
+      "lastUpdated": "2025-11-30T04:34:51.986907+00:00"
+    }
+  ]
 }

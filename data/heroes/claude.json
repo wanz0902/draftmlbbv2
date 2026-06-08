@@ -507,5 +507,142 @@
         "advantage": 2.42
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Versus Fighter GoldLane",
+      "author": "community",
+      "votes": 13,
+      "items": [
+        "Warrior Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Malefic Roar",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Purify",
+      "skillOrder": null,
+      "notes": "Full Item Jual Sepatu Beli Imo/Winter/WON atau Windtalker (End).\nEmblem Ass (Penetration).\nPistol ada Pasif Penet persenan Physical Def Musuh (Lebih Bagus daripada Malefic Gun).\nKalo Gameplay Scaling (Emblem Tier 2 = Bargain Hunter).\nSepatu Sesuaikan Lawan.\nEmblem Fighter (Sustain/Versus MM).\nSpell Flicker (Musuh No CC).",
+      "tags": [],
+      "lastUpdated": "2025-11-19T19:17:20.685721+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 SWISS STAGE DAY 1 ONIC.Skylar",
+      "author": "community",
+      "votes": 12,
+      "items": [
+        "Demon Hunter Sword",
+        "Corrosion Scythe",
+        "Golden Staff",
+        "Windtalker",
+        "Wind of Nature",
+        "Malefic Gun"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( ONIC VS BGT GAME 1 ) M7 WORLD CHAMPIONSHIP SWISS STAGE 10 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-10T08:01:54.09046+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 SWISS STAGE DAY 2 TL.Oheb",
+      "author": "community",
+      "votes": 8,
+      "items": [
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Windtalker",
+        "Rose Gold Meteor",
+        "Malefic Gun"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( FLCN VS TL GAME 1 ) M7 WORLD CHAMPIONSHIP SWISS STAGE 11 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-11T09:52:01.1835+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S17 WEEK 5 DAY 2 APBR.Shizou",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Warrior Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Malefic Gun",
+        "Wind of Nature"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Purify",
+      "skillOrder": null,
+      "notes": "( OMG VS APBR GAME 3 ) MPL PHILIPPINES SEASON 17 WEEK 5 DAY 2 25 April 2026",
+      "tags": [],
+      "lastUpdated": "2026-04-25T09:41:21.92307+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Ih sesakit ini",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Warrior Boots",
+        "Windtalker",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Wind of Nature"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Aegis",
+      "skillOrder": null,
+      "notes": "Cobain aja di rank udah sakit itemnya Ipul",
+      "tags": [],
+      "lastUpdated": "2025-11-24T13:10:29.329383+00:00"
+    }
+  ]
 }

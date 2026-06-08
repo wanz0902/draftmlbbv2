@@ -513,5 +513,142 @@
         "advantage": 5.59
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S16 Grand Finals : TLPH.KarlTzy",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Antique Cuirass",
+        "Athena's Shield",
+        "Guardian Helmet",
+        "Immortality",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "AURORA VS Team Liquid PH Game 1",
+      "tags": [],
+      "lastUpdated": "2025-10-28T03:59:35.167658+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Trengilling cirebon berani ke rumput mid",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Antique Cuirass",
+        "Blade Armor",
+        "Chastise Pauldron",
+        "Radiant Armor",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "fbf4d20d-1eb4-4fb4-8d43-18e7952d88d1",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T04:03:43.617891+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 KNOCKOUT STAGE DAY 1 ONIC.Kairi",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Cursed Helmet",
+        "Guardian Helmet",
+        "Radiant Armor",
+        "Antique Cuirass",
+        "Dominance Ice"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "( ONIC VS AE GAME 2 ) M7 WORLD CHAMPIONSHIP KNOCKOUT STAGE 18 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-18T14:58:56.724564+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "build kumar",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Antique Cuirass",
+        "Blade Armor",
+        "Radiant Armor",
+        "Dominance Ice",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "bagus KLO party kompe",
+      "tags": [],
+      "lastUpdated": "2025-10-25T14:25:22.922452+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "BAXIA ROAM BY Naver",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Antique Cuirass",
+        "Guardian Helmet",
+        "Athena's Shield",
+        "Chastise Pauldron",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Revitalize",
+      "skillOrder": null,
+      "notes": "PEGANGIN HERO MUSUH😈",
+      "tags": [],
+      "lastUpdated": "2025-10-21T12:37:58.982197+00:00"
+    }
+  ]
 }

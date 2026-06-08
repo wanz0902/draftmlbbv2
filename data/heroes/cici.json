@@ -504,5 +504,141 @@
         "advantage": 2.77
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "cici semi tank",
+      "author": "community",
+      "votes": 28,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Oracle",
+        "Dominance Ice",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "karna agar cici sustain saat war panjang dibuatlah cici semi tank ",
+      "tags": [],
+      "lastUpdated": "2025-10-14T22:41:53.684514+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "cici belut",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Rapid Boots",
+        "Hunter Strike",
+        "War Axe",
+        "Oracle",
+        "Brute Force Breastplate",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-09-13T20:33:33.346531+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build cici tb & kaiting",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Oracle",
+        "Chastise Pauldron",
+        "Guardian Helmet"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "Build yang dikhususkan untuk cici ketika bertemu hero burst seperti lesley ",
+      "tags": [],
+      "lastUpdated": "2025-09-13T14:43:41.440413+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S16 Grand Finals : AURORA.Edward",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "War Axe",
+        "Warrior Boots",
+        "Brute Force Breastplate",
+        "Dreadnaught Armor",
+        "Athena's Shield"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "AURORA VS Team Liquid PH Game 2",
+      "tags": [],
+      "lastUpdated": "2025-10-28T04:14:28.215041+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Cici CD 1 second",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Magic Boots",
+        "War Axe",
+        "Brute Force Breastplate",
+        "Hunter Strike",
+        "Dominance Ice",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "spam skill 1 cici, build akhir meyesuaikan",
+      "tags": [],
+      "lastUpdated": "2025-10-15T05:20:10.465139+00:00"
+    }
+  ]
 }

@@ -510,5 +510,87 @@
         "advantage": 2.4
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Kena bola saat dia Snowball 💀",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Warrior Boots",
+        "Berserker Fury",
+        "Haas Claws",
+        "Windtalker",
+        "Malefic Gun",
+        "Great Dragon Spear"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T05:23:59.161169+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 SWISS STAGE DAY 4 ONIC.Skylar",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Warrior Boots",
+        "Berserker Fury",
+        "Haas Claws",
+        "Sea Halberd",
+        "Malefic Gun"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( ONIC VS TS GAME 1 ) M7 WORLD CHAMPIONSHIP SWISS STAGE 13 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-13T11:51:40.056046+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Bola Plastik",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Haas Claws",
+        "Windtalker",
+        "Berserker Fury",
+        "Malefic Gun",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-09-30T15:51:22.923018+00:00"
+    }
+  ]
 }

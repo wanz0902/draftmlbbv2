@@ -498,5 +498,142 @@
         "advantage": 2.55
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MIMPI BURUK BACKLINER💀",
+      "author": "community",
+      "votes": 34,
+      "items": [
+        "Warrior Boots",
+        "Haas Claws",
+        "Berserker Fury",
+        "Malefic Gun",
+        "Great Dragon Spear",
+        "Wind of Nature"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": "Sepatu diganti windtalker saat late game",
+      "tags": [],
+      "lastUpdated": "2025-09-13T15:40:19.33634+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Irithel By qeva",
+      "author": "community",
+      "votes": 10,
+      "items": [
+        "Warrior Boots",
+        "Windtalker",
+        "Haas Claws",
+        "Malefic Gun",
+        "Berserker Fury",
+        "Great Dragon Spear"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming) Jangan dibuang sampai 3-4 item penting lain jadi",
+      "tags": [],
+      "lastUpdated": "2025-09-14T10:43:10.28417+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MIMPI BURUK BACKLINER💀 (From patch 1.9.99)",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Warrior Boots",
+        "Haas Claws",
+        "Berserker Fury",
+        "Malefic Gun",
+        "Great Dragon Spear",
+        "Wind of Nature"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": "Sepatu diganti windtalker saat late game",
+      "tags": [],
+      "lastUpdated": "2025-09-22T18:47:48.664+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MOVE TINGGI + ROTASI CEPET",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Rapid Boots",
+        "Windtalker",
+        "Haas Claws",
+        "Berserker Fury",
+        "Malefic Gun",
+        "Great Dragon Spear"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": "build ini bikin enak kalian buat rotasi",
+      "tags": [],
+      "lastUpdated": "2025-10-16T17:29:27.681033+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "build late game",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Windtalker",
+        "Haas Claws",
+        "Berserker Fury",
+        "Malefic Gun",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Sprint",
+      "skillOrder": null,
+      "notes": "main farming dulu",
+      "tags": [],
+      "lastUpdated": "2025-10-25T22:53:37.60663+00:00"
+    }
+  ]
 }

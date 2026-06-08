@@ -619,5 +619,141 @@
         "advantage": 1.68
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S17 WEEK 3 DAY 3 ONIC.K1NGKONG",
+      "author": "community",
+      "votes": 10,
+      "items": [
+        "Magic Boots",
+        "Sky Piercer",
+        "War Axe",
+        "Hunter Strike",
+        "Queen's Wings",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "0822539a-2b72-4a01-b05f-b1e5e9defc22"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "( ONIC VS RORA GAME 1 ) MPL PHILIPPINES SEASON 17 WEEK 3 DAY 3 12 April 2026",
+      "tags": [],
+      "lastUpdated": "2026-04-12T16:27:32.58827+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "YT : Gameplay Proplayer",
+      "author": "community",
+      "votes": 7,
+      "items": [
+        "Magic Boots",
+        "Hunter Strike",
+        "War Axe",
+        "Blade of Despair",
+        "Queen's Wings",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-12-05T05:01:45.005845+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 GRAND FINAL AE.Yazukee",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Magic Boots",
+        "War Axe",
+        "Hunter Strike",
+        "Malefic Roar",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "( AE VS RORA GAME 2 ) M7 WORLD CHAMPIONSHIP GRAND FINAL 25 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-25T13:47:03.31305+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build Suyou Snowball",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Magic Boots",
+        "Hunter Strike",
+        "Sky Piercer",
+        "War Axe",
+        "Blade of Despair",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2026-01-14T10:27:23.477147+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "suyou [KATA MENGANDUNG KATA-KATA KASAR]",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Magic Boots",
+        "Hunter Strike",
+        "Sky Piercer",
+        "War Axe",
+        "Sea Halberd",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "sekali [KATA MENGANDUNG KATA-KATA KASAR]  langsung akh..",
+      "tags": [],
+      "lastUpdated": "2025-08-19T13:51:38.346001+00:00"
+    }
+  ]
 }

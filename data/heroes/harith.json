@@ -570,5 +570,142 @@
         "advantage": 3.03
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 D2 W8 : LIQUID.Kabuki",
+      "author": "community",
+      "votes": 12,
+      "items": [
+        "Feather of Heaven",
+        "Magic Boots",
+        "Starlium Scythe",
+        "Holy Crystal",
+        "Divine Glaive",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "LIQUID ID VS GEEK FAM Game 2",
+      "tags": [],
+      "lastUpdated": "2025-10-11T09:30:01.525812+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 Grand Finals : ONIC.Skylar",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Magic Boots",
+        "Feather of Heaven",
+        "Divine Glaive",
+        "Starlium Scythe",
+        "Holy Crystal",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Purify",
+      "skillOrder": null,
+      "notes": "ONIC ID VS Alter Ego Game 1",
+      "tags": [],
+      "lastUpdated": "2025-11-03T11:50:16.164095+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "HARITH BUKU ",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Enchanted Talisman",
+        "Arcane Boots",
+        "Feather of Heaven",
+        "Holy Crystal",
+        "Wishing Lantern",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "no troll",
+      "tags": [],
+      "lastUpdated": "2025-09-14T12:23:57.921932+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "New patch harith jungler",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "Starlium Scythe",
+        "Feather of Heaven",
+        "Wishing Lantern",
+        "Holy Crystal",
+        "Concentrated Energy"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "Build ku untuk harith",
+      "tags": [],
+      "lastUpdated": "2026-04-24T09:36:19.688035+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S17 WEEK 2 DAY 3 BTR.EMANN",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Feather of Heaven",
+        "Starlium Scythe",
+        "Oracle",
+        "Blood Wings",
+        "Divine Glaive",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Purify",
+      "skillOrder": null,
+      "notes": "( BTR VS EVOS GAME 3 ) MPL INDONESIA SEASON 17 WEEK 2 DAY 3 5 APRIL 2026",
+      "tags": [],
+      "lastUpdated": "2026-04-05T16:13:07.590513+00:00"
+    }
+  ]
 }

@@ -597,5 +597,142 @@
         "advantage": 2.98
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Build Bened R7",
+      "author": "community",
+      "votes": 21,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Sea Halberd",
+        "Endless Battle",
+        "Rose Gold Meteor",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "untuk gameplaynya bisa liat di yt R7 ",
+      "tags": [],
+      "lastUpdated": "2025-10-21T10:48:08.387207+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Benedetta POIZY",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Endless Battle",
+        "Sea Halberd",
+        "Blade of Despair",
+        "Winter Crown"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "Best option for Exp Damage",
+      "tags": [],
+      "lastUpdated": "2025-09-13T09:21:34.449183+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Build sustain war ",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "War Axe",
+        "Warrior Boots",
+        "Thunder Belt",
+        "Brute Force Breastplate",
+        "Hunter Strike",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "Tank item",
+      "tags": [],
+      "lastUpdated": "2025-11-14T10:51:37.695994+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Full damage",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Blade of the Heptaseas",
+        "Warrior Boots",
+        "Sky Piercer",
+        "Hunter Strike",
+        "Malefic Roar",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": "Full damage",
+      "tags": [],
+      "lastUpdated": "2025-11-14T10:53:22.353606+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Arfy MPL S16 Playoff D-2",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "Blade of the Heptaseas",
+        "Sea Halberd",
+        "Endless Battle",
+        "Malefic Roar",
+        "Blade of Despair"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Petrify",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-30T07:39:11.454083+00:00"
+    }
+  ]
 }

@@ -584,5 +584,61 @@
         "advantage": 2.49
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Build Valir Exp",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "Clock of Destiny",
+        "Ice Queen Wand",
+        "Concentrated Energy",
+        "Brute Force Breastplate",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "main agresif kalo elegant gem dah jadi karna kalo hp jatuh di bawah 50 bisa dapet health dalam masa 3s dan mendapat 300 hp ama mana, tapi ingat main agresif kalo musuhnya kalah level ato hero tipis, ganti concentrated ama glowing kalo musuhnya yz,lapu,terizla dll, ga usah beli bruteforce kalo musuhnya minim cc",
+      "tags": [],
+      "lastUpdated": "2026-03-19T21:58:49.187605+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "mimpi buruk hero jalan santai",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "Enchanted Talisman",
+        "Glowing Wand",
+        "Ice Queen Wand",
+        "Wishing Lantern",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "ganti holy crystal dengan divine glaive jika musuh magic defencenya banyak",
+      "tags": [],
+      "lastUpdated": "2025-11-04T13:27:39.937712+00:00"
+    }
+  ]
 }

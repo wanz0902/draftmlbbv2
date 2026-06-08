@@ -479,5 +479,141 @@
         "advantage": 2.15
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 D1 W5 : ONIC.Sanz",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Magic Boots",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Holy Crystal",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "(EVOS VS ONIC) Game 1 (Angela Midlane)",
+      "tags": [],
+      "lastUpdated": "2025-09-23T07:47:37.506472+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "shield kekebalan tubuh",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Demon Shoes",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Holy Crystal",
+        "Winter Crown",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "f710e5d1-0c78-418a-a47f-4b74e31e0235"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "build ini dapat memberikan efek shield putih begitu besar dan efek regen yang deras",
+      "tags": [],
+      "lastUpdated": "2025-09-14T10:17:26.99643+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Healing deres",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "Flask of the Oasis",
+        "Glowing Wand",
+        "Oracle",
+        "Winter Crown",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "3bec0101-a991-49f7-a84d-38331c257a3a",
+          "tier3": "f710e5d1-0c78-418a-a47f-4b74e31e0235"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T03:21:51.289172+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "build anggela mid by sanzz",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "Flask of the Oasis",
+        "Fleeting Time",
+        "Divine Glaive",
+        "Holy Crystal",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-09-21T14:21:00.32856+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Generic Angela Build",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Arcane Boots",
+        "Enchanted Talisman",
+        "Flask of the Oasis",
+        "Winter Crown",
+        "Holy Crystal",
+        "Blood Wings"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T06:12:46.152846+00:00"
+    }
+  ]
 }

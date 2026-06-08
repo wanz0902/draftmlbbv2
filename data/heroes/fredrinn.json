@@ -517,5 +517,141 @@
         "advantage": 2.78
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Build Sustain Spellvamp Mobility",
+      "author": "community",
+      "votes": 17,
+      "items": [
+        "Tought Boots",
+        "Brute Force Breastplate",
+        "Thunder Belt",
+        "Queen's Wings",
+        "Oracle",
+        "Blade Armor"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Bloody Retribution",
+      "skillOrder": null,
+      "notes": "Build Bagus untuk Solo,Maupun Party tanpa Support ",
+      "tags": [],
+      "lastUpdated": "2025-10-13T12:58:31.579723+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S16 Grand Finals : TLPH.KarlTzy",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Tought Boots",
+        "Antique Cuirass",
+        "Athena's Shield",
+        "Guardian Helmet",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Tank",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "AURORA VS Team Liquid PH Game 2",
+      "tags": [],
+      "lastUpdated": "2025-10-28T04:19:12.562151+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Fredrinn Exp, Badan damage",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Tought Boots",
+        "Thunder Belt",
+        "Oracle",
+        "Athena's Shield",
+        "Antique Cuirass",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Paling depan, dan sipaling kerasssss",
+      "tags": [],
+      "lastUpdated": "2025-10-26T06:07:22.906406+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Tebel mampus ",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Warrior Boots",
+        "Thunder Belt",
+        "Brute Force Breastplate",
+        "Guardian Helmet",
+        "Chastise Pauldron",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "707360b7-f674-48b4-9bbc-93b2876a5da3"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "Tebelll",
+      "tags": [],
+      "lastUpdated": "2025-11-15T01:04:51.757046+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "War Terus!",
+      "author": "community",
+      "votes": 5,
+      "items": [
+        "Tought Boots",
+        "Thunder Belt",
+        "Oracle",
+        "Brute Force Breastplate",
+        "Antique Cuirass",
+        "Radiant Armor"
+      ],
+      "emblem": {
+        "name": "Support",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Ice Retribution",
+      "skillOrder": null,
+      "notes": "War Terus! Dari early sampe akhir, optimalkan build ini dengan support.\nTips: Jika skill 1 kena musuh, walau hanya kena ujungnya, basic attack selanjutnya pasti akan mengenai musuh tsb. (Jika tidak dash)\nTips 2: Tarik ulur, usahakan war jika sudah memiliki setidaknya 1 stack.\nTips 3 dan paling penting: Agresif dari awal.",
+      "tags": [],
+      "lastUpdated": "2025-10-22T13:46:03.51129+00:00"
+    }
+  ]
 }

@@ -576,5 +576,142 @@
         "advantage": 1.82
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID WEEK 9 DAY 1: ONIC KAIRI",
+      "author": "community",
+      "votes": 12,
+      "items": [
+        "Magic Boots",
+        "Hunter Strike",
+        "War Axe",
+        "Sky Piercer",
+        "Blade of Despair",
+        "Malefic Roar"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-18T22:33:30.033298+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Hayabusa by qeva",
+      "author": "community",
+      "votes": 8,
+      "items": [
+        "Magic Boots",
+        "Hunter Strike",
+        "Endless Battle",
+        "Malefic Roar",
+        "Blade of Despair",
+        "Blade of the Heptaseas"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "Awal game buy knife 2(biar cpt farming)\nJangan dibuang sampai 3-4 item penting lain jadi",
+      "tags": [],
+      "lastUpdated": "2025-09-14T08:50:49.038463+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S16 Grand Finals : TLPH.KarlTzy",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "Hunter Strike",
+        "War Axe",
+        "Blade of Despair",
+        "Malefic Roar",
+        "Endless Battle"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "AURORA VS Team Liquid PH Game 3",
+      "tags": [],
+      "lastUpdated": "2025-10-28T04:48:15.350145+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Damage sakit + sering dipake pro player juga",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Magic Boots",
+        "Hunter Strike",
+        "Sea Halberd",
+        "Malefic Roar",
+        "Blade of Despair",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "f2650d70-e154-43c4-b257-c5e2edfbab0b",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flame Retribution",
+      "skillOrder": null,
+      "notes": "Buat ngebrust musuh",
+      "tags": [],
+      "lastUpdated": "2025-10-23T09:59:49.091663+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Player of the game : RRQ.Sutsujin",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "Hunter Strike",
+        "Malefic Roar",
+        "War Axe",
+        "Blade of Despair",
+        "Azure Blade"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": null,
+          "tier2": null,
+          "tier3": null
+        }
+      },
+      "spell": "Retribution",
+      "skillOrder": null,
+      "notes": "(EVOS VS RRQ) Game 2 MPL ID S16 D2 W4",
+      "tags": [],
+      "lastUpdated": "2025-09-13T13:06:19.703505+00:00"
+    }
+  ]
 }

@@ -549,5 +549,142 @@
         "advantage": 2.08
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S16 D2 W6 : RRQ.ToYy",
+      "author": "community",
+      "votes": 8,
+      "items": [
+        "Demon Hunter Sword",
+        "Windtalker",
+        "Berserker Fury",
+        "Haas Claws",
+        "Malefic Gun",
+        "Immortality"
+      ],
+      "emblem": {
+        "name": "Common",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "(RRQ VS BTR) Game 2",
+      "tags": [],
+      "lastUpdated": "2025-09-29T15:20:37.920985+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Agresive",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Tought Boots",
+        "Windtalker",
+        "Berserker Fury",
+        "Haas Claws",
+        "Malefic Gun",
+        "Sea Halberd"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "ad7a8023-cc1f-463d-b750-b523b09e531e",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-25T04:35:12.895815+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Cocok buat by on",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Warrior Boots",
+        "Windtalker",
+        "Haas Claws",
+        "Berserker Fury",
+        "Malefic Gun",
+        "Wind of Nature"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "1222f5a6-2d4e-4cdc-a222-d2dd6d3a3895"
+        }
+      },
+      "spell": "Aegis",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-23T10:32:33.432637+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "item bole carry team",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Warrior Boots",
+        "Corrosion Scythe",
+        "Demon Hunter Sword",
+        "Golden Staff",
+        "Wind of Nature",
+        "Malefic Gun"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "make sure jgn mati bnyk bila dekat goldlane",
+      "tags": [],
+      "lastUpdated": "2026-04-29T14:27:51.598257+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Obsidia Viral 1 hit",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Magic Boots",
+        "Sky Piercer",
+        "Corrosion Scythe",
+        "Blade of the Heptaseas",
+        "Hunter Strike",
+        "Endless Battle"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "96e08972-7992-41d6-942d-39059f0e23c3",
+          "tier2": "a01d3b8b-f9a8-4260-b439-fd54b3eb2274",
+          "tier3": "f1b022f6-aac4-4b0b-b573-ab99c4cc2f65"
+        }
+      },
+      "spell": "Aegis",
+      "skillOrder": null,
+      "notes": "Takut Ama balerik? tenang build ini 1 hit semua Hero\" tank pun menangis. cobain sebelum di nerf.\n#BUILDVIRAL",
+      "tags": [],
+      "lastUpdated": "2025-10-29T11:44:48.536784+00:00"
+    }
+  ]
 }

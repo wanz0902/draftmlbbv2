@@ -508,5 +508,140 @@
         "advantage": 2.37
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Mantap Nih😋",
+      "author": "community",
+      "votes": 6,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Dominance Ice",
+        "Queen's Wings",
+        "Antique Cuirass",
+        "Athena's Shield"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": ":P",
+      "tags": [],
+      "lastUpdated": "2025-12-11T15:30:04.078368+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "1vs5",
+      "author": "community",
+      "votes": 3,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Dominance Ice",
+        "Oracle",
+        "Blade Armor",
+        "Queen's Wings"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "7ff592c2-d748-49ce-b375-85c3ce9698c6",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Vengeance",
+      "skillOrder": null,
+      "notes": "terizla semakin sekarat semakin tebal",
+      "tags": [],
+      "lastUpdated": "2026-02-23T05:46:14.119941+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL ID S17 WEEK 7 DAY 3 NAVI.Karss",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Tought Boots",
+        "War Axe",
+        "Athena's Shield",
+        "Radiant Armor",
+        "Chastise Pauldron",
+        "Dreadnaught Armor"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( NAVI VS BTR GAME 1 ) MPL INDONESIA SEASON 17 WEEK 7 DAY 3 10 MEI 2026",
+      "tags": [],
+      "lastUpdated": "2026-05-11T08:54:31.110944+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 SWISS STAGE DAY 3 AE.Nino",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Warrior Boots",
+        "Fury Hammer",
+        "Radiant Armor",
+        "Dominance Ice",
+        "Chastise Pauldron"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "8b232e89-893f-4398-8395-13815aa28886",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "( AE VS YG GAME 2 ) M7 WORLD CHAMPIONSHIP SWISS STAGE 12 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-12T13:10:23.021582+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "MPL PH S16 Grand Finals : AURORA.Edward",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "War Axe",
+        "Warrior Boots",
+        "Antique Cuirass",
+        "Athena's Shield",
+        "Dominance Ice"
+      ],
+      "emblem": {
+        "name": "Fighter",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "45872951-faf4-4311-8557-7c1a534abbe4",
+          "tier3": "4b67327b-150f-42c3-a9b0-192a598168f5"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "AURORA VS Team Liquid PH Game 4",
+      "tags": [],
+      "lastUpdated": "2025-10-28T04:53:00.142732+00:00"
+    }
+  ]
 }

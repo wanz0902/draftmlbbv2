@@ -466,5 +466,115 @@
         "advantage": 2.71
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Ixia bantai bantai",
+      "author": "community",
+      "votes": 9,
+      "items": [
+        "Corrosion Scythe",
+        "Sky Piercer",
+        "Sea Halberd",
+        "Windtalker",
+        "Malefic Gun",
+        "Hunter Strike"
+      ],
+      "emblem": {
+        "name": "Marksman",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-24T05:23:47.151583+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "trio ixia+digidaw+jung tb auto ws",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Corrosion Scythe",
+        "Sky Piercer",
+        "Sea Halberd",
+        "Malefic Gun",
+        "Rose Gold Meteor",
+        "Hunter Strike"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-27T12:49:35.743703+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Sustain Pas di gank",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Sea Halberd",
+        "Corrosion Scythe",
+        "Tought Boots",
+        "Sky Piercer",
+        "Malefic Gun",
+        "Rose Gold Meteor"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "383a91d7-183e-435e-ae43-a97456261361",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Cocok buat lu yang suka bet Adu gebuk Ama mm lain dan suka di adu Ama mm fighter",
+      "tags": [],
+      "lastUpdated": "2025-10-26T19:34:30.273309+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Lngsung kena ulti pasrah aja",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Corrosion Scythe",
+        "Sky Piercer",
+        "Sea Halberd",
+        "Malefic Gun",
+        "Rose Gold Meteor",
+        "Demon Hunter Sword"
+      ],
+      "emblem": {
+        "name": "Assassin",
+        "talents": {
+          "tier1": "1cce7851-f92e-4f6e-980d-b9941fbcf151",
+          "tier2": "6ef0f8d5-cc87-4926-99db-0a42394b0590",
+          "tier3": "e4277478-d370-4c49-96d5-d4b92e7dc5e0"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-10-28T00:29:13.111359+00:00"
+    }
+  ]
 }

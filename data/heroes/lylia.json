@@ -565,5 +565,88 @@
         "advantage": 1.8
       }
     ]
-  }
+  },
+  "communityBuilds": [
+    {
+      "source": "molebuild",
+      "buildName": "Tank lawan lngsung lumpuh",
+      "author": "community",
+      "votes": 4,
+      "items": [
+        "Magic Boots",
+        "Enchanted Talisman",
+        "Glowing Wand",
+        "Ice Queen Wand",
+        "Wishing Lantern",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "2ed523e9-944b-40c3-86e1-aaa345617891",
+          "tier2": "06b244be-f0c3-4cde-97b2-2e5a3b018661",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": null,
+      "tags": [],
+      "lastUpdated": "2025-11-05T00:32:42.929028+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "M7 KNOCKOUT STAGE DAY 1 AE.Hijumee",
+      "author": "community",
+      "votes": 2,
+      "items": [
+        "Enchanted Talisman",
+        "Glowing Wand",
+        "Concentrated Energy",
+        "Wishing Lantern",
+        "Blood Wings",
+        "Divine Glaive"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "67eb88b1-6b74-47ec-9936-4797f84945dc"
+        }
+      },
+      "spell": "Purify",
+      "skillOrder": null,
+      "notes": "( ONIC VS AE GAME 2 ) M7 WORLD CHAMPIONSHIP KNOCKOUT STAGE 18 JANUARI 2026",
+      "tags": [],
+      "lastUpdated": "2026-01-18T15:11:07.607736+00:00"
+    },
+    {
+      "source": "molebuild",
+      "buildName": "Jamin Win by Awikwok",
+      "author": "community",
+      "votes": 1,
+      "items": [
+        "Magic Boots",
+        "Enchanted Talisman",
+        "Glowing Wand",
+        "Wishing Lantern",
+        "Ice Queen Wand",
+        "Holy Crystal"
+      ],
+      "emblem": {
+        "name": "Mage",
+        "talents": {
+          "tier1": "44463c09-e34e-45b0-b73a-9cbecf2f26f5",
+          "tier2": "143ef1e0-f848-4b66-8759-6fdfc39d9405",
+          "tier3": "30336e34-0929-47a6-b228-e99dbc7d9faf"
+        }
+      },
+      "spell": "Flicker",
+      "skillOrder": null,
+      "notes": "Ini hero apapun jamin mati",
+      "tags": [],
+      "lastUpdated": "2025-10-25T03:11:25.146365+00:00"
+    }
+  ]
 }
