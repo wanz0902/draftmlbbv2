@@ -5,6 +5,7 @@ import {
   Database,
   Home,
   LogOut,
+  Map,
   Menu,
   Sparkles,
   Target,
@@ -27,6 +28,7 @@ const directLinks = [
   { id: "home", label: "Home", icon: Home },
   { id: "draft", label: "Draft", icon: CloudLightning },
   { id: "tdp", label: "TDP", icon: Target },
+  { id: "macro", label: "Macro", icon: Map },
   { id: "teams", label: "Teams", icon: Users },
   { id: "tier", label: "Meta", icon: Trophy },
 ];

@@ -1,0 +1,16 @@
+[2026-06-08 08:50] START Macro Map Planner Phase 1
+[2026-06-08 08:51] AUDIT Found no map asset in public/, using placeholder grid
+[2026-06-08 08:51] AUDIT Routing uses tab-based state (currentTab) in App.tsx
+[2026-06-08 08:51] AUDIT html-to-image available for PNG export
+[2026-06-08 08:51] AUDIT No canvas/SVG libraries installed, using native SVG overlay
+[2026-06-08 08:51] AUDIT Navbar uses directLinks array, added "Macro" item
+[2026-06-08 08:52] AUDIT Project notes file "masukan dan add dll.txt" not found
+[2026-06-08 08:53] IMPLEMENT Created src/components/MacroMapPlanner.tsx
+[2026-06-08 08:53] IMPLEMENT Added macro route in App.tsx + tabLabels + bypass
+[2026-06-08 08:53] IMPLEMENT Added Macro nav item in Navbar.tsx with Map icon
+[2026-06-08 08:54] TOOLS Move, Draw, Arrow, Lasso, Lasso Eraser, Eraser, Coords
+[2026-06-08 08:54] PHASES Early/Mid/Late switching with separate data per phase
+[2026-06-08 08:54] STORAGE localStorage key: macro_map_planner_v1
+[2026-06-08 08:54] EXPORT PNG via html-to-image + JSON export
+[2026-06-08 08:55] VALIDATION tsc PASS, build PASS (8.30s)
+[2026-06-08 08:55] STATUS Phase 1 foundation complete

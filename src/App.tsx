@@ -14,6 +14,7 @@ import TierListPanel from "./components/TierListPanel";
 // import CounterMatrixPanel from "./components/CounterMatrixPanel";
 import LandingPage from "./components/LandingPage";
 import TeamDraftPlanner from "./components/TeamDraftPlanner";
+import MacroMapPlanner from "./components/MacroMapPlanner";
 import { HeroStats, Item, TeamStats } from "./types";
 import { ArrowLeft, CloudLightning, ShieldCheck } from "lucide-react";
 
@@ -37,6 +38,7 @@ export default function App() {
     home: "Home",
     draft: "Draft Simulator",
     tdp: "Team Draft Planner",
+    macro: "Macro Map Planner",
     intelligence: "Hero Intelligence",
     tier: "Tier List",
     heroes: "Hero Stats",
@@ -147,7 +149,7 @@ export default function App() {
         ) : (
           /* Dynamic Component Rendering based on tab */
           <div className="animate-fade-in">
-            {currentTab !== "home" && currentTab !== "draft" && currentTab !== "tdp" && (
+            {currentTab !== "home" && currentTab !== "draft" && currentTab !== "tdp" && currentTab !== "macro" && (
               <div className="mb-5 flex items-center justify-between gap-3">
                 <button
                   onClick={() => handleTabChange("home")}
@@ -181,6 +183,10 @@ export default function App() {
 
             {currentTab === "tdp" && (
               <TeamDraftPlanner heroes={heroes} heroAssets={heroAssets} />
+            )}
+
+            {currentTab === "macro" && (
+              <MacroMapPlanner heroAssets={heroAssets} />
             )}
 
             {currentTab === "tier" && (
