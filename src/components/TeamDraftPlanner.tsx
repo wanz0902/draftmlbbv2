@@ -865,8 +865,7 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, onSwapLane
         </span>
       </div>
 
-  return (
-    <div className="flex-1 overflow-y-auto px-4 py-3 space-y-4">
+      <div className="flex-1 overflow-y-auto px-4 py-3 space-y-4">
       {/* ═══ BANS SECTION — Distinct red/rose style ═══ */}
       <div>
         <div className="flex items-center gap-1.5 mb-2.5">
