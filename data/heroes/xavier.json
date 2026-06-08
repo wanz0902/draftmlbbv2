@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Damage",
+    "Burst"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 6,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 111,
-    "physicalDefense": 17,
+    "hp": 2430,
+    "hpRegen": 6.6,
+    "mana": 510,
+    "manaRegen": 4,
+    "physicalAttack": 96,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -257,7 +257,9 @@
       "synergyWith": [
         "Valentina",
         "Marcel",
-        "Masha"
+        "Masha",
+        "Khaleed",
+        "Uranus"
       ]
     }
   },
@@ -309,18 +311,29 @@
     "synergyHeroes": [
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 3.1
       },
       {
         "name": "Marcel",
-        "synergy": 5
+        "synergy": 2.6
       },
       {
         "name": "Masha",
-        "synergy": 5
+        "synergy": 1.4
+      },
+      {
+        "name": "Khaleed",
+        "synergy": 1.2
+      },
+      {
+        "name": "Uranus",
+        "synergy": 1.2
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Xavier possesses short cooldowns, a soft CC, good sustainability and performs well against heroes without Blink or burst damage, such as Hanabi and Faramis.",
+    "weakAgainstReason": "Xavier is countered by heroes with high mobility that can quickly close a gap such as Benedetta, Hayabusa, and Natalia.",
+    "synergyReason": "He works well alongside heroes that can buff or provide CC to give him more opportunities to deal damage, such as Carmilla and Atlas."
   },
   "mechanicCategory": [
     "Standard"
@@ -365,11 +378,21 @@
     "difficulty": 30
   },
   "powerCurve": {
-    "early": 35,
-    "mid": 59,
-    "late": 66,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 45,
+    "mid": 75,
+    "late": 85,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Below-average early because he’s mana/item dependent and needs repeated hits to reach Transcendence consistently. Mid game he becomes a strong control/poke mage with ult-assisted Transcendence uptime, and late game his high-range burst and frequent enhanced skill cycles can decide Lord fights."
   },
   "proBuilds": [
     {
@@ -414,5 +437,52 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive",
+        "Passive"
+      ],
+      "description": "Cast Xavier's Ultimate to enter or refresh Transcendence, then try to hit as many enemies as possible with his 2nd Skill, and follow up with his 1st Skill to create a forbidden field to immobilize enemies. Continue casting his 1st Skill to extend Transcendence's duration while going for kills."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, Xavier possesses great poke with his 1st Skill and can utilize the slow from his 2nd Skill to make targets easier to hit. This combination allows him to quickly reach Transcendence. When the opportunity arises, use his Ultimate to finish off an enemy and while in Transcendence state."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Julian",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Melissa",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Yin",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Carmilla",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

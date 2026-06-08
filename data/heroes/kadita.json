@@ -7,8 +7,8 @@
     "Mage"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Burst",
+    "Charge"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -19,14 +19,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2440,
+    "hp": 2461,
     "hpRegen": 7,
     "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 105,
-    "physicalDefense": 18,
+    "manaRegen": 3.8,
+    "physicalAttack": 100,
+    "physicalDefense": 17,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -255,7 +255,9 @@
       "synergyWith": [
         "Angela",
         "Floryn",
-        "Mathilda"
+        "Mathilda",
+        "Chip",
+        "Valentina"
       ]
     }
   },
@@ -303,18 +305,29 @@
     "synergyHeroes": [
       {
         "name": "Angela",
-        "synergy": 5
+        "synergy": 2.2
       },
       {
         "name": "Floryn",
-        "synergy": 5
+        "synergy": 2.1
       },
       {
         "name": "Mathilda",
-        "synergy": 5
+        "synergy": 1.8
+      },
+      {
+        "name": "Chip",
+        "synergy": 1.6
+      },
+      {
+        "name": "Valentina",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Kadita excels at countering heroes that lack mobility, such as Aurora and Eudora, because it's difficult for them to escape Kadita's 2nd Skill, and knocking them airborne sets them up for her Ultimate.",
+    "weakAgainstReason": "Kadita is countered by heroes with long range and high mobility, such as Clint and Beatrix, since it's difficult for Kadita to close in on them or hit them with her 2nd Skill.",
+    "synergyReason": "Kadita works well with heroes who possess strong CC abilities, such as Atlas and Tigreal, as their CC will make it easier for Kadita to hit more enemies with her Ultimate."
   },
   "mechanicCategory": [
     "Standard"
@@ -362,11 +375,21 @@
     "difficulty": 60
   },
   "powerCurve": {
-    "early": 51,
-    "mid": 63,
-    "late": 51,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 65,
+    "mid": 80,
+    "late": 65,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Divine Glaive"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Kadita’s kill threat spikes hard once she unlocks her full S1+S2+Ultimate burst and can start forcing picks around Turtle fights. She stays impactful late via backline one-shots and untargetability, but becomes less consistent if enemies build Athena’s Shield/Radiant Armor and position tighter."
   },
   "proBuilds": [
     {
@@ -411,5 +434,37 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "In teamfights, target the enemy's backline with Kadita's 1st Skill, and use her 2nd Skill when passing through enemies to knock them airborne. Follow up with her Ultimate for massive damage and avoid all incoming damage while being untargetable."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, use Kadita's 1st Skill to constantly harass enemies, and look for opportunities to use her 2nd Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Vonetis Sea",
+  "race": "Mermaid Goddess (currently), Human (formerly)"
 }

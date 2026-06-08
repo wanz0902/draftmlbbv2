@@ -7,8 +7,8 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Chase",
+    "Damage"
   ],
   "lane": "Jungle",
   "lanes": [
@@ -22,14 +22,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2443,
-    "hpRegen": 7,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 123,
-    "physicalDefense": 21,
+    "hp": 2621,
+    "hpRegen": 7.8,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 126,
+    "physicalDefense": 20,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.12",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -254,7 +254,9 @@
       "synergyWith": [
         "Tigreal",
         "Lolita",
-        "Barats"
+        "Barats",
+        "Chip",
+        "Atlas"
       ]
     }
   },
@@ -306,18 +308,29 @@
     "synergyHeroes": [
       {
         "name": "Tigreal",
-        "synergy": 5
+        "synergy": 1.8
       },
       {
         "name": "Lolita",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Barats",
-        "synergy": 5
+        "synergy": 1.3
+      },
+      {
+        "name": "Chip",
+        "synergy": 1.2
+      },
+      {
+        "name": "Atlas",
+        "synergy": 1.2
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Alucard has great chase abilities and damage resistance, making him powerful against squishy Assassins like Harley and Aamon.",
+    "weakAgainstReason": "But he can be countered by heroes with powerful control abilities like Franco and Johnson. If controlled, Alucard won't be able to steal HP\nand can be easily eliminated.",
+    "synergyReason": "He's best with heroes with crowd control, such as Gatotkaca and Xavier, which makes up for his lack of powerful control abilities."
   },
   "mechanicCategory": [
     "Standard"
@@ -368,11 +381,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 59,
-    "late": 48,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 76,
+    "late": 62,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Haas's Claws",
+      "Hunter Strike",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Alucard’s kill pressure jumps at level 4 due to ult lifesteal + cooldown reduction enabling long chase combos, and he spikes hardest once he finishes 1–2 damage items to snowball skirmishes. In late game, anti-heal and coordinated CC make it harder for him to stick and lifesteal through fights."
   },
   "proBuilds": [
     {
@@ -416,5 +439,42 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, Alucard can use his 1st Skill to deal damage and slow enemies first, and follow it with Basic Attacks for strikes. Then, he can use his 2nd Skill and follow it with Basic Attacks for more strikes."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Passive",
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Passive",
+        "Skill 3"
+      ],
+      "description": "In teamfights, Alucard can cast his ULTIMATE to increase Lifesteal and mark enemies and then switch between 1st Skill and 2nd Skill\nto follow Basic Attacks. Finally, use his ULTIMATE again\nfor reaping kills."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Gatotkaca",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Xavier",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Crowd Control",
+    "Regen"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2681,
+    "hpRegen": 8,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 115,
+    "physicalDefense": 23,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 12,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -187,7 +187,9 @@
       "synergyWith": [
         "Faramis",
         "Marcel",
-        "Masha"
+        "Masha",
+        "Luo Yi",
+        "Ixia"
       ]
     }
   },
@@ -239,18 +241,29 @@
     "synergyHeroes": [
       {
         "name": "Faramis",
-        "synergy": 5
+        "synergy": 2.9
       },
       {
         "name": "Marcel",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Masha",
-        "synergy": 5
+        "synergy": 1.1
+      },
+      {
+        "name": "Luo Yi",
+        "synergy": 1.1
+      },
+      {
+        "name": "Ixia",
+        "synergy": 1
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Ruby is strong against Fighter heroes with high burst damage. She can easily survive their burst with her excellent Regen and Lifesteal abilities. Such as Aldous and Guinevere.",
+    "weakAgainstReason": "Ruby is countered by Marksman heroes with good Mobility. Because they can easily dodge her 2nd and Ultimate skills. Like Wanwan and Irithel.",
+    "synergyReason": "Ruby works best with heroes who can deal high AOE burst damage. Their skills can deal more damage to enemies who are stunned and pulled by her 2nd and Ultimate skills. Such as Pharsa and Kadita."
   },
   "mechanicCategory": [
     "Standard"
@@ -299,11 +312,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 63,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 80,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Queen's Wings",
+      "Dominance Ice"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Ruby is playable early with sustain, but her real value ramps when teamfights start and she can chain pulls/stuns and front-line with stacked defenses from her passive. Late game she remains impactful as an engage/peel tank-fighter, though her damage falls off relative to carries and she relies on landing CC."
   },
   "proBuilds": [
     {
@@ -348,5 +371,38 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3"
+      ],
+      "description": "In teamfights, use Ruby's 1st Skill to slow the enemy at a distance, and close in with her Passive dash. Then use her 2nd Skill to stun the enemies in range and use her Ultimate to pull back those who try to escape."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 3",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, Use Ruby's 1st Skill to slow down the enemy, and the dash from her Passive to get closer. Then cast Ruby's Ultimate to pull the enemy into melee range and her 2nd Skill to keep them stunned. Finally, spam her Basic Attacks to finish them off."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Pharsa",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Kadita",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

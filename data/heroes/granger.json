@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Burst",
+    "Finisher"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2480,
+    "hpRegen": 6.8,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 124,
+    "physicalDefense": 18,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -187,7 +187,9 @@
       "synergyWith": [
         "Baxia",
         "Floryn",
-        "Harith"
+        "Harith",
+        "Popol and Kupa",
+        "Yve"
       ]
     }
   },
@@ -239,18 +241,29 @@
     "synergyHeroes": [
       {
         "name": "Baxia",
-        "synergy": 5
+        "synergy": 4.7
       },
       {
         "name": "Floryn",
-        "synergy": 5
+        "synergy": 3.9
       },
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 3.8
+      },
+      {
+        "name": "Popol and Kupa",
+        "synergy": 2.9
+      },
+      {
+        "name": "Yve",
+        "synergy": 2.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Granger counters squishy heroes who lack mobility, such as Chang'e and Cecilion, who have a hard time dodging his 1st Skill and are vulnerable to the high damage of his Ultimate.",
+    "weakAgainstReason": "Granger is countered by heroes with strong single target killing power. Despite having good mobility, Granger lacks other defensive measures. Heroes like Saber and Hayabusa can quickly get the jump on Granger and finish him off.",
+    "synergyReason": "Granger pairs well with heroes that have strong CC abilities, such as Franco and Kaja, who can hold enemies in place for Granger's entire 1st Skill."
   },
   "mechanicCategory": [
     "Standard"
@@ -296,11 +309,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 56,
-    "mid": 59,
-    "late": 48,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 72,
+    "mid": 76,
+    "late": 62,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 10"
+    ],
+    "coreItems": [
+      "Hunter Strike",
+      "Blade of Despair",
+      "Malefic Roar"
+    ],
+    "dominantPhase": null,
+    "description": "Granger is strong early-mid due to high burst from Rhapsody and long-range finishing/poke with Death Sonata, enabling skirmish wins and tower pressure. He tends to fall off in late game versus traditional DPS marksmen because his damage is more burst-window/skill-based and less sustained in extended front-to-back fights."
   },
   "proBuilds": [
     {
@@ -345,5 +368,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Granger's Ultimate to poke from a safe distance and continue the attack with his 1st Skill. When the 1st Skill ends, use his Ultimate again for more damage and to reposition. If enemies get close, use his 2nd Skill to create distance and continue dealing damage with his 1st Skill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Granger's 1st Skill to poke the enemy. When his energy gets low, use his 2nd Skill to replenish it and continue to poke with his 1st Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Franco",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Kaja",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

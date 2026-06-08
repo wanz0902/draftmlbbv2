@@ -7,7 +7,7 @@
   ],
   "specialty": [
     "Burst",
-    "Poke"
+    "Crowd Control"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 6,
+    "hp": 2430,
+    "hpRegen": 6.8,
     "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 115,
-    "physicalDefense": 17,
+    "manaRegen": 3.8,
+    "physicalAttack": 97,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -258,7 +258,9 @@
       "synergyWith": [
         "Argus",
         "Popol and Kupa",
-        "Harley"
+        "Harley",
+        "Marcel",
+        "Hilda"
       ]
     }
   },
@@ -310,18 +312,29 @@
     "synergyHeroes": [
       {
         "name": "Argus",
-        "synergy": 5
+        "synergy": 1.5
       },
       {
         "name": "Popol and Kupa",
-        "synergy": 5
+        "synergy": 1.3
       },
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 1.3
+      },
+      {
+        "name": "Marcel",
+        "synergy": 1.3
+      },
+      {
+        "name": "Hilda",
+        "synergy": 1.2
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Vale counters slow Fighters like Terizla and Hilda because he can chip away their HP with his skills from afar while using his high Movement Speed to dodge their skills.",
+    "weakAgainstReason": "Vale is countered by agile Assassins that can become untargetable like Hayabusa and Ling, as it will be difficult to catch them with his CC while they can eliminate Vale easily with their high damage.",
+    "synergyReason": "Vale works well with frontline Tanks like Lolita and Belerick who can protect him while he continuously pokes the enemy."
   },
   "mechanicCategory": [
     "Standard"
@@ -366,11 +379,21 @@
     "difficulty": 20
   },
   "powerCurve": {
-    "early": 35,
-    "mid": 61,
-    "late": 56,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 45,
+    "mid": 78,
+    "late": 72,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Divine Glaive"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Vale’s early is mostly poke/clear with limited kill threat unless enemies misposition, but he spikes hard once Ultimate and skill upgrades enable reliable CC-to-burst combos. Mid-game rotations and teamfights favor his AoE pull + explosion, while late game remains strong but more execution/positioning dependent versus tanky fronts and divers."
   },
   "proBuilds": [
     {
@@ -415,5 +438,37 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Vale's 2nd Skill to knock the opponent airborne, then follow up with his 1st Skill for damage."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, use Vale's 2nd Skill to knock a line of enemies airborne, then follow up with his Ultimate and 1st Skill for a devastating combo."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Lolita",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Belerick",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

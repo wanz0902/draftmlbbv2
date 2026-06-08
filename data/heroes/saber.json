@@ -7,7 +7,7 @@
   ],
   "specialty": [
     "Charge",
-    "Burst"
+    "Finisher"
   ],
   "lane": "Jungle",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 118,
-    "physicalDefense": 20,
+    "hp": 2459,
+    "hpRegen": 7.2,
+    "mana": 468,
+    "manaRegen": 3.6,
+    "physicalAttack": 125,
+    "physicalDefense": 19,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.08",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -266,7 +266,9 @@
       "synergyWith": [
         "Lolita",
         "Marcel",
-        "Belerick"
+        "Belerick",
+        "Minotaur",
+        "Khufra"
       ]
     }
   },
@@ -318,18 +320,29 @@
     "synergyHeroes": [
       {
         "name": "Lolita",
-        "synergy": 5
+        "synergy": 3.4
       },
       {
         "name": "Marcel",
-        "synergy": 5
+        "synergy": 2.8
       },
       {
         "name": "Belerick",
-        "synergy": 5
+        "synergy": 2.7
+      },
+      {
+        "name": "Minotaur",
+        "synergy": 2.5
+      },
+      {
+        "name": "Khufra",
+        "synergy": 2.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Saber's deadly combo makes him strong against squishy heroes, such as Layla and Eudora.",
+    "weakAgainstReason": "Saber is countered by Support heroes with Survivability buffs, like Estes and Faramis.",
+    "synergyReason": "Saber works well with high-damage heroes who can help him burst down enemy heroes in teamfights, such as Kadita and Cyclops."
   },
   "mechanicCategory": [
     "Standard"
@@ -376,11 +389,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 59,
-    "mid": 55,
-    "late": 35,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 75,
+    "mid": 70,
+    "late": 45,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 7",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Hunter Strike",
+      "Blade of the Heptaseas",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "Saber spikes hard as soon as Triple Sweep unlocks, enabling reliable pick-offs and snowballing with early physical-pen items. As the game goes late, targets get defensive items and grouping/peel increases, making his single-target burst less consistent and riskier."
   },
   "proBuilds": [
     {
@@ -424,5 +447,38 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "Saber can use his 1st Skill to poke and weaken the enemy, follow with his 2nd Skill to close in, then use his Ultimate to finish them off."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "Saber can use his 1st Skill to poke and weaken the enemy, follow with his 2nd Skill to close in, then use his Ultimate to finish them off."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Kadita",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Cyclops",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Cadia Riverlands",
+  "race": "Cyborg"
 }

@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Control",
+    "Burst"
   ],
   "lane": "Mid",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2440,
-    "hpRegen": 7,
+    "hp": 2451,
+    "hpRegen": 6.8,
     "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 112,
-    "physicalDefense": 18,
+    "manaRegen": 3.8,
+    "physicalAttack": 101,
+    "physicalDefense": 17,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -288,7 +288,9 @@
       "synergyWith": [
         "Mathilda",
         "Rafaela",
-        "Harley"
+        "Harley",
+        "Novaria",
+        "Aulus"
       ]
     }
   },
@@ -340,18 +342,29 @@
     "synergyHeroes": [
       {
         "name": "Mathilda",
-        "synergy": 5
+        "synergy": 1.5
       },
       {
         "name": "Rafaela",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 1.4
+      },
+      {
+        "name": "Novaria",
+        "synergy": 1.3
+      },
+      {
+        "name": "Aulus",
+        "synergy": 1.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Eudora possesses strong targeted CC and burst capabilities, allowing her to keep squishy heroes like Moskov and Obsidia in check.",
+    "weakAgainstReason": "Eudora lacks self-preservation and struggles against dive heroes or Assassins who can negate targeted CC, such as Hayabusa and Kadita.",
+    "synergyReason": "Eudora's skills can deal massive AOE damage, so pairing her with heroes who can group enemies, like Diggie and Tigreal, will make it easier to maximize her damage."
   },
   "mechanicCategory": [
     "Standard"
@@ -398,11 +411,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 51,
-    "mid": 63,
-    "late": 47,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 65,
+    "mid": 80,
+    "late": 60,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Arcane Boots",
+      "Genius Wand",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Eudora becomes lethal once she has reliable stun + burst rotations, peaking around mid-game when picks decide Turtle fights. Late game her damage is still high but becomes less consistent versus defensive items and tighter positioning/vision."
   },
   "proBuilds": [
     {
@@ -447,5 +470,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, use Eudora's 1st Skill to apply Superconductor to enemy heroes, then cast 2nd Skill on the right target for an AOE stun, and follow up with her Ultimate for a massive burst to the stunned heroes. Finally, use her 1st Skill again to finish off the enemy."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "During the laning phase, start with Eudora's 2nd Skill to stun the enemy hero and apply Superconductor, then follow with her Ultimate, and center it over the enemy for massive damage. Finish with her 1st Skill to link with the enemy and finish them off."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Diggie",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Northern Vale",
+  "race": "Light Elf"
 }

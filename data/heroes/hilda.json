@@ -8,7 +8,7 @@
   ],
   "specialty": [
     "Damage",
-    "Crowd Control"
+    "Regen"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -22,14 +22,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2780,
+    "hpRegen": 9,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 119,
+    "physicalDefense": 24,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 12,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -194,7 +194,9 @@
       "synergyWith": [
         "Hanzo",
         "Saber",
-        "Silvanna"
+        "Silvanna",
+        "Bane",
+        "Argus"
       ]
     }
   },
@@ -246,18 +248,29 @@
     "synergyHeroes": [
       {
         "name": "Hanzo",
-        "synergy": 5
+        "synergy": 2.2
       },
       {
         "name": "Saber",
-        "synergy": 5
+        "synergy": 2
       },
       {
         "name": "Silvanna",
-        "synergy": 5
+        "synergy": 1.8
+      },
+      {
+        "name": "Bane",
+        "synergy": 1.7
+      },
+      {
+        "name": "Argus",
+        "synergy": 1.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Hilda excels in prolonged battles. She works well against heroes with lower burst damage. Such as Zilong and Layla.",
+    "weakAgainstReason": "Hilda is countered by heroes with high sustain. Such as Thamuz and Uranus. This is because they can utilize their healing abilities to prevent being executed.",
+    "synergyReason": "Hilda works well with tanky heroes, which can create room for her to dish out more damage. Such as Atlas and Tigreal."
   },
   "mechanicCategory": [
     "Standard"
@@ -310,11 +323,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 66,
-    "mid": 56,
-    "late": 41,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 85,
+    "mid": 72,
+    "late": 52,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Blade of Despair",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "Hilda is dominant early because bush shield/regen lets her win trades and invade, while S2’s multi-cast gives strong skirmish pressure. She peaks further at Lv4 with her execute-style ultimate (especially at max Mark stacks), but her impact falls late as enemies get tankier and backliners have better peel/anti-dive."
   },
   "proBuilds": [
     {
@@ -358,5 +381,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, Hilda should use her Ultimate to dive the back-row heroes, then use her 2nd Skill to deal damage and chase the enemy down with her 1st Skill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Skill 3"
+      ],
+      "description": "In the laning phase, Hilda can use her 1st Skill to close in on a target enemy, and slow them with her Enhanced Basic Attack. She can then follow up with her 2nd Skill to chip away at her target and finish with her Ultimate."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Rafaela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Franco",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Northern Vale",
+  "race": "Human"
 }

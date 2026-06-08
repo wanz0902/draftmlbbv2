@@ -6,7 +6,7 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
+    "Poke",
     "Burst"
   ],
   "lane": "Jungle",
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2594,
-    "hpRegen": 7,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 108,
-    "physicalDefense": 17,
+    "hp": 2520,
+    "hpRegen": 7.4,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 128,
+    "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.08",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -365,7 +365,9 @@
       "synergyWith": [
         "Hilda",
         "Gloo",
-        "Martis"
+        "Martis",
+        "Aldous",
+        "Lunox"
       ]
     }
   },
@@ -417,18 +419,29 @@
     "synergyHeroes": [
       {
         "name": "Hilda",
-        "synergy": 5
+        "synergy": 2.2
       },
       {
         "name": "Gloo",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Martis",
-        "synergy": 5
+        "synergy": 1.6
+      },
+      {
+        "name": "Aldous",
+        "synergy": 1.5
+      },
+      {
+        "name": "Lunox",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Hanzo's Ultimate enables him to poke or dive with relative safety, making him a serious threat to squishy heroes without mobility, like Layla, Ixia, and Zhuxin, while also disrupting the enemy in teamfights.",
+    "weakAgainstReason": "Hanzo fares less favorably against heroes with lots of mobility, such as Fanny, Lancelot, and Arlott, since it's difficult to build stacks on them, thus limiting Hanzo's damage.",
+    "synergyReason": "Hanzo has high burst potential but needs time to stack his Passive, so he works best with heroes who can keep the enemy CC'd, like Aurora, Belerick, and Tigreal."
   },
   "mechanicCategory": [
     "Transform",
@@ -477,11 +490,21 @@
     "difficulty": 70
   },
   "powerCurve": {
-    "early": 50,
-    "mid": 59,
-    "late": 41,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 64,
+    "mid": 76,
+    "late": 52,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Hunter Strike",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Level 4 (Kinjutsu: Pinnacle Ninja) is a major spike because he can safely pressure lanes and objectives while his body stays hidden, snowballing picks and map control. He tends to drop off late as enemies coordinate to find/force his body position and teamfights become tighter, reducing his ability to freely shred backliners."
   },
   "proBuilds": [
     {
@@ -525,5 +548,43 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 3",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "Hanzo should activate his Ultimate from a safe position and engage as Hanekage. Use his 2nd Skill to dash in and knock enemies Airborne, then use his Black Mist and Basic Attacks to quickly stack his Passive and use his 1st Skill for maximum damage."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 3",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "When ganking, Hanzo can use his 2nd Skill to close the distance, then stack his Passive with Basic Attacks and unleash his 1st Skill at max stacks for hefty damage. In teamfights, Hanzo should activate his Ultimate from a safe position and engage as Hanekage. Use his 2nd Skill to dash in and knock enemies Airborne, then use his Black Mist and Basic Attacks to quickly stack his Passive and use his 1st Skill for maximum damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Aurora",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Belerick",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Cadia Riverlands",
+  "race": "Human"
 }

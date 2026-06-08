@@ -7,7 +7,7 @@
   ],
   "specialty": [
     "Damage",
-    "Crowd Control"
+    "Regen"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2651,
+    "hpRegen": 7.8,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 120,
+    "physicalDefense": 22,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -187,7 +187,9 @@
       "synergyWith": [
         "Saber",
         "Miya",
-        "Faramis"
+        "Faramis",
+        "Moskov",
+        "Edith"
       ]
     }
   },
@@ -239,18 +241,29 @@
     "synergyHeroes": [
       {
         "name": "Saber",
-        "synergy": 5
+        "synergy": 2.3
       },
       {
         "name": "Miya",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Faramis",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Moskov",
+        "synergy": 1.5
+      },
+      {
+        "name": "Edith",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Khaleed counters heroes who lack mobility like Cyclops and Xavier since they will have difficult time avoiding his combo.",
+    "weakAgainstReason": "Khaleed is countered by heroes who have the ability to knock him back or airborne to interrupt his 2nd Skill, such as X.Borg and Chou.",
+    "synergyReason": "Because Khaleed can deal a lot of AOE damage, he works well with heroes like Roger and Karina who excel at finishing off multiple low HP targets."
   },
   "mechanicCategory": [
     "Standard"
@@ -299,11 +312,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 63,
-    "mid": 55,
-    "late": 43,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 80,
+    "mid": 70,
+    "late": 55,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Hunter Strike",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "He’s oppressive early due to strong base damage, Desert Power-enhanced trades, and sustain from Quicksand Guard that lets him win short skirmishes. Mid game remains strong with Ultimate engage and rotation pressure, but late game impact drops as teams group and his damage/survivability don’t scale as hard as true late-game carries."
   },
   "proBuilds": [
     {
@@ -347,5 +370,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, move around to fill up Khaleed's Desert Power first, then hit the opponent with the enhanced Basic Attack to slow them and follow up with 3 hits from his 1st Skill. This should fill up his Desert Power again, allowing for another enhanced Basic Attack."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Passive",
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In teamfights, use Khaleed's Ultimate to initiate, then hit a target with his enhanced Basic Attack and continue the attack with his 1st Skill. Once Desert Power is full again, use another Basic Attack. Then use Khaleed's 2nd Skill to recover HP and reduce incoming damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Roger",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Karina",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

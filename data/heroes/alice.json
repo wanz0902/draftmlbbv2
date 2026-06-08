@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Charge",
+    "Regen"
   ],
   "lane": "Mid",
   "lanes": [
@@ -25,12 +25,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2452,
-    "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 114,
-    "physicalDefense": 25,
+    "hp": 2521,
+    "hpRegen": 7.8,
+    "mana": 490,
+    "manaRegen": 3.8,
+    "physicalAttack": 101,
+    "physicalDefense": 21,
     "magicPower": 0,
     "magicDefense": 15,
     "attackSpeed": "1",
@@ -230,7 +230,9 @@
       "synergyWith": [
         "Valentina",
         "Angela",
-        "Faramis"
+        "Faramis",
+        "Masha",
+        "Diggie"
       ]
     }
   },
@@ -282,18 +284,29 @@
     "synergyHeroes": [
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 2
       },
       {
         "name": "Angela",
-        "synergy": 5
+        "synergy": 1.9
       },
       {
         "name": "Faramis",
-        "synergy": 5
+        "synergy": 1.9
+      },
+      {
+        "name": "Masha",
+        "synergy": 1.6
+      },
+      {
+        "name": "Diggie",
+        "synergy": 1.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "With her great sustainability in combat plus her mobility and CC, Alice counters heroes that lack burst and can't escape from melee enemies, such as Cecilion and Chang'e.",
+    "weakAgainstReason": "Alice is countered by heroes with Execute or Healing Reduction who can impede her from healing herself during the Ultimate. Heroes like Baxia or Martis can reduce her healing or kill her before she can heal.",
+    "synergyReason": "To compensate for Alice's weaknesses in the early game and form a balanced team, pair her with strong early game heroes, like Balmond or Dyrroth."
   },
   "mechanicCategory": [
     "Standard"
@@ -342,11 +355,21 @@
     "difficulty": 70
   },
   "powerCurve": {
-    "early": 38,
-    "mid": 56,
-    "late": 64,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 48,
+    "mid": 72,
+    "late": 82,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Blood Wings"
+    ],
+    "dominantPhase": null,
+    "description": "Alice starts average: she can trade with blink + slow but is limited by cooldown windows and item dependence for durability/damage. Mid game she comes online with core mana/HP scaling items enabling longer fights, and late game she becomes very hard to kill while sustaining through clumped teamfights with %HP-based damage and regen."
   },
   "proBuilds": [
     {
@@ -390,5 +413,40 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "Use Alice's 1st Skill to poke the opponent and recast it to blink on top of them, then follow up with her 2nd Skill to CC the enemies and finish with her Ultimate to continue the attack."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "Use Alice's 1st Skill to poke the opponent and recast it to blink on top of them, then follow up with her 2nd Skill to CC the enemies and finish with her Ultimate to continue the attack."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Balmond",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Dyrroth",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Abyss",
+  "race": "Blood Demon, formerly Human"
 }

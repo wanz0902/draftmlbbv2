@@ -7,8 +7,8 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Chase",
+    "Damage"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -22,12 +22,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2610,
+    "hpRegen": 7.8,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 126,
+    "physicalDefense": 22,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -194,7 +194,9 @@
       "synergyWith": [
         "Marcel",
         "Aulus",
-        "Baxia"
+        "Baxia",
+        "Bane",
+        "Popol and Kupa"
       ]
     }
   },
@@ -246,18 +248,29 @@
     "synergyHeroes": [
       {
         "name": "Marcel",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Aulus",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Baxia",
-        "synergy": 5
+        "synergy": 1.3
+      },
+      {
+        "name": "Bane",
+        "synergy": 1.3
+      },
+      {
+        "name": "Popol and Kupa",
+        "synergy": 1.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Paquito is a hero with dash and high burst damage, making him strong against squishy heroes without defensive abilities, such as Gord and Layla.",
+    "weakAgainstReason": "Paquito is an agile hero, but he is also kind of squishy, which makes him weak against heroes with strong CC abilities. Such as Franco and Kaja.",
+    "synergyReason": "Paquito works best with support heroes who can buff him, like Angela and Rafaela."
   },
   "mechanicCategory": [
     "Enhanced Skill",
@@ -309,11 +322,21 @@
     "difficulty": 80
   },
   "powerCurve": {
-    "early": 63,
-    "mid": 59,
-    "late": 43,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 80,
+    "mid": 75,
+    "late": 55,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Blade of Despair",
+      "Hunter Strike",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "He’s a lane bully with strong low-level trading due to shields, mobility, and Champ Stance burst cycles, and he can dominate early skirmishes. He tapers off later as fights become more grouped and tanky, making it harder to one-combo priority targets without getting peeled or out-scaled by carries."
   },
   "proBuilds": [
     {
@@ -358,5 +381,40 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Skill 1"
+      ],
+      "description": "In teamfights, Paquito can use his 2nd Skill to approach the enemy team, then his 1st Skill to deal damage. He should follow up with his Ultimate to knock the enemy back and enter the Champ Stance. He can finish with his enhanced 2nd Skill to deal heavy damage to the enemies."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, Paquito can use his 1st Skill to gain a stack for the Champ Stance before using his 2nd Skill to close in on the enemy hero. He can use his 1st Skill again to deal damage and enter the Champ Stance. He should then hit the enemy hero with the enhanced 2nd Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Rafaela",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "The Barren Lands",
+  "race": "Human"
 }

@@ -6,8 +6,8 @@
     "Support"
   ],
   "specialty": [
-    "Guard",
-    "Regen"
+    "Poke",
+    "Guard"
   ],
   "lane": "Roam",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2480,
+    "hpRegen": 7.4,
+    "mana": 500,
+    "manaRegen": 3.8,
+    "physicalAttack": 96,
+    "physicalDefense": 17,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -161,7 +161,9 @@
       "synergyWith": [
         "Carmilla",
         "Chip",
-        "Granger"
+        "Granger",
+        "Lukas",
+        "Natalia"
       ]
     }
   },
@@ -213,18 +215,29 @@
     "synergyHeroes": [
       {
         "name": "Carmilla",
-        "synergy": 5
+        "synergy": 6.2
       },
       {
         "name": "Chip",
-        "synergy": 5
+        "synergy": 4.5
       },
       {
         "name": "Granger",
-        "synergy": 5
+        "synergy": 3.9
+      },
+      {
+        "name": "Lukas",
+        "synergy": 3.5
+      },
+      {
+        "name": "Natalia",
+        "synergy": 2.8
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Floryn excels at sustained healing and counters Tanks with low damage output, such as Uranus and Lolita.",
+    "weakAgainstReason": "Floryn is countered by high mobility and burst damage Assassins, like Karina and Saber.",
+    "synergyReason": "Floryn works well with tanky Fighters, such as Terizla and Thamuz, because they are easier to keep alive with heals and can peel enemies off of her."
   },
   "mechanicCategory": [
     "Standard"
@@ -273,11 +286,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 59,
-    "late": 59,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 75,
+    "late": 75,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Enchanted Talisman",
+      "Dominance Ice",
+      "Oracle"
+    ],
+    "dominantPhase": null,
+    "description": "Floryn provides steady value throughout via poke + heals, then spikes in impact once her global ultimate enables cross-map saves and stronger mid-game rotations. Late game she stays highly relevant because sustained healing/shields and anti-heal itemization/support auras decide extended Lord fights."
   },
   "proBuilds": [
     {
@@ -319,5 +342,37 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In teamfights, use Floryn's 2nd Skill to CC enemies, and her 1st Skill for damage and healing. When a teammate is in bad shape, use Floryn's Ultimate to save them."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Floryn's 2nd Skill to stun enemies, then follow up with her 1st Skill for damage and healing."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Terizla",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Thamuz",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Agelta Drylands",
+  "race": "Anthropomorphic plant"
 }

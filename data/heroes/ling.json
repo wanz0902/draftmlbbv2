@@ -6,7 +6,7 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
+    "Chase",
     "Burst"
   ],
   "lane": "Jungle",
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2369,
-    "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 125,
+    "hp": 2450,
+    "hpRegen": 7.2,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 132,
     "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.01",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -205,7 +205,9 @@
       "synergyWith": [
         "Nolan",
         "Barats",
-        "Dyrroth"
+        "Dyrroth",
+        "Pharsa",
+        "Joy"
       ]
     }
   },
@@ -257,18 +259,29 @@
     "synergyHeroes": [
       {
         "name": "Nolan",
-        "synergy": 5
+        "synergy": 3.2
       },
       {
         "name": "Barats",
-        "synergy": 5
+        "synergy": 2.8
       },
       {
         "name": "Dyrroth",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Pharsa",
+        "synergy": 1.5
+      },
+      {
+        "name": "Joy",
+        "synergy": 1.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Ling's excellent pursuit abilities and high burst damage make him strong against squishy heroes, like Layla and Hanabi.",
+    "weakAgainstReason": "Ling is countered by heroes with strong single-target CC and high burst damage, as they can easily control Ling and burst him down. Such as Eudora and Jawhead.",
+    "synergyReason": "Ling works best with support heroes with CC abilities, that make Ling more flexible in different situations. Such as Angela and Khufra."
   },
   "mechanicCategory": [
     "Standard"
@@ -315,11 +328,21 @@
     "difficulty": 70
   },
   "powerCurve": {
-    "early": 51,
-    "mid": 63,
-    "late": 53,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 65,
+    "mid": 80,
+    "late": 68,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Berserker's Fury",
+      "Endless Battle",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Ling’s early is already dangerous due to wall mobility and fast access to backliners, but he’s still item-reliant to consistently one-combo targets. His biggest spike is mid game with ultimate unlock for invulnerability/CC setup plus first damage items, enabling repeated picks and objective pressure; late game he can be less reliable into grouped teams with peel/lockdown and defensive itemization."
   },
   "proBuilds": [
     {
@@ -363,5 +386,53 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive",
+        "Skill 3",
+        "Skill 2"
+      ],
+      "description": "In teamfights, Ling should move onto the wall with his 1st Skill, then use his 2nd Skill to land on enemy back-row heroes. Once landed, Ling should attack the target heroes with his Basic Attacks, and then cast his Ultimate to avoid incoming damage. He should then follow his targets when in the air to deal damage and knock them airborne. He can then dash with his 2nd Skill between the Tempest Blades to reset its cooldown and restore Lightness Points."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, Ling should use his 1st Skill to leap onto the wall, and strike down with his 2nd Skill to deal damage to the target enemy and slow them. Follow up with Ling's Basic Attacks and his 2nd Skill to chase down the enemy hero."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Baxia",
+      "relationship": "ALLY"
+    },
+    {
+      "name": "Wanwan",
+      "relationship": "ALLY"
+    },
+    {
+      "name": "Zilong",
+      "relationship": "FELLOW DISCIPLE"
+    },
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Khufra",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Cadia Riverlands",
+  "race": "Human"
 }

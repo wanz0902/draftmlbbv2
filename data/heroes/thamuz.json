@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Chase",
+    "Damage"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2690,
+    "hpRegen": 8.2,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 121,
+    "physicalDefense": 23,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -187,7 +187,9 @@
       "synergyWith": [
         "Selena",
         "Luo Yi",
-        "Atlas"
+        "Atlas",
+        "Mathilda",
+        "Gloo"
       ]
     }
   },
@@ -239,18 +241,29 @@
     "synergyHeroes": [
       {
         "name": "Selena",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Luo Yi",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Atlas",
-        "synergy": 5
+        "synergy": 1.4
+      },
+      {
+        "name": "Mathilda",
+        "synergy": 1.3
+      },
+      {
+        "name": "Gloo",
+        "synergy": 1.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Thamuz is good against other sustained damage Fighters like Zilong and Sun because he has the top notch laning power.",
+    "weakAgainstReason": "Thamuz is countered by agile Marksmen, such as Karrie and Irithel, since he lacks CC and relies on Basic Attacks, making him an easy target to kite.",
+    "synergyReason": "Thamuz can play to his strength when working with Supports who provide Movement Speed or CC, such as Angela and Rafaela, because they enable him to stay on his targets."
   },
   "mechanicCategory": [
     "Standard"
@@ -299,11 +312,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 56,
-    "mid": 63,
-    "late": 52,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 72,
+    "mid": 80,
+    "late": 67,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Corrosion Scythe",
+      "Queen's Wings"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Thamuz has strong early trading from Molten Scythes + sustained true damage procs, and spikes hard at level 4 with Cauterant Inferno for massive HP swing and attack speed. Mid game he excels in extended fights and front-to-back brawls; late game he can still duel well but can be controlled/kited more in coordinated teamfights."
   },
   "proBuilds": [
     {
@@ -347,5 +370,42 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Thamuz's 1st Skill to speed up and adjust positioning, then jump into the crowd using his 2nd Skill. Activate his Ultimate followed by a Basic Attack and his 1st Skill, and retrieve the Scythes before continuing with Basic Attacks."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Thamuz's 1st Skill, then leap to enemy using his 2nd Skill, causing his Scythes to return and resetting the CD of his 1st Skill. Follow up with a Basic Attack and then his 1st Skill, and tap the skill again to retrieve the Scythes and end with Basic Attacks."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Rafaela",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Abyss",
+  "race": "Fire Demon"
 }

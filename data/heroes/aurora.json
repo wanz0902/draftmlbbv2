@@ -6,7 +6,7 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
+    "Crowd Control",
     "Poke"
   ],
   "lane": "Mid",
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 6,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 17,
+    "hp": 2431,
+    "hpRegen": 6.6,
+    "mana": 510,
+    "manaRegen": 3.8,
+    "physicalAttack": 98,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -295,7 +295,9 @@
       "synergyWith": [
         "Harley",
         "Aulus",
-        "Zhask"
+        "Zhask",
+        "Yve",
+        "Valentina"
       ]
     }
   },
@@ -343,18 +345,29 @@
     "synergyHeroes": [
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 1.8
       },
       {
         "name": "Aulus",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Zhask",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Yve",
+        "synergy": 1.5
+      },
+      {
+        "name": "Valentina",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Aurora counters heroes who like to charge in, such as Leomord, Thamuz, and Terizla, since her skills can stop them dead in their tracks.",
+    "weakAgainstReason": "Because most of Aurora's skills have delayed effects, she is countered by high mobility heroes who can dodge them with ease, such as Ling, Kadita, and Guinevere.",
+    "synergyReason": "With her very powerful CC abilities, Aurora works well with heroes who deal high sustained damage, like Ixia, Freya, and Karrie."
   },
   "mechanicCategory": [
     "Standard"
@@ -401,11 +414,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 58,
-    "late": 61,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 74,
+    "late": 78,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 11"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Holy Crystal"
+    ],
+    "dominantPhase": null,
+    "description": "Aurora has respectable early lane control with S1 poke and S2 freeze setup, then spikes at level 4 when her ultimate gives reliable AoE burst + teamfight CC. She scales well into late because her damage and freeze value increase with Magic Power (longer freezes) and she can decide fights with one catch, though she remains position-dependent."
   },
   "proBuilds": [
     {
@@ -450,5 +473,41 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, first cast Aurora's Ultimate when the enemy is grouped, then use her 2nd Skill immediately to freeze them inside the Ultimate's AOE, and finish with her 1st Skill on the CC'ed targets for maximum damage."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Aurora's 2nd Skill to freeze the enemy, then follow up with her 1st Skill to ensure all the hits connect."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Ixia",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Freya",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Karrie",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Northern Vale",
+  "race": "Human"
 }

@@ -6,8 +6,8 @@
     "Support"
   ],
   "specialty": [
-    "Guard",
-    "Regen"
+    "Regen",
+    "Guard"
   ],
   "lane": "Roam",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2490,
+    "hpRegen": 7.4,
+    "mana": 510,
+    "manaRegen": 4,
+    "physicalAttack": 95,
+    "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -161,7 +161,9 @@
       "synergyWith": [
         "Kimmy",
         "Baxia",
-        "Barats"
+        "Barats",
+        "Saber",
+        "Edith"
       ]
     }
   },
@@ -213,18 +215,29 @@
     "synergyHeroes": [
       {
         "name": "Kimmy",
-        "synergy": 5
+        "synergy": 3.4
       },
       {
         "name": "Baxia",
-        "synergy": 5
+        "synergy": 3.3
       },
       {
         "name": "Barats",
-        "synergy": 5
+        "synergy": 3
+      },
+      {
+        "name": "Saber",
+        "synergy": 2.5
+      },
+      {
+        "name": "Edith",
+        "synergy": 2.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Estes counters heroes with no burst damage, he can easily heal through minor damages from heroes like Faramis and Alice.",
+    "weakAgainstReason": "Estes is countered by heroes with high burst damage. Heroes like Saber and Eudora can easily burst down Estes or the hero he protects in a few seconds.",
+    "synergyReason": "Estes works best with typical Marksman heroes, his healing will allow them to deal more damage. Heroes like Lesley and Hanabi are good examples here."
   },
   "mechanicCategory": [
     "Standard"
@@ -273,11 +286,21 @@
     "difficulty": 30
   },
   "powerCurve": {
-    "early": 35,
-    "mid": 55,
-    "late": 66,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 45,
+    "mid": 70,
+    "late": 85,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Flask of the Oasis",
+      "Enchanted Talisman",
+      "Oracle"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Early game impact is modest because he’s mana/CD-gated and offers mostly single-target sustain with limited disengage. Once ultimate is online and he has core mana/CD items, his teamfight value ramps sharply, and late game his AoE healing (plus Flask) can swing Lord fights if he’s not hard-engaged or chain-CCed."
   },
   "proBuilds": [
     {
@@ -321,5 +344,44 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "Estes can use his 2nd Skill to slow down and poke enemies, and heal allies with his 1st Skill."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "Estes should use his 2nd Skill to slow down the enemy team, then heal his teammates with his Ultimate and 1st Skill."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Blessing of Moon Goddess",
+      "Moonlight Immersion",
+      "Domain of Moon Goddess"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Lesley",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Hanabi",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Azrya Woodlands",
+  "race": "Moon Elf"
 }

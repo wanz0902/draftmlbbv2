@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Finisher",
+    "Burst"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2501,
+    "hpRegen": 6.8,
+    "mana": 445,
+    "manaRegen": 3.4,
+    "physicalAttack": 117,
+    "physicalDefense": 16,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -187,7 +187,9 @@
       "synergyWith": [
         "Harith",
         "Angela",
-        "Popol and Kupa"
+        "Popol and Kupa",
+        "Chip",
+        "Khufra"
       ]
     }
   },
@@ -239,18 +241,29 @@
     "synergyHeroes": [
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 3
       },
       {
         "name": "Angela",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Popol and Kupa",
-        "synergy": 5
+        "synergy": 1.1
+      },
+      {
+        "name": "Chip",
+        "synergy": 1.1
+      },
+      {
+        "name": "Khufra",
+        "synergy": 1
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Irithel counters heroes with a shorter Basic Attack range than her or ones that lack mobility and can be easily kited, such as Miya and Alpha.",
+    "weakAgainstReason": "Irithel is countered by heroes with strong CC capabilities or can restrict movement, such as Badang and Silvanna. Because Irithel does not have any Blink skills, her advantage vanishes once her mobility is restricted.",
+    "synergyReason": "Irithel works best with heroes that can slow or provide hard CC such as Valir and Hylos because they allow her more opportunities to deal damage."
   },
   "mechanicCategory": [
     "Standard"
@@ -296,11 +309,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 33,
-    "mid": 50,
-    "late": 67,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 42,
+    "mid": 64,
+    "late": 86,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Berserker's Fury",
+      "Windtalker",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Irithel is weaker early due to item reliance and limited DPS before crit/AS comes online, despite decent poke/slow. She spikes mid with ultimate uptime for AoE kiting, then becomes a dominant late-game teamfight marksman once crit items amplify her moving multishot damage and AoE splash."
   },
   "proBuilds": [
     {
@@ -345,5 +368,41 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In teamfights, use Irithel's Ultimate at the start to enhance her Basic Attacks, then use her 1st Skill to reduce the enemies' Defense and use her Basic Attacks to hit multiple enemies. Use her 2nd Skill to slow enemies and prevent them from getting close."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Passive",
+        "Skill 3",
+        "Passive"
+      ],
+      "description": "In the laning phase, Irithel should maintain distance from the enemy and use her 1st Skill to reduce their Defense. Kite the enemy with Basic Attacks to chip away their HP. If the enemy tries to close in, use her 2nd Skill to maintain distance and continue firing Basic Attacks. When the time is right, use her Ultimate to enhance her Basic Attacks and finish off the enemy."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Valir",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Hylos",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Azrya Woodlands",
+  "race": "Moon Elf"
 }

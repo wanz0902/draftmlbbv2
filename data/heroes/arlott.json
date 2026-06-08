@@ -24,12 +24,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2590,
+    "hpRegen": 7.6,
+    "mana": 452,
+    "manaRegen": 3.4,
+    "physicalAttack": 124,
+    "physicalDefense": 21,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -193,7 +193,9 @@
       "synergyWith": [
         "Chip",
         "Mathilda",
-        "Lukas"
+        "Lukas",
+        "Bane",
+        "Aulus"
       ]
     }
   },
@@ -249,14 +251,25 @@
       },
       {
         "name": "Mathilda",
-        "synergy": 5
+        "synergy": 2.1
       },
       {
         "name": "Lukas",
-        "synergy": 5
+        "synergy": 1.9
+      },
+      {
+        "name": "Bane",
+        "synergy": 1.9
+      },
+      {
+        "name": "Aulus",
+        "synergy": 1.9
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Arlott counters Fighters with relatively lower HP, such as Sun and Zilong. Arlott can deal high burst damage and has excellent chasing and control abilities, allowing him to quickly eliminate more fragile Fighters.",
+    "weakAgainstReason": "Arlott is countered by tanky Fighters that can withstand lots of damage, like Thamuz and Fredrinn, because he lacks the burst to take them out quickly and will lose in a prolonged battle.",
+    "synergyReason": "Arlott works well with Tanks who can initiate with CC, such as Gatotkaca and Atlas. Their CC will also mark enemies for Arlott, allowing him to use his 2nd Skill even more for tons of damage."
   },
   "mechanicCategory": [
     "Standard"
@@ -308,11 +321,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 56,
-    "mid": 64,
-    "late": 50,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 72,
+    "mid": 82,
+    "late": 64,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Hunter Strike",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Arlott is threatening early once he has S2 to start chaining dashes on Marked targets, but his biggest jump is mid-game when teamfights create many control effects for his passive and his ultimate enables multi-target displacement + Mark generation. Late game he’s still useful for CC/cleanup, but he becomes more punishable in extended fights versus full builds and hard peel."
   },
   "proBuilds": [
     {
@@ -357,5 +380,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 1",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In teamfights, start by hitting a marked enemy hero with Arlott's 2nd Skill, then get into position to unleash his Ultimate on the enemy team to CC and mark them. Use Arlott's 2nd Skill to cut through the enemy from target to target. When all marks have been used up, use his 1st Skill to CC and mark enemies again, and continue to chain his 2nd Skill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, after Arlott's Passive marks an enemy hero, use his 2nd Skill to dash through them and get a cooldown reset. Follow up with his 1st Skill to CC the enemy and mark them again, then hit them with his 2nd Skill while resetting its cooldown."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Gatotkaca",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "The Barren Lands",
+  "race": "Half-Demon, Half-Human"
 }

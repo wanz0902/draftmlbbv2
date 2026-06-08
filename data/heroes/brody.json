@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Burst",
+    "Finisher"
   ],
   "lane": "Gold",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2260,
+    "hp": 2520,
     "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 105,
-    "physicalDefense": 16,
+    "mana": 440,
+    "manaRegen": 3.4,
+    "physicalAttack": 122,
+    "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.2",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -256,7 +256,9 @@
       "synergyWith": [
         "Harith",
         "Popol and Kupa",
-        "Floryn"
+        "Floryn",
+        "Wanwan",
+        "Bruno"
       ]
     }
   },
@@ -308,18 +310,29 @@
     "synergyHeroes": [
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 3.2
       },
       {
         "name": "Popol and Kupa",
-        "synergy": 5
+        "synergy": 2.7
       },
       {
         "name": "Floryn",
-        "synergy": 5
+        "synergy": 2.2
+      },
+      {
+        "name": "Wanwan",
+        "synergy": 2
+      },
+      {
+        "name": "Bruno",
+        "synergy": 1.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Brody is strong against heroes with poor survivability in the early game and heroes without dash, because he can easily lock on them and attack beyond their reach. Like Aamon and Yin.",
+    "weakAgainstReason": "Brody is countered by heroes with CC immunity and multiple movement abilities, because they can quickly close in on Brody, giving him no chance to stack the Abyss Mark. Such as Martis and Wanwan.",
+    "synergyReason": "Brody works best with heroes who can perform lock-on attacks or heroes with area CC abilities, as they can give Brody more room to deal damage and farm better. Such as Hylos and Minsitthar."
   },
   "mechanicCategory": [
     "Standard"
@@ -365,11 +378,20 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 56,
-    "mid": 61,
-    "late": 53,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 72,
+    "mid": 78,
+    "late": 68,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Blade of Despair",
+      "Malefic Roar"
+    ],
+    "dominantPhase": null,
+    "description": "Brody is unusually threatening early for a marksman due to high base damage, strong poke, and a reliable stun-dash to win short trades. He peaks around mid game when his burst combo with ultimate can delete squishies, but in late game he’s slightly outscaled by true DPS marksmen since he’s more burst/poke than sustained."
   },
   "proBuilds": [
     {
@@ -414,5 +436,49 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 3",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "Brody should prioritize using his 1st Skill and Basic Attack, to apply Abyss Marks on enemy heroes outside of the battle area. He can then use his Ultimate and Basic Attack to deal heavy damage and his 2nd Skill and Basic Attack to chase down enemies on the run."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Skill 3"
+      ],
+      "description": "Brody can regularly use his 1st Skill and Basic Attacks to clear lanes and poke the enemy heroes. Once enemy heroes are low on HP, Brody can use his 2nd Skill to close in and stun them, then cast his Ultimate to try to finish them off."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Aulus",
+      "relationship": "ALLY"
+    },
+    {
+      "name": "Benedetta",
+      "relationship": "ALLY"
+    },
+    {
+      "name": "Hylos",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Minsitthar",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "The Barren Lands",
+  "race": "Human"
 }

@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
+    "hp": 2851,
+    "hpRegen": 8.8,
+    "mana": "0",
+    "manaRegen": "0",
     "physicalAttack": 110,
-    "physicalDefense": 20,
+    "physicalDefense": 28,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 16,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -191,7 +191,9 @@
       "synergyWith": [
         "Mathilda",
         "Aulus",
-        "Bane"
+        "Bane",
+        "Marcel",
+        "Aldous"
       ]
     }
   },
@@ -243,18 +245,29 @@
     "synergyHeroes": [
       {
         "name": "Mathilda",
-        "synergy": 5
+        "synergy": 3.6
       },
       {
         "name": "Aulus",
-        "synergy": 5
+        "synergy": 2
       },
       {
         "name": "Bane",
-        "synergy": 5
+        "synergy": 1.8
+      },
+      {
+        "name": "Marcel",
+        "synergy": 1.6
+      },
+      {
+        "name": "Aldous",
+        "synergy": 1.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Atlas counters squishy heroes without mobility skills like Vexana and Eudora because they cannot reliably escape his CC.",
+    "weakAgainstReason": "Atlas is countered by heroes who can knock him away, such as Valir and Moskov, since they can easily stop his 2nd Skill which Atlas relies on to land his other skills.",
+    "synergyReason": "Atlas works well with heroes with high AOE damage like Vale and Ixia because Atlas can pull enemies together and keep them CC'd."
   },
   "mechanicCategory": [
     "Standard"
@@ -305,11 +318,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 35,
-    "mid": 63,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 45,
+    "mid": 80,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Dominance Ice",
+      "Athena's Shield",
+      "Antique Cuirass"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Atlas is serviceable early with S2 engage + passive slows, but he truly comes online at level 4 where Fatal Links enables decisive picks around Turtle and first towers. He remains strong late because his ult stays game-changing, though his effectiveness depends on finding angles and surviving burst after engaging."
   },
   "proBuilds": [
     {
@@ -353,5 +376,36 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Atlas's 2nd Skill to eject and then get close to the enemy. Right before the Mecha Sentry reaches Atlas, use his 1st Skill to double the effect."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, use Atlas's 2nd Skill to approach the enemy and unleash his Ultimate when multiple enemies are in range. Aim while channeling and release to slam them down near your team, then continue to deal damage with his 1st Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Vale",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Ixia",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Northern Vale",
+  "race": "Abysmal Sea creature"
 }

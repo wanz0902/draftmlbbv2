@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Poke",
+    "Burst"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 6,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 115,
+    "hp": 2451,
+    "hpRegen": 7,
+    "mana": 490,
+    "manaRegen": 3.8,
+    "physicalAttack": 100,
     "physicalDefense": 17,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.08",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -256,7 +256,9 @@
       "synergyWith": [
         "Harley",
         "Roger",
-        "Dyrroth"
+        "Dyrroth",
+        "Cyclops",
+        "Alpha"
       ]
     }
   },
@@ -308,18 +310,29 @@
     "synergyHeroes": [
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Roger",
-        "synergy": 5
+        "synergy": 1.3
       },
       {
         "name": "Dyrroth",
-        "synergy": 5
+        "synergy": 1.3
+      },
+      {
+        "name": "Cyclops",
+        "synergy": 1.2
+      },
+      {
+        "name": "Alpha",
+        "synergy": 1.2
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Nana's Passive gives her great survivability, making her strong against heroes with deadly combos, like Eudora and Kadita.",
+    "weakAgainstReason": "Nana can be countered by heroes with strong chasing abilities, like Zilong, Natalia, because they can chase Nana through her Passive duration.",
+    "synergyReason": "Nana works best with heroes with CC skills, that will help her get the kills, such as Rafaela and Franco."
   },
   "mechanicCategory": [
     "Standard"
@@ -356,7 +369,7 @@
   "metaUpdatedAt": "2026-06-08",
   "winRate": 48.2,
   "pickRate": 1.6,
-  "banRate": 4.9,
+  "banRate": 4.7,
   "heroAttributes": {
     "durability": 50,
     "offense": 60,
@@ -364,11 +377,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 63,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 80,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Divine Glaive"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Her lane poke is decent early, but she becomes much more threatening once Molina Smooch + Molina Blitz enable reliable pick/peel for Turtle and mid-game skirmishes. Late game she still provides strong CC zoning, though her damage is less consistent than true scaling mages without perfect setups."
   },
   "proBuilds": [
     {
@@ -413,5 +436,37 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, Nana can use her 2nd Skill to slow the enemy first so she can hit and stun them with her Ultimate. She can then use her 1st Skill to finish off the low HP enemy."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, Nana can use her 2nd Skill to harass enemy heroes and her 1st Skill to damage both enemy Minions and heroes, allowing her to poke enemies while farming."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Rafaela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Franco",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Azrya Woodlands",
+  "race": "Leonin"
 }

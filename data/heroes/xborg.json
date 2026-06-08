@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Regen",
+    "Burst"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2680,
+    "hpRegen": 7.8,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 118,
+    "physicalDefense": 23,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -187,7 +187,9 @@
       "synergyWith": [
         "Sun",
         "Aldous",
-        "Cici"
+        "Cici",
+        "Natalia",
+        "Argus"
       ]
     }
   },
@@ -239,18 +241,29 @@
     "synergyHeroes": [
       {
         "name": "Sun",
-        "synergy": 5
+        "synergy": 2.2
       },
       {
         "name": "Aldous",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Cici",
-        "synergy": 5
+        "synergy": 1.7
+      },
+      {
+        "name": "Natalia",
+        "synergy": 1.5
+      },
+      {
+        "name": "Argus",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "X.Borg counters Fighters that lack mobility, such as Terizla and Aulus. His 1st Skill has a large range and can be cast while moving, making it easy for him to kite.",
+    "weakAgainstReason": "X.Borg is countered by Fighters with burst damage like Martis and Dyrroth. They can quickly burst down X.Borg when he is Armorless.",
+    "synergyReason": "X.Borg pairs well with heroes who excel in burst damage, such as Karina and Martis. X.Borg's AOE damage will leave enemies low enough for his teammate to finishing off."
   },
   "mechanicCategory": [
     "Standard"
@@ -299,11 +312,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 55,
-    "mid": 66,
-    "late": 51,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 70,
+    "mid": 85,
+    "late": 65,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Immortality",
+      "Brute Force Breastplate"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Strong early trading with Firaga Armor sustain and Overheat true-damage pattern, then spikes hard in mid-game when Last Insanity enables decisive Turtle/rotation fights. Late game he’s less dominant because coordinated burst and kiting can remove his armor and limit repeated engages."
   },
   "proBuilds": [
     {
@@ -347,5 +370,36 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 2",
+        "Skill 1"
+      ],
+      "description": "In teamfights, cast X.Borg's 1st Skill, then activate his Ultimate when enemies are clustered, and uses his 2nd Skill to pull them back to him."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, cast X.Borg's 1st Skill then use his 2nd Skill to pull enemies toward him."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Karina",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Martis",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Cyborg"
 }

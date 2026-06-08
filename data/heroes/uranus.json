@@ -6,8 +6,7 @@
     "Tank"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Regen"
   ],
   "lane": "Unknown",
   "lanes": [],
@@ -16,14 +15,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2860,
+    "hpRegen": 9.2,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 108,
+    "physicalDefense": 26,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 18,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -184,7 +183,9 @@
       "synergyWith": [
         "Angela",
         "Marcel",
-        "Diggie"
+        "Diggie",
+        "Helcurt",
+        "Natalia"
       ]
     }
   },
@@ -236,18 +237,29 @@
     "synergyHeroes": [
       {
         "name": "Angela",
-        "synergy": 5
+        "synergy": 4.1
       },
       {
         "name": "Marcel",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Diggie",
-        "synergy": 5
+        "synergy": 1.6
+      },
+      {
+        "name": "Helcurt",
+        "synergy": 1.5
+      },
+      {
+        "name": "Natalia",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Uranus has great sustainability, making him strong against heroes with low-damage abilities, such as Tigreal and Franco.",
+    "weakAgainstReason": "Uranus lacks Mobility and CC abilities which makes him an easy target for ranged heroes, such as Layla and Lesley.",
+    "synergyReason": "Uranus becomes much more powerful when working with high-damage heroes like Beatrix and Hanabi."
   },
   "mechanicCategory": [
     "Standard"
@@ -295,11 +307,21 @@
     "difficulty": 30
   },
   "powerCurve": {
-    "early": 53,
-    "mid": 59,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 68,
+    "mid": 76,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Oracle",
+      "Dominance Ice",
+      "Radiant Armor"
+    ],
+    "dominantPhase": null,
+    "description": "Uranus is hard to force out early once he starts stacking Radiance, and level 4 gives him a big tempo spike via slow cleanse + instant stacks for extended trades. He stays strong through mid and late as an unkillable space-maker, though his damage doesn’t scale as explosively as true late-game carries."
   },
   "proBuilds": [
     {
@@ -344,5 +366,38 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "Uranus can use his 1st Skill to poke the enemy, then use the 2nd Skill - 1st Skill combo when their HP is low to finish them off."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "Uranus should use his 2nd Skill to enter the fight, then his Ultimate to survive under enemy attacks while spamming his 1st Skill for sustained damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Beatrix",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Hanabi",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Vonetis Sea",
+  "race": "Aethereal"
 }

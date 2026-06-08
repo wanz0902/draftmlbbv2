@@ -24,14 +24,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2780,
+    "hpRegen": 8.4,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 116,
+    "physicalDefense": 25,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 14,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -168,7 +168,9 @@
       "synergyWith": [
         "Estes",
         "Natalia",
-        "Ling"
+        "Ling",
+        "Rafaela",
+        "Helcurt"
       ]
     }
   },
@@ -220,18 +222,29 @@
     "synergyHeroes": [
       {
         "name": "Estes",
-        "synergy": 5
+        "synergy": 3
       },
       {
         "name": "Natalia",
-        "synergy": 5
+        "synergy": 2.8
       },
       {
         "name": "Ling",
-        "synergy": 5
+        "synergy": 2.8
+      },
+      {
+        "name": "Rafaela",
+        "synergy": 2.7
+      },
+      {
+        "name": "Helcurt",
+        "synergy": 2.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Barats counters Tank heroes that rely on CC skills, such as Belerick and Lolita, since the extra Resilience provided by his Passive will greatly reduce the duration of their CC.",
+    "weakAgainstReason": "Barats is countered by agile Marksmen who can deal high damage to Tanks, such as Karrie and Moskov, because Barats lacks mobility and his skills can be avoided, making these heroes very difficult to kill.",
+    "synergyReason": "Barats works best with Supports who can give him Movement Speed to make up for his lack of mobility, such as Mathilda and Angela."
   },
   "mechanicCategory": [
     "Standard"
@@ -285,11 +298,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 63,
-    "late": 52,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 80,
+    "late": 66,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Brute Force Breastplate",
+      "Dominance Ice"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Barats ramps with Big Guy stacks and becomes very hard to contest once he can reliably maintain stacks and access suppression picks with his Ultimate. He peaks in mid-game when his durability + displacement enables clean skirmish wins; late game he remains tanky but can be outscaled by DPS and kited if stacks drop."
   },
   "proBuilds": [
     {
@@ -333,5 +356,38 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3",
+        "Passive"
+      ],
+      "description": "In teamfights, use Barats' 1st Skill to maintain Big Guy stacks. Approach the enemy and use his 2nd Skill to push them close before using his Ultimate to minimize their chance of escape, then finish them off with Basic Attacks."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, spam Barats' low Mana cost 1st Skill to build Big Guy stacks while slowing and poking the enemy. Use his 2nd Skill to push the enemy to him and hit them with Basic Attacks."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Mathilda",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Politan"
 }

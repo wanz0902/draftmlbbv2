@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Regen",
+    "Damage"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2550,
+    "hpRegen": 7.6,
+    "mana": 490,
+    "manaRegen": 3.8,
+    "physicalAttack": 98,
+    "physicalDefense": 19,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -397,7 +397,9 @@
       "synergyWith": [
         "Chip",
         "Masha",
-        "Floryn"
+        "Floryn",
+        "Phoveus",
+        "Mathilda"
       ]
     }
   },
@@ -449,18 +451,29 @@
     "synergyHeroes": [
       {
         "name": "Chip",
-        "synergy": 5
+        "synergy": 9.2
       },
       {
         "name": "Masha",
-        "synergy": 5
+        "synergy": 5.3
       },
       {
         "name": "Floryn",
-        "synergy": 5
+        "synergy": 3.5
+      },
+      {
+        "name": "Phoveus",
+        "synergy": 3.4
+      },
+      {
+        "name": "Mathilda",
+        "synergy": 2.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Lukas excels in close-quarter combat and is a good counter to heroes with low mobility and CC, like Hanabi and Ixia.",
+    "weakAgainstReason": "Lukas needs to stay close to enemies to deal damage, which makes him vulnerable to heroes with strong burst and CC, such as Fanny, Valir, and Julian.",
+    "synergyReason": "Lukas's Sacred Beast form has extended attack range and enhanced mobility, which synergizes well with heroes possessing AOE CC, such as Atlas, Tigreal, and Gatotkaca."
   },
   "mechanicCategory": [
     "Standard"
@@ -509,11 +522,21 @@
     "difficulty": 30
   },
   "powerCurve": {
-    "early": 53,
-    "mid": 64,
-    "late": 56,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 68,
+    "mid": 82,
+    "late": 72,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Hunter Strike",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "He’s playable early with short-cooldown trades and sustain off his empowered Skill 1, but his real jump is once he unlocks Sacred Beast to gain control immunity, a big all-stat steroid, and a high-damage finisher for skirmishes/objectives. Late stays strong as a bruiser, but he’s less “hard-carry” than true late scalers and can be kited if he fails to stick."
   },
   "proBuilds": [
     {
@@ -557,5 +580,47 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "Lukas should use his 2nd Skill to close in on the enemy, then use the enhanced Basic Attack plus another Basic Attack to get 2 stacks of Vigor. Now use his fully powered 1st Skill to inflict high damage and stun and displace the target, then back off to avoid the enemy's counterattack."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 2",
+        "Passive",
+        "Passive",
+        "Skill 1",
+        "Skill 4"
+      ],
+      "description": "In Sacred Beast form, use Lukas's 2nd Skill followed by an enhanced Basic Attack, then another Basic Attack to get 2 stacks of Vigor. Use his 1st Skill to inflict high damage and CC, and finish off with Shockwave Blast to devastate the enemy with a massive AOE attack."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Gatotkaca",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Moniyan Empire",
+  "race": "Sacred Beast"
 }

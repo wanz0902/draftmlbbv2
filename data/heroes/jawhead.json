@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Charge",
+    "Burst"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2648,
+    "hpRegen": 7.6,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 120,
+    "physicalDefense": 22,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -158,7 +158,9 @@
       "synergyWith": [
         "Rafaela",
         "Estes",
-        "Lolita"
+        "Lolita",
+        "Sun",
+        "Belerick"
       ]
     }
   },
@@ -210,18 +212,29 @@
     "synergyHeroes": [
       {
         "name": "Rafaela",
-        "synergy": 5
+        "synergy": 2.4
       },
       {
         "name": "Estes",
-        "synergy": 5
+        "synergy": 1.8
       },
       {
         "name": "Lolita",
-        "synergy": 5
+        "synergy": 1.6
+      },
+      {
+        "name": "Sun",
+        "synergy": 1.6
+      },
+      {
+        "name": "Belerick",
+        "synergy": 1.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Jawhead counters squishy heroes with no defensive skills that he can burst down after connecting with his Ultimate, such as Saber and Eudora.",
+    "weakAgainstReason": "Jawhead is countered by heroes with high sustained damage or high survivability, like Edith and Thamuz, because they can survive Jawhead's burst damage and beat him in a prolonged battle.",
+    "synergyReason": "Jawhead works best with heroes that benefit from a quick engage like Odette and Belerick because he can throw them into the enemy for a surprise attack."
   },
   "mechanicCategory": [
     "Standard"
@@ -270,11 +283,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 61,
-    "mid": 56,
-    "late": 41,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 78,
+    "mid": 72,
+    "late": 52,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Blade of Despair",
+      "Athena's Shield"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "Jawhead is a high-tempo pickoff/roam fighter with strong base damage and displacement CC, letting him force kills early once Ejector is online. He tapers in late game because he becomes more commit-reliant and struggles to burst tankier targets without a big gold lead."
   },
   "proBuilds": [
     {
@@ -318,5 +341,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, use Jawhead's 2nd Skill to get close to the enemy, then follow up with his 1st Skill and Basic Attacks to deal continuous damage. When the enemy tries to run, use his 2nd Skill again to toss them back."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Skill 3",
+        "Skill 2"
+      ],
+      "description": "In teamfights, use Jawhead's 2nd Skill for the Movement Speed and start up his 1st Skill then immediately charge into a target using his Ultimate. Finally, use his 2nd Skill to toss the enemy back."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Odette",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Belerick",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Eruditio",
+  "race": "Robot"
 }

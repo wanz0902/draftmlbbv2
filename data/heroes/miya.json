@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Finisher",
+    "Damage"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2320,
-    "hpRegen": 6,
-    "mana": 500,
-    "manaRegen": 15,
+    "hp": 2501,
+    "hpRegen": 7,
+    "mana": 443,
+    "manaRegen": 3.4,
     "physicalAttack": 115,
     "physicalDefense": 17,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.06",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -238,7 +238,9 @@
       "synergyWith": [
         "Harith",
         "Gloo",
-        "Ling"
+        "Ling",
+        "Carmilla",
+        "Roger"
       ]
     }
   },
@@ -290,18 +292,29 @@
     "synergyHeroes": [
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 2.2
       },
       {
         "name": "Gloo",
-        "synergy": 5
+        "synergy": 2.1
       },
       {
         "name": "Ling",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Carmilla",
+        "synergy": 1.4
+      },
+      {
+        "name": "Roger",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Miya counters heroes who rely on targeted CC effects, such as Saber and Eudora, because she can easily escape their CC and respond with a strong counterattack. The split arrows from her 1st Skill are also very effective against heroes that summon units, such as Sun.",
+    "weakAgainstReason": "Miya is countered by heroes with a lot of AOE damage, such as Pharsa and Yve, because they can still hit her while she is concealed.",
+    "synergyReason": "Miya works well with Tanks who have powerful CC abilities like Belerick and Tigreal since their CCs give her more opportunities to dish out damage."
   },
   "mechanicCategory": [
     "Standard"
@@ -337,9 +350,9 @@
   ],
   "metaSource": "mlbb.tools",
   "metaUpdatedAt": "2026-06-08",
-  "winRate": 51.6,
-  "pickRate": 2.7,
-  "banRate": 5.6,
+  "winRate": 51.5,
+  "pickRate": 2.8,
+  "banRate": 6.1,
   "heroAttributes": {
     "durability": 10,
     "offense": 70,
@@ -347,11 +360,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 30,
-    "mid": 48,
-    "late": 69,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 38,
+    "mid": 62,
+    "late": 88,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Demon Hunter Sword",
+      "Golden Staff",
+      "Windtalker"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Early she’s vulnerable and needs time to stack attack speed, so she mainly farms and avoids heavy trades. She comes online in mid with ultimate safety + first items, and becomes dominant late when multi-hit effects and high attack speed turn her into a sustained DPS/push threat in teamfights."
   },
   "proBuilds": [
     {
@@ -396,5 +419,46 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "When laning, immobilize the opponent with Miya's 2nd Skill and use her 1st Skill to poke them and clear Minions at the same time."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Miya's Ultimate first to conceal herself, then find an ideal position to attack the enemy and quickly stack her Passive. Utilize her 2nd Skill to immobilize the enemy and activate her 1st Skill to enhance her Basic Attacks to hit multiple targets at once."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Hidden Moonlight",
+      "Moon Arrow",
+      "Arrow of Eclipse"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Belerick",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Azrya Woodlands",
+  "race": "Moon Elf"
 }

@@ -7,8 +7,8 @@
     "Support"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Guard",
+    "Crowd Control"
   ],
   "lane": "Roam",
   "lanes": [
@@ -19,14 +19,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2801,
+    "hpRegen": 8.4,
+    "mana": 460,
+    "manaRegen": 3.2,
+    "physicalAttack": 108,
+    "physicalDefense": 27,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 17,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -161,7 +161,9 @@
       "synergyWith": [
         "Mathilda",
         "Saber",
-        "Floryn"
+        "Floryn",
+        "Natalia",
+        "Khufra"
       ]
     }
   },
@@ -213,18 +215,29 @@
     "synergyHeroes": [
       {
         "name": "Mathilda",
-        "synergy": 5
+        "synergy": 6.2
       },
       {
         "name": "Saber",
-        "synergy": 5
+        "synergy": 3.4
       },
       {
         "name": "Floryn",
-        "synergy": 5
+        "synergy": 2.5
+      },
+      {
+        "name": "Natalia",
+        "synergy": 2.4
+      },
+      {
+        "name": "Khufra",
+        "synergy": 2.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Lolita's shield makes her strong against heroes who rely on projectiles and ranged skills, such as Kimmy and Cyclops.",
+    "weakAgainstReason": "Lolita is countered by melee heroes with high burst damage like Ling and Paquito.",
+    "synergyReason": "Due to her powerful defensive and CC abilities, Lolita is great at protecting Marksmen like Hanabi and Layla."
   },
   "mechanicCategory": [
     "Standard"
@@ -275,11 +288,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 61,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 78,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 10"
+    ],
+    "coreItems": [
+      "Dominance Ice",
+      "Athena's Shield",
+      "Immortality"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Lolita is serviceable early with point-and-click engage (dash + stun) and strong lane/roam protection from shields, but her fight-winning value jumps when Noumenon Blast is available for large-area stuns. Mid game is her best window as teamfights start and projectile denial becomes decisive; late she remains impactful with ult threat and peel, though she can be outscaled by damage and needs items to survive extended fights."
   },
   "proBuilds": [
     {
@@ -323,5 +346,38 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive",
+        "Skill 3"
+      ],
+      "description": "In teamfights, use Lolita's 2nd Skill to reflect ranged attacks, followed by her 1st Skill to charge into enemies' midst, then use her enhanced Basic Attack to stun the target and deal damage. Follow up with her Ultimate for more damage and CC, and finish off the enemy with your team."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, use Lolita's 1st Skill and enhanced Basic Attack to stun the enemy, then use her 2nd Skill to reflect ranged attacks."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Layla",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Hanabi",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Half-Elf, Half-Human"
 }

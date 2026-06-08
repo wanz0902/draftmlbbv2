@@ -6,8 +6,8 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Finisher",
+    "Magic Damage"
   ],
   "lane": "Jungle",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2474,
+    "hp": 2487,
     "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 121,
-    "physicalDefense": 20,
+    "mana": 468,
+    "manaRegen": 3.6,
+    "physicalAttack": 120,
+    "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.12",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -264,7 +264,9 @@
       "synergyWith": [
         "Barats",
         "Benedetta",
-        "Chip"
+        "Chip",
+        "Zetian",
+        "Lolita"
       ]
     }
   },
@@ -316,18 +318,29 @@
     "synergyHeroes": [
       {
         "name": "Barats",
-        "synergy": 5
+        "synergy": 1.8
       },
       {
         "name": "Benedetta",
-        "synergy": 5
+        "synergy": 1.2
       },
       {
         "name": "Chip",
-        "synergy": 5
+        "synergy": 1.2
+      },
+      {
+        "name": "Zetian",
+        "synergy": 1.2
+      },
+      {
+        "name": "Lolita",
+        "synergy": 1.1
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Karina counters Marksmen that lack mobility, such as Layla and Hanabi, since her 1st Skill can neutralize their Basic Attacks and they can't escape her high mobility and burst damage.",
+    "weakAgainstReason": "Karina is countered by Tanky heroes with CC abilities, like Akai and Khufra because they can tank her damage, and protect their allies from her.",
+    "synergyReason": "Karina works well with heroes who can pull enemies together, such as Tigreal and Faramis, since her Ultimate and 2nd Skill also hits anyone near her main target, setting them up to be chain killed by her Ultimate."
   },
   "mechanicCategory": [
     "Standard"
@@ -374,11 +387,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 51,
-    "mid": 63,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 65,
+    "mid": 80,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Genius Wand",
+      "Holy Crystal",
+      "Divine Glaive"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "She’s serviceable early once she has S1+S2 for trading and faster clears, but her real kill tempo starts after Ultimate unlock and grows sharply with first magic-pen item for resets. Late game stays strong yet more volatile because hard CC and defensive items can stop her from finishing targets to refresh Shadow Assault."
   },
   "proBuilds": [
     {
@@ -422,5 +445,44 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 3",
+        "Skill 2",
+        "Skill 3",
+        "Passive"
+      ],
+      "description": "In teamfights, close in on the enemy using Karina's 1st Skill and cut into their formation with her Ultimate. Use her 2nd Skill for a quick AOE followed by her Ultimate to dash back to her Shadowform. Finally, use her 1st Skill again and enhanced Basic Attacks to chase down enemies."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Karina's 1st Skill first to enter the Dance of Blades state and pounce on the enemy using the dash from her enhanced Basic Attack. Follow up with her 2nd Skill and Basic Attacks to trigger her Passive."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Faramis",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Gloo",
+      "relationship": "MET ONCE"
+    }
+  ],
+  "region": "Azrya Woodlands",
+  "race": "Dark Elf"
 }

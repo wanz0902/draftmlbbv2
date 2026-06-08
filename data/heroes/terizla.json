@@ -7,7 +7,7 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
+    "Burst",
     "Crowd Control"
   ],
   "lane": "EXP Lane",
@@ -22,12 +22,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2700,
+    "hpRegen": 8,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 121,
+    "physicalDefense": 23,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -194,7 +194,9 @@
       "synergyWith": [
         "Angela",
         "Aulus",
-        "Diggie"
+        "Diggie",
+        "Floryn",
+        "Bane"
       ]
     }
   },
@@ -246,18 +248,29 @@
     "synergyHeroes": [
       {
         "name": "Angela",
-        "synergy": 5
+        "synergy": 2.3
       },
       {
         "name": "Aulus",
-        "synergy": 5
+        "synergy": 1.9
       },
       {
         "name": "Diggie",
-        "synergy": 5
+        "synergy": 1.8
+      },
+      {
+        "name": "Floryn",
+        "synergy": 1.6
+      },
+      {
+        "name": "Bane",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Terizla is strong against light melee fighters cause they'll have a hard time surviving his heavy skill damage, such as Zilong and Sun.",
+    "weakAgainstReason": "Terizla is countered by heroes with good Mobility or long attack range, because it will be diffcult to hit them with his skills. Such as Arlott and Lesley.",
+    "synergyReason": "Terizla works best with heroes who have strong initiation skills that allow him to deal more damage with his skills, heroes like Gatotkaca and Atlas are good examples here."
   },
   "mechanicCategory": [
     "Standard"
@@ -310,11 +323,21 @@
     "difficulty": 20
   },
   "powerCurve": {
-    "early": 59,
-    "mid": 61,
-    "late": 45,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 75,
+    "mid": 78,
+    "late": 58,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Bloodlust Axe",
+      "War Axe",
+      "Blade of Despair"
+    ],
+    "dominantPhase": null,
+    "description": "Terizla is lane-dominant early with high base damage and built-in damage reduction, then peaks in mid-game skirmishes once Penalty Zone enables reliable AoE catch. In late game he’s slower and easier to kite, so his impact depends more on landing ult than raw DPS."
   },
   "proBuilds": [
     {
@@ -359,5 +382,37 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In teamfights, Terizla can open with his Ultimate and his 1st Skill to control the enemy team, then use his 2nd Skill to repeatedly hit the targets pulled by the Scaffold."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, Terizla can use his 1st Skill to slow the enemy, then his 2nd Skill to repeatedly deal damage to them."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Gatotkaca",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Abyss",
+  "race": "Human"
 }

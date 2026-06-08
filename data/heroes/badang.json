@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Charge",
+    "Burst"
   ],
   "lane": "EXP",
   "lanes": [
@@ -21,12 +21,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2608,
+    "hpRegen": 7.6,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 120,
+    "physicalDefense": 21,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -184,7 +184,9 @@
       "synergyWith": [
         "Phoveus",
         "Arlott",
-        "Masha"
+        "Masha",
+        "Aldous",
+        "Joy"
       ]
     }
   },
@@ -215,18 +217,29 @@
     "synergyHeroes": [
       {
         "name": "Phoveus",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Arlott",
-        "synergy": 5
+        "synergy": 1.5
       },
       {
         "name": "Masha",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Aldous",
+        "synergy": 1.5
+      },
+      {
+        "name": "Joy",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Badang counters squishy heroes with low mobility like Layla and Odette who have a hard time escaping from his 2nd Skill into Ultimate combo.",
+    "weakAgainstReason": "Badang is countered by agile heroes such as Wanwan and Ling who can dodge or escape his 2nd Skill, greatly diminishing his damage and CC.",
+    "synergyReason": "Badang works best with heroes that can pull enemies together to make it easier for him to land his 2nd Skill and Ultimate combo, such as Tigreal and Luo Yi."
   },
   "mechanicCategory": [
     "Standard"
@@ -276,11 +289,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 61,
-    "late": 48,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 78,
+    "late": 62,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Hunter Strike",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Badang’s threat jumps once he has full combo access (dash+wall into Ultimate) to chain stuns and burst grouped targets, which is most reliable in mid-game skirmishes. Late game he can still delete carries if he lands the setup, but becomes more punishable due to range and peel/defensive items."
   },
   "proBuilds": [
     {
@@ -324,5 +347,40 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 3",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Badang's 2nd Skill when the enemy is grouped up to trap multiple targets in the barrier, and unleash his Ultimate to repeatedly knock them into it for massive damage. Then use his 1st Skill and Basic Attacks to continue the onslaught."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Badang's 1st Skill to whittle down the enemy's HP. Use his 2nd Skill to trap the enemy, then use his 1st Skill to knock them into the barrier to stun them, and finish with Basic Attacks."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Luo Yi",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Vonetis Sea",
+  "race": "Human"
 }

@@ -6,8 +6,8 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Chase",
+    "Magic Damage"
   ],
   "lane": "Jungle",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2455,
-    "hpRegen": 8,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 115,
-    "physicalDefense": 19,
+    "hp": 2500,
+    "hpRegen": 7.4,
+    "mana": 460,
+    "manaRegen": 3.6,
+    "physicalAttack": 126,
+    "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.09",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -279,7 +279,9 @@
       "synergyWith": [
         "Zetian",
         "Esmeralda",
-        "Lolita"
+        "Lolita",
+        "Barats",
+        "Akai"
       ]
     }
   },
@@ -331,18 +333,29 @@
     "synergyHeroes": [
       {
         "name": "Zetian",
-        "synergy": 5
+        "synergy": 1.2
       },
       {
         "name": "Esmeralda",
-        "synergy": 5
+        "synergy": 1.1
       },
       {
         "name": "Lolita",
-        "synergy": 5
+        "synergy": 1.1
+      },
+      {
+        "name": "Barats",
+        "synergy": 1.1
+      },
+      {
+        "name": "Akai",
+        "synergy": 1.1
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Squishy heroes with low mobility such as Layla and Hanabi.",
+    "weakAgainstReason": "Tanky heroes or those that deal damage over time such as Balmond and Fredrinn.",
+    "synergyReason": "Support heroes that can provide buffs such as Rafaela and Floryn."
   },
   "mechanicCategory": [
     "Standard"
@@ -390,11 +403,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 59,
-    "mid": 61,
-    "late": 48,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 75,
+    "mid": 78,
+    "late": 62,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Genius Wand",
+      "Holy Crystal",
+      "Divine Glaive"
+    ],
+    "dominantPhase": null,
+    "description": "Aamon spikes early from fast jungle clear and repeated camouflage resets enabling frequent picks, then peaks around first big magic-pen + ult unlock for lethal backline bursts. Late game he falls off relatively as enemies group, buy MR, and his single-target burst becomes harder to convert without clean flanks."
   },
   "proBuilds": [
     {
@@ -438,5 +461,44 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive",
+        "Skill 3"
+      ],
+      "description": "Use 2nd Skill to Camouflage and flank the enemy. Deal damage with his 1st Skill and Basic Attacks, and Ultimate to take out backline heroes."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "Use his skills and Enhanced Basic Attacks for very high jungling efficiency."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Gusion",
+      "relationship": "BROTHER"
+    },
+    {
+      "name": "Rafaela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Floryn",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

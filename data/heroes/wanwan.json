@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Finisher",
+    "Burst"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2440,
+    "hpRegen": 6.6,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 112,
+    "physicalDefense": 17,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -158,7 +158,9 @@
       "synergyWith": [
         "Angela",
         "Popol and Kupa",
-        "Harith"
+        "Harith",
+        "Floryn",
+        "Mathilda"
       ]
     }
   },
@@ -210,18 +212,29 @@
     "synergyHeroes": [
       {
         "name": "Angela",
-        "synergy": 5
+        "synergy": 2.7
       },
       {
         "name": "Popol and Kupa",
-        "synergy": 5
+        "synergy": 2.3
       },
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 2.2
+      },
+      {
+        "name": "Floryn",
+        "synergy": 2.2
+      },
+      {
+        "name": "Mathilda",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Wanwan is exceptional in dashing and powerful against heroes with short ranges or heavy weight, such as Fredrinn and Luo Yi.",
+    "weakAgainstReason": "However, due to her lack of durability and short attack range, Mages with longer ranges like Gord can poke her easily. She also lacks survival abilities when taking Burst damage and can be weak against Burst Assassins like Lancelot.",
+    "synergyReason": "She's best with Supporting Tanks with powerful crowd control, like Franco and Belerick. They can help Wanwan hit more Weaknesses and unlock her Ultimate."
   },
   "mechanicCategory": [
     "Standard"
@@ -267,11 +280,21 @@
     "difficulty": 60
   },
   "powerCurve": {
-    "early": 31,
-    "mid": 55,
-    "late": 70,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 40,
+    "mid": 70,
+    "late": 90,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Corrosion Scythe",
+      "Demon Hunter Sword",
+      "Wind of Nature"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Weak early due to needing attack speed/items to reliably break Weaknesses and access her Ultimate. Once she gets core DPS items and levels, Crossbow of Tang becomes a fight-winning reset tool and she turns dominant in late-game teamfights."
   },
   "proBuilds": [
     {
@@ -316,5 +339,50 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In teamfights, use Basic Attacks to dash with her Passive and adjust position for damage, and then land as many hits as possible with her 1st Skill. After hitting all Weaknesses, reap kills with her Ultimate."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, Wanwan can poke enemies with her 1st Skill\nand then use Basic Attacks to dash with her Passive and adjust Swallow Daggers' paths to control enemies. After hitting an enemy's three Weaknesses, she can finish them off with her Ultimate."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Yin",
+      "relationship": "CLOSE FRIEND"
+    },
+    {
+      "name": "Yu Zhong",
+      "relationship": "CLOSE FRIEND"
+    },
+    {
+      "name": "Ling",
+      "relationship": "ALLY"
+    },
+    {
+      "name": "Franco",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Belerick",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Cadia Riverlands",
+  "race": "Human"
 }

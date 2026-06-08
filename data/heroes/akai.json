@@ -6,8 +6,8 @@
     "Tank"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Guard",
+    "Crowd Control"
   ],
   "lane": "Roam",
   "lanes": [
@@ -23,14 +23,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2859,
+    "hpRegen": 8.6,
+    "mana": 450,
+    "manaRegen": 3,
+    "physicalAttack": 114,
+    "physicalDefense": 27,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -165,7 +165,9 @@
       "synergyWith": [
         "Angela",
         "Rafaela",
-        "Natalia"
+        "Natalia",
+        "Helcurt",
+        "Mathilda"
       ]
     }
   },
@@ -217,18 +219,29 @@
     "synergyHeroes": [
       {
         "name": "Angela",
-        "synergy": 5
+        "synergy": 3.8
       },
       {
         "name": "Rafaela",
-        "synergy": 5
+        "synergy": 3.6
       },
       {
         "name": "Natalia",
-        "synergy": 5
+        "synergy": 3.1
+      },
+      {
+        "name": "Helcurt",
+        "synergy": 2.8
+      },
+      {
+        "name": "Mathilda",
+        "synergy": 2.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Akai is strong against heroes with poor Mobility since he can easily catch and eliminate them with his Ultimate, such as Eudora and Odette.",
+    "weakAgainstReason": "Akai is countered by heroes with CC removers or transformation abilities that allow them to escape or counter Akai's Ultimate, such as Nana and Diggie.",
+    "synergyReason": "Akai works best with heroes who can deal high burst damage as they can help him take down enemies caught in his Ultimate, such as Saber and Eudora."
   },
   "mechanicCategory": [
     "Standard"
@@ -280,11 +293,21 @@
     "difficulty": 30
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 61,
-    "late": 52,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 78,
+    "late": 66,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Dominance Ice",
+      "Antique Cuirass",
+      "Athena's Shield"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Akai is serviceable early with decent base tankiness and short CC, but his real impact comes once Heavy Spin is available for displacement/peel and objective fights. He stays useful late with control, though his value depends more on positioning and team follow-up than raw scaling."
   },
   "proBuilds": [
     {
@@ -328,5 +351,38 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, Akai should use his 1st Skill to knock back the enemy, and slow them down with his 2nd Skill, then spam his Basic Attack to deal damage."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 3",
+        "Skill 2"
+      ],
+      "description": "In teamfights, Akai should use his 1st Skill to knock back the enemy, and roll into the enemy formation. Then use his Ultimate to disrupt the enemy formation, and continue to deal damage with his 2nd Skill after his Ultimate ends."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Saber",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Eudora",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Cadia Riverlands",
+  "race": "Anthropomorphic panda"
 }

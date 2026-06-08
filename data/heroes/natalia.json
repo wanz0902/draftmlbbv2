@@ -6,8 +6,8 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Chase",
+    "Finisher"
   ],
   "lane": "Jungle",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2480,
+    "hp": 2456,
     "hpRegen": 7,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 121,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 132,
     "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.1",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -215,7 +215,9 @@
       "synergyWith": [
         "Khufra",
         "Akai",
-        "Barats"
+        "Barats",
+        "Hylos",
+        "Chip"
       ]
     }
   },
@@ -267,18 +269,29 @@
     "synergyHeroes": [
       {
         "name": "Khufra",
-        "synergy": 5
+        "synergy": 3.5
       },
       {
         "name": "Akai",
-        "synergy": 5
+        "synergy": 3.1
       },
       {
         "name": "Barats",
-        "synergy": 5
+        "synergy": 2.8
+      },
+      {
+        "name": "Hylos",
+        "synergy": 2.8
+      },
+      {
+        "name": "Chip",
+        "synergy": 2.8
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Natalia counters squishy heroes who lack CC and burst like as Novaria and Irithel since they can't stop Natalia's burst damage.",
+    "weakAgainstReason": "Natalia is countered by heroes who can restrict her mobility like Minsitthar and Kaja since they can easily shutdown her main advantage.",
+    "synergyReason": "Natalia works best with heroes with high AOE damage such as Yi Sun-shin and Vexana. She can stay hidden while they poke the enemy, then pounce on targets that get low on HP."
   },
   "mechanicCategory": [
     "Standard"
@@ -315,7 +328,7 @@
   ],
   "metaSource": "mlbb.tools",
   "metaUpdatedAt": "2026-06-08",
-  "winRate": 50.3,
+  "winRate": 50.2,
   "pickRate": 0.3,
   "banRate": 2.1,
   "heroAttributes": {
@@ -325,11 +338,21 @@
     "difficulty": 90
   },
   "powerCurve": {
-    "early": 63,
-    "mid": 55,
-    "late": 39,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 80,
+    "mid": 70,
+    "late": 50,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Blade of the Heptaseas",
+      "Hunter Strike",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "She spikes early from stealth-enhanced basic attack burst and strong gank pressure, especially once she has full access to her dash/smoke pattern and ultimate charges for repeated picks. In late game, grouped fights, defensive items, and vision/peel reduce her ability to one-shot and safely exit."
   },
   "proBuilds": [
     {
@@ -373,5 +396,43 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 2",
+        "Skill 1",
+        "Skill 3",
+        "Passive",
+        "Skill 1",
+        "Skill 3"
+      ],
+      "description": "In teamfights, use Natalia's Passive and enhanced Basic Attacks to approach enemies, then use her 2nd Skill to improve her survivability. Follow up with her 1st Skill then Ultimate and end with a Basic Attack to finish off the enemy."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 2",
+        "Skill 1",
+        "Skill 1"
+      ],
+      "description": "When ganking, hide in a bush to activate Natalia's Passive, then approach the enemy from behind and blink to them with the enhanced Basic Attack. Follow up with her 2nd Skill to slow the enemy and chase after them using her 1st Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Yi Sun-shin",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Vexana",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

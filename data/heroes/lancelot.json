@@ -6,7 +6,7 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
+    "Chase",
     "Burst"
   ],
   "lane": "Jungle",
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2390,
-    "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 124,
-    "physicalDefense": 16,
+    "hp": 2490,
+    "hpRegen": 7.2,
+    "mana": 460,
+    "manaRegen": 3.4,
+    "physicalAttack": 130,
+    "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.08",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -256,7 +256,9 @@
       "synergyWith": [
         "Angela",
         "Zilong",
-        "Dyrroth"
+        "Dyrroth",
+        "Natan",
+        "Barats"
       ]
     }
   },
@@ -308,18 +310,29 @@
     "synergyHeroes": [
       {
         "name": "Angela",
-        "synergy": 5
+        "synergy": 2.6
       },
       {
         "name": "Zilong",
-        "synergy": 5
+        "synergy": 1.3
       },
       {
         "name": "Dyrroth",
-        "synergy": 5
+        "synergy": 1.3
+      },
+      {
+        "name": "Natan",
+        "synergy": 1.1
+      },
+      {
+        "name": "Barats",
+        "synergy": 1.1
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Lancelot counters long-range Mages, such as Cecilion and Pharsa, because there is a delay to their skills and Lancelot can use his 1st Skill to dodge them while going in for the kill.",
+    "weakAgainstReason": "Lancelot is weak against heroes who can counter his mobility like Minsitthar and Phoveus, as his 1st Skill and Ultimate will be heavily restricted.",
+    "synergyReason": "Lancelot works well with heroes who can pull enemies together, like Atlas and Tigreal, because they allow him to hit more enemies with his AOE skills."
   },
   "mechanicCategory": [
     "Standard"
@@ -366,11 +379,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 56,
-    "mid": 63,
-    "late": 45,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 72,
+    "mid": 80,
+    "late": 58,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Hunter Strike",
+      "Blade of the Heptaseas",
+      "Malefic Roar"
+    ],
+    "dominantPhase": null,
+    "description": "Lancelot spikes early from S1 reset mobility into S2 burst/iframes and becomes very threatening once ultimate unlocks for invulnerability-finishes and backline access. He’s strongest in mid-game pickoffs and snowballing; late game his damage is less reliable into grouped teams with defensive items/CC, forcing more risk for resets."
   },
   "proBuilds": [
     {
@@ -414,5 +437,41 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, use Lancelot's 1st Skill on frontline enemies to springboard into their backline, then unleash his 2nd Skill on the backline for heavy damage. Follow up with his Ultimate to charge through the target and block their escape, and use his 1st Skill to continue to chase or retreat."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, clear Minions by repeatedly using Lancelot's 1st Skill thanks to the cooldown reset, and stack his Passive before approaching the enemy and hitting them with his 2nd Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Odette",
+      "relationship": "LOVER"
+    },
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

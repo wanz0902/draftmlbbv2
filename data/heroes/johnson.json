@@ -7,8 +7,8 @@
     "Support"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Support",
+    "Crowd Control"
   ],
   "lane": "Roam",
   "lanes": [
@@ -19,14 +19,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
+    "hp": 2848,
+    "hpRegen": 8.6,
+    "mana": 470,
+    "manaRegen": 3.4,
     "physicalAttack": 110,
-    "physicalDefense": 20,
+    "physicalDefense": 29,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 16,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -159,7 +159,9 @@
       "synergyWith": [
         "Argus",
         "Lunox",
-        "Alpha"
+        "Alpha",
+        "Natalia",
+        "Edith"
       ]
     }
   },
@@ -211,18 +213,29 @@
     "synergyHeroes": [
       {
         "name": "Argus",
-        "synergy": 5
+        "synergy": 1.8
       },
       {
         "name": "Lunox",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Alpha",
-        "synergy": 5
+        "synergy": 1.7
+      },
+      {
+        "name": "Natalia",
+        "synergy": 1.6
+      },
+      {
+        "name": "Edith",
+        "synergy": 1.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Johnson counters melee heroes with high burst like Alucard and Zilong\nbecause of Johnson's high Physical Defense and CC ability.",
+    "weakAgainstReason": "Johnson is countered by agile heroes who deal Magic Damage such as Harith and Kagura because they can easily dodge Johnson's skills while their damage is not affected by his Physical Defense.",
+    "synergyReason": "Johnson works well with heroes that need help initiating like Odette and Kadita since they can just jump into Johnson's Ultimate for a ride."
   },
   "mechanicCategory": [
     "Vehicle",
@@ -274,11 +287,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 31,
-    "mid": 58,
-    "late": 48,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 40,
+    "mid": 74,
+    "late": 62,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Dominance Ice",
+      "Antique Cuirass",
+      "Athena's Shield"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Johnson’s threat spikes hard at level 4 with map-wide pick potential and chain CC, making mid-game rotations and objective fights his best window. Late game he remains useful as an initiator/peeler, but his impact depends on landing ult crashes and surviving long enough to re-CC."
   },
   "proBuilds": [
     {
@@ -322,5 +345,45 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Johnson's 1st Skill to stun enemies, then move in and hit them with his 2nd Skill and Basic Attacks."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 2",
+        "Skill 1"
+      ],
+      "description": "In teamfights, cast Johnson's Ultimate and pick up a teammate before engaging the enemy. Then follow up with his 2nd Skill and 1st Skill to CC the enemy again."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Layla",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Bruno",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Odette",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Kadita",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Cyborg"
 }

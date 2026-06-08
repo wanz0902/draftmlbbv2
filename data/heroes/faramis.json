@@ -7,8 +7,8 @@
     "Support"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Guard",
+    "Charge"
   ],
   "lane": "Mid",
   "lanes": [
@@ -22,12 +22,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 6,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 118,
-    "physicalDefense": 20,
+    "hp": 2510,
+    "hpRegen": 7.6,
+    "mana": 490,
+    "manaRegen": 3.8,
+    "physicalAttack": 100,
+    "physicalDefense": 17,
     "magicPower": 0,
     "magicDefense": 15,
     "attackSpeed": "0.98",
@@ -286,7 +286,9 @@
       "synergyWith": [
         "Chip",
         "Ruby",
-        "Moskov"
+        "Moskov",
+        "Masha",
+        "Fanny"
       ]
     }
   },
@@ -338,18 +340,29 @@
     "synergyHeroes": [
       {
         "name": "Chip",
-        "synergy": 5
+        "synergy": 3.5
       },
       {
         "name": "Ruby",
-        "synergy": 5
+        "synergy": 2.9
       },
       {
         "name": "Moskov",
-        "synergy": 5
+        "synergy": 2.8
+      },
+      {
+        "name": "Masha",
+        "synergy": 2.8
+      },
+      {
+        "name": "Fanny",
+        "synergy": 2.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Faramis' ability to temporarily prevent teammates from being killed makes him a good pick against heroes that go all-in to burst down a target, like Saber and Eudora.",
+    "weakAgainstReason": "Faramis is countered by high mobility heroes that are difficult for him to catch with his 1st Skill, such as Novaria and Pharsa.",
+    "synergyReason": "Faramis works well with heroes that are designed to dive into the enemy, such as Leomord and Martis, as he'll be able to maximize the life-saving effect of his Ultimate."
   },
   "mechanicCategory": [
     "Revive Zone"
@@ -399,11 +412,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 39,
-    "mid": 63,
-    "late": 59,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 50,
+    "mid": 80,
+    "late": 75,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Enchanted Talisman",
+      "Fleeting Time",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Faramis ramps up when teamfights start: Nether Realm swings mid-game skirmishes and objective fights heavily, especially with cooldown-focused items. He remains strong late due to game-changing resurrection utility and scaling from soul stacks, though he’s more team-dependent than a pure carry."
   },
   "proBuilds": [
     {
@@ -447,5 +470,38 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In teamfights, use Faramis' Ultimate to protect his allies, then get close to the enemy and apply Nether Marks with his 1st Skill. Activate the 1st Skill again to pull them over and follow up with his 2nd Skill for additional damage."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Faramis' 1st Skill to get close to the enemy\nand hit them with his 2nd Skill while applying a Nether Mark with the 1st Skill. Then, use his 1st Skill again to pull the enemy back to him."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Leomord",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Martis",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "The Barren Lands",
+  "race": "Undead"
 }

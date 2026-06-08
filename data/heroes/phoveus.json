@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Regen",
+    "Damage"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2631,
+    "hpRegen": 7.8,
+    "mana": 460,
+    "manaRegen": 3.6,
+    "physicalAttack": 116,
+    "physicalDefense": 22,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 12,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -183,7 +183,9 @@
       "synergyWith": [
         "Lukas",
         "Diggie",
-        "Valentina"
+        "Valentina",
+        "Badang",
+        "Marcel"
       ]
     }
   },
@@ -235,18 +237,29 @@
     "synergyHeroes": [
       {
         "name": "Lukas",
-        "synergy": 5
+        "synergy": 3.4
       },
       {
         "name": "Diggie",
-        "synergy": 5
+        "synergy": 2
       },
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 2
+      },
+      {
+        "name": "Badang",
+        "synergy": 1.7
+      },
+      {
+        "name": "Marcel",
+        "synergy": 1.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Enemies with multiple mobility abilities can greatly reduce Phoveus's cooldowns, so he can use his enhanced Basic Attacks and skills more often when facing heroes like Wanwan, Arlott, and Chou.",
+    "weakAgainstReason": "Phoveus will struggle against ranged heroes with strong CC, such as Aurora, Valir, and Vexana.",
+    "synergyReason": "Tanks with good initiation like Gatotkaca, Minotaur, and Tigreal can create opportunities for Phoveus to maximize his damage while they take some of the incoming damage."
   },
   "mechanicCategory": [
     "Standard"
@@ -296,11 +309,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 45,
-    "mid": 61,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 58,
+    "mid": 78,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Oracle",
+      "Antique Cuirass"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Early lane is decent but matchup-dependent (best into dash-heavy heroes) and he needs some durability to consistently stick. Mid game spikes hard with Infernal Pursuit uptime plus sustain items, enabling repeated jumps in skirmishes; late stays strong as a counter-engage bruiser but can be kited or bursted if he can’t chain ult resets."
   },
   "proBuilds": [
     {
@@ -345,5 +368,43 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, Phoveus should first use his enhanced Basic Attack to hit the enemy hero and gain a shield. Follow up with his 1st Skill to chip away their HP, then use his enhanced 1st Skill for additional damage and to slow the target, and end with his 2nd Skill for more damage."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 3",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "In teamfights, Phoveus should use his enhanced Basic Attack to charge at the enemy while knocking them back and marking them. Then immediately follow up with his Ultimate. Next, hit the target with his 1st Skill, then use his 2nd skill and his Ultimate again. Finally, use the enhanced 1st Skill to mark the enemy once more, and use his Ultimate."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Gatotkaca",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Minotaur",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "The Barren Lands",
+  "race": "Human"
 }

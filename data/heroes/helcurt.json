@@ -6,7 +6,7 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
+    "Push",
     "Burst"
   ],
   "lane": "Jungle",
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2440,
-    "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 121,
-    "physicalDefense": 17,
+    "hp": 2480,
+    "hpRegen": 7.2,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 128,
+    "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.15",
     "attackSpeedRatio": 100,
     "movementSpeed": 255
@@ -225,7 +225,9 @@
       "synergyWith": [
         "Akai",
         "Barats",
-        "Gloo"
+        "Gloo",
+        "Baxia",
+        "Edith"
       ]
     }
   },
@@ -277,18 +279,29 @@
     "synergyHeroes": [
       {
         "name": "Akai",
-        "synergy": 5
+        "synergy": 2.8
       },
       {
         "name": "Barats",
-        "synergy": 5
+        "synergy": 2.6
       },
       {
         "name": "Gloo",
-        "synergy": 5
+        "synergy": 2.2
+      },
+      {
+        "name": "Baxia",
+        "synergy": 2.2
+      },
+      {
+        "name": "Edith",
+        "synergy": 1.9
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Helcurt can swiftly approach enemies with his mobility and quickly take down heroes like Layla, Chang'e, and Vale with his burst damage.",
+    "weakAgainstReason": "Helcurt should avoid tank heroes that he can't burst down, such as Fredrinn, Belerick, and Gatotkaca. Once Helcurt is caught by their CC, they can make short work of him with their teammates.",
+    "synergyReason": "Helcurt's Ultimate is a great tool to obscure the enemy's vision and makes it easier for him and his team to engage. Additionally, heroes with CC like Tigreal, Esmeralda, and Terizla work great with Helcurt to secure kills."
   },
   "mechanicCategory": [
     "Standard"
@@ -335,11 +348,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 63,
-    "mid": 59,
-    "late": 43,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 80,
+    "mid": 75,
+    "late": 55,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Blade of the Heptaseas",
+      "Hunter Strike",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "Helcurt’s early damage and fear/slow chain enables very punishing ganks, and Dark Night Falls at level 4 creates strong tempo and pick potential around early objectives. He tends to fall off later as enemies group tightly, gain defensive stats, and can punish his commit once vision-denial is less effective."
   },
   "proBuilds": [
     {
@@ -383,5 +406,42 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In teamfights, cast Helcurt's Ultimate to obscure the enemies' vision, then blink to their backline with his 1st Skill to hit with his Basic Attacks, and end with his 2nd Skill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, blink to the target using Helcurt's 1st Skill, then stack up stingers with his Basic Attacks and finish the combo with his 2nd Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Esmeralda",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Terizla",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Abyss",
+  "race": "Styx"
 }

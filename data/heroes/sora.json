@@ -489,7 +489,9 @@
       "synergyWith": [
         "Karrie",
         "Selena",
-        "Silvanna"
+        "Silvanna",
+        "Carmilla",
+        "Fanny"
       ]
     }
   },
@@ -537,18 +539,29 @@
     "synergyHeroes": [
       {
         "name": "Karrie",
-        "synergy": 5
+        "synergy": 2.3
       },
       {
         "name": "Selena",
-        "synergy": 5
+        "synergy": 2.1
       },
       {
         "name": "Silvanna",
-        "synergy": 5
+        "synergy": 2
+      },
+      {
+        "name": "Carmilla",
+        "synergy": 2
+      },
+      {
+        "name": "Fanny",
+        "synergy": 1.9
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Sora excels at diving in with explosive burst damage and AOE CC, so squishy heroes without escape abilities—like Layla, Miya, and Hanabi—will find themselves helpless against Sora's relentless assault.",
+    "weakAgainstReason": "Sora relies on landing his 1st Skill to get Cloudstep stacks. Heroes with high mobility or Knockbacks, like Fanny, Arlott, and Valir, can prevent Sora from gaining this precious resource.",
+    "synergyReason": "Sora's transformed Ultimate deals considerable damage, and pairing him with Tigreal, Minotaur, Gatotkaca, and other strong CC heroes will maximize Sora's damage potential."
   },
   "mechanicCategory": [
     "Standard"
@@ -599,11 +612,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 45,
-    "mid": 59,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 58,
+    "mid": 76,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Hunter Strike",
+      "War Axe",
+      "Brute Force Breastplate"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Pre-ultimate he’s mostly a mobility-and-trade fighter, but Shifting Skies unlocks his form swapping (Thunder for dive burst, Torrent for control/soak) and makes him much more influential in Turtle fights. He remains strong late due to flexible HP/ATK conversion and Cloudstep/True Art access, though he’s not as outright decisive as dedicated hypercarries."
   },
   "proBuilds": [
     {
@@ -648,5 +671,49 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Skill 3",
+        "Passive",
+        "Skill 2",
+        "Skill 1",
+        "Passive",
+        "Skill 3"
+      ],
+      "description": "When the opponent is focused on clearing Minions, poke them with Sora's 1st Skill, then use his 2nd Skill to create distance. Use the mobility from his 1st and 2nd Skill to effectively kite enemies. Sora's damage is reliant on hitting with his 1st Skill."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 3",
+        "Skill 1",
+        "Skill 2",
+        "Passive",
+        "Skill 3"
+      ],
+      "description": ""
+    }
+  ],
+  "connections": [
+    {
+      "name": "Gatotkaca",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Minotaur",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

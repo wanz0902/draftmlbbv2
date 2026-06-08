@@ -7,8 +7,8 @@
     "Support"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Control",
+    "Regen"
   ],
   "lane": "Roam",
   "lanes": [
@@ -212,7 +212,9 @@
       "synergyWith": [
         "Karrie",
         "Saber",
-        "Faramis"
+        "Faramis",
+        "Masha",
+        "Yve"
       ]
     }
   },
@@ -252,18 +254,29 @@
     "synergyHeroes": [
       {
         "name": "Karrie",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Saber",
-        "synergy": 5
+        "synergy": 1.5
       },
       {
         "name": "Faramis",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Masha",
+        "synergy": 1.5
+      },
+      {
+        "name": "Yve",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Kalea counters heroes who lack mobility like Layla and Chang'e.",
+    "weakAgainstReason": "However, Kalea cannot grab enemies with Control Immunity, so heroes like Diggie and Minotaur can effectively counter her.",
+    "synergyReason": "Kalea's strong single-target CC makes her work well with heroes who have high single-target burst, like Eudora, Harley, and Clint."
   },
   "mechanicCategory": [
     "Standard"
@@ -314,11 +327,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 55,
-    "mid": 63,
-    "late": 47,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 70,
+    "mid": 80,
+    "late": 60,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 9"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Dominance Ice",
+      "Immortality"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Kalea is oppressive once she has reliable engage (S2) and especially after level 4, where her Ultimate gives strong displacement/pick potential for ganks and early fights. She peaks mid game when skirmishes are frequent and targets are easier to isolate; late game she shifts more into utility/peel as enemies group and defensive items blunt her damage."
   },
   "proBuilds": [
     {
@@ -362,5 +385,50 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 2",
+        "Skill 3",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, Kalea should prioritize enemy Mages or Marksmen. Use the first part of her 2nd Skill to dash into an obstacle near the target, then dive down to CC them, and follow up with her Ultimate to slam them into your team. Use her 1st Skill to trigger her Passive, and unload her enhanced Basic Attacks on the target."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "While ganking with Kalea, use her 2nd Skill to close in and CC the target, then use her 1st Skill to activate her enhanced Basic Attacks and unleash them on the target."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Tsunami Slam",
+      "Tidal Strike",
+      "Wavebreaker"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Eudora",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Harley",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Clint",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Vonetis Sea",
+  "race": "Half-Human, Half-Serpent"
 }

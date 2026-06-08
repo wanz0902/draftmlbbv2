@@ -7,8 +7,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Push",
+    "Damage"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -19,14 +19,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2800,
+    "hpRegen": 8.4,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 118,
+    "physicalDefense": 23,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 12,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -190,7 +190,9 @@
       "synergyWith": [
         "Chip",
         "Lukas",
-        "Joy"
+        "Joy",
+        "Marcel",
+        "Faramis"
       ]
     }
   },
@@ -242,18 +244,29 @@
     "synergyHeroes": [
       {
         "name": "Chip",
-        "synergy": 5
+        "synergy": 11.3
       },
       {
         "name": "Lukas",
-        "synergy": 5
+        "synergy": 5.3
       },
       {
         "name": "Joy",
-        "synergy": 5
+        "synergy": 3
+      },
+      {
+        "name": "Marcel",
+        "synergy": 3
+      },
+      {
+        "name": "Faramis",
+        "synergy": 2.8
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Masha works well against Marksmen with low mobility, such as Ixia and Layla, as she can easily chase them down using her Ultimate.",
+    "weakAgainstReason": "Masha is countered by Fighters with strong Regen capabilities like Cici and Thamuz, because they can outlast Masha in a prolonged fight due to her comparatively lower Regen.",
+    "synergyReason": "Masha can maximize her effectiveness and damage when paired with utility Supports that provide extra Movement Speed and CC, such as Angela and Rafaela."
   },
   "mechanicCategory": [
     "Standard"
@@ -304,11 +317,21 @@
     "difficulty": 30
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 55,
-    "late": 59,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 70,
+    "late": 75,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Corrosion Scythe",
+      "Demon Hunter Sword",
+      "Golden Staff"
+    ],
+    "dominantPhase": null,
+    "description": "Masha’s threat ramps with items because her kit leans on repeated basic attacks and % max-HP damage, while her multi-HP-bar passive keeps her relevant as fights get longer. She’s playable early for lane pressure, but her real dueling and shredding power shows once she has attack-speed/on-hit cores."
   },
   "proBuilds": [
     {
@@ -353,5 +376,40 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 1",
+        "Passive",
+        "Skill 3",
+        "Skill 2"
+      ],
+      "description": "In teamfights, charge into an enemy with Masha's Ultimate, then use her 1st Skill followed by Basic Attacks to deal more damage. Whenever she loses an HP bar, use her Ultimate again to charge at the target and slow them with her 2nd Skill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Masha's 1st Skill to close the gap with the enemy and slow them with her 2nd Skill to engage. Follow up with Basic Attacks for more damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Rafaela",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Northern Vale",
+  "race": "Human"
 }

@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Finisher",
+    "Damage"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2410,
+    "hpRegen": 6.6,
+    "mana": 440,
+    "manaRegen": 3.4,
+    "physicalAttack": 120,
+    "physicalDefense": 15,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -158,7 +158,9 @@
       "synergyWith": [
         "Harith",
         "Roger",
-        "Popol and Kupa"
+        "Popol and Kupa",
+        "Aulus",
+        "Rafaela"
       ]
     }
   },
@@ -210,18 +212,29 @@
     "synergyHeroes": [
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 2.4
       },
       {
         "name": "Roger",
-        "synergy": 5
+        "synergy": 2.2
       },
       {
         "name": "Popol and Kupa",
-        "synergy": 5
+        "synergy": 2.1
+      },
+      {
+        "name": "Aulus",
+        "synergy": 1.7
+      },
+      {
+        "name": "Rafaela",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Layla's relatively longer attack range lets her counter slow Tanks like Tigreal and Belerick.",
+    "weakAgainstReason": "Layla is countered by Assassins with high burst damage, such as Karina and Ling, as they can get the jump on Layla and melt her easily.",
+    "synergyReason": "Layla works best with Tanks that can protect backline heroes, such as Minsitthar and Belerick, since their protection gives Layla more opportunities to deal damage."
   },
   "mechanicCategory": [
     "Standard"
@@ -267,11 +280,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 25,
-    "mid": 44,
-    "late": 69,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 32,
+    "mid": 56,
+    "late": 88,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Berserker's Fury",
+      "Scarlet Phantom",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Layla is vulnerable early due to no mobility and needing items to convert range into real DPS, so she mostly farms and pokes safely. She comes online mid-game with first crit items, then becomes a late-game teamfight win condition as her long-range DPS and ultimate threat scale hard with full crit/penetration."
   },
   "proBuilds": [
     {
@@ -316,5 +339,47 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3",
+        "Passive"
+      ],
+      "description": "In teamfights, first use Layla's 1st Skill to increase the range of her 2nd Skill. With the extra range, she can easily apply marks to enemies. Use her Ultimate to detonate them all for a hefty bit of damage, and finish off with Basic Attacks."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, first use Layla's 2nd Skill to apply Magic Mark on the enemy, then detonate it with her 1st Skill for AOE damage while getting extra range for Basic Attacks to further harass the enemy from afar."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Ixia",
+      "relationship": "CLOSE FRIEND"
+    },
+    {
+      "name": "Bruno",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Minsitthar",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Belerick",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

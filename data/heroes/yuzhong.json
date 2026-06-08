@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Regen",
+    "Damage"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2691,
+    "hpRegen": 8.2,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 122,
+    "physicalDefense": 23,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -186,7 +186,9 @@
       "synergyWith": [
         "Bane",
         "Sun",
-        "Guinevere"
+        "Guinevere",
+        "Suyou",
+        "Faramis"
       ]
     }
   },
@@ -234,18 +236,29 @@
     "synergyHeroes": [
       {
         "name": "Bane",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Sun",
-        "synergy": 5
+        "synergy": 1.5
       },
       {
         "name": "Guinevere",
-        "synergy": 5
+        "synergy": 1.4
+      },
+      {
+        "name": "Suyou",
+        "synergy": 1.2
+      },
+      {
+        "name": "Faramis",
+        "synergy": 1.2
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Yu Zhong counters squishy Fighter heroes such as Aulus and Zilong, because they can't easily dodge Yu Zhong's skills and have a hard time with him in the early game.",
+    "weakAgainstReason": "Yu Zhong is countered by nimble Marksman heroes such as Lesley and Karrie, since it's hard for Yu Zhong to land his skills, making him a vulnerable and easy target.",
+    "synergyReason": "Yu Zhong works well with Mages that can initiate with CC such as Vexana and Xavier. Their control effects allow Yu Zhong to land his skills more easily."
   },
   "mechanicCategory": [
     "Transform",
@@ -295,11 +308,21 @@
     "difficulty": 70
   },
   "powerCurve": {
-    "early": 56,
-    "mid": 64,
-    "late": 53,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 72,
+    "mid": 82,
+    "late": 68,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Bloodlust Axe",
+      "Queens Wings"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Yu Zhong is oppressive early in lane due to Sha Residue trades and self-heal, then peaks in mid-game teamfights when Black Dragon Form enables strong backline disruption and extended brawls. Late game he remains useful but can be kited/bursted more easily as carries reach full items and anti-heal/penetration rises."
   },
   "proBuilds": [
     {
@@ -344,5 +367,49 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 4",
+        "Skill 4",
+        "Skill 2",
+        "Skill 3",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, open with Yu Zhong's Ultimate and run into the enemy's formation while knocking them around. When the enemy's backline heroes are exposed, use his Ultimate again to enter Dragonoid Form, and unleash his combo starting with his 2nd Skill then 3rd Skill, then 1st Skill to deal tons of damage. Finally, use the enhanced Basic Attack from his 2nd Skill to finish off the enemy."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 3",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Yu Zhong's 2nd Skill to slow the enemy and leap on them using his 3rd Skill. When repositioning with the dash of his 3rd Skill, cast his 1st Skill to hit the enemy with the outer edge, and follow up with the enhanced Basic Attack from his 2nd Skill and finish the combo with a Sha Residue eruption."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Dragon Tail",
+      "Furious Dive",
+      "Soul Grip"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Vexana",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Xavier",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Cadia Riverlands",
+  "race": "Human"
 }

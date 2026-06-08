@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Support",
+    "Crowd Control"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -19,13 +19,13 @@
   "metaTier": "B",
   "baseStats": {
     "hp": 2440,
-    "hpRegen": 7,
+    "hpRegen": 6.8,
     "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 107,
-    "physicalDefense": 18,
+    "manaRegen": 3.8,
+    "physicalAttack": 97,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "0.99",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -263,7 +263,9 @@
       "synergyWith": [
         "Rafaela",
         "Lolita",
-        "Harley"
+        "Harley",
+        "Marcel",
+        "Harith"
       ]
     }
   },
@@ -315,18 +317,29 @@
     "synergyHeroes": [
       {
         "name": "Rafaela",
-        "synergy": 5
+        "synergy": 1.8
       },
       {
         "name": "Lolita",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Marcel",
+        "synergy": 1.4
+      },
+      {
+        "name": "Harith",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Luo Yi counters heroes with low mobility such as Eudora and Gord because they are easy targets for her Sigils and Yin-Yang Reactions.",
+    "weakAgainstReason": "Luo Yi is countered by Fighters or Tanks with high HP recovery like Uranus and Fredrinn because she can't deal enough damage to finish them off quickly.",
+    "synergyReason": "Luo Yi works best with Junglers who are often looking for fights around the map, such as Aamon and Karina, because she can use her Ultimate to cut down their travel time."
   },
   "mechanicCategory": [
     "Standard"
@@ -371,11 +384,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 48,
-    "mid": 63,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 62,
+    "mid": 80,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 9"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Divine Glaive"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Her early is decent once she has both marking tools to reliably trigger Yin-Yang Reaction for burst + micro-CC, but she’s limited by setup and positioning. Mid game is her peak because rotations/teleport plays and grouped fights let her repeatedly proc Reaction and chain shields; late she’s still dangerous but more punishable by long-range engage and pick tools."
   },
   "proBuilds": [
     {
@@ -420,5 +443,36 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In teamfights, use Luo Yi's 1st Skill to mark the enemy with a Yin/Yang Sigil and use it again on another nearby enemy to apply the opposite Sigil and trigger a Yin-Yang Reaction. Then repeat the process. If there is only one enemy, use Luo Yi's 2nd Skill to trigger Yin-Yang Reactions."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, use Luo Yi's 1st Skill to mark the enemy with a Yin/Yang Sigil, then use her 2nd Skill to summon Fire of Yang or Aqua of Yin in range of the target to trigger a Yin-Yang Reaction."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Aamon",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Karina",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Cadia Riverlands",
+  "race": "Human"
 }

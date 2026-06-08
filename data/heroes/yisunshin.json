@@ -7,8 +7,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Finisher",
+    "Chase"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -22,12 +22,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2508,
+    "hpRegen": 7,
+    "mana": 450,
+    "manaRegen": 3.4,
+    "physicalAttack": 120,
+    "physicalDefense": 19,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -191,7 +191,9 @@
       "synergyWith": [
         "Floryn",
         "Lesley",
-        "Odette"
+        "Odette",
+        "Irithel",
+        "Clint"
       ]
     }
   },
@@ -231,18 +233,29 @@
     "synergyHeroes": [
       {
         "name": "Floryn",
-        "synergy": 5
+        "synergy": 2.3
       },
       {
         "name": "Lesley",
-        "synergy": 5
+        "synergy": 1.5
       },
       {
         "name": "Odette",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Irithel",
+        "synergy": 1.5
+      },
+      {
+        "name": "Clint",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Yi Sun-shin counters heroes that lack CC like Uranus and Terizla who are at the mercy of his ability to jump in and out of melee range using his 2 weapons.",
+    "weakAgainstReason": "Yi Sun-shin is countered by heroes with CC skills, such as Franco and Kaja who can lock him down and stop him from freely swapping weapons.",
+    "synergyReason": "Yi Sun-shin works best with Fighters who can initiate, such as Alpha and Khaleed, so he can follow up and unleash his full damage after they have CC'd the enemy."
   },
   "mechanicCategory": [
     "Standard"
@@ -293,11 +306,21 @@
     "difficulty": 70
   },
   "powerCurve": {
-    "early": 51,
-    "mid": 63,
-    "late": 63,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 65,
+    "mid": 80,
+    "late": 80,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Hunter Strike",
+      "Blade of Despair",
+      "Malefic Roar"
+    ],
+    "dominantPhase": null,
+    "description": "He comes online early as a jungler with fast tempo and strong weapon-switch burst for picks, then peaks in mid game with Mountain Shocker for vision + engage/cleanup around objectives. He stays strong late due to hybrid assassin/marksman DPS and long-range poke, but isn’t uniquely dominant versus full-build frontlines."
   },
   "proBuilds": [
     {
@@ -341,5 +364,51 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 1",
+        "Passive",
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, start with Yi Sun-shin's Ultimate, then use his enhanced 1st Skill to send his Turtle Ship into the enemy to stun them. Follow up with ranged Basic Attacks, then use his 1st Skill to get close and perform 2 enhanced Basic Attacks. Tap his 2nd Skill to perform another slash, and secure the kill with 2 more enhanced Basic Attacks."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, Yi Sun-shin should use his enhanced Basic Attacks from a distance, then close in with his 1st Skill and slash the enemy with two enhanced Basic Attacks. Follow up with a slash from his 2nd Skill and finish with 2 more enhanced Basic Attacks."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Mountain Shocker",
+      "Traceless",
+      "Blood Floods"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Alpha",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Khaleed",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Cadia Riverlands",
+  "race": "Human"
 }

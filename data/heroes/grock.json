@@ -7,8 +7,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Crowd Control",
+    "Initiator"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -22,14 +22,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2900,
+    "hpRegen": 9,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 118,
+    "physicalDefense": 30,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -188,7 +188,9 @@
       "synergyWith": [
         "Saber",
         "Harith",
-        "Bruno"
+        "Bruno",
+        "Faramis",
+        "Valentina"
       ]
     }
   },
@@ -219,18 +221,29 @@
     "synergyHeroes": [
       {
         "name": "Saber",
-        "synergy": 5
+        "synergy": 1.8
       },
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 1.8
       },
       {
         "name": "Bruno",
-        "synergy": 5
+        "synergy": 1.4
+      },
+      {
+        "name": "Faramis",
+        "synergy": 1.3
+      },
+      {
+        "name": "Valentina",
+        "synergy": 1.2
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Grock works well against heroes who cannot Blink over his wallto escape his CC,such as Gord and Layla.",
+    "weakAgainstReason": "Grock is countered by Magic Damage heroes with Blink who can kite him with relative ease,such as Kimmy and Harley.",
+    "synergyReason": "Grock's Ultimate is a powerful CC that covers a wide area,so he pairs well with Mages like Odette and Pharsa to maximize their AOE damage."
   },
   "mechanicCategory": [
     "Standard"
@@ -283,11 +296,21 @@
     "difficulty": 60
   },
   "powerCurve": {
-    "early": 63,
-    "mid": 58,
-    "late": 45,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 80,
+    "mid": 74,
+    "late": 58,
+    "spikeLevels": [
+      "Lv 1",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Warrior Boots",
+      "Dominance Ice",
+      "Antique Cuirass"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "Grock is oppressive early thanks to terrain-based tankiness, strong base damage, and wall setups that create guaranteed CC angles for kills. Mid game he remains a strong initiator/pick tank, but late game his impact becomes more execution-dependent as enemies have higher mobility/defensive tools and his damage doesn’t scale like true late-game carries."
   },
   "proBuilds": [
     {
@@ -331,5 +354,41 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 3",
+        "Skill 1",
+        "Passive",
+        "Passive"
+      ],
+      "description": "In teamfights,initiate with Grock's 2nd Skill to trap the enemies,then charge into the wall with his Ultimate.While the enemies are airborne, find a good angle to slam them into the wall with his 1st Skill and send them airborne again,then finish up with Basic Attacks."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Skill 3",
+        "Passive",
+        "Passive"
+      ],
+      "description": "In small skirmishes,use Grock's 2nd Skill to knock the enemy toward him,then use his 1st Skill to slam them into the wall.Use his Ultimate to charge into the wall and knock them airborne again,and finish the job with Basic Attacks."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Odette",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Pharsa",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "The Barren Lands",
+  "race": "Stone Titan"
 }

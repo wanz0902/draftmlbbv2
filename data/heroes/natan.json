@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Burst",
+    "Magic Damage"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2460,
+    "hpRegen": 6.8,
+    "mana": 455,
+    "manaRegen": 3.4,
+    "physicalAttack": 118,
+    "physicalDefense": 17,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -154,7 +154,9 @@
       "synergyWith": [
         "Diggie",
         "Chip",
-        "Lolita"
+        "Lolita",
+        "Fanny",
+        "Valentina"
       ]
     }
   },
@@ -206,18 +208,29 @@
     "synergyHeroes": [
       {
         "name": "Diggie",
-        "synergy": 5
+        "synergy": 2.8
       },
       {
         "name": "Chip",
-        "synergy": 5
+        "synergy": 2.6
       },
       {
         "name": "Lolita",
-        "synergy": 5
+        "synergy": 2.2
+      },
+      {
+        "name": "Fanny",
+        "synergy": 1.9
+      },
+      {
+        "name": "Valentina",
+        "synergy": 1.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Natan is strong against Tanks with low mobility such as Tigreal and Gatotkaca because he can easily avoid their control abilities with his UIltimate and get more hits in with his Basic Attacks on slower targets.",
+    "weakAgainstReason": "Natan is countered by heroes with targeted control and high burst like Saber and Eudora that can lock him down and finish him off.",
+    "synergyReason": "Natan's Ultimate allows him to blink a great distance, so he works best with initiator heroes such as Johnson and Alpha because he can dive with them and unleash a lot of damage."
   },
   "mechanicCategory": [
     "Standard"
@@ -263,11 +276,21 @@
     "difficulty": 20
   },
   "powerCurve": {
-    "early": 39,
-    "mid": 55,
-    "late": 66,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 50,
+    "mid": 70,
+    "late": 85,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Feather of Heaven",
+      "Golden Staff",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "He’s relatively manageable early before he has levels and attack-speed items, but ramps hard once Entropy? enables clone DPS and cooldown cycling for mid-game fights. With 2–3 core items, his sustained mixed damage and attack effects become dominant in late-game front-to-back teamfights."
   },
   "proBuilds": [
     {
@@ -312,5 +335,41 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 2",
+        "Skill 1",
+        "Passive",
+        "Skill 3"
+      ],
+      "description": "In teamfights, summon a Reverse-Clone with Natan's Ultimate, then use his 2nd Skill followed by his 1st Skill to knockback and damage enemies, and finish with a barrage of Basic Attacks. Depending on the situation, Natan's Ultimate can also be used to chase or escape."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Natan's 1st Skill and Basic Attacks to chip away at the enemy. When their HP is low enough, use his 2nd Skill to knockback the enemy and finish them off with Basic Attacks."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Johnson",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Alpha",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

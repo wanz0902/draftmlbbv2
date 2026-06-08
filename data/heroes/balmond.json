@@ -7,7 +7,7 @@
   ],
   "specialty": [
     "Damage",
-    "Crowd Control"
+    "Regen"
   ],
   "lane": "Jungle",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2558,
-    "hpRegen": 9,
-    "mana": 400,
-    "manaRegen": 15,
+    "hp": 2709,
+    "hpRegen": 8.2,
+    "mana": "0",
+    "manaRegen": "0",
     "physicalAttack": 119,
-    "physicalDefense": 25,
+    "physicalDefense": 22,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.06",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -249,7 +249,9 @@
       "synergyWith": [
         "Argus",
         "Aldous",
-        "Sun"
+        "Sun",
+        "Johnson",
+        "Atlas"
       ]
     }
   },
@@ -301,18 +303,29 @@
     "synergyHeroes": [
       {
         "name": "Argus",
-        "synergy": 5
+        "synergy": 1.8
       },
       {
         "name": "Aldous",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Sun",
-        "synergy": 5
+        "synergy": 1.7
+      },
+      {
+        "name": "Johnson",
+        "synergy": 1.6
+      },
+      {
+        "name": "Atlas",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Balmond is strong against squishy heroes who lack the ability to escape once he closes the gap on them, such as Layla and Eudora.",
+    "weakAgainstReason": "Balmond is countered by ranged heroes who can deal damage to Balmond outside of his attack range, such as Lesley and Irithel.",
+    "synergyReason": "Balmond is best with Support heroes that can boost his Mobility and Survivability. Examples include Angela and Rafaela."
   },
   "mechanicCategory": [
     "Standard"
@@ -363,11 +376,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 58,
-    "mid": 56,
-    "late": 44,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 74,
+    "mid": 72,
+    "late": 56,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Bloodlust Axe",
+      "Queen's Wings"
+    ],
+    "dominantPhase": null,
+    "description": "Balmond is strong early with high base damage, sustain from Bloodthirst, and fast clears to force fights around lanes/jungle. He stays relevant mid with Cyclone Sweep pressure and Lethal Counter executes, but late game he’s easier to kite and struggles to reach backliners without heavier team setup."
   },
   "proBuilds": [
     {
@@ -411,5 +434,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3"
+      ],
+      "description": "Balmond can close in on the enemy with Soul Lock, follow up with Cyclone Sweep for continuous damage, then cast his Ultimate to finish off low HP enemies."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive",
+        "Skill 3"
+      ],
+      "description": "Balmond can close in on the enemy with Soul Lock, follow up with Cyclone Sweep for continuous damage, then cast his Ultimate to finish off low HP enemies."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Rafaela",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Abyss",
+  "race": "Orc"
 }

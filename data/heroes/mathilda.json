@@ -7,8 +7,8 @@
     "Support"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Initiator",
+    "Guard"
   ],
   "lane": "Roam",
   "lanes": [
@@ -19,14 +19,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2520,
+    "hpRegen": 7.4,
+    "mana": 475,
+    "manaRegen": 3.6,
+    "physicalAttack": 108,
+    "physicalDefense": 19,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -190,7 +190,9 @@
       "synergyWith": [
         "Lolita",
         "Marcel",
-        "Khufra"
+        "Khufra",
+        "Atlas",
+        "Odette"
       ]
     }
   },
@@ -242,18 +244,29 @@
     "synergyHeroes": [
       {
         "name": "Lolita",
-        "synergy": 5
+        "synergy": 6.2
       },
       {
         "name": "Marcel",
-        "synergy": 5
+        "synergy": 4.9
       },
       {
         "name": "Khufra",
-        "synergy": 5
+        "synergy": 3.7
+      },
+      {
+        "name": "Atlas",
+        "synergy": 3.6
+      },
+      {
+        "name": "Odette",
+        "synergy": 3.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Mathilda excels in harassment and single-target CC, making her a great counter to squishy heroes with no escape skills, like Gord and Vale.",
+    "weakAgainstReason": "Mathilda is countered by Tanks with multiple CC skills, such as Franco and Minsitthar.",
+    "synergyReason": "Mathilda works well with high burst damage heroes who can use Guiding Wind and follow up her Ultimate to secure kills, such as Saber and Eudora."
   },
   "mechanicCategory": [
     "Ally Guidance",
@@ -303,11 +316,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 55,
-    "mid": 59,
-    "late": 47,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 70,
+    "mid": 75,
+    "late": 60,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Flask of the Oasis",
+      "Enchanted Talisman",
+      "Dominance Ice"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Mathilda is impactful early-mid due to roaming tempo, strong shielding/mobility, and pick potential once her ultimate is online for reliable engage/peel. Late game her damage is less threatening and she becomes more utility-reliant, so her influence depends on enabling carries rather than solo plays."
   },
   "proBuilds": [
     {
@@ -351,5 +374,46 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive",
+        "Skill 3"
+      ],
+      "description": "In the laning phase, use Mathilda's 1st Skill in advance and keep moving to gather wisps, then use her 2nd Skill to get close to the enemy\nand unleash all her wisps at the target before ending with an enhanced Basic Attack. Use her Ultimate to secure the kill if the enemy is low on HP."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3"
+      ],
+      "description": "In teamfights, first activate Mathilda's 1st skill,\nthen immediately use her 2nd Skill to get to a good position to initiate from\nand unleash her Ultimate on the primary target. This combo allows Mathilda to quickly CC a key enemy hero, and lets an ally follow up by using Guiding Wind from her 2nd Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Clint",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Claude",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Saber",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Eudora",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

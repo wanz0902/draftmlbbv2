@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Burst",
+    "Support"
   ],
   "lane": "EXP",
   "lanes": [
@@ -21,12 +21,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2681,
+    "hpRegen": 8,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 118,
+    "physicalDefense": 22,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -162,7 +162,9 @@
       "synergyWith": [
         "Gloo",
         "Barats",
-        "Tigreal"
+        "Tigreal",
+        "Baxia",
+        "Atlas"
       ]
     }
   },
@@ -214,18 +216,29 @@
     "synergyHeroes": [
       {
         "name": "Gloo",
-        "synergy": 5
+        "synergy": 2.8
       },
       {
         "name": "Barats",
-        "synergy": 5
+        "synergy": 2
       },
       {
         "name": "Tigreal",
-        "synergy": 5
+        "synergy": 1.9
+      },
+      {
+        "name": "Baxia",
+        "synergy": 1.8
+      },
+      {
+        "name": "Atlas",
+        "synergy": 1.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Aldous is strong against heroes who cannot pressure him in the early game, so that he can easily build up the damage buff for his 1st Skill. Such as Zilong and Leomord.",
+    "weakAgainstReason": "Aldous is countered by heroes who are strong in the early game. They would make it very difficult for Aldous to build up the damage buff he needs. Heroes like Martis and Dyrroth are good examples here.",
+    "synergyReason": "Aldous works well with heroes that are strong in the early game so that he can farm efficiently, such as Balmond and Bruno."
   },
   "mechanicCategory": [
     "Standard"
@@ -276,11 +289,21 @@
     "difficulty": 60
   },
   "powerCurve": {
-    "early": 25,
-    "mid": 45,
-    "late": 70,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 32,
+    "mid": 58,
+    "late": 90,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Endless Battle",
+      "Blade of Despair",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Aldous is weak early because he needs time to farm Soul Steal stacks and is punishable before he has threat ranges. Mid game improves with ultimate pick potential and first damage item, but he becomes dominant late when stacks + crit/pen items let him one-shot key targets and swing Lord fights."
   },
   "proBuilds": [
     {
@@ -325,5 +348,41 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 3",
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, Use Aldous' Ultimate to gain vision on the enemy team, then use his Ultimate again to dash to the most vulnerable target. After the dash, use Aldous' 1st and 2nd skill combo to hit the enemy with his enhanced Basic Attacks."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, Use Aldous' 1st Skill to enhance his next Basic Attack,\nthen his 2nd Skill to close in on the enemy to hit them with his enhanced attack. Follow with another 1st Skill to hit the enemy with another enhanced Basic Attack."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Balmond",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Bruno",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Demigod"
 }

@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Finisher",
+    "Chase"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2478,
+    "hpRegen": 6.8,
+    "mana": 443,
+    "manaRegen": 3.4,
+    "physicalAttack": 118,
+    "physicalDefense": 17,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -187,7 +187,9 @@
       "synergyWith": [
         "Harith",
         "Faramis",
-        "Marcel"
+        "Marcel",
+        "Phoveus",
+        "Yve"
       ]
     }
   },
@@ -239,18 +241,29 @@
     "synergyHeroes": [
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 2.9
       },
       {
         "name": "Faramis",
-        "synergy": 5
+        "synergy": 2.8
       },
       {
         "name": "Marcel",
-        "synergy": 5
+        "synergy": 1.8
+      },
+      {
+        "name": "Phoveus",
+        "synergy": 1.7
+      },
+      {
+        "name": "Yve",
+        "synergy": 1.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Moskov's 1st Skill provides a blink effect, making him a threat to fighters with poor mobility like Thamuz and Balmond.",
+    "weakAgainstReason": "Moskov is countered by heroes with high mobility, such as Lancelot and Natalia, who can quickly close the gap and take him out.",
+    "synergyReason": "Moskov works well with heroes like Atlas and Gatotkaca who can CC groups of enemies so he can focus on maximizing the damage of his piercing AOE."
   },
   "mechanicCategory": [
     "Standard"
@@ -286,8 +299,8 @@
   ],
   "metaSource": "mlbb.tools",
   "metaUpdatedAt": "2026-06-08",
-  "winRate": 49.9,
-  "pickRate": 1,
+  "winRate": 49.6,
+  "pickRate": 1.1,
   "banRate": 0.4,
   "heroAttributes": {
     "durability": 20,
@@ -296,11 +309,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 39,
-    "mid": 55,
-    "late": 67,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 50,
+    "mid": 70,
+    "late": 86,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Demon Hunter Sword",
+      "Golden Staff",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Early is decent due to mobility and kill setups if he can line up wall/hero stuns, but he’s still item-dependent as a marksman. Mid game improves with ultimate reposition picks and faster DPS, while late game he scales extremely well because penetration basics + on-hit builds shred frontlines and backlines if he keeps safe positioning."
   },
   "proBuilds": [
     {
@@ -345,5 +368,42 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Moskov's Ultimate to slow a target, then activate it again to blink behind them and use his 2nd Skill to knock them into a stun before finishing them off with Basic Attacks."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Moskov's 1st Skill to blink to a position to stun the target with his 2nd Skill, then get in as many Basic Attacks as possible to reduce the cooldown of his skills."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Fredrinn",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Gatotkaca",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Khaleed",
+      "relationship": "RIVAL"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Human (Corrupted)"
 }

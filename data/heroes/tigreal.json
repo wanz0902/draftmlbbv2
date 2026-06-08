@@ -6,8 +6,7 @@
     "Tank"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Crowd Control"
   ],
   "lane": "Roam",
   "lanes": [
@@ -18,12 +17,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2581,
-    "hpRegen": 8,
-    "mana": 500,
-    "manaRegen": 15,
+    "hp": 2890,
+    "hpRegen": 8.8,
+    "mana": 450,
+    "manaRegen": 3.2,
     "physicalAttack": 112,
-    "physicalDefense": 20,
+    "physicalDefense": 28,
     "magicPower": 0,
     "magicDefense": 15,
     "attackSpeed": "1.03",
@@ -146,7 +145,9 @@
       "synergyWith": [
         "Aldous",
         "Alucard",
-        "Natalia"
+        "Natalia",
+        "Zilong",
+        "Chou"
       ]
     }
   },
@@ -198,18 +199,29 @@
     "synergyHeroes": [
       {
         "name": "Aldous",
-        "synergy": 5
+        "synergy": 1.9
       },
       {
         "name": "Alucard",
-        "synergy": 5
+        "synergy": 1.8
       },
       {
         "name": "Natalia",
-        "synergy": 5
+        "synergy": 1.8
+      },
+      {
+        "name": "Zilong",
+        "synergy": 1.7
+      },
+      {
+        "name": "Chou",
+        "synergy": 1.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Tigreal's Passive can negate enemy Basic Attacks, making him strong against heroes that deal damage with their Basic Attacks, such as Zilong and Freya.",
+    "weakAgainstReason": "But as a melee hero, Tigreal is countered by Ranged Mage heroes like Chang'e and Zhask.",
+    "synergyReason": "Tigreal works well with heroes with strong initiation skills, that gives him a better chance to hit the enemies with his CC skills, such as Vexana and Odette."
   },
   "mechanicCategory": [
     "Standard"
@@ -258,11 +270,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 41,
-    "mid": 58,
-    "late": 48,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 52,
+    "mid": 74,
+    "late": 62,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 10"
+    ],
+    "coreItems": [
+      "Dominance Ice",
+      "Athena's Shield",
+      "Immortality"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Tigreal’s early is mostly setup/peel and he’s limited by cooldowns and lacking the decisive pull before level 4. Mid game is his best phase because Implosion enables fight-winning picks around Turtle and towers; late game he remains valuable, but engages become riskier due to higher burst and CC punishing his channel."
   },
   "proBuilds": [
     {
@@ -306,5 +328,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, Tigreal should cast his 2nd Skill to charge in and then pull the enemy team towards him with his Ultimate. At the end of his CC, cast his 2nd Skill again to extend it, then use his 1st Skill to deal damage."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, Tigreal can use his 2nd Skill to charge the enemy target and knock them airborne by casting it again. He then finishes with his 1st Skill to deal damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Vexana",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Odette",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

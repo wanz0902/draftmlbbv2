@@ -7,7 +7,7 @@
   ],
   "specialty": [
     "Burst",
-    "Poke"
+    "Damage"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -19,13 +19,13 @@
   "metaTier": "B",
   "baseStats": {
     "hp": 2440,
-    "hpRegen": 6,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 115,
-    "physicalDefense": 18,
+    "hpRegen": 6.8,
+    "mana": 510,
+    "manaRegen": 4,
+    "physicalAttack": 98,
+    "physicalDefense": 17,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 12,
     "attackSpeed": "1.01",
     "attackSpeedRatio": 100,
     "movementSpeed": 240
@@ -402,7 +402,9 @@
       "synergyWith": [
         "Chip",
         "Ixia",
-        "Harley"
+        "Harley",
+        "Johnson",
+        "Barats"
       ]
     }
   },
@@ -454,18 +456,29 @@
     "synergyHeroes": [
       {
         "name": "Chip",
-        "synergy": 5
+        "synergy": 3.6
       },
       {
         "name": "Ixia",
-        "synergy": 5
+        "synergy": 2
       },
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 1.8
+      },
+      {
+        "name": "Johnson",
+        "synergy": 1.7
+      },
+      {
+        "name": "Barats",
+        "synergy": 1.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Lunox counters heroes that lack burst damage and healing, such as Yve and Lylia, because Lunox can use her self-healing to get the upper hand in a trade.",
+    "weakAgainstReason": "Lunox is countered by heroes with high mobility since her 2nd Skill has limited range and she lacks CC. Nimble heroes like Nolan and Ling can get in and out of her range all too easily.",
+    "synergyReason": "Lunox is best paired with heroes with strong CC abilities like Franco and Minotaur. While Lunox lacks hard CC, if she can spam her skills on a stationary target, she can deal a ton of damage."
   },
   "mechanicCategory": [
     "Dual State Ultimate",
@@ -512,11 +525,21 @@
     "difficulty": 90
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 61,
-    "late": 63,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 78,
+    "late": 80,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Genius Wand",
+      "Holy Crystal",
+      "Divine Glaive"
+    ],
+    "dominantPhase": null,
+    "description": "She stabilizes lane early with low-cooldown poke and self-heal, then spikes hard at ultimate unlock where Darkening enables rapid Chaos Assault spam while Brilliance gives invulnerability for outplays. With penetration + high magic power, her sustained/burst DPS remains excellent into late game (especially versus tanks due to max-HP damage)."
   },
   "proBuilds": [
     {
@@ -561,5 +584,48 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Skill 3",
+        "Skill 1",
+        "Passive",
+        "Skill 4"
+      ],
+      "description": "In teamfights, use Lunox's 3rd Skill to slow enemies first and follow up with her 2nd Skill to gain the Power of Chaos, then activate her Darkening Ultimate and spam her 2nd Skill for a lot of damage. Afterwards, use her 1st Skill to gain the Power of Order, then activate her Brilliance Ultimate to become invincible and deal damage to nearby enemies."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Lunox's 3rd Skill to slow the opponent and her 2nd Skill to poke. When she takes damage, use her 1st Skill to heal back up."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Starlight Pulse",
+      "Chaos Assault",
+      "Cosmic Fission"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Franco",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Minotaur",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Agelta Drylands",
+  "race": "Light Elf"
 }

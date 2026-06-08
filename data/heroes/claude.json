@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Burst",
+    "Chase"
   ],
   "lane": "Gold",
   "lanes": [
@@ -21,12 +21,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2470,
+    "hpRegen": 6.8,
+    "mana": 443,
+    "manaRegen": 3.4,
+    "physicalAttack": 114,
+    "physicalDefense": 17,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -190,7 +190,9 @@
       "synergyWith": [
         "Harith",
         "Popol and Kupa",
-        "Angela"
+        "Angela",
+        "Gord",
+        "Chip"
       ]
     }
   },
@@ -242,18 +244,29 @@
     "synergyHeroes": [
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 3
       },
       {
         "name": "Popol and Kupa",
-        "synergy": 5
+        "synergy": 1.1
       },
       {
         "name": "Angela",
-        "synergy": 5
+        "synergy": 1
+      },
+      {
+        "name": "Gord",
+        "synergy": 0.9
+      },
+      {
+        "name": "Chip",
+        "synergy": 0.9
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Claude is strong against heroes with weak CC abilities and poor Mobility, so he can easily dodge their attacks with his 2nd Skill, such as Vexana and Luo Yi.",
+    "weakAgainstReason": "Claude is countered by heroes with powerful CC abilities. Their CC abilities will cause Claude to lose his Mobility advantage. Like Eudora and Franco.",
+    "synergyReason": "Claude works best with heroes who can buff him, like Angela and Faramis."
   },
   "mechanicCategory": [
     "Standard"
@@ -300,11 +313,21 @@
     "difficulty": 60
   },
   "powerCurve": {
-    "early": 35,
-    "mid": 59,
-    "late": 66,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 45,
+    "mid": 75,
+    "late": 85,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Demon Hunter Sword",
+      "Golden Staff",
+      "Wind of Nature"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Claude’s lane is mediocre early because he relies on attack-speed/on-hit items to convert his kit into real DPS, but becomes very strong once he has DHs + Golden Staff for Blazing Duet shred. Late game he’s a dominant teamfight marksman due to high sustained AoE DPS and safety via Battle Mirror Image and defensive item timings."
   },
   "proBuilds": [
     {
@@ -349,5 +372,46 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3"
+      ],
+      "description": "In teamfights, Claude should use his 1st Skill to stack up his buff first, and look for the best opportunities to get close to enemies with his 2nd Skill, and then use his Ultimate to finish them off."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Skill 3"
+      ],
+      "description": "In the laning phase, Claude can use his 1st Skill to poke the enemy, and use his 2nd Skill to close in on them when their HP is low, then use his Ultimate to kill them."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Clint",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Mathilda",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Faramis",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

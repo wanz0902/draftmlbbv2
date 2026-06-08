@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Finisher",
+    "Burst"
   ],
   "lane": "Gold",
   "lanes": [
@@ -21,12 +21,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2510,
+    "hpRegen": 7,
+    "mana": 450,
+    "manaRegen": 3.4,
+    "physicalAttack": 118,
+    "physicalDefense": 17,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -190,7 +190,9 @@
       "synergyWith": [
         "Brody",
         "Floryn",
-        "Mathilda"
+        "Mathilda",
+        "Harith",
+        "Masha"
       ]
     }
   },
@@ -242,18 +244,29 @@
     "synergyHeroes": [
       {
         "name": "Brody",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Floryn",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Mathilda",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Harith",
+        "synergy": 1.4
+      },
+      {
+        "name": "Masha",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Bruno is strong against Marksmen that are weaker in the early game like Hanabi and Miya who Bruno can out-trade thanks to his high damage.",
+    "weakAgainstReason": "Bruno is countered by Tanks with high Physical Defense like Gatotkaca and Fredrinn that take greatly reduced damage from his attacks.",
+    "synergyReason": "Bruno is best with Supports that can force enemies to engage and allow him to make use of his early game damage, such as Franco and Khufra."
   },
   "mechanicCategory": [
     "Standard"
@@ -300,11 +313,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 39,
-    "mid": 53,
-    "late": 64,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 50,
+    "mid": 68,
+    "late": 82,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Berserker's Fury",
+      "Scarlet Phantom",
+      "Windtalker"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Bruno’s damage ramps heavily with crit chance/crit damage itemization and repeated Powerball pickups, so he’s average early and starts taking over once he has at least one crit core. Late game he becomes dominant with high crit burst and sustained DPS in teamfights, especially when ultimate can bounce through grouped targets."
   },
   "proBuilds": [
     {
@@ -349,5 +372,49 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 3",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, start with Bruno's 1st Skill to get a Powerball and try to get in as much damage as possible. Look for enemies that are close together to use his Ultimate on, then use his Basic Attacks and 2nd Skill to secure the kill or retreat from danger."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Bruno's 1st Skill to get a Powerball, and start attacking the enemy while picking up the ball. When the target is low, stun them with his 2nd Skill and finish them off with Basic Attacks."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Layla",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Johnson",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Franco",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Khufra",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

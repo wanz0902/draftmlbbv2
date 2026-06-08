@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Finisher",
+    "Damage"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2510,
+    "hpRegen": 6.8,
+    "mana": 448,
+    "manaRegen": 3.4,
+    "physicalAttack": 116,
+    "physicalDefense": 17,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -158,7 +158,9 @@
       "synergyWith": [
         "Franco",
         "Balmond",
-        "Roger"
+        "Roger",
+        "Lolita",
+        "Harith"
       ]
     }
   },
@@ -210,18 +212,29 @@
     "synergyHeroes": [
       {
         "name": "Franco",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Balmond",
-        "synergy": 5
+        "synergy": 1.5
       },
       {
         "name": "Roger",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Lolita",
+        "synergy": 1.4
+      },
+      {
+        "name": "Harith",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Hanabi counters heroes that rely heavily on CC abilities, such as Tigreal and Belerick, since Hanabi can use her 1st Skill to ignore CC.",
+    "weakAgainstReason": "Hanabi is weak against heroes with high burst damage, such as Lancelot and Zilong, because they can quickly take down her shield.",
+    "synergyReason": "Hanabi works well with heroes who can initiate with CC, such as Carmilla and Atlas, so she can focus on maximizing her bounce and Ultimate damage."
   },
   "mechanicCategory": [
     "Standard"
@@ -267,11 +280,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 28,
-    "mid": 44,
-    "late": 66,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 36,
+    "mid": 56,
+    "late": 84,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Demon Hunter Sword",
+      "Golden Staff",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "She’s relatively weak early due to item dependence and limited burst, mostly farming and poking with bounces. With core attack-speed/on-hit items she becomes a dominant late-game teamfight DPS, and her shield-based CC immunity plus AOE bounces make front-to-back fights very strong."
   },
   "proBuilds": [
     {
@@ -316,5 +339,49 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Hanabi's 2nd Skill to poke the enemy and mark them, and continue to chip away their HP with Basic Attack bounces before using her 1st Skill and engaging them head-on."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 3",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, start with Hanabi's 2nd Skill to slow the enemies, then follow up with her Ultimate to immobilize them and let loose with Basic Attacks. During this time, use her 1st Skill accordingly for more damage and survivability, and keep up the damage with her bouncing Basic Attacks."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Hayabusa",
+      "relationship": "CHILDHOOD SWEETHEARTS"
+    },
+    {
+      "name": "Kagura",
+      "relationship": "CLOSE FRIEND"
+    },
+    {
+      "name": "Carmilla",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Cadia Riverlands",
+  "race": "Human"
 }

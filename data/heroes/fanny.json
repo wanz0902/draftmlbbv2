@@ -5,8 +5,8 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
-    "Reap"
+    "Chase",
+    "Finisher"
   ],
   "lane": "Jungle",
   "releaseYear": 2016,
@@ -14,14 +14,14 @@
   "metaTier": "S",
   "pickBanPresence": 85,
   "baseStats": {
-    "hp": 2267,
-    "hpRegen": 6,
-    "mana": 100,
-    "manaRegen": 0,
-    "physicalAttack": 126,
-    "physicalDefense": 16,
+    "hp": 2540,
+    "hpRegen": 7,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 130,
+    "physicalDefense": 20,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.11",
     "attackSpeedRatio": 100,
     "movementSpeed": 265
@@ -216,7 +216,9 @@
       "synergyWith": [
         "Faramis",
         "Natan",
-        "Masha"
+        "Masha",
+        "Kaja",
+        "Miya"
       ],
       "draftPairings": [
         "Angela + Fanny"
@@ -316,17 +318,28 @@
     "synergyHeroes": [
       {
         "name": "Faramis",
-        "synergy": 5
+        "synergy": 2.6
       },
       {
         "name": "Natan",
-        "synergy": 5
+        "synergy": 1.9
       },
       {
         "name": "Masha",
-        "synergy": 5
+        "synergy": 1.7
+      },
+      {
+        "name": "Kaja",
+        "synergy": 1.4
+      },
+      {
+        "name": "Miya",
+        "synergy": 1.4
       }
-    ]
+    ],
+    "strongAgainstReason": "Fanny counters squishy heroes that lack targeted CC like Karrie and Irithel who cannot stop Fanny's extreme mobility while she bursts them down.",
+    "weakAgainstReason": "Fanny is countered by heroes that can restrict mobility, such as Kaja and Khufra, since they can easily shutdown her main advantage.",
+    "synergyReason": "Fanny works best with heroes that can chain AOE CC to keep the enemy pinned, such as Minotaur and Gatotkaca, so she can deal damage without interruption."
   },
   "heroAttributes": {
     "durability": 60,
@@ -335,11 +348,21 @@
     "difficulty": 100
   },
   "powerCurve": {
-    "early": 66,
-    "mid": 59,
-    "late": 43,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 85,
+    "mid": 75,
+    "late": 55,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Bloodlust Axe",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "Fanny is dominant early once Steel Cable mobility enables fast clears and constant ganks, and she snowballs hard off early kills. As the game goes late, grouped enemies, CC, and armor items reduce her consistency and make dives much riskier."
   },
   "proBuilds": [
     {
@@ -383,5 +406,45 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "In teamfights, use Fanny's 2nd Skill repeatedly to move around and use her 1st Skill when in the middle of the enemy. Look for low HP enemies to finish off with her Ultimate."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, use Fanny's 2nd Skill at walls to quickly maneuver around and use her 1st Skill when near the enemy. Keep using her 2nd Skill to pass through the enemy to automatically trigger her 1st Skill, and use her Ultimate to secure kills."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Cut Throat",
+      "Steel Cable",
+      "Tornado Strike"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Minotaur",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Gatotkaca",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

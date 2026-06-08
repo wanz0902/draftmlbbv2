@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Charge",
+    "Damage"
   ],
   "lane": "EXP",
   "lanes": [
@@ -21,12 +21,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2591,
+    "hpRegen": 7.8,
+    "mana": 450,
+    "manaRegen": 3.4,
+    "physicalAttack": 122,
+    "physicalDefense": 21,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -162,7 +162,9 @@
       "synergyWith": [
         "Johnson",
         "Gatotkaca",
-        "Tigreal"
+        "Tigreal",
+        "Terizla",
+        "Gloo"
       ]
     }
   },
@@ -214,18 +216,29 @@
     "synergyHeroes": [
       {
         "name": "Johnson",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Gatotkaca",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Tigreal",
-        "synergy": 5
+        "synergy": 1.4
+      },
+      {
+        "name": "Terizla",
+        "synergy": 1.3
+      },
+      {
+        "name": "Gloo",
+        "synergy": 1.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Alpha counters heroes that lack mobility, such as Layla and Ixia, because these heroes have a hard time avoiding his skills.",
+    "weakAgainstReason": "Alpha is countered by heroes that are very mobile, such as Chou and Gusion, because they have a lot of ways to dodge Alpha's skills.",
+    "synergyReason": "Alpha works well with heroes that can initiate with CC like Vexana and Selena. With their help, he'll have a much easier time landing his skills."
   },
   "mechanicCategory": [
     "Standard"
@@ -276,11 +289,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 53,
-    "mid": 61,
-    "late": 52,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 68,
+    "mid": 78,
+    "late": 66,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Hunter Strike",
+      "Queen's Wings"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Alpha becomes threatening once he has Ultimate for reliable engage/pick, then peaks in mid game with War Axe stacks and cooldown-driven Beta true damage for sustained skirmishes. Late game he’s still useful but can be kited/burst before fully healing unless he gets a clean ult angle."
   },
   "proBuilds": [
     {
@@ -325,5 +348,43 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Alpha's Ultimate to charge toward enemy's key target, and use his 2nd Skill, follow up with his 1st Skill to slow them and continuously dish out damage to the locked-on targets with Basic Attacks."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, slow the enemy with Alpha's 1st Skill, then hit them with his 2nd Skill to have Beta to lock on to them. Finish with Basic Attacks while Beta fires at the locked-on target."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Vexana",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Selena",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Beatrix",
+      "relationship": "ENEMY"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Agelta Drylands",
+  "race": "Cyborg"
 }

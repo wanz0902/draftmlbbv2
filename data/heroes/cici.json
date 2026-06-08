@@ -7,7 +7,7 @@
   ],
   "specialty": [
     "Damage",
-    "Crowd Control"
+    "Regen"
   ],
   "lane": "EXP",
   "lanes": [
@@ -21,12 +21,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2600,
+    "hpRegen": 7.6,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 121,
+    "physicalDefense": 22,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -187,7 +187,9 @@
       "synergyWith": [
         "Sun",
         "X.Borg",
-        "Hanzo"
+        "Hanzo",
+        "Balmond",
+        "Aulus"
       ]
     }
   },
@@ -239,18 +241,29 @@
     "synergyHeroes": [
       {
         "name": "Sun",
-        "synergy": 5
+        "synergy": 2.2
       },
       {
         "name": "X.Borg",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Hanzo",
-        "synergy": 5
+        "synergy": 1.4
+      },
+      {
+        "name": "Balmond",
+        "synergy": 1.2
+      },
+      {
+        "name": "Aulus",
+        "synergy": 1.1
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Because of Cici's great kiting ability and her 1st Skill dealing Max HP damage, Cici counters certain Tanks like Fredrinn and Minotaur.",
+    "weakAgainstReason": "Cici is countered by heroes with targeted CC skills who can stop her dead in her tracks, such as Saber and Kaja.",
+    "synergyReason": "Cici works well with heroes that have buffs and can boost survivability. Supports like Angela and Floryn can help Cici gain an early advantage by greatly amplifying her combat capabilities to end the game before it drags on too long."
   },
   "mechanicCategory": [
     "Standard"
@@ -301,11 +314,21 @@
     "difficulty": 20
   },
   "powerCurve": {
-    "early": 53,
-    "mid": 61,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 68,
+    "mid": 78,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Hunter Strike",
+      "Blade of Despair"
+    ],
+    "dominantPhase": null,
+    "description": "She’s already threatening in lane with Yo-Yo Blitz max-HP hits and strong stickiness from Buoyant Bounce, then spikes with Curtain Call to double-hit linked targets in mid-game fights. Late game remains solid with sustained damage and mobility, but she’s less explosive than true late-game DPS carries and can be controlled by heavy CC."
   },
   "proBuilds": [
     {
@@ -350,5 +373,42 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 2",
+        "Skill 1"
+      ],
+      "description": "In teamfights, find two enemy heroes that are close together and toss Cici's Ultimate on one of them, then use her 2nd Skill to jump in and pop her 1st Skill mid-leap to start dealing continuous damage."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, use Cici's Basic Attacks to stack some Delight before using her 1st Skill on the opponent, and use her 2nd Skill if they attempt an escape."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Aamon",
+      "relationship": "CLOSE FRIEND"
+    },
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Floryn",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

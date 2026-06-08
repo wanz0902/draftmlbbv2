@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Crowd Control",
+    "Support"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
+    "hp": 2740,
+    "hpRegen": 12.4,
     "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "manaRegen": 4,
+    "physicalAttack": 115,
+    "physicalDefense": 25,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -243,7 +243,9 @@
       "synergyWith": [
         "Ixia",
         "Fredrinn",
-        "Valentina"
+        "Valentina",
+        "Natan",
+        "Franco"
       ]
     }
   },
@@ -295,18 +297,29 @@
     "synergyHeroes": [
       {
         "name": "Ixia",
-        "synergy": 5
+        "synergy": 3.9
       },
       {
         "name": "Fredrinn",
-        "synergy": 5
+        "synergy": 3.9
       },
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 3.7
+      },
+      {
+        "name": "Natan",
+        "synergy": 3.4
+      },
+      {
+        "name": "Franco",
+        "synergy": 3.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Marcel is more effective against low-mobility heroes, such as Layla and Vexana, as they are easily caught by his Ultimate, allowing him and his allies to secure easy kills.",
+    "weakAgainstReason": "Heroes who possess Invincibility or Untargetable effects that can bypass Marcel's CC, like Ling and X.Borg, will reduce his impact on the battlefield.",
+    "synergyReason": "Because of Marcel's excellent AOE CC, he pairs well with allies with high AOE damage, like Hanabi and Ixia, to maximize their damage potential."
   },
   "mechanicCategory": [
     "Standard"
@@ -359,5 +372,42 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive",
+        "Passive"
+      ],
+      "description": "During the laning phase, use Marcel's 2nd Skill to run up to the enemy and cast his 1st Skill. While the enemy is immobilized, lay into them with Basic Attacks."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Skill 2",
+        "Skill 3",
+        "Passive",
+        "Passive"
+      ],
+      "description": "In teamfights, Marcel should activate his 2nd Skill, followed by his 1st Skill. Run into the enemy's formation, then use the 2nd Skill again to dash away and drop his 1st Skill on top of them. Once the enemies are immobilized, use his Ultimate."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Hanabi",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Ixia",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

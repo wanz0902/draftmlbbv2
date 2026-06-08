@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Push",
+    "Damage"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 6,
+    "hp": 2440,
+    "hpRegen": 6.8,
     "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 113,
-    "physicalDefense": 17,
+    "manaRegen": 3.8,
+    "physicalAttack": 98,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.01",
     "attackSpeedRatio": 100,
     "movementSpeed": 245
@@ -259,7 +259,9 @@
       "synergyWith": [
         "Harley",
         "Valentina",
-        "Zhask"
+        "Zhask",
+        "Johnson",
+        "Yin"
       ]
     }
   },
@@ -311,18 +313,29 @@
     "synergyHeroes": [
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 2.3
       },
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 1.9
       },
       {
         "name": "Zhask",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Johnson",
+        "synergy": 1.2
+      },
+      {
+        "name": "Yin",
+        "synergy": 1.1
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Lylia counters Tank heroes without Blink skills, such as Carmilla and Hylos, who cannot easily escape Gloom's AOE range and are more susceptible to Lylia's high sustained damage.",
+    "weakAgainstReason": "Since most of Lylia's damage comes from detonating her 2nd Skill, but setting up Gloom can be quite slow, nimble Assassins like Nolan and Ling counter Lylia as she'll have a tough time hitting them.",
+    "synergyReason": "Lylia excels in prolonged battles, and works well with heroes with strong CC, like Franco and Minotaur."
   },
   "mechanicCategory": [
     "Standard"
@@ -367,11 +380,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 64,
-    "mid": 61,
-    "late": 45,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 82,
+    "mid": 78,
+    "late": 58,
+    "spikeLevels": [
+      "Lv 1",
+      "Lv 4",
+      "Lv 7"
+    ],
+    "coreItems": [
+      "Ice Queen Wand",
+      "Genius Wand",
+      "Divine Glaive"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "She’s oppressive early because she starts with Shadow Energy charges and can quickly stack Gloom upgrades for high lane control, constant poke, and strong early skirmish DPS. Mid stays strong with Black Shoes enabling reckless trades, but late her damage is more zone/attrition-based and can fall off versus sustained DPS carries and long-range burst if she can’t keep enemies in her detonation area."
   },
   "proBuilds": [
     {
@@ -415,5 +438,38 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "Use Lylia's 2nd Skill to hit the opponent, then use her 1st Skill to detonate the Shadow Energy for a significant burst of damage. Continue to throw her 2nd Skill at the enemy and detonate it with Gloom."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "Use Lylia's 2nd Skill multiple times to cover a large area with Shadow Energy, then detonate a chain reaction with her 1st Skill. Continue to spam Lylia's 2nd Skill and detonate with Gloom to quickly set off multiple explosions at once. When in danger, use Lylia's Ultimate to return to safety and recover."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Minotaur",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Franco",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Northern Vale",
+  "race": "Human"
 }

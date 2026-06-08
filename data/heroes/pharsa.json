@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2320,
-    "hpRegen": 6,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 109,
-    "physicalDefense": 16,
+    "hp": 2441,
+    "hpRegen": 6.8,
+    "mana": 510,
+    "manaRegen": 4,
+    "physicalAttack": 96,
+    "physicalDefense": 15,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "0.98",
     "attackSpeedRatio": 100,
     "movementSpeed": 240
@@ -272,7 +272,9 @@
       "synergyWith": [
         "Valentina",
         "Ling",
-        "Harley"
+        "Harley",
+        "Wanwan",
+        "Mathilda"
       ]
     }
   },
@@ -303,18 +305,29 @@
     "synergyHeroes": [
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 2.9
       },
       {
         "name": "Ling",
-        "synergy": 5
+        "synergy": 1.2
       },
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 1.2
+      },
+      {
+        "name": "Wanwan",
+        "synergy": 1.1
+      },
+      {
+        "name": "Mathilda",
+        "synergy": 1
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Pharsa can deal high burst damage from a very long range. A great counter to enemy back-row heroes with poor Mobility, such as Layla, Hanabi and Xavier.",
+    "weakAgainstReason": "Pharsa should beware of any displacement ability skill. Heroes like Franco, Zilong and Minsitthar can easily interrupt Pharsa's Ultimate.",
+    "synergyReason": "Pharsa is best with heroes who can CC the enemy so that her skills can hit them. Atlas and Franco are good examples of this."
   },
   "mechanicCategory": [
     "Flight Mode"
@@ -359,11 +372,21 @@
     "difficulty": 30
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 64,
-    "late": 56,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 82,
+    "late": 72,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "She’s serviceable early with lane poke, but her real takeover starts once Feathered Air Strike unlocks and gets levels for lower passive interval/stronger ult pressure. Mid-game objective fights favor her long-range burst zoning; late game remains strong but becomes harder to channel safely against divers without perfect positioning."
   },
   "proBuilds": [
     {
@@ -408,5 +431,40 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "Pharsa should start with her 1st Skill to mark the enemy, follow up with her 2nd Skill to apply CC, and then cast her Ultimate to deal an insane amount of Magic Damage."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Passive",
+        "Skill 2",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "Pharsa can use her 4th Skill to get into an advantageous position to initiate a teamfight, followed by a damage combo with her 1st and 3rd skills and use her 2nd Skill when she wants to deal extra damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Franco",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "The Barren Lands",
+  "race": "Human"
 }

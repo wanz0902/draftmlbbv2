@@ -7,7 +7,7 @@
   ],
   "specialty": [
     "Guard",
-    "Regen"
+    "Poke"
   ],
   "lane": "Roam",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2450,
+    "hpRegen": 7.4,
+    "mana": 510,
+    "manaRegen": 4,
+    "physicalAttack": 95,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -161,7 +161,9 @@
       "synergyWith": [
         "Baxia",
         "Ixia",
-        "Carmilla"
+        "Carmilla",
+        "Beatrix",
+        "Yve"
       ]
     }
   },
@@ -213,18 +215,29 @@
     "synergyHeroes": [
       {
         "name": "Baxia",
-        "synergy": 5
+        "synergy": 11.1
       },
       {
         "name": "Ixia",
-        "synergy": 5
+        "synergy": 7.4
       },
       {
         "name": "Carmilla",
-        "synergy": 5
+        "synergy": 5.3
+      },
+      {
+        "name": "Beatrix",
+        "synergy": 4.6
+      },
+      {
+        "name": "Yve",
+        "synergy": 3.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Diggie counters close range, CC focused heroes like Atlas and Lolita since he can pull them away and remove their CCs with his Ultimate.",
+    "weakAgainstReason": "Diggie is countered by agile and bursty Assassins like Ling and Aamon because his own lack of defense makes him an easy target.",
+    "synergyReason": "Diggie works best with Marksmen that lack mobility or survivability like Layla and Miya because his skills can protect them very well."
   },
   "mechanicCategory": [
     "Standard"
@@ -273,11 +286,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 66,
-    "late": 59,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 85,
+    "late": 75,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 11"
+    ],
+    "coreItems": [
+      "Fleeting Time",
+      "Enchanted Talisman",
+      "Dominance Ice"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Diggie is useful early with bombs for zone control and Reverse Time to disrupt engages, but his biggest impact starts once teamfights happen because Time Journey can nullify initiation/CC and swing Turtle fights. Late game value stays high as an anti-CC enabler, though his damage is inconsistent and more comp-dependent."
   },
   "proBuilds": [
     {
@@ -321,5 +344,36 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "In teamfights, use Diggie's 1st Skill to poke the enemy. If an enemy tries to initiate, pull them back with his 2nd Skill. If a teammate gets CC'd or takes too much damage, use Diggie's Ultimate to save them."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Diggie's 2nd Skill to confine the enemy to their location, then toss an owl alarm at them with his 1st Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Layla",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Miya",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Anthropomorphic owl Nature Spirit"
 }

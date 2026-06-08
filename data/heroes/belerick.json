@@ -7,7 +7,7 @@
   ],
   "specialty": [
     "Crowd Control",
-    "Initiator"
+    "Regen"
   ],
   "lane": "Roam",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2870,
+    "hpRegen": 9,
+    "mana": 440,
+    "manaRegen": 3,
+    "physicalAttack": 105,
+    "physicalDefense": 26,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 16,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -191,7 +191,9 @@
       "synergyWith": [
         "Saber",
         "Natalia",
-        "Zilong"
+        "Zilong",
+        "Aulus",
+        "Aldous"
       ]
     }
   },
@@ -243,18 +245,29 @@
     "synergyHeroes": [
       {
         "name": "Saber",
-        "synergy": 5
+        "synergy": 2.7
       },
       {
         "name": "Natalia",
-        "synergy": 5
+        "synergy": 2.6
       },
       {
         "name": "Zilong",
-        "synergy": 5
+        "synergy": 2.1
+      },
+      {
+        "name": "Aulus",
+        "synergy": 1.7
+      },
+      {
+        "name": "Aldous",
+        "synergy": 1.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Belerick excels at controlling enemies at close range, making him a great counter against squishy Assassins who need to get close to deal damage, like Lancelot and Ling.",
+    "weakAgainstReason": "Belerick is countered by heroes with long-range attacks like Valir and Xavier.",
+    "synergyReason": "Belerick works well with heroes who can dish out a lot of damage against enemies CC'd by his taunt, such as Miya and Natan."
   },
   "mechanicCategory": [
     "Standard"
@@ -305,11 +318,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 59,
-    "late": 63,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 75,
+    "late": 80,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Blade Armor",
+      "Radiant Armor",
+      "Dominance Ice"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Belerick ramps up as teamfights become frequent: taunt-based CC is more valuable mid-game and his passive damage scales with level and max HP. Late game he becomes a dominant frontline into fast attackers due to reflected/thorns damage plus high HP scaling and itemized durability."
   },
   "proBuilds": [
     {
@@ -353,5 +376,38 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, use Belerick's 2nd Skill to close the distance with the opponent and slow them with his enhanced Basic Attack, then follow up with his 1st Skill to CC them."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 3",
+        "Skill 1"
+      ],
+      "description": "In teamfights, charge into the enemy formation with Belerick's 2nd Skill and taunt as many targets as possible with his Ultimate, then follow up with his 1st Skill to keep them taunted."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Natan",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Miya",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Agelta Drylands",
+  "race": "Anthropomorphic plant"
 }

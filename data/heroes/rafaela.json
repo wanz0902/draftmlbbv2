@@ -6,8 +6,8 @@
     "Support"
   ],
   "specialty": [
-    "Guard",
-    "Regen"
+    "Regen",
+    "Guard"
   ],
   "lane": "Roam",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2501,
+    "hpRegen": 8,
+    "mana": 490,
+    "manaRegen": 3.8,
+    "physicalAttack": 97,
+    "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -158,7 +158,9 @@
       "synergyWith": [
         "Akai",
         "Barats",
-        "Jawhead"
+        "Jawhead",
+        "Natalia",
+        "Edith"
       ]
     }
   },
@@ -210,18 +212,29 @@
     "synergyHeroes": [
       {
         "name": "Akai",
-        "synergy": 5
+        "synergy": 3.6
       },
       {
         "name": "Barats",
-        "synergy": 5
+        "synergy": 2.7
       },
       {
         "name": "Jawhead",
-        "synergy": 5
+        "synergy": 2.4
+      },
+      {
+        "name": "Natalia",
+        "synergy": 2.2
+      },
+      {
+        "name": "Edith",
+        "synergy": 2.1
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Rafaela has great healing and decent mobility, and performs well against heroes that lack burst damage or mobility, such as Masha and Barats.",
+    "weakAgainstReason": "Rafaela struggles against bursty and agile Assassins, like Ling and Hayabusa.",
+    "synergyReason": "When teamed up with Fighters like Freya and Lapu-Lapu, Rafaela can boost their offensive power and survivability."
   },
   "mechanicCategory": [
     "Standard"
@@ -269,11 +282,21 @@
     "difficulty": 20
   },
   "powerCurve": {
-    "early": 52,
-    "mid": 58,
-    "late": 48,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 66,
+    "mid": 74,
+    "late": 62,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 10"
+    ],
+    "coreItems": [
+      "Flask of the Oasis",
+      "Fleeting Time",
+      "Oracle"
+    ],
+    "dominantPhase": null,
+    "description": "Early is strong for roams because consistent poke/slow plus healing and movespeed can win lanes and early rotations. Mid game is her best window as grouped fights make her AoE healing and Holy Baptism picks very impactful; late game she remains useful but can struggle versus high burst/anti-heal and long-range engage that kills allies before healing matters."
   },
   "proBuilds": [
     {
@@ -317,5 +340,37 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 2",
+        "Skill 1"
+      ],
+      "description": "Use 1st Skill to slow enemies,then her Ultimate for Control Effect,then use the 2nd Skill to restore allies' HP."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "Use 1st Skill to poke enemiesand 2nd to heal and create distance."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Freya",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Lapu-Lapu",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Moniyan Empire",
+  "race": "Light Angel"
 }

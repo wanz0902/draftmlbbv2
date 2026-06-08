@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2260,
-    "hpRegen": 6,
+    "hp": 2410,
+    "hpRegen": 6.6,
     "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 115,
+    "manaRegen": 3.8,
+    "physicalAttack": 97,
     "physicalDefense": 15,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.01",
     "attackSpeedRatio": 100,
     "movementSpeed": 240
@@ -270,7 +270,9 @@
       "synergyWith": [
         "Zhask",
         "Valentina",
-        "Barats"
+        "Barats",
+        "Eudora",
+        "Masha"
       ]
     }
   },
@@ -322,18 +324,29 @@
     "synergyHeroes": [
       {
         "name": "Zhask",
-        "synergy": 5
+        "synergy": 2.3
       },
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 2.3
       },
       {
         "name": "Barats",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Eudora",
+        "synergy": 1.4
+      },
+      {
+        "name": "Masha",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Novaria counters Mages with shorter range and low mobility, such as Eudora and Odette, because these heroes can't reach Novaria while Novaria can hit them with her 2nd Skill.",
+    "weakAgainstReason": "Novaria is countered by Assassins with strong targeted burst damage, such as Saber and Hayabusa, because they can easily close in on Novaria and burst her down.",
+    "synergyReason": "Novaria works well with other long-range heroes like Beatrix and Layla because her Ultimate makes any target a sitting duck for her team to pick off."
   },
   "mechanicCategory": [
     "Standard"
@@ -378,11 +391,21 @@
     "difficulty": 60
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 59,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 75,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Lightning Truncheon",
+      "Genius Wand",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Her poke becomes reliably threatening once she has ult (vision + enlarged hitbox) and enough magic power/CDR to repeatedly set up long-distance S2 detonations. Late game stays strong due to %Max HP and long-range pick potential, but she’s less consistent than full-scaling DPS mages if enemies get on top of her."
   },
   "proBuilds": [
     {
@@ -427,5 +450,45 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Novaria's Ultimate to gain vision of the battlefield, then summon an Astral Sphere with her 2nd Skill. After catching the Astral Sphere, launch it to damage the enemy and use her 1st Skill to thwart enemy heroes that try to get close."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, initiate by using Novaria's 2nd Skill to gain extra Movement Speed and summon an Astral Sphere. Then, slow the enemy with her 1st Skill and use her 2nd Skill again to launch the Astral Sphere to deal damage."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Astral Echo",
+      "Astral Recall",
+      "Astral Meteor"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Beatrix",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Layla",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Half-Human, Half-Star"
 }

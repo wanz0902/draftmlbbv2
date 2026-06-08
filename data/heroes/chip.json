@@ -7,8 +7,8 @@
     "Support"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Support",
+    "Crowd Control"
   ],
   "lane": "Roam",
   "lanes": [
@@ -22,14 +22,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2810,
+    "hpRegen": 8.4,
+    "mana": 460,
+    "manaRegen": 3.2,
+    "physicalAttack": 106,
+    "physicalDefense": 26,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 16,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -190,7 +190,9 @@
       "synergyWith": [
         "Masha",
         "Lukas",
-        "Arlott"
+        "Arlott",
+        "Mathilda",
+        "Faramis"
       ]
     }
   },
@@ -242,18 +244,29 @@
     "synergyHeroes": [
       {
         "name": "Masha",
-        "synergy": 5
+        "synergy": 11.3
       },
       {
         "name": "Lukas",
-        "synergy": 5
+        "synergy": 9.2
       },
       {
         "name": "Arlott",
         "synergy": 5
+      },
+      {
+        "name": "Mathilda",
+        "synergy": 4.9
+      },
+      {
+        "name": "Faramis",
+        "synergy": 4.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Chip possesses strong initiation and CC abilities, making him a great counter against heroes with low mobility or those who are relatively squishy, such as Vexana, Layla, and Ixia.",
+    "weakAgainstReason": "Since enemies can also use Chip's Connecting Portals, certain heroes with strong teamfighting abilities, like Barats and Tigreal, can use them to their advantage.",
+    "synergyReason": "Chip's Ultimate allows his team to group up from anywhere, so he works well with heroes who can't cross the map quickly but excel in teamfights, such as Alpha, Hanabi, and Kadita."
   },
   "mechanicCategory": [
     "Portal",
@@ -307,11 +320,21 @@
     "difficulty": 60
   },
   "powerCurve": {
-    "early": 48,
-    "mid": 64,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 62,
+    "mid": 82,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Tough Boots",
+      "Dominance Ice",
+      "Antique Cuirass"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "His early ganks are enabled by mobility + short CC windows, but his true value spikes once Shortcut is unlocked to force numbers advantages around Turtle and towers. In late game he’s still impactful with portals/peel, but fights become more burst-heavy and punish mispositioned engages."
   },
   "proBuilds": [
     {
@@ -355,5 +378,44 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 3",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Chip's 2nd Skill preemptively to build up speed, then hit a target with his Basic Attack and deploy the Main Portal with his Ultimate. Follow up with his 1st Skill on the enemy and another Basic Attack to stun them while the Main Portal's delayed effect slows them, and continue the fight as allies portal in."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "When ganking, use Chip's 2nd Skill to quickly get behind the target and knock them into your team with the enhanced Basic Attack, then follow up with his 1st Skill and another Basic Attack to stun them."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Alpha",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Hanabi",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Kadita",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Genetically enhanced fox"
 }

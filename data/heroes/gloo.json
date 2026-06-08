@@ -6,8 +6,8 @@
     "Tank"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Regen",
+    "Control"
   ],
   "lane": "Roam",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2820,
+    "hpRegen": 8.6,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 108,
+    "physicalDefense": 26,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -183,7 +183,9 @@
       "synergyWith": [
         "Argus",
         "Aldous",
-        "Aulus"
+        "Aulus",
+        "Zilong",
+        "Saber"
       ]
     }
   },
@@ -235,18 +237,29 @@
     "synergyHeroes": [
       {
         "name": "Argus",
-        "synergy": 5
+        "synergy": 3.2
       },
       {
         "name": "Aldous",
-        "synergy": 5
+        "synergy": 2.8
       },
       {
         "name": "Aulus",
-        "synergy": 5
+        "synergy": 2.6
+      },
+      {
+        "name": "Zilong",
+        "synergy": 2.6
+      },
+      {
+        "name": "Saber",
+        "synergy": 2.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Gloo is strong against Mage heroes without good CC. Because he can easily attach himself to them, and take them where he wants them to go. Such as Cecilion and Chang'e.",
+    "weakAgainstReason": "Gloo is countered by Marksman heroes with good mobility. It's difficult for Gloo to attach himself to them, and he can easily be killed if he tries. Such as Karrie and Lesley.",
+    "synergyReason": "Gloo works best with high burst damage heroes, as they can quickly take down the enemy hero that he brings back with his Ultimate. Like Eudora and Saber."
   },
   "mechanicCategory": [
     "Possess Enemy",
@@ -296,11 +309,21 @@
     "difficulty": 70
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 61,
-    "late": 53,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 78,
+    "late": 68,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Dominance Ice",
+      "Antique Cuirass",
+      "Radiant Armor"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Gloo is manageable early but not oppressive until he can reliably stack Sticky and access his attach for long skirmishes/picks. He peaks in mid-game teamfights where his CC, sustain healing from Goo detonations, and damage transfer disrupt cores; late game he remains strong but is more countered by coordinated focus/anti-heal and higher burst."
   },
   "proBuilds": [
     {
@@ -344,5 +367,46 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Skill 2",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In teamfights, Gloo can use his 1st + 2nd skill combo to close in on the enemy and immobilize them. Then his 1st Skill and Ultimate to add more Sticky stacks to enemy heroes, and attach himself with his Ultimate to the enemy hero with max Sticky stacks. Once ready, Gloo can use the combo to deal damage and move the host out of position. Finally, he can use the refreshed 1st Skill and his Basic Attacks to finish off the host."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, Gloo should use his 1st Skill to attack the target enemy and create a Goo, then he can use his 2nd Skill to target the Goo to bring the target to its location and trigger an explosion. Touching the Goo will also reset Gloo's 1st Skill, allowing him to use it again to deal damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Eudora",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Saber",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Karina",
+      "relationship": "MET ONCE"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Azrya Woodlands",
+  "race": "Swamp Spirit"
 }

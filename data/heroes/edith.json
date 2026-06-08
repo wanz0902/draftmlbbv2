@@ -7,8 +7,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Control",
+    "Burst"
   ],
   "lane": "EXP",
   "lanes": [
@@ -24,14 +24,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2810,
+    "hpRegen": 8.4,
+    "mana": 460,
+    "manaRegen": 3.4,
+    "physicalAttack": 112,
+    "physicalDefense": 26,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -195,7 +195,9 @@
       "synergyWith": [
         "Natalia",
         "Estes",
-        "Rafaela"
+        "Rafaela",
+        "Saber",
+        "Diggie"
       ]
     }
   },
@@ -247,18 +249,29 @@
     "synergyHeroes": [
       {
         "name": "Natalia",
-        "synergy": 5
+        "synergy": 2.6
       },
       {
         "name": "Estes",
-        "synergy": 5
+        "synergy": 2.4
       },
       {
         "name": "Rafaela",
-        "synergy": 5
+        "synergy": 2.1
+      },
+      {
+        "name": "Saber",
+        "synergy": 2.1
+      },
+      {
+        "name": "Diggie",
+        "synergy": 2
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Edith is strong against heroes that are not very agile and on the fragile side, such as Zilong and Aulus, because her skills deal enough burst damage to eliminate them after connecting with her 2nd Skill.",
+    "weakAgainstReason": "Edith is countered by Marksmen that can negate CC like Hanabi and Wanwan, since she will have a hard time locking them down.",
+    "synergyReason": "Edith works best with heroes like Minotaur and Atlas that can more reliably CC a target first, allowing her to follow up with her own CC."
   },
   "mechanicNote": "Edith transforms into Marksman Form after using Ultimate. Marksman Form skills (Divine Retribution, Lightning Bolt) not currently available in local source.",
   "needsEnrichment": true,
@@ -313,11 +326,21 @@
     "difficulty": 30
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 63,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 80,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Dominance Ice",
+      "Thunder Belt",
+      "Feather of Heaven"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Solid early with reliable CC setup, but her biggest swing is level 4 where Primal Wrath turns tanked damage into a strong ranged damage window for objectives and fights. Mid game is dominant with pick potential + frontlining, while late remains strong but more dependent on good Wrath timing and being able to free-hit in flight form."
   },
   "proBuilds": [
     {
@@ -362,5 +385,41 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 1",
+        "Skill 5",
+        "Skill 4",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, use Edith's 2nd Skill to toss the enemy behind her, followed by her 1st Skill to knock them airborne then immediately use her Ultimate.\nNow use Edith's 2nd Skill in human form to immobilize the target, followed by her 1st Skill for more damage, and secure the kill with enhanced Basic Attacks."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 3",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Edith's 2nd Skill to toss the enemy behind her,\nthen use her 1st Skill to knock them airborne\nand finish them off with enhanced Basic Attacks from her Passive."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Minotaur",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Vonetis Sea",
+  "race": "Demigod"
 }

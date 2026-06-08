@@ -6,8 +6,8 @@
     "Tank"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Support",
+    "Damage"
   ],
   "lane": "Roam",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
+    "hp": 2830,
+    "hpRegen": 8.4,
+    "mana": "0",
+    "manaRegen": "0",
     "physicalAttack": 110,
-    "physicalDefense": 20,
+    "physicalDefense": 27,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 16,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -191,7 +191,9 @@
       "synergyWith": [
         "Diggie",
         "Granger",
-        "Ixia"
+        "Ixia",
+        "Estes",
+        "Beatrix"
       ]
     }
   },
@@ -243,18 +245,29 @@
     "synergyHeroes": [
       {
         "name": "Diggie",
-        "synergy": 5
+        "synergy": 11.1
       },
       {
         "name": "Granger",
-        "synergy": 5
+        "synergy": 4.7
       },
       {
         "name": "Ixia",
-        "synergy": 5
+        "synergy": 4.6
+      },
+      {
+        "name": "Estes",
+        "synergy": 3.3
+      },
+      {
+        "name": "Beatrix",
+        "synergy": 3.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Baxia counters heroes with multi-hit skills or those who rely on shields or HP Regen, such as Chang'e and Silvanna, thanks to his Passive.",
+    "weakAgainstReason": "Baxia is countered by agile Marksmen who deal True Damage like Karrie and Lesley because they can easily stay out of Baxia's range while dealing massive damage to him.",
+    "synergyReason": "Baxia can utilize his AOE damage and slow effect to help sustained damage heroes like Thamuz and Alpha stay on their targets."
   },
   "mechanicCategory": [
     "Standard"
@@ -305,11 +318,21 @@
     "difficulty": 20
   },
   "powerCurve": {
-    "early": 51,
-    "mid": 63,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 65,
+    "mid": 80,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Cursed Helmet",
+      "Dominance Ice",
+      "Athena's Shield"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Baxia is strong once rotations and skirmishes start because he can reliably engage with S1 and becomes extremely hard to burst during Ultimate, while his anti-heal passive punishes sustain comps. Late game he remains useful as an initiator/anti-heal tank, but his damage doesn’t scale as hard as true late-game carries."
   },
   "proBuilds": [
     {
@@ -354,5 +377,47 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 3",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, first activate Baxia's 1st Skill, then use his Ultimate to speed up. After running into an enemy, use his 2nd Skill followed by Basic Attacks to deal damage."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, roll into the enemy with Baxia's 1st Skill and follow up with his 2nd Skill and Basic Attacks."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Yu Zhong",
+      "relationship": "FELLOW DISCIPLE"
+    },
+    {
+      "name": "Ling",
+      "relationship": "ALLY"
+    },
+    {
+      "name": "Thamuz",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Alpha",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Cadia Riverlands",
+  "race": "Human"
 }

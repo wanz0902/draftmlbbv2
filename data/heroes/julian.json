@@ -7,8 +7,8 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Chase",
+    "Magic Damage"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -24,14 +24,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2580,
+    "hpRegen": 7.6,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 118,
+    "physicalDefense": 21,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 12,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -159,7 +159,9 @@
       "synergyWith": [
         "Atlas",
         "Johnson",
-        "Tigreal"
+        "Tigreal",
+        "Gloo",
+        "Franco"
       ]
     }
   },
@@ -195,18 +197,29 @@
     "synergyHeroes": [
       {
         "name": "Atlas",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Johnson",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Tigreal",
-        "synergy": 5
+        "synergy": 1.4
+      },
+      {
+        "name": "Gloo",
+        "synergy": 1.4
+      },
+      {
+        "name": "Franco",
+        "synergy": 1.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Julian is a hero who can constantly grow his own advantage, so he is strong against heroes who are weak in the early game, like Cecilion and Aldous.",
+    "weakAgainstReason": "Julian needs to hit enemy heroes with his skills to bring out his potential, so he is countered by heroes with good Mobility. Such as Joy and Harith.",
+    "synergyReason": "Julian works best with powerful support heroes who can buff him, like Angela and Diggie."
   },
   "mechanicCategory": [
     "Enhanced Skill",
@@ -258,11 +271,21 @@
     "difficulty": 20
   },
   "powerCurve": {
-    "early": 63,
-    "mid": 59,
-    "late": 47,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 80,
+    "mid": 76,
+    "late": 60,
+    "spikeLevels": [
+      "Lv 3",
+      "Lv 7",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Feather of Heaven",
+      "Genius Wand",
+      "Concentrated Energy"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "Julian spikes extremely early because his enhanced-skill rotation comes online quickly and his burst/CC combo can decide early skirmishes and jungle invades. He stays strong mid game with fast rotations and repeated combos, but late game he’s more punishable when diving into full builds and layered CC."
   },
   "proBuilds": [
     {
@@ -306,5 +329,51 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 4"
+      ],
+      "description": "In teamfights, Julian can slow the enemy with his 1st Skill before dashing into the enemy battle formation with his 2nd Skill. Then use his enhanced 3rd Skill for area CC."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 3",
+        "Skill 5",
+        "Passive"
+      ],
+      "description": "In the laning phase, Julian can use his 2nd Skill to close in on the enemy, and his 3rd Skill to immobilize them. Then he can use his enhanced 1st Skill to deal damage. Follow up with his enhanced Basic Attacks to prevent the enemy from escaping."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Xavier",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Melissa",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Yin",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Diggie",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

@@ -7,8 +7,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Finisher",
+    "Burst"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -24,12 +24,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2558,
+    "hpRegen": 7.2,
+    "mana": 440,
+    "manaRegen": 3.2,
+    "physicalAttack": 122,
+    "physicalDefense": 19,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -170,7 +170,9 @@
       "synergyWith": [
         "Layla",
         "Ixia",
-        "Clint"
+        "Clint",
+        "Lesley",
+        "Granger"
       ]
     }
   },
@@ -222,18 +224,29 @@
     "synergyHeroes": [
       {
         "name": "Layla",
-        "synergy": 5
+        "synergy": 2.2
       },
       {
         "name": "Ixia",
-        "synergy": 5
+        "synergy": 1.9
       },
       {
         "name": "Clint",
-        "synergy": 5
+        "synergy": 1.9
+      },
+      {
+        "name": "Lesley",
+        "synergy": 1.8
+      },
+      {
+        "name": "Granger",
+        "synergy": 1.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Roger counters squishy heroes that lack mobility such as Hanabi and Odette because they cannot easily escape from him.",
+    "weakAgainstReason": "Roger is countered by heroes that can restrict his mobility and prevent him from jumping in and out using his two forms, like Minsitthar and Khufra.",
+    "synergyReason": "Roger works best with heroes with high AOE damage that can nuke the enemy team to low HP for him to finish off, such as Pharsa and Vexana."
   },
   "mechanicNote": "Roger has additional Wolf Form abilities after transformation (Lycan Pounce, Bloodthirsty Howl). Detailed Wolf Form skill data not currently available in local source.",
   "needsEnrichment": true,
@@ -289,11 +302,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 51,
-    "mid": 63,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 65,
+    "mid": 80,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Hunter Strike",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Roger’s clear speed and dueling become threatening once he has Wolf form and a first damage item, letting him snowball skirmishes and invade in mid game. Late game he still hurts, but becomes more punishable into coordinated CC and high-DPS backlines unless he’s ahead."
   },
   "proBuilds": [
     {
@@ -337,5 +360,42 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 3",
+        "Skill 5",
+        "Skill 4",
+        "Skill 2"
+      ],
+      "description": "In teamfights, use Roger's 1st Skill to whittle down enemies from afar while using his 2nd Skill to maintain good positioning. When both sides have engaged, use his Ultimate to go for the enemy's back line. Use his 2nd Skill for extra Attack Speed and his 1st Skill to secure the kill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 3",
+        "Skill 1",
+        "Skill 5",
+        "Skill 4",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, Roger should poke the enemy while in his Human form. Use his 2nd Skill for extra Movement Speed for an angle to hit with his 1st Skill. Use his Ultimate to close in on the enemy, followed by his 2nd Skill for Attack Speed and tear into them with Basic Attacks before finishing them off with his 1st Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Pharsa",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Vexana",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Moniyan Empire",
+  "race": "Werewolf, formerly Human"
 }

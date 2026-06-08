@@ -6,8 +6,8 @@
     "Tank"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Initiator",
+    "Crowd Control"
   ],
   "lane": "Roam",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2839,
+    "hpRegen": 8.6,
+    "mana": 460,
+    "manaRegen": 3.2,
+    "physicalAttack": 114,
+    "physicalDefense": 28,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 16,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -187,7 +187,9 @@
       "synergyWith": [
         "Mathilda",
         "Natalia",
-        "Saber"
+        "Saber",
+        "Harith",
+        "Masha"
       ]
     }
   },
@@ -239,18 +241,29 @@
     "synergyHeroes": [
       {
         "name": "Mathilda",
-        "synergy": 5
+        "synergy": 3.7
       },
       {
         "name": "Natalia",
-        "synergy": 5
+        "synergy": 3.5
       },
       {
         "name": "Saber",
-        "synergy": 5
+        "synergy": 2.5
+      },
+      {
+        "name": "Harith",
+        "synergy": 2
+      },
+      {
+        "name": "Masha",
+        "synergy": 1.9
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Khufra's 2nd Skill can be used to interrupt movement abilities, making him strong against heroes who fight with movement abilities, such as Joy and Lancelot.",
+    "weakAgainstReason": "Khufra is countered by resilient tank heroes, as his CC abilities pose no threat to these heroes. Heroes like Fredrinn and Gloo are good examples here.",
+    "synergyReason": "Khufra works best with heroes with strong CC abilities that make it easier for his 1st Skill to hit, such as Eudora and Pharsa."
   },
   "mechanicCategory": [
     "Standard"
@@ -299,11 +312,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 51,
-    "mid": 63,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 65,
+    "mid": 80,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Dominance Ice",
+      "Antique Cuirass",
+      "Athena's Shield"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Early is decent once he has access to his engage + anti-dash tool to threaten ganks, but he’s not very item-reliant for utility. Mid game is his peak because tight objective fights let him consistently find multi-hero CC with Tyrant’s Revenge + Tyrant’s Rage, while late game he’s still valuable but more dependent on clean initiation against higher DPS and better positioning."
   },
   "proBuilds": [
     {
@@ -347,5 +370,37 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 3",
+        "Skill 2"
+      ],
+      "description": "In teamfights, Khufra should open with his 1st Skill, then his Ultimate for area control, follow up with his 2nd Skill to prevent the enemy from escaping with their dash or blink skills."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, Khufra uses his 1st Skill to aim while charging before launching himself to CC the enemy target. He then deals damage and slows the target with his enhanced Basic Attack and follows up with his 2nd Skill to keep the target slowed."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Eudora",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Pharsa",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Undead, formerly Human"
 }

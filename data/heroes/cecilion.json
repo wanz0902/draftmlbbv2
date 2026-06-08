@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Poke",
+    "Burst"
   ],
   "lane": "Mid",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 6,
-    "mana": 700,
-    "manaRegen": 15,
-    "physicalAttack": 105,
-    "physicalDefense": 17,
+    "hp": 2480,
+    "hpRegen": 7,
+    "mana": 520,
+    "manaRegen": 4.2,
+    "physicalAttack": 96,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -291,7 +291,9 @@
       "synergyWith": [
         "Harley",
         "Carmilla",
-        "Valentina"
+        "Valentina",
+        "Masha",
+        "Balmond"
       ]
     }
   },
@@ -327,18 +329,29 @@
     "synergyHeroes": [
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Carmilla",
-        "synergy": 5
+        "synergy": 1.3
       },
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 1.1
+      },
+      {
+        "name": "Masha",
+        "synergy": 0.9
+      },
+      {
+        "name": "Balmond",
+        "synergy": 0.9
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Cecilion counters less mobile Fighters like Balmond and Terizla because these heroes have a hard time getting close to Cecilion while Cecilion can more easily hit them with his skills.",
+    "weakAgainstReason": "Cecilion is countered by Assassins who can quickly close the gap like Ling and Fanny because Cecilion lacks defensive tools and his normal skills cannot hit enemies in melee range.",
+    "synergyReason": "Cecilion works well with Tanks with sustained CC abilities, such as Carmilla and Minotaur, since their CC can help Cecilion land his skills."
   },
   "mechanicCategory": [
     "Stacking",
@@ -385,11 +398,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 27,
-    "mid": 51,
-    "late": 70,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 35,
+    "mid": 65,
+    "late": 90,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Cecilion is weak early because he needs mana stacks and items before his poke becomes oppressive, and his repeated S1 casts are gated by rising mana costs. Once mid game stacking and first cores come online he becomes a strong siege/teamfight mage, and late game his max-mana scaling makes his burst/poke dominant from long range."
   },
   "proBuilds": [
     {
@@ -434,5 +457,37 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, initiate with Cecilion's Ultimate to slow the enemy, then hit them with his 1st Skill. When the time is right, pull the enemies together using his 2nd Skill and spam his 1st Skill for damage."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Cecilion's 2nd Skill to pull enemies together, then repeatedly hit them with his 1st Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Carmilla",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Minotaur",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Moniyan Empire",
+  "race": "Blood Demon"
 }

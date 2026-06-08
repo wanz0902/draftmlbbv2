@@ -1,10 +1,7 @@
 /**
  * Sync hero meta data from mlbb.tools (Playwright rendered mode).
- *
- * Strategy:
- * 1. Intercept RSC payload on /heroes/ list page → parse hero slugs + meta stats
- * 2. For each hero, parse rendered HTML (no page.evaluate — avoids Turbopack conflict)
- * 3. MERGE into existing data/heroes/{id}.json
+ * V2: Complete re-scrape with all sections including combos, skill priority,
+ * connections, power curve text, base stats, synergy %, region/race, title.
  *
  * Run: npx tsx scripts/sync-mlbb-tools.ts [--test|--full]
  */
@@ -30,7 +27,22 @@ function readHeroJson(id: string): Record<string, any> | null {
   return JSON.parse(fs.readFileSync(fp, 'utf-8'));
 }
 function writeHeroJson(id: string, data: Record<string, any>): void {
-  fs.writeFileSync(path.join(HERO_DIR, `${id}.json`), JSON.stringify(data, null, 2) + '\n', 'utf-8');
+  const fp = path.join(HERO_DIR, `${id}.json`);
+  const content = JSON.stringify(data, null, 2) + '\n';
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      fs.writeFileSync(fp, content, 'utf-8');
+      return;
+    } catch (e: any) {
+      if (attempt < 2) {
+        console.log(`[RETRY] Write failed for ${id}, attempt ${attempt + 1}: ${e.message}`);
+        const start = Date.now();
+        while (Date.now() - start < 1000) {}
+      } else {
+        throw e;
+      }
+    }
+  }
 }
 
 const SLUG_OVERRIDES: Record<string, string> = {
@@ -39,42 +51,17 @@ const SLUG_OVERRIDES: Record<string, string> = {
 };
 function slugToFileId(slug: string): string { return SLUG_OVERRIDES[slug] || slug.replace(/-/g, '').toLowerCase(); }
 
-function parseRscHeroes(body: string): Record<string, any> {
-  const result: Record<string, any> = {};
-  try {
-    const heroPattern = /\{"id":"[^"]+","slug":"([^"]+)","name":"([^"]+)"[^}]*?"statsMap":\{([^}]+)\}/g;
-    let m: RegExpExecArray | null;
-    while ((m = heroPattern.exec(body)) !== null) {
-      const slug = m[1];
-      const name = m[2];
-      const statsRaw = m[3];
-      const allMatch = statsRaw.match(/"all":\{"winRate":([\d.]+),"pickRate":([\d.]+),"banRate":([\d.]+)/);
-      const gloryMatch = statsRaw.match(/"glory":\{"winRate":([\d.]+),"pickRate":([\d.]+),"banRate":([\d.]+)/);
-      const stats = allMatch || gloryMatch;
-      result[slug] = {
-        slug, name,
-        winRate: stats ? parseFloat(stats[1]) * 100 : 0,
-        pickRate: stats ? parseFloat(stats[2]) * 100 : 0,
-        banRate: stats ? parseFloat(stats[3]) * 100 : 0,
-      };
-    }
-  } catch {}
-  return result;
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]+>/g, ' ').replace(/<!--\s*-->/g, '').replace(/\s+/g, ' ').trim();
 }
 
 function parseHeroPageHtml(html: string): Record<string, any> {
   const r: Record<string, any> = {};
 
-  const metaMatch = html.match(/Win Rate<\/p><\/div>[\s\S]*?<\/div><div[\s\S]*?<\/div><div[\s\S]*?Pick Rate<\/p>/);
-  if (!metaMatch) {
-    const wrMatch = html.match(/<p[^>]*font-mono[^>]*>([\d.]+)%<\/p>\s*<p[^>]*>Win Rate<\/p>/i);
-    if (wrMatch) r.winRate = parseFloat(wrMatch[1]);
-    const prMatch = html.match(/<p[^>]*font-mono[^>]*>([\d.]+)%<\/p>\s*<p[^>]*>Pick Rate<\/p>/i);
-    if (prMatch) r.pickRate = parseFloat(prMatch[1]);
-    const brMatch = html.match(/<p[^>]*font-mono[^>]*>([\d.]+)%<\/p>\s*<p[^>]*>Ban Rate<\/p>/i);
-    if (brMatch) r.banRate = parseFloat(brMatch[1]);
-  } else {
-    const section = html.substring(html.indexOf('Meta Stats'));
+  // === Meta Stats ===
+  const metaSection = html.indexOf('Meta Stats</h2>');
+  if (metaSection > 0) {
+    const section = html.substring(metaSection, metaSection + 2000);
     const wrM = section.match(/([\d.]+)%<\/p>\s*<p[^>]*>Win Rate/);
     if (wrM) r.winRate = parseFloat(wrM[1]);
     const prM = section.match(/([\d.]+)%<\/p>\s*<p[^>]*>Pick Rate/);
@@ -83,6 +70,7 @@ function parseHeroPageHtml(html: string): Record<string, any> {
     if (brM) r.banRate = parseFloat(brM[1]);
   }
 
+  // === Hero Attributes ===
   const attrMatch = html.match(/aria-label="Hero attributes:\s*Durability\s+(\d+),\s*Offense\s+(\d+),\s*Ability Effects\s+(\d+),\s*Difficulty\s+(\d+)"/i);
   if (attrMatch) {
     r.heroAttributes = {
@@ -91,6 +79,29 @@ function parseHeroPageHtml(html: string): Record<string, any> {
     };
   }
 
+  // === Base Stats ===
+  const bsIdx = html.indexOf('Base Stats</h2>');
+  if (bsIdx > 0) {
+    const bsSection = html.substring(bsIdx, bsIdx + 5000);
+    const statMap: Record<string, string> = {
+      'HP': 'hp', 'HP Regen': 'hpRegen', 'Mana': 'mana', 'Mana Regen': 'manaRegen',
+      'Physical ATK': 'physicalAttack', 'Physical DEF': 'physicalDefense',
+      'Magic ATK': 'magicPower', 'Magic DEF': 'magicDefense',
+      'Attack Speed': 'attackSpeed', 'Movement Speed': 'movementSpeed',
+    };
+    const baseStats: Record<string, any> = {};
+    for (const [label, field] of Object.entries(statMap)) {
+      const re = new RegExp(`>${label}</span><span[^>]*>([^<]+)</span>`);
+      const m = bsSection.match(re);
+      if (m) {
+        const val = m[1].trim();
+        baseStats[field] = field === 'attackSpeed' ? val : parseFloat(val) || val;
+      }
+    }
+    if (Object.keys(baseStats).length > 0) r.baseStats = baseStats;
+  }
+
+  // === Strong Against ===
   const strongIdx = html.indexOf('Strong Against</h4>');
   if (strongIdx > 0) {
     const endIdx = html.indexOf('Weak Against</h4>', strongIdx);
@@ -104,6 +115,7 @@ function parseHeroPageHtml(html: string): Record<string, any> {
     if (strong.length) r.strongAgainst = strong;
   }
 
+  // === Weak Against ===
   const weakIdx = html.indexOf('Weak Against</h4>');
   if (weakIdx > 0) {
     const synCheck = html.indexOf('Best With</h2>', weakIdx);
@@ -119,20 +131,26 @@ function parseHeroPageHtml(html: string): Record<string, any> {
     if (weak.length) r.weakAgainst = weak;
   }
 
+  // === Best With (Synergy) with actual % ===
   const synIdx = html.indexOf('Best With</h2>');
   if (synIdx > 0) {
-    const endIdx = html.indexOf('</div>', synIdx + 2000);
-    const section = html.substring(synIdx, endIdx > 0 ? Math.min(endIdx + 10, synIdx + 3000) : synIdx + 3000);
+    const synSection = html.substring(synIdx, synIdx + 5000);
     const syn: { name: string; synergy: number }[] = [];
-    const re = /href="\/heroes\/([a-z0-9-]+)"[\s\S]*?<span[^>]*>([^<]+)<\/span>/g;
+    const re = /href="\/heroes\/([a-z0-9-]+)"[\s\S]*?<span[^>]*>([^<]+)<\/span><span[^>]*font-mono[^>]*>\+<!-- -->([\d.]+)<!-- -->%<\/span>/g;
     let m: RegExpExecArray | null;
-    while ((m = re.exec(section)) !== null) {
-      const name = m[2].trim();
-      if (name && !syn.find(s => s.name === name)) syn.push({ name, synergy: 5 });
+    while ((m = re.exec(synSection)) !== null) {
+      syn.push({ name: m[2].trim(), synergy: parseFloat(m[3]) });
+    }
+    if (syn.length === 0) {
+      const re2 = /href="\/heroes\/([a-z0-9-]+)"[\s\S]*?<span[^>]*>([^<]+)<\/span><span[^>]*font-mono[^>]*>\+([\d.]+)%<\/span>/g;
+      while ((m = re2.exec(synSection)) !== null) {
+        syn.push({ name: m[2].trim(), synergy: parseFloat(m[3]) });
+      }
     }
     if (syn.length) r.synergyHeroes = syn;
   }
 
+  // === Pro Builds ===
   const buildIdx = html.indexOf('Pro Builds</h2>');
   if (buildIdx > 0) {
     const builds: { player: string; games: number; items: string[] }[] = [];
@@ -159,53 +177,149 @@ function parseHeroPageHtml(html: string): Record<string, any> {
     if (builds.length) r.proBuilds = builds;
   }
 
-  const curveIdx = html.indexOf('Power Curve</h2>');
-  if (curveIdx > 0) {
-    const section = html.substring(curveIdx, curveIdx + 15000);
-    const svgStart = section.indexOf('aria-label="Power curve chart"');
-    if (svgStart >= 0) {
-      const svgTagStart = section.lastIndexOf('<svg', svgStart);
-      const svgTagEnd = section.indexOf('</svg>', svgStart);
-      if (svgTagStart >= 0 && svgTagEnd >= 0) {
-        const svgContent = section.substring(svgTagStart, svgTagEnd + 6);
-        const firstPathMatch = svgContent.match(/d="((?:M|L|C)\s*[^"]+)"/);
-        if (firstPathMatch) {
-          const d = firstPathMatch[1];
-          const points: { x: number; y: number }[] = [];
-          const cmdPattern = /([MLC])\s*([\d.,\s]+)/g;
-          let cm: RegExpExecArray | null;
-          while ((cm = cmdPattern.exec(d)) !== null) {
-            const cmd = cm[1];
-            const nums = cm[2].match(/[\d.]+/g)?.map(Number) || [];
-            if (cmd === 'M' || cmd === 'L') {
-              points.push({ x: nums[0], y: nums[1] });
-            } else if (cmd === 'C' && nums.length >= 6) {
-              points.push({ x: nums[4], y: nums[5] });
-            }
-          }
-          const fillPoints = points.filter(p => p.y < 120);
-          if (fillPoints.length >= 2) {
-            const baseline = 128;
-            const toV = (y: number) => Math.round(((baseline - y) / baseline) * 100);
-            const third = Math.max(1, Math.floor(fillPoints.length / 3));
-            const avg = (arr: { x: number; y: number }[]) => arr.length ? arr.reduce((s, c) => s + c.y, 0) / arr.length : 80;
-            r.powerCurve = {
-              early: Math.max(0, Math.min(100, toV(avg(fillPoints.slice(0, third))))),
-              mid: Math.max(0, Math.min(100, toV(avg(fillPoints.slice(third, third * 2))))),
-              late: Math.max(0, Math.min(100, toV(avg(fillPoints.slice(third * 2))))),
-            };
-          }
-        }
-        const levels: string[] = [];
-        const lvlRe = />(Lv\s*\d+)</gi;
-        let lm: RegExpExecArray | null;
-        while ((lm = lvlRe.exec(svgContent)) !== null) levels.push(lm[1]);
-        if (levels.length) {
-          if (!r.powerCurve) r.powerCurve = { early: 50, mid: 75, late: 60 };
-          r.powerCurve.spikeLevels = levels;
-        }
+  // === Power Curve (from TEXT, not SVG) ===
+  const pcIdx = html.indexOf('Power Curve</h2>');
+  if (pcIdx > 0) {
+    const pcSection = html.substring(pcIdx, pcIdx + 6000);
+    // Match: 38<!-- -->%</text>...EARLY</text>
+    const earlyM = pcSection.match(/(\d+)<!-- -->%<\/text><text[^>]*>EARLY/);
+    const midM = pcSection.match(/(\d+)<!-- -->%<\/text><text[^>]*>MID/);
+    const lateM = pcSection.match(/(\d+)<!-- -->%<\/text><text[^>]*>LATE/);
+    if (earlyM && midM && lateM) {
+      r.powerCurve = {
+        early: parseInt(earlyM[1]),
+        mid: parseInt(midM[1]),
+        late: parseInt(lateM[1]),
+      };
+    }
+
+    // Dominant phase badge
+    const phaseM = pcSection.match(/>(Early Game|Mid Game|Late Game)</i);
+    if (phaseM) r.powerCurveDominantPhase = phaseM[1];
+
+    // Spikes: Spikes:<!-- --> <span class="font-bold text-text-secondary">Lv 4, Lv 8, Lv 12</span>
+    const spikesM = pcSection.match(/Spikes:<!-- --> <span[^>]*>([^<]+)<\/span>/);
+    if (spikesM) {
+      r.powerCurveSpikeLevels = spikesM[1].split(',').map((s: string) => s.trim()).filter(Boolean);
+    }
+
+    // Core items: Core items:<!-- --> <span class="font-medium text-text-secondary">...</span>
+    const coreM = pcSection.match(/Core items:<!-- --> <span[^>]*>([^<]+)<\/span>/);
+    if (coreM) {
+      r.powerCurveCoreItems = coreM[1].split(',').map((s: string) => s.trim()).filter(Boolean);
+    }
+
+    // Description
+    const descM = pcSection.match(/<p[^>]*class="[^"]*italic[^"]*"[^>]*>([^<]+)<\/p>/);
+    if (descM) r.powerCurveDescription = descM[1].trim();
+  }
+
+  // === Combos ===
+  const cbIdx = html.indexOf('Combos</h2>');
+  if (cbIdx > 0) {
+    const cbSection = html.substring(cbIdx, cbIdx + 8000);
+    const combos: { name: string; sequence: string[]; description: string }[] = [];
+    const comboCards = cbSection.split('clip-path:polygon(0 0');
+    for (let i = 1; i < comboCards.length; i++) {
+      const card = comboCards[i];
+      const nameM = card.match(/">(LANING|TEAMFIGHT|GANK|OBJECTIVE|DEFENSE|GENERAL)<\/span>/i);
+      if (!nameM) continue;
+      const comboName = nameM[1].toUpperCase();
+      const skills: string[] = [];
+      const skillRe = /alt="(Skill \d|Passive|Ultimate)"/g;
+      let sm: RegExpExecArray | null;
+      while ((sm = skillRe.exec(card)) !== null) {
+        skills.push(sm[1]);
+      }
+      const descM = card.match(/<p[^>]*class="[^"]*text-text-secondary[^"]*"[^>]*>([^<]+)<\/p>/);
+      const desc = descM ? descM[1].trim() : '';
+      if (skills.length > 0) {
+        combos.push({ name: comboName, sequence: skills, description: desc });
       }
     }
+    if (combos.length) r.combos = combos;
+  }
+
+  // === Skill Level Priority ===
+  const spIdx = html.indexOf('Skill Level Priority</h2>');
+  if (spIdx > 0) {
+    const spSection = html.substring(spIdx, spIdx + 3000);
+    const order: string[] = [];
+    const skillRe = /alt="([^"]+)"[\s\S]*?<span[^>]*>([^<]+)<\/span>/g;
+    let sm: RegExpExecArray | null;
+    while ((sm = skillRe.exec(spSection)) !== null) {
+      const name = sm[2].trim();
+      if (name && !order.includes(name)) order.push(name);
+    }
+    if (order.length) r.skillLevelPriority = { order };
+
+    const altM = spSection.match(/Alt:<\/span>\s*(?:<!-- -->)?\s*(?:<!-- -->)?\s*([^<]+)<\/p>/);
+    if (altM && r.skillLevelPriority) {
+      r.skillLevelPriority.altNote = altM[1].trim();
+    }
+  }
+
+  // === Connections ===
+  const cnIdx = html.indexOf('Connections</h2>');
+  if (cnIdx > 0) {
+    const cnSection = html.substring(cnIdx, cnIdx + 8000);
+    const connections: { name: string; relationship: string }[] = [];
+    const relRe = /href="\/heroes\/([a-z0-9-]+)"[\s\S]*?<span[^>]*>([^<]+)<\/span><span[^>]*>([^<]+)<\/span>/g;
+    let cm: RegExpExecArray | null;
+    while ((cm = relRe.exec(cnSection)) !== null) {
+      const name = cm[2].trim();
+      const rel = cm[3].trim().toUpperCase();
+      if (name && rel && !connections.find(c => c.name === name)) {
+        connections.push({ name, relationship: rel });
+      }
+    }
+    if (connections.length) r.connections = connections;
+  }
+
+  // === Difficulty Label ===
+  const diffM = html.match(/Difficulty:<!-- --> <span[^>]*>(Easy|Medium|Hard|Very Hard|Very Easy)<\/span>/i);
+  if (diffM) r.difficultyLabel = diffM[1];
+
+  // === Specialty (from header badges) ===
+  const specRe = /bg-\[#c084fc\]\/10 text-\[#c084fc\][^>]*>([^<]+)<\/span>/g;
+  const specs: string[] = [];
+  let spm: RegExpExecArray | null;
+  while ((spm = specRe.exec(html)) !== null) {
+    const s = spm[1].trim();
+    if (s && !specs.includes(s)) specs.push(s);
+  }
+  if (specs.length) r.specialtyFromMlbb = specs;
+
+  // === Region & Race (from header links) ===
+  const raceM = html.match(/href="\/lore\/races#([^"]+)"[\s\S]*?<span[^>]*>([^<]+)<\/span>/);
+  if (raceM) {
+    r.race = raceM[2].trim();
+    r.raceSlug = raceM[1];
+  }
+  // Region: /lore/regions/azrya-woodlands
+  const regionM = html.match(/href="\/lore\/regions\/([^"]+)"[\s\S]*?<span[^>]*>([^<]+)<\/span>/);
+  if (regionM) r.region = regionM[2].trim();
+
+  // === Matchup explanation text (from tooltips or sections) ===
+  const strongReasonIdx = html.indexOf('Strong Against</h4>');
+  if (strongReasonIdx > 0) {
+    const reasonSection = html.substring(strongReasonIdx, strongReasonIdx + 5000);
+    const reasonM = reasonSection.match(/<p[^>]*class="[^"]*text-text-muted[^"]*"[^>]*>([^<]{20,})<\/p>/);
+    if (reasonM) r.strongAgainstReason = reasonM[1].trim();
+  }
+
+  const weakReasonIdx = html.indexOf('Weak Against</h4>');
+  if (weakReasonIdx > 0) {
+    const reasonSection = html.substring(weakReasonIdx, weakReasonIdx + 5000);
+    const reasonM = reasonSection.match(/<p[^>]*class="[^"]*text-text-muted[^"]*"[^>]*>([^<]{20,})<\/p>/);
+    if (reasonM) r.weakAgainstReason = reasonM[1].trim();
+  }
+
+  const synReasonIdx = html.indexOf('Best With</h2>');
+  if (synReasonIdx > 0) {
+    const reasonSection = html.substring(synReasonIdx, synReasonIdx + 5000);
+    const reasonM = reasonSection.match(/<p[^>]*class="[^"]*text-text-muted[^"]*"[^>]*>([^<]{20,})<\/p>/);
+    if (reasonM) r.synergyReason = reasonM[1].trim();
   }
 
   return r;
@@ -232,8 +346,49 @@ async function extractBulk(page: Page): Promise<Record<string, any>> {
   return {};
 }
 
+function parseRscHeroes(body: string): Record<string, any> {
+  const result: Record<string, any> = {};
+  try {
+    const heroPattern = /\{"id":"[^"]+","slug":"([^"]+)","name":"([^"]+)"[^}]*?"statsMap":\{([^}]+)\}/g;
+    let m: RegExpExecArray | null;
+    while ((m = heroPattern.exec(body)) !== null) {
+      const slug = m[1];
+      const name = m[2];
+      const statsRaw = m[3];
+      const allMatch = statsRaw.match(/"all":\{"winRate":([\d.]+),"pickRate":([\d.]+),"banRate":([\d.]+)/);
+      const gloryMatch = statsRaw.match(/"glory":\{"winRate":([\d.]+),"pickRate":([\d.]+),"banRate":([\d.]+)/);
+      const stats = allMatch || gloryMatch;
+      result[slug] = {
+        slug, name,
+        winRate: stats ? parseFloat(stats[1]) * 100 : 0,
+        pickRate: stats ? parseFloat(stats[2]) * 100 : 0,
+        banRate: stats ? parseFloat(stats[3]) * 100 : 0,
+      };
+    }
+  } catch {}
+  return result;
+}
+
+function deepMerge(target: Record<string, any>, source: Record<string, any>): void {
+  for (const [k, v] of Object.entries(source)) {
+    if (k === 'id' || k === 'name' || k === 'heroName' || k === 'skills') continue;
+    if (v === null || v === undefined) continue;
+    if (typeof v === 'object' && !Array.isArray(v) && v !== null) {
+      target[k] = { ...(target[k] || {}), ...v };
+      for (const [sk, sv] of Object.entries(v)) {
+        if (sv === null || sv === undefined || (Array.isArray(sv) && sv.length === 0)) continue;
+        target[k][sk] = sv;
+      }
+    } else if (Array.isArray(v)) {
+      if (v.length > 0) target[k] = v;
+    } else if (v !== '' && v !== 0) {
+      target[k] = v;
+    }
+  }
+}
+
 async function main() {
-  console.log(`[START] mlbb.tools sync — mode: ${MODE}`);
+  console.log(`[START] mlbb.tools sync v2 — mode: ${MODE}`);
   const heroFiles = fs.readdirSync(HERO_DIR).filter(f => f.endsWith('.json'));
   console.log(`[INFO] Found ${heroFiles.length} hero files`);
 
@@ -258,12 +413,21 @@ async function main() {
     fileIdToSlug[id] = slug;
   }
 
-  const toProcess = MODE === 'test' ? ['ling', 'fanny', 'gord'] : heroFiles.map(f => f.replace('.json', ''));
+  const toProcess = MODE === 'test' ? ['miya', 'ling', 'fanny'] : heroFiles.map(f => f.replace('.json', ''));
   console.log(`[INFO] Processing ${toProcess.length} heroes`);
 
   let successCount = 0, partialCount = 0, failedCount = 0;
   const partialList: { name: string; missing: string; reason: string }[] = [];
   const failedList: { name: string; error: string }[] = [];
+
+  const fieldCounts: Record<string, number> = {
+    baseStats: 0, powerCurve: 0, combos: 0, skillLevelPriority: 0,
+    connections: 0, synergyHeroes: 0, strongAgainst: 0, weakAgainst: 0,
+    proBuilds: 0, heroAttributes: 0, winRate: 0, difficultyLabel: 0,
+    region: 0, race: 0, powerCurveDominantPhase: 0, powerCurveSpikeLevels: 0,
+    powerCurveCoreItems: 0, strongAgainstReason: 0, weakAgainstReason: 0,
+    synergyReason: 0,
+  };
 
   for (let i = 0; i < toProcess.length; i++) {
     const fileId = toProcess[i];
@@ -276,13 +440,15 @@ async function main() {
     let htmlData: Record<string, any> = {};
     try {
       await page.goto(`https://mlbb.tools/heroes/${slug}`, { waitUntil: 'domcontentloaded', timeout: 30000 });
-      await page.waitForTimeout(8000);
+      await page.waitForTimeout(12000);
       const html = await page.content();
       htmlData = parseHeroPageHtml(html);
     } catch (e: any) { console.log(`[${i+1}/${toProcess.length}] [WARN] Page failed: ${e.message}`); }
 
+    // Build merge object
     const merge: Record<string, any> = { metaSource: 'mlbb.tools', metaUpdatedAt: new Date().toISOString().split('T')[0] };
 
+    // Meta stats
     const wr = htmlData.winRate || bulkHero?.winRate;
     const pr = htmlData.pickRate || bulkHero?.pickRate;
     const br = htmlData.banRate || bulkHero?.banRate;
@@ -290,6 +456,7 @@ async function main() {
     if (pr && pr > 0) merge.pickRate = Math.round(pr * 10) / 10;
     if (br && br >= 0) merge.banRate = Math.round(br * 10) / 10;
 
+    // Counters
     const strongFrom = htmlData.strongAgainst || bulkHero?.counters?.strongAgainst || [];
     const weakFrom = htmlData.weakAgainst || bulkHero?.counters?.weakAgainst || [];
     if (strongFrom.length > 0) {
@@ -306,6 +473,8 @@ async function main() {
         advantage: typeof c.advantage === 'number' ? c.advantage : (typeof c.winRate === 'number' ? Math.round(50 - c.winRate) : 5),
       }));
     }
+
+    // Synergy with actual %
     const synFrom = htmlData.synergyHeroes || bulkHero?.synergies || [];
     if (synFrom.length > 0) {
       merge.matchupSystem = merge.matchupSystem || {};
@@ -315,37 +484,69 @@ async function main() {
       }));
     }
 
+    // Matchup explanation text
+    if (htmlData.strongAgainstReason) {
+      merge.matchupSystem = merge.matchupSystem || {};
+      merge.matchupSystem.strongAgainstReason = htmlData.strongAgainstReason;
+    }
+    if (htmlData.weakAgainstReason) {
+      merge.matchupSystem = merge.matchupSystem || {};
+      merge.matchupSystem.weakAgainstReason = htmlData.weakAgainstReason;
+    }
+    if (htmlData.synergyReason) {
+      merge.matchupSystem = merge.matchupSystem || {};
+      merge.matchupSystem.synergyReason = htmlData.synergyReason;
+    }
+
+    // Hero attributes
     if (htmlData.heroAttributes) merge.heroAttributes = htmlData.heroAttributes;
 
-    if (htmlData.powerCurve && (htmlData.powerCurve.early > 0 || htmlData.powerCurve.mid > 0)) {
+    // Base stats
+    if (htmlData.baseStats) merge.baseStats = htmlData.baseStats;
+
+    // Power curve (from text)
+    if (htmlData.powerCurve) {
       merge.powerCurve = {
-        early: htmlData.powerCurve.early, mid: htmlData.powerCurve.mid, late: htmlData.powerCurve.late,
-        spikeLevels: htmlData.powerCurve.spikeLevels || existing.powerCurve?.spikeLevels || [],
-        coreItems: existing.powerCurve?.coreItems || [],
+        early: htmlData.powerCurve.early,
+        mid: htmlData.powerCurve.mid,
+        late: htmlData.powerCurve.late,
+        spikeLevels: htmlData.powerCurveSpikeLevels || existing.powerCurve?.spikeLevels || [],
+        coreItems: htmlData.powerCurveCoreItems || existing.powerCurve?.coreItems || [],
+        dominantPhase: htmlData.powerCurveDominantPhase || existing.powerCurve?.dominantPhase || null,
+        description: htmlData.powerCurveDescription || existing.powerCurve?.description || null,
       };
     }
 
+    // Combos
+    if (htmlData.combos) merge.combos = htmlData.combos;
+
+    // Skill level priority
+    if (htmlData.skillLevelPriority) merge.skillLevelPriority = htmlData.skillLevelPriority;
+
+    // Connections
+    if (htmlData.connections) merge.connections = htmlData.connections;
+
+    // Pro builds
     if (htmlData.proBuilds?.length) merge.proBuilds = htmlData.proBuilds;
 
+    // Difficulty label
+    if (htmlData.difficultyLabel) merge.difficultyLabel = htmlData.difficultyLabel;
+
+    // Region & Race
+    if (htmlData.region) merge.region = htmlData.region;
+    if (htmlData.race) merge.race = htmlData.race;
+
+    // Specialty (update only if different)
+    if (htmlData.specialtyFromMlbb?.length) merge.specialty = htmlData.specialtyFromMlbb;
+
+    // Video placeholders
     merge.videoUrl = existing.videoUrl ?? null;
     merge.skillVideos = existing.skillVideos ?? { passive: null, skill1: null, skill2: null, ultimate: null };
 
-    for (const [k, v] of Object.entries(merge)) {
-      if (k === 'id' || k === 'name' || k === 'heroName' || k === 'skills') continue;
-      if (v === null || v === undefined) continue;
-      if (typeof v === 'object' && !Array.isArray(v)) {
-        existing[k] = { ...(existing[k] || {}), ...v };
-        for (const [sk, sv] of Object.entries(v)) {
-          if (sv === null || sv === undefined || (Array.isArray(sv) && sv.length === 0)) continue;
-          existing[k][sk] = sv;
-        }
-      } else if (Array.isArray(v)) {
-        if (v.length > 0) existing[k] = v;
-      } else if (v !== '' && v !== 0) {
-        existing[k] = v;
-      }
-    }
+    // Deep merge into existing
+    deepMerge(existing, merge);
 
+    // Sync strategicData.counterSystem
     if (merge.matchupSystem?.strongAgainst) {
       existing.strategicData = existing.strategicData || {};
       existing.strategicData.counterSystem = existing.strategicData.counterSystem || {};
@@ -364,28 +565,52 @@ async function main() {
 
     writeHeroJson(fileId, existing);
 
-    const missing: string[] = [];
-    if (!existing.winRate) missing.push('winRate');
-    if (!existing.pickRate) missing.push('pickRate');
-    if (!existing.matchupSystem?.strongAgainst?.length) missing.push('strongAgainst');
-    if (!existing.matchupSystem?.weakAgainst?.length) missing.push('weakAgainst');
-    if (!existing.matchupSystem?.synergyHeroes?.length) missing.push('synergyHeroes');
-    if (!existing.heroAttributes) missing.push('heroAttributes');
-    if (!existing.proBuilds?.length) missing.push('proBuilds');
+    // Count fields
+    if (existing.baseStats?.hp) fieldCounts.baseStats++;
+    if (existing.powerCurve?.early) fieldCounts.powerCurve++;
+    if (existing.combos?.length) fieldCounts.combos++;
+    if (existing.skillLevelPriority?.order?.length) fieldCounts.skillLevelPriority++;
+    if (existing.connections?.length) fieldCounts.connections++;
+    if (existing.matchupSystem?.synergyHeroes?.length) fieldCounts.synergyHeroes++;
+    if (existing.matchupSystem?.strongAgainst?.length) fieldCounts.strongAgainst++;
+    if (existing.matchupSystem?.weakAgainst?.length) fieldCounts.weakAgainst++;
+    if (existing.proBuilds?.length) fieldCounts.proBuilds++;
+    if (existing.heroAttributes) fieldCounts.heroAttributes++;
+    if (existing.winRate) fieldCounts.winRate++;
+    if (existing.difficultyLabel) fieldCounts.difficultyLabel++;
+    if (existing.region) fieldCounts.region++;
+    if (existing.race) fieldCounts.race++;
+    if (existing.powerCurve?.dominantPhase) fieldCounts.powerCurveDominantPhase++;
+    if (existing.powerCurve?.spikeLevels?.length) fieldCounts.powerCurveSpikeLevels++;
+    if (existing.powerCurve?.coreItems?.length) fieldCounts.powerCurveCoreItems++;
+    if (existing.matchupSystem?.strongAgainstReason) fieldCounts.strongAgainstReason++;
+    if (existing.matchupSystem?.weakAgainstReason) fieldCounts.weakAgainstReason++;
+    if (existing.matchupSystem?.synergyReason) fieldCounts.synergyReason++;
 
     const sc = existing.matchupSystem?.strongAgainst?.length || 0;
     const wc = existing.matchupSystem?.weakAgainst?.length || 0;
     const sy = existing.matchupSystem?.synergyHeroes?.length || 0;
+    const comboCount = existing.combos?.length || 0;
+    const connCount = existing.connections?.length || 0;
+    const spOrder = existing.skillLevelPriority?.order?.length || 0;
+
+    const missing: string[] = [];
+    if (!existing.baseStats?.hp) missing.push('baseStats');
+    if (!existing.powerCurve?.early) missing.push('powerCurve');
+    if (!existing.combos?.length) missing.push('combos');
+    if (!existing.connections?.length) missing.push('connections');
+    if (!existing.matchupSystem?.synergyHeroes?.length) missing.push('synergy');
+    // skillLevelPriority is optional — not all heroes have this section
 
     if (missing.length === 0) {
-      console.log(`[${i+1}/${toProcess.length}] [OK] ${heroName} — ${sc} counters, ${wc} weak, ${sy} synergy, attrs OK, builds OK`);
-      logs.push({ hero: heroName, status: 'OK', message: `${sc} counters, ${wc} weak, ${sy} synergy` });
+      console.log(`[${i+1}/${toProcess.length}] [OK] ${heroName} — ${sc}/${wc} counters, ${sy} syn, ${comboCount} combos, ${connCount} conn, sp:${spOrder}`);
+      logs.push({ hero: heroName, status: 'OK', message: `${sc}+${wc} counters, ${sy} syn, ${comboCount} combos` });
       successCount++;
     } else {
       console.log(`[${i+1}/${toProcess.length}] [PARTIAL] ${heroName} — missing: ${missing.join(', ')}`);
       logs.push({ hero: heroName, status: 'PARTIAL', message: `missing: ${missing.join(', ')}` });
       partialCount++;
-      partialList.push({ name: heroName, missing: missing.join(', '), reason: 'Data not available on mlbb.tools or page timeout' });
+      partialList.push({ name: heroName, missing: missing.join(', '), reason: 'Data not available on mlbb.tools or parse failed' });
     }
 
     if (i < toProcess.length - 1) await sleep(RATE_LIMIT_MS);
@@ -395,25 +620,20 @@ async function main() {
 
   if (MODE === 'test') {
     console.log(`\n[TEST COMPLETE] ${successCount} OK, ${partialCount} partial, ${failedCount} failed`);
+    console.log('\nField counts:', JSON.stringify(fieldCounts, null, 2));
     return;
   }
 
   const now = new Date();
   const dateStr = now.toISOString().split('T')[0];
-  const stats = { wr: 0, strong: 0, curve: 0, builds: 0, attrs: 0 };
-  for (const file of heroFiles) {
-    const data = readHeroJson(file.replace('.json', ''));
-    if (!data) continue;
-    if (data.winRate) stats.wr++;
-    if (data.matchupSystem?.strongAgainst?.length) stats.strong++;
-    if (data.powerCurve) stats.curve++;
-    if (data.proBuilds?.length) stats.builds++;
-    if (data.heroAttributes) stats.attrs++;
-  }
 
-  let report = `# mlbb.tools Sync Report — ${dateStr}\n\n`;
+  let report = `# mlbb.tools Sync Report V2 — ${dateStr}\n\n`;
   report += `## Summary\n- Total heroes processed: ${toProcess.length}\n- Full success: ${successCount}\n- Partial success: ${partialCount}\n- Failed: ${failedCount}\n\n`;
-  report += `## Full Success (${successCount} heroes)\n${logs.filter(l => l.status === 'OK').map(l => l.hero).join(', ')}\n\n`;
+  report += `## Field Coverage\n`;
+  for (const [field, count] of Object.entries(fieldCounts)) {
+    report += `- ${field}: ${count}/${heroFiles.length} heroes\n`;
+  }
+  report += `\n## Full Success (${successCount} heroes)\n${logs.filter(l => l.status === 'OK').map(l => l.hero).join(', ')}\n\n`;
   report += `## Partial Success (${partialCount} heroes)\n`;
   if (partialList.length) {
     report += `| Hero | Missing Fields | Reason |\n|------|---------------|--------|\n`;
@@ -424,13 +644,7 @@ async function main() {
     report += `| Hero | Error |\n|------|-------|\n`;
     failedList.forEach(f => report += `| ${f.name} | ${f.error} |\n`);
   } else report += `None\n`;
-  report += `\n## New Fields Added\n`;
-  report += `- winRate/pickRate/banRate: ${stats.wr}/${heroFiles.length} heroes\n`;
-  report += `- matchupSystem.strongAgainst: ${stats.strong}/${heroFiles.length} heroes\n`;
-  report += `- powerCurve: ${stats.curve}/${heroFiles.length} heroes\n`;
-  report += `- proBuilds: ${stats.builds}/${heroFiles.length} heroes\n`;
-  report += `- heroAttributes: ${stats.attrs}/${heroFiles.length} heroes\n\n`;
-  report += `## VIDEO STATUS\nAll heroes have skillVideos field set to null.\nUser needs to manually upload videos to: /public/videos/heroes/{heroId}/\nExpected files: passive.mp4, skill1.mp4, skill2.mp4, ultimate.mp4\n`;
+  report += `\n## VIDEO STATUS\nAll heroes have skillVideos field set to null.\nUser needs to manually upload videos to: /public/videos/heroes/{heroId}/\nExpected files: passive.mp4, skill1.mp4, skill2.mp4, ultimate.mp4\n`;
 
   fs.mkdirSync(REPORT_DIR, { recursive: true });
   fs.writeFileSync(path.join(REPORT_DIR, 'sync-mlbb-tools-report.md'), report, 'utf-8');

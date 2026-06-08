@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Charge",
+    "Burst"
   ],
   "lane": "EXP",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2580,
-    "hpRegen": 8,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 117,
-    "physicalDefense": 22,
+    "hp": 2601,
+    "hpRegen": 7.6,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 126,
+    "physicalDefense": 21,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.13",
     "attackSpeedRatio": 100,
     "movementSpeed": 265
@@ -243,7 +243,9 @@
       "synergyWith": [
         "Harith",
         "Sun",
-        "Bruno"
+        "Bruno",
+        "Aulus",
+        "Ling"
       ]
     }
   },
@@ -295,18 +297,29 @@
     "synergyHeroes": [
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 2
       },
       {
         "name": "Sun",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Bruno",
-        "synergy": 5
+        "synergy": 1.7
+      },
+      {
+        "name": "Aulus",
+        "synergy": 1.6
+      },
+      {
+        "name": "Ling",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Dyrroth has good chasing abilities and good melee burst damage, he is strong against heroes with poor Mobility, such as Gord and Hanabi.",
+    "weakAgainstReason": "Being a melee hero makes Dyrroth weak against heroes with Slow and kiting abilities, such as Vexana and Belerick.",
+    "synergyReason": "Dyrroth's high melee burst damage works best with heroes with single-target CC, such as Franco and Kaja."
   },
   "mechanicCategory": [
     "Standard"
@@ -357,11 +370,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 63,
-    "mid": 55,
-    "late": 39,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 80,
+    "mid": 70,
+    "late": 50,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Hunter Strike",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "Very strong early skirmisher/lanebully thanks to low CDs, defense shred on Spectre Step, and high base damage trading. He spikes again on ultimate unlock for executes, but tends to fall off late when enemies stack armor/peel and teamfights punish his short range."
   },
   "proBuilds": [
     {
@@ -405,5 +428,47 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Skill 3"
+      ],
+      "description": "In teamfights, Dyrroth should use his 2nd Skill to close the gap with the enemy, then use his Basic Attacks and 1st Skill to deal damage, and finish off the low HP heroes with his Ultimate."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 2",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, Dyrroth can use his 2nd Skill to close in on the enemy and cast it again to lower their Physical Defense. He can then follow up with his Basic Attacks and 1st Skill to poke them."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Abysm Strike",
+      "Spectre Step",
+      "Burst Strike"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Franco",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Kaja",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Abyss",
+  "race": "Blood Demon, formerly Human"
 }

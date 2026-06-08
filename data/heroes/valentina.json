@@ -7,7 +7,7 @@
   ],
   "specialty": [
     "Burst",
-    "Poke"
+    "Finisher"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
+    "hp": 2460,
     "hpRegen": 7,
     "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 115,
-    "physicalDefense": 20,
+    "manaRegen": 3.8,
+    "physicalAttack": 98,
+    "physicalDefense": 17,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "0.98",
     "attackSpeedRatio": 100,
     "movementSpeed": 240
@@ -231,7 +231,9 @@
       "synergyWith": [
         "Yve",
         "Zhuxin",
-        "Gord"
+        "Gord",
+        "Pharsa",
+        "Novaria"
       ]
     }
   },
@@ -283,18 +285,29 @@
     "synergyHeroes": [
       {
         "name": "Yve",
-        "synergy": 5
+        "synergy": 7.9
       },
       {
         "name": "Zhuxin",
-        "synergy": 5
+        "synergy": 7.2
       },
       {
         "name": "Gord",
-        "synergy": 5
+        "synergy": 5.5
+      },
+      {
+        "name": "Pharsa",
+        "synergy": 4.1
+      },
+      {
+        "name": "Novaria",
+        "synergy": 3.9
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Heroes that lack mobility or burst such as Hanabi and Faramis are suspectible to Valentina's low cooldown skills that provide soft CC and sustained damage.",
+    "weakAgainstReason": "Heroes with gap closers or high burst like Hayabusa, Natalia, and Hanzo.",
+    "synergyReason": "Heroes that can buff or CC such as Carmilla and Atlas to give her more opportunities to deal damage."
   },
   "mechanicCategory": [
     "Ultimate Copy"
@@ -339,11 +352,21 @@
     "difficulty": 80
   },
   "powerCurve": {
-    "early": 55,
-    "mid": 63,
-    "late": 53,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 70,
+    "mid": 80,
+    "late": 68,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Holy Crystal"
+    ],
+    "dominantPhase": null,
+    "description": "Valentina is oppressive early-mid due to lane control, mobility, sustain/EXP advantage from passive, and the threat of double-cast fear setup. Her late game depends heavily on what Ultimate she steals and enemy burst potential, so she’s slightly less consistent as fights become more one-shot oriented and positioning is punished."
   },
   "proBuilds": [
     {
@@ -388,5 +411,42 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive",
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "Copy an Ultimate or use 2nd Skill for better positioning. Use 1st Skill and reset its cooldown with 2nd Skill, then Terrify the target and use her copied Ultimate to secure the kill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "Use 1st Skill to poke, then 2nd Skill to refresh its CD, and 1st Skill on the same enemy again to cause Terrify."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Carmilla",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

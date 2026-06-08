@@ -7,8 +7,8 @@
     "Mage"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Push",
+    "Burst"
   ],
   "lane": "EXP",
   "lanes": [
@@ -26,14 +26,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2381,
-    "hpRegen": 8,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 117,
-    "physicalDefense": 23,
+    "hp": 2620,
+    "hpRegen": 7.8,
+    "mana": 475,
+    "manaRegen": 3.6,
+    "physicalAttack": 121,
+    "physicalDefense": 22,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.06",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -282,7 +282,9 @@
       "synergyWith": [
         "Sora",
         "Arlott",
-        "Atlas"
+        "Atlas",
+        "Hilda",
+        "Khaleed"
       ]
     }
   },
@@ -334,18 +336,29 @@
     "synergyHeroes": [
       {
         "name": "Sora",
-        "synergy": 5
+        "synergy": 2.3
       },
       {
         "name": "Arlott",
-        "synergy": 5
+        "synergy": 1.9
       },
       {
         "name": "Atlas",
-        "synergy": 5
+        "synergy": 1.8
+      },
+      {
+        "name": "Hilda",
+        "synergy": 1.7
+      },
+      {
+        "name": "Khaleed",
+        "synergy": 1.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Bane counters Tanks with high HP but low damage, such as Hylos and Belerick, because he can out-sustain them and deals HP percentage-based damage.",
+    "weakAgainstReason": "Bane is countered by Mages that deal heavy damage from afar, such as Vale and Xavier who can deal significant damage to him before he can get in range.",
+    "synergyReason": "Bane works best with heroes like as Tigreal and Luo Yi who can pull enemies together so he can do even more damage with his AOE."
   },
   "mechanicCategory": [
     "Standard"
@@ -398,11 +411,21 @@
     "difficulty": 30
   },
   "powerCurve": {
-    "early": 41,
-    "mid": 58,
-    "late": 60,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 52,
+    "mid": 74,
+    "late": 77,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Bane’s early trades are okay but he usually needs items to make his poke/heal and Shark Bite-enhanced hits feel oppressive. With Ultimate unlocked he becomes a strong mid-game objective/push hero, and late game his high-scaling magic burst + zone control can swing Lord fights and shred towers with pressure."
   },
   "proBuilds": [
     {
@@ -447,5 +470,45 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 3",
+        "Passive",
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Bane's 2nd Skill to close in and catch multiple enemies with his Ultimate. Use an enhanced Basic Attack when the enemies are knocked airborne, then use his 2nd Skill and another enhanced Basic Attack. Finally, use his 1st Skill and enhanced Basic Attack to chase and finish off the enemy."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": ""
+    }
+  ],
+  "connections": [
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Luo Yi",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Northern Vale",
+  "race": "Half-Man, Half-Octopus"
 }

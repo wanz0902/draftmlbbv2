@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Poke",
+    "Control"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 7,
+    "hp": 2450,
+    "hpRegen": 6.8,
     "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 112,
-    "physicalDefense": 17,
+    "manaRegen": 3.8,
+    "physicalAttack": 96,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -293,7 +293,9 @@
       "synergyWith": [
         "Harley",
         "Aldous",
-        "Sun"
+        "Sun",
+        "Aulus",
+        "Atlas"
       ]
     }
   },
@@ -324,18 +326,29 @@
     "synergyHeroes": [
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Aldous",
-        "synergy": 5
+        "synergy": 1.3
       },
       {
         "name": "Sun",
-        "synergy": 5
+        "synergy": 1.2
+      },
+      {
+        "name": "Aulus",
+        "synergy": 1.2
+      },
+      {
+        "name": "Atlas",
+        "synergy": 1.2
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Backline DPS heroes such as Layla, Irithel and Xavier.",
+    "weakAgainstReason": "Mobile Assassins such as Saber, Aamon and Karina.",
+    "synergyReason": "Heroes with powerful CC such as Atlas or\nhigh damage output like Beatrix to burst down enemies."
   },
   "mechanicCategory": [
     "Standard"
@@ -380,11 +393,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 38,
-    "mid": 58,
-    "late": 62,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 48,
+    "mid": 74,
+    "late": 79,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Vexana’s early is serviceable but gated by cooldowns and needing setup/accuracy for her delayed burst. She spikes when Ultimate adds a strong summon for fights and objectives, and she scales very well into late game as the Guard’s %HP AoE damage and her high ratios make her a major threat in clustered Lord/teamfight scenarios."
   },
   "proBuilds": [
     {
@@ -429,5 +452,37 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "Initiate teamfights with CC or follow up after other CC. \nUse her Ultimate when enemies are gathered, follow up \nwith 2nd and 1st Skill combo for CC and damage."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "Terrify enemy with 1st Skill and follow up with 2nd Skill for guaranteed damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Beatrix",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "The Barren Lands",
+  "race": "Undead"
 }

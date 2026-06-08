@@ -7,8 +7,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Crowd Control",
+    "Burst"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -22,14 +22,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2821,
+    "hpRegen": 8.6,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 114,
+    "physicalDefense": 27,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 16,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -194,7 +194,9 @@
       "synergyWith": [
         "Angela",
         "Aldous",
-        "Alpha"
+        "Alpha",
+        "Natalia",
+        "Argus"
       ]
     }
   },
@@ -246,18 +248,29 @@
     "synergyHeroes": [
       {
         "name": "Angela",
-        "synergy": 5
+        "synergy": 2.4
       },
       {
         "name": "Aldous",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Alpha",
-        "synergy": 5
+        "synergy": 1.6
+      },
+      {
+        "name": "Natalia",
+        "synergy": 1.5
+      },
+      {
+        "name": "Argus",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Due to his great CC and high Physical Defense, Gatotkaca counters Marksmen with no mobility skills like Layla and Popol and Kupa..",
+    "weakAgainstReason": "Gatotkaca is countered by heroes that can remove CC like Diggie and Wanwan who will greatly reduce his effectiveness.",
+    "synergyReason": "Gatotkaca works best with heroes with strong CC and damage, such as Kagura and Vale who can give his Ultimate even more value."
   },
   "mechanicCategory": [
     "Standard"
@@ -310,11 +323,21 @@
     "difficulty": 10
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 61,
-    "late": 56,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 78,
+    "late": 72,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 10"
+    ],
+    "coreItems": [
+      "Tough Boots",
+      "Cursed Helmet",
+      "Radiant Armor"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Gatotkaca comes online when he can reliably force fights (taunt + ultimate), making him most oppressive in mid-game rotations and objective fights. Late game he remains a strong initiator/frontliner with high effective durability from Steel Bones, but his damage doesn’t scale as hard and engages can be countered by positioning and cleanses."
   },
   "proBuilds": [
     {
@@ -358,5 +381,38 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Gatotkaca's 2nd Skill to CC the enemy by charging up to extend the range while aiming, then follow up with his 1st Skill and Basic Attacks."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Gatotkaca's Ultimate to dive into the enemy team, then use his 2nd Skill to taunt them, and slow them with his 1st Skill before finishing with Basic Attacks."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Kagura",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Vale",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "race": "Human"
 }

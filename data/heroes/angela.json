@@ -7,7 +7,7 @@
   ],
   "specialty": [
     "Guard",
-    "Regen"
+    "Support"
   ],
   "lane": "Roam",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2401,
+    "hpRegen": 7,
+    "mana": 510,
+    "manaRegen": 4,
+    "physicalAttack": 95,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -161,7 +161,9 @@
       "synergyWith": [
         "Uranus",
         "Fredrinn",
-        "Chip"
+        "Chip",
+        "Akai",
+        "Wanwan"
       ]
     }
   },
@@ -213,18 +215,29 @@
     "synergyHeroes": [
       {
         "name": "Uranus",
-        "synergy": 5
+        "synergy": 4.1
       },
       {
         "name": "Fredrinn",
-        "synergy": 5
+        "synergy": 3.9
       },
       {
         "name": "Chip",
-        "synergy": 5
+        "synergy": 3.9
+      },
+      {
+        "name": "Akai",
+        "synergy": 3.8
+      },
+      {
+        "name": "Wanwan",
+        "synergy": 2.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Angela counters heroes with low mobility, such as Uranus and Belerick, by slowing them even further and speeding up her allies.",
+    "weakAgainstReason": "Angela is countered by nimble Assassins with burst damage, such as Ling and Harley.",
+    "synergyReason": "Angela works best with highly mobile Assassins such as Lancelot and Aamon since she can provide CC and heals while increasing their mobility even further."
   },
   "mechanicCategory": [
     "Attach",
@@ -274,11 +287,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 48,
-    "mid": 63,
-    "late": 58,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 62,
+    "mid": 80,
+    "late": 74,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Fleeting Time",
+      "Oracle",
+      "Dominance Ice"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Angela is decent early with poke/heal trades, but her biggest spike is level 4 where global Heartguard enables cross-map saves and forced fights around Turtle. She stays strong late with low-commitment shielding/CC, though her impact depends heavily on attaching to a well-farmed carry."
   },
   "proBuilds": [
     {
@@ -322,5 +345,45 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Angela's Ultimate first to attach to a strong ally, and use her 1st Skill to deal damage or heal allies when needed. When enemies try to close in, CC them with her 2nd Skill, and follow up with her 1st Skill for sustained damage."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Angela's 1st Skill to constantly poke the enemy. When their HP is low, use her 2nd Skill to CC the target, then continue to deal damage with her 1st Skill."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Heartguard",
+      "Puppet-on-a-String",
+      "Love Waves"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Lancelot",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Aamon",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Android"
 }

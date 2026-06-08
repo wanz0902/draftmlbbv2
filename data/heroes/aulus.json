@@ -7,7 +7,7 @@
   ],
   "specialty": [
     "Damage",
-    "Crowd Control"
+    "Charge"
   ],
   "lane": "Jungle",
   "lanes": [
@@ -21,12 +21,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2660,
+    "hpRegen": 7.8,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 122,
+    "physicalDefense": 22,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -162,7 +162,9 @@
       "synergyWith": [
         "Gloo",
         "Atlas",
-        "Arlott"
+        "Arlott",
+        "Lolita",
+        "Belerick"
       ]
     }
   },
@@ -214,18 +216,29 @@
     "synergyHeroes": [
       {
         "name": "Gloo",
-        "synergy": 5
+        "synergy": 2.6
       },
       {
         "name": "Atlas",
-        "synergy": 5
+        "synergy": 2
       },
       {
         "name": "Arlott",
-        "synergy": 5
+        "synergy": 1.9
+      },
+      {
+        "name": "Lolita",
+        "synergy": 1.8
+      },
+      {
+        "name": "Belerick",
+        "synergy": 1.8
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Aulus's strong engage and sustained combat capabilities, along with his Control Immunity, makes him a good counter to squishy, low-mobility heroes like Hanabi, Miya, and Gord.",
+    "weakAgainstReason": "Since Aulus's damage relies on landing his enhanced Basic Attacks, heroes who can keep him at bay and avoid them are a tough matchup, such as Franco, Melissa, and Karina.",
+    "synergyReason": "Aulus is a dive Fighter and he thrives with reliable ranged Support, such as Angela and Floryn."
   },
   "mechanicCategory": [
     "Standard"
@@ -276,11 +289,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 30,
-    "mid": 48,
-    "late": 67,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 38,
+    "mid": 62,
+    "late": 86,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Demon Hunter Sword",
+      "Golden Staff",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Aulus is relatively weak early because he needs levels and items to keep Fighting Spirit stacked and to stick to targets, so early skirmishes can be rough. He spikes hard as his ultimate upgrades grant permanent axe crafts (range/pen) and once he completes core DPS items, turning into a high sustained-damage late-game carry."
   },
   "proBuilds": [
     {
@@ -324,5 +347,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 2",
+        "Skill 3",
+        "Passive",
+        "Passive"
+      ],
+      "description": ""
+    }
+  ],
+  "connections": [
+    {
+      "name": "Benedetta",
+      "relationship": "ALLY"
+    },
+    {
+      "name": "Brody",
+      "relationship": "ALLY"
+    },
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Floryn",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "The Barren Lands",
+  "race": "Leonin"
 }

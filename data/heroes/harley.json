@@ -7,8 +7,8 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Burst",
+    "Poke"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -22,14 +22,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 114,
-    "physicalDefense": 19,
+    "hp": 2408,
+    "hpRegen": 6.8,
+    "mana": 490,
+    "manaRegen": 3.8,
+    "physicalAttack": 100,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.06",
     "attackSpeedRatio": 100,
     "movementSpeed": 240
@@ -261,7 +261,9 @@
       "synergyWith": [
         "Valentina",
         "Lylia",
-        "Zhask"
+        "Zhask",
+        "Zhuxin",
+        "Novaria"
       ]
     }
   },
@@ -313,18 +315,29 @@
     "synergyHeroes": [
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 2.8
       },
       {
         "name": "Lylia",
-        "synergy": 5
+        "synergy": 2.3
       },
       {
         "name": "Zhask",
-        "synergy": 5
+        "synergy": 2.2
+      },
+      {
+        "name": "Zhuxin",
+        "synergy": 2.1
+      },
+      {
+        "name": "Novaria",
+        "synergy": 2.1
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Harley counters squishy heroes with poor mobility, such as Cecilion and Ixia, since he can deal burst damage while being on the move.",
+    "weakAgainstReason": "Harley is countered by tanky heroes like Lolita and Uranus, because Harley can't deal enough meaningful damage to them and they can block and tank his Ultimate for their teammates.",
+    "synergyReason": "Harley is best with heroes who can disrupt the enemy formation like Akai and Khufra. He can follow them into the fight and burst down the squishy targets."
   },
   "mechanicCategory": [
     "Standard"
@@ -373,11 +386,21 @@
     "difficulty": 60
   },
   "powerCurve": {
-    "early": 59,
-    "mid": 63,
-    "late": 43,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 75,
+    "mid": 80,
+    "late": 55,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Genius Wand",
+      "Holy Crystal",
+      "Divine Glaive"
+    ],
+    "dominantPhase": null,
+    "description": "Harley spikes early-mid with fast rotations and Deadly Magic pickoffs, especially once he has enough power/pen to delete squishies. His late-game impact drops because targets get defensive items and grouping/vision reduces his ability to safely isolate kills."
   },
   "proBuilds": [
     {
@@ -421,5 +444,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, first use Harley's 2nd Skill to get a good angle to cast his 1st Skill, and follow up with Basic Attacks. Then use his 2nd Skill again to get back to safety."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 3",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "In teamfights, use Harley's 2nd Skill to find a good position to land his Ultimate. Then cast his Ultimate at the target, and follow up with his 1st Skill before moving back to safety with his 2nd Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Akai",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Khufra",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Northern Vale",
+  "race": "Human"
 }

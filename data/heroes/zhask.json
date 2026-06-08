@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Chase",
+    "Damage"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 6,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 107,
+    "hp": 2480,
+    "hpRegen": 7,
+    "mana": 490,
+    "manaRegen": 3.8,
+    "physicalAttack": 100,
     "physicalDefense": 17,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -304,7 +304,9 @@
       "synergyWith": [
         "Novaria",
         "Harley",
-        "Selena"
+        "Selena",
+        "Natalia",
+        "Cyclops"
       ]
     }
   },
@@ -356,18 +358,29 @@
     "synergyHeroes": [
       {
         "name": "Novaria",
-        "synergy": 5
+        "synergy": 2.3
       },
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 2.2
       },
       {
         "name": "Selena",
-        "synergy": 5
+        "synergy": 1.7
+      },
+      {
+        "name": "Natalia",
+        "synergy": 1.7
+      },
+      {
+        "name": "Cyclops",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Zhask is strong against burst damage heroes like Aldous and Paquito because his high HP after fusing with his Nightmaric Spawn, makes him tough to burst down.",
+    "weakAgainstReason": "Zhask is countered by agile or long range heroes, such as Pharsa and Cecilion, because they can quickly step out of range of his immobile Nightmaric Spawn.",
+    "synergyReason": "Zhask works best with heroes that can lock down enemies so he can have more time to deal damage, like Belerick and Lolita."
   },
   "mechanicCategory": [
     "Summon",
@@ -413,11 +426,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 59,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 75,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Glowing Wand",
+      "Genius Wand",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Early is decent once he has Spawn + Mind Eater for lane control, but he’s more punishable before Ultimate. Big spike at Lv4 where fusion-enhanced skills enable strong objective control and siege; late stays strong with high Magic Power and on-hit burn, but can be outplayed by coordinated focus/anti-summon positioning."
   },
   "proBuilds": [
     {
@@ -462,5 +485,51 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 4",
+        "Skill 2",
+        "Skill 3",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In teamfights, Zhask should start by summoning his Nightmaric Spawn in a suitable location and use his Ultimate to fuse with it, then unleash his enhanced 2nd and 3rd Skill to stun and damage enemies, and follow up with Basic Attacks. If the enemy tries to flee, use his enhanced 1st Skill to blink toward them."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3"
+      ],
+      "description": "In the laning phase, Zhask should start with his 1st Skill to summon a Nightmaric Spawn next to the enemy and follow up with his 2nd Skill to stun the target, then use his 3rd Skill for more damage."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Nightmaric Spawn",
+      "Mind Eater",
+      "Hive Clones"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Belerick",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Lolita",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Yve",
+      "relationship": "FEUDS"
+    }
+  ],
+  "region": "Northern Vale",
+  "race": "Extraterrestrial"
 }

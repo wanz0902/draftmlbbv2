@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2440,
-    "hpRegen": 6,
+    "hp": 2431,
+    "hpRegen": 6.6,
     "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 105,
-    "physicalDefense": 18,
+    "manaRegen": 3.8,
+    "physicalAttack": 98,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -278,7 +278,9 @@
       "synergyWith": [
         "Chip",
         "Zhuxin",
-        "Mathilda"
+        "Mathilda",
+        "Kaja",
+        "Valentina"
       ]
     }
   },
@@ -330,18 +332,29 @@
     "synergyHeroes": [
       {
         "name": "Chip",
-        "synergy": 5
+        "synergy": 3.8
       },
       {
         "name": "Zhuxin",
-        "synergy": 5
+        "synergy": 3.4
       },
       {
         "name": "Mathilda",
-        "synergy": 5
+        "synergy": 3.3
+      },
+      {
+        "name": "Kaja",
+        "synergy": 2.4
+      },
+      {
+        "name": "Valentina",
+        "synergy": 2
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Odette's Ultimate is capable of unleashing massive damage and is effective against heroes lacking interruption skills, such as Layla and Irithel.",
+    "weakAgainstReason": "Odette is countered by heroes with Crowd Control skills, such as Minotaur and Edith, because they can easily interrupt her Ultimate.",
+    "synergyReason": "Pair Odette with heroes who can relocate their teammates like Johnson and Jawhead to make it easier for her to find the perfect position for her Ultimate."
   },
   "mechanicCategory": [
     "Standard"
@@ -386,11 +399,21 @@
     "difficulty": 20
   },
   "powerCurve": {
-    "early": 39,
-    "mid": 63,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 50,
+    "mid": 80,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Lightning Truncheon",
+      "Holy Crystal",
+      "Divine Glaive"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Her main spike is ultimate unlock plus one big burst item, enabling lethal S2 immobilize into Swan Song teamfight wipes around Turtle and mid-game tower pushes. Late game damage remains high, but reliability drops versus more interrupts, purify effects, and long-range DPS."
   },
   "proBuilds": [
     {
@@ -435,5 +458,43 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, initiate with Odette's 2nd Skill to immobilize the enemy\nand activate her Ultimate to continuously damage the controlled targets.\nActivate the dash from her Ultimate to reposition when enemies are about to escape, and finish them off with her 1st Skill after her Ultimate ends."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, use Odette's 1st Skill to harass the opponent, and immobilize them with her 2nd Skill at the right moment before securing the kill with her Ultimate."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Lancelot",
+      "relationship": "LOVER"
+    },
+    {
+      "name": "Johnson",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Jawhead",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

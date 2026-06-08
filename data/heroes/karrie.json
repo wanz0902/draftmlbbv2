@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Finisher",
+    "Damage"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2478,
+    "hpRegen": 6.8,
+    "mana": 445,
+    "manaRegen": 3.4,
+    "physicalAttack": 113,
+    "physicalDefense": 17,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -187,7 +187,9 @@
       "synergyWith": [
         "Harith",
         "Kaja",
-        "Gord"
+        "Gord",
+        "Kalea",
+        "Valentina"
       ]
     }
   },
@@ -239,18 +241,29 @@
     "synergyHeroes": [
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 3.1
       },
       {
         "name": "Kaja",
-        "synergy": 5
+        "synergy": 2.4
       },
       {
         "name": "Gord",
-        "synergy": 5
+        "synergy": 1.7
+      },
+      {
+        "name": "Kalea",
+        "synergy": 1.6
+      },
+      {
+        "name": "Valentina",
+        "synergy": 1.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Tanks such as Tigreal and Fredrinn that take more damage from her HP percent attacks.",
+    "weakAgainstReason": "Long range heroes such as Xavier, Layla and Nana due to Karrie's medium range.",
+    "synergyReason": "Assassins like Saber and Aamon who can eliminate \nranged threats so Karrie can focus the frontline."
   },
   "mechanicCategory": [
     "Standard"
@@ -296,11 +309,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 39,
-    "mid": 55,
-    "late": 66,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 50,
+    "mid": 70,
+    "late": 85,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Demon Hunter Sword",
+      "Golden Staff",
+      "Haas's Claws"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Early lane is average since she needs attack speed and sustained time-on-target to trigger Lightwheel true damage reliably. Mid game spikes with Ultimate uptime plus her first DPS item, and late game becomes dominant as attack-speed/on-hit builds melt high-HP frontliners through max-HP true damage."
   },
   "proBuilds": [
     {
@@ -345,5 +368,47 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "Use her 1st Skill to poke enemies and slow them, \n\nthen follow up with Basic Attacks.\n\nShe can then use her 2nd Skill to chase or reposition herself."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "Use her Ultimate to apply extra Lightwheel Marks \nwith Basic Attacks and 1st Skill to slow enemies, \nand then chase with her 2nd Skill to secure the kill."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Speedy Lightwheel",
+      "Phantom Step",
+      "Spinning Lightwheel"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Saber",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Aamon",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Vonetis Sea",
+  "race": "Yasson"
 }

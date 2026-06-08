@@ -7,7 +7,7 @@
     "Marksman"
   ],
   "specialty": [
-    "Charge",
+    "Finisher",
     "Burst"
   ],
   "lane": "Gold Lane",
@@ -22,12 +22,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2490,
+    "hpRegen": 6.8,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 125,
+    "physicalDefense": 17,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -165,7 +165,9 @@
       "synergyWith": [
         "Harith",
         "Popol and Kupa",
-        "Roger"
+        "Roger",
+        "Yi Sun-shin",
+        "Aulus"
       ]
     }
   },
@@ -217,18 +219,29 @@
     "synergyHeroes": [
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 3.8
       },
       {
         "name": "Popol and Kupa",
-        "synergy": 5
+        "synergy": 3.7
       },
       {
         "name": "Roger",
-        "synergy": 5
+        "synergy": 1.8
+      },
+      {
+        "name": "Yi Sun-shin",
+        "synergy": 1.5
+      },
+      {
+        "name": "Aulus",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Lesley is strong against tank heroes who rely heavily on equipment. Because her attacks can deal True Damage that will ignore the defense these heroes get from the equipment. Such as Gatotkaca and Fredrinn.",
+    "weakAgainstReason": "Lesley is countered by Assassin heroes with multiple movement abilities, which will cause her to lose her range advantage. Such as Ling and Lancelot.",
+    "synergyReason": "Lesley works best with tank heroes who can provide better attacking conditions for her, like Minotaur and Baxia."
   },
   "mechanicCategory": [
     "Standard"
@@ -279,11 +292,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 31,
-    "mid": 48,
-    "late": 66,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 40,
+    "mid": 62,
+    "late": 85,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Berserker's Fury",
+      "Endless Battle",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Lesley’s early is poke-oriented and matchup-dependent because she needs items and levels to convert penetration into high crit damage and meaningful true-damage shots. Mid game becomes threatening with ultimate pick potential and first crit item, while late game she becomes a dominant burst marksman who can delete squishies with repeated empowered shots."
   },
   "proBuilds": [
     {
@@ -328,5 +351,40 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Passive",
+        "Skill 3"
+      ],
+      "description": "In teamfights, Lesley can repeatedly use her 1st Skill to deal more damage with her enhanced Basic Attack while moving. When the enemy hero is close, Lesley can use her 2nd Skill and the enhanced Basic Attack for the counterattack, and use his Ultimate to start reaping."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Passive",
+        "Skill 3"
+      ],
+      "description": "In the laning phase, once Lesley reaches full energy, and her enhanced Basic Attack is activated, wait for the opportunity to use the enhanced Basic Attack to hit the enemy hero. Then use her 1st Skill to reactivate the enhanced Basic Attack and hit the enemy again, and finally, use her Ultimate to finish off the enemy."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Minotaur",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Baxia",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

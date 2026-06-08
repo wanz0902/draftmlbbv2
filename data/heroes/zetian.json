@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Damage",
+    "Crowd Control"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -273,7 +273,9 @@
       "synergyWith": [
         "Valentina",
         "Harley",
-        "Natalia"
+        "Natalia",
+        "Gusion",
+        "Zhask"
       ]
     }
   },
@@ -309,18 +311,29 @@
     "synergyHeroes": [
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 3.2
       },
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 2.1
       },
       {
         "name": "Natalia",
-        "synergy": 5
+        "synergy": 1.6
+      },
+      {
+        "name": "Gusion",
+        "synergy": 1.4
+      },
+      {
+        "name": "Zhask",
+        "synergy": 1.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Zetian's Passive counters melee heroes with limited gap closers like Balmond and Zilong, allowing her to continue poking the enemy from a safe distance.",
+    "weakAgainstReason": "Zetian's Ultimate can strike down anywhere on the map, but having such a powerful Ult means a hero like Valentina can also use it against Zetian's team.",
+    "synergyReason": "While Zetian already has decent survivability, when paired with supports who can protect allies like Floryn and Rafaela, Fighters with limited range will struggle even more to approach Zetian. And with the healing from these supports, Zetian can win any ranged battle of attrition."
   },
   "mechanicCategory": [
     "Standard"
@@ -365,11 +378,21 @@
     "difficulty": 20
   },
   "powerCurve": {
-    "early": 45,
-    "mid": 63,
-    "late": 60,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 58,
+    "mid": 80,
+    "late": 77,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Zetian’s laning is steady with repeated Phoenix Strike waves and Phoenix Descent control, but her biggest swing is unlocking the global stun/impact ultimate for rotations and mid-game fights. She scales strongly with magic power items, keeping high late-game value through map-wide engage/peel plus consistent AoE damage."
   },
   "proBuilds": [
     {
@@ -414,5 +437,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In teamfights, use Zetian's Ultimate to boost her team's Movement Speed and launch the global attack, then immediately use her 2nd Skill to slow enemies, making it easier for the Ultimate to land. Follow-up with her 1st Skill for more AoE, and recast the 2nd Skill if enemies try to leave its range."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, Use Zetian's 2nd Skill to slow the enemy and reduce their Magic Defense, then use her 1st Skill while moving to reposition and deal sustained damage. If enemies leave the area of the 2nd Skill, use it again to move the Phoenix on top of them."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Floryn",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Rafaela",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Cadia Riverlands",
+  "race": "Deity"
 }

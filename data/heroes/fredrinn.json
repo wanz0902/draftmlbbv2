@@ -8,7 +8,7 @@
   ],
   "specialty": [
     "Damage",
-    "Crowd Control"
+    "Chase"
   ],
   "lane": "Jungle",
   "lanes": [
@@ -24,14 +24,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2760,
+    "hpRegen": 8.2,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 116,
+    "physicalDefense": 25,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 14,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -197,7 +197,9 @@
       "synergyWith": [
         "Angela",
         "Diggie",
-        "Beatrix"
+        "Beatrix",
+        "Arlott",
+        "Granger"
       ]
     }
   },
@@ -249,18 +251,29 @@
     "synergyHeroes": [
       {
         "name": "Angela",
-        "synergy": 5
+        "synergy": 3.9
       },
       {
         "name": "Diggie",
-        "synergy": 5
+        "synergy": 2.9
       },
       {
         "name": "Beatrix",
-        "synergy": 5
+        "synergy": 1.9
+      },
+      {
+        "name": "Arlott",
+        "synergy": 1.8
+      },
+      {
+        "name": "Granger",
+        "synergy": 1.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Fredrinn is strong against Mage heroes who rely on skill bursts, as it is difficult for them to one-shot him with their bursts. Instead, once Fredrinn has enough Combo Points, he can use his 2nd Ultimate to easily finish them off. Such as Vale and Eudora.",
+    "weakAgainstReason": "Fredrinn is countered by Marksman heroes who can deal True Damage, as they can take him down very easily. Heroes like Kerrie and Lesley are good examples here.",
+    "synergyReason": "Fredrinn works best with support heroes, who can further improve his survivability, like Angela and Floryn."
   },
   "mechanicCategory": [
     "Standard"
@@ -314,11 +327,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 63,
-    "late": 59,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 80,
+    "late": 75,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Cursed Helmet",
+      "Guardian Helmet",
+      "Antique Cuirass"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Fredrinn ramps once he has full combo access and ultimate, letting him front-line, chain CC (taunt/knock-up), and convert stored damage into sustain while threatening Appraiser’s Wrath executes. He peaks mid game around Turtle fights with 1–2 tank items, and remains strong late but can be kited or controlled before he cashes in Crystal Energy."
   },
   "proBuilds": [
     {
@@ -363,5 +386,42 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Skill 3",
+        "Skill 1",
+        "Skill 2",
+        "Skill 4"
+      ],
+      "description": "In teamfights, Fredrinn should use his 2nd Skill to close in on the enemy hero and knock them airborne, then use his 1st Skill and 1st Ultimate for CC and cooldown reset. Use his enhanced Basic Attacks, 1st and 2nd skills sequentially to deal heavy damage, and finish with his 2nd Ultimate after knocking the enemy airborne for the kill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, Fredrinn can dash to the enemy hero with his 2nd Skill, and knock that hero airborne with the enhanced Basic Attack. Then follow up with his 1st Skill to deal damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Floryn",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

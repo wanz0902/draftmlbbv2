@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Poke",
+    "Finisher"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 118,
-    "physicalDefense": 17,
+    "hp": 2401,
+    "hpRegen": 6.6,
+    "mana": 510,
+    "manaRegen": 4,
+    "physicalAttack": 97,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.02",
     "attackSpeedRatio": 100,
     "movementSpeed": 240
@@ -433,7 +433,9 @@
       "synergyWith": [
         "Zhuxin",
         "Valentina",
-        "Cyclops"
+        "Cyclops",
+        "Rafaela",
+        "Harley"
       ]
     }
   },
@@ -485,18 +487,29 @@
     "synergyHeroes": [
       {
         "name": "Zhuxin",
-        "synergy": 5
+        "synergy": 3.9
       },
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 2.6
       },
       {
         "name": "Cyclops",
-        "synergy": 5
+        "synergy": 1.6
+      },
+      {
+        "name": "Rafaela",
+        "synergy": 1.6
+      },
+      {
+        "name": "Harley",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Kagura's Ultimate can deal high burst damage, making her strong against back-row heroes with no dash or blink, such as Layla and Eudora.",
+    "weakAgainstReason": "Kagura is countered by heroes with more than one control immunity abilities that allow them to escape her various CC skills, heroes like Joy and Martis are good examples.",
+    "synergyReason": "Kagura works well with tank heroes with strong CC skills that allow her to deal more damage with her Ultimate, such as Atlas and Tigreal."
   },
   "mechanicCategory": [
     "Umbrella State",
@@ -543,11 +556,21 @@
     "difficulty": 80
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 59,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 75,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Kagura’s early is more poke/tempo than guaranteed kills, but she spikes in mid game when she has ultimate access for full umbrella setups plus safer engages/disengages. Late game she remains strong due to high magic ratios and utility, though execution and enemy positioning reduce her one-combo reliability."
   },
   "proBuilds": [
     {
@@ -592,5 +615,49 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 5",
+        "Skill 1",
+        "Skill 3",
+        "Skill 4",
+        "Skill 2"
+      ],
+      "description": "Kagura should place her Umbrella between the enemies with her 1st Skill, then use her Ultimate to reset the cooldown for her 1st Skill to be able to adjust the Umbrella location before teleporting to the Umbrella location to stun nearby enemies. She should then use her Ultimate + 2nd Skill combo to escape from the fighting zone."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 3",
+        "Skill 2"
+      ],
+      "description": "Kagura can use her 1st Skill to poke the enemy with her Umbrella, then her 2nd Skill to teleport to the Umbrella's location, dealing more damage to the enemies and dash back by casting her 2nd Skill again."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Hayabusa",
+      "relationship": "CHILDHOOD SWEETHEARTS"
+    },
+    {
+      "name": "Hanabi",
+      "relationship": "CLOSE FRIEND"
+    },
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Cadia Riverlands",
+  "race": "Spirit"
 }

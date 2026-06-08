@@ -7,8 +7,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Damage",
+    "Magic Damage"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -22,14 +22,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 8,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 100,
-    "physicalDefense": 17,
+    "hp": 2452,
+    "hpRegen": 6.6,
+    "mana": 480,
+    "manaRegen": 3.6,
+    "physicalAttack": 110,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 245
@@ -257,7 +257,9 @@
       "synergyWith": [
         "Estes",
         "Ixia",
-        "Marcel"
+        "Marcel",
+        "Valentina",
+        "Yve"
       ]
     }
   },
@@ -301,18 +303,29 @@
     "synergyHeroes": [
       {
         "name": "Estes",
-        "synergy": 5
+        "synergy": 3.4
       },
       {
         "name": "Ixia",
-        "synergy": 5
+        "synergy": 2.1
       },
       {
         "name": "Marcel",
-        "synergy": 5
+        "synergy": 2
+      },
+      {
+        "name": "Valentina",
+        "synergy": 1.8
+      },
+      {
+        "name": "Yve",
+        "synergy": 1.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Kimmy's ability to Basic Attack while moving makes her effective against heroes who rely on skillshots like Granger and Cecilion.",
+    "weakAgainstReason": "As a Marksman who cannot lock onto targets with Basic Attacks, Kimmy can be countered by heroes with high burst damage and mobility, such as Saber and Lancelot.",
+    "synergyReason": "Kimmy excels at controlling and grouping enemies while dealing substantial damage, so she works well with heroes who have AOE CC like Badang and Ruby."
   },
   "mechanicCategory": [
     "Standard"
@@ -361,11 +374,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 48,
-    "mid": 61,
-    "late": 53,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 62,
+    "mid": 78,
+    "late": 68,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Genius Wand",
+      "Ice Queen Wand",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Kimmy is lane-oppressive once she has a few skill points and can keep Starlium-enhanced poke uptime, then peaks mid-game when magic-pen/slow items let her kite and shred squishies in skirmishes. Late game she stays relevant with DPS and zoning, but her turret damage penalty and being easier to one-shot in 5v5s keeps her from being truly dominant."
   },
   "proBuilds": [
     {
@@ -409,5 +432,38 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 2",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In teamfights, Kimmy can initiate with her Ultimate to group up enemies, then follow up with her 2nd Skill to immobilize them, and finish with her enhanced Basic Attacks for lots of damage. If enemies try to counter by closing in on Kimmy, use her 1st Skill to retreat."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, Build up Starlium before engaging. Use her 1st Skill to quickly close in on the opponent, then use her 2nd Skill to immobilize them before unleashing her enhanced Basic Attacks for great damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Badang",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Ruby",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

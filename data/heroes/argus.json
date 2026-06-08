@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Charge",
+    "Burst"
   ],
   "lane": "EXP",
   "lanes": [
@@ -21,11 +21,11 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
+    "hp": 2551,
+    "hpRegen": 7.2,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 128,
     "physicalDefense": 20,
     "magicPower": 0,
     "magicDefense": 10,
@@ -162,7 +162,9 @@
       "synergyWith": [
         "Gloo",
         "Balmond",
-        "Johnson"
+        "Johnson",
+        "Hilda",
+        "Vale"
       ]
     }
   },
@@ -214,18 +216,29 @@
     "synergyHeroes": [
       {
         "name": "Gloo",
-        "synergy": 5
+        "synergy": 3.2
       },
       {
         "name": "Balmond",
-        "synergy": 5
+        "synergy": 1.8
       },
       {
         "name": "Johnson",
-        "synergy": 5
+        "synergy": 1.8
+      },
+      {
+        "name": "Hilda",
+        "synergy": 1.7
+      },
+      {
+        "name": "Vale",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Argus counters heroes with poor mobility who cannot escape his attacks once he closes in, such as Gord and Aurora.",
+    "weakAgainstReason": "Argus is countered by Tanks with high Physical Defense, like Gatotkaca and Tigreal, because a lot of his damage comes from Basic Attacks.",
+    "synergyReason": "Argus works well with utility Supports like Angela and Rafaela who can provide extra Movement Speed and CC to allow Argus to stick to his targets and dish out maximum damage."
   },
   "mechanicCategory": [
     "Standard"
@@ -276,11 +289,21 @@
     "difficulty": 60
   },
   "powerCurve": {
-    "early": 38,
-    "mid": 52,
-    "late": 64,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 48,
+    "mid": 66,
+    "late": 82,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Demon Hunter Sword",
+      "Golden Staff",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Argus is manageable early but often lacks the sustained DPS/attack speed to fully exploit Warmonger, so his lane pressure is inconsistent before items. He scales very hard with attack-speed/on-hit cores and becomes a late-game menace because Eternal Evil lets him commit onto backliners and convert damage into survivability."
   },
   "proBuilds": [
     {
@@ -325,5 +348,41 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 1",
+        "Skill 2",
+        "Passive",
+        "Skill 3",
+        "Passive"
+      ],
+      "description": "In teamfights, use Argus's 1st Skill to pull himself towards the enemy formation, then use the skill again to dash into their backline. Next, slow the enemy with his 2nd Skill and use Basic Attacks until his HP is low, then pop his Ultimate and continue the assault with Basic Attacks."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, use Argus's 1st Skill to close in on the opponent and slow them with his 2nd Skill while hitting with Basic Attacks. If the enemy tries to run, use the second cast of his 1st Skill to chase."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Rafaela",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Abyss",
+  "race": "Fallen Demi-Angel"
 }

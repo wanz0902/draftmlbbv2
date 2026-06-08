@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Poke",
+    "Burst"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2320,
-    "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 115,
+    "hp": 2450,
+    "hpRegen": 6.8,
+    "mana": 510,
+    "manaRegen": 4,
+    "physicalAttack": 96,
     "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "0.98",
     "attackSpeedRatio": 100,
     "movementSpeed": 245
@@ -271,7 +271,9 @@
       "synergyWith": [
         "Valentina",
         "Zhuxin",
-        "Granger"
+        "Granger",
+        "Chip",
+        "Harley"
       ]
     }
   },
@@ -323,18 +325,29 @@
     "synergyHeroes": [
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 7.9
       },
       {
         "name": "Zhuxin",
-        "synergy": 5
+        "synergy": 3.1
       },
       {
         "name": "Granger",
-        "synergy": 5
+        "synergy": 2.6
+      },
+      {
+        "name": "Chip",
+        "synergy": 2.6
+      },
+      {
+        "name": "Harley",
+        "synergy": 2.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Yve counters Tanks and Fighters with low mobility like Fredrinn, Barats, and Aulus due to her long range skills.",
+    "weakAgainstReason": "Yve's low survivability makes her a target for divers and burst damage heroes like Yin, Saber, and Karina.",
+    "synergyReason": "Yve's works best with Tanks and Supports with strong CC to lockdown enemies for her Ultimate, like Minotaur, Gatotkaca, and Atlas."
   },
   "mechanicCategory": [
     "Zone Control Ultimate"
@@ -379,11 +392,21 @@
     "difficulty": 70
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 67,
-    "late": 58,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 86,
+    "late": 74,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Ice Queen Wand",
+      "Glowing Wand",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Yve is relatively average early with safe poke, but her teamfight control spikes hard once Real World Manipulation is available for Turtle fights and sieges. She still scales well into late due to high magic ratios and zoning, though positioning becomes harder against full-build divers."
   },
   "proBuilds": [
     {
@@ -428,5 +451,45 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Yve's Ultimate to cover as many enemies as possible and unleash multiple attacks on them. When the enemies run out of Yve's Ultimate, cancel it and use her 2nd Skill to slow them, then finish them off with her 1st Skill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Yve's 2nd Skill to first slow the enemy from afar, then hit them with the center of her 1st Skill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Minotaur",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Gatotkaca",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Zhask",
+      "relationship": "FEUDS"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Northern Vale",
+  "race": "Extraterrestrial"
 }

@@ -7,8 +7,8 @@
     "Mage"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Initiator",
+    "Finisher"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -24,14 +24,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2280,
-    "hpRegen": 6,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 15,
+    "hp": 2471,
+    "hpRegen": 7,
+    "mana": 480,
+    "manaRegen": 3.6,
+    "physicalAttack": 118,
+    "physicalDefense": 17,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 240
@@ -412,7 +412,9 @@
       "synergyWith": [
         "Zhask",
         "Thamuz",
-        "Cyclops"
+        "Cyclops",
+        "Barats",
+        "Aurora"
       ]
     }
   },
@@ -464,18 +466,29 @@
     "synergyHeroes": [
       {
         "name": "Zhask",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Thamuz",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Cyclops",
-        "synergy": 5
+        "synergy": 1.5
+      },
+      {
+        "name": "Barats",
+        "synergy": 1.4
+      },
+      {
+        "name": "Aurora",
+        "synergy": 1.2
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Selena is strong against squishy heroes with poor Mobility, simply because it's hard for them to dodge her 2nd Skill. Such as Gord and Layla.",
+    "weakAgainstReason": "But Selena is weak against heroes that can resist or remove her CC abilities, such as Hanabi and Wanwan.",
+    "synergyReason": "Selena works well with ranged heroes that can deal high burst damage, such as Xavier and Beatrix."
   },
   "mechanicCategory": [
     "Transform",
@@ -527,11 +540,21 @@
     "difficulty": 70
   },
   "powerCurve": {
-    "early": 66,
-    "mid": 55,
-    "late": 31,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 85,
+    "mid": 70,
+    "late": 40,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Divine Glaive"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "Selena is dominant early because long Arrow stuns plus trap-mark burst creates frequent picks and tempo advantage before enemies have defensive stats/cleanses. Her impact declines late when teams group, vision is denser, and missed arrows are heavily punished, shifting her into a pick/utility role rather than a main damage threat."
   },
   "proBuilds": [
     {
@@ -575,5 +598,40 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 2",
+        "Skill 4",
+        "Skill 3",
+        "Skill 1",
+        "Skill 3"
+      ],
+      "description": "Stay in Elven Form to cast her 1st and 2nd skill combo to catch the enemy hero in distance. Then cast her Ultimate to enter her Abyssal Form. Follow with her 2nd and 1st skill combo to close in and finish off the target, then cast her 2nd Skill to dash away."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "Elven Form Selena can use her 2nd Skill to stun the enemy, then use her 1st Skill to poke enemies and deal damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Xavier",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Beatrix",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Abyss",
+  "race": "Dark Elf"
 }

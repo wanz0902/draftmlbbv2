@@ -6,8 +6,8 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Burst",
+    "Magic Damage"
   ],
   "lane": "Jungle",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2419,
-    "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 119,
+    "hp": 2490,
+    "hpRegen": 7.4,
+    "mana": 472,
+    "manaRegen": 3.6,
+    "physicalAttack": 122,
     "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.11",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -260,7 +260,9 @@
       "synergyWith": [
         "Zetian",
         "Gord",
-        "Chang'e"
+        "Chang'e",
+        "Rafaela",
+        "Valir"
       ]
     }
   },
@@ -304,18 +306,29 @@
     "synergyHeroes": [
       {
         "name": "Zetian",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Gord",
-        "synergy": 5
+        "synergy": 1.3
       },
       {
         "name": "Chang'e",
-        "synergy": 5
+        "synergy": 1.3
+      },
+      {
+        "name": "Rafaela",
+        "synergy": 1.2
+      },
+      {
+        "name": "Valir",
+        "synergy": 1.2
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Gusion is strong against squishy heroes who lack movement abilities, so that Gusion can easily chase them down. Like Layla and Hanabi.",
+    "weakAgainstReason": "Gusion is countered by tank heroes with good single-target CC. Once controlled by them, Gusion will have a hard time escaping. Such as Franco and Kaja.",
+    "synergyReason": "Gusion works well with heroes with strong opening CC, which will allow him to hit the target more easily with his 1st Skill, such as Vexana and Pharsa."
   },
   "mechanicCategory": [
     "Standard"
@@ -362,11 +375,21 @@
     "difficulty": 80
   },
   "powerCurve": {
-    "early": 53,
-    "mid": 64,
-    "late": 45,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 68,
+    "mid": 82,
+    "late": 58,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Genius Wand",
+      "Holy Crystal",
+      "Divine Glaive"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "His biggest spike is level 4 where Incandescence resets his daggers, enabling lethal burst combos and nonstop picks through mid-game fights. In late game, targets are tankier and grouped with defensive tools, making full combo execution riskier and reducing his ability to one-shot consistently."
   },
   "proBuilds": [
     {
@@ -409,5 +432,48 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 3",
+        "Skill 2",
+        "Skill 1",
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, Gusion should first use his 2nd Skill for damage, then his Ultimate to reset the cooldown for his 2nd Skill. Follow up with his 2nd and 1st Skill combo for more damage. And use his 2nd Skill again to recall all 10 daggers right after moving behind a target with his 1st Skill for massive damage. He can then finish off any remaining low-HP heroes and escape with his Ultimate."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, Gusion can use his 1st Skill to mark the enemies, then use his 2nd Skill to slow them down. Next, he can use his 1st Skill again to move behind a target enemy and use his 2nd Skill again to deal massive damage. And finally, use his Basic Attacks to finish off the target."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Aamon",
+      "relationship": "BROTHER"
+    },
+    {
+      "name": "Vexana",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Pharsa",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

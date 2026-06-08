@@ -8,7 +8,7 @@
   ],
   "specialty": [
     "Crowd Control",
-    "Initiator"
+    "Damage"
   ],
   "lane": "Roam",
   "lanes": [
@@ -22,14 +22,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2620,
+    "hpRegen": 7.8,
+    "mana": 480,
+    "manaRegen": 3.6,
+    "physicalAttack": 100,
+    "physicalDefense": 22,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -165,7 +165,9 @@
       "synergyWith": [
         "Floryn",
         "Diggie",
-        "Chip"
+        "Chip",
+        "Natalia",
+        "Saber"
       ]
     }
   },
@@ -217,18 +219,29 @@
     "synergyHeroes": [
       {
         "name": "Floryn",
-        "synergy": 5
+        "synergy": 6.2
       },
       {
         "name": "Diggie",
-        "synergy": 5
+        "synergy": 5.3
       },
       {
         "name": "Chip",
-        "synergy": 5
+        "synergy": 3.1
+      },
+      {
+        "name": "Natalia",
+        "synergy": 2.6
+      },
+      {
+        "name": "Saber",
+        "synergy": 2.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Carmilla counters melee Fighters with low durability, such as Dyrroth and Lapu-Lapu, because she can rapidly steal their Defenses with her 1st Skill and Passive while healing herself.",
+    "weakAgainstReason": "Carmilla is countered by heroes that can ignore or remove her CC, such as Hanabi and Wanwan, since they can't be locked down by Carmilla's 2nd Skill or Ultimate.",
+    "synergyReason": "Carmilla is best paired with sustained damage Mages with CC abilities like Cecilion and Aurora, as her Ultimate can greatly amplify their strengths."
   },
   "mechanicCategory": [
     "Link Damage"
@@ -281,11 +294,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 63,
-    "late": 53,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 80,
+    "late": 68,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Dominance Ice",
+      "Antique Cuirass",
+      "Athena's Shield"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Carmilla becomes much more impactful once rotations and objective fights start because her ultimate link massively amplifies teamfight damage/CC value. She’s serviceable early with sustain and defense-steal trades, while late game she remains useful but can be harder to execute if enemies have Purify/spacing and higher burst to punish engages."
   },
   "proBuilds": [
     {
@@ -329,5 +352,36 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, use Carmilla's Ultimate to engage and slow enemies, then use her 2nd Skill to get close and CC a target, and follow up with her 1st Skill for continuous AOE damage."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, use Carmilla's 2nd Skill to get close to the opponent, then use her 1st Skill and stick to them to deal continuous damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Cecilion",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Aurora",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Moniyan Empire",
+  "race": "Human-turned-Blood Demon"
 }

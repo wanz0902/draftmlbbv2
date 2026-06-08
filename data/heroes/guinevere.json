@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Burst",
+    "Magic Damage"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2561,
+    "hpRegen": 7.4,
+    "mana": 460,
+    "manaRegen": 3.4,
+    "physicalAttack": 118,
+    "physicalDefense": 21,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -187,7 +187,9 @@
       "synergyWith": [
         "Marcel",
         "Yu Zhong",
-        "Freya"
+        "Freya",
+        "Lukas",
+        "Terizla"
       ]
     }
   },
@@ -239,18 +241,29 @@
     "synergyHeroes": [
       {
         "name": "Marcel",
-        "synergy": 5
+        "synergy": 1.5
       },
       {
         "name": "Yu Zhong",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Freya",
-        "synergy": 5
+        "synergy": 1.4
+      },
+      {
+        "name": "Lukas",
+        "synergy": 1.4
+      },
+      {
+        "name": "Terizla",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Guinevere is strong against heroes with poor sustainability or who are simply weak in the early game. This is because Guinevere can easily deliver her poking combo and escape. Heroes like Zilong and Silvanna are good examples here.",
+    "weakAgainstReason": "But Guinevere is countered by heroes with CC immunities or strong CC skills. Since she needs to chain her CC to unleash her full damage potential, such as Badang and Chou.",
+    "synergyReason": "Guinevere works best with heroes with good single-target CC that will give her a better environment to farm and deal damage, such as Franco and Hylos."
   },
   "mechanicCategory": [
     "Standard"
@@ -299,11 +312,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 48,
-    "mid": 61,
-    "late": 52,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 62,
+    "mid": 78,
+    "late": 66,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Genius Wand",
+      "Concentrated Energy",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "She becomes a real kill threat once Spatial Migration + Violet Requiem are online, letting her chain airborne CC and burst squishies in rotations and skirmishes. Late game she’s more punishable (harder to land jump/ultimate vs peel and positioning) and can fall off if she can’t find clean engages."
   },
   "proBuilds": [
     {
@@ -347,5 +370,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2",
+        "Skill 4"
+      ],
+      "description": "In the laning phase, Guinevere should use her 1st Skill and her enhanced Basic Attacks to clear out the Minions and poke enemy heroes. When enemy heroes' HP is low, user Guinevere's 2nd Skill to close in on them and knock them airborne. Follow up with her Ultimate to try to finish them off."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 4",
+        "Skill 3",
+        "Skill 1"
+      ],
+      "description": "In teamfights, Guinevere can use her 2nd Skill to knock the enemy team airborne and follow with her Ultimate to deal damage while keeping them airborne. She can then use the dash of her 2nd Skill to dodge the incoming damage, or she can choose to use her 1st Skill to deal more damage for a full damage combo."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Franco",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Hylos",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Finisher",
+    "Damage"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2468,
+    "hpRegen": 6.6,
+    "mana": 445,
+    "manaRegen": 3.4,
+    "physicalAttack": 119,
+    "physicalDefense": 17,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -154,7 +154,9 @@
       "synergyWith": [
         "Harith",
         "Lolita",
-        "Lunox"
+        "Lunox",
+        "Roger",
+        "Benedetta"
       ]
     }
   },
@@ -206,18 +208,29 @@
     "synergyHeroes": [
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 2.4
       },
       {
         "name": "Lolita",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Lunox",
-        "synergy": 5
+        "synergy": 1.4
+      },
+      {
+        "name": "Roger",
+        "synergy": 1.3
+      },
+      {
+        "name": "Benedetta",
+        "synergy": 1.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Fighters like Sun and Zilong that can't get past her Ultimate.",
+    "weakAgainstReason": "Long range Mages such as Xavier and Nana.",
+    "synergyReason": "Tanks that can chain CC such as Tigreal and Minotaur,\nallowing her to keep enemies linked."
   },
   "mechanicCategory": [
     "Standard"
@@ -262,11 +275,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 39,
-    "mid": 55,
-    "late": 66,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 50,
+    "mid": 70,
+    "late": 85,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Demon Hunter Sword",
+      "Corrosion Scythe",
+      "Golden Staff"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "Melissa scales hard with 2–3 items, turning her doll-link damage pattern into sustained DPS that melts frontlines and punishes grouped enemies. She’s relatively average early while farming, then becomes dominant late with full build plus ultimate zone control to survive dives."
   },
   "proBuilds": [
     {
@@ -311,5 +334,59 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "pickRate": 0.6,
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Skill 3"
+      ],
+      "description": "Link enemies with her 2nd Skill for increased damage.\nUse 1st Skill to keep them linked and her Ultimate\nto stop enemies from getting close."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "Link the enemy with her 2nd Skill and use\nBasic Attacks to deal extra damage. \nChase enemies trying to flee with her 1st Skill."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Go Away!",
+      "Falling!",
+      "Eyes on You!"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Julian",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Xavier",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Yin",
+      "relationship": "COMPANION"
+    },
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Minotaur",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Moniyan Empire",
+  "race": "Human"
 }

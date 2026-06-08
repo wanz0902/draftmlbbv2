@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Chase",
+    "Damage"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2260,
+    "hp": 2441,
     "hpRegen": 7,
     "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 115,
+    "manaRegen": 4,
+    "physicalAttack": 100,
     "physicalDefense": 17,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.05",
     "attackSpeedRatio": 100,
     "movementSpeed": 240
@@ -262,7 +262,9 @@
       "synergyWith": [
         "Wanwan",
         "Ixia",
-        "Bruno"
+        "Bruno",
+        "Melissa",
+        "Irithel"
       ]
     }
   },
@@ -314,18 +316,29 @@
     "synergyHeroes": [
       {
         "name": "Wanwan",
-        "synergy": 5
+        "synergy": 4.9
       },
       {
         "name": "Ixia",
-        "synergy": 5
+        "synergy": 4.7
       },
       {
         "name": "Bruno",
-        "synergy": 5
+        "synergy": 4.1
+      },
+      {
+        "name": "Melissa",
+        "synergy": 4.1
+      },
+      {
+        "name": "Irithel",
+        "synergy": 4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Harith is a very agile hero and his Ultimate reduces the duration of control effects, so he is excellent at countering heroes who rely on CC and have relatively long casting animations, like Belerick and Johnson.",
+    "weakAgainstReason": "Harith is countered by heroes who can quickly escape from his Ultimate, such as Novaria and Pharsa.",
+    "synergyReason": "Harith pairs well with heroes who have AOE CC and can make it harder for enemies to escape his Ultimate's range, such as Minsitthar and Minotaur."
   },
   "mechanicCategory": [
     "Standard"
@@ -371,11 +384,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 63,
-    "late": 59,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 80,
+    "late": 75,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Starlium Scythe",
+      "Concentrated Energy",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Harith’s real threat starts once Zaman Force unlocks, enabling repeated Chrono Dash resets for sustained skirmish DPS and shields in Turtle fights. He stays strong late with mage items, but can be harder to execute into heavy CC/burst as fights become more coordinated."
   },
   "proBuilds": [
     {
@@ -419,5 +442,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 3",
+        "Skill 1",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In teamfights, first use Harith's 2nd Skill to get close to the enemy,\nthen follow up with the Ultimate, and start spamming his 1st and 2nd Skill.\nDashing through the Ultimate not only reduces his skill cooldowns, but also allows Harith to get multiple enhanced Basic Attacks from his 2nd Skill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, approach the enemy with Harith's 2nd Skill, hit them with an enhanced Basic Attack, then use his 1st Skill to chip away their HP."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Minsitthar",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Minotaur",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Moniyan Empire",
+  "race": "Leonin"
 }

@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Finisher",
+    "Damage"
   ],
   "lane": "Gold",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 7,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 115,
+    "hp": 2498,
+    "hpRegen": 6.8,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 120,
     "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.07",
     "attackSpeedRatio": 100,
     "movementSpeed": 245
@@ -440,7 +440,9 @@
       "synergyWith": [
         "Diggie",
         "Harith",
-        "Baxia"
+        "Baxia",
+        "Popol and Kupa",
+        "Fredrinn"
       ]
     }
   },
@@ -492,18 +494,29 @@
     "synergyHeroes": [
       {
         "name": "Diggie",
-        "synergy": 5
+        "synergy": 4.6
       },
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 3.8
       },
       {
         "name": "Baxia",
-        "synergy": 5
+        "synergy": 3.3
+      },
+      {
+        "name": "Popol and Kupa",
+        "synergy": 1.9
+      },
+      {
+        "name": "Fredrinn",
+        "synergy": 1.9
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Beatrix is strong against heroes without movement abilities, as they can be easily hit by her skills, such as Hylos and Belerick.",
+    "weakAgainstReason": "Beatrix is countered by high burst damage heroes with strong single-target CC, as they can catch her with a CC and burst her down. Such as Eudora and Ling.",
+    "synergyReason": "Beatrix works best with tank heroes with good CC abilities, as they can help improve the accuracy of Beatrix's skills. Like Khufra and Atlas."
   },
   "mechanicCategory": [
     "Weapon Swap"
@@ -550,11 +563,21 @@
     "difficulty": 70
   },
   "powerCurve": {
-    "early": 55,
-    "mid": 63,
-    "late": 59,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 70,
+    "mid": 80,
+    "late": 75,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Blade of Despair",
+      "Malefic Roar",
+      "Haas's Claws"
+    ],
+    "dominantPhase": null,
+    "description": "Beatrix has unusually high early lane kill pressure thanks to weapon-based burst/poke and early ult access, then spikes hard mid-game with her first big damage item for turret takes and fights. Late game she still hits very hard, but her no-crit mechanic and reliance on positioning/weapon choice makes her less “automatic” than hyper-scaling crit marksmen."
   },
   "proBuilds": [
     {
@@ -599,5 +622,47 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 3",
+        "Skill 1",
+        "Skill 4",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "For teamfights, we recommend using Bennett as Beatrix's primary weapon and Nibiru as her secondary weapon. During a teamfight, Beatrix can use Bennett's Ultimate to strike the enemy team. Then she can use her 1st Skill to switch to Nibiru, and cast Nibiru's Ultimate to attack the enemy. She can finish off the enemy heroes with her Basic Attacks and her 2nd Skill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, we recommend using Renner as Beatrix's primary weapon and Wesker as her secondary weapon. She can use Renner's ranged Basic Attack to poke the enemy, and her 2nd Skill to reload and fire again. She can then switch to Wesker to finish off the target enemy."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Khufra",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Atlas",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Alpha",
+      "relationship": "ENEMY"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

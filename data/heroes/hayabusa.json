@@ -6,7 +6,7 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
+    "Chase",
     "Burst"
   ],
   "lane": "Jungle",
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2270,
-    "hpRegen": 7,
-    "mana": 100,
-    "manaRegen": 15,
-    "physicalAttack": 117,
-    "physicalDefense": 17,
+    "hp": 2510,
+    "hpRegen": 7.4,
+    "mana": 452,
+    "manaRegen": 3.4,
+    "physicalAttack": 128,
+    "physicalDefense": 20,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.06",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -255,7 +255,9 @@
       "synergyWith": [
         "Edith",
         "Gloo",
-        "Joy"
+        "Joy",
+        "Uranus",
+        "Khufra"
       ]
     }
   },
@@ -307,18 +309,29 @@
     "synergyHeroes": [
       {
         "name": "Edith",
-        "synergy": 5
+        "synergy": 1.1
       },
       {
         "name": "Gloo",
-        "synergy": 5
+        "synergy": 1
       },
       {
         "name": "Joy",
-        "synergy": 5
+        "synergy": 1
+      },
+      {
+        "name": "Uranus",
+        "synergy": 0.9
+      },
+      {
+        "name": "Khufra",
+        "synergy": 0.9
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Hayabusa counters squishy heroes that lack CC to shutdown the blinks from his 2nd Skill, and who are also easy targets for his Ultimate, such as Chang'e and Cecilion.",
+    "weakAgainstReason": "Hayabusa is countered by heroes with targeted CC like Franco and Kaja who can lock him down before he can blink away.",
+    "synergyReason": "Hayabusa works best with Fighters like Lapu-Lapu and Alpha who can initiate with him to quickly focus down key targets."
   },
   "mechanicCategory": [
     "Standard"
@@ -365,11 +378,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 63,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 80,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Hunter Strike",
+      "Blade of Despair",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Hayabusa becomes lethal at level 4 with Shadow Kill and then peaks mid-game when he can reliably one-shot sidelane targets and escape with Quad Shadow. Late game he remains a strong split/pick assassin, but teamfights are harder when enemies clump and build armor or anti-burst tools."
   },
   "proBuilds": [
     {
@@ -413,5 +436,51 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 1",
+        "Skill 2",
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In teamfights, Hayabusa should use his 2nd Skill to hit an enemy with his phantom, then use his 1st and 2nd Skill on the target to apply Shadow Mark before unleashing his Ultimate. Afterwards, use his 1st Skill to finish off the enemy and escape with his 2nd Skill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 1",
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, use Hayabusa's 2nd Skill to hit the enemy with a phantom, then strike with his 1st Skill, and use his 2nd Skill to blink away. Wait until Hayabusa's 1st Skill is off cooldown, then blink back to the enemy with his 2nd Skill and strike again with his 1st Skill followed by his Ultimate to secure the kill."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Hanabi",
+      "relationship": "CHILDHOOD SWEETHEARTS"
+    },
+    {
+      "name": "Kagura",
+      "relationship": "CHILDHOOD SWEETHEARTS"
+    },
+    {
+      "name": "Lapu-Lapu",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Alpha",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Cadia Riverlands",
+  "race": "Human"
 }

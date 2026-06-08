@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Poke",
+    "Burst"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 6,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 17,
+    "hp": 2450,
+    "hpRegen": 6.8,
+    "mana": 510,
+    "manaRegen": 4,
+    "physicalAttack": 96,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "0.96",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -256,7 +256,9 @@
       "synergyWith": [
         "Valentina",
         "Karrie",
-        "Fredrinn"
+        "Fredrinn",
+        "Kalea",
+        "Marcel"
       ]
     }
   },
@@ -308,18 +310,29 @@
     "synergyHeroes": [
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 5.5
       },
       {
         "name": "Karrie",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Fredrinn",
-        "synergy": 5
+        "synergy": 1.6
+      },
+      {
+        "name": "Kalea",
+        "synergy": 1.4
+      },
+      {
+        "name": "Marcel",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Gord is strong against melee heroes with poor Mobility, such as Barats and Fredrinn.",
+    "weakAgainstReason": "Gord is countered by heroes with gap closers, such as Fanny and Lancelot.",
+    "synergyReason": "Gord works well with tanky heroes with reliable CCs, like Hylos and Belerick."
   },
   "mechanicCategory": [
     "Standard"
@@ -364,11 +377,21 @@
     "difficulty": 20
   },
   "powerCurve": {
-    "early": 35,
-    "mid": 55,
-    "late": 59,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 45,
+    "mid": 70,
+    "late": 75,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Holy Crystal"
+    ],
+    "dominantPhase": null,
+    "description": "Gord’s early is average because he’s skillshot-reliant and vulnerable to ganks, but once ultimate is online he becomes a strong objective/zoning mage. With 2–3 damage items his beam/zone DPS and passive true-damage proc threaten backliners from safe range, keeping him relevant into late game despite low mobility."
   },
   "proBuilds": [
     {
@@ -412,5 +435,38 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "Gord should look to stun the enemy heroes with his 1st Skill, then follow up with his 2nd Skill and Ultimate to get a quick kill on them."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "Gord should look to stun the enemy heroes with his 1st Skill, then follow up with his 2nd Skill and Ultimate to get a quick kill on them."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Hylos",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Belerick",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Northern Vale",
+  "race": "Human"
 }

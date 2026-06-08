@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Poke",
+    "Burst"
   ],
   "lane": "Mid",
   "lanes": [
@@ -21,12 +21,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2401,
+    "hpRegen": 6.6,
+    "mana": 500,
+    "manaRegen": 4,
+    "physicalAttack": 96,
+    "physicalDefense": 15,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -160,7 +160,9 @@
       "synergyWith": [
         "Harley",
         "Gloo",
-        "Dyrroth"
+        "Dyrroth",
+        "Barats",
+        "Wanwan"
       ]
     }
   },
@@ -212,18 +214,29 @@
     "synergyHeroes": [
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 1.9
       },
       {
         "name": "Gloo",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Dyrroth",
-        "synergy": 5
+        "synergy": 1.3
+      },
+      {
+        "name": "Barats",
+        "synergy": 1.3
+      },
+      {
+        "name": "Wanwan",
+        "synergy": 1.3
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Chang'e is strong against squishy heroes who have low mobility and short damage range, such as Eudora and Odette. Chang'e can easily hit them with her long-range skills while dodging their attacks.",
+    "weakAgainstReason": "Chang'e is countered by agile Assassins with high burst like Hanzo and Harley, as they can avoid Chang'e's skills and use their high burst damage to kill her since she lacks self-protection.",
+    "synergyReason": "Chang'e works well with Tanks who can pull enemies together, like Gatotkaca and Tigreal, because Chang'e can follow them into teamfights to deal massive damage."
   },
   "mechanicCategory": [
     "Standard"
@@ -269,11 +282,21 @@
     "difficulty": 30
   },
   "powerCurve": {
-    "early": 51,
-    "mid": 63,
-    "late": 56,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 65,
+    "mid": 80,
+    "late": 72,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Ice Queen Wand",
+      "Genius Wand",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "She becomes hard to trade into once Crescent Moon is online (shield + MS), then spikes heavily with Meteor Shower for objective DPS and waveclear. Mid game she dominates rotations and sieges with poke/slow + Ice Queen Wand, while late game stays strong but is more punishable by divers and burst."
   },
   "proBuilds": [
     {
@@ -318,5 +341,46 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Skill 3"
+      ],
+      "description": "In teamfights, get the shield from Chang'e's 2nd Skill, then use her 1st Skill to poke enemies, and follow up with her Ultimate if the 1st Skill was on target. Chang'e needs to move around during her Ultimate to keep herself safe and make sure the meteors can hit the target."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Skill 3"
+      ],
+      "description": "In the laning phase, get the buff from Chang'e's 2nd Skill first, then mark the enemy with her Basic Attacks. Cast her 1st Skill to slow down low HP enemy, and finish them off with her Ultimate."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Meteor Shower",
+      "Starmoon Shockwave",
+      "Crescent Moon"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Gatotkaca",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Easy",
+  "region": "Cadia Riverlands",
+  "race": "Human"
 }

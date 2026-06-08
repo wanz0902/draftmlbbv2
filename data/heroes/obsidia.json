@@ -7,8 +7,8 @@
     "Mage"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Finisher",
+    "Damage"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -225,7 +225,9 @@
       "synergyWith": [
         "Harith",
         "Popol and Kupa",
-        "Baxia"
+        "Baxia",
+        "Floryn",
+        "Valentina"
       ]
     }
   },
@@ -277,18 +279,29 @@
     "synergyHeroes": [
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 3
       },
       {
         "name": "Popol and Kupa",
-        "synergy": 5
+        "synergy": 1.1
       },
       {
         "name": "Baxia",
-        "synergy": 5
+        "synergy": 1
+      },
+      {
+        "name": "Floryn",
+        "synergy": 0.9
+      },
+      {
+        "name": "Valentina",
+        "synergy": 0.9
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Obsidia's Ultimate will disable dash and blink skills, making her excellent at countering heroes who rely on them,  such as Hayabusa, Freya, and Lancelot.",
+    "weakAgainstReason": "Obsidia struggles during the early laning phase, making her vulnerable to other Marksmen with strong early game, such as Bruno and Layla.",
+    "synergyReason": "Obsidia usually reaches her damage potential in the mid-to-late game, so she wants support heroes who can help her in the early game, like Angela and Estes."
   },
   "mechanicCategory": [
     "Standard"
@@ -341,11 +354,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 39,
-    "mid": 55,
-    "late": 66,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 50,
+    "mid": 70,
+    "late": 85,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Demon Hunter Sword",
+      "Golden Staff",
+      "Malefic Roar"
+    ],
+    "dominantPhase": "Late Game",
+    "description": "She ramps with Bone Shard stacking and attack-effect scaling, so her damage output rises sharply once she has 2 attack-speed/on-hit items and can stay tethered safely with ult. Early is playable with S1 poke and mobility, but she lacks sustained shard DPS until items and higher levels."
   },
   "proBuilds": [
     {
@@ -390,5 +413,47 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2",
+        "Skill 3",
+        "Passive"
+      ],
+      "description": "During teamfights, use Obsidia's Basic Attacks and 1st Skill to poke the enemy, and her 2nd Skill to reposition herself. Look for opportunities to close in on a target with her Ultimate and pick them off with your team. Finally, use her mobility and powerful Basic Attacks to clean up the remaining enemies."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3",
+        "Passive"
+      ],
+      "description": "During the laning phase, use Obsidia's 1st Skill often on enemy Minions and heroes to quickly stack her Passive. When the enemy's HP drops low enough, use Obsidia's 2nd Skill and Ultimate on them and finish them off with Basic Attacks."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Hunt of Bone",
+      "Phantom Shadowmeld",
+      "Abyssal Bone Needle"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Estes",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Abyss",
+  "race": "Dark Elf"
 }

@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Finisher",
+    "Charge"
   ],
   "lane": "EXP Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2621,
+    "hpRegen": 7.8,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 123,
+    "physicalDefense": 22,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -158,7 +158,9 @@
       "synergyWith": [
         "Angela",
         "Estes",
-        "Ling"
+        "Ling",
+        "Joy",
+        "Floryn"
       ]
     }
   },
@@ -210,18 +212,29 @@
     "synergyHeroes": [
       {
         "name": "Angela",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Estes",
-        "synergy": 5
+        "synergy": 1.5
       },
       {
         "name": "Ling",
-        "synergy": 5
+        "synergy": 1.3
+      },
+      {
+        "name": "Joy",
+        "synergy": 1.2
+      },
+      {
+        "name": "Floryn",
+        "synergy": 1.1
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Martis counters squishy heroes with no mobility skills, such as Layla and Odette, who have a hard time avoiding his 1st Skill - 2nd Skill combo. Their relatively low HP also makes it easier for Martis to put them into execute range for his Ultimate.",
+    "weakAgainstReason": "Martis is countered by Fighters with high combat sustainability, such as Thamuz and Fredrinn, because they can survive Martis' burst damage and defeat him in prolonged battles.",
+    "synergyReason": "Martis works best with Fighters that initiate teamfights like Alpha and Khaleed who he can follow up to secure a kill and chain more kills with his Ultimate."
   },
   "mechanicCategory": [
     "Standard"
@@ -270,11 +283,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 63,
-    "mid": 59,
-    "late": 43,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 80,
+    "mid": 75,
+    "late": 55,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Hunter Strike",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "Martis is a high-tempo skirmisher who can force early fights with strong base damage, CC, and damage reduction/control immunity on Skill 2. He falls off late as enemies get tankier and teamfights become more backline-focused, making it harder to reliably chain ult resets."
   },
   "proBuilds": [
     {
@@ -318,5 +341,48 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 2",
+        "Passive",
+        "Skill 3",
+        "Passive",
+        "Skill 3"
+      ],
+      "description": "In teamfights, engage using Martis' 1st Skill to gather enemies and slow them, then use his 2nd Skill to deal damage and knock them airborne, and continue with Basic Attacks. Finish enemies at low HP with his Ultimate, then chain more kills with the Ultimate."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, initiate with Martis' 1st Skill to gather enemies and slow them, then follow up with his 2nd Skill. Use his 2nd Skill again to stay on the enemy and knock them airborne, and continue attacking with Basic Attacks."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Decimation",
+      "Asura Aura",
+      "Mortal Coil"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Alpha",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Khaleed",
+      "relationship": "ASSIST"
+    }
+  ],
+  "race": "Asura"
 }

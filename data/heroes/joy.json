@@ -6,8 +6,8 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
-    "Burst"
+    "Chase",
+    "Damage"
   ],
   "lane": "Jungle",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2519,
-    "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 119,
-    "physicalDefense": 20,
+    "hp": 2470,
+    "hpRegen": 7.2,
+    "mana": 468,
+    "manaRegen": 3.6,
+    "physicalAttack": 118,
+    "physicalDefense": 18,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.12",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -217,7 +217,9 @@
       "synergyWith": [
         "Masha",
         "Barats",
-        "Chip"
+        "Chip",
+        "Kaja",
+        "Hayabusa"
       ]
     }
   },
@@ -269,18 +271,29 @@
     "synergyHeroes": [
       {
         "name": "Masha",
-        "synergy": 5
+        "synergy": 3
       },
       {
         "name": "Barats",
-        "synergy": 5
+        "synergy": 2.3
       },
       {
         "name": "Chip",
-        "synergy": 5
+        "synergy": 2.2
+      },
+      {
+        "name": "Kaja",
+        "synergy": 1.9
+      },
+      {
+        "name": "Hayabusa",
+        "synergy": 1.7
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Joy is strong against heroes that lack mobility or rely on CC, like Xavier and Vexana, because she has an easier time hitting them with her 2nd Skill while being immune to their CC's.",
+    "weakAgainstReason": "Joy is countered by heroes that can restrict mobility skills, such as Minsitthar and Khufra, due to her kit's heavy reliance on her 2nd Skill.",
+    "synergyReason": "Joy works best with heroes with that can provide powerful support or have strong initiation, like Angela and Hylos."
   },
   "mechanicCategory": [
     "Standard"
@@ -327,11 +340,21 @@
     "difficulty": 90
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 64,
-    "late": 52,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 82,
+    "late": 66,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Genius Wand",
+      "Concentrated Energy",
+      "Holy Crystal"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Joy becomes highly lethal in mid game once she can reliably chain beat dashes into a boosted ultimate for burst + sustain, enabling dives and multi-target skirmishes. She’s less dominant late as enemies stack MR/lockdown and teamfights become more formation-based, limiting her safe entry angles."
   },
   "proBuilds": [
     {
@@ -375,5 +398,37 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "In teamfights, Joy should summon a Leonin Crystal with her 1st Skill and use it as a springboard for her 2nd Skill to enter the battle. Continue to chain her 2nd Skill on the beat to unlock her Ultimate. Finally, use her Ultimate to finish off the enemy."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, Joy should place her 1st Skill on top of the enemy, then use her 2nd Skill to dash through both targets and continue to chain her 2nd Skill on the beat for damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Hylos",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Azrya Woodlands",
+  "race": "Leonin"
 }

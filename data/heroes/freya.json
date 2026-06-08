@@ -6,8 +6,8 @@
     "Fighter"
   ],
   "specialty": [
-    "Damage",
-    "Crowd Control"
+    "Chase",
+    "Damage"
   ],
   "lane": "EXP",
   "lanes": [
@@ -21,12 +21,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2600,
+    "hpRegen": 7.6,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 125,
+    "physicalDefense": 22,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -191,7 +191,9 @@
       "synergyWith": [
         "Chip",
         "Yve",
-        "Baxia"
+        "Baxia",
+        "Harith",
+        "Nolan"
       ]
     }
   },
@@ -243,18 +245,29 @@
     "synergyHeroes": [
       {
         "name": "Chip",
-        "synergy": 5
+        "synergy": 2.9
       },
       {
         "name": "Yve",
-        "synergy": 5
+        "synergy": 2.4
       },
       {
         "name": "Baxia",
-        "synergy": 5
+        "synergy": 2
+      },
+      {
+        "name": "Harith",
+        "synergy": 2
+      },
+      {
+        "name": "Nolan",
+        "synergy": 1.9
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Freya not only has exceptional mobility, she also excels in prolonged engagements, making her highly effective against fragile, low-HP Marksmen, such as Lesley and Ixia. Her excellent sustained damage and mobility also allows her to counter Tanks with low damage, like Uranus and Baxia.",
+    "weakAgainstReason": "However, all of Freya's skills have movement components, making her vulnerable to Phoveus's unique counter. Using her skills near Phoveus will allow him to quickly gain energy for his enhanced Basic Attacks. Freya is vulnerable to CC and movement-disabling effects, so Minsitthar and Obsidia's Ultimates can lock her down completely.",
+    "synergyReason": "In order for Freya to maximize her damage, she prefers heroes with CC like Belerick and Gatotkaca to lock down the enemy for her."
   },
   "mechanicCategory": [
     "Standard"
@@ -305,11 +318,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 61,
-    "late": 56,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 78,
+    "late": 72,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Berserker's Fury",
+      "Haas's Claws",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Freya’s first major spike is ultimate unlock, enabling shielded dives and ranged splash basics to win skirmishes; she becomes much more consistent once crit/lifesteal items come online. In late game she can still shred if she reaches targets, but she’s more vulnerable to burst/CC and backline peel compared to true late-game DPS carries."
   },
   "proBuilds": [
     {
@@ -354,5 +377,50 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 3",
+        "Skill 2",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "Use Freya's Ultimate to dive the enemy backline and start dealing Splash Damage. Use her 1st Skill to CC enemies and shield herself, then alternate between her 2nd Skill and AoE Basic Attacks to bring them down."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 3",
+        "Skill 2",
+        "Passive",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "Use Freya's 1st Skill to close the gap on enemies and knock them Airborne while giving herself a shield. Use her 2nd Skill once followed by 2 enhanced Basic Attacks to make use of the Attack Speed bonus and generate more Sacred Orbs from her Passive."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Franco",
+      "relationship": "COMRADE"
+    },
+    {
+      "name": "Belerick",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Gatotkaca",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Bane",
+      "relationship": "FEUDS"
+    }
+  ],
+  "region": "Northern Vale",
+  "race": "Human"
 }

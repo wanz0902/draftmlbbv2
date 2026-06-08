@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Damage",
+    "Guard"
   ],
   "lane": "Mid Lane",
   "lanes": [
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2380,
-    "hpRegen": 6,
+    "hp": 2480,
+    "hpRegen": 7,
     "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 105,
+    "manaRegen": 3.8,
+    "physicalAttack": 98,
     "physicalDefense": 17,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -277,7 +277,9 @@
       "synergyWith": [
         "Valentina",
         "Harley",
-        "Hanzo"
+        "Hanzo",
+        "Aldous",
+        "Diggie"
       ]
     }
   },
@@ -329,18 +331,29 @@
     "synergyHeroes": [
       {
         "name": "Valentina",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 1.4
       },
       {
         "name": "Hanzo",
-        "synergy": 5
+        "synergy": 1.3
+      },
+      {
+        "name": "Aldous",
+        "synergy": 0.9
+      },
+      {
+        "name": "Diggie",
+        "synergy": 0.9
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Valir excels in both sustained damage and Crowd Control. He counters heroes lacking mobility like Balmond and Fredrinn.",
+    "weakAgainstReason": "Valir is countered by agile Assassins like Lancelot and Fanny because they can easily evade his 1st Skill.",
+    "synergyReason": "Teaming up with Fighters with strong initiation like Khaleed and Yu Zhong can simultaneously enhance the entire team's combat potential."
   },
   "mechanicCategory": [
     "Standard"
@@ -385,11 +398,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 56,
-    "mid": 65,
-    "late": 52,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 72,
+    "mid": 83,
+    "late": 66,
+    "spikeLevels": [
+      "Lv 1",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Ice Queen Wand",
+      "Glowing Wand",
+      "Divine Glaive"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Valir’s early trading and lane control are strong thanks to constant skill uptime and Ablaze stacking, and he becomes a mid-game teamfight gatekeeper once Ultimate gives cleanse + enhanced zoning tools. In late game he shifts into more of a control mage—still annoying, but his damage can feel slower versus fully built tanks and coordinated dives."
   },
   "proBuilds": [
     {
@@ -433,5 +456,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, activate Valir's Ultimate to enhance his skills, then blast the enemy with his 1st Skill. If the enemy tries to get close, use his 2nd Skill to push them away, and hit them with his 1st Skill for high damage."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Passive",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In the laning phase, harass enemies with Valir's 1st Skill\nuntil their HP is low, then cast his 2nd Skill to push them back and follow up immediately with his 1st Skill for burst damage."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Khaleed",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Yu Zhong",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

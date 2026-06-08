@@ -7,8 +7,7 @@
     "Support"
   ],
   "specialty": [
-    "Crowd Control",
-    "Initiator"
+    "Crowd Control"
   ],
   "lane": "Roam",
   "lanes": [
@@ -19,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2841,
+    "hpRegen": 8.6,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 112,
+    "physicalDefense": 26,
     "magicPower": 0,
-    "magicDefense": 10,
+    "magicDefense": 15,
     "attackSpeed": 0.8,
     "attackSpeedRatio": 100,
     "movementSpeed": 250
@@ -161,7 +160,9 @@
       "synergyWith": [
         "Saber",
         "Natalia",
-        "Chou"
+        "Chou",
+        "Arlott",
+        "Paquito"
       ]
     }
   },
@@ -213,18 +214,29 @@
     "synergyHeroes": [
       {
         "name": "Saber",
-        "synergy": 5
+        "synergy": 2.5
       },
       {
         "name": "Natalia",
-        "synergy": 5
+        "synergy": 2.1
       },
       {
         "name": "Chou",
-        "synergy": 5
+        "synergy": 1.8
+      },
+      {
+        "name": "Arlott",
+        "synergy": 1.8
+      },
+      {
+        "name": "Paquito",
+        "synergy": 1.4
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Minotaur is strong against heroes that rely on chaining skills or attacks, like Paquito and Julian because he can interrupt their combos with his CC.",
+    "weakAgainstReason": "Minotaur is countered by long-range Marksmen like Layla and Lesley since his lack of speed makes him an easy target.",
+    "synergyReason": "Minotaur works best with burst damage Marksmen, such as Granger and Melissa, since his CC's give them more opportunities to deal damage."
   },
   "mechanicCategory": [
     "Standard"
@@ -275,11 +287,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 43,
-    "mid": 64,
-    "late": 56,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 55,
+    "mid": 82,
+    "late": 72,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Dominance Ice",
+      "Athena's Shield",
+      "Immortality"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Early is serviceable with short CC + sustain trades, but he’s not very threatening until teamfights start. He peaks in mid game once Ultimate engages decide Turtle fights, and remains strong late as a frontliner though he becomes more team-reliant versus full-damage builds."
   },
   "proBuilds": [
     {
@@ -323,5 +345,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Skill 3",
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In teamfights, use Minotaur's 1st Skill to jump in and knock enemies airborne, then use his Ultimate to keep them CC'd and enter Enraged state. Use his 1st Skill to knock enemies airborne again and continue with Basic Attacks. Use his 2nd Skill when he or his team needs healing."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, use Minotaur's 1st Skill to knock the enemy airborne and reduce their Defense, then deal damage with his enhanced Basic Attacks. Use his 2nd Skill to heal him and his teammate to come out ahead in the trade."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Granger",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Melissa",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Minotaur"
 }

@@ -6,20 +6,20 @@
   ],
   "secondaryRole": "TANK",
   "specialty": [
-    "Charge",
-    "Crowd Control"
+    "Chase",
+    "Control"
   ],
   "lane": "EXP",
   "releaseYear": 2016,
   "baseStats": {
-    "hp": 2530,
-    "hpRegen": 7,
-    "mana": 0,
-    "manaRegen": 0,
-    "physicalAttack": 121,
-    "physicalDefense": 23,
+    "hp": 2610,
+    "hpRegen": 7.6,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 119,
+    "physicalDefense": 22,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.1",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -131,7 +131,9 @@
       "synergyWith": [
         "Minotaur",
         "Marcel",
-        "Tigreal"
+        "Tigreal",
+        "Gloo",
+        "Belerick"
       ]
     },
     "deceptionValue": 8
@@ -219,17 +221,28 @@
     "synergyHeroes": [
       {
         "name": "Minotaur",
-        "synergy": 5
+        "synergy": 1.8
       },
       {
         "name": "Marcel",
-        "synergy": 5
+        "synergy": 1.7
       },
       {
         "name": "Tigreal",
-        "synergy": 5
+        "synergy": 1.7
+      },
+      {
+        "name": "Gloo",
+        "synergy": 1.6
+      },
+      {
+        "name": "Belerick",
+        "synergy": 1.5
       }
-    ]
+    ],
+    "strongAgainstReason": "Chou counters slower Fighters like Terizla and Alpha that have a hard time dealing with his quick hit and run tactics.",
+    "weakAgainstReason": "Chou is countered by heroes with very long-range like Lesley and Pharsa that can take out a chunk of his HP before he can get close.",
+    "synergyReason": "Chou works best with Healers that can boost his survivability and speed, such as Angela and Rafaela."
   },
   "heroAttributes": {
     "durability": 50,
@@ -238,11 +251,21 @@
     "difficulty": 70
   },
   "powerCurve": {
-    "early": 55,
-    "mid": 61,
-    "late": 47,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 70,
+    "mid": 78,
+    "late": 60,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "War Axe",
+      "Blade of Despair",
+      "Malefic Roar"
+    ],
+    "dominantPhase": null,
+    "description": "Strong early skirmisher due to Jeet Kune Do trading, Shunpo shield/immune, and pick potential once The Way of Dragon unlocks. Mid game he peaks as a playmaker (kick-to-team/into turret) with 1–2 damage items, while late game his damage falls off and he functions more as a disruptor than a carry."
   },
   "proBuilds": [
     {
@@ -286,5 +309,39 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 1",
+        "Skill 2"
+      ],
+      "description": "In the laning phase, use Chou's 2nd Skill to get close to the enemy and follow up with his 1st Skill for multiple strikes. After landing the 3rd strike of his 1st Skill, use the refreshed 2nd Skill to stay on the target and finish them with his Ultimate."
+    },
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 2"
+      ],
+      "description": "In teamfights, use Chou's 2nd and 1st Skill to get next to a key target, then use his Ultimate to knock them out of position and secure the kill with his team."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Angela",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Rafaela",
+      "relationship": "ASSIST"
+    }
+  ],
+  "difficultyLabel": "Hard",
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

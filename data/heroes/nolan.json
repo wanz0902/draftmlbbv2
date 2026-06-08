@@ -6,7 +6,7 @@
     "Assassin"
   ],
   "specialty": [
-    "Charge",
+    "Chase",
     "Burst"
   ],
   "lane": "Jungle",
@@ -18,14 +18,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2390,
-    "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 124,
-    "physicalDefense": 16,
+    "hp": 2480,
+    "hpRegen": 7.2,
+    "mana": "0",
+    "manaRegen": "0",
+    "physicalAttack": 132,
+    "physicalDefense": 19,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1.08",
     "attackSpeedRatio": 100,
     "movementSpeed": 260
@@ -218,7 +218,9 @@
       "synergyWith": [
         "Ling",
         "Freya",
-        "Harith"
+        "Harith",
+        "Floryn",
+        "Barats"
       ]
     }
   },
@@ -270,18 +272,29 @@
     "synergyHeroes": [
       {
         "name": "Ling",
-        "synergy": 5
+        "synergy": 3.2
       },
       {
         "name": "Freya",
-        "synergy": 5
+        "synergy": 1.9
       },
       {
         "name": "Harith",
-        "synergy": 5
+        "synergy": 1.9
+      },
+      {
+        "name": "Floryn",
+        "synergy": 1.8
+      },
+      {
+        "name": "Barats",
+        "synergy": 1.6
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Nolan counters squishy heroes that lack mobility skills like Hanabi and Eudora because they have a hard time avoiding his rifts while Nolan's own mobility makes them easy targets.",
+    "weakAgainstReason": "Nolan is countered by tanky heroes with high sustained damage, such as Thamuz and Fredrinn, who can survive Nolan's burst and kill him afterwards.",
+    "synergyReason": "Nolan works well with Tanks that can initiate and CC the enemy so Nolan to focus on dealing as much damage as possible, such as Tigreal and Gatotkaca."
   },
   "mechanicCategory": [
     "Standard"
@@ -328,11 +341,21 @@
     "difficulty": 40
   },
   "powerCurve": {
-    "early": 66,
-    "mid": 59,
-    "late": 43,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 85,
+    "mid": 75,
+    "late": 55,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Hunter Strike",
+      "Blade of the Heptaseas",
+      "Blade of Despair"
+    ],
+    "dominantPhase": "Early Game",
+    "description": "His low-cooldown mobility and rift explosions give him extremely fast clears and lethal early skirmish burst, letting him snowball around first Turtle fights. As the game goes late, team clumping and defensive scaling make it harder to reliably chain rifts onto priority targets without trading his life."
   },
   "proBuilds": [
     {
@@ -376,5 +399,45 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Skill 2",
+        "Skill 3"
+      ],
+      "description": "In teamfights, approach the enemy using Nolan's 2nd Skill and enhanced Basic Attack, then activate the rift with his 1st Skill. Use Nolan's 2nd Skill to dash through the enemy, and unleash his Ultimate to activate all the rifts while dashing back to safety."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 2",
+        "Passive",
+        "Skill 1",
+        "Skill 2",
+        "Skill 1"
+      ],
+      "description": "In the laning phase, use Nolan's 2nd Skill and enhanced Basic Attack to catch the enemy, then use his 1st Skill to activate the rift. Follow up with his 2nd Skill into his 1st Skill to activate another rift explosion."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Layla",
+      "relationship": "FATHER AND DAUGHTER"
+    },
+    {
+      "name": "Tigreal",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Gatotkaca",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Agelta Drylands",
+  "race": "Human"
 }

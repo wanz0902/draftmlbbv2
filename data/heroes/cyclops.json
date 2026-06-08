@@ -6,8 +6,8 @@
     "Mage"
   ],
   "specialty": [
-    "Burst",
-    "Poke"
+    "Damage",
+    "Control"
   ],
   "lane": "Mid",
   "lanes": [
@@ -21,14 +21,14 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2440,
-    "hpRegen": 7,
-    "mana": 500,
-    "manaRegen": 15,
-    "physicalAttack": 112,
-    "physicalDefense": 18,
+    "hp": 2401,
+    "hpRegen": 6.8,
+    "mana": 488,
+    "manaRegen": 4,
+    "physicalAttack": 99,
+    "physicalDefense": 16,
     "magicPower": 0,
-    "magicDefense": 15,
+    "magicDefense": 10,
     "attackSpeed": "1",
     "attackSpeedRatio": 100,
     "movementSpeed": 240
@@ -238,7 +238,9 @@
       "synergyWith": [
         "Harley",
         "Vale",
-        "Kagura"
+        "Kagura",
+        "Marcel",
+        "Zhask"
       ]
     }
   },
@@ -290,18 +292,29 @@
     "synergyHeroes": [
       {
         "name": "Harley",
-        "synergy": 5
+        "synergy": 2.1
       },
       {
         "name": "Vale",
-        "synergy": 5
+        "synergy": 1.6
       },
       {
         "name": "Kagura",
-        "synergy": 5
+        "synergy": 1.6
+      },
+      {
+        "name": "Marcel",
+        "synergy": 1.5
+      },
+      {
+        "name": "Zhask",
+        "synergy": 1.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Cyclops' short skill cooldown makes him strong against mid-ranged heroes with poor Mobility, such as Terizla and Alpha.",
+    "weakAgainstReason": "Cyclops lacks Dash or Blink skills, making him the preferred target for heroes with gap closers and CC skills. Such as Lancelot, Alucard and Kagura.",
+    "synergyReason": "Cyclops is best with tanky heroes with strong CC skills, like Belerick and Minsitthar."
   },
   "mechanicCategory": [
     "Standard"
@@ -348,11 +361,21 @@
     "difficulty": 60
   },
   "powerCurve": {
-    "early": 47,
-    "mid": 61,
-    "late": 55,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 60,
+    "mid": 78,
+    "late": 70,
+    "spikeLevels": [
+      "Lv 4",
+      "Lv 8",
+      "Lv 12"
+    ],
+    "coreItems": [
+      "Clock of Destiny",
+      "Lightning Truncheon",
+      "Genius Wand"
+    ],
+    "dominantPhase": "Mid Game",
+    "description": "Cyclops comes online hard at level 4 with reliable pick potential from Star Power Lockdown, then peaks mid game as cooldown reduction via passive lets him spam sustained magic damage in skirmishes. Late remains solid but he can be out-ranged/out-bursted in full 5v5s without perfect positioning."
   },
   "proBuilds": [
     {
@@ -396,5 +419,35 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 2",
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "In teamfights, Cyclops should control the target enemy with his Ultimate, close in with his 2nd Skill, then finish off the target with his 1st Skill."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive"
+      ],
+      "description": "Cyclops can use his 2nd Skill to close in on enemy heroes then hit them with both his 1st Skill and the spheres summoned by his 2nd Skill. This combo is very effective against enemy heroes."
+    }
+  ],
+  "connections": [
+    {
+      "name": "Belerick",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Minsitthar",
+      "relationship": "ASSIST"
+    }
+  ],
+  "race": "Cyclops"
 }

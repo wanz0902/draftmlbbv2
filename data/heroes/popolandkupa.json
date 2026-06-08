@@ -6,8 +6,8 @@
     "Marksman"
   ],
   "specialty": [
-    "Damage",
-    "Reap"
+    "Push",
+    "Burst"
   ],
   "lane": "Gold Lane",
   "lanes": [
@@ -18,12 +18,12 @@
   "difficulty": 5,
   "metaTier": "B",
   "baseStats": {
-    "hp": 2500,
-    "hpRegen": 30,
-    "mana": 400,
-    "manaRegen": 15,
-    "physicalAttack": 110,
-    "physicalDefense": 20,
+    "hp": 2501,
+    "hpRegen": 6.8,
+    "mana": 450,
+    "manaRegen": 3.4,
+    "physicalAttack": 115,
+    "physicalDefense": 17,
     "magicPower": 0,
     "magicDefense": 10,
     "attackSpeed": 0.8,
@@ -158,7 +158,9 @@
       "synergyWith": [
         "Lesley",
         "Granger",
-        "Clint"
+        "Clint",
+        "Brody",
+        "Ixia"
       ]
     }
   },
@@ -210,18 +212,29 @@
     "synergyHeroes": [
       {
         "name": "Lesley",
-        "synergy": 5
+        "synergy": 3.7
       },
       {
         "name": "Granger",
-        "synergy": 5
+        "synergy": 2.9
       },
       {
         "name": "Clint",
-        "synergy": 5
+        "synergy": 2.7
+      },
+      {
+        "name": "Brody",
+        "synergy": 2.7
+      },
+      {
+        "name": "Ixia",
+        "synergy": 2.5
       }
     ],
-    "counterHeroes": []
+    "counterHeroes": [],
+    "strongAgainstReason": "Kupa is powerful in combat, especially against Marksmen with lower sustainability such as Lesley and Brody.",
+    "weakAgainstReason": "But since Popol and Kupa don't have any Blink skills\nand Popol is quite squishy, they are at the mercy of more agile Assassins like Gusion and Karina.",
+    "synergyReason": "Popol and Kupa are best with Fighters that can charge into enemies' midst and ensure the survival of Popol and Kupa after controlling and killing enemies. For example, Alpha and Khaleed."
   },
   "mechanicCategory": [
     "Pet Companion"
@@ -267,11 +280,21 @@
     "difficulty": 50
   },
   "powerCurve": {
-    "early": 55,
-    "mid": 59,
-    "late": 53,
-    "spikeLevels": [],
-    "coreItems": []
+    "early": 70,
+    "mid": 75,
+    "late": 68,
+    "spikeLevels": [
+      "Lv 2",
+      "Lv 4",
+      "Lv 8"
+    ],
+    "coreItems": [
+      "Demon Hunter Sword",
+      "Golden Staff",
+      "Corrosion Scythe"
+    ],
+    "dominantPhase": null,
+    "description": "He has unusually high early pressure for a marksman due to Kupa’s extra damage vs creeps, strong trading, and traps for lane control. He spikes again with ultimate for tempo fights and with 2-item attack-speed synergy mid game; late game is still good DPS but more punishable than hypercarries due to range/safety limits and reliance on Kupa uptime."
   },
   "proBuilds": [
     {
@@ -315,5 +338,47 @@
     "skill1": null,
     "skill2": null,
     "ultimate": null
-  }
+  },
+  "combos": [
+    {
+      "name": "TEAMFIGHT",
+      "sequence": [
+        "Skill 4",
+        "Skill 2",
+        "Passive",
+        "Skill 3"
+      ],
+      "description": "In teamfights, boost Attack Speed with their Ultimate\nand control enemies with the enhanced 1st Skill for heavy damage. When enemies are close, use the enhanced 2nd Skill for protection."
+    },
+    {
+      "name": "LANING",
+      "sequence": [
+        "Skill 1",
+        "Passive",
+        "Skill 4",
+        "Skill 2",
+        "Passive"
+      ],
+      "description": "In the laning phase, poke enemies with the 1st Skill\nand get more Attack Speed with their Ultimate when enemies are low on HP. Then control and kill the enemies with the enhanced 1st Skill."
+    }
+  ],
+  "skillLevelPriority": {
+    "order": [
+      "Bite 'em, Kupa!",
+      "Kupa, Help!",
+      "Popol's Surprise"
+    ]
+  },
+  "connections": [
+    {
+      "name": "Alpha",
+      "relationship": "ASSIST"
+    },
+    {
+      "name": "Khaleed",
+      "relationship": "ASSIST"
+    }
+  ],
+  "region": "Northern Vale",
+  "race": "Human"
 }
