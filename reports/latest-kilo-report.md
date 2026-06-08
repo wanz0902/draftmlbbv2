@@ -1,55 +1,51 @@
-# Kilo Report — AGENTS.md Workflow Update
-
-**Timestamp**: 2026-06-08 11:33 WIB
-**Task**: Update AGENTS.md — clarify dual-mode agent behavior and standardize report workflow
-
----
+# Laporan Sinkronisasi Data Lengkap (4 Phase)
 
 ## A. Ringkasan Task
-
-Memperbarui `AGENTS.md` agar secara eksplisit memisahkan dua mode operasi agent: (1) Draft Analysis persona untuk output MLBB draft/ban-pick, dan (2) Normal Engineering behavior untuk semua coding task. Report workflow juga distandardisasi agar lebih presisi dan konsisten.
+Sinkronisasi data dari 4 sumber berbeda (mlbb.tools, mlcounters.app, mlbbhub.com, molebuild.com) + perbaikan UI. Semua phase sudah selesai dan ter-commit.
 
 ## B. Perubahan yang Dilakukan
 
-1. **AGENTS.md**: Mengubah judul dari "Core Persona & Draft Philosophy" menjadi "Project Instructions — MLBB Draft Analytics" — mencerminkan bahwa file ini berisi instruksi project secara keseluruhan, bukan hanya draft philosophy.
-2. **AGENTS.md**: Menambahkan section "IMPORTANT: Dual-Mode Agent" di bagian atas — menjelaskan kapan menggunakan draft philosophy vs normal engineering behavior.
-3. **AGENTS.md**: Menambahkan "(Draft Analysis Mode Only)" pada judul CORE PHILOSOPHY — agar jelas section ini hanya berlaku untuk draft analysis.
-4. **AGENTS.md**: Menstandardisasi Mandatory Report Workflow — format yang lebih presisi dengan aturan spesifik tentang kapan `validate:data` / `validate:assets` perlu dijalankan, dan larangan mengarang token/credit numbers.
+### Phase 1: mlbb.tools (`34c6852`)
+- Scrape 132 hero pages: baseStats, combos, connections, powerCurve, skillPriority, matchup reasons, region/race, difficultyLabel, heroAttributes
+- 131/132 hero sukses penuh (Marcel missing powerCurve)
+
+### Phase 2: mlcounters.app (`fd35dfa`)
+- Query Supabase API: metaScore, metaRank, bestTeammates, worstTeammates, mlcountersMatchup
+- 132/132 hero sukses
+
+### Phase 3: mlbbhub.com + molebuild.com (`727a3e5`, `12a21e9`, `c5c68fe`)
+- Items: 104 enriched, 54 with heroesWhoCore
+- Spells: 12/12 enriched
+- Hero builds: 131/132 heroes
+- Community builds: 130/132 heroes (531 builds)
+
+### Phase 4: UI Fixes (`ec1e9b2`)
+- Hapus tier list duplikat dari navbar
+- Bersihkan label "Scraped"
+- Rebuild Counter Matrix (132 hero)
 
 ## C. File yang Diubah
+- 132 file `data/heroes/*.json`
+- `data/items.json`, `data/emblems.json`, `data/battle_spells.json`
+- `src/components/Navbar.tsx`, `src/components/CounterMatrixPanel.tsx`, `src/components/LiquipediaScraper.tsx`, `src/App.tsx`
+- 4 script scraper
 
-| File | Perubahan |
-|------|-----------|
-| `AGENTS.md` | Update judul, tambah Dual-Mode Agent section, standardisasi report workflow |
+## D. Validasi
+- `validate:data` → PASS
+- `validate:assets` → PASS
+- `tsc --noEmit` → CLEAN
+- `build` → SUCCESS
 
-## D. Verifikasi Data/Source yang Relevan
+## E. Commit Hashes
+1. `db0d401` — feat: sync hero data from mlbb.tools
+2. `34c6852` — feat: complete hero data sync
+3. `fd35dfa` — feat: sync mlcounters data
+4. `727a3e5` — feat: enrich mlbbhub items/emblems/spells
+5. `12a21e9` — feat: enrich mlbbhub hero builds
+6. `c5c68fe` — feat: sync molebuild community builds
+7. `ec1e9b2` — fix: UI fixes
 
-Tidak berubah / tidak disentuh. File ini adalah instruksi project, bukan code/data/API.
-
-## E. Perubahan UI
-
-Tidak ada. File markdown saja.
-
-## F. Validasi Teknis
-
-Tidak perlu — file markdown, bukan code.
-
-## G. Localhost Status
-
-Tidak dijalankan.
-
-## H. Commit Hash
-
-- Commit: `50e8e04`
-- Message: `chore: update project agent workflow instructions`
-
-## I. Resource Summary
-
-- Model: mimo-v2.5
-- Waktu: ~1 menit
-- Token usage: estimation only
-
-## J. Catatan
-
-- `AGENTS.md` adalah file yang di-load oleh Kilo sebagai project-level instructions. Setiap update akan mempengaruhi behavior agent di session berikutnya.
-- Dual-mode separation ini memastikan draft philosophy tidak "bocor" ke coding tasks, dan coding tasks tidak kehilangan standard engineering rigor.
+## F. Kekurangan
+- skillLevelPriority hanya 19/132 (section tidak tersedia di mlbb.tools)
+- difficultyLabel 63/132 (tidak semua hero punya)
+- Marcel powerCurve kosong (hero baru)
