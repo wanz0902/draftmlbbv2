@@ -476,5 +476,99 @@
     }
   ],
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Mathilda",
+      "winrateDelta": 2.74
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 1.78
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 1.7
+    },
+    {
+      "name": "Barats",
+      "winrateDelta": 1.34
+    },
+    {
+      "name": "Tigreal",
+      "winrateDelta": 1.3
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Hanzo",
+      "winrateDelta": -6.11
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -5.9
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": -4.71
+    },
+    {
+      "name": "Fredrinn",
+      "winrateDelta": -4.22
+    },
+    {
+      "name": "Nolan",
+      "winrateDelta": -4.18
+    }
+  ],
+  "metaScore": 15.45,
+  "metaRank": 82,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 3.56
+      },
+      {
+        "name": "Ling",
+        "advantage": 3.2
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.07
+      },
+      {
+        "name": "Xavier",
+        "advantage": 1.88
+      },
+      {
+        "name": "Natalia",
+        "advantage": 1.78
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 4.01
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 3.49
+      },
+      {
+        "name": "Fredrinn",
+        "advantage": 2.36
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.25
+      },
+      {
+        "name": "Melissa",
+        "advantage": 2.02
+      }
+    ]
+  }
 }

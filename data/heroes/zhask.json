@@ -531,5 +531,99 @@
     }
   ],
   "region": "Northern Vale",
-  "race": "Extraterrestrial"
+  "race": "Extraterrestrial",
+  "bestTeammates": [
+    {
+      "name": "Faramis",
+      "winrateDelta": 3.48
+    },
+    {
+      "name": "Luo Yi",
+      "winrateDelta": 2.99
+    },
+    {
+      "name": "Selena",
+      "winrateDelta": 2.67
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": 2.52
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": 1.6
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lunox",
+      "winrateDelta": -5.01
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": -4.79
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -2.96
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -2.73
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": -2.54
+    }
+  ],
+  "metaScore": 18.24,
+  "metaRank": 50,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.59
+      },
+      {
+        "name": "Diggie",
+        "advantage": 3.72
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 3.35
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.65
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.19
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 4.07
+      },
+      {
+        "name": "Natan",
+        "advantage": 3.27
+      },
+      {
+        "name": "Alice",
+        "advantage": 3.08
+      },
+      {
+        "name": "Sun",
+        "advantage": 2.46
+      },
+      {
+        "name": "Estes",
+        "advantage": 2.14
+      }
+    ]
+  }
 }

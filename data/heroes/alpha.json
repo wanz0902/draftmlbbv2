@@ -386,5 +386,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Agelta Drylands",
-  "race": "Cyborg"
+  "race": "Cyborg",
+  "bestTeammates": [
+    {
+      "name": "Atlas",
+      "winrateDelta": 1.14
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 1.09
+    },
+    {
+      "name": "Terizla",
+      "winrateDelta": 1.05
+    },
+    {
+      "name": "Arlott",
+      "winrateDelta": 0.97
+    },
+    {
+      "name": "Johnson",
+      "winrateDelta": 0.96
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Roger",
+      "winrateDelta": -3.74
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": -2.91
+    },
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": -2.43
+    },
+    {
+      "name": "Barats",
+      "winrateDelta": -2.43
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": -1.97
+    }
+  ],
+  "metaScore": 12.49,
+  "metaRank": 100,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 2.84
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 2.58
+      },
+      {
+        "name": "Terizla",
+        "advantage": 2.32
+      },
+      {
+        "name": "Alice",
+        "advantage": 2.06
+      },
+      {
+        "name": "Hilda",
+        "advantage": 2.02
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 3.3
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 2.65
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.36
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 1.97
+      },
+      {
+        "name": "Ling",
+        "advantage": 1.96
+      }
+    ]
+  }
 }

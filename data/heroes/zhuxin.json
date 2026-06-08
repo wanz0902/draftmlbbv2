@@ -404,5 +404,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": 14.39
+    },
+    {
+      "name": "Lunox",
+      "winrateDelta": 6.43
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 5.5
+    },
+    {
+      "name": "Cecilion",
+      "winrateDelta": 5.16
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": 4.5
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Luo Yi",
+      "winrateDelta": -10.49
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": -6.86
+    },
+    {
+      "name": "Lylia",
+      "winrateDelta": -4.97
+    },
+    {
+      "name": "Kaja",
+      "winrateDelta": -4.4
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -4
+    }
+  ],
+  "metaScore": 21.89,
+  "metaRank": 30,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 8.02
+      },
+      {
+        "name": "Khufra",
+        "advantage": 4.48
+      },
+      {
+        "name": "Natalia",
+        "advantage": 3.83
+      },
+      {
+        "name": "Lunox",
+        "advantage": 3.6
+      },
+      {
+        "name": "Aldous",
+        "advantage": 3.17
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 3.41
+      },
+      {
+        "name": "Zhask",
+        "advantage": 3.35
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 2.53
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 2.5
+      },
+      {
+        "name": "Arlott",
+        "advantage": 2.46
+      }
+    ]
+  }
 }

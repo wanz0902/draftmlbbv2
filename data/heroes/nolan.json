@@ -439,5 +439,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Karina",
+      "winrateDelta": 2.74
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 2.21
+    },
+    {
+      "name": "Floryn",
+      "winrateDelta": 2.21
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 2.21
+    },
+    {
+      "name": "Luo Yi",
+      "winrateDelta": 1.94
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Fanny",
+      "winrateDelta": -15.09
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": -11.66
+    },
+    {
+      "name": "Hayabusa",
+      "winrateDelta": -8.96
+    },
+    {
+      "name": "Lancelot",
+      "winrateDelta": -7.32
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -7.16
+    }
+  ],
+  "metaScore": 9.73,
+  "metaRank": 119,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 6.23
+      },
+      {
+        "name": "Estes",
+        "advantage": 3.94
+      },
+      {
+        "name": "Diggie",
+        "advantage": 3.02
+      },
+      {
+        "name": "Lunox",
+        "advantage": 2.87
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 2.84
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 5.5
+      },
+      {
+        "name": "Valentina",
+        "advantage": 3.45
+      },
+      {
+        "name": "Saber",
+        "advantage": 3.45
+      },
+      {
+        "name": "Natalia",
+        "advantage": 3.15
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.89
+      }
+    ]
+  }
 }

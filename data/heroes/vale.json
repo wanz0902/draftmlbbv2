@@ -470,5 +470,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": 3.46
+    },
+    {
+      "name": "Aulus",
+      "winrateDelta": 1.71
+    },
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": 1.66
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 1.18
+    },
+    {
+      "name": "Aldous",
+      "winrateDelta": 1.12
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Kagura",
+      "winrateDelta": -9.12
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": -6.64
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": -6.5
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -5.23
+    },
+    {
+      "name": "Chang'e",
+      "winrateDelta": -4.78
+    }
+  ],
+  "metaScore": 17.19,
+  "metaRank": 61,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Rafaela",
+        "advantage": 2.01
+      },
+      {
+        "name": "Bane",
+        "advantage": 1.85
+      },
+      {
+        "name": "Odette",
+        "advantage": 1.82
+      },
+      {
+        "name": "Masha",
+        "advantage": 1.67
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 1.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 2.03
+      },
+      {
+        "name": "Lapu-Lapu",
+        "advantage": 1.97
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 1.93
+      },
+      {
+        "name": "Leomord",
+        "advantage": 1.91
+      },
+      {
+        "name": "Valentina",
+        "advantage": 1.9
+      }
+    ]
+  }
 }

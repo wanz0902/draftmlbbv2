@@ -525,5 +525,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Luo Yi",
+      "winrateDelta": 1.58
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 1.51
+    },
+    {
+      "name": "Khaleed",
+      "winrateDelta": 1.43
+    },
+    {
+      "name": "Floryn",
+      "winrateDelta": 1.35
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": 1.22
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Hanzo",
+      "winrateDelta": -7.95
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": -6.13
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -5.7
+    },
+    {
+      "name": "Hayabusa",
+      "winrateDelta": -5.67
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": -5.29
+    }
+  ],
+  "metaScore": 32.34,
+  "metaRank": 8,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 1.98
+      },
+      {
+        "name": "Lapu-Lapu",
+        "advantage": 1.95
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 1.6
+      },
+      {
+        "name": "Marcel",
+        "advantage": 1.36
+      },
+      {
+        "name": "Lylia",
+        "advantage": 1.29
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natan",
+        "advantage": 2.24
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 1.88
+      },
+      {
+        "name": "Bruno",
+        "advantage": 1.75
+      },
+      {
+        "name": "Gusion",
+        "advantage": 1.74
+      },
+      {
+        "name": "Joy",
+        "advantage": 1.68
+      }
+    ]
+  }
 }

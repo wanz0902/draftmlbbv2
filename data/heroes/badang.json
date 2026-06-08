@@ -382,5 +382,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Vonetis Sea",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Arlott",
+      "winrateDelta": 1.91
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": 1.88
+    },
+    {
+      "name": "X.Borg",
+      "winrateDelta": 1.81
+    },
+    {
+      "name": "Lukas",
+      "winrateDelta": 1.78
+    },
+    {
+      "name": "Phoveus",
+      "winrateDelta": 1.72
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Khaleed",
+      "winrateDelta": -3.23
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": -2.81
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": -1.54
+    },
+    {
+      "name": "Johnson",
+      "winrateDelta": -1.51
+    },
+    {
+      "name": "Rafaela",
+      "winrateDelta": -1.5
+    }
+  ],
+  "metaScore": 17.7,
+  "metaRank": 57,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Fanny",
+        "advantage": 2.31
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 1.92
+      },
+      {
+        "name": "Sun",
+        "advantage": 1.68
+      },
+      {
+        "name": "Lunox",
+        "advantage": 1.54
+      },
+      {
+        "name": "Chip",
+        "advantage": 1.51
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Esmeralda",
+        "advantage": 3.22
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.18
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.11
+      },
+      {
+        "name": "Khufra",
+        "advantage": 1.98
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 1.8
+      }
+    ]
+  }
 }

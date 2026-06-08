@@ -449,5 +449,99 @@
       "relationship": "ASSIST"
     }
   ],
-  "race": "Cyclops"
+  "race": "Cyclops",
+  "bestTeammates": [
+    {
+      "name": "Harley",
+      "winrateDelta": 2.27
+    },
+    {
+      "name": "Arlott",
+      "winrateDelta": 1.83
+    },
+    {
+      "name": "Beatrix",
+      "winrateDelta": 1.72
+    },
+    {
+      "name": "Gusion",
+      "winrateDelta": 1.68
+    },
+    {
+      "name": "Selena",
+      "winrateDelta": 1.55
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": -1.83
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": -1.74
+    },
+    {
+      "name": "Sun",
+      "winrateDelta": -1.66
+    },
+    {
+      "name": "Bruno",
+      "winrateDelta": -1.47
+    },
+    {
+      "name": "Luo Yi",
+      "winrateDelta": -1.39
+    }
+  ],
+  "metaScore": 18.84,
+  "metaRank": 45,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Joy",
+        "advantage": 4.53
+      },
+      {
+        "name": "Natalia",
+        "advantage": 4.47
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 4.27
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.41
+      },
+      {
+        "name": "Faramis",
+        "advantage": 3.11
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 6.86
+      },
+      {
+        "name": "Chip",
+        "advantage": 4.4
+      },
+      {
+        "name": "Estes",
+        "advantage": 2.98
+      },
+      {
+        "name": "Minotaur",
+        "advantage": 2.76
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2.39
+      }
+    ]
+  }
 }

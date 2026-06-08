@@ -379,5 +379,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Minotaur"
+  "race": "Minotaur",
+  "bestTeammates": [
+    {
+      "name": "Lolita",
+      "winrateDelta": 4.31
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 3.08
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": 2.14
+    },
+    {
+      "name": "Natan",
+      "winrateDelta": 1.98
+    },
+    {
+      "name": "Saber",
+      "winrateDelta": 1.82
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Mathilda",
+      "winrateDelta": -38.46
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -17.7
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": -16.87
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": -16.57
+    },
+    {
+      "name": "Johnson",
+      "winrateDelta": -16.15
+    }
+  ],
+  "metaScore": 21.13,
+  "metaRank": 32,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 2.84
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 2.76
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.66
+      },
+      {
+        "name": "Lunox",
+        "advantage": 2.62
+      },
+      {
+        "name": "Claude",
+        "advantage": 2.1
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Valentina",
+        "advantage": 3.78
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.83
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 2.54
+      },
+      {
+        "name": "Fanny",
+        "advantage": 2.41
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 2.29
+      }
+    ]
+  }
 }

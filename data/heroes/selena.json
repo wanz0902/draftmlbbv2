@@ -633,5 +633,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Abyss",
-  "race": "Dark Elf"
+  "race": "Dark Elf",
+  "bestTeammates": [
+    {
+      "name": "Zhask",
+      "winrateDelta": 2.67
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 1.81
+    },
+    {
+      "name": "Esmeralda",
+      "winrateDelta": 1.73
+    },
+    {
+      "name": "Cyclops",
+      "winrateDelta": 1.55
+    },
+    {
+      "name": "Fredrinn",
+      "winrateDelta": 1.42
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Atlas",
+      "winrateDelta": -1.91
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": -1.55
+    },
+    {
+      "name": "Johnson",
+      "winrateDelta": -1.33
+    },
+    {
+      "name": "Tigreal",
+      "winrateDelta": -1.29
+    },
+    {
+      "name": "Natalia",
+      "winrateDelta": -1.19
+    }
+  ],
+  "metaScore": 14.21,
+  "metaRank": 88,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Ixia",
+        "advantage": 2.02
+      },
+      {
+        "name": "Chip",
+        "advantage": 1.96
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 1.79
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 1.74
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 1.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Wanwan",
+        "advantage": 2.63
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.17
+      },
+      {
+        "name": "Zhask",
+        "advantage": 2.15
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.04
+      },
+      {
+        "name": "Lolita",
+        "advantage": 1.79
+      }
+    ]
+  }
 }

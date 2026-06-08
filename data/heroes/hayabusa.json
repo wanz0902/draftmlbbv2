@@ -482,5 +482,99 @@
     }
   ],
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Masha",
+      "winrateDelta": 2.74
+    },
+    {
+      "name": "Edith",
+      "winrateDelta": 1.85
+    },
+    {
+      "name": "Bruno",
+      "winrateDelta": 1.83
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": 1.48
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": 1.31
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Ling",
+      "winrateDelta": -17.12
+    },
+    {
+      "name": "Lancelot",
+      "winrateDelta": -14.51
+    },
+    {
+      "name": "Fanny",
+      "winrateDelta": -12.19
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -9.3
+    },
+    {
+      "name": "Nolan",
+      "winrateDelta": -8.96
+    }
+  ],
+  "metaScore": 13.81,
+  "metaRank": 93,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Aamon",
+        "advantage": 2.5
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.28
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.15
+      },
+      {
+        "name": "Joy",
+        "advantage": 1.99
+      },
+      {
+        "name": "Ixia",
+        "advantage": 1.78
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Saber",
+        "advantage": 3.48
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.19
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 1.97
+      },
+      {
+        "name": "Zhask",
+        "advantage": 1.84
+      },
+      {
+        "name": "Aldous",
+        "advantage": 1.82
+      }
+    ]
+  }
 }

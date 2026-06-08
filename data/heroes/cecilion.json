@@ -489,5 +489,99 @@
     }
   ],
   "region": "Moniyan Empire",
-  "race": "Blood Demon"
+  "race": "Blood Demon",
+  "bestTeammates": [
+    {
+      "name": "Zhuxin",
+      "winrateDelta": 5.16
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 2.51
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 2.02
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 1.97
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 1.64
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": -8.89
+    },
+    {
+      "name": "Luo Yi",
+      "winrateDelta": -7.28
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": -6.89
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -5.53
+    },
+    {
+      "name": "Pharsa",
+      "winrateDelta": -4.64
+    }
+  ],
+  "metaScore": 14.4,
+  "metaRank": 87,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Kaja",
+        "advantage": 3.13
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.05
+      },
+      {
+        "name": "Kagura",
+        "advantage": 1.92
+      },
+      {
+        "name": "Brody",
+        "advantage": 1.86
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 1.85
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Ixia",
+        "advantage": 2.24
+      },
+      {
+        "name": "Yin",
+        "advantage": 1.81
+      },
+      {
+        "name": "Chip",
+        "advantage": 1.49
+      },
+      {
+        "name": "Irithel",
+        "advantage": 1.39
+      },
+      {
+        "name": "Yve",
+        "advantage": 1.36
+      }
+    ]
+  }
 }

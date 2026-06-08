@@ -384,5 +384,99 @@
     }
   ],
   "region": "Abyss",
-  "race": "Fallen Demi-Angel"
+  "race": "Fallen Demi-Angel",
+  "bestTeammates": [
+    {
+      "name": "Kalea",
+      "winrateDelta": 2.57
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": 2.4
+    },
+    {
+      "name": "Barats",
+      "winrateDelta": 2.21
+    },
+    {
+      "name": "Gloo",
+      "winrateDelta": 1.98
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 1.97
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Cici",
+      "winrateDelta": -6.67
+    },
+    {
+      "name": "Aldous",
+      "winrateDelta": -5.74
+    },
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": -5.52
+    },
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": -5.15
+    },
+    {
+      "name": "Ruby",
+      "winrateDelta": -5.01
+    }
+  ],
+  "metaScore": 19.32,
+  "metaRank": 40,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 3.55
+      },
+      {
+        "name": "Karrie",
+        "advantage": 3.27
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.63
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.6
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 2.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Chip",
+        "advantage": 3.74
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.52
+      },
+      {
+        "name": "Brody",
+        "advantage": 3.33
+      },
+      {
+        "name": "Uranus",
+        "advantage": 3.29
+      },
+      {
+        "name": "Terizla",
+        "advantage": 3.11
+      }
+    ]
+  }
 }

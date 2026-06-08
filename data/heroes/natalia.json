@@ -434,5 +434,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": 5.59
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 5.2
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 4.45
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": 4.18
+    },
+    {
+      "name": "Barats",
+      "winrateDelta": 3.54
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Estes",
+      "winrateDelta": -2.6
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": -2.58
+    },
+    {
+      "name": "Lunox",
+      "winrateDelta": -2.29
+    },
+    {
+      "name": "Aamon",
+      "winrateDelta": -2.26
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -2.26
+    }
+  ],
+  "metaScore": 15.22,
+  "metaRank": 83,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Hanzo",
+        "advantage": 7.28
+      },
+      {
+        "name": "Ling",
+        "advantage": 5.06
+      },
+      {
+        "name": "Gord",
+        "advantage": 3.79
+      },
+      {
+        "name": "Diggie",
+        "advantage": 3.48
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 3.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Cyclops",
+        "advantage": 4.47
+      },
+      {
+        "name": "Saber",
+        "advantage": 4.14
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 3.83
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 3.57
+      },
+      {
+        "name": "Eudora",
+        "advantage": 3.09
+      }
+    ]
+  }
 }

@@ -430,5 +430,99 @@
     }
   ],
   "region": "Vonetis Sea",
-  "race": "Half-Human, Half-Serpent"
+  "race": "Half-Human, Half-Serpent",
+  "bestTeammates": [
+    {
+      "name": "Mathilda",
+      "winrateDelta": 4.33
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 4.07
+    },
+    {
+      "name": "Edith",
+      "winrateDelta": 3.77
+    },
+    {
+      "name": "Bruno",
+      "winrateDelta": 2.57
+    },
+    {
+      "name": "Argus",
+      "winrateDelta": 2.57
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": -11.81
+    },
+    {
+      "name": "Marcel",
+      "winrateDelta": -9.96
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": -8.58
+    },
+    {
+      "name": "Atlas",
+      "winrateDelta": -7.63
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": -7.56
+    }
+  ],
+  "metaScore": 7.97,
+  "metaRank": 124,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 3.88
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.8
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.21
+      },
+      {
+        "name": "Natan",
+        "advantage": 2.21
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 2.52
+      },
+      {
+        "name": "Kaja",
+        "advantage": 2.41
+      },
+      {
+        "name": "Atlas",
+        "advantage": 1.87
+      },
+      {
+        "name": "Alice",
+        "advantage": 1.79
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 1.74
+      }
+    ]
+  }
 }

@@ -480,5 +480,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Cadia Riverlands",
-  "race": "Cyborg"
+  "race": "Cyborg",
+  "bestTeammates": [
+    {
+      "name": "Marcel",
+      "winrateDelta": 3.05
+    },
+    {
+      "name": "Hylos",
+      "winrateDelta": 2.06
+    },
+    {
+      "name": "Minotaur",
+      "winrateDelta": 1.82
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 1.69
+    },
+    {
+      "name": "Akai",
+      "winrateDelta": 1.67
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Nolan",
+      "winrateDelta": -4.45
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": -4.05
+    },
+    {
+      "name": "Karina",
+      "winrateDelta": -3.94
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -3.8
+    },
+    {
+      "name": "Fanny",
+      "winrateDelta": -3.47
+    }
+  ],
+  "metaScore": 22.53,
+  "metaRank": 27,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 4.14
+      },
+      {
+        "name": "Hayabusa",
+        "advantage": 3.48
+      },
+      {
+        "name": "Nolan",
+        "advantage": 3.45
+      },
+      {
+        "name": "Ling",
+        "advantage": 3.34
+      },
+      {
+        "name": "Lunox",
+        "advantage": 3.19
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 6.1
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.95
+      },
+      {
+        "name": "Fredrinn",
+        "advantage": 2.89
+      },
+      {
+        "name": "Sun",
+        "advantage": 2.72
+      },
+      {
+        "name": "Aulus",
+        "advantage": 2.64
+      }
+    ]
+  }
 }

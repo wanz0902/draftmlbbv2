@@ -404,5 +404,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Masha",
+      "winrateDelta": 3.99
+    },
+    {
+      "name": "Bruno",
+      "winrateDelta": 2.65
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": 2.22
+    },
+    {
+      "name": "Silvanna",
+      "winrateDelta": 2.13
+    },
+    {
+      "name": "Natalia",
+      "winrateDelta": 1.96
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Marcel",
+      "winrateDelta": -8.43
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": -7.72
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -7.39
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": -7.18
+    },
+    {
+      "name": "Franco",
+      "winrateDelta": -5.58
+    }
+  ],
+  "metaScore": 19.32,
+  "metaRank": 41,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Chip",
+        "advantage": 4.62
+      },
+      {
+        "name": "Baxia",
+        "advantage": 4.58
+      },
+      {
+        "name": "Kaja",
+        "advantage": 3.19
+      },
+      {
+        "name": "Edith",
+        "advantage": 3.08
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.85
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 4.78
+      },
+      {
+        "name": "Joy",
+        "advantage": 4.17
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 3.73
+      },
+      {
+        "name": "Lunox",
+        "advantage": 3.19
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.06
+      }
+    ]
+  }
 }

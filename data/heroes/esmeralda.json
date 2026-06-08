@@ -419,5 +419,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Diggie",
+      "winrateDelta": 2.23
+    },
+    {
+      "name": "Melissa",
+      "winrateDelta": 2.03
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 1.79
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": 1.75
+    },
+    {
+      "name": "Selena",
+      "winrateDelta": 1.73
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Khufra",
+      "winrateDelta": -4.23
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": -4.01
+    },
+    {
+      "name": "Uranus",
+      "winrateDelta": -3.09
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": -2.99
+    },
+    {
+      "name": "Arlott",
+      "winrateDelta": -2.94
+    }
+  ],
+  "metaScore": 3.16,
+  "metaRank": 128,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.91
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 4.18
+      },
+      {
+        "name": "Badang",
+        "advantage": 3.22
+      },
+      {
+        "name": "Harith",
+        "advantage": 3.03
+      },
+      {
+        "name": "Lapu-Lapu",
+        "advantage": 2.95
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Dyrroth",
+        "advantage": 4
+      },
+      {
+        "name": "Karrie",
+        "advantage": 3.29
+      },
+      {
+        "name": "Natan",
+        "advantage": 3.07
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 2.85
+      },
+      {
+        "name": "Thamuz",
+        "advantage": 2.82
+      }
+    ]
+  }
 }

@@ -385,5 +385,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Cyborg"
+  "race": "Cyborg",
+  "bestTeammates": [
+    {
+      "name": "Edith",
+      "winrateDelta": 2.08
+    },
+    {
+      "name": "Arlott",
+      "winrateDelta": 1.71
+    },
+    {
+      "name": "Silvanna",
+      "winrateDelta": 1.27
+    },
+    {
+      "name": "Chou",
+      "winrateDelta": 1.17
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": 1.1
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Khufra",
+      "winrateDelta": -16.28
+    },
+    {
+      "name": "Minotaur",
+      "winrateDelta": -16.15
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": -16.01
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -13.2
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -13.1
+    }
+  ],
+  "metaScore": 17.96,
+  "metaRank": 54,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Layla",
+        "advantage": 2.96
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.33
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.13
+      },
+      {
+        "name": "Eudora",
+        "advantage": 1.96
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 1.95
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 2.58
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.58
+      },
+      {
+        "name": "Alice",
+        "advantage": 2.51
+      },
+      {
+        "name": "Lylia",
+        "advantage": 2.43
+      },
+      {
+        "name": "Carmilla",
+        "advantage": 2.4
+      }
+    ]
+  }
 }

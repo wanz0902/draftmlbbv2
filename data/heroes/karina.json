@@ -484,5 +484,99 @@
     }
   ],
   "region": "Azrya Woodlands",
-  "race": "Dark Elf"
+  "race": "Dark Elf",
+  "bestTeammates": [
+    {
+      "name": "Nolan",
+      "winrateDelta": 2.74
+    },
+    {
+      "name": "Benedetta",
+      "winrateDelta": 2.56
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 2.26
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 1.84
+    },
+    {
+      "name": "Ixia",
+      "winrateDelta": 1.61
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Fanny",
+      "winrateDelta": -9.5
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": -9.16
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": -8.99
+    },
+    {
+      "name": "Hayabusa",
+      "winrateDelta": -8.12
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -8.06
+    }
+  ],
+  "metaScore": 9.41,
+  "metaRank": 122,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.37
+      },
+      {
+        "name": "Kimmy",
+        "advantage": 2.95
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.63
+      },
+      {
+        "name": "Zilong",
+        "advantage": 2.4
+      },
+      {
+        "name": "Ling",
+        "advantage": 2.32
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 4.77
+      },
+      {
+        "name": "Granger",
+        "advantage": 3.78
+      },
+      {
+        "name": "Brody",
+        "advantage": 3.62
+      },
+      {
+        "name": "Lunox",
+        "advantage": 3
+      },
+      {
+        "name": "Harith",
+        "advantage": 2.64
+      }
+    ]
+  }
 }

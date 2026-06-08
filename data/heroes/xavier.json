@@ -484,5 +484,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Valentina",
+      "winrateDelta": 7.63
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 4.11
+    },
+    {
+      "name": "Marcel",
+      "winrateDelta": 3.78
+    },
+    {
+      "name": "Uranus",
+      "winrateDelta": 2.14
+    },
+    {
+      "name": "Natalia",
+      "winrateDelta": 1.73
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": -15.89
+    },
+    {
+      "name": "Kagura",
+      "winrateDelta": -8.98
+    },
+    {
+      "name": "Cecilion",
+      "winrateDelta": -6.89
+    },
+    {
+      "name": "Vale",
+      "winrateDelta": -6.64
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -6.58
+    }
+  ],
+  "metaScore": 11.8,
+  "metaRank": 105,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 4.34
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.79
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.71
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.62
+      },
+      {
+        "name": "Uranus",
+        "advantage": 2.61
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 2.36
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 2.31
+      },
+      {
+        "name": "Angela",
+        "advantage": 2.26
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.04
+      },
+      {
+        "name": "Alucard",
+        "advantage": 1.88
+      }
+    ]
+  }
 }

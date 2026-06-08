@@ -383,5 +383,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Franco",
+      "winrateDelta": 1.25
+    },
+    {
+      "name": "Zhuxin",
+      "winrateDelta": 1.17
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 1.12
+    },
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": 1.06
+    },
+    {
+      "name": "Akai",
+      "winrateDelta": 1
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Wanwan",
+      "winrateDelta": -11.33
+    },
+    {
+      "name": "Irithel",
+      "winrateDelta": -10.29
+    },
+    {
+      "name": "Melissa",
+      "winrateDelta": -9.88
+    },
+    {
+      "name": "Clint",
+      "winrateDelta": -7.6
+    },
+    {
+      "name": "Moskov",
+      "winrateDelta": -7.03
+    }
+  ],
+  "metaScore": 35.94,
+  "metaRank": 5,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.78
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.65
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.4
+      },
+      {
+        "name": "Akai",
+        "advantage": 2.11
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.01
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Beatrix",
+        "advantage": 3.19
+      },
+      {
+        "name": "Ixia",
+        "advantage": 3.08
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.66
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.44
+      },
+      {
+        "name": "Layla",
+        "advantage": 2.42
+      }
+    ]
+  }
 }

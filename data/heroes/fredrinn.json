@@ -423,5 +423,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Ling",
+      "winrateDelta": 5.66
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 4.09
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": 2.65
+    },
+    {
+      "name": "Benedetta",
+      "winrateDelta": 2.07
+    },
+    {
+      "name": "Natalia",
+      "winrateDelta": 1.85
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Roger",
+      "winrateDelta": -6.02
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": -5.44
+    },
+    {
+      "name": "Leomord",
+      "winrateDelta": -5.44
+    },
+    {
+      "name": "Lancelot",
+      "winrateDelta": -4.97
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": -4.92
+    }
+  ],
+  "metaScore": 20.52,
+  "metaRank": 35,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Bruno",
+        "advantage": 3.64
+      },
+      {
+        "name": "Eudora",
+        "advantage": 3.37
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.89
+      },
+      {
+        "name": "Argus",
+        "advantage": 2.68
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.65
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Valir",
+        "advantage": 4.31
+      },
+      {
+        "name": "Karrie",
+        "advantage": 3.99
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3.62
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.89
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.78
+      }
+    ]
+  }
 }

@@ -389,5 +389,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Politan"
+  "race": "Politan",
+  "bestTeammates": [
+    {
+      "name": "Joy",
+      "winrateDelta": 4.82
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": 4.7
+    },
+    {
+      "name": "Floryn",
+      "winrateDelta": 3.88
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 3.68
+    },
+    {
+      "name": "Natalia",
+      "winrateDelta": 3.54
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Aulus",
+      "winrateDelta": -5.75
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -4.95
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": -4.68
+    },
+    {
+      "name": "Martis",
+      "winrateDelta": -4.59
+    },
+    {
+      "name": "Lukas",
+      "winrateDelta": -4.5
+    }
+  ],
+  "metaScore": 13.79,
+  "metaRank": 94,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Alucard",
+        "advantage": 4.01
+      },
+      {
+        "name": "Eudora",
+        "advantage": 3.71
+      },
+      {
+        "name": "Odette",
+        "advantage": 3.53
+      },
+      {
+        "name": "Argus",
+        "advantage": 3.52
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 3.29
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 7.3
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 5.99
+      },
+      {
+        "name": "Yve",
+        "advantage": 4.99
+      },
+      {
+        "name": "Valir",
+        "advantage": 4.55
+      },
+      {
+        "name": "Gord",
+        "advantage": 3.93
+      }
+    ]
+  }
 }

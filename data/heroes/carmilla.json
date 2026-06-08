@@ -383,5 +383,99 @@
     }
   ],
   "region": "Moniyan Empire",
-  "race": "Human-turned-Blood Demon"
+  "race": "Human-turned-Blood Demon",
+  "bestTeammates": [
+    {
+      "name": "Diggie",
+      "winrateDelta": 9.55
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": 2.14
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 2.1
+    },
+    {
+      "name": "Luo Yi",
+      "winrateDelta": 1.78
+    },
+    {
+      "name": "Edith",
+      "winrateDelta": 1.65
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Khufra",
+      "winrateDelta": -33.02
+    },
+    {
+      "name": "Marcel",
+      "winrateDelta": -20.77
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": -12.11
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -11.19
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": -10.87
+    }
+  ],
+  "metaScore": 17.98,
+  "metaRank": 53,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.87
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.51
+      },
+      {
+        "name": "Johnson",
+        "advantage": 2.4
+      },
+      {
+        "name": "Brody",
+        "advantage": 2.07
+      },
+      {
+        "name": "Minotaur",
+        "advantage": 1.66
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 3.84
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3.58
+      },
+      {
+        "name": "Fanny",
+        "advantage": 2.9
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.39
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.31
+      }
+    ]
+  }
 }

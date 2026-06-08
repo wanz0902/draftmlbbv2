@@ -715,5 +715,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": 3.57
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 2.76
+    },
+    {
+      "name": "Aurora",
+      "winrateDelta": 1.96
+    },
+    {
+      "name": "Kadita",
+      "winrateDelta": 1.92
+    },
+    {
+      "name": "Khaleed",
+      "winrateDelta": 1.91
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Aldous",
+      "winrateDelta": 0
+    },
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": 0
+    },
+    {
+      "name": "Phoveus",
+      "winrateDelta": 0
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": 0
+    },
+    {
+      "name": "Terizla",
+      "winrateDelta": 0
+    }
+  ],
+  "metaScore": 23.13,
+  "metaRank": 25,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Kimmy",
+        "advantage": 2.68
+      },
+      {
+        "name": "Lukas",
+        "advantage": 2.36
+      },
+      {
+        "name": "Angela",
+        "advantage": 2.08
+      },
+      {
+        "name": "Odette",
+        "advantage": 1.98
+      },
+      {
+        "name": "Martis",
+        "advantage": 1.77
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Kimmy",
+        "advantage": 0
+      },
+      {
+        "name": "Lukas",
+        "advantage": 0
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 0
+      },
+      {
+        "name": "Khufra",
+        "advantage": 0
+      },
+      {
+        "name": "Lukas",
+        "advantage": 0
+      }
+    ]
+  }
 }

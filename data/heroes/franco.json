@@ -417,5 +417,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Northern Vale",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Masha",
+      "winrateDelta": 1.49
+    },
+    {
+      "name": "Bane",
+      "winrateDelta": 1.4
+    },
+    {
+      "name": "Silvanna",
+      "winrateDelta": 1.39
+    },
+    {
+      "name": "Hanabi",
+      "winrateDelta": 1.25
+    },
+    {
+      "name": "Minsitthar",
+      "winrateDelta": 1.21
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": -27.73
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": -14.61
+    },
+    {
+      "name": "Minotaur",
+      "winrateDelta": -14.6
+    },
+    {
+      "name": "Marcel",
+      "winrateDelta": -12.87
+    },
+    {
+      "name": "Atlas",
+      "winrateDelta": -11.84
+    }
+  ],
+  "metaScore": 9.44,
+  "metaRank": 121,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 3.51
+      },
+      {
+        "name": "Angela",
+        "advantage": 2.67
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.6
+      },
+      {
+        "name": "Estes",
+        "advantage": 2.47
+      },
+      {
+        "name": "Floryn",
+        "advantage": 2.44
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Chip",
+        "advantage": 3.96
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.6
+      },
+      {
+        "name": "Sun",
+        "advantage": 1.8
+      },
+      {
+        "name": "Atlas",
+        "advantage": 1.75
+      },
+      {
+        "name": "Tigreal",
+        "advantage": 1.69
+      }
+    ]
+  }
 }

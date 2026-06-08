@@ -466,5 +466,99 @@
     }
   ],
   "region": "Vonetis Sea",
-  "race": "Mermaid Goddess (currently), Human (formerly)"
+  "race": "Mermaid Goddess (currently), Human (formerly)",
+  "bestTeammates": [
+    {
+      "name": "Floryn",
+      "winrateDelta": 2.65
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 2.51
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 2.11
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 1.97
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 1.73
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Cecilion",
+      "winrateDelta": -3.6
+    },
+    {
+      "name": "Pharsa",
+      "winrateDelta": -3.5
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": -2.63
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -2.61
+    },
+    {
+      "name": "Kagura",
+      "winrateDelta": -2.47
+    }
+  ],
+  "metaScore": 21.06,
+  "metaRank": 33,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 5.36
+      },
+      {
+        "name": "Ixia",
+        "advantage": 3.69
+      },
+      {
+        "name": "Yve",
+        "advantage": 3.53
+      },
+      {
+        "name": "Atlas",
+        "advantage": 1.99
+      },
+      {
+        "name": "Natalia",
+        "advantage": 1.58
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 3.51
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.83
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.29
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.03
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 1.97
+      }
+    ]
+  }
 }

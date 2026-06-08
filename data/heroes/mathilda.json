@@ -415,5 +415,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Marcel",
+      "winrateDelta": 37.58
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 11.08
+    },
+    {
+      "name": "Hylos",
+      "winrateDelta": 9.02
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 8.68
+    },
+    {
+      "name": "Floryn",
+      "winrateDelta": 7
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": -42.46
+    },
+    {
+      "name": "Minotaur",
+      "winrateDelta": -38.46
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": -35.78
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -24.42
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": -17.47
+    }
+  ],
+  "metaScore": 2.07,
+  "metaRank": 132,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 8.68
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 6.03
+      },
+      {
+        "name": "Chip",
+        "advantage": 5.78
+      },
+      {
+        "name": "Pharsa",
+        "advantage": 4.54
+      },
+      {
+        "name": "Aurora",
+        "advantage": 4.35
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 6.12
+      },
+      {
+        "name": "Edith",
+        "advantage": 4.58
+      },
+      {
+        "name": "Uranus",
+        "advantage": 4.34
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 4.18
+      },
+      {
+        "name": "Atlas",
+        "advantage": 4.06
+      }
+    ]
+  }
 }

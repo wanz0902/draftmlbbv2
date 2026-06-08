@@ -379,5 +379,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Half-Elf, Half-Human"
+  "race": "Half-Elf, Half-Human",
+  "bestTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": 12.39
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 11.14
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 6.76
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": 6.64
+    },
+    {
+      "name": "Natan",
+      "winrateDelta": 6.28
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Floryn",
+      "winrateDelta": -27.78
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -25.1
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": -17.47
+    },
+    {
+      "name": "Atlas",
+      "winrateDelta": -14.66
+    },
+    {
+      "name": "Franco",
+      "winrateDelta": -14.61
+    }
+  ],
+  "metaScore": 23.69,
+  "metaRank": 23,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Cyclops",
+        "advantage": 6.86
+      },
+      {
+        "name": "Chang'e",
+        "advantage": 6.37
+      },
+      {
+        "name": "Floryn",
+        "advantage": 5.95
+      },
+      {
+        "name": "Lukas",
+        "advantage": 4.93
+      },
+      {
+        "name": "Harley",
+        "advantage": 4.58
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Zhuxin",
+        "advantage": 8.02
+      },
+      {
+        "name": "Kadita",
+        "advantage": 5.36
+      },
+      {
+        "name": "Valentina",
+        "advantage": 5.06
+      },
+      {
+        "name": "Aurora",
+        "advantage": 5.01
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 4.91
+      }
+    ]
+  }
 }

@@ -402,5 +402,99 @@
     }
   ],
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": 3.08
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": 2.74
+    },
+    {
+      "name": "Floryn",
+      "winrateDelta": 2.15
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": 2.03
+    },
+    {
+      "name": "Sun",
+      "winrateDelta": 1.6
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Wanwan",
+      "winrateDelta": -5.53
+    },
+    {
+      "name": "Beatrix",
+      "winrateDelta": -5.48
+    },
+    {
+      "name": "Melissa",
+      "winrateDelta": -4.94
+    },
+    {
+      "name": "Moskov",
+      "winrateDelta": -4.88
+    },
+    {
+      "name": "Bruno",
+      "winrateDelta": -4.8
+    }
+  ],
+  "metaScore": 6.03,
+  "metaRank": 125,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Karina",
+        "advantage": 3.78
+      },
+      {
+        "name": "Hanabi",
+        "advantage": 2.26
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 2.16
+      },
+      {
+        "name": "Melissa",
+        "advantage": 2
+      },
+      {
+        "name": "Belerick",
+        "advantage": 1.97
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Fanny",
+        "advantage": 3.18
+      },
+      {
+        "name": "Hilda",
+        "advantage": 2.87
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.47
+      },
+      {
+        "name": "Ling",
+        "advantage": 2.37
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.22
+      }
+    ]
+  }
 }

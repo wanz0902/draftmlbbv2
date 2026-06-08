@@ -371,5 +371,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Lolita",
+      "winrateDelta": 6.28
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 4.46
+    },
+    {
+      "name": "Zhuxin",
+      "winrateDelta": 3.78
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": 2.83
+    },
+    {
+      "name": "Atlas",
+      "winrateDelta": 2.48
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Wanwan",
+      "winrateDelta": -7.99
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": -6.23
+    },
+    {
+      "name": "Melissa",
+      "winrateDelta": -4.89
+    },
+    {
+      "name": "Hanabi",
+      "winrateDelta": -4.86
+    },
+    {
+      "name": "Claude",
+      "winrateDelta": -4.75
+    }
+  ],
+  "metaScore": 16.29,
+  "metaRank": 73,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 6.83
+      },
+      {
+        "name": "Valentina",
+        "advantage": 3.91
+      },
+      {
+        "name": "Zhask",
+        "advantage": 3.27
+      },
+      {
+        "name": "Sun",
+        "advantage": 3.09
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 3.07
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.19
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.69
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.21
+      },
+      {
+        "name": "Kalea",
+        "advantage": 2.21
+      },
+      {
+        "name": "Chou",
+        "advantage": 1.8
+      }
+    ]
+  }
 }

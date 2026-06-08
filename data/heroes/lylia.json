@@ -471,5 +471,99 @@
     }
   ],
   "region": "Northern Vale",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Harley",
+      "winrateDelta": 2.89
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": 1.45
+    },
+    {
+      "name": "Atlas",
+      "winrateDelta": 1.38
+    },
+    {
+      "name": "Moskov",
+      "winrateDelta": 1.29
+    },
+    {
+      "name": "Fanny",
+      "winrateDelta": 1.25
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Luo Yi",
+      "winrateDelta": -10.52
+    },
+    {
+      "name": "Pharsa",
+      "winrateDelta": -6.21
+    },
+    {
+      "name": "Zhuxin",
+      "winrateDelta": -4.97
+    },
+    {
+      "name": "Zetian",
+      "winrateDelta": -4.65
+    },
+    {
+      "name": "Aurora",
+      "winrateDelta": -4.62
+    }
+  ],
+  "metaScore": 13.41,
+  "metaRank": 96,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Johnson",
+        "advantage": 2.43
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.36
+      },
+      {
+        "name": "Alice",
+        "advantage": 2.13
+      },
+      {
+        "name": "Diggie",
+        "advantage": 1.88
+      },
+      {
+        "name": "Alpha",
+        "advantage": 1.83
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 3.34
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.21
+      },
+      {
+        "name": "Bruno",
+        "advantage": 1.95
+      },
+      {
+        "name": "Chip",
+        "advantage": 1.92
+      },
+      {
+        "name": "Irithel",
+        "advantage": 1.8
+      }
+    ]
+  }
 }

@@ -406,5 +406,99 @@
     }
   ],
   "region": "The Barren Lands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": 2.38
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 2.38
+    },
+    {
+      "name": "Bruno",
+      "winrateDelta": 2.37
+    },
+    {
+      "name": "Sun",
+      "winrateDelta": 2.16
+    },
+    {
+      "name": "Bane",
+      "winrateDelta": 2.06
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": -7.25
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": -6.5
+    },
+    {
+      "name": "Terizla",
+      "winrateDelta": -5.81
+    },
+    {
+      "name": "Sora",
+      "winrateDelta": -5.81
+    },
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": -5.39
+    }
+  ],
+  "metaScore": 19.2,
+  "metaRank": 43,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Wanwan",
+        "advantage": 7.34
+      },
+      {
+        "name": "Harith",
+        "advantage": 4.93
+      },
+      {
+        "name": "Freya",
+        "advantage": 4.86
+      },
+      {
+        "name": "Khufra",
+        "advantage": 4.16
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 4.07
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "X.Borg",
+        "advantage": 3.6
+      },
+      {
+        "name": "Bane",
+        "advantage": 3.21
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.59
+      },
+      {
+        "name": "Alpha",
+        "advantage": 2.58
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.56
+      }
+    ]
+  }
 }

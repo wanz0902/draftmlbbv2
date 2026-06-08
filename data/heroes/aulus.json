@@ -381,5 +381,99 @@
     }
   ],
   "region": "The Barren Lands",
-  "race": "Leonin"
+  "race": "Leonin",
+  "bestTeammates": [
+    {
+      "name": "Benedetta",
+      "winrateDelta": 3.11
+    },
+    {
+      "name": "Kagura",
+      "winrateDelta": 2.8
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": 2.72
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 2.64
+    },
+    {
+      "name": "Sora",
+      "winrateDelta": 1.91
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Roger",
+      "winrateDelta": -6.3
+    },
+    {
+      "name": "Barats",
+      "winrateDelta": -5.75
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -3.76
+    },
+    {
+      "name": "Leomord",
+      "winrateDelta": -3.76
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": -3.52
+    }
+  ],
+  "metaScore": 15.89,
+  "metaRank": 78,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 3.5
+      },
+      {
+        "name": "Lolita",
+        "advantage": 3.37
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.64
+      },
+      {
+        "name": "Sun",
+        "advantage": 2.42
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.04
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 3.19
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.02
+      },
+      {
+        "name": "Estes",
+        "advantage": 2.58
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.44
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.31
+      }
+    ]
+  }
 }

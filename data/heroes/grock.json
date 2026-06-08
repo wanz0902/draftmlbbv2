@@ -390,5 +390,99 @@
     }
   ],
   "region": "The Barren Lands",
-  "race": "Stone Titan"
+  "race": "Stone Titan",
+  "bestTeammates": [
+    {
+      "name": "Khufra",
+      "winrateDelta": 4.27
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 2.6
+    },
+    {
+      "name": "Saber",
+      "winrateDelta": 1.58
+    },
+    {
+      "name": "Moskov",
+      "winrateDelta": 1.51
+    },
+    {
+      "name": "Natalia",
+      "winrateDelta": 1.5
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lolita",
+      "winrateDelta": -12.36
+    },
+    {
+      "name": "Johnson",
+      "winrateDelta": -11.84
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -11.1
+    },
+    {
+      "name": "Marcel",
+      "winrateDelta": -10.79
+    },
+    {
+      "name": "Hylos",
+      "winrateDelta": -10.57
+    }
+  ],
+  "metaScore": 12.76,
+  "metaRank": 98,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 2.93
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.91
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.86
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.31
+      },
+      {
+        "name": "Khufra",
+        "advantage": 1.76
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 2.9
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.73
+      },
+      {
+        "name": "Alice",
+        "advantage": 2.28
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 1.95
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 1.9
+      }
+    ]
+  }
 }

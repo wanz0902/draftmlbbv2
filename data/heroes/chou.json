@@ -343,5 +343,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Faramis",
+      "winrateDelta": 4.48
+    },
+    {
+      "name": "Marcel",
+      "winrateDelta": 2.1
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": 1.79
+    },
+    {
+      "name": "Gloo",
+      "winrateDelta": 1.77
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": 1.72
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Aldous",
+      "winrateDelta": -3.48
+    },
+    {
+      "name": "Zilong",
+      "winrateDelta": -2.86
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": -2.83
+    },
+    {
+      "name": "Paquito",
+      "winrateDelta": -2.59
+    },
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": -2.28
+    }
+  ],
+  "metaScore": 11.63,
+  "metaRank": 108,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Fanny",
+        "advantage": 2.85
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.79
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.4
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.04
+      },
+      {
+        "name": "Gord",
+        "advantage": 1.91
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 2.12
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.04
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 1.97
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 1.94
+      },
+      {
+        "name": "Eudora",
+        "advantage": 1.79
+      }
+    ]
+  }
 }

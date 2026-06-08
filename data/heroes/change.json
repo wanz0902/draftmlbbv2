@@ -382,5 +382,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Harley",
+      "winrateDelta": 2.09
+    },
+    {
+      "name": "Lunox",
+      "winrateDelta": 2.08
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 1.84
+    },
+    {
+      "name": "Jawhead",
+      "winrateDelta": 1.73
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 1.31
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Pharsa",
+      "winrateDelta": -4.97
+    },
+    {
+      "name": "Vale",
+      "winrateDelta": -4.78
+    },
+    {
+      "name": "Odette",
+      "winrateDelta": -4.64
+    },
+    {
+      "name": "Zetian",
+      "winrateDelta": -3.9
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -3.89
+    }
+  ],
+  "metaScore": 13.79,
+  "metaRank": 95,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 2.58
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.43
+      },
+      {
+        "name": "Lukas",
+        "advantage": 1.96
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 1.62
+      },
+      {
+        "name": "Faramis",
+        "advantage": 1.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 6.37
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.55
+      },
+      {
+        "name": "Lunox",
+        "advantage": 2.39
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.05
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.05
+      }
+    ]
+  }
 }

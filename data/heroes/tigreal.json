@@ -362,5 +362,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Masha",
+      "winrateDelta": 2.27
+    },
+    {
+      "name": "Alucard",
+      "winrateDelta": 1.3
+    },
+    {
+      "name": "Silvanna",
+      "winrateDelta": 1.22
+    },
+    {
+      "name": "Zilong",
+      "winrateDelta": 1.21
+    },
+    {
+      "name": "Aldous",
+      "winrateDelta": 1.18
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Marcel",
+      "winrateDelta": -15.74
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -12.59
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -12.59
+    },
+    {
+      "name": "Johnson",
+      "winrateDelta": -10.37
+    },
+    {
+      "name": "Franco",
+      "winrateDelta": -9.89
+    }
+  ],
+  "metaScore": 18.27,
+  "metaRank": 48,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 2.59
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.03
+      },
+      {
+        "name": "Zilong",
+        "advantage": 1.88
+      },
+      {
+        "name": "Eudora",
+        "advantage": 1.81
+      },
+      {
+        "name": "Franco",
+        "advantage": 1.69
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 5.32
+      },
+      {
+        "name": "Alice",
+        "advantage": 3.24
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.86
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.4
+      },
+      {
+        "name": "Novaria",
+        "advantage": 1.97
+      }
+    ]
+  }
 }

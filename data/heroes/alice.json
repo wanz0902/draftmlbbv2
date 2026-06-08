@@ -448,5 +448,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Abyss",
-  "race": "Blood Demon, formerly Human"
+  "race": "Blood Demon, formerly Human",
+  "bestTeammates": [
+    {
+      "name": "Mathilda",
+      "winrateDelta": 3.32
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 3.03
+    },
+    {
+      "name": "Lunox",
+      "winrateDelta": 2.71
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": 2.44
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 2.33
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Uranus",
+      "winrateDelta": -2.79
+    },
+    {
+      "name": "Akai",
+      "winrateDelta": -2.4
+    },
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": -2.31
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": -2.27
+    },
+    {
+      "name": "Ruby",
+      "winrateDelta": -2.13
+    }
+  ],
+  "metaScore": 17.95,
+  "metaRank": 55,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 4.52
+      },
+      {
+        "name": "Akai",
+        "advantage": 3.47
+      },
+      {
+        "name": "Tigreal",
+        "advantage": 3.24
+      },
+      {
+        "name": "Chip",
+        "advantage": 3.2
+      },
+      {
+        "name": "Zhask",
+        "advantage": 3.08
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 5.06
+      },
+      {
+        "name": "Karrie",
+        "advantage": 4.65
+      },
+      {
+        "name": "Angela",
+        "advantage": 3.73
+      },
+      {
+        "name": "Estes",
+        "advantage": 3.49
+      },
+      {
+        "name": "Masha",
+        "advantage": 3.36
+      }
+    ]
+  }
 }

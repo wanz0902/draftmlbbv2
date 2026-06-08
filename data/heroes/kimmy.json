@@ -465,5 +465,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Harith",
+      "winrateDelta": 2.48
+    },
+    {
+      "name": "Ixia",
+      "winrateDelta": 2.23
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": 2.1
+    },
+    {
+      "name": "Lesley",
+      "winrateDelta": 2.09
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": 1.97
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Vexana",
+      "winrateDelta": -3.19
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": -2.77
+    },
+    {
+      "name": "Aurora",
+      "winrateDelta": -2.66
+    },
+    {
+      "name": "Zhuxin",
+      "winrateDelta": -2.64
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": -2.51
+    }
+  ],
+  "metaScore": 11.06,
+  "metaRank": 110,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 3.48
+      },
+      {
+        "name": "Sun",
+        "advantage": 2.78
+      },
+      {
+        "name": "Hylos",
+        "advantage": 2.46
+      },
+      {
+        "name": "Akai",
+        "advantage": 2.06
+      },
+      {
+        "name": "Hilda",
+        "advantage": 2.04
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Karina",
+        "advantage": 2.95
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.84
+      },
+      {
+        "name": "Fanny",
+        "advantage": 2.11
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.06
+      },
+      {
+        "name": "Belerick",
+        "advantage": 1.91
+      }
+    ]
+  }
 }

@@ -410,5 +410,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Faramis",
+      "winrateDelta": 3.11
+    },
+    {
+      "name": "Sun",
+      "winrateDelta": 2.72
+    },
+    {
+      "name": "Guinevere",
+      "winrateDelta": 1.89
+    },
+    {
+      "name": "Badang",
+      "winrateDelta": 1.88
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": 1.66
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": -8.74
+    },
+    {
+      "name": "Aldous",
+      "winrateDelta": -7
+    },
+    {
+      "name": "Argus",
+      "winrateDelta": -6.67
+    },
+    {
+      "name": "Phoveus",
+      "winrateDelta": -6.5
+    },
+    {
+      "name": "Ruby",
+      "winrateDelta": -5.32
+    }
+  ],
+  "metaScore": 11.05,
+  "metaRank": 112,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Thamuz",
+        "advantage": 4.14
+      },
+      {
+        "name": "Balmond",
+        "advantage": 3.49
+      },
+      {
+        "name": "Lapu-Lapu",
+        "advantage": 3.37
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 3.28
+      },
+      {
+        "name": "Akai",
+        "advantage": 3.09
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 3.82
+      },
+      {
+        "name": "Aamon",
+        "advantage": 3.24
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.9
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.86
+      },
+      {
+        "name": "Zilong",
+        "advantage": 2.77
+      }
+    ]
+  }
 }

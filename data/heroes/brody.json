@@ -480,5 +480,99 @@
     }
   ],
   "region": "The Barren Lands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Faramis",
+      "winrateDelta": 3.69
+    },
+    {
+      "name": "Irithel",
+      "winrateDelta": 3.65
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": 3.37
+    },
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": 3.29
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 2.73
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Wanwan",
+      "winrateDelta": -19.2
+    },
+    {
+      "name": "Beatrix",
+      "winrateDelta": -7.98
+    },
+    {
+      "name": "Obsidia",
+      "winrateDelta": -5.03
+    },
+    {
+      "name": "Claude",
+      "winrateDelta": -4.76
+    },
+    {
+      "name": "Clint",
+      "winrateDelta": -4.76
+    }
+  ],
+  "metaScore": 16.79,
+  "metaRank": 67,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Kaja",
+        "advantage": 4.95
+      },
+      {
+        "name": "Joy",
+        "advantage": 4.3
+      },
+      {
+        "name": "Karina",
+        "advantage": 3.62
+      },
+      {
+        "name": "Valentina",
+        "advantage": 3.53
+      },
+      {
+        "name": "Irithel",
+        "advantage": 3.36
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Bruno",
+        "advantage": 3.65
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.04
+      },
+      {
+        "name": "Masha",
+        "advantage": 3.03
+      },
+      {
+        "name": "Sun",
+        "advantage": 2.72
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.55
+      }
+    ]
+  }
 }

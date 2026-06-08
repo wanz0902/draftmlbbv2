@@ -372,5 +372,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Diggie",
+      "winrateDelta": 5.3
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": 3.37
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 2.63
+    },
+    {
+      "name": "Kimmy",
+      "winrateDelta": 2.23
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 2.01
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Wanwan",
+      "winrateDelta": -9.26
+    },
+    {
+      "name": "Melissa",
+      "winrateDelta": -8.98
+    },
+    {
+      "name": "Clint",
+      "winrateDelta": -7.06
+    },
+    {
+      "name": "Bruno",
+      "winrateDelta": -6.37
+    },
+    {
+      "name": "Hanabi",
+      "winrateDelta": -6.02
+    }
+  ],
+  "metaScore": 17.3,
+  "metaRank": 60,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 5.19
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 3.74
+      },
+      {
+        "name": "Hanabi",
+        "advantage": 3.08
+      },
+      {
+        "name": "Floryn",
+        "advantage": 2.81
+      },
+      {
+        "name": "Ruby",
+        "advantage": 2.46
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Wanwan",
+        "advantage": 4.72
+      },
+      {
+        "name": "Kadita",
+        "advantage": 3.69
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 3.13
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.73
+      },
+      {
+        "name": "Claude",
+        "advantage": 2.71
+      }
+    ]
+  }
 }

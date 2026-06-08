@@ -474,5 +474,99 @@
     }
   ],
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Valentina",
+      "winrateDelta": 9.77
+    },
+    {
+      "name": "Zhask",
+      "winrateDelta": 2.99
+    },
+    {
+      "name": "Hylos",
+      "winrateDelta": 2.83
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": 2.7
+    },
+    {
+      "name": "Lukas",
+      "winrateDelta": 2.64
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lylia",
+      "winrateDelta": -10.52
+    },
+    {
+      "name": "Zhuxin",
+      "winrateDelta": -10.49
+    },
+    {
+      "name": "Vexana",
+      "winrateDelta": -8.75
+    },
+    {
+      "name": "Eudora",
+      "winrateDelta": -7.75
+    },
+    {
+      "name": "Cecilion",
+      "winrateDelta": -7.28
+    }
+  ],
+  "metaScore": 8.16,
+  "metaRank": 123,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Kaja",
+        "advantage": 6.58
+      },
+      {
+        "name": "Valentina",
+        "advantage": 3.97
+      },
+      {
+        "name": "Estes",
+        "advantage": 3.37
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.7
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.64
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.39
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 4.09
+      },
+      {
+        "name": "Bruno",
+        "advantage": 2.56
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.45
+      },
+      {
+        "name": "Marcel",
+        "advantage": 2.45
+      }
+    ]
+  }
 }

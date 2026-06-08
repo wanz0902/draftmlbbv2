@@ -476,5 +476,99 @@
     }
   ],
   "region": "Moniyan Empire",
-  "race": "Leonin"
+  "race": "Leonin",
+  "bestTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": 3.89
+    },
+    {
+      "name": "Ixia",
+      "winrateDelta": 3.37
+    },
+    {
+      "name": "Brody",
+      "winrateDelta": 3.37
+    },
+    {
+      "name": "Lesley",
+      "winrateDelta": 3.21
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": 3.2
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Joy",
+      "winrateDelta": -3.52
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -2.43
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": -2.4
+    },
+    {
+      "name": "Kaja",
+      "winrateDelta": -2.36
+    },
+    {
+      "name": "Saber",
+      "winrateDelta": -2.22
+    }
+  ],
+  "metaScore": 13.95,
+  "metaRank": 91,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.1
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 3.68
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 3.3
+      },
+      {
+        "name": "Karina",
+        "advantage": 2.64
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 2.38
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Phoveus",
+        "advantage": 4.93
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 3.57
+      },
+      {
+        "name": "Khufra",
+        "advantage": 3.5
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 3.36
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 3.03
+      }
+    ]
+  }
 }

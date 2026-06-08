@@ -470,5 +470,99 @@
     }
   ],
   "region": "Abyss",
-  "race": "Blood Demon, formerly Human"
+  "race": "Blood Demon, formerly Human",
+  "bestTeammates": [
+    {
+      "name": "Sun",
+      "winrateDelta": 1.45
+    },
+    {
+      "name": "Akai",
+      "winrateDelta": 1.2
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 1.15
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": 0.9
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 0.78
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Masha",
+      "winrateDelta": -2.96
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": -2.59
+    },
+    {
+      "name": "Zilong",
+      "winrateDelta": -2.57
+    },
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": -2.34
+    },
+    {
+      "name": "Arlott",
+      "winrateDelta": -2.11
+    }
+  ],
+  "metaScore": 14.71,
+  "metaRank": 85,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Esmeralda",
+        "advantage": 4
+      },
+      {
+        "name": "Uranus",
+        "advantage": 3.31
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.46
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.09
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.05
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Benedetta",
+        "advantage": 1.51
+      },
+      {
+        "name": "Argus",
+        "advantage": 1.42
+      },
+      {
+        "name": "Tigreal",
+        "advantage": 1.1
+      },
+      {
+        "name": "Khufra",
+        "advantage": 1.1
+      },
+      {
+        "name": "Bane",
+        "advantage": 1.05
+      }
+    ]
+  }
 }

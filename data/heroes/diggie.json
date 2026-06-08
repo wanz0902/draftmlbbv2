@@ -375,5 +375,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Anthropomorphic owl Nature Spirit"
+  "race": "Anthropomorphic owl Nature Spirit",
+  "bestTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": 12.38
+    },
+    {
+      "name": "Carmilla",
+      "winrateDelta": 9.55
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": 8.94
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 5.75
+    },
+    {
+      "name": "Ixia",
+      "winrateDelta": 5.3
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lolita",
+      "winrateDelta": -25.1
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": -24.42
+    },
+    {
+      "name": "Floryn",
+      "winrateDelta": -19.42
+    },
+    {
+      "name": "Atlas",
+      "winrateDelta": -16.93
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": -15.89
+    }
+  ],
+  "metaScore": 25.29,
+  "metaRank": 18,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Atlas",
+        "advantage": 5.89
+      },
+      {
+        "name": "Tigreal",
+        "advantage": 5.32
+      },
+      {
+        "name": "Alice",
+        "advantage": 5.06
+      },
+      {
+        "name": "Baxia",
+        "advantage": 4.43
+      },
+      {
+        "name": "Joy",
+        "advantage": 4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 8.37
+      },
+      {
+        "name": "Estes",
+        "advantage": 6.56
+      },
+      {
+        "name": "Zhask",
+        "advantage": 3.72
+      },
+      {
+        "name": "Hylos",
+        "advantage": 3.59
+      },
+      {
+        "name": "Floryn",
+        "advantage": 3.53
+      }
+    ]
+  }
 }

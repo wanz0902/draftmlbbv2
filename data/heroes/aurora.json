@@ -509,5 +509,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Northern Vale",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Valentina",
+      "winrateDelta": 4
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": 2.29
+    },
+    {
+      "name": "Novaria",
+      "winrateDelta": 2.18
+    },
+    {
+      "name": "Eudora",
+      "winrateDelta": 1.61
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 1.58
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": -18.06
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -4.62
+    },
+    {
+      "name": "Lylia",
+      "winrateDelta": -4.62
+    },
+    {
+      "name": "Cecilion",
+      "winrateDelta": -3.83
+    },
+    {
+      "name": "Vale",
+      "winrateDelta": -3.81
+    }
+  ],
+  "metaScore": 10.92,
+  "metaRank": 113,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 5.01
+      },
+      {
+        "name": "Faramis",
+        "advantage": 3.26
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.31
+      },
+      {
+        "name": "Eudora",
+        "advantage": 1.91
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 1.36
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Mathilda",
+        "advantage": 4.35
+      },
+      {
+        "name": "Yve",
+        "advantage": 3.47
+      },
+      {
+        "name": "Diggie",
+        "advantage": 3.28
+      },
+      {
+        "name": "Joy",
+        "advantage": 1.82
+      },
+      {
+        "name": "Fanny",
+        "advantage": 1.78
+      }
+    ]
+  }
 }

@@ -517,5 +517,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Agelta Drylands",
-  "race": "Centaur"
+  "race": "Centaur",
+  "bestTeammates": [
+    {
+      "name": "Mathilda",
+      "winrateDelta": 9.02
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 5.43
+    },
+    {
+      "name": "Marcel",
+      "winrateDelta": 5.39
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": 4.48
+    },
+    {
+      "name": "Luo Yi",
+      "winrateDelta": 2.83
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Diggie",
+      "winrateDelta": -11.47
+    },
+    {
+      "name": "Grock",
+      "winrateDelta": -10.57
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": -8.59
+    },
+    {
+      "name": "Johnson",
+      "winrateDelta": -8.39
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": -8.18
+    }
+  ],
+  "metaScore": 12.76,
+  "metaRank": 99,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 3.59
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.26
+      },
+      {
+        "name": "Layla",
+        "advantage": 2.11
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.1
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.04
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 3.53
+      },
+      {
+        "name": "Karrie",
+        "advantage": 3.17
+      },
+      {
+        "name": "Kimmy",
+        "advantage": 2.46
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.42
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.38
+      }
+    ]
+  }
 }

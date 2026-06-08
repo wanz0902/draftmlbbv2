@@ -381,5 +381,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": 2.53
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": 2.36
+    },
+    {
+      "name": "Kaja",
+      "winrateDelta": 2.03
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 1.31
+    },
+    {
+      "name": "Khaleed",
+      "winrateDelta": 1.16
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Irithel",
+      "winrateDelta": -9.9
+    },
+    {
+      "name": "Beatrix",
+      "winrateDelta": -9.63
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": -8.48
+    },
+    {
+      "name": "Melissa",
+      "winrateDelta": -8.45
+    },
+    {
+      "name": "Moskov",
+      "winrateDelta": -7.38
+    }
+  ],
+  "metaScore": 14.59,
+  "metaRank": 86,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 2.66
+      },
+      {
+        "name": "Marcel",
+        "advantage": 2.52
+      },
+      {
+        "name": "Hanabi",
+        "advantage": 2.42
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.32
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.17
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Atlas",
+        "advantage": 3.04
+      },
+      {
+        "name": "Johnson",
+        "advantage": 2.96
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.68
+      },
+      {
+        "name": "Hylos",
+        "advantage": 2.11
+      },
+      {
+        "name": "Sun",
+        "advantage": 2.07
+      }
+    ]
+  }
 }

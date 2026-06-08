@@ -503,5 +503,99 @@
     }
   ],
   "region": "The Barren Lands",
-  "race": "Undead"
+  "race": "Undead",
+  "bestTeammates": [
+    {
+      "name": "Lolita",
+      "winrateDelta": 11.14
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 11.08
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 5.54
+    },
+    {
+      "name": "Ruby",
+      "winrateDelta": 5.3
+    },
+    {
+      "name": "Chou",
+      "winrateDelta": 4.48
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Hylos",
+      "winrateDelta": -8.59
+    },
+    {
+      "name": "Barats",
+      "winrateDelta": -4.27
+    },
+    {
+      "name": "Zetian",
+      "winrateDelta": -4.2
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": -3.37
+    },
+    {
+      "name": "Cecilion",
+      "winrateDelta": -3.34
+    }
+  ],
+  "metaScore": 13.89,
+  "metaRank": 92,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 8.37
+      },
+      {
+        "name": "Gloo",
+        "advantage": 8.01
+      },
+      {
+        "name": "Khufra",
+        "advantage": 6.76
+      },
+      {
+        "name": "Chip",
+        "advantage": 6.28
+      },
+      {
+        "name": "Joy",
+        "advantage": 5.71
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Bane",
+        "advantage": 5.16
+      },
+      {
+        "name": "Estes",
+        "advantage": 4.65
+      },
+      {
+        "name": "Floryn",
+        "advantage": 4.47
+      },
+      {
+        "name": "Lukas",
+        "advantage": 4.45
+      },
+      {
+        "name": "Yin",
+        "advantage": 3.97
+      }
+    ]
+  }
 }

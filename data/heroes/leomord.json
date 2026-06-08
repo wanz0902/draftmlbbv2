@@ -400,5 +400,99 @@
     }
   ],
   "region": "The Barren Lands",
-  "race": "Undead"
+  "race": "Undead",
+  "bestTeammates": [
+    {
+      "name": "Angela",
+      "winrateDelta": 2.64
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 2.62
+    },
+    {
+      "name": "Floryn",
+      "winrateDelta": 2.32
+    },
+    {
+      "name": "Rafaela",
+      "winrateDelta": 1.84
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 1.62
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lancelot",
+      "winrateDelta": -10.34
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -6.8
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": -5.98
+    },
+    {
+      "name": "Yi Sun-shin",
+      "winrateDelta": -5.8
+    },
+    {
+      "name": "Fredrinn",
+      "winrateDelta": -5.44
+    }
+  ],
+  "metaScore": 26.7,
+  "metaRank": 15,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.08
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.42
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.39
+      },
+      {
+        "name": "Belerick",
+        "advantage": 2.1
+      },
+      {
+        "name": "Eudora",
+        "advantage": 1.98
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Karrie",
+        "advantage": 3.3
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.6
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.59
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.46
+      },
+      {
+        "name": "Angela",
+        "advantage": 2.32
+      }
+    ]
+  }
 }

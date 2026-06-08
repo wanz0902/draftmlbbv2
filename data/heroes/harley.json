@@ -478,5 +478,99 @@
     }
   ],
   "region": "Northern Vale",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Valentina",
+      "winrateDelta": 3.18
+    },
+    {
+      "name": "Lylia",
+      "winrateDelta": 2.89
+    },
+    {
+      "name": "Lunox",
+      "winrateDelta": 2.81
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 2.79
+    },
+    {
+      "name": "Zhask",
+      "winrateDelta": 2.52
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Nolan",
+      "winrateDelta": -6.55
+    },
+    {
+      "name": "Hayabusa",
+      "winrateDelta": -6.11
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -5.79
+    },
+    {
+      "name": "Fanny",
+      "winrateDelta": -5.66
+    },
+    {
+      "name": "Aamon",
+      "winrateDelta": -5.56
+    }
+  ],
+  "metaScore": 36.89,
+  "metaRank": 4,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Hanzo",
+        "advantage": 3.01
+      },
+      {
+        "name": "Gord",
+        "advantage": 2.15
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.1
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.1
+      },
+      {
+        "name": "Valir",
+        "advantage": 1.79
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.58
+      },
+      {
+        "name": "Sun",
+        "advantage": 2.48
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.33
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.28
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.1
+      }
+    ]
+  }
 }

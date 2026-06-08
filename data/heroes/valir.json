@@ -490,5 +490,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": 4.19
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 1.76
+    },
+    {
+      "name": "Alice",
+      "winrateDelta": 1.31
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": 1.19
+    },
+    {
+      "name": "Barats",
+      "winrateDelta": 1.16
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Luo Yi",
+      "winrateDelta": -6.2
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -3.73
+    },
+    {
+      "name": "Kagura",
+      "winrateDelta": -3.23
+    },
+    {
+      "name": "Cecilion",
+      "winrateDelta": -2.76
+    },
+    {
+      "name": "Pharsa",
+      "winrateDelta": -2.74
+    }
+  ],
+  "metaScore": 23.07,
+  "metaRank": 26,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 4.55
+      },
+      {
+        "name": "Fredrinn",
+        "advantage": 4.31
+      },
+      {
+        "name": "Chip",
+        "advantage": 3.45
+      },
+      {
+        "name": "Alice",
+        "advantage": 2.91
+      },
+      {
+        "name": "Terizla",
+        "advantage": 2.84
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Helcurt",
+        "advantage": 3.08
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.87
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 2.83
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.57
+      },
+      {
+        "name": "Ling",
+        "advantage": 2.49
+      }
+    ]
+  }
 }

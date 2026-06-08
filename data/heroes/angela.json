@@ -385,5 +385,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Android"
+  "race": "Android",
+  "bestTeammates": [
+    {
+      "name": "Akai",
+      "winrateDelta": 6.39
+    },
+    {
+      "name": "Uranus",
+      "winrateDelta": 5.17
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": 5.15
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 4.88
+    },
+    {
+      "name": "Fredrinn",
+      "winrateDelta": 4.09
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Khufra",
+      "winrateDelta": -19.38
+    },
+    {
+      "name": "Rafaela",
+      "winrateDelta": -18.78
+    },
+    {
+      "name": "Floryn",
+      "winrateDelta": -18.6
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -15.87
+    },
+    {
+      "name": "Marcel",
+      "winrateDelta": -15.44
+    }
+  ],
+  "metaScore": 19.24,
+  "metaRank": 42,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 5.11
+      },
+      {
+        "name": "Alice",
+        "advantage": 3.73
+      },
+      {
+        "name": "Balmond",
+        "advantage": 3.52
+      },
+      {
+        "name": "Uranus",
+        "advantage": 3.39
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.82
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Franco",
+        "advantage": 2.67
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.53
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 2.5
+      },
+      {
+        "name": "Yin",
+        "advantage": 2.3
+      },
+      {
+        "name": "Zilong",
+        "advantage": 2.15
+      }
+    ]
+  }
 }

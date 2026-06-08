@@ -504,5 +504,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Northern Vale",
-  "race": "Light Elf"
+  "race": "Light Elf",
+  "bestTeammates": [
+    {
+      "name": "Faramis",
+      "winrateDelta": 3.78
+    },
+    {
+      "name": "Novaria",
+      "winrateDelta": 2.26
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": 1.89
+    },
+    {
+      "name": "Aurora",
+      "winrateDelta": 1.61
+    },
+    {
+      "name": "Lunox",
+      "winrateDelta": 1.54
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Luo Yi",
+      "winrateDelta": -7.75
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": -5.76
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": -5.42
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": -3.93
+    },
+    {
+      "name": "Odette",
+      "winrateDelta": -2.53
+    }
+  ],
+  "metaScore": 14.95,
+  "metaRank": 84,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 3.09
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.77
+      },
+      {
+        "name": "Zilong",
+        "advantage": 2.46
+      },
+      {
+        "name": "Floryn",
+        "advantage": 2.43
+      },
+      {
+        "name": "Gusion",
+        "advantage": 2.21
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 3.71
+      },
+      {
+        "name": "Fredrinn",
+        "advantage": 3.37
+      },
+      {
+        "name": "Masha",
+        "advantage": 3.36
+      },
+      {
+        "name": "Minotaur",
+        "advantage": 2.66
+      },
+      {
+        "name": "Sun",
+        "advantage": 2.53
+      }
+    ]
+  }
 }

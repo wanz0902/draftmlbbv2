@@ -486,5 +486,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Kaja",
+      "winrateDelta": 3.27
+    },
+    {
+      "name": "Gloo",
+      "winrateDelta": 1.57
+    },
+    {
+      "name": "Fredrinn",
+      "winrateDelta": 1.56
+    },
+    {
+      "name": "Akai",
+      "winrateDelta": 1.34
+    },
+    {
+      "name": "Belerick",
+      "winrateDelta": 1.31
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": -3.79
+    },
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": -3.75
+    },
+    {
+      "name": "Terizla",
+      "winrateDelta": -3.45
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": -3.12
+    },
+    {
+      "name": "Aldous",
+      "winrateDelta": -3.11
+    }
+  ],
+  "metaScore": 12.03,
+  "metaRank": 103,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Fanny",
+        "advantage": 3.5
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3.46
+      },
+      {
+        "name": "Cici",
+        "advantage": 2.77
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.57
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.52
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Eudora",
+        "advantage": 2.46
+      },
+      {
+        "name": "Karina",
+        "advantage": 2.4
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.11
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 1.9
+      },
+      {
+        "name": "Tigreal",
+        "advantage": 1.88
+      }
+    ]
+  }
 }

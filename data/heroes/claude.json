@@ -413,5 +413,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": 2.86
+    },
+    {
+      "name": "Ruby",
+      "winrateDelta": 1.7
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": 1.49
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": 1.49
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 1.46
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Wanwan",
+      "winrateDelta": -18.2
+    },
+    {
+      "name": "Beatrix",
+      "winrateDelta": -9.52
+    },
+    {
+      "name": "Clint",
+      "winrateDelta": -9.44
+    },
+    {
+      "name": "Hanabi",
+      "winrateDelta": -7.03
+    },
+    {
+      "name": "Melissa",
+      "winrateDelta": -6.81
+    }
+  ],
+  "metaScore": 16.35,
+  "metaRank": 72,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.89
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2.71
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.29
+      },
+      {
+        "name": "Khufra",
+        "advantage": 1.9
+      },
+      {
+        "name": "Chang'e",
+        "advantage": 1.79
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lesley",
+        "advantage": 5.05
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.96
+      },
+      {
+        "name": "Aamon",
+        "advantage": 2.8
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.72
+      },
+      {
+        "name": "Arlott",
+        "advantage": 2.42
+      }
+    ]
+  }
 }

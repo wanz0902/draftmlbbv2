@@ -404,5 +404,99 @@
     }
   ],
   "region": "Azrya Woodlands",
-  "race": "Moon Elf"
+  "race": "Moon Elf",
+  "bestTeammates": [
+    {
+      "name": "Brody",
+      "winrateDelta": 3.65
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 3.03
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 2.37
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 1.98
+    },
+    {
+      "name": "Phoveus",
+      "winrateDelta": 1.94
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Wanwan",
+      "winrateDelta": -17.97
+    },
+    {
+      "name": "Clint",
+      "winrateDelta": -13.77
+    },
+    {
+      "name": "Hanabi",
+      "winrateDelta": -10.29
+    },
+    {
+      "name": "Melissa",
+      "winrateDelta": -9.97
+    },
+    {
+      "name": "Layla",
+      "winrateDelta": -9.9
+    }
+  ],
+  "metaScore": 17.68,
+  "metaRank": 58,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.38
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.75
+      },
+      {
+        "name": "Natan",
+        "advantage": 2.69
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 2.6
+      },
+      {
+        "name": "Yin",
+        "advantage": 2.19
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Chip",
+        "advantage": 3.9
+      },
+      {
+        "name": "Brody",
+        "advantage": 3.36
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.77
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 2.61
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.55
+      }
+    ]
+  }
 }

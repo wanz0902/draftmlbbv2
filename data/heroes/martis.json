@@ -384,5 +384,99 @@
       "relationship": "ASSIST"
     }
   ],
-  "race": "Asura"
+  "race": "Asura",
+  "bestTeammates": [
+    {
+      "name": "Faramis",
+      "winrateDelta": 4.41
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 1.67
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": 1.33
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 1.33
+    },
+    {
+      "name": "Floryn",
+      "winrateDelta": 1.23
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Barats",
+      "winrateDelta": -4.59
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": -2.49
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": -2.28
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": -2.27
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -2.13
+    }
+  ],
+  "metaScore": 9.98,
+  "metaRank": 118,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Valentina",
+        "advantage": 2.27
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.04
+      },
+      {
+        "name": "Khufra",
+        "advantage": 1.96
+      },
+      {
+        "name": "Saber",
+        "advantage": 1.95
+      },
+      {
+        "name": "Eudora",
+        "advantage": 1.9
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "X.Borg",
+        "advantage": 3.2
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 2.41
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.34
+      },
+      {
+        "name": "Marcel",
+        "advantage": 2.26
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.15
+      }
+    ]
+  }
 }

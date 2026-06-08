@@ -422,5 +422,99 @@
     }
   ],
   "region": "Northern Vale",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Baxia",
+      "winrateDelta": 1.79
+    },
+    {
+      "name": "Khaleed",
+      "winrateDelta": 1.47
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 1.39
+    },
+    {
+      "name": "Marcel",
+      "winrateDelta": 1.26
+    },
+    {
+      "name": "Zhuxin",
+      "winrateDelta": 1.19
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Masha",
+      "winrateDelta": -2.83
+    },
+    {
+      "name": "Aldous",
+      "winrateDelta": -2.09
+    },
+    {
+      "name": "Phoveus",
+      "winrateDelta": -1.86
+    },
+    {
+      "name": "Ruby",
+      "winrateDelta": -1.82
+    },
+    {
+      "name": "Esmeralda",
+      "winrateDelta": -1.61
+    }
+  ],
+  "metaScore": 25.02,
+  "metaRank": 19,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 2.44
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.31
+      },
+      {
+        "name": "Aldous",
+        "advantage": 1.96
+      },
+      {
+        "name": "Harith",
+        "advantage": 1.91
+      },
+      {
+        "name": "Arlott",
+        "advantage": 1.62
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Phoveus",
+        "advantage": 4.86
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 4.86
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.68
+      },
+      {
+        "name": "Barats",
+        "advantage": 2
+      },
+      {
+        "name": "Karrie",
+        "advantage": 1.52
+      }
+    ]
+  }
 }

@@ -384,5 +384,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Demigod"
+  "race": "Demigod",
+  "bestTeammates": [
+    {
+      "name": "Baxia",
+      "winrateDelta": 3.2
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": 2.59
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": 1.82
+    },
+    {
+      "name": "Aulus",
+      "winrateDelta": 1.77
+    },
+    {
+      "name": "Lukas",
+      "winrateDelta": 1.44
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": -7.5
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": -7
+    },
+    {
+      "name": "Sora",
+      "winrateDelta": -6.99
+    },
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": -6.8
+    },
+    {
+      "name": "Ruby",
+      "winrateDelta": -6.04
+    }
+  ],
+  "metaScore": 14.01,
+  "metaRank": 90,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 3.74
+      },
+      {
+        "name": "Yve",
+        "advantage": 3.74
+      },
+      {
+        "name": "Gatotkaca",
+        "advantage": 2.72
+      },
+      {
+        "name": "Novaria",
+        "advantage": 2.43
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Zhuxin",
+        "advantage": 3.17
+      },
+      {
+        "name": "Melissa",
+        "advantage": 2.88
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 2.51
+      },
+      {
+        "name": "Angela",
+        "advantage": 2.46
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 2.43
+      }
+    ]
+  }
 }

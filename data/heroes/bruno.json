@@ -416,5 +416,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Lolita",
+      "winrateDelta": 3.38
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": 3.35
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": 2.92
+    },
+    {
+      "name": "Khaleed",
+      "winrateDelta": 2.65
+    },
+    {
+      "name": "Kalea",
+      "winrateDelta": 2.57
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Melissa",
+      "winrateDelta": -18.24
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": -12.64
+    },
+    {
+      "name": "Obsidia",
+      "winrateDelta": -11.59
+    },
+    {
+      "name": "Beatrix",
+      "winrateDelta": -11.11
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": -7.71
+    }
+  ],
+  "metaScore": 9.71,
+  "metaRank": 120,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Wanwan",
+        "advantage": 5.49
+      },
+      {
+        "name": "Valentina",
+        "advantage": 4.92
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 4.77
+      },
+      {
+        "name": "Brody",
+        "advantage": 3.65
+      },
+      {
+        "name": "Fanny",
+        "advantage": 3.29
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Fredrinn",
+        "advantage": 3.64
+      },
+      {
+        "name": "Yve",
+        "advantage": 3.49
+      },
+      {
+        "name": "Chip",
+        "advantage": 3.23
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2.65
+      },
+      {
+        "name": "Guinevere",
+        "advantage": 2.4
+      }
+    ]
+  }
 }

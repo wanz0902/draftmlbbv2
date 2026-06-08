@@ -404,5 +404,99 @@
     }
   ],
   "region": "Vonetis Sea",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": 4.19
+    },
+    {
+      "name": "Rafaela",
+      "winrateDelta": 3.09
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 3.06
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": 2.52
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": 2.06
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Phoveus",
+      "winrateDelta": -2.64
+    },
+    {
+      "name": "Paquito",
+      "winrateDelta": -2.25
+    },
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": -2.09
+    },
+    {
+      "name": "Sora",
+      "winrateDelta": -1.78
+    },
+    {
+      "name": "Kaja",
+      "winrateDelta": -1.7
+    }
+  ],
+  "metaScore": 26.32,
+  "metaRank": 17,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Freya",
+        "advantage": 4.86
+      },
+      {
+        "name": "Harith",
+        "advantage": 3.57
+      },
+      {
+        "name": "Lukas",
+        "advantage": 2.62
+      },
+      {
+        "name": "Kagura",
+        "advantage": 2.53
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.47
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 3.4
+      },
+      {
+        "name": "Argus",
+        "advantage": 2.6
+      },
+      {
+        "name": "Aulus",
+        "advantage": 1.78
+      },
+      {
+        "name": "Belerick",
+        "advantage": 1.72
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 1.68
+      }
+    ]
+  }
 }

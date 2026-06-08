@@ -377,5 +377,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Marcel",
+      "winrateDelta": 2.58
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 2.5
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 2.42
+    },
+    {
+      "name": "Hylos",
+      "winrateDelta": 2.38
+    },
+    {
+      "name": "Khaleed",
+      "winrateDelta": 2.13
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Joy",
+      "winrateDelta": -2.51
+    },
+    {
+      "name": "Guinevere",
+      "winrateDelta": -1.65
+    },
+    {
+      "name": "Aamon",
+      "winrateDelta": -1.58
+    },
+    {
+      "name": "Arlott",
+      "winrateDelta": -1.43
+    },
+    {
+      "name": "Julian",
+      "winrateDelta": -1.41
+    }
+  ],
+  "metaScore": 23.72,
+  "metaRank": 22,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Angela",
+        "advantage": 2.5
+      },
+      {
+        "name": "Sun",
+        "advantage": 2.19
+      },
+      {
+        "name": "Aamon",
+        "advantage": 2.07
+      },
+      {
+        "name": "Floryn",
+        "advantage": 1.96
+      },
+      {
+        "name": "Suyou",
+        "advantage": 1.88
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 3.29
+      },
+      {
+        "name": "Chip",
+        "advantage": 3.07
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 3.05
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.69
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.54
+      }
+    ]
+  }
 }

@@ -374,5 +374,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Agelta Drylands",
-  "race": "Anthropomorphic plant"
+  "race": "Anthropomorphic plant",
+  "bestTeammates": [
+    {
+      "name": "Mathilda",
+      "winrateDelta": 7
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 4.5
+    },
+    {
+      "name": "Barats",
+      "winrateDelta": 3.88
+    },
+    {
+      "name": "Lunox",
+      "winrateDelta": 3.47
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 3.08
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Estes",
+      "winrateDelta": -28.04
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": -27.78
+    },
+    {
+      "name": "Rafaela",
+      "winrateDelta": -26.35
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -19.42
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": -18.6
+    }
+  ],
+  "metaScore": 29.78,
+  "metaRank": 9,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Chip",
+        "advantage": 5
+      },
+      {
+        "name": "Faramis",
+        "advantage": 4.47
+      },
+      {
+        "name": "Diggie",
+        "advantage": 3.53
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.4
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3.03
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 5.95
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2.81
+      },
+      {
+        "name": "Franco",
+        "advantage": 2.44
+      },
+      {
+        "name": "Yin",
+        "advantage": 2.43
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.43
+      }
+    ]
+  }
 }

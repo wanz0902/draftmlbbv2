@@ -410,5 +410,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Floryn",
+      "winrateDelta": 2.42
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 1.58
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 1.57
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 1.25
+    },
+    {
+      "name": "Lesley",
+      "winrateDelta": 1.25
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Hanzo",
+      "winrateDelta": -9.92
+    },
+    {
+      "name": "Lancelot",
+      "winrateDelta": -8.53
+    },
+    {
+      "name": "Hayabusa",
+      "winrateDelta": -7.51
+    },
+    {
+      "name": "Karina",
+      "winrateDelta": -6.77
+    },
+    {
+      "name": "Fanny",
+      "winrateDelta": -6.14
+    }
+  ],
+  "metaScore": 22.13,
+  "metaRank": 28,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Khufra",
+        "advantage": 3.97
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 2.17
+      },
+      {
+        "name": "Kaja",
+        "advantage": 1.99
+      },
+      {
+        "name": "Thamuz",
+        "advantage": 1.98
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 1.92
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Mathilda",
+        "advantage": 2.8
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.04
+      },
+      {
+        "name": "Lolita",
+        "advantage": 1.91
+      },
+      {
+        "name": "Chip",
+        "advantage": 1.75
+      },
+      {
+        "name": "Uranus",
+        "advantage": 1.73
+      }
+    ]
+  }
 }

@@ -434,5 +434,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Joy",
+      "winrateDelta": 5.72
+    },
+    {
+      "name": "Fredrinn",
+      "winrateDelta": 5.66
+    },
+    {
+      "name": "Barats",
+      "winrateDelta": 3.44
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 3.35
+    },
+    {
+      "name": "Lunox",
+      "winrateDelta": 3.3
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Hayabusa",
+      "winrateDelta": -17.12
+    },
+    {
+      "name": "Lancelot",
+      "winrateDelta": -15.81
+    },
+    {
+      "name": "Fanny",
+      "winrateDelta": -13.69
+    },
+    {
+      "name": "Aamon",
+      "winrateDelta": -12.64
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": -12.31
+    }
+  ],
+  "metaScore": 5.48,
+  "metaRank": 126,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 5.93
+      },
+      {
+        "name": "Gloo",
+        "advantage": 3.83
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3.62
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 3.33
+      },
+      {
+        "name": "Atlas",
+        "advantage": 3.28
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Chip",
+        "advantage": 5.6
+      },
+      {
+        "name": "Natalia",
+        "advantage": 5.06
+      },
+      {
+        "name": "Lunox",
+        "advantage": 3.82
+      },
+      {
+        "name": "Valentina",
+        "advantage": 3.55
+      },
+      {
+        "name": "Saber",
+        "advantage": 3.34
+      }
+    ]
+  }
 }

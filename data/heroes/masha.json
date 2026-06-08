@@ -411,5 +411,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Northern Vale",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": 17.25
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 8.68
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 7.08
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 6.76
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 5.54
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Paquito",
+      "winrateDelta": -5.56
+    },
+    {
+      "name": "Terizla",
+      "winrateDelta": -5.3
+    },
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": -4.66
+    },
+    {
+      "name": "Phoveus",
+      "winrateDelta": -4.02
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": -3.98
+    }
+  ],
+  "metaScore": 24.82,
+  "metaRank": 20,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Chip",
+        "advantage": 7.55
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 6.12
+      },
+      {
+        "name": "Saber",
+        "advantage": 6.1
+      },
+      {
+        "name": "Nolan",
+        "advantage": 5.5
+      },
+      {
+        "name": "Arlott",
+        "advantage": 4.79
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 7.44
+      },
+      {
+        "name": "Valentina",
+        "advantage": 6.1
+      },
+      {
+        "name": "Uranus",
+        "advantage": 5.17
+      },
+      {
+        "name": "Lukas",
+        "advantage": 4.82
+      },
+      {
+        "name": "Estes",
+        "advantage": 4.42
+      }
+    ]
+  }
 }

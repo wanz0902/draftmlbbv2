@@ -471,5 +471,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Cadia Riverlands",
-  "race": "Deity"
+  "race": "Deity",
+  "bestTeammates": [
+    {
+      "name": "Harley",
+      "winrateDelta": 1.98
+    },
+    {
+      "name": "Khaleed",
+      "winrateDelta": 1.51
+    },
+    {
+      "name": "Alice",
+      "winrateDelta": 1.5
+    },
+    {
+      "name": "Gusion",
+      "winrateDelta": 1.39
+    },
+    {
+      "name": "Natalia",
+      "winrateDelta": 1.38
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": -5.56
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -4.9
+    },
+    {
+      "name": "Lylia",
+      "winrateDelta": -4.65
+    },
+    {
+      "name": "Cecilion",
+      "winrateDelta": -4.58
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": -4.2
+    }
+  ],
+  "metaScore": 28.98,
+  "metaRank": 11,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.31
+      },
+      {
+        "name": "Natalia",
+        "advantage": 1.82
+      },
+      {
+        "name": "Tigreal",
+        "advantage": 1.64
+      },
+      {
+        "name": "Atlas",
+        "advantage": 1.53
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 1.39
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Valentina",
+        "advantage": 3.69
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.75
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.2
+      },
+      {
+        "name": "Chip",
+        "advantage": 1.92
+      },
+      {
+        "name": "Faramis",
+        "advantage": 1.77
+      }
+    ]
+  }
 }

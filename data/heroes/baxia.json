@@ -419,5 +419,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Diggie",
+      "winrateDelta": 8.94
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 5.15
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 3.99
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": 3.68
+    },
+    {
+      "name": "Zhuxin",
+      "winrateDelta": 3.49
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Khufra",
+      "winrateDelta": -6.44
+    },
+    {
+      "name": "Fredrinn",
+      "winrateDelta": -4.92
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": -4.81
+    },
+    {
+      "name": "Barats",
+      "winrateDelta": -4.68
+    },
+    {
+      "name": "Terizla",
+      "winrateDelta": -4.22
+    }
+  ],
+  "metaScore": 16.86,
+  "metaRank": 66,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 7.3
+      },
+      {
+        "name": "Valentina",
+        "advantage": 4.73
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.97
+      },
+      {
+        "name": "Freya",
+        "advantage": 2.68
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.61
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Mathilda",
+        "advantage": 8.68
+      },
+      {
+        "name": "Joy",
+        "advantage": 6.75
+      },
+      {
+        "name": "Ling",
+        "advantage": 5.93
+      },
+      {
+        "name": "Kaja",
+        "advantage": 5.84
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 5.59
+      }
+    ]
+  }
 }

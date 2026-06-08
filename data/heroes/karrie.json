@@ -410,5 +410,99 @@
     }
   ],
   "region": "Vonetis Sea",
-  "race": "Yasson"
+  "race": "Yasson",
+  "bestTeammates": [
+    {
+      "name": "Baxia",
+      "winrateDelta": 2.36
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 1.95
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": 1.86
+    },
+    {
+      "name": "Gloo",
+      "winrateDelta": 1.74
+    },
+    {
+      "name": "Kaja",
+      "winrateDelta": 1.69
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Melissa",
+      "winrateDelta": -10.54
+    },
+    {
+      "name": "Obsidia",
+      "winrateDelta": -7.95
+    },
+    {
+      "name": "Beatrix",
+      "winrateDelta": -7.73
+    },
+    {
+      "name": "Hanabi",
+      "winrateDelta": -6.85
+    },
+    {
+      "name": "Moskov",
+      "winrateDelta": -6.79
+    }
+  ],
+  "metaScore": 18.36,
+  "metaRank": 47,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Alice",
+        "advantage": 4.65
+      },
+      {
+        "name": "Uranus",
+        "advantage": 4.18
+      },
+      {
+        "name": "Fredrinn",
+        "advantage": 3.99
+      },
+      {
+        "name": "Leomord",
+        "advantage": 3.3
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 3.29
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 3.43
+      },
+      {
+        "name": "Masha",
+        "advantage": 3.37
+      },
+      {
+        "name": "Argus",
+        "advantage": 3.27
+      },
+      {
+        "name": "Rafaela",
+        "advantage": 3.17
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.49
+      }
+    ]
+  }
 }

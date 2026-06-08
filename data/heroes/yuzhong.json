@@ -411,5 +411,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Bane",
+      "winrateDelta": 2.88
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 2.17
+    },
+    {
+      "name": "Sun",
+      "winrateDelta": 1.92
+    },
+    {
+      "name": "Guinevere",
+      "winrateDelta": 1.8
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 1.63
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": -9.13
+    },
+    {
+      "name": "Phoveus",
+      "winrateDelta": -7.25
+    },
+    {
+      "name": "Aldous",
+      "winrateDelta": -6.8
+    },
+    {
+      "name": "Sora",
+      "winrateDelta": -5.88
+    },
+    {
+      "name": "Terizla",
+      "winrateDelta": -5.87
+    }
+  ],
+  "metaScore": 14.13,
+  "metaRank": 89,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 2.47
+      },
+      {
+        "name": "Thamuz",
+        "advantage": 1.72
+      },
+      {
+        "name": "Atlas",
+        "advantage": 1.55
+      },
+      {
+        "name": "Barats",
+        "advantage": 1.55
+      },
+      {
+        "name": "Ruby",
+        "advantage": 1.47
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 3.62
+      },
+      {
+        "name": "Cici",
+        "advantage": 1.82
+      },
+      {
+        "name": "Chou",
+        "advantage": 1.52
+      },
+      {
+        "name": "Marcel",
+        "advantage": 1.51
+      },
+      {
+        "name": "Lunox",
+        "advantage": 1.35
+      }
+    ]
+  }
 }

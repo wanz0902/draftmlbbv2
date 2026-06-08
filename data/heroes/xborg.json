@@ -401,5 +401,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Cyborg"
+  "race": "Cyborg",
+  "bestTeammates": [
+    {
+      "name": "Lukas",
+      "winrateDelta": 2.77
+    },
+    {
+      "name": "Sun",
+      "winrateDelta": 2.43
+    },
+    {
+      "name": "Guinevere",
+      "winrateDelta": 1.93
+    },
+    {
+      "name": "Badang",
+      "winrateDelta": 1.81
+    },
+    {
+      "name": "Bruno",
+      "winrateDelta": 1.5
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Floryn",
+      "winrateDelta": -1.84
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": -1.67
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": -1.66
+    },
+    {
+      "name": "Fredrinn",
+      "winrateDelta": -1.57
+    },
+    {
+      "name": "Lancelot",
+      "winrateDelta": -1.57
+    }
+  ],
+  "metaScore": 15.99,
+  "metaRank": 77,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 5.99
+      },
+      {
+        "name": "Baxia",
+        "advantage": 5.59
+      },
+      {
+        "name": "Terizla",
+        "advantage": 5.18
+      },
+      {
+        "name": "Khufra",
+        "advantage": 5.06
+      },
+      {
+        "name": "Ruby",
+        "advantage": 3.95
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Ling",
+        "advantage": 3.62
+      },
+      {
+        "name": "Zilong",
+        "advantage": 3.46
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 3.41
+      },
+      {
+        "name": "Valentina",
+        "advantage": 3.35
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 3.19
+      }
+    ]
+  }
 }

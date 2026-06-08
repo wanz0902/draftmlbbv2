@@ -384,5 +384,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Cadia Riverlands",
-  "race": "Anthropomorphic panda"
+  "race": "Anthropomorphic panda",
+  "bestTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": 7.74
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 6.39
+    },
+    {
+      "name": "Rafaela",
+      "winrateDelta": 3.97
+    },
+    {
+      "name": "Natalia",
+      "winrateDelta": 2.11
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": 1.74
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Minotaur",
+      "winrateDelta": -4.27
+    },
+    {
+      "name": "Kaja",
+      "winrateDelta": -4
+    },
+    {
+      "name": "Hylos",
+      "winrateDelta": -3.19
+    },
+    {
+      "name": "Grock",
+      "winrateDelta": -3.19
+    },
+    {
+      "name": "Tigreal",
+      "winrateDelta": -3.18
+    }
+  ],
+  "metaScore": 16.66,
+  "metaRank": 68,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Argus",
+        "advantage": 3.04
+      },
+      {
+        "name": "Harith",
+        "advantage": 2.37
+      },
+      {
+        "name": "Sora",
+        "advantage": 2.09
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2
+      },
+      {
+        "name": "Atlas",
+        "advantage": 1.86
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Alice",
+        "advantage": 3.47
+      },
+      {
+        "name": "Cici",
+        "advantage": 3.09
+      },
+      {
+        "name": "Kaja",
+        "advantage": 2.97
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.9
+      },
+      {
+        "name": "Marcel",
+        "advantage": 2.67
+      }
+    ]
+  }
 }

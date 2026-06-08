@@ -415,5 +415,99 @@
     }
   ],
   "region": "Northern Vale",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Silvanna",
+      "winrateDelta": 1.64
+    },
+    {
+      "name": "Bane",
+      "winrateDelta": 1.63
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": 1.62
+    },
+    {
+      "name": "Minsitthar",
+      "winrateDelta": 1.31
+    },
+    {
+      "name": "Bruno",
+      "winrateDelta": 1.29
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": -8.2
+    },
+    {
+      "name": "Minotaur",
+      "winrateDelta": -5.65
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": -4.23
+    },
+    {
+      "name": "Johnson",
+      "winrateDelta": -4.19
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": -4.19
+    }
+  ],
+  "metaScore": 26.67,
+  "metaRank": 16,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 3.16
+      },
+      {
+        "name": "Granger",
+        "advantage": 2.87
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.78
+      },
+      {
+        "name": "Ling",
+        "advantage": 2.41
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 2.22
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Karrie",
+        "advantage": 2.77
+      },
+      {
+        "name": "Aamon",
+        "advantage": 2.33
+      },
+      {
+        "name": "Edith",
+        "advantage": 2.29
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.11
+      },
+      {
+        "name": "Kimmy",
+        "advantage": 2.04
+      }
+    ]
+  }
 }

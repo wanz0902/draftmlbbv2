@@ -406,5 +406,99 @@
     }
   ],
   "region": "Vonetis Sea",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": 4.17
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": 3.04
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 2.65
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 2.64
+    },
+    {
+      "name": "Rafaela",
+      "winrateDelta": 2.58
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": -9.13
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": -8.74
+    },
+    {
+      "name": "Aldous",
+      "winrateDelta": -7.5
+    },
+    {
+      "name": "Terizla",
+      "winrateDelta": -6.08
+    },
+    {
+      "name": "Arlott",
+      "winrateDelta": -5.9
+    }
+  ],
+  "metaScore": 11.93,
+  "metaRank": 104,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 2.39
+      },
+      {
+        "name": "Argus",
+        "advantage": 2.28
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 2.18
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2.01
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 5.07
+      },
+      {
+        "name": "Cici",
+        "advantage": 3.37
+      },
+      {
+        "name": "Diggie",
+        "advantage": 3.07
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 2.95
+      },
+      {
+        "name": "Brody",
+        "advantage": 2.45
+      }
+    ]
+  }
 }

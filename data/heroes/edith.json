@@ -421,5 +421,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Vonetis Sea",
-  "race": "Demigod"
+  "race": "Demigod",
+  "bestTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": 9.03
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 6.51
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": 4.32
+    },
+    {
+      "name": "Kalea",
+      "winrateDelta": 3.77
+    },
+    {
+      "name": "Helcurt",
+      "winrateDelta": 2.23
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Ruby",
+      "winrateDelta": -4.17
+    },
+    {
+      "name": "Terizla",
+      "winrateDelta": -4.09
+    },
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": -2.6
+    },
+    {
+      "name": "Zilong",
+      "winrateDelta": -2.58
+    },
+    {
+      "name": "Bane",
+      "winrateDelta": -2.54
+    }
+  ],
+  "metaScore": 16.25,
+  "metaRank": 74,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Mathilda",
+        "advantage": 4.58
+      },
+      {
+        "name": "Chip",
+        "advantage": 3.94
+      },
+      {
+        "name": "Claude",
+        "advantage": 2.96
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.84
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.55
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 4.19
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 3.21
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 3.08
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 2.64
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.32
+      }
+    ]
+  }
 }

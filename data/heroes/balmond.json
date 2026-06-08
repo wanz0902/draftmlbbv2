@@ -468,5 +468,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Abyss",
-  "race": "Orc"
+  "race": "Orc",
+  "bestTeammates": [
+    {
+      "name": "Joy",
+      "winrateDelta": 2.52
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 2.29
+    },
+    {
+      "name": "Minsitthar",
+      "winrateDelta": 1.8
+    },
+    {
+      "name": "Bane",
+      "winrateDelta": 1.51
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": 1.45
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": -5.69
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": -3.02
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": -2.66
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": -2.57
+    },
+    {
+      "name": "Lancelot",
+      "winrateDelta": -2.4
+    }
+  ],
+  "metaScore": 2.57,
+  "metaRank": 130,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Khufra",
+        "advantage": 2.75
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.65
+      },
+      {
+        "name": "Saber",
+        "advantage": 2.33
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 1.9
+      },
+      {
+        "name": "Tigreal",
+        "advantage": 1.82
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Angela",
+        "advantage": 3.52
+      },
+      {
+        "name": "Cici",
+        "advantage": 3.49
+      },
+      {
+        "name": "Karrie",
+        "advantage": 3.21
+      },
+      {
+        "name": "Estes",
+        "advantage": 2.95
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.91
+      }
+    ]
+  }
 }

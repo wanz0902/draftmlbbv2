@@ -659,5 +659,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Cadia Riverlands",
-  "race": "Spirit"
+  "race": "Spirit",
+  "bestTeammates": [
+    {
+      "name": "Lunox",
+      "winrateDelta": 8.92
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": 3.29
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 2.94
+    },
+    {
+      "name": "Aulus",
+      "winrateDelta": 2.8
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": 2.45
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Vale",
+      "winrateDelta": -9.12
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": -8.98
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -5.62
+    },
+    {
+      "name": "Pharsa",
+      "winrateDelta": -4.73
+    },
+    {
+      "name": "Vexana",
+      "winrateDelta": -4.06
+    }
+  ],
+  "metaScore": 16.2,
+  "metaRank": 75,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Mathilda",
+        "advantage": 3.54
+      },
+      {
+        "name": "Minotaur",
+        "advantage": 1.76
+      },
+      {
+        "name": "Nolan",
+        "advantage": 1.73
+      },
+      {
+        "name": "Badang",
+        "advantage": 1.67
+      },
+      {
+        "name": "Lolita",
+        "advantage": 1.59
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Minsitthar",
+        "advantage": 2.53
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.18
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 2.17
+      },
+      {
+        "name": "Kaja",
+        "advantage": 2.07
+      },
+      {
+        "name": "Marcel",
+        "advantage": 2.03
+      }
+    ]
+  }
 }

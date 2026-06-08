@@ -586,5 +586,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Wanwan",
+      "winrateDelta": 3.42
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 2.06
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 1.92
+    },
+    {
+      "name": "Aldous",
+      "winrateDelta": 1.82
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": 1.66
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Fanny",
+      "winrateDelta": -14.03
+    },
+    {
+      "name": "Lancelot",
+      "winrateDelta": -13.29
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": -12.31
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -10.62
+    },
+    {
+      "name": "Yi Sun-shin",
+      "winrateDelta": -9.92
+    }
+  ],
+  "metaScore": 16.65,
+  "metaRank": 69,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Luo Yi",
+        "advantage": 4.09
+      },
+      {
+        "name": "Atlas",
+        "advantage": 3.86
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.52
+      },
+      {
+        "name": "Ixia",
+        "advantage": 3.13
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.95
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 7.28
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 6.03
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 3.65
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 3.62
+      },
+      {
+        "name": "Ling",
+        "advantage": 3.33
+      }
+    ]
+  }
 }

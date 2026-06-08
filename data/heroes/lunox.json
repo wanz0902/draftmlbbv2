@@ -627,5 +627,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Agelta Drylands",
-  "race": "Light Elf"
+  "race": "Light Elf",
+  "bestTeammates": [
+    {
+      "name": "Kagura",
+      "winrateDelta": 8.92
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 8.43
+    },
+    {
+      "name": "Zhuxin",
+      "winrateDelta": 6.43
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 5.88
+    },
+    {
+      "name": "Novaria",
+      "winrateDelta": 4.71
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Zhask",
+      "winrateDelta": -5.01
+    },
+    {
+      "name": "Vale",
+      "winrateDelta": -4.74
+    },
+    {
+      "name": "Pharsa",
+      "winrateDelta": -3.77
+    },
+    {
+      "name": "Luo Yi",
+      "winrateDelta": -3.72
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": -2.92
+    }
+  ],
+  "metaScore": 11.65,
+  "metaRank": 107,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Ling",
+        "advantage": 3.82
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.76
+      },
+      {
+        "name": "Baxia",
+        "advantage": 3.46
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 3.19
+      },
+      {
+        "name": "Karina",
+        "advantage": 3
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 4.53
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 3.6
+      },
+      {
+        "name": "Yve",
+        "advantage": 3.22
+      },
+      {
+        "name": "Saber",
+        "advantage": 3.19
+      },
+      {
+        "name": "Masha",
+        "advantage": 3.03
+      }
+    ]
+  }
 }

@@ -408,5 +408,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Azrya Woodlands",
-  "race": "Swamp Spirit"
+  "race": "Swamp Spirit",
+  "bestTeammates": [
+    {
+      "name": "Helcurt",
+      "winrateDelta": 2.25
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 2.01
+    },
+    {
+      "name": "Argus",
+      "winrateDelta": 1.98
+    },
+    {
+      "name": "Chou",
+      "winrateDelta": 1.77
+    },
+    {
+      "name": "Karrie",
+      "winrateDelta": 1.74
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lolita",
+      "winrateDelta": -6.24
+    },
+    {
+      "name": "Atlas",
+      "winrateDelta": -4.9
+    },
+    {
+      "name": "Minotaur",
+      "winrateDelta": -4.09
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -3.56
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": -3.15
+    }
+  ],
+  "metaScore": 44.13,
+  "metaRank": 2,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Aamon",
+        "advantage": 3.18
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.77
+      },
+      {
+        "name": "Argus",
+        "advantage": 2.73
+      },
+      {
+        "name": "Johnson",
+        "advantage": 2.58
+      },
+      {
+        "name": "Jawhead",
+        "advantage": 2.53
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 8.01
+      },
+      {
+        "name": "Ruby",
+        "advantage": 4.8
+      },
+      {
+        "name": "Alice",
+        "advantage": 4.52
+      },
+      {
+        "name": "Ling",
+        "advantage": 3.83
+      },
+      {
+        "name": "Moskov",
+        "advantage": 3.64
+      }
+    ]
+  }
 }

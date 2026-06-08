@@ -383,5 +383,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Azrya Woodlands",
-  "race": "Moon Elf"
+  "race": "Moon Elf",
+  "bestTeammates": [
+    {
+      "name": "Barats",
+      "winrateDelta": 4.7
+    },
+    {
+      "name": "Edith",
+      "winrateDelta": 4.32
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": 3.68
+    },
+    {
+      "name": "Minsitthar",
+      "winrateDelta": 2.52
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 2.37
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Floryn",
+      "winrateDelta": -28.04
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": -22.55
+    },
+    {
+      "name": "Rafaela",
+      "winrateDelta": -21.19
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -16.7
+    },
+    {
+      "name": "Minotaur",
+      "winrateDelta": -16.57
+    }
+  ],
+  "metaScore": 32.8,
+  "metaRank": 7,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Diggie",
+        "advantage": 6.56
+      },
+      {
+        "name": "Faramis",
+        "advantage": 4.65
+      },
+      {
+        "name": "Masha",
+        "advantage": 4.42
+      },
+      {
+        "name": "Alice",
+        "advantage": 3.49
+      },
+      {
+        "name": "Kaja",
+        "advantage": 3.31
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Ixia",
+        "advantage": 5.19
+      },
+      {
+        "name": "Atlas",
+        "advantage": 4.32
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 4.2
+      },
+      {
+        "name": "Nolan",
+        "advantage": 3.94
+      },
+      {
+        "name": "Yin",
+        "advantage": 3.77
+      }
+    ]
+  }
 }

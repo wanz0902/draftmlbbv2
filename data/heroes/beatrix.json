@@ -664,5 +664,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Harith",
+      "winrateDelta": 2.36
+    },
+    {
+      "name": "Ruby",
+      "winrateDelta": 2.05
+    },
+    {
+      "name": "Floryn",
+      "winrateDelta": 1.95
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": 1.85
+    },
+    {
+      "name": "Cyclops",
+      "winrateDelta": 1.72
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Bruno",
+      "winrateDelta": -11.11
+    },
+    {
+      "name": "Moskov",
+      "winrateDelta": -10.63
+    },
+    {
+      "name": "Layla",
+      "winrateDelta": -9.63
+    },
+    {
+      "name": "Claude",
+      "winrateDelta": -9.52
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": -9.49
+    }
+  ],
+  "metaScore": 16.96,
+  "metaRank": 64,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 4.2
+      },
+      {
+        "name": "Edith",
+        "advantage": 3.21
+      },
+      {
+        "name": "Hanabi",
+        "advantage": 3.19
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.63
+      },
+      {
+        "name": "Minotaur",
+        "advantage": 2.54
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 3.35
+      },
+      {
+        "name": "Moskov",
+        "advantage": 3.24
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.14
+      },
+      {
+        "name": "Cici",
+        "advantage": 2.92
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.73
+      }
+    ]
+  }
 }

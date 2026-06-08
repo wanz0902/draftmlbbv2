@@ -468,5 +468,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Northern Vale",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": 1.62
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": 1.55
+    },
+    {
+      "name": "Karrie",
+      "winrateDelta": 1.55
+    },
+    {
+      "name": "Kalea",
+      "winrateDelta": 1.24
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 1.24
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Xavier",
+      "winrateDelta": -6.58
+    },
+    {
+      "name": "Luo Yi",
+      "winrateDelta": -6.52
+    },
+    {
+      "name": "Vexana",
+      "winrateDelta": -6.07
+    },
+    {
+      "name": "Kagura",
+      "winrateDelta": -5.62
+    },
+    {
+      "name": "Cecilion",
+      "winrateDelta": -5.53
+    }
+  ],
+  "metaScore": 29.04,
+  "metaRank": 10,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.54
+      },
+      {
+        "name": "Barats",
+        "advantage": 3.93
+      },
+      {
+        "name": "Ruby",
+        "advantage": 3.06
+      },
+      {
+        "name": "Fredrinn",
+        "advantage": 2.56
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 2.17
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 3.79
+      },
+      {
+        "name": "Ling",
+        "advantage": 3.15
+      },
+      {
+        "name": "Joy",
+        "advantage": 3.13
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 2.4
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.21
+      }
+    ]
+  }
 }

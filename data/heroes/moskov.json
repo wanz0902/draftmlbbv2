@@ -405,5 +405,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Human (Corrupted)"
+  "race": "Human (Corrupted)",
+  "bestTeammates": [
+    {
+      "name": "Marcel",
+      "winrateDelta": 2.17
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": 2.14
+    },
+    {
+      "name": "Natalia",
+      "winrateDelta": 2.04
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 1.77
+    },
+    {
+      "name": "Grock",
+      "winrateDelta": 1.51
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Beatrix",
+      "winrateDelta": -10.63
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": -9.43
+    },
+    {
+      "name": "Clint",
+      "winrateDelta": -8.24
+    },
+    {
+      "name": "Layla",
+      "winrateDelta": -7.38
+    },
+    {
+      "name": "Hanabi",
+      "winrateDelta": -7.03
+    }
+  ],
+  "metaScore": 16.46,
+  "metaRank": 71,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Fanny",
+        "advantage": 3.69
+      },
+      {
+        "name": "Gloo",
+        "advantage": 3.64
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 3.26
+      },
+      {
+        "name": "Beatrix",
+        "advantage": 3.24
+      },
+      {
+        "name": "Joy",
+        "advantage": 3.15
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 4.6
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 2.14
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 1.53
+      },
+      {
+        "name": "Saber",
+        "advantage": 1.51
+      },
+      {
+        "name": "Edith",
+        "advantage": 1.48
+      }
+    ]
+  }
 }

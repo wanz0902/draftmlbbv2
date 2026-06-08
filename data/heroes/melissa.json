@@ -388,5 +388,99 @@
     }
   ],
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": 3.05
+    },
+    {
+      "name": "Esmeralda",
+      "winrateDelta": 2.03
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": 1.93
+    },
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": 1.9
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": 1.71
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Bruno",
+      "winrateDelta": -18.24
+    },
+    {
+      "name": "Karrie",
+      "winrateDelta": -10.54
+    },
+    {
+      "name": "Irithel",
+      "winrateDelta": -9.97
+    },
+    {
+      "name": "Hanabi",
+      "winrateDelta": -9.88
+    },
+    {
+      "name": "Ixia",
+      "winrateDelta": -8.98
+    }
+  ],
+  "metaScore": 19.14,
+  "metaRank": 44,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.1
+      },
+      {
+        "name": "Aldous",
+        "advantage": 2.88
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.69
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.27
+      },
+      {
+        "name": "Lunox",
+        "advantage": 2.25
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 2.07
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.02
+      },
+      {
+        "name": "Granger",
+        "advantage": 2
+      },
+      {
+        "name": "Belerick",
+        "advantage": 2
+      },
+      {
+        "name": "Cici",
+        "advantage": 1.9
+      }
+    ]
+  }
 }

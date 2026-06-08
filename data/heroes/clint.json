@@ -388,5 +388,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Agelta Drylands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Masha",
+      "winrateDelta": 3.32
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": 2.94
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": 2.71
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": 2.7
+    },
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": 2.46
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Irithel",
+      "winrateDelta": -13.77
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": -9.77
+    },
+    {
+      "name": "Claude",
+      "winrateDelta": -9.44
+    },
+    {
+      "name": "Moskov",
+      "winrateDelta": -8.24
+    },
+    {
+      "name": "Hanabi",
+      "winrateDelta": -7.6
+    }
+  ],
+  "metaScore": 16.94,
+  "metaRank": 65,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.65
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.95
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.52
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.24
+      },
+      {
+        "name": "Karina",
+        "advantage": 2.11
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Fanny",
+        "advantage": 1.93
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 1.93
+      },
+      {
+        "name": "Layla",
+        "advantage": 1.85
+      },
+      {
+        "name": "Gloo",
+        "advantage": 1.76
+      },
+      {
+        "name": "Ling",
+        "advantage": 1.57
+      }
+    ]
+  }
 }

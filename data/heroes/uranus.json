@@ -399,5 +399,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Vonetis Sea",
-  "race": "Aethereal"
+  "race": "Aethereal",
+  "bestTeammates": [
+    {
+      "name": "Angela",
+      "winrateDelta": 5.17
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 3.05
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": 2.14
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 2.06
+    },
+    {
+      "name": "Natalia",
+      "winrateDelta": 1.53
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Terizla",
+      "winrateDelta": -4.87
+    },
+    {
+      "name": "Benedetta",
+      "winrateDelta": -3.67
+    },
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": -3.62
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": -3.54
+    },
+    {
+      "name": "Minotaur",
+      "winrateDelta": -3.34
+    }
+  ],
+  "metaScore": 17.15,
+  "metaRank": 62,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 5.17
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 4.34
+      },
+      {
+        "name": "Faramis",
+        "advantage": 3.5
+      },
+      {
+        "name": "Argus",
+        "advantage": 3.29
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.85
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Karrie",
+        "advantage": 4.18
+      },
+      {
+        "name": "Angela",
+        "advantage": 3.39
+      },
+      {
+        "name": "Dyrroth",
+        "advantage": 3.31
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.65
+      },
+      {
+        "name": "Xavier",
+        "advantage": 2.61
+      }
+    ]
+  }
 }

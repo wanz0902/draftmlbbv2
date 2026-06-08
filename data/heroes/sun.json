@@ -379,5 +379,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Cadia Riverlands",
-  "race": "Mountain Spirit"
+  "race": "Mountain Spirit",
+  "bestTeammates": [
+    {
+      "name": "Cici",
+      "winrateDelta": 2.72
+    },
+    {
+      "name": "X.Borg",
+      "winrateDelta": 2.43
+    },
+    {
+      "name": "Phoveus",
+      "winrateDelta": 2.16
+    },
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": 1.92
+    },
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": 1.8
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Mathilda",
+      "winrateDelta": -3.15
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": -2.64
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -2.45
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": -2.3
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": -2.26
+    }
+  ],
+  "metaScore": 37.18,
+  "metaRank": 3,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Cici",
+        "advantage": 3.82
+      },
+      {
+        "name": "Masha",
+        "advantage": 3.82
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 3.46
+      },
+      {
+        "name": "Karrie",
+        "advantage": 3.43
+      },
+      {
+        "name": "Jawhead",
+        "advantage": 3.35
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Ruby",
+        "advantage": 4.4
+      },
+      {
+        "name": "Joy",
+        "advantage": 3.83
+      },
+      {
+        "name": "Aldous",
+        "advantage": 3.74
+      },
+      {
+        "name": "Alucard",
+        "advantage": 3.56
+      },
+      {
+        "name": "Natan",
+        "advantage": 3.09
+      }
+    ]
+  }
 }

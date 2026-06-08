@@ -414,5 +414,99 @@
     }
   ],
   "region": "Vonetis Sea",
-  "race": "Nazar"
+  "race": "Nazar",
+  "bestTeammates": [
+    {
+      "name": "Joy",
+      "winrateDelta": 5.51
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 5.46
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 4.29
+    },
+    {
+      "name": "Lukas",
+      "winrateDelta": 3.83
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 3.4
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": -17.47
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -13.69
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": -7.61
+    },
+    {
+      "name": "Carmilla",
+      "winrateDelta": -6.33
+    },
+    {
+      "name": "Johnson",
+      "winrateDelta": -6.16
+    }
+  ],
+  "metaScore": 23.75,
+  "metaRank": 21,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 5.84
+      },
+      {
+        "name": "Chip",
+        "advantage": 5.24
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 3.53
+      },
+      {
+        "name": "Akai",
+        "advantage": 2.97
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.66
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Luo Yi",
+        "advantage": 6.58
+      },
+      {
+        "name": "Brody",
+        "advantage": 4.95
+      },
+      {
+        "name": "Estes",
+        "advantage": 3.31
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 3.19
+      },
+      {
+        "name": "Cecilion",
+        "advantage": 3.13
+      }
+    ]
+  }
 }

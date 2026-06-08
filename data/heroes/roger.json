@@ -397,5 +397,99 @@
     }
   ],
   "region": "Moniyan Empire",
-  "race": "Werewolf, formerly Human"
+  "race": "Werewolf, formerly Human",
+  "bestTeammates": [
+    {
+      "name": "Wanwan",
+      "winrateDelta": 3.84
+    },
+    {
+      "name": "Bruno",
+      "winrateDelta": 3.35
+    },
+    {
+      "name": "Clint",
+      "winrateDelta": 2.71
+    },
+    {
+      "name": "Lesley",
+      "winrateDelta": 2.38
+    },
+    {
+      "name": "Floryn",
+      "winrateDelta": 2.22
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Hanzo",
+      "winrateDelta": -10.62
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": -9.52
+    },
+    {
+      "name": "Hayabusa",
+      "winrateDelta": -9.3
+    },
+    {
+      "name": "Karina",
+      "winrateDelta": -8.06
+    },
+    {
+      "name": "Lancelot",
+      "winrateDelta": -7.94
+    }
+  ],
+  "metaScore": 12.16,
+  "metaRank": 102,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 2.99
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.29
+      },
+      {
+        "name": "Brody",
+        "advantage": 2.03
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 1.87
+      },
+      {
+        "name": "Gusion",
+        "advantage": 1.67
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Zilong",
+        "advantage": 2.01
+      },
+      {
+        "name": "Uranus",
+        "advantage": 1.95
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 1.83
+      },
+      {
+        "name": "Chip",
+        "advantage": 1.79
+      },
+      {
+        "name": "Lukas",
+        "advantage": 1.68
+      }
+    ]
+  }
 }

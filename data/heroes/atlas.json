@@ -407,5 +407,99 @@
     }
   ],
   "region": "Northern Vale",
-  "race": "Abysmal Sea creature"
+  "race": "Abysmal Sea creature",
+  "bestTeammates": [
+    {
+      "name": "Khufra",
+      "winrateDelta": 4.46
+    },
+    {
+      "name": "Natan",
+      "winrateDelta": 2.48
+    },
+    {
+      "name": "Bane",
+      "winrateDelta": 2.25
+    },
+    {
+      "name": "Luo Yi",
+      "winrateDelta": 1.98
+    },
+    {
+      "name": "Julian",
+      "winrateDelta": 1.63
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Marcel",
+      "winrateDelta": -25.56
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -16.93
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": -16.16
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": -16.08
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": -14.66
+    }
+  ],
+  "metaScore": 19.73,
+  "metaRank": 38,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 4.32
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 4.06
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 3.87
+      },
+      {
+        "name": "Lolita",
+        "advantage": 3.83
+      },
+      {
+        "name": "Khufra",
+        "advantage": 3.62
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 6.31
+      },
+      {
+        "name": "Diggie",
+        "advantage": 5.89
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 4.06
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 3.86
+      },
+      {
+        "name": "Lancelot",
+        "advantage": 3.52
+      }
+    ]
+  }
 }

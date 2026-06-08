@@ -496,5 +496,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Lunox",
+      "winrateDelta": 2.81
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 2.24
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": 1.85
+    },
+    {
+      "name": "Zhuxin",
+      "winrateDelta": 1.8
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 1.61
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": -13.43
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -4.8
+    },
+    {
+      "name": "Chang'e",
+      "winrateDelta": -4.64
+    },
+    {
+      "name": "Vale",
+      "winrateDelta": -4.61
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": -4.55
+    }
+  ],
+  "metaScore": 17.95,
+  "metaRank": 56,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 3.65
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.92
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.76
+      },
+      {
+        "name": "Aamon",
+        "advantage": 2.63
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.35
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 3.53
+      },
+      {
+        "name": "Gatotkaca",
+        "advantage": 2.45
+      },
+      {
+        "name": "Bane",
+        "advantage": 2.23
+      },
+      {
+        "name": "Fredrinn",
+        "advantage": 2.14
+      },
+      {
+        "name": "Nana",
+        "advantage": 2.05
+      }
+    ]
+  }
 }

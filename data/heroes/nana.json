@@ -468,5 +468,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Azrya Woodlands",
-  "race": "Leonin"
+  "race": "Leonin",
+  "bestTeammates": [
+    {
+      "name": "Harley",
+      "winrateDelta": 1.34
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": 1.15
+    },
+    {
+      "name": "Alucard",
+      "winrateDelta": 1.04
+    },
+    {
+      "name": "Rafaela",
+      "winrateDelta": 0.94
+    },
+    {
+      "name": "Julian",
+      "winrateDelta": 0.89
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": -5.7
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": -4.14
+    },
+    {
+      "name": "Lylia",
+      "winrateDelta": -3.69
+    },
+    {
+      "name": "Luo Yi",
+      "winrateDelta": -3.57
+    },
+    {
+      "name": "Kagura",
+      "winrateDelta": -3.49
+    }
+  ],
+  "metaScore": 17.03,
+  "metaRank": 63,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Odette",
+        "advantage": 2.05
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 1.6
+      },
+      {
+        "name": "Lolita",
+        "advantage": 1.57
+      },
+      {
+        "name": "Estes",
+        "advantage": 1.55
+      },
+      {
+        "name": "Melissa",
+        "advantage": 1.34
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 2.38
+      },
+      {
+        "name": "Hylos",
+        "advantage": 1.75
+      },
+      {
+        "name": "Gloo",
+        "advantage": 1.37
+      },
+      {
+        "name": "Yi Sun-shin",
+        "advantage": 1.17
+      },
+      {
+        "name": "Atlas",
+        "advantage": 1.15
+      }
+    ]
+  }
 }

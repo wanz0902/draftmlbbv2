@@ -375,5 +375,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": 1.93
+    },
+    {
+      "name": "Zhuxin",
+      "winrateDelta": 1.64
+    },
+    {
+      "name": "Atlas",
+      "winrateDelta": 1.63
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": 1.51
+    },
+    {
+      "name": "Khaleed",
+      "winrateDelta": 1.49
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Roger",
+      "winrateDelta": -2.29
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": -2.11
+    },
+    {
+      "name": "Natan",
+      "winrateDelta": -2.1
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": -1.99
+    },
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": -1.66
+    }
+  ],
+  "metaScore": 18.07,
+  "metaRank": 52,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 3.24
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.12
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.1
+      },
+      {
+        "name": "Sun",
+        "advantage": 2
+      },
+      {
+        "name": "Alice",
+        "advantage": 1.77
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 2.45
+      },
+      {
+        "name": "Baxia",
+        "advantage": 1.78
+      },
+      {
+        "name": "Guinevere",
+        "advantage": 1.75
+      },
+      {
+        "name": "Khufra",
+        "advantage": 1.53
+      },
+      {
+        "name": "Granger",
+        "advantage": 1.52
+      }
+    ]
+  }
 }

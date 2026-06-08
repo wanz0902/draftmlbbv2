@@ -510,5 +510,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Northern Vale",
-  "race": "Half-Man, Half-Octopus"
+  "race": "Half-Man, Half-Octopus",
+  "bestTeammates": [
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": 2.88
+    },
+    {
+      "name": "Kaja",
+      "winrateDelta": 2.8
+    },
+    {
+      "name": "Benedetta",
+      "winrateDelta": 2.66
+    },
+    {
+      "name": "Atlas",
+      "winrateDelta": 2.25
+    },
+    {
+      "name": "Kalea",
+      "winrateDelta": 2.09
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Joy",
+      "winrateDelta": -4.8
+    },
+    {
+      "name": "Yi Sun-shin",
+      "winrateDelta": -3.68
+    },
+    {
+      "name": "Lancelot",
+      "winrateDelta": -3.04
+    },
+    {
+      "name": "Aamon",
+      "winrateDelta": -2.95
+    },
+    {
+      "name": "Fredrinn",
+      "winrateDelta": -2.9
+    }
+  ],
+  "metaScore": 17.58,
+  "metaRank": 59,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 5.16
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 3.21
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.23
+      },
+      {
+        "name": "Masha",
+        "advantage": 2.07
+      },
+      {
+        "name": "Hylos",
+        "advantage": 1.85
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Chip",
+        "advantage": 3.83
+      },
+      {
+        "name": "Yin",
+        "advantage": 2.27
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2.19
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.18
+      },
+      {
+        "name": "Atlas",
+        "advantage": 2.1
+      }
+    ]
+  }
 }

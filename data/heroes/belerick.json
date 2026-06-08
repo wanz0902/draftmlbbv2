@@ -409,5 +409,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Agelta Drylands",
-  "race": "Anthropomorphic plant"
+  "race": "Anthropomorphic plant",
+  "bestTeammates": [
+    {
+      "name": "Faramis",
+      "winrateDelta": 2.97
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 2.52
+    },
+    {
+      "name": "Edith",
+      "winrateDelta": 1.86
+    },
+    {
+      "name": "Minsitthar",
+      "winrateDelta": 1.45
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": 1.42
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Khufra",
+      "winrateDelta": -9.65
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": -7.64
+    },
+    {
+      "name": "Minotaur",
+      "winrateDelta": -7.39
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -6.67
+    },
+    {
+      "name": "Grock",
+      "winrateDelta": -6.48
+    }
+  ],
+  "metaScore": 27.52,
+  "metaRank": 13,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Miya",
+        "advantage": 3.1
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.47
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.1
+      },
+      {
+        "name": "Melissa",
+        "advantage": 2
+      },
+      {
+        "name": "Kimmy",
+        "advantage": 1.91
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 3.15
+      },
+      {
+        "name": "Lesley",
+        "advantage": 3.14
+      },
+      {
+        "name": "Marcel",
+        "advantage": 3.11
+      },
+      {
+        "name": "Brody",
+        "advantage": 2.93
+      },
+      {
+        "name": "Estes",
+        "advantage": 2.76
+      }
+    ]
+  }
 }

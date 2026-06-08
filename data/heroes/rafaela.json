@@ -372,5 +372,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Moniyan Empire",
-  "race": "Light Angel"
+  "race": "Light Angel",
+  "bestTeammates": [
+    {
+      "name": "Akai",
+      "winrateDelta": 3.97
+    },
+    {
+      "name": "Minsitthar",
+      "winrateDelta": 3.09
+    },
+    {
+      "name": "Jawhead",
+      "winrateDelta": 2.79
+    },
+    {
+      "name": "Hylos",
+      "winrateDelta": 2.76
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": 2.58
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Floryn",
+      "winrateDelta": -26.35
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -21.45
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": -21.19
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": -18.78
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -14.25
+    }
+  ],
+  "metaScore": 18.25,
+  "metaRank": 49,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 3.57
+      },
+      {
+        "name": "Karrie",
+        "advantage": 3.17
+      },
+      {
+        "name": "Marcel",
+        "advantage": 2.96
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.83
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.67
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Ixia",
+        "advantage": 3.74
+      },
+      {
+        "name": "Nolan",
+        "advantage": 2.84
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.3
+      },
+      {
+        "name": "Sora",
+        "advantage": 2.08
+      },
+      {
+        "name": "Vale",
+        "advantage": 2.01
+      }
+    ]
+  }
 }

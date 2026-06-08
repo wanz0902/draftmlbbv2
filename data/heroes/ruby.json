@@ -404,5 +404,99 @@
     }
   ],
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Faramis",
+      "winrateDelta": 5.3
+    },
+    {
+      "name": "Baxia",
+      "winrateDelta": 3.16
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 2.5
+    },
+    {
+      "name": "Lunox",
+      "winrateDelta": 2.19
+    },
+    {
+      "name": "Beatrix",
+      "winrateDelta": 2.05
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Aldous",
+      "winrateDelta": -6.04
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": -5.32
+    },
+    {
+      "name": "Argus",
+      "winrateDelta": -5.01
+    },
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": -4.21
+    },
+    {
+      "name": "Edith",
+      "winrateDelta": -4.17
+    }
+  ],
+  "metaScore": 16.57,
+  "metaRank": 70,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 4.8
+      },
+      {
+        "name": "Sun",
+        "advantage": 4.4
+      },
+      {
+        "name": "Masha",
+        "advantage": 3.83
+      },
+      {
+        "name": "Faramis",
+        "advantage": 3.49
+      },
+      {
+        "name": "Kaja",
+        "advantage": 2.49
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "X.Borg",
+        "advantage": 3.95
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 3.58
+      },
+      {
+        "name": "Gord",
+        "advantage": 3.06
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.67
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2.46
+      }
+    ]
+  }
 }

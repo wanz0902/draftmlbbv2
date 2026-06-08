@@ -491,5 +491,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Northern Vale",
-  "race": "Extraterrestrial"
+  "race": "Extraterrestrial",
+  "bestTeammates": [
+    {
+      "name": "Zhuxin",
+      "winrateDelta": 14.39
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 9.68
+    },
+    {
+      "name": "Lunox",
+      "winrateDelta": 8.43
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 7.08
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": 5.75
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Aurora",
+      "winrateDelta": -18.06
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": -15.89
+    },
+    {
+      "name": "Vexana",
+      "winrateDelta": -14.26
+    },
+    {
+      "name": "Odette",
+      "winrateDelta": -13.43
+    },
+    {
+      "name": "Cecilion",
+      "winrateDelta": -8.89
+    }
+  ],
+  "metaScore": 15.55,
+  "metaRank": 81,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 7.44
+      },
+      {
+        "name": "Arlott",
+        "advantage": 6.28
+      },
+      {
+        "name": "Lapu-Lapu",
+        "advantage": 5.07
+      },
+      {
+        "name": "Barats",
+        "advantage": 4.99
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 4.78
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natan",
+        "advantage": 6.83
+      },
+      {
+        "name": "Nolan",
+        "advantage": 6.23
+      },
+      {
+        "name": "Aldous",
+        "advantage": 3.74
+      },
+      {
+        "name": "Kadita",
+        "advantage": 3.53
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 3.1
+      }
+    ]
+  }
 }

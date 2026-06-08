@@ -430,5 +430,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Azrya Woodlands",
-  "race": "Leonin"
+  "race": "Leonin",
+  "bestTeammates": [
+    {
+      "name": "Chip",
+      "winrateDelta": 7.29
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 6.04
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": 5.72
+    },
+    {
+      "name": "Kaja",
+      "winrateDelta": 5.51
+    },
+    {
+      "name": "Barats",
+      "winrateDelta": 4.82
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Bane",
+      "winrateDelta": -4.8
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": -3.52
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": -3.28
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": -3.17
+    },
+    {
+      "name": "Rafaela",
+      "winrateDelta": -2.95
+    }
+  ],
+  "metaScore": 11.66,
+  "metaRank": 106,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 6.75
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 4.17
+      },
+      {
+        "name": "Sun",
+        "advantage": 3.83
+      },
+      {
+        "name": "Gloo",
+        "advantage": 3.34
+      },
+      {
+        "name": "Gord",
+        "advantage": 3.13
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 5.71
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 4.53
+      },
+      {
+        "name": "Brody",
+        "advantage": 4.3
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 4.26
+      },
+      {
+        "name": "Diggie",
+        "advantage": 4
+      }
+    ]
+  }
 }

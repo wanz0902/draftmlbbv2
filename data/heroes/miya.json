@@ -460,5 +460,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Azrya Woodlands",
-  "race": "Moon Elf"
+  "race": "Moon Elf",
+  "bestTeammates": [
+    {
+      "name": "Harith",
+      "winrateDelta": 1.91
+    },
+    {
+      "name": "Gloo",
+      "winrateDelta": 1.42
+    },
+    {
+      "name": "Yin",
+      "winrateDelta": 0.9
+    },
+    {
+      "name": "Kadita",
+      "winrateDelta": 0.89
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": 0.84
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Irithel",
+      "winrateDelta": -6.94
+    },
+    {
+      "name": "Hanabi",
+      "winrateDelta": -5.6
+    },
+    {
+      "name": "Melissa",
+      "winrateDelta": -5.6
+    },
+    {
+      "name": "Karrie",
+      "winrateDelta": -5.53
+    },
+    {
+      "name": "Moskov",
+      "winrateDelta": -5.38
+    }
+  ],
+  "metaScore": 27.05,
+  "metaRank": 14,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Saber",
+        "advantage": 2.44
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.18
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.02
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 1.72
+      },
+      {
+        "name": "Hayabusa",
+        "advantage": 1.68
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Belerick",
+        "advantage": 3.1
+      },
+      {
+        "name": "Chip",
+        "advantage": 1.95
+      },
+      {
+        "name": "Gatotkaca",
+        "advantage": 1.78
+      },
+      {
+        "name": "Barats",
+        "advantage": 1.7
+      },
+      {
+        "name": "Lolita",
+        "advantage": 1.58
+      }
+    ]
+  }
 }

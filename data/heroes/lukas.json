@@ -622,5 +622,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Moniyan Empire",
-  "race": "Sacred Beast"
+  "race": "Sacred Beast",
+  "bestTeammates": [
+    {
+      "name": "Mathilda",
+      "winrateDelta": 5.84
+    },
+    {
+      "name": "Kaja",
+      "winrateDelta": 3.83
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 3.07
+    },
+    {
+      "name": "X.Borg",
+      "winrateDelta": 2.77
+    },
+    {
+      "name": "Luo Yi",
+      "winrateDelta": 2.64
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Barats",
+      "winrateDelta": -4.5
+    },
+    {
+      "name": "Nolan",
+      "winrateDelta": -3.54
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": -3.51
+    },
+    {
+      "name": "Yi Sun-shin",
+      "winrateDelta": -2.39
+    },
+    {
+      "name": "Terizla",
+      "winrateDelta": -2.36
+    }
+  ],
+  "metaScore": 15.59,
+  "metaRank": 80,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 4.82
+      },
+      {
+        "name": "Faramis",
+        "advantage": 4.45
+      },
+      {
+        "name": "Arlott",
+        "advantage": 3.73
+      },
+      {
+        "name": "Natalia",
+        "advantage": 2.59
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.48
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 4.93
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 2.85
+      },
+      {
+        "name": "Minsitthar",
+        "advantage": 2.62
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.33
+      },
+      {
+        "name": "Gatotkaca",
+        "advantage": 2
+      }
+    ]
+  }
 }

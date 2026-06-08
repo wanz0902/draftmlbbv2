@@ -448,5 +448,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Luo Yi",
+      "winrateDelta": 9.77
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": 7.63
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": 6.04
+    },
+    {
+      "name": "Lunox",
+      "winrateDelta": 5.88
+    },
+    {
+      "name": "Aurora",
+      "winrateDelta": 4
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Zhuxin",
+      "winrateDelta": -6.86
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": -6.5
+    },
+    {
+      "name": "Eudora",
+      "winrateDelta": -5.76
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": -4.86
+    },
+    {
+      "name": "Zhask",
+      "winrateDelta": -4.79
+    }
+  ],
+  "metaScore": 2.16,
+  "metaRank": 131,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 6.1
+      },
+      {
+        "name": "Khufra",
+        "advantage": 5.09
+      },
+      {
+        "name": "Lolita",
+        "advantage": 5.06
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 3.8
+      },
+      {
+        "name": "Minotaur",
+        "advantage": 3.78
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Bruno",
+        "advantage": 4.92
+      },
+      {
+        "name": "Baxia",
+        "advantage": 4.73
+      },
+      {
+        "name": "Marcel",
+        "advantage": 4.71
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 4.11
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 3.97
+      }
+    ]
+  }
 }

@@ -490,5 +490,99 @@
     }
   ],
   "region": "Agelta Drylands",
-  "race": "Half-Human, Half-Star"
+  "race": "Half-Human, Half-Star",
+  "bestTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": 5.52
+    },
+    {
+      "name": "Lunox",
+      "winrateDelta": 4.71
+    },
+    {
+      "name": "Eudora",
+      "winrateDelta": 2.26
+    },
+    {
+      "name": "Aurora",
+      "winrateDelta": 2.18
+    },
+    {
+      "name": "Alice",
+      "winrateDelta": 2.01
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Luo Yi",
+      "winrateDelta": -3.51
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": -2.18
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -1.91
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -1.71
+    },
+    {
+      "name": "Marcel",
+      "winrateDelta": -1.53
+    }
+  ],
+  "metaScore": 11.06,
+  "metaRank": 111,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 2.12
+      },
+      {
+        "name": "Tigreal",
+        "advantage": 1.97
+      },
+      {
+        "name": "Diggie",
+        "advantage": 1.97
+      },
+      {
+        "name": "Chip",
+        "advantage": 1.88
+      },
+      {
+        "name": "Bane",
+        "advantage": 1.86
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 3.27
+      },
+      {
+        "name": "Aldous",
+        "advantage": 2.43
+      },
+      {
+        "name": "Lunox",
+        "advantage": 2.37
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 2.29
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.16
+      }
+    ]
+  }
 }

@@ -404,5 +404,99 @@
     }
   ],
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "X.Borg",
+      "winrateDelta": 1.93
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": 1.89
+    },
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": 1.8
+    },
+    {
+      "name": "Sora",
+      "winrateDelta": 1.71
+    },
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": 1.54
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Silvanna",
+      "winrateDelta": -1.65
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": -1.32
+    },
+    {
+      "name": "Natan",
+      "winrateDelta": -1.2
+    },
+    {
+      "name": "Aamon",
+      "winrateDelta": -1.2
+    },
+    {
+      "name": "Gusion",
+      "winrateDelta": -1.12
+    }
+  ],
+  "metaScore": 27.72,
+  "metaRank": 12,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Bruno",
+        "advantage": 2.4
+      },
+      {
+        "name": "Thamuz",
+        "advantage": 2.27
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2
+      },
+      {
+        "name": "Karrie",
+        "advantage": 1.88
+      },
+      {
+        "name": "Estes",
+        "advantage": 1.79
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Masha",
+        "advantage": 3.6
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.83
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.29
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.26
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.12
+      }
+    ]
+  }
 }

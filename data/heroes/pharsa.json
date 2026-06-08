@@ -466,5 +466,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "The Barren Lands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Wanwan",
+      "winrateDelta": 1.94
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": 1.89
+    },
+    {
+      "name": "Thamuz",
+      "winrateDelta": 1.55
+    },
+    {
+      "name": "Kaja",
+      "winrateDelta": 1.54
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": 1.5
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": -6.35
+    },
+    {
+      "name": "Lylia",
+      "winrateDelta": -6.21
+    },
+    {
+      "name": "Vexana",
+      "winrateDelta": -5.34
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -5.03
+    },
+    {
+      "name": "Chang'e",
+      "winrateDelta": -4.97
+    }
+  ],
+  "metaScore": 11.4,
+  "metaRank": 109,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 3.83
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.84
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 1.82
+      },
+      {
+        "name": "Valir",
+        "advantage": 1.76
+      },
+      {
+        "name": "Aurora",
+        "advantage": 1.48
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Mathilda",
+        "advantage": 4.54
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.35
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 1.79
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 1.78
+      },
+      {
+        "name": "Natalia",
+        "advantage": 1.62
+      }
+    ]
+  }
 }

@@ -380,5 +380,99 @@
     }
   ],
   "region": "Northern Vale",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Lesley",
+      "winrateDelta": 4.38
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 3.45
+    },
+    {
+      "name": "Brody",
+      "winrateDelta": 3.29
+    },
+    {
+      "name": "Granger",
+      "winrateDelta": 3.08
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": 2.9
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Hanzo",
+      "winrateDelta": -4.03
+    },
+    {
+      "name": "Fredrinn",
+      "winrateDelta": -3.54
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": -3.53
+    },
+    {
+      "name": "Hayabusa",
+      "winrateDelta": -3.44
+    },
+    {
+      "name": "Aamon",
+      "winrateDelta": -3.12
+    }
+  ],
+  "metaScore": 19.44,
+  "metaRank": 39,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Wanwan",
+        "advantage": 4.92
+      },
+      {
+        "name": "Masha",
+        "advantage": 4.37
+      },
+      {
+        "name": "Valentina",
+        "advantage": 4.11
+      },
+      {
+        "name": "Harith",
+        "advantage": 3.36
+      },
+      {
+        "name": "Claude",
+        "advantage": 2.72
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Atlas",
+        "advantage": 3.87
+      },
+      {
+        "name": "Sun",
+        "advantage": 3.46
+      },
+      {
+        "name": "Alice",
+        "advantage": 2.94
+      },
+      {
+        "name": "Carmilla",
+        "advantage": 2.87
+      },
+      {
+        "name": "Grock",
+        "advantage": 2.86
+      }
+    ]
+  }
 }

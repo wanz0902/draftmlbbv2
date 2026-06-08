@@ -484,5 +484,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "The Barren Lands",
-  "race": "Undead"
+  "race": "Undead",
+  "bestTeammates": [
+    {
+      "name": "Atlas",
+      "winrateDelta": 1.54
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": 1.39
+    },
+    {
+      "name": "Sun",
+      "winrateDelta": 1.05
+    },
+    {
+      "name": "Aldous",
+      "winrateDelta": 0.92
+    },
+    {
+      "name": "Bruno",
+      "winrateDelta": 0.84
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": -14.26
+    },
+    {
+      "name": "Luo Yi",
+      "winrateDelta": -8.75
+    },
+    {
+      "name": "Gord",
+      "winrateDelta": -6.07
+    },
+    {
+      "name": "Pharsa",
+      "winrateDelta": -5.34
+    },
+    {
+      "name": "Xavier",
+      "winrateDelta": -5.2
+    }
+  ],
+  "metaScore": 22.06,
+  "metaRank": 29,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Chip",
+        "advantage": 2.83
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.42
+      },
+      {
+        "name": "Zhask",
+        "advantage": 1.79
+      },
+      {
+        "name": "Sun",
+        "advantage": 1.26
+      },
+      {
+        "name": "Edith",
+        "advantage": 1.25
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Alice",
+        "advantage": 1.97
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 1.75
+      },
+      {
+        "name": "Natalia",
+        "advantage": 1.61
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 1.57
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 1.25
+      }
+    ]
+  }
 }

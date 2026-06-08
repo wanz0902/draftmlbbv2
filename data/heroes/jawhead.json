@@ -375,5 +375,99 @@
     }
   ],
   "region": "Eruditio",
-  "race": "Robot"
+  "race": "Robot",
+  "bestTeammates": [
+    {
+      "name": "Rafaela",
+      "winrateDelta": 2.79
+    },
+    {
+      "name": "Edith",
+      "winrateDelta": 1.81
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 1.78
+    },
+    {
+      "name": "Minotaur",
+      "winrateDelta": 1.77
+    },
+    {
+      "name": "Chang'e",
+      "winrateDelta": 1.73
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Masha",
+      "winrateDelta": -3.31
+    },
+    {
+      "name": "Nolan",
+      "winrateDelta": -2.53
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -1.7
+    },
+    {
+      "name": "Alpha",
+      "winrateDelta": -1.65
+    },
+    {
+      "name": "Suyou",
+      "winrateDelta": -1.43
+    }
+  ],
+  "metaScore": 10.86,
+  "metaRank": 115,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Mathilda",
+        "advantage": 3.49
+      },
+      {
+        "name": "Bruno",
+        "advantage": 2.13
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 2.06
+      },
+      {
+        "name": "Natalia",
+        "advantage": 1.83
+      },
+      {
+        "name": "Helcurt",
+        "advantage": 1.62
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Sun",
+        "advantage": 3.35
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.53
+      },
+      {
+        "name": "Zhask",
+        "advantage": 2.07
+      },
+      {
+        "name": "Baxia",
+        "advantage": 2.04
+      },
+      {
+        "name": "Esmeralda",
+        "advantage": 1.99
+      }
+    ]
+  }
 }

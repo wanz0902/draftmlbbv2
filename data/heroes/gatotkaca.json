@@ -414,5 +414,99 @@
     }
   ],
   "difficultyLabel": "Easy",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Angela",
+      "winrateDelta": 1.8
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": 1.67
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": 1.45
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": 1.42
+    },
+    {
+      "name": "Silvanna",
+      "winrateDelta": 1.33
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lolita",
+      "winrateDelta": -4.34
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": -3.61
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -3.34
+    },
+    {
+      "name": "Grock",
+      "winrateDelta": -3.34
+    },
+    {
+      "name": "Kaja",
+      "winrateDelta": -2.71
+    }
+  ],
+  "metaScore": 10.68,
+  "metaRank": 116,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Barats",
+        "advantage": 2.74
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.45
+      },
+      {
+        "name": "Atlas",
+        "advantage": 2.21
+      },
+      {
+        "name": "Lukas",
+        "advantage": 2
+      },
+      {
+        "name": "Zilong",
+        "advantage": 1.87
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 3.64
+      },
+      {
+        "name": "Mathilda",
+        "advantage": 3.06
+      },
+      {
+        "name": "Lesley",
+        "advantage": 2.88
+      },
+      {
+        "name": "Aldous",
+        "advantage": 2.72
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.05
+      }
+    ]
+  }
 }

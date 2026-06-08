@@ -455,5 +455,99 @@
     }
   ],
   "region": "Abyss",
-  "race": "Dark Elf"
+  "race": "Dark Elf",
+  "bestTeammates": [
+    {
+      "name": "Zhuxin",
+      "winrateDelta": 1.51
+    },
+    {
+      "name": "Zhask",
+      "winrateDelta": 1.46
+    },
+    {
+      "name": "Sora",
+      "winrateDelta": 1.4
+    },
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": 1.06
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 1.05
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Bruno",
+      "winrateDelta": -11.59
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": -10.7
+    },
+    {
+      "name": "Melissa",
+      "winrateDelta": -8.05
+    },
+    {
+      "name": "Karrie",
+      "winrateDelta": -7.95
+    },
+    {
+      "name": "Claude",
+      "winrateDelta": -5.94
+    }
+  ],
+  "metaScore": 16.12,
+  "metaRank": 76,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Benedetta",
+        "advantage": 3.61
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 2.77
+      },
+      {
+        "name": "Ixia",
+        "advantage": 2.73
+      },
+      {
+        "name": "Yve",
+        "advantage": 2.62
+      },
+      {
+        "name": "Granger",
+        "advantage": 2.22
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 2.97
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.96
+      },
+      {
+        "name": "Belerick",
+        "advantage": 2.47
+      },
+      {
+        "name": "Uranus",
+        "advantage": 2.46
+      },
+      {
+        "name": "Estes",
+        "advantage": 2.08
+      }
+    ]
+  }
 }

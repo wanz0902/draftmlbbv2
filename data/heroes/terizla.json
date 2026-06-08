@@ -414,5 +414,99 @@
   ],
   "difficultyLabel": "Easy",
   "region": "Abyss",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Angela",
+      "winrateDelta": 3.28
+    },
+    {
+      "name": "Rafaela",
+      "winrateDelta": 2.21
+    },
+    {
+      "name": "Valentina",
+      "winrateDelta": 2.19
+    },
+    {
+      "name": "Floryn",
+      "winrateDelta": 2.11
+    },
+    {
+      "name": "Natalia",
+      "winrateDelta": 2.03
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": -6.08
+    },
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": -5.87
+    },
+    {
+      "name": "Phoveus",
+      "winrateDelta": -5.81
+    },
+    {
+      "name": "Masha",
+      "winrateDelta": -5.3
+    },
+    {
+      "name": "Uranus",
+      "winrateDelta": -4.87
+    }
+  ],
+  "metaScore": 19.77,
+  "metaRank": 37,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Argus",
+        "advantage": 3.11
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.96
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.8
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.44
+      },
+      {
+        "name": "Khufra",
+        "advantage": 2.13
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "X.Borg",
+        "advantage": 5.18
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.84
+      },
+      {
+        "name": "Joy",
+        "advantage": 2.47
+      },
+      {
+        "name": "Marcel",
+        "advantage": 2.38
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.37
+      }
+    ]
+  }
 }

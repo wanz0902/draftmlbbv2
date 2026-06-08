@@ -475,5 +475,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Lunox",
+      "winrateDelta": 1.85
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 1.75
+    },
+    {
+      "name": "Cyclops",
+      "winrateDelta": 1.68
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 1.5
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 1.48
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Hayabusa",
+      "winrateDelta": -4.41
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": -4.11
+    },
+    {
+      "name": "Aamon",
+      "winrateDelta": -3.77
+    },
+    {
+      "name": "Fanny",
+      "winrateDelta": -3.44
+    },
+    {
+      "name": "Karina",
+      "winrateDelta": -3.39
+    }
+  ],
+  "metaScore": 20.1,
+  "metaRank": 36,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 3.05
+      },
+      {
+        "name": "Valir",
+        "advantage": 1.95
+      },
+      {
+        "name": "Suyou",
+        "advantage": 1.74
+      },
+      {
+        "name": "Luo Yi",
+        "advantage": 1.68
+      },
+      {
+        "name": "Aamon",
+        "advantage": 1.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Lolita",
+        "advantage": 2.43
+      },
+      {
+        "name": "Eudora",
+        "advantage": 2.21
+      },
+      {
+        "name": "Roger",
+        "advantage": 1.67
+      },
+      {
+        "name": "Chip",
+        "advantage": 1.66
+      },
+      {
+        "name": "Saber",
+        "advantage": 1.53
+      }
+    ]
+  }
 }

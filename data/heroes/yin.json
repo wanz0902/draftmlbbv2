@@ -393,5 +393,99 @@
     }
   ],
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Joy",
+      "winrateDelta": 1.85
+    },
+    {
+      "name": "Faramis",
+      "winrateDelta": 1.76
+    },
+    {
+      "name": "Kalea",
+      "winrateDelta": 1.34
+    },
+    {
+      "name": "Marcel",
+      "winrateDelta": 1.25
+    },
+    {
+      "name": "Natan",
+      "winrateDelta": 1.02
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Roger",
+      "winrateDelta": -4.16
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": -3.43
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": -2.79
+    },
+    {
+      "name": "Harley",
+      "winrateDelta": -2.71
+    },
+    {
+      "name": "Yi Sun-shin",
+      "winrateDelta": -2.49
+    }
+  ],
+  "metaScore": 13.03,
+  "metaRank": 97,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Faramis",
+        "advantage": 3.97
+      },
+      {
+        "name": "Estes",
+        "advantage": 3.77
+      },
+      {
+        "name": "Diggie",
+        "advantage": 3.16
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.71
+      },
+      {
+        "name": "Arlott",
+        "advantage": 2.6
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Wanwan",
+        "advantage": 3.23
+      },
+      {
+        "name": "Irithel",
+        "advantage": 2.19
+      },
+      {
+        "name": "Lesley",
+        "advantage": 2.18
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 2.16
+      },
+      {
+        "name": "Zhask",
+        "advantage": 1.84
+      }
+    ]
+  }
 }

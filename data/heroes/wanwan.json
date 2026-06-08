@@ -384,5 +384,99 @@
     }
   ],
   "region": "Cadia Riverlands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Hylos",
+      "winrateDelta": 4.48
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": 3.84
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": 3.42
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": 3.37
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": 3.2
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Brody",
+      "winrateDelta": -19.2
+    },
+    {
+      "name": "Claude",
+      "winrateDelta": -18.2
+    },
+    {
+      "name": "Irithel",
+      "winrateDelta": -17.97
+    },
+    {
+      "name": "Bruno",
+      "winrateDelta": -12.64
+    },
+    {
+      "name": "Hanabi",
+      "winrateDelta": -11.33
+    }
+  ],
+  "metaScore": 10.91,
+  "metaRank": 114,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Ixia",
+        "advantage": 4.72
+      },
+      {
+        "name": "Joy",
+        "advantage": 4.26
+      },
+      {
+        "name": "Atlas",
+        "advantage": 4.06
+      },
+      {
+        "name": "Hanzo",
+        "advantage": 3.65
+      },
+      {
+        "name": "Thamuz",
+        "advantage": 3.48
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Phoveus",
+        "advantage": 7.34
+      },
+      {
+        "name": "Bruno",
+        "advantage": 5.49
+      },
+      {
+        "name": "Popol and Kupa",
+        "advantage": 4.92
+      },
+      {
+        "name": "Cyclops",
+        "advantage": 4.27
+      },
+      {
+        "name": "Faramis",
+        "advantage": 4.18
+      }
+    ]
+  }
 }

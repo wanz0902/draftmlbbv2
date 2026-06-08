@@ -443,5 +443,99 @@
     }
   ],
   "region": "Abyss",
-  "race": "Styx"
+  "race": "Styx",
+  "bestTeammates": [
+    {
+      "name": "Barats",
+      "winrateDelta": 2.75
+    },
+    {
+      "name": "Gloo",
+      "winrateDelta": 2.25
+    },
+    {
+      "name": "Edith",
+      "winrateDelta": 2.23
+    },
+    {
+      "name": "Akai",
+      "winrateDelta": 1.47
+    },
+    {
+      "name": "Uranus",
+      "winrateDelta": 1.4
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Diggie",
+      "winrateDelta": -2.7
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": -2.53
+    },
+    {
+      "name": "Angela",
+      "winrateDelta": -2.49
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": -2.19
+    },
+    {
+      "name": "Estes",
+      "winrateDelta": -1.96
+    }
+  ],
+  "metaScore": 23.31,
+  "metaRank": 24,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Hanzo",
+        "advantage": 3.62
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 3.41
+      },
+      {
+        "name": "Valir",
+        "advantage": 3.08
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.56
+      },
+      {
+        "name": "Gord",
+        "advantage": 2.4
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Natalia",
+        "advantage": 3.25
+      },
+      {
+        "name": "Brody",
+        "advantage": 2.9
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 2.43
+      },
+      {
+        "name": "Hilda",
+        "advantage": 2.22
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 2.17
+      }
+    ]
+  }
 }

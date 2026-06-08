@@ -503,5 +503,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "The Barren Lands",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Yve",
+      "winrateDelta": 4.45
+    },
+    {
+      "name": "Kaja",
+      "winrateDelta": 3.23
+    },
+    {
+      "name": "Aulus",
+      "winrateDelta": 3.11
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": 2.87
+    },
+    {
+      "name": "Bane",
+      "winrateDelta": 2.66
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Uranus",
+      "winrateDelta": -3.67
+    },
+    {
+      "name": "Terizla",
+      "winrateDelta": -3.27
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": -2.97
+    },
+    {
+      "name": "Phoveus",
+      "winrateDelta": -2.86
+    },
+    {
+      "name": "Ruby",
+      "winrateDelta": -2.55
+    }
+  ],
+  "metaScore": 18.44,
+  "metaRank": 46,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Baxia",
+        "advantage": 4.45
+      },
+      {
+        "name": "Atlas",
+        "advantage": 3.19
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 3.05
+      },
+      {
+        "name": "Alpha",
+        "advantage": 2.65
+      },
+      {
+        "name": "Thamuz",
+        "advantage": 2.61
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Bruno",
+        "advantage": 4.77
+      },
+      {
+        "name": "Phoveus",
+        "advantage": 4.07
+      },
+      {
+        "name": "Diggie",
+        "advantage": 3.97
+      },
+      {
+        "name": "Obsidia",
+        "advantage": 3.61
+      },
+      {
+        "name": "Ling",
+        "advantage": 2.98
+      }
+    ]
+  }
 }

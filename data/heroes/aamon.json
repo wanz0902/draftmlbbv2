@@ -500,5 +500,99 @@
     }
   ],
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Marcel",
+      "winrateDelta": 1.96
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 1.92
+    },
+    {
+      "name": "Joy",
+      "winrateDelta": 1.68
+    },
+    {
+      "name": "Lolita",
+      "winrateDelta": 1.5
+    },
+    {
+      "name": "Mathilda",
+      "winrateDelta": 1.49
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Ling",
+      "winrateDelta": -12.64
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": -8.52
+    },
+    {
+      "name": "Karina",
+      "winrateDelta": -7.3
+    },
+    {
+      "name": "Fanny",
+      "winrateDelta": -6.64
+    },
+    {
+      "name": "Hayabusa",
+      "winrateDelta": -5.73
+    }
+  ],
+  "metaScore": 20.56,
+  "metaRank": 34,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Marcel",
+        "advantage": 4.78
+      },
+      {
+        "name": "Faramis",
+        "advantage": 3.53
+      },
+      {
+        "name": "Cici",
+        "advantage": 3.24
+      },
+      {
+        "name": "Claude",
+        "advantage": 2.8
+      },
+      {
+        "name": "Chip",
+        "advantage": 2.64
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 3.18
+      },
+      {
+        "name": "Odette",
+        "advantage": 2.63
+      },
+      {
+        "name": "Hayabusa",
+        "advantage": 2.5
+      },
+      {
+        "name": "Silvanna",
+        "advantage": 2.07
+      },
+      {
+        "name": "Saber",
+        "advantage": 1.86
+      }
+    ]
+  }
 }

@@ -414,5 +414,99 @@
     }
   ],
   "region": "The Barren Lands",
-  "race": "Half-Demon, Half-Human"
+  "race": "Half-Demon, Half-Human",
+  "bestTeammates": [
+    {
+      "name": "Mathilda",
+      "winrateDelta": 3.63
+    },
+    {
+      "name": "Chip",
+      "winrateDelta": 3.19
+    },
+    {
+      "name": "Khufra",
+      "winrateDelta": 2.61
+    },
+    {
+      "name": "Hylos",
+      "winrateDelta": 2.25
+    },
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": 2.15
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Lapu-Lapu",
+      "winrateDelta": -5.9
+    },
+    {
+      "name": "Phoveus",
+      "winrateDelta": -5.26
+    },
+    {
+      "name": "Argus",
+      "winrateDelta": -4.37
+    },
+    {
+      "name": "Sora",
+      "winrateDelta": -4.17
+    },
+    {
+      "name": "Yu Zhong",
+      "winrateDelta": -3.9
+    }
+  ],
+  "metaScore": 10.37,
+  "metaRank": 117,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Khaleed",
+        "advantage": 3
+      },
+      {
+        "name": "Diggie",
+        "advantage": 2.79
+      },
+      {
+        "name": "Faramis",
+        "advantage": 2.65
+      },
+      {
+        "name": "X.Borg",
+        "advantage": 2.64
+      },
+      {
+        "name": "Zhuxin",
+        "advantage": 2.46
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Yve",
+        "advantage": 6.28
+      },
+      {
+        "name": "Masha",
+        "advantage": 4.79
+      },
+      {
+        "name": "Lukas",
+        "advantage": 3.73
+      },
+      {
+        "name": "Valentina",
+        "advantage": 2.92
+      },
+      {
+        "name": "Yin",
+        "advantage": 2.6
+      }
+    ]
+  }
 }

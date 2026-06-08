@@ -446,5 +446,99 @@
   ],
   "difficultyLabel": "Hard",
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Masha",
+      "winrateDelta": 2.9
+    },
+    {
+      "name": "Zhuxin",
+      "winrateDelta": 2.08
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 2.05
+    },
+    {
+      "name": "Edith",
+      "winrateDelta": 1.79
+    },
+    {
+      "name": "Natan",
+      "winrateDelta": 1.7
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Nolan",
+      "winrateDelta": -15.09
+    },
+    {
+      "name": "Hanzo",
+      "winrateDelta": -14.03
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": -13.69
+    },
+    {
+      "name": "Hayabusa",
+      "winrateDelta": -12.19
+    },
+    {
+      "name": "Lancelot",
+      "winrateDelta": -10.65
+    }
+  ],
+  "metaScore": 2.8,
+  "metaRank": 129,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Gloo",
+        "advantage": 3.38
+      },
+      {
+        "name": "Granger",
+        "advantage": 3.18
+      },
+      {
+        "name": "Carmilla",
+        "advantage": 2.9
+      },
+      {
+        "name": "Atlas",
+        "advantage": 2.89
+      },
+      {
+        "name": "Minotaur",
+        "advantage": 2.41
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Moskov",
+        "advantage": 3.69
+      },
+      {
+        "name": "Zilong",
+        "advantage": 3.5
+      },
+      {
+        "name": "Bruno",
+        "advantage": 3.29
+      },
+      {
+        "name": "Chou",
+        "advantage": 2.85
+      },
+      {
+        "name": "Franco",
+        "advantage": 2.41
+      }
+    ]
+  }
 }

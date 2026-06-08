@@ -407,5 +407,99 @@
     }
   ],
   "region": "Abyss",
-  "race": "Fire Demon"
+  "race": "Fire Demon",
+  "bestTeammates": [
+    {
+      "name": "Mathilda",
+      "winrateDelta": 2.37
+    },
+    {
+      "name": "Diggie",
+      "winrateDelta": 1.61
+    },
+    {
+      "name": "Pharsa",
+      "winrateDelta": 1.55
+    },
+    {
+      "name": "Ling",
+      "winrateDelta": 1.18
+    },
+    {
+      "name": "Nolan",
+      "winrateDelta": 1.11
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Masha",
+      "winrateDelta": -3.72
+    },
+    {
+      "name": "Phoveus",
+      "winrateDelta": -2.83
+    },
+    {
+      "name": "Uranus",
+      "winrateDelta": -2.44
+    },
+    {
+      "name": "Arlott",
+      "winrateDelta": -2.2
+    },
+    {
+      "name": "Cici",
+      "winrateDelta": -2.07
+    }
+  ],
+  "metaScore": 18.14,
+  "metaRank": 51,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Esmeralda",
+        "advantage": 2.82
+      },
+      {
+        "name": "Alice",
+        "advantage": 2.35
+      },
+      {
+        "name": "Lolita",
+        "advantage": 2.29
+      },
+      {
+        "name": "Odette",
+        "advantage": 1.88
+      },
+      {
+        "name": "Alucard",
+        "advantage": 1.81
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Cici",
+        "advantage": 4.14
+      },
+      {
+        "name": "Wanwan",
+        "advantage": 3.48
+      },
+      {
+        "name": "Karrie",
+        "advantage": 2.74
+      },
+      {
+        "name": "Valir",
+        "advantage": 2.68
+      },
+      {
+        "name": "Benedetta",
+        "advantage": 2.61
+      }
+    ]
+  }
 }

@@ -386,5 +386,99 @@
     }
   ],
   "region": "Moniyan Empire",
-  "race": "Human"
+  "race": "Human",
+  "bestTeammates": [
+    {
+      "name": "Popol and Kupa",
+      "winrateDelta": 4.38
+    },
+    {
+      "name": "Harith",
+      "winrateDelta": 3.21
+    },
+    {
+      "name": "Yve",
+      "winrateDelta": 2.53
+    },
+    {
+      "name": "Roger",
+      "winrateDelta": 2.38
+    },
+    {
+      "name": "Kimmy",
+      "winrateDelta": 2.09
+    }
+  ],
+  "worstTeammates": [
+    {
+      "name": "Melissa",
+      "winrateDelta": -5.13
+    },
+    {
+      "name": "Clint",
+      "winrateDelta": -4.77
+    },
+    {
+      "name": "Obsidia",
+      "winrateDelta": -4.68
+    },
+    {
+      "name": "Wanwan",
+      "winrateDelta": -4.5
+    },
+    {
+      "name": "Ixia",
+      "winrateDelta": -4.19
+    }
+  ],
+  "metaScore": 15.64,
+  "metaRank": 79,
+  "mlcSource": "mlcounters.app",
+  "mlcUpdatedAt": "2026-06-08",
+  "mlcountersMatchup": {
+    "strongAgainst": [
+      {
+        "name": "Claude",
+        "advantage": 5.05
+      },
+      {
+        "name": "Belerick",
+        "advantage": 3.14
+      },
+      {
+        "name": "Gatotkaca",
+        "advantage": 2.88
+      },
+      {
+        "name": "Marcel",
+        "advantage": 2.36
+      },
+      {
+        "name": "Khaleed",
+        "advantage": 2.2
+      }
+    ],
+    "weakAgainst": [
+      {
+        "name": "Estes",
+        "advantage": 2.82
+      },
+      {
+        "name": "Sun",
+        "advantage": 2.81
+      },
+      {
+        "name": "Barats",
+        "advantage": 2.25
+      },
+      {
+        "name": "Gloo",
+        "advantage": 2.22
+      },
+      {
+        "name": "Angela",
+        "advantage": 1.98
+      }
+    ]
+  }
 }
