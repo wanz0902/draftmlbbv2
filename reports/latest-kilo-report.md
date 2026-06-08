@@ -40,7 +40,8 @@ Tidak dijalankan.
 
 ## H. Commit Hash
 
-Belum di-commit — menunggu approval user.
+- Commit: `50e8e04`
+- Message: `chore: update project agent workflow instructions`
 
 ## I. Resource Summary
 
