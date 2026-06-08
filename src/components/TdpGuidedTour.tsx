@@ -8,26 +8,34 @@ export interface TourStep {
   title: string;
   text: string;
   placement?: "top" | "bottom" | "left" | "right";
+  padding?: number;
 }
 
 export const TOUR_STEPS: TourStep[] = [
-  { target: "tour-sidebar", title: "Sidebar", text: "Semua draft kamu ada di sini. Tournament seperti folder, Draft adalah rencana di dalamnya.", placement: "right" },
-  { target: "tour-new-tournament", title: "Tambah Tournament", text: "Klik ini untuk membuat folder draft baru.", placement: "right" },
-  { target: "tour-add-draft", title: "Tambah Draft", text: "Klik ini untuk menambah draft plan.", placement: "right" },
-  { target: "tour-draft-header", title: "Draft Header", text: "Di sini kamu melihat draft yang sedang dibuka.", placement: "bottom" },
-  { target: "tour-side-toggle", title: "Side Toggle", text: "Pilih sisi tim kamu. Badge OURS akan pindah ke Blue atau Red.", placement: "bottom" },
-  { target: "tour-ban-slots", title: "Ban Slots", text: "Isi 5 ban untuk target hero lawan.", placement: "bottom" },
-  { target: "tour-pick-slots", title: "Pick Slots", text: "Isi 5 pick untuk hero utama draft.", placement: "bottom" },
-  { target: "tour-role-lanes", title: "Role Lanes", text: "Role lane membantu membagi hero ke EXP, Jungle, Mid, Gold, dan Roam.", placement: "bottom" },
-  { target: "tour-backup-slots", title: "Backup Hero", text: "Setiap lane punya 6 cadangan kalau hero utama diban atau diambil lawan.", placement: "bottom" },
-  { target: "tour-coach-notes", title: "Coach Notes", text: "Tulis win condition, target ban, matchup, atau rotasi awal.", placement: "top" },
-  { target: "tour-save-btn", title: "Save / Export", text: "Klik Save untuk download gambar draft.", placement: "left" },
+  { target: "tour-sidebar", title: "Sidebar", text: "Semua draft kamu ada di sini. Tournament seperti folder, Draft adalah rencana di dalamnya.", placement: "right", padding: 14 },
+  { target: "tour-new-tournament", title: "Tambah Tournament", text: "Klik ini untuk membuat folder draft baru.", placement: "right", padding: 8 },
+  { target: "tour-add-draft", title: "Tambah Draft", text: "Klik ini untuk menambah draft plan.", placement: "right", padding: 8 },
+  { target: "tour-draft-header", title: "Draft Header", text: "Di sini kamu melihat draft yang sedang dibuka.", placement: "bottom", padding: 10 },
+  { target: "tour-side-toggle", title: "Side Toggle", text: "Pilih sisi tim kamu. Badge OURS akan pindah ke Blue atau Red.", placement: "bottom", padding: 8 },
+  { target: "tour-ban-slots", title: "Ban Slots", text: "Isi 5 ban untuk target hero lawan.", placement: "bottom", padding: 12 },
+  { target: "tour-pick-slots", title: "Pick Slots", text: "Isi 5 pick untuk hero utama draft.", placement: "bottom", padding: 12 },
+  { target: "tour-role-lanes", title: "Role Lanes", text: "Role lane membantu membagi hero ke EXP, Jungle, Mid, Gold, dan Roam.", placement: "bottom", padding: 10 },
+  { target: "tour-backup-slots", title: "Backup Hero", text: "Setiap lane punya 6 cadangan kalau hero utama diban atau diambil lawan.", placement: "bottom", padding: 10 },
+  { target: "tour-coach-notes", title: "Coach Notes", text: "Tulis win condition, target ban, matchup, atau rotasi awal.", placement: "top", padding: 12 },
+  { target: "tour-save-btn", title: "Save / Export", text: "Klik Save untuk download gambar draft.", placement: "left", padding: 8 },
 ];
 
 interface TdpGuidedTourProps {
   onComplete: () => void;
   onSkip: () => void;
   initialStep?: number;
+}
+
+interface HighlightRect {
+  top: number;
+  left: number;
+  width: number;
+  height: number;
 }
 
 function findTarget(target: string): HTMLElement | null {
@@ -44,8 +52,8 @@ export function markGuidedTourCompleted() {
 
 export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: TdpGuidedTourProps) {
   const [step, setStep] = useState(initialStep);
-  const [marker, setMarker] = useState<{ top: number; left: number } | null>(null);
-  const [tip, setTip] = useState<{ top: number; left: number; w: number; placement: string } | null>(null);
+  const [hl, setHl] = useState<HighlightRect | null>(null);
+  const [tip, setTip] = useState<{ top: number; left: number; w: number } | null>(null);
   const [ready, setReady] = useState(false);
 
   const stepRef = useRef(step);
@@ -56,33 +64,57 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
     const s = stepRef.current;
     const cfg = TOUR_STEPS[s];
     if (!cfg) return;
+
     const el = findTarget(cfg.target);
-    if (!el) { setMarker(null); setTip(null); setReady(true); return; }
+    if (!el) {
+      setHl(null);
+      setTip(null);
+      setReady(true);
+      console.warn(`[TDP Tour] Target "${cfg.target}" not found`);
+      return;
+    }
 
     const rect = el.getBoundingClientRect();
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-    setMarker({ top: cy, left: cx });
+    const pad = cfg.padding ?? 10;
+
+    if (rect.width === 0 || rect.height === 0) {
+      setHl(null);
+      setTip(null);
+      setReady(true);
+      console.warn(`[TDP Tour] Target "${cfg.target}" has zero size`);
+      return;
+    }
+
+    setHl({
+      top: rect.top - pad,
+      left: rect.left - pad,
+      width: rect.width + pad * 2,
+      height: rect.height + pad * 2,
+    });
 
     const vpW = window.innerWidth;
     const vpH = window.innerHeight;
     const tipW = Math.min(280, vpW - 40);
     const tipH = 120;
-    const gap = 16;
-    const edgePad = 12;
+    const gap = 14;
+    const edgePad = 16;
     const placement = cfg.placement || "bottom";
 
     let ttop = 0, tleft = 0;
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+
     switch (placement) {
-      case "bottom": ttop = rect.bottom + gap; tleft = cx - tipW / 2; break;
-      case "top": ttop = rect.top - gap - tipH; tleft = cx - tipW / 2; break;
-      case "right": ttop = cy - tipH / 2; tleft = rect.right + gap; break;
-      case "left": ttop = cy - tipH / 2; tleft = rect.left - gap - tipW; break;
+      case "bottom": ttop = rect.bottom + pad + gap; tleft = cx - tipW / 2; break;
+      case "top": ttop = rect.top - pad - gap - tipH; tleft = cx - tipW / 2; break;
+      case "right": ttop = cy - tipH / 2; tleft = rect.right + pad + gap; break;
+      case "left": ttop = cy - tipH / 2; tleft = rect.left - pad - gap - tipW; break;
     }
+
     tleft = Math.max(edgePad, Math.min(tleft, vpW - tipW - edgePad));
     ttop = Math.max(edgePad, Math.min(ttop, vpH - tipH - edgePad));
 
-    setTip({ top: ttop, left: tleft, w: tipW, placement });
+    setTip({ top: ttop, left: tleft, w: tipW });
     setReady(true);
   }, []);
 
@@ -91,16 +123,19 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
     const cfg = TOUR_STEPS[s];
     if (!cfg) return;
     const el = findTarget(cfg.target);
-    if (!el) { setMarker(null); setTip(null); setReady(true); return; }
+    if (!el) { setHl(null); setTip(null); setReady(true); return; }
 
     didScrollRef.current = true;
     el.scrollIntoView({ block: "center", inline: "center", behavior: "instant" });
-    requestAnimationFrame(() => { didScrollRef.current = false; measure(); });
+    requestAnimationFrame(() => {
+      didScrollRef.current = false;
+      measure();
+    });
   }, [measure]);
 
   useEffect(() => {
     setReady(false);
-    setMarker(null);
+    setHl(null);
     setTip(null);
     const raf = requestAnimationFrame(() => scrollToAndMeasure());
     return () => cancelAnimationFrame(raf);
@@ -118,9 +153,14 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
   }, [measure]);
 
   const next = () => {
-    if (stepRef.current >= TOUR_STEPS.length - 1) { markGuidedTourCompleted(); onComplete(); }
-    else setStep((s) => s + 1);
+    if (stepRef.current >= TOUR_STEPS.length - 1) {
+      markGuidedTourCompleted();
+      onComplete();
+    } else {
+      setStep((s) => s + 1);
+    }
   };
+
   const prev = () => { if (stepRef.current > 0) setStep((s) => s - 1); };
 
   const currentStep = TOUR_STEPS[step];
@@ -128,25 +168,21 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
 
   return (
     <div className="fixed inset-0 z-[10000]" style={{ pointerEvents: "auto" }}>
-      <div className="absolute inset-0 bg-black/30" onClick={onSkip} />
+      {/* Dim overlay */}
+      <div className="absolute inset-0 bg-black/40" onClick={onSkip} />
 
-      {/* Subtle highlight ring around target */}
-      {marker && (
-        <>
-          <div
-            className="absolute w-12 h-12 -ml-6 -mt-6 rounded-full border-2 border-cyan-400/70 pointer-events-none"
-            style={{ top: marker.top, left: marker.left }}
-          />
-          <div
-            className="absolute w-12 h-12 -ml-6 -mt-6 rounded-full bg-cyan-400/10 pointer-events-none"
-            style={{ top: marker.top, left: marker.left }}
-          />
-          {/* Pulse ring */}
-          <div
-            className="absolute w-12 h-12 -ml-6 -mt-6 rounded-full border border-cyan-400/30 animate-ping pointer-events-none"
-            style={{ top: marker.top, left: marker.left }}
-          />
-        </>
+      {/* Rectangular spotlight highlight */}
+      {hl && (
+        <div
+          className="absolute rounded-[10px] border-2 border-cyan-400 pointer-events-none"
+          style={{
+            top: hl.top,
+            left: hl.left,
+            width: hl.width,
+            height: hl.height,
+            boxShadow: "0 0 24px rgba(0, 220, 255, 0.35), inset 0 0 8px rgba(0, 220, 255, 0.1)",
+          }}
+        />
       )}
 
       {/* Tooltip */}
@@ -163,18 +199,29 @@ export default function TdpGuidedTour({ onComplete, onSkip, initialStep = 0 }: T
                     of {TOUR_STEPS.length}
                   </span>
                 </div>
-                <button onClick={onSkip} className="text-slate-600 hover:text-white cursor-pointer"><X className="h-3.5 w-3.5" /></button>
+                <button onClick={onSkip} className="text-slate-600 hover:text-white cursor-pointer">
+                  <X className="h-3.5 w-3.5" />
+                </button>
               </div>
               <h3 className="text-[13px] font-black text-white font-display mb-0.5">{currentStep.title}</h3>
               <p className="text-[11px] text-slate-400 leading-relaxed">{currentStep.text}</p>
             </div>
             <div className="flex items-center justify-between border-t border-white/[0.06] px-4 py-2">
-              <button onClick={prev} disabled={step === 0} className="flex items-center gap-1 text-[11px] font-bold text-slate-500 hover:text-white transition cursor-pointer disabled:opacity-30">
+              <button
+                onClick={prev}
+                disabled={step === 0}
+                className="flex items-center gap-1 text-[11px] font-bold text-slate-500 hover:text-white transition cursor-pointer disabled:opacity-30"
+              >
                 <ChevronLeft className="h-3.5 w-3.5" /> Kembali
               </button>
               <div className="flex items-center gap-2">
-                <button onClick={onSkip} className="text-[10px] font-bold text-slate-600 hover:text-slate-400 transition cursor-pointer">Lewati</button>
-                <button onClick={next} className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-cyan-500/20 border border-cyan-500/30 text-[11px] font-bold text-cyan-300 hover:bg-cyan-500/30 transition cursor-pointer">
+                <button onClick={onSkip} className="text-[10px] font-bold text-slate-600 hover:text-slate-400 transition cursor-pointer">
+                  Lewati
+                </button>
+                <button
+                  onClick={next}
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-cyan-500/20 border border-cyan-500/30 text-[11px] font-bold text-cyan-300 hover:bg-cyan-500/30 transition cursor-pointer"
+                >
                   {isLast ? "Selesai" : "Selanjutnya"}
                   {!isLast && <ChevronRight className="h-3.5 w-3.5" />}
                 </button>
