@@ -40,7 +40,7 @@ Tidak dijalankan.
 
 ## H. Commit Hash
 
-Belum di-commit — menunggu approval user.
+Akan diisi setelah commit.
 
 ## I. Resource Summary
 
