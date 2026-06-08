@@ -217,8 +217,7 @@ export default function App() {
       <footer className="mt-auto border-t border-gray-900 bg-gray-950/40 py-4 text-center">
         <div className="mx-auto flex max-w-7xl flex-col sm:flex-row items-center justify-between px-4 text-xs text-gray-500 gap-2">
           <p className="font-sans">
-            © 2026 MPL ID S17 Draft Simulator. Disusun asisten digital
-            professional.
+            © 2026 MPL ID S17 Draft Simulator &middot; Built for draft analysis
           </p>
           <div className="flex items-center gap-1.5 font-mono text-[10px] text-gray-400">
             <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" />

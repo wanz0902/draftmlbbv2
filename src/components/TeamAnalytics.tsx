@@ -980,7 +980,7 @@ export default function TeamAnalytics({
                     <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4 lg:grid-cols-7">
                       {[
                         ["Total Series", matchHistoryData.totalMatches, "text-gray-200"],
-                        ["Ditampilkan", matchHistoryData.filteredMatches, "text-indigo-300"],
+                        ["Shown", matchHistoryData.filteredMatches, "text-indigo-300"],
                         ["Wins", matchHistoryData.wins, "text-emerald-400"],
                         ["Losses", matchHistoryData.losses, "text-red-400"],
                         ["Win Rate", `${matchHistoryData.winrate}%`, "text-amber-300"],

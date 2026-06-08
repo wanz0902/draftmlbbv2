@@ -27,7 +27,7 @@ interface NavbarProps {
 const directLinks = [
   { id: "home", label: "Home", icon: Home },
   { id: "draft", label: "Draft", icon: CloudLightning },
-  { id: "tdp", label: "TDP", icon: Target },
+  { id: "tdp", label: "Draft Planner", icon: Target },
   { id: "macro", label: "Macro", icon: Map },
   { id: "teams", label: "Teams", icon: Users },
   { id: "tier", label: "Meta", icon: Trophy },
@@ -245,9 +245,6 @@ export default function Navbar({
                           }`}
                         >
                           <span>{item.label}</span>
-                          <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-slate-600">
-                            Open
-                          </span>
                         </button>
                       );
                     })}

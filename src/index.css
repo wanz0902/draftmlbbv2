@@ -268,9 +268,6 @@
   background: linear-gradient(180deg, rgba(34, 211, 238, 0.7), rgba(167, 139, 250, 0.7));
 }
 
-html {
-  scroll-behavior: smooth;
-}
 @keyframes pageSlideIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 .page-enter { animation: pageSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 .ui-panel { border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--ui-radius-lg); background: linear-gradient(180deg, rgba(8, 17, 32, 0.94), rgba(5, 11, 20, 0.96)); box-shadow: 0 28px 80px -42px rgba(15, 23, 42, 0.95); }
@@ -284,9 +281,6 @@ html {
 .btn-secondary { border: 1px solid rgba(34, 211, 238, 0.24); background: rgba(34, 211, 238, 0.08); color: #d8f7ff; }
 .btn-danger { border: 1px solid rgba(248, 113, 113, 0.24); background: rgba(248, 113, 113, 0.12); color: #fecaca; }
 .btn-ghost { border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(255, 255, 255, 0.04); color: #d7e0ea; }
-[class*="text-[8px]"] { font-size: 0.69rem !important; }
-[class*="text-[9px]"] { font-size: 0.73rem !important; }
-[class*="text-[10px]"] { font-size: 0.76rem !important; }
 @media (max-width: 640px) {
   body { font-size: 0.96rem; }
   main { padding-bottom: 5rem; }
