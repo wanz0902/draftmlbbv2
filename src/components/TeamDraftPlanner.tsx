@@ -91,6 +91,8 @@ interface DraftPlan {
   redBans: string[];
   blueLanes: Record<Lane, LanePlan>;
   redLanes: Record<Lane, LanePlan>;
+  blueLaneOrder: Lane[];
+  redLaneOrder: Lane[];
   notes: string;
 }
 
@@ -115,6 +117,8 @@ function emptyPlan(name?: string): DraftPlan {
     redBans: Array(5).fill(""),
     blueLanes: emptyLanes(),
     redLanes: emptyLanes(),
+    blueLaneOrder: [...LANE_ORDER_BLUE],
+    redLaneOrder: [...LANE_ORDER_RED],
     notes: "",
   };
 }
@@ -136,7 +140,10 @@ function emptyTournament(name?: string): Tournament {
 const STORAGE_KEY = "mlbb_tdp_v3";
 
 function migrateOldDraft(d: any): DraftPlan {
-  if (d.blueLanes && d.redLanes) return d as DraftPlan;
+  const result: any = { ...d };
+  if (!result.blueLaneOrder) result.blueLaneOrder = [...LANE_ORDER_BLUE];
+  if (!result.redLaneOrder) result.redLaneOrder = [...LANE_ORDER_RED];
+  if (result.blueLanes && result.redLanes) return result as DraftPlan;
   const blueLanes = emptyLanes();
   const redLanes = emptyLanes();
   if (d.blueRoles) {
@@ -161,7 +168,7 @@ function migrateOldDraft(d: any): DraftPlan {
       }
     }
   }
-  return { ...d, blueLanes, redLanes, blueBans: d.blueBans || Array(5).fill(""), redBans: d.redBans || Array(5).fill(""), notes: d.notes || "" };
+  return { ...result, blueLanes, redLanes, blueBans: result.blueBans || Array(5).fill(""), redBans: result.redBans || Array(5).fill(""), notes: result.notes || "", blueLaneOrder: result.blueLaneOrder || [...LANE_ORDER_BLUE], redLaneOrder: result.redLaneOrder || [...LANE_ORDER_RED] };
 }
 
 function loadData(): { tournaments: Tournament[]; selectedTourId: string | null; selectedDraftId: string | null } {
@@ -360,6 +367,17 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
     if (target.type === "ban") setBan(target.side, target.index, "");
     else if (target.type === "pick") setLaneMain(target.side, target.lane, "");
     else setLaneBackup(target.side, target.lane, target.backupIndex, "");
+  };
+
+  const swapLane = (side: "BLUE" | "RED", fromIdx: number, toIdx: number) => {
+    updateDraft((d) => {
+      const key = side === "BLUE" ? "blueLaneOrder" : "redLaneOrder";
+      const order = [...d[key]];
+      const temp = order[fromIdx];
+      order[fromIdx] = order[toIdx];
+      order[toIdx] = temp;
+      return { ...d, [key]: order };
+    });
   };
 
   const applyPick = (target: PickerTarget, heroName: string) => {
@@ -684,8 +702,8 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
           <div className="flex-1 overflow-y-auto">
             <div ref={boardRef} className="flex flex-col min-h-full">
               <div className="grid grid-cols-2 flex-1 min-h-0">
-                <BoardPanel side="BLUE" draft={selectedDraft} heroAssets={heroAssets} openPicker={openPicker} clearSlot={clearSlot} isOurSide={selectedDraft.side === "BLUE"} />
-                <BoardPanel side="RED" draft={selectedDraft} heroAssets={heroAssets} openPicker={openPicker} clearSlot={clearSlot} isOurSide={selectedDraft.side === "RED"} />
+                <BoardPanel side="BLUE" draft={selectedDraft} heroAssets={heroAssets} openPicker={openPicker} clearSlot={clearSlot} onSwapLane={swapLane} isOurSide={selectedDraft.side === "BLUE"} />
+                <BoardPanel side="RED" draft={selectedDraft} heroAssets={heroAssets} openPicker={openPicker} clearSlot={clearSlot} onSwapLane={swapLane} isOurSide={selectedDraft.side === "RED"} />
               </div>
 
               <div data-tour-target="tour-coach-notes" className="border-t border-white/[0.08] bg-[#0c1222]/90 px-5 py-3">
@@ -808,18 +826,19 @@ export default function TeamDraftPlanner({ heroes, heroAssets }: TeamDraftPlanne
 }
 
 /* ═══ BOARD PANEL ═══ */
-function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide }: {
+function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, onSwapLane, isOurSide }: {
   side: "BLUE" | "RED";
   draft: DraftPlan;
   heroAssets: Record<string, string>;
   openPicker: (t: PickerTarget) => void;
   clearSlot: (t: PickerTarget) => void;
+  onSwapLane: (side: "BLUE" | "RED", from: number, to: number) => void;
   isOurSide: boolean;
 }) {
   const isBlue = side === "BLUE";
   const bans = isBlue ? draft.blueBans : draft.redBans;
   const lanes = isBlue ? draft.blueLanes : draft.redLanes;
-  const laneOrder = isBlue ? LANE_ORDER_BLUE : LANE_ORDER_RED;
+  const laneOrder = isBlue ? draft.blueLaneOrder : draft.redLaneOrder;
   const banLabels = isBlue ? ["B1", "B2", "B3", "B4", "B5"] : ["B5", "B4", "B3", "B2", "B1"];
   const pickLabels = isBlue ? ["P1", "P2", "P3", "P4", "P5"] : ["P5", "P4", "P3", "P2", "P1"];
 
@@ -846,20 +865,30 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
         </span>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 py-3 space-y-4">
+  return (
+    <div className="flex-1 overflow-y-auto px-4 py-3 space-y-4">
+      {/* ═══ BANS SECTION — Distinct red/rose style ═══ */}
+      <div>
         <div className="flex items-center gap-1.5 mb-2.5">
-            <Ban className="h-3 w-3 text-rose-400/40" />
-            <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">Bans</span>
-          </div>
-          <div data-tour-target={isBlue ? "tour-ban-slots" : undefined} className="flex justify-between gap-1">
-            {bans.map((h, i) => (
-              <div key={i} className="flex flex-col items-center gap-1.5">
-                <CircleSlot hero={h} heroAssets={heroAssets} ring={ringColor} onClick={() => openPicker({ type: "ban", side, index: i })} onClear={() => clearSlot({ type: "ban", side, index: i })} />
-                <span className="text-[8px] font-mono font-bold text-slate-600 uppercase">{banLabels[i]}</span>
-              </div>
-            ))}
-          </div>
+          <Ban className="h-3 w-3 text-rose-400/60" />
+          <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-rose-400/60">Bans</span>
+        </div>
+        <div data-tour-target={isBlue ? "tour-ban-slots" : undefined} className="flex justify-between gap-1">
+          {bans.map((h, i) => (
+            <div key={i} className="flex flex-col items-center gap-1.5">
+              <BanSlot hero={h} heroAssets={heroAssets} onClick={() => openPicker({ type: "ban", side, index: i })} onClear={() => clearSlot({ type: "ban", side, index: i })} />
+              <span className="text-[8px] font-mono font-bold text-rose-400/40 uppercase">{banLabels[i]}</span>
+            </div>
+          ))}
+        </div>
+      </div>
 
+      {/* ═══ PICKS SECTION ═══ */}
+      <div>
+        <div className="flex items-center gap-1.5 mb-2.5">
+          <Swords className="h-3 w-3 text-cyan-400/50" />
+          <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-cyan-400/50">Picks</span>
+        </div>
         <div data-tour-target={isBlue ? "tour-pick-slots" : undefined} className="flex items-center gap-1">
             {laneOrder.map((lane) => {
               const plan = lanes[lane];
@@ -870,17 +899,31 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
               );
             })}
         </div>
+      </div>
 
-        <div className="flex justify-between gap-1">
+      {/* ═══ LANE PLANNER — with reorder arrows ═══ */}
+      <div className="flex justify-between gap-1">
             {laneOrder.map((lane, idx) => {
               const plan = lanes[lane];
               const lc = LANE_COLORS[lane];
               return (
                 <div key={lane} className="flex flex-col items-center gap-1 flex-1">
                   <div data-tour-target={isBlue && idx === 0 ? "tour-role-lanes" : undefined} className="flex flex-col items-center gap-0.5">
-                    <button onClick={() => openPicker({ type: "pick", side, lane })} className={`inline-flex items-center gap-1 rounded-full border ${lc.border} ${lc.bg} px-2 py-0.5 cursor-pointer transition hover:opacity-80`}>
-                      <span className={`text-[8px] font-black uppercase tracking-wider ${lc.text}`}>{LANE_LABEL[lane]}</span>
-                    </button>
+                    <div className="flex items-center gap-0.5">
+                      {idx > 0 && (
+                        <button onClick={() => onSwapLane(side, idx, idx - 1)} className="h-4 w-4 flex items-center justify-center rounded text-[8px] text-slate-600 hover:text-white hover:bg-white/10 transition cursor-pointer" title="Geser kiri">
+                          ‹
+                        </button>
+                      )}
+                      <button onClick={() => openPicker({ type: "pick", side, lane })} className={`inline-flex items-center gap-1 rounded-full border ${lc.border} ${lc.bg} px-2 py-0.5 cursor-pointer transition hover:opacity-80`}>
+                        <span className={`text-[8px] font-black uppercase tracking-wider ${lc.text}`}>{LANE_LABEL[lane]}</span>
+                      </button>
+                      {idx < laneOrder.length - 1 && (
+                        <button onClick={() => onSwapLane(side, idx, idx + 1)} className="h-4 w-4 flex items-center justify-center rounded text-[8px] text-slate-600 hover:text-white hover:bg-white/10 transition cursor-pointer" title="Geser kanan">
+                          ›
+                        </button>
+                      )}
+                    </div>
                   </div>
                   <div data-tour-target={isBlue && idx === 0 ? "tour-backup-slots" : undefined} className="grid grid-cols-3 gap-1 mt-0.5">
                     {plan.backups.map((b, bi) => (
@@ -897,7 +940,7 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
   );
 }
 
-/* ═══ CIRCLE SLOT (Ban/Pick — large) ═══ */
+/* ═══ CIRCLE SLOT (Pick — large) ═══ */
 function CircleSlot({ hero, heroAssets, ring, onClick, onClear }: {
   hero: string; heroAssets: Record<string, string>; ring: string; onClick: () => void; onClear: () => void;
 }) {
@@ -914,6 +957,31 @@ function CircleSlot({ hero, heroAssets, ring, onClick, onClear }: {
           </button>
         </>
       ) : <span className="text-xl text-slate-700">+</span>}
+    </button>
+  );
+}
+
+/* ═══ BAN SLOT (Distinct red/rose style) ═══ */
+function BanSlot({ hero, heroAssets, onClick, onClear }: {
+  hero: string; heroAssets: Record<string, string>; onClick: () => void; onClear: () => void;
+}) {
+  const empty = !hero;
+  return (
+    <button onClick={onClick} className={`relative h-[72px] w-[72px] rounded-full border-2 ${empty ? "border-dashed border-rose-500/25 bg-rose-500/[0.03]" : "border-rose-500/40 bg-rose-500/[0.06]"} flex items-center justify-center transition cursor-pointer hover:scale-105`}>
+      {hero ? (
+        <>
+          <div className="h-14 w-14 overflow-hidden rounded-full border border-rose-500/20 bg-[#060d1a]">
+            <FallbackImage src={getHeroImageUrl(hero, heroAssets)} fallbackText={hero} alt={hero} className="h-full w-full object-cover" containerClassName="h-full w-full text-[5px]" />
+          </div>
+          <button onClick={(e) => { e.stopPropagation(); onClear(); }} className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-[#0a1020] border border-white/10 flex items-center justify-center text-slate-500 hover:text-rose-400 hover:border-rose-500/30 transition cursor-pointer">
+            <X className="h-2.5 w-2.5" />
+          </button>
+        </>
+      ) : (
+        <span className="text-rose-500/30">
+          <Ban className="h-5 w-5" />
+        </span>
+      )}
     </button>
   );
 }
