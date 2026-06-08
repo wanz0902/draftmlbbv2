@@ -868,12 +868,23 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
             <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">Picks</span>
           </div>
           <div className="flex justify-between gap-1">
+            {laneOrder.map((lane) => {
+              const plan = lanes[lane];
+              return (
+                <div key={lane} className="flex flex-col items-center gap-1.5 flex-1">
+                  <CircleSlot hero={plan.main} heroAssets={heroAssets} ring={ringColor} onClick={() => openPicker({ type: "pick", side, lane })} onClear={() => clearSlot({ type: "pick", side, lane })} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div data-tour-target={isBlue ? "tour-role-lanes" : undefined} className="flex justify-between gap-1">
             {laneOrder.map((lane, idx) => {
               const plan = lanes[lane];
               const lc = LANE_COLORS[lane];
               return (
-                <div key={lane} data-tour-target={isBlue && idx === 0 ? "tour-role-lane" : undefined} className="flex flex-col items-center gap-1.5 flex-1">
-                  <CircleSlot hero={plan.main} heroAssets={heroAssets} ring={ringColor} onClick={() => openPicker({ type: "pick", side, lane })} onClear={() => clearSlot({ type: "pick", side, lane })} />
+                <div key={lane} className="flex flex-col items-center gap-1 flex-1">
                   <button onClick={() => openPicker({ type: "pick", side, lane })} className={`inline-flex items-center gap-1 rounded-full border ${lc.border} ${lc.bg} px-2 py-0.5 cursor-pointer transition hover:opacity-80`}>
                     <span className={`text-[8px] font-black uppercase tracking-wider ${lc.text}`}>{LANE_LABEL[lane]}</span>
                   </button>
@@ -882,12 +893,10 @@ function BoardPanel({ side, draft, heroAssets, openPicker, clearSlot, isOurSide 
                       <MiniSlot key={bi} hero={b} heroAssets={heroAssets} ring={ringColor} onClick={() => openPicker({ type: "backup", side, lane, backupIndex: bi })} onClear={() => clearSlot({ type: "backup", side, lane, backupIndex: bi })} />
                     ))}
                   </div>
-                  <span className="text-[8px] font-mono font-bold text-cyan-500/60 uppercase mt-0.5">Alt</span>
                   <span className="text-[8px] font-mono font-bold text-slate-600 uppercase">{pickLabels[idx]}</span>
                 </div>
               );
             })}
-          </div>
         </div>
       </div>
     </div>
