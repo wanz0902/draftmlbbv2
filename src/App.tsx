@@ -186,7 +186,7 @@ export default function App() {
             )}
 
             {currentTab === "macro" && (
-              <MacroMapPlanner heroAssets={heroAssets} />
+              <MacroMapPlanner />
             )}
 
             {currentTab === "tier" && (
