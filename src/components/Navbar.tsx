@@ -187,7 +187,7 @@ export default function Navbar({
         {/* ═══ CENTER: Nav Links ═══ */}
         <div
           ref={dropdownRef}
-          className="hidden min-w-0 flex-1 items-center justify-center gap-1 pl-6 pr-2 xl:flex"
+          className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 pl-6 pr-2 xl:flex"
         >
           {directLinks.slice(0, 2).map((link) => {
             const Icon = link.icon;
@@ -196,13 +196,13 @@ export default function Navbar({
               <button
                 key={link.id}
                 onClick={() => onChangeTab(link.id)}
-                className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[13px] font-semibold transition ${
+                className={`inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-2 py-1.5 text-[12px] font-semibold transition ${
                   active
                     ? "bg-cyan-400/12 text-cyan-300 shadow-[0_0_0_1px_rgba(34,211,238,0.22)]"
                     : "text-slate-400 hover:bg-white/[0.05] hover:text-white"
                 }`}
               >
-                <Icon className="h-3.5 w-3.5" />
+                <Icon className="h-3.5 w-3.5 shrink-0" />
                 {link.label}
               </button>
             );
@@ -217,13 +217,13 @@ export default function Navbar({
               <div key={group.id} className="relative">
                 <button
                   onClick={() => setOpenDropdown(open ? null : group.id)}
-                  className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[13px] font-semibold transition ${
+                  className={`inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-2 py-1.5 text-[12px] font-semibold transition ${
                     active || open
                       ? "bg-cyan-400/12 text-cyan-300 shadow-[0_0_0_1px_rgba(34,211,238,0.22)]"
                       : "text-slate-400 hover:bg-white/[0.05] hover:text-white"
                   }`}
                 >
-                  <Icon className="h-3.5 w-3.5" />
+                  <Icon className="h-3.5 w-3.5 shrink-0" />
                   {group.label}
                 </button>
 
@@ -261,13 +261,13 @@ export default function Navbar({
               <button
                 key={link.id}
                 onClick={() => onChangeTab(link.id)}
-                className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[13px] font-semibold transition ${
+                className={`inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-2 py-1.5 text-[12px] font-semibold transition ${
                   active
                     ? "bg-cyan-400/12 text-cyan-300 shadow-[0_0_0_1px_rgba(34,211,238,0.22)]"
                     : "text-slate-400 hover:bg-white/[0.05] hover:text-white"
                 }`}
               >
-                <Icon className="h-3.5 w-3.5" />
+                <Icon className="h-3.5 w-3.5 shrink-0" />
                 {link.label}
               </button>
             );
@@ -275,7 +275,7 @@ export default function Navbar({
         </div>
 
         {/* ═══ RIGHT: Status + Auth ═══ */}
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-2 lg:flex shrink-0 ml-2">
           <VisitorStatsBadge />
           <div className="h-5 w-px bg-white/[0.08]" />
           {renderAuthButton()}
