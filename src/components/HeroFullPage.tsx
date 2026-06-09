@@ -3,6 +3,7 @@ import { DetailedHero } from "../types/hero";
 import { motion, AnimatePresence } from "motion/react";
 import { cleanText, getHeroImageUrl, formatCooldown } from "../lib/heroUtils";
 import FallbackImage from "./FallbackImage";
+import HeroAttributeSystem from "./HeroAttributeSystem";
 import {
   ArrowLeft,
   ChevronRight,
@@ -789,7 +790,7 @@ export default function HeroFullPage({ heroName, heroAssets, onBack }: Props) {
               </div>
             )}
 
-            {/* SECTION 3: HERO ATTRIBUTES (Radar Chart) */}
+            {/* SECTION 3: HERO ATTRIBUTES (Holographic Combat Attribute Core) */}
             {heroAttributes && (
               <div
                 ref={(el) => { sectionRefs.current["attributes"] = el; }}
@@ -803,134 +804,14 @@ export default function HeroFullPage({ heroName, heroAssets, onBack }: Props) {
                   transition={{ duration: 0.4 }}
                   className="glass-card rounded-2xl p-5"
                 >
-                  <div className="flex justify-center">
-                    <svg viewBox="0 0 320 320" className="w-full max-w-[340px]">
-                      <defs>
-                        <filter id="radarGlow">
-                          <feGaussianBlur stdDeviation="4" result="blur" />
-                          <feMerge>
-                            <feMergeNode in="blur" />
-                            <feMergeNode in="SourceGraphic" />
-                          </feMerge>
-                        </filter>
-                        <linearGradient id="radarFill" x1="0" y1="0" x2="1" y2="1">
-                          <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.35" />
-                          <stop offset="100%" stopColor="#7b61ff" stopOpacity="0.1" />
-                        </linearGradient>
-                      </defs>
-
-                      {/* Grid rings */}
-                      {[120, 90, 60, 30].map((r) => (
-                        <polygon
-                          key={r}
-                          points={`160,${160 - r} ${160 + r},160 160,${160 + r} ${160 - r},160`}
-                          fill="none"
-                          stroke="rgba(255,255,255,0.04)"
-                          strokeWidth="0.5"
-                        />
-                      ))}
-
-                      {/* Axis lines */}
-                      <line x1="160" y1="40" x2="160" y2="280" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />
-                      <line x1="40" y1="160" x2="280" y2="160" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />
-
-                      {/* Data polygon */}
-                      <motion.polygon
-                        initial={{ opacity: 0, scale: 0.3 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                        style={{ transformOrigin: "160px 160px" }}
-                        points={`160,${160 - (heroAttributes.durability / 100) * 120} ${
-                          160 + (heroAttributes.offense / 100) * 120
-                        },160 160,${
-                          160 + (heroAttributes.abilityEffects / 100) * 120
-                        } ${160 - (heroAttributes.difficulty / 100) * 120},160`}
-                        fill="url(#radarFill)"
-                        stroke="#22d3ee"
-                        strokeWidth="2"
-                        filter="url(#radarGlow)"
-                      />
-
-                      {/* Data points */}
-                      {[
-                        {
-                          x: 160,
-                          y: 160 - (heroAttributes.durability / 100) * 120,
-                          label: "Durability",
-                          val: heroAttributes.durability,
-                          color: "#2dd4bf",
-                          anchor: "middle" as const,
-                          dx: 0,
-                          dy: -12,
-                        },
-                        {
-                          x: 160 + (heroAttributes.offense / 100) * 120,
-                          y: 160,
-                          label: "Offense",
-                          val: heroAttributes.offense,
-                          color: "#ff6b2b",
-                          anchor: "start" as const,
-                          dx: 10,
-                          dy: 4,
-                        },
-                        {
-                          x: 160,
-                          y: 160 + (heroAttributes.abilityEffects / 100) * 120,
-                          label: "Ability Effects",
-                          val: heroAttributes.abilityEffects,
-                          color: "#3b82f6",
-                          anchor: "middle" as const,
-                          dx: 0,
-                          dy: 20,
-                        },
-                        {
-                          x: 160 - (heroAttributes.difficulty / 100) * 120,
-                          y: 160,
-                          label: "Difficulty",
-                          val: heroAttributes.difficulty,
-                          color: "#a78bfa",
-                          anchor: "end" as const,
-                          dx: -10,
-                          dy: 4,
-                        },
-                      ].map((p) => (
-                        <g key={p.label}>
-                          <circle cx={p.x} cy={p.y} r="10" fill={p.color} opacity="0.12" />
-                          <motion.circle
-                            initial={{ r: 0 }}
-                            animate={{ r: 5 }}
-                            transition={{ duration: 0.4, delay: 0.8 }}
-                            cx={p.x}
-                            cy={p.y}
-                            fill={p.color}
-                            filter="url(#radarGlow)"
-                          />
-                          <text
-                            x={p.x + p.dx}
-                            y={p.y + p.dy}
-                            fill="#94a3b8"
-                            fontSize="9"
-                            textAnchor={p.anchor}
-                            fontFamily="monospace"
-                            fontWeight="700"
-                          >
-                            {p.label}
-                          </text>
-                          <text
-                            x={p.x + p.dx}
-                            y={p.y + p.dy + 14}
-                            fill={p.color}
-                            fontSize="13"
-                            textAnchor={p.anchor}
-                            fontFamily="monospace"
-                            fontWeight="bold"
-                          >
-                            {p.val}
-                          </text>
-                        </g>
-                      ))}
-                    </svg>
-                  </div>
+                  <HeroAttributeSystem
+                    heroAttributes={{
+                      durability: heroAttributes.durability ?? 0,
+                      offense: heroAttributes.offense ?? 0,
+                      abilityEffects: heroAttributes.abilityEffects ?? 0,
+                      difficulty: heroAttributes.difficulty ?? 0,
+                    }}
+                  />
                 </motion.div>
               </div>
             )}
