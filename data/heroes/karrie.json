@@ -364,10 +364,10 @@
     }
   ],
   "skillVideos": {
-    "passive": null,
-    "skill1": null,
-    "skill2": null,
-    "ultimate": null
+    "passive": "/videos/heroes/karrie/video-0-0.mp4",
+    "skill1": "/videos/heroes/karrie/video-1-0.mp4",
+    "skill2": "/videos/heroes/karrie/video-2-0.mp4",
+    "ultimate": "/videos/heroes/karrie/video-3-0.mp4"
   },
   "combos": [
     {

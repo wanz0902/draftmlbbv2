@@ -336,10 +336,10 @@
     }
   ],
   "skillVideos": {
-    "passive": null,
-    "skill1": null,
-    "skill2": null,
-    "ultimate": null
+    "passive": "/videos/heroes/rafaela/video-0-0.mp4",
+    "skill1": "/videos/heroes/rafaela/video-1-0.mp4",
+    "skill2": "/videos/heroes/rafaela/video-2-0.mp4",
+    "ultimate": "/videos/heroes/rafaela/video-3-0.mp4"
   },
   "combos": [
     {

@@ -454,10 +454,10 @@
     }
   ],
   "skillVideos": {
-    "passive": null,
-    "skill1": null,
-    "skill2": null,
-    "ultimate": null
+    "passive": "/videos/heroes/odette/video-0-0.mp4",
+    "skill1": "/videos/heroes/odette/video-1-0.mp4",
+    "skill2": "/videos/heroes/odette/video-2-0.mp4",
+    "ultimate": "/videos/heroes/odette/video-3-0.mp4"
   },
   "combos": [
     {

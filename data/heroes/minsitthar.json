@@ -367,10 +367,10 @@
     }
   ],
   "skillVideos": {
-    "passive": null,
-    "skill1": null,
-    "skill2": null,
-    "ultimate": null
+    "passive": "/videos/heroes/minsitthar/video-0-0.mp4",
+    "skill1": "/videos/heroes/minsitthar/video-1-0.mp4",
+    "skill2": "/videos/heroes/minsitthar/video-2-0.mp4",
+    "ultimate": "/videos/heroes/minsitthar/video-3-0.mp4"
   },
   "combos": [
     {

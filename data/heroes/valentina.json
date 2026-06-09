@@ -407,10 +407,10 @@
     }
   ],
   "skillVideos": {
-    "passive": null,
-    "skill1": null,
-    "skill2": null,
-    "ultimate": null
+    "passive": "/videos/heroes/valentina/video-0-0.mp4",
+    "skill1": "/videos/heroes/valentina/video-1-0.mp4",
+    "skill2": "/videos/heroes/valentina/video-2-0.mp4",
+    "ultimate": "/videos/heroes/valentina/video-3-0.mp4"
   },
   "combos": [
     {

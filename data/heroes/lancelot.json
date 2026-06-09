@@ -433,10 +433,10 @@
     }
   ],
   "skillVideos": {
-    "passive": null,
-    "skill1": null,
+    "passive": "/videos/heroes/lancelot/video-0-0.mp4",
+    "skill1": "/videos/heroes/lancelot/video-1-0.mp4",
     "skill2": null,
-    "ultimate": null
+    "ultimate": "/videos/heroes/lancelot/video-3-0.mp4"
   },
   "combos": [
     {
