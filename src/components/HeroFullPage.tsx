@@ -90,10 +90,21 @@ const SECTIONS = [
 ] as const;
 
 function getItemIconUrl(itemName: string): string {
+  // Keep apostrophes (Haas's, Berserker's, etc.) — match actual filenames
   const slug = itemName
-    .replace(/[^a-zA-Z0-9\s]/g, "")
+    .replace(/[^a-zA-Z0-9\s']/g, "")
     .replace(/\s+/g, "_");
   return `/raw-assets/aset_item/Item_${slug}_ML.png`;
+}
+
+// Precompute a broader set of search paths for item fallback
+const ITEM_SUBDIRS = ["attack", "magic", "defense", "movement", "roaming", "jungling"];
+
+function getItemIconFallbackPaths(itemName: string): string[] {
+  const slug = itemName
+    .replace(/[^a-zA-Z0-9\s']/g, "")
+    .replace(/\s+/g, "_");
+  return ITEM_SUBDIRS.map(dir => `/raw-assets/aset_item/${dir}/Item_${slug}_ML.png`);
 }
 
 function getPrimaryRole(roles: string[]): string {
@@ -994,14 +1005,28 @@ export default function HeroFullPage({ heroName, heroAssets, onBack }: Props) {
                                   alt={item}
                                   className="w-full h-full object-contain"
                                   onError={(e) => {
-                                    (e.target as HTMLImageElement).style.display = "none";
-                                    const parent = (e.target as HTMLImageElement).parentElement;
-                                    if (parent && !parent.querySelector(".fallback-icon")) {
-                                      const fb = document.createElement("div");
-                                      fb.className =
-                                        "fallback-icon w-full h-full flex items-center justify-center text-[8px] font-mono font-bold text-amber-400/60";
-                                      fb.textContent = item.substring(0, 2);
-                                      parent.appendChild(fb);
+                                    const img = e.target as HTMLImageElement;
+                                    // Try subdirectory fallback paths
+                                    const fallbacks = getItemIconFallbackPaths(item);
+                                    const currentSrc = img.getAttribute("data-attempt") || "";
+                                    const currentIdx = fallbacks.indexOf(currentSrc);
+                                    if (currentIdx >= 0 && currentIdx < fallbacks.length - 1) {
+                                      const nextPath = fallbacks[currentIdx + 1];
+                                      img.setAttribute("data-attempt", nextPath);
+                                      img.src = nextPath;
+                                    } else if (fallbacks.length > 0 && !currentSrc) {
+                                      img.setAttribute("data-attempt", fallbacks[0]);
+                                      img.src = fallbacks[0];
+                                    } else {
+                                      // All attempts failed — show text fallback
+                                      img.style.display = "none";
+                                      const parent = img.parentElement;
+                                      if (parent && !parent.querySelector(".fallback-icon")) {
+                                        const fb = document.createElement("div");
+                                        fb.className = "fallback-icon w-full h-full flex items-center justify-center text-[8px] font-mono font-bold text-amber-400/60";
+                                        fb.textContent = item.substring(0, 2);
+                                        parent.appendChild(fb);
+                                      }
                                     }
                                   }}
                                 />
