@@ -28,6 +28,8 @@ interface Props {
   onBack: () => void;
 }
 
+import { resolveItem, resolveBuildItems } from "../lib/itemResolver";
+
 const STAT_MAX: Record<string, number> = {
   hp: 4000,
   hpRegen: 30,
@@ -89,23 +91,7 @@ const SECTIONS = [
   { id: "profile", label: "Profile" },
 ] as const;
 
-function getItemIconUrl(itemName: string): string {
-  // Keep apostrophes (Haas's, Berserker's, etc.) — match actual filenames
-  const slug = itemName
-    .replace(/[^a-zA-Z0-9\s']/g, "")
-    .replace(/\s+/g, "_");
-  return `/raw-assets/aset_item/Item_${slug}_ML.png`;
-}
-
-// Precompute a broader set of search paths for item fallback
-const ITEM_SUBDIRS = ["attack", "magic", "defense", "movement", "roaming", "jungling"];
-
-function getItemIconFallbackPaths(itemName: string): string[] {
-  const slug = itemName
-    .replace(/[^a-zA-Z0-9\s']/g, "")
-    .replace(/\s+/g, "_");
-  return ITEM_SUBDIRS.map(dir => `/raw-assets/aset_item/${dir}/Item_${slug}_ML.png`);
-}
+// Item icon resolution handled by ../lib/itemResolver
 
 function getPrimaryRole(roles: string[]): string {
   return roles[0] || "Fighter";
@@ -994,51 +980,58 @@ export default function HeroFullPage({ heroName, heroAssets, onBack }: Props) {
                         </div>
                         {/* Item strip */}
                         <div className="flex gap-2 flex-wrap">
-                          {build.items.map((item, i) => (
-                            <div
-                              key={i}
-                              className="relative group/item flex flex-col items-center gap-1 p-1.5 rounded-xl bg-[#0a0f1a] border border-white/[0.05] hover:border-amber-500/30 hover:bg-amber-500/5 transition-all duration-200 cursor-default hover:scale-105 hover:shadow-lg hover:shadow-amber-500/10"
-                            >
-                              <div className="w-10 h-10 rounded-lg overflow-hidden bg-white/[0.03] border border-white/[0.06] group-hover/item:border-amber-500/20 transition-colors">
-                                <img
-                                  src={getItemIconUrl(item)}
-                                  alt={item}
-                                  className="w-full h-full object-contain"
-                                  onError={(e) => {
-                                    const img = e.target as HTMLImageElement;
-                                    // Try subdirectory fallback paths
-                                    const fallbacks = getItemIconFallbackPaths(item);
-                                    const currentSrc = img.getAttribute("data-attempt") || "";
-                                    const currentIdx = fallbacks.indexOf(currentSrc);
-                                    if (currentIdx >= 0 && currentIdx < fallbacks.length - 1) {
-                                      const nextPath = fallbacks[currentIdx + 1];
-                                      img.setAttribute("data-attempt", nextPath);
-                                      img.src = nextPath;
-                                    } else if (fallbacks.length > 0 && !currentSrc) {
-                                      img.setAttribute("data-attempt", fallbacks[0]);
-                                      img.src = fallbacks[0];
-                                    } else {
-                                      // All attempts failed — show text fallback
-                                      img.style.display = "none";
-                                      const parent = img.parentElement;
-                                      if (parent && !parent.querySelector(".fallback-icon")) {
-                                        const fb = document.createElement("div");
-                                        fb.className = "fallback-icon w-full h-full flex items-center justify-center text-[8px] font-mono font-bold text-amber-400/60";
-                                        fb.textContent = item.substring(0, 2);
-                                        parent.appendChild(fb);
+                          {build.items.map((item, i) => {
+                            const resolved = resolveItem(item);
+                            return (
+                              <div
+                                key={i}
+                                className="relative group/item flex flex-col items-center gap-1 p-1.5 rounded-xl bg-[#0a0f1a] border border-white/[0.05] hover:border-amber-500/30 hover:bg-amber-500/5 transition-all duration-200 cursor-default hover:scale-105 hover:shadow-lg hover:shadow-amber-500/10"
+                                title={resolved.isResolved ? resolved.canonicalName : `Unknown: ${item}`}
+                              >
+                                <div className="w-10 h-10 rounded-lg overflow-hidden bg-white/[0.03] border border-white/[0.06] group-hover/item:border-amber-500/20 transition-colors">
+                                  <img
+                                    src={resolved.iconPath}
+                                    alt={resolved.canonicalName}
+                                    className="w-full h-full object-contain"
+                                    onError={(e) => {
+                                      const img = e.target as HTMLImageElement;
+                                      const fallbacks = resolved.iconFallbackPaths;
+                                      const currentSrc = img.getAttribute("data-attempt") || "";
+                                      const currentIdx = fallbacks.indexOf(currentSrc);
+                                      if (currentIdx >= 0 && currentIdx < fallbacks.length - 1) {
+                                        const nextPath = fallbacks[currentIdx + 1];
+                                        img.setAttribute("data-attempt", nextPath);
+                                        img.src = nextPath;
+                                      } else if (fallbacks.length > 0 && !currentSrc) {
+                                        img.setAttribute("data-attempt", fallbacks[0]);
+                                        img.src = fallbacks[0];
+                                      } else {
+                                        img.style.display = "none";
+                                        const parent = img.parentElement;
+                                        if (parent && !parent.querySelector(".fallback-icon")) {
+                                          const fb = document.createElement("div");
+                                          fb.className = "fallback-icon w-full h-full flex items-center justify-center text-[8px] font-mono font-bold text-amber-400/60";
+                                          fb.textContent = resolved.canonicalName.substring(0, 2);
+                                          parent.appendChild(fb);
+                                        }
                                       }
-                                    }
-                                  }}
-                                />
+                                    }}
+                                  />
+                                </div>
+                                <span className="text-[7px] font-mono text-gray-500 group-hover/item:text-gray-300 transition-colors text-center leading-tight max-w-[60px] truncate">
+                                  {resolved.canonicalName}
+                                </span>
+                                {resolved.enchantment && (
+                                  <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 text-[5px] font-mono text-amber-400/60 uppercase whitespace-nowrap">
+                                    {resolved.enchantment}
+                                  </span>
+                                )}
+                                <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-amber-500/90 text-[7px] font-mono font-bold text-black flex items-center justify-center opacity-0 group-hover/item:opacity-100 transition-opacity">
+                                  {i + 1}
+                                </span>
                               </div>
-                              <span className="text-[7px] font-mono text-gray-500 group-hover/item:text-gray-300 transition-colors text-center leading-tight max-w-[60px] truncate">
-                                {item}
-                              </span>
-                              <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-amber-500/90 text-[7px] font-mono font-bold text-black flex items-center justify-center opacity-0 group-hover/item:opacity-100 transition-opacity">
-                                {i + 1}
-                              </span>
-                            </div>
-                          ))}
+                            );
+                          })}
                         </div>
                       </div>
                     ))}
