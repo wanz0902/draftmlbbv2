@@ -3684,40 +3684,6 @@
     "mlbhubSource": "mlbbhub.com"
   },
   {
-    "name": "Allow Throw",
-    "category": "Unknown",
-    "gold": 0,
-    "stats": [],
-    "uniqueAttributes": [],
-    "abilities": [],
-    "buildFrom": [],
-    "buildsInto": [],
-    "slug": "allow-throw",
-    "source": "mlbbhub",
-    "sourceUrl": "https://mlbbhub.com/items/allow-throw",
-    "sourceUpdatedAt": "2026-06-08T09:42:23.678Z",
-    "dataQuality": "complete",
-    "heroesWhoCore": [],
-    "mlbhubSource": "mlbbhub.com"
-  },
-  {
-    "name": "Broken Heart",
-    "category": "Unknown",
-    "gold": 0,
-    "stats": [],
-    "uniqueAttributes": [],
-    "abilities": [],
-    "buildFrom": [],
-    "buildsInto": [],
-    "slug": "broken-heart",
-    "source": "mlbbhub",
-    "sourceUrl": "https://mlbbhub.com/items/broken-heart",
-    "sourceUpdatedAt": "2026-06-08T09:43:02.353Z",
-    "dataQuality": "complete",
-    "heroesWhoCore": [],
-    "mlbhubSource": "mlbbhub.com"
-  },
-  {
     "name": "Demon Boots",
     "category": "Unknown",
     "gold": 0,
@@ -3802,23 +3768,6 @@
       "yu-zhong",
       "zhask"
     ],
-    "mlbhubSource": "mlbbhub.com"
-  },
-  {
-    "name": "Throw Forbidden",
-    "category": "Unknown",
-    "gold": 0,
-    "stats": [],
-    "uniqueAttributes": [],
-    "abilities": [],
-    "buildFrom": [],
-    "buildsInto": [],
-    "slug": "throw-forbidden",
-    "source": "mlbbhub",
-    "sourceUrl": "https://mlbbhub.com/items/throw-forbidden",
-    "sourceUpdatedAt": "2026-06-08T09:46:25.568Z",
-    "dataQuality": "complete",
-    "heroesWhoCore": [],
     "mlbhubSource": "mlbbhub.com"
   }
 ]

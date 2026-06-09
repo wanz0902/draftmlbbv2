@@ -454,6 +454,28 @@
       "winrateDelta": 0
     }
   ],
+  "items": [
+    "Magic Boots",
+    "Thunder Belt",
+    "Dominance Ice",
+    "Guardian Helmet",
+    "Oracle",
+    "Immortality"
+  ],
+  "proBuilds": [
+    {
+      "player": "MPLpro_Marcel",
+      "games": 487,
+      "items": [
+        "Magic Boots",
+        "Thunder Belt",
+        "Dominance Ice",
+        "Guardian Helmet",
+        "Oracle",
+        "Immortality"
+      ]
+    }
+  ],
   "metaScore": 59.33,
   "metaRank": 1,
   "mlcSource": "mlcounters.app",
